@@ -1,0 +1,363 @@
+//
+// Buttons - Hypermarket Theme
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+.btn {
+  display: inline-block;
+  height: $btn-height;
+  line-height: $btn-height - 3;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  color: $btn-font-color-default;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: $btn-text-transform;
+  border: 2px solid transparent;
+  border-radius: $border-radius-base;
+  padding: 0 22px;
+  margin: 10px 0;
+  margin-right: 8px;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  @include transform(translateZ(0));
+  @include user-select(none);
+  @include transition(color 0.3s ease-out, background-color 0.3s ease-out);
+  @include button-variant($btn-default-bg);
+
+  &:hover {
+    color: $btn-font-color-default;
+    text-decoration: none;
+    outline: none;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: $cursor-disabled;
+    background-color: $gray-light !important;
+    &:hover { background-color: $gray-light !important; }
+  }
+
+  i, i:before {
+    display: inline-block;
+    line-height: $line-height-base;
+    font-size: floor($btn-font-size * 1.3);
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    @include opacity(.5);
+    pointer-events: none;
+    pointer: not-allowed;
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+.btn-primary, .btn-primary:hover,
+.btn-primary:active, .btn-primary:focus,
+.btn-success, .btn-success:hover,
+.btn-success:active, .btn-success:focus,
+.btn-info, .btn-info:hover,
+.btn-info:active, .btn-info:focus,
+.btn-warning, .btn-warning:hover,
+.btn-warning:active, .btn-warning:focus,
+.btn-danger, .btn-danger:hover,
+.btn-danger:active, .btn-danger:focus {
+  color: $btn-font-color-alt;
+}
+.btn-primary {
+  @include button-variant($btn-primary-bg);
+}
+.btn-success {
+  @include button-variant($btn-success-bg);
+}
+.btn-info {
+  @include button-variant($btn-info-bg);
+}
+.btn-warning {
+  @include button-variant($btn-warning-bg);
+}
+.btn-danger {
+  @include button-variant($btn-danger-bg);
+}
+.btn-light {
+  @include button-variant(#fff);
+  color: $gray-darker;
+  &:hover { color: $gray-darker; }
+}
+.btn-default:focus { color: $btn-font-color-default;  }
+
+// Ghost Buttons
+// --------------------------------------------------
+.btn-ghost {
+  @include ghost-button-variant($btn-default-bg, $btn-default-bg);
+  &.btn-default {
+    @include ghost-button-variant($btn-default-bg, $btn-default-bg);
+  }
+  &.btn-primary {
+    @include ghost-button-variant($btn-primary-bg, $btn-primary-bg);
+  }
+  &.btn-success {
+    @include ghost-button-variant($btn-success-bg, $btn-success-bg);
+  }
+  &.btn-info {
+    @include ghost-button-variant($btn-info-bg, $btn-info-bg);
+  }
+  &.btn-warning {
+    @include ghost-button-variant($btn-warning-bg, $btn-warning-bg);
+  }
+  &.btn-danger {
+    @include ghost-button-variant($btn-danger-bg, $btn-danger-bg);
+  }
+  &.btn-light {
+    @include ghost-button-variant(#fff, #fff);
+    &:hover { color: $gray-darker; }
+  }
+}
+.btn-ghost,
+.btn-ghost.btn-default {
+  color: $text-color;
+  &:hover { color: $text-color; }
+}
+
+// Small Button
+// --------------------------------------------------
+.btn-sm {
+  height: $btn-sm-height;
+  font-size: $btn-sm-font-size;
+  font-weight: $btn-sm-font-weight;
+  line-height: $btn-sm-height - 3;
+  padding: 0 15px;
+  border-radius: $border-radius-small;
+  &.btn-ghost { font-weight: $btn-font-weight; }
+}
+
+// Link Button
+.btn-link {
+  background-color: transparent;
+  &:hover {
+    color: $gray;
+    background-color: transparent;
+  }
+}
+
+// Square Buttons
+.btn-square { border-radius: 0; }
+
+// Pills Buttons
+.btn-pill {
+  border-radius: ($btn-height / 2);
+  &.btn-sm {
+    border-radius: ($btn-sm-height / 2);
+  }
+}
+
+// Inline Buttons
+// --------------------------------------------------
+.btn-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Button icons alignment
+// --------------------------------------------------
+.btn-icon-left {
+  padding-left: 18px;
+  i { margin-right: 7px; }
+  &.btn-sm {
+    padding-left: 12px;
+    i { margin-right: 5px; }
+  }
+}
+.btn-icon-right {
+  padding-right: 18px;
+  i { margin-left: 7px; }
+  &.btn-sm {
+    padding-right: 12px;
+    i { margin-left: 5px; }
+  }
+}
+
+// Block button
+// --------------------------------------------------
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 20px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// Buttons alignment
+.text-center .btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  &.btn-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.mobile-center {
+  @media #{$tablet-port} {
+    text-align: center !important;
+    .btn {
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+      &.btn-block {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+.text-right .btn {
+  margin-left: 10px;
+  margin-right: 0;
+  &.btn-block { margin-left: 0; }
+}
+
+// Scroll to Top Button
+.scroll-to-top-btn {
+  display: block;
+  position: absolute;
+  width: $btn-height;
+  height: $btn-height;
+  font-size: $scroll-top-btn-icon-size;
+  color: $scroll-top-btn-color;
+  line-height: $btn-height - 4;
+  text-align: center;
+  text-decoration: none;
+  right: 20px;
+  bottom: 0;
+  background-color: $scroll-top-btn-bg;
+  border: 2px solid $hr-border;
+  border-bottom: 0;
+  cursor: pointer;
+  @include transition (color .3s);
+  > i { @include transform(rotate(-90deg)); }
+  &:hover { color: $scroll-top-btn-hover-color; }
+  @media #{$mobile-land} {
+    width: $btn-height - 6;
+    height: $btn-height - 6;
+    font-size: $scroll-top-btn-icon-size - 4;
+    line-height: $btn-height - 10;
+  }
+}
+
+// Search Button
+.search-btn {
+  @extend .btn;
+  @extend .btn-ghost;
+  width: $btn-sm-height;
+  height: $btn-sm-height;
+  line-height: $btn-sm-height - 2;
+  color: $gray;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  margin-left: 20px;
+  > i::before {
+    font-size: $search-button-icon-size;
+  }
+  &:hover,
+  &.active {
+    background-color: transparent;
+    color: $gray-dark;
+  }
+  &:focus { color: $gray-dark; }
+}
+
+// Waves v0.6.0
+// http://fian.my.id/Waves
+// Copyright 2014 Alfiana E. Sibuea and other contributors
+// Released under the MIT license
+// https://github.com/fians/Waves/blob/master/LICENSE
+// --------------------------------------------------
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.waves-effect .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  @include opacity(0);
+  background: rgba(0, 0, 0, 0.2);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0) 70%);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+.waves-effect.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.5);
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -o-radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+  background: -moz-radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(rgba(255, 255, 255, 0.3) 0, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 70%);
+}
+.waves-effect.waves-classic .waves-ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+.waves-effect.waves-classic.waves-light .waves-ripple {
+  background: rgba(255, 255, 255, 0.5);
+}

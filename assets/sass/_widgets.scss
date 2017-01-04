@@ -1,0 +1,346 @@
+//
+// Widgets - Hypermarket Theme
+// --------------------------------------------------
+
+// Sidebar
+.sidebar {
+  width: 100%;
+  max-width: $sidebar-max-width;
+}
+
+// Widget Title
+.widget-title {
+  font-size: $font-size-small;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: $line-height-computed;
+  small {
+    display: block;
+    color: $gray;
+    font-size: $font-size-xs;
+    text-transform: none;
+    margin-top: floor($line-height-computed / 1.2);
+  }
+}
+
+// Base Class
+.widget {
+  padding: floor($line-height-computed * 1.2) 0;
+  border-bottom: $widget-divider;
+  &:first-child { padding-top: floor($line-height-computed / 1.6); }
+  &:last-child { border-bottom: 0; }
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  ul {
+    font-size: $widget-link-font-size;
+    > li {
+      margin-bottom: 5px;
+      &:last-child { margin-bottom: 0; }
+      > ins {
+          text-decoration: none;
+      }
+      .star-rating {
+          top: auto;
+          right: auto;
+          position: relative;
+          line-height: inherit;
+      }
+      > a {
+        color: $widget-link-color;
+        text-decoration: none;
+        &:hover {
+          color: $widget-link-hover-color;
+        }
+        // Icon
+        > i {
+          font-size: floor($widget-link-font-size * 1.1);
+          margin-right: 2px;
+        }
+
+        // Color Dot
+        .color {
+          display: inline-block;
+          vertical-align: middle;
+          width: $widget-color-label-size;
+          height: $widget-color-label-size;
+          border-radius: 50%;
+          margin-right: 3px;
+          margin-top: -2px;
+        }
+      }
+      &.active > a { color: $widget-link-hover-color; }
+    }
+  }
+}
+
+// Widget Tags
+.widget .tagcloud {
+  a {
+    display: inline-block;
+    height: $widget-tags-height;
+    color: $widget-tags-color;
+    font-size: $widget-tags-font-size !important;
+    line-height: $widget-tags-height - 4;
+    text-decoration: none;
+    border: 2px solid $widget-tags-border-color;
+    border-radius: floor($widget-tags-height / 2);
+    padding: 0 12px;
+    margin: 0 2px 8px 0;
+    @include transition(all .3s);
+    &:hover, &.active {
+      color: $widget-tags-hover-color;
+      border-color: $widget-tags-hover-border-color;
+    }
+  }
+}
+
+// Price Range Slider
+.widget_price_filter {
+    & .price_slider {
+      margin: 1.5em auto;
+    }
+    .price_slider_amount {
+      text-align: right;
+      line-height: 2.4em;
+      & .button {
+        float: left;
+        @extend .btn;
+        @extend .btn-ghost;
+        @extend .btn-sm;
+        @extend .btn-default;
+      }
+    }
+    .price_label {
+      padding-top: 10px;
+      display: inline-block;
+      font-size: $font-size-small;
+    }
+    .ui-slider {
+      position: relative;
+      text-align: left;
+    }
+    .ui-slider .ui-slider-handle {
+      position: absolute;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      left: -8px;
+      top: -6px;
+      @include opacity(1);
+      outline: none;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: #606060;
+      cursor: default;
+      &:last-child {
+        margin-left: -1em;
+      }
+      &:hover,
+      &.ui-state-active {
+        @include box-shadow(0px 0px 0px 0px rgba(0,0,0,0.15));
+      }
+    }
+    .ui-slider .ui-slider-range {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      border: none;
+      background: $gray-dark;
+      @include transition(background .45s);
+      @include border-top-radius(1em);
+      @include border-bottom-radius(1em);
+    }
+    .price_slider_wrapper .ui-widget-content {
+      @include border-top-radius(1em);
+      @include border-bottom-radius(1em);
+      background: rgba(0,0,0,0.1);
+    }
+    .ui-slider-horizontal {
+      height: 0.3em;
+    }
+    .ui-slider-horizontal .ui-slider-range {
+      top: 0;
+      height: 70%;
+    }
+    .ui-slider-horizontal .ui-slider-range-min {
+      left: -1px;
+    }
+    .ui-slider-horizontal .ui-slider-range-max {
+      right: -1px;
+    }
+ }
+.sidebar-toggle,
+.sidebar-close { display: none; }
+
+// Sidebar on Mobile
+@media #{$tablet-port} {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    z-index: $navbar-zindex + 10;
+    top: 0;
+    left: -($sidebar-max-width);
+    padding: 30px $line-height-computed;
+    background-color: $sidebar-bg;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    @include box-shadow(0px 0px 0px 0px rgba(0,0,0,0.15));
+    @include transition(left .4s cubic-bezier(0.785, 0.135, 0.150, 0.860) .3s, box-shadow .3s .3s);
+    &.open {
+      left: 0;
+      z-index: 999999;
+      @include box-shadow(0px 0px 50px 3px rgba(0,0,0,0.15));
+    }
+    &.sidebar-right {
+      left: auto;
+      right: -($sidebar-max-width);
+      @include transition(right .4s cubic-bezier(0.785, 0.135, 0.150, 0.860) .3s, box-shadow .3s .3s);
+      &.open {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    z-index: $navbar-zindex - 5;
+    width: $sidebar-icon-box-size;
+    height: $sidebar-icon-box-size;
+    top: 50%;
+    left: 0;
+    line-height: $sidebar-icon-box-size;
+    color: $sidebar-icon-color;
+    font-size: $sidebar-icon-size;
+    text-align: center;
+    background-color: $sidebar-bg;
+    cursor: pointer;
+    @include box-shadow(0px 3px 10px 0px rgba(0,0,0,0.15));
+    @include transition(all .3s ease-in-out);
+    &:hover { color: $sidebar-icon-hover-color; }
+    &.sidebar-toggle-right {
+      left: auto;
+      right: 0;
+    }
+    &.sidebar-open {
+      left: -($sidebar-icon-box-size);
+      @include box-shadow(0px 0px 0px 0px rgba(0,0,0,0.15));
+      &.sidebar-toggle-right {
+        left: auto;
+        right: -($sidebar-icon-box-size);
+      }
+    }
+  }
+  .sidebar-close {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: $sidebar-icon-color;
+    font-size: $sidebar-icon-size;
+    cursor: pointer;
+    @include transition(color .3s);
+    &:hover { color: $sidebar-icon-hover-color; }
+  }
+  .sidebar::-webkit-scrollbar { display: none; }
+}
+// Payment icons
+.hypermarket-payment-methods-icons-widget {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      display: inline-block;
+      margin-right: .75em;
+      & i {
+        color: $gray-dark;
+        font-size: $font-size-h2 + 5;
+        &.hypermarket-paypal,
+        &.hypermarket-master-card,
+        &.hypermarket-ssl {
+          font-size: $font-size-h2;
+        }
+        &:hover {
+          color: $gray-darker;
+        }
+      }
+    }
+  }
+}
+// Social icons
+.hypermarket-social-icons-widget {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      display: inline-block;
+      margin-right: .75em;
+      & a {
+        color: $gray-dark;
+        @include transition(color .3s);
+        i {
+          font-size: $social-btn-size !important;
+        }
+      }
+    }
+  }
+}
+// Product list
+.product_list_widget {
+  list-style: none;
+  margin-left: 0;
+  li {
+    padding: 1em 0;
+    @include clearfix;
+    img {
+      max-width: 65px;
+      float: right;
+    }
+    > a {
+      display: block;
+    }
+    > .reviewer {
+      &:before {
+        content: "\e0b9";
+        padding-right: 5px;
+        display: inline-block;
+        font-family: "Material Icons";
+      }
+    }
+  }
+}
+// Recent Comments
+.widget_recent_comments {
+  & li.recentcomments {
+    &:before {
+      content: "\e0b9";
+      padding-right: 5px;
+      display: inline-block;
+      font-family: "Material Icons";
+    }
+  }
+}
+// Layered nav rating
+.wc-layered-nav-rating {
+    > a {
+      float: right;
+      width: 100%;
+      clear: both;
+      overflow: hidden;
+      text-align: right;
+      > .star-rating {
+        float: left;
+      }
+    }
+}
+.widget_rating_filter {
+  > ul {
+    overflow: hidden;
+    position: relative;
+  }
+}

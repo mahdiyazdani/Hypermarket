@@ -1,0 +1,95 @@
+<?php
+/**
+ * Mini-cart
+ *
+ * Contains the markup for the mini-cart, used by the cart widget.
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/mini-cart.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 2.5.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+?>
+
+<?php do_action( 'woocommerce_before_mini_cart' ); ?>
+
+	<?php if ( ! WC()->cart->is_empty() ) : ?>
+
+		<?php
+			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+					$product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
+					$thumbnail         = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+					$product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+					?>
+					<div class="cart-item <?php echo esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
+						<?php if ( ! $_product->is_visible() ) : ?>
+							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+						<?php else : ?>
+							<a href="<?php echo esc_url( $product_permalink ); ?>" class="item-thumb">
+								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+							</a>
+						<?php endif; ?>
+						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
+						<div class="item-details">
+						<h3 class="item-title"><a href="<?php echo esc_url( $product_permalink ); ?>" target="_self"><?php echo $product_name; ?></a></h3>
+						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<h4 class="item-price">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</h4>', $cart_item, $cart_item_key ); ?>
+						</div><!-- .item-details -->
+						<?php
+						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+							'<a href="%s" class="close-btn remove" title="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons close"></i>
+</a>',
+							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+							__( 'Remove this item', 'hypermarket' ),
+							esc_attr( $product_id ),
+							esc_attr( $_product->get_sku() )
+						), $cart_item_key );
+						?>
+					</div><!-- .cart-item -->
+					<?php
+				}
+			}
+		?>
+
+	<?php else : ?>
+
+		<span class="empty"><small><em><?php _e( 'Most likely, уou just have not put anything into your basket.', 'hypermarket' ); ?></em></small></span>
+
+	<?php endif; ?>
+
+<?php if ( ! WC()->cart->is_empty() ) : ?>
+
+	<div class="cart-subtotal space-bottom">
+		<div class="column">
+			<span><?php _e( 'Subtotal', 'hypermarket' ); ?>:</span> 
+		</div><!-- .column -->
+		<div class="column">
+			<?php echo WC()->cart->get_cart_subtotal(); ?>
+		</div><!-- .column -->
+	</div><!-- .cart-subtotal -->
+	<div class="text-center">
+		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost button wc-forward"><?php _e( 'View Cart', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-sm btn-primary waves-effect waves-light button checkout wc-forward"><?php _e( 'Checkout', 'hypermarket' ); ?></a>
+	</div><!-- .text-center -->
+
+<?php endif; ?>
+
+<?php do_action( 'woocommerce_after_mini_cart' ); ?>

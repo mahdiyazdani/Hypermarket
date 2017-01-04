@@ -1,0 +1,103 @@
+//
+// Panels & Accordions - Hypermarket Theme
+// --------------------------------------------------
+
+
+// Base class
+.panel {
+  margin-bottom: floor($line-height-computed / 1.2);
+  background-color: $panel-bg;
+  border: none;
+  border-radius: 0;
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+  border: none;
+}
+
+// Panel contents
+.panel-body {
+  padding: 0 20px 20px 0;
+  @include clearfix;
+}
+
+// Optional heading
+.panel-heading {
+  border-bottom: none;
+  border-radius: 0;
+  .panel-title {
+    display: block;
+    font-size: $panel-heading-font-size;
+    font-weight: normal;
+    padding: 0 0 18px 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  > a {
+    position: relative;
+    color: $panel-heading-hover-color;
+    text-decoration: none;
+    @include transition(color .3s);
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: "Material Icons";
+      font-size: 22px;
+      content:"\e5c7";
+      margin-top: -2px;
+      @include transform(rotate(0));
+      @include transition(all .35s);
+    }
+  }
+  .panel-title.collapsed {
+    color: $panel-heading-font-color;
+    &:hover {
+      color: $panel-heading-hover-color;
+      background-color: transparent;
+    }
+    &:after {
+      @include transform(rotate(180deg));
+    }
+  }
+}
+
+// Collapsable panels (aka, accordion)
+.panel-group {
+  margin-bottom: floor($line-height-computed / 1.5);
+
+  // Tighten up margin so it's only between panels
+  .panel {
+    margin-bottom: 0;
+    border-radius: 0;
+
+    + .panel {
+      margin-top: 10px;
+    }
+  }
+
+  .panel-heading {
+    border-bottom: 0;
+
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
+      border-top: none;
+    }
+  }
+
+  .panel-footer {
+    border-top: 0;
+    + .panel-collapse .panel-body {
+      border-bottom: none;
+    }
+  }
+}
+
+// Component Animation
+.collapse {
+  display: none;
+  &.in { display: block; }
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition(height .35s ease, visibility .35s ease);
+}

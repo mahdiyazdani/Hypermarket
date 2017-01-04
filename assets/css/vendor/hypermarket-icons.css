@@ -1,0 +1,87 @@
+/*!
+ * Hypermarket Exclusive Icons
+ * https://www.mypreview.one
+ */
+
+@font-face {
+    font-family: 'Hypermarket';
+    src: url('../fonts/Hypermarket.eot?owjjpc');
+    src: url('../fonts/Hypermarket.eot?owjjpc#iefix') format('embedded-opentype'), url('../fonts/Hypermarket.ttf?owjjpc') format('truetype'), url('../fonts/Hypermarket.woff?owjjpc') format('woff'), url('../fonts/Hypermarket.svg?owjjpc#Hypermarket') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+i.hypermarket-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    
+    font-family: 'Hypermarket' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hypermarket-stumbleupon-solid:before {
+  content: "\e024";
+}
+.hypermarket-twitter-solid:before {
+  content: "\e040";
+}
+.hypermarket-facebook-solid:before {
+  content: "\e041";
+}
+.hypermarket-linkedin-solid:before {
+  content: "\e049";
+}
+.hypermarket-google-plus-solid:before {
+  content: "\e067";
+}
+.hypermarket-amx:before {
+  content: "\e626";
+}
+.hypermarket-facebook:before {
+  content: "\e87e";
+}
+.hypermarket-google-plus:before {
+  content: "\e976";
+}
+.hypermarket-instagram:before {
+  content: "\e9e8";
+}
+.hypermarket-linkedin:before {
+  content: "\ea4d";
+}
+.hypermarket-master-card:before {
+  content: "\eaa2";
+}
+.hypermarket-paypal:before {
+  content: "\eb47";
+}
+.hypermarket-pinterest:before {
+  content: "\eb74";
+}
+.hypermarket-skrill:before {
+  content: "\ec6e";
+}
+.hypermarket-ssl:before {
+  content: "\ecc7";
+}
+.hypermarket-twitter:before {
+  content: "\ed93";
+}
+.hypermarket-vimeo:before {
+  content: "\edd5";
+}
+.hypermarket-visa:before {
+  content: "\eddb";
+}
+.hypermarket-wordpress:before {
+  content: "\ee10";
+}
+.hypermarket-youtube:before {
+  content: "\ee20";
+}

@@ -1,0 +1,65 @@
+//
+// Footer - Hypermarket Theme
+// --------------------------------------------------
+
+.footer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .column {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+    background-color: $gray-lighter;
+    padding: 45px 25px;
+    &:nth-of-type(even) {
+      background-color: darken($gray-lighter, 2%);
+    }
+    @media #{$tablet-land} {
+      display: block;
+      width: 100%;
+      padding: 45px 15px;
+    }
+    .widget {
+      padding: 0;
+      border: none;
+    }
+  }
+  .copyright {
+    font-size: $font-size-xs;
+    color: $gray;
+    margin-bottom: 0;
+    margin-top: -5px;
+  }
+  .cards {
+    width: 100%;
+    max-width: 190px;
+    margin: 0 auto;
+  }
+  // Mailchimp plugin
+  .mc4wp-form {
+    max-width: 365px;
+    margin: 0 auto;
+    .form-control {
+      border-color: #fff;
+      &:focus {
+        border-color: $input-focus-border-color;
+      }
+    }
+  }
+  button[type='submit'] {
+    position: absolute;
+    display: block;
+    font-size: floor($font-size-base * 1.25); // 20px;
+    border: none;
+    background: none;
+    top: 50%;
+    margin-top: -19px;
+    right: 7px;
+    @include transition(color .3s);
+    &:focus { outline: none; }
+    &:hover { color: $brand-primary; }
+  }
+}

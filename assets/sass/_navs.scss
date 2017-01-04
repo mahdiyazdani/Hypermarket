@@ -1,0 +1,104 @@
+//
+// Tabs - Hypermarket Theme
+// --------------------------------------------------
+
+// Tabs
+// --------------------------------------------------
+.wc-tabs, .woocommerce-MyAccount-navigation ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  border: none;
+  border-bottom: 2px solid $hr-border;
+  @extend .text-center;
+  > li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-bottom: -2px;
+    > a {
+      position: relative;
+      z-index: 0;
+      display: block;
+      color: $nav-tabs-link-color;
+      font-size: $nav-tabs-font-size;
+      text-decoration: none;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding: 18px;
+      line-height: $line-height-base;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+      @include user-select(none);
+      @include transition(all .3s);
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        outline: none;
+      }
+      &:hover {
+      	color: $nav-tabs-link-active-color;
+      	background: none;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a, &.is-active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-tabs-link-active-color;
+        background: none;
+        border: none;
+        cursor: default;
+        border-bottom: 2px solid $nav-tabs-link-active-color;
+      }
+    }
+  }
+}
+// Tabbable tabs
+.woocommerce-Tabs-panel {
+	padding-top: floor($line-height-computed * 1.5);
+  @extend .space-bottom-none;
+  > .tab-pane { display: none; }
+  > .active { display: block; }
+  &.woocommerce-Tabs-panel--description {
+    @extend .padding-top-2x;
+  }
+}
+// My-Account
+.woocommerce-MyAccount-navigation {
+  @extend .space-bottom-2x;
+  .woocommerce-MyAccount-navigation-link--dashboard {
+    > a:before {
+      @include font-icon('\e30b');
+    }
+  }
+  .woocommerce-MyAccount-navigation-link--orders {
+    > a:before {
+      @include font-icon('\e8cc');
+    }
+  }
+  .woocommerce-MyAccount-navigation-link--downloads {
+    > a:before {
+      @include font-icon('\e258');
+    }
+  }
+  .woocommerce-MyAccount-navigation-link--edit-address {
+    > a:before {
+      @include font-icon('\e568');
+    }
+  }
+  .woocommerce-MyAccount-navigation-link--edit-account {
+    > a:before {
+      @include font-icon('\e7fd');
+    }
+  }
+  .woocommerce-MyAccount-navigation-link--customer-logout {
+    > a:before {
+      @include font-icon('\e879');
+    }
+  }
+}

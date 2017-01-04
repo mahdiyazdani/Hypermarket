@@ -1,0 +1,478 @@
+//
+// Site Navbar (Header) - Hypermarket Theme
+// --------------------------------------------------
+
+// Navbar Base Class
+.navbar {
+	position: relative;
+	z-index: $navbar-zindex;
+	width: 100%;
+	min-height: $navbar-min-height;
+	background-color: $navbar-bg;
+	padding-left: 30px;
+	top: 0;
+	left: 0;
+	&.navbar-sticky {
+		position: fixed;
+		& + * { margin-top: $navbar-min-height; }
+	}
+}
+
+// Site logo
+.site-logo {
+	position: relative;
+	z-index: 10;
+	display: inline-block;
+	vertical-align: middle;
+	color: $text-color;
+	font-size: floor($font-size-base * 1.25); // 20px
+	font-weight: 500;
+	text-decoration: none;
+	padding: 25px 0;
+	margin-right: 20px;
+	span { font-weight: normal; }
+	&:hover,
+	&:focus, &:active {
+		color: $text-color;
+		text-decoration: none;
+	}
+	img {
+		width: 100%;
+		max-width: $image-logo-width;
+	}
+	&.visible-mobile { display: none; }
+	@media #{$tablet-port} {
+		z-index: 20;
+		margin-right: 15px;
+		&.visible-desktop { display: none; }
+		&.visible-mobile { display: inline-block; }
+		img { max-width: $image-logo-sm-width; }
+	}
+	@media #{$mobile-port} { margin-right: 8px; }
+}
+
+// Toolbar
+.toolbar {
+	position: absolute;
+	z-index: 10;
+	width: $toolbar-width-desktop;
+	height: 100%;
+	top: -2px;
+	right: 30px;
+	.inner {
+		display: table;
+		width: 100%;
+		height: 100%;
+		table-layout: fixed;
+		> a,
+		.cart-btn > a {
+			font-size: $toolbar-toggle-icon-size;
+			color: $text-color;
+			text-decoration: none;
+			line-height: 1;
+			@include transition(all .3s);
+			> i {
+				position: relative;
+				display: inline-block;
+				font-style: normal;
+				@include opacity(1);
+				@include transform(translateY(0) scale(1));
+				@include transition(transform .3s, opacity .15s);
+			}
+			&:hover { color: $gray; }
+		}
+		.cart-btn {
+			cursor: pointer;
+			> a {
+				display: block;
+				padding: 20px;
+			}
+			&:hover > a { color: $gray; }
+		}
+		> a,
+		> .cart-btn {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			.count {
+				position: absolute;
+				display: block;
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				font-size: $font-size-xs;
+				color: #fff;
+				text-align: center;
+				border-radius: 50%;
+				background-color: $brand-primary;
+				top: -2px;
+				right: -17px;
+			}
+			&.mobile-menu-toggle {
+				display: none;
+				&:after {
+					display: block;
+					font-family:'Material Icons';
+					content:"\e5cd";
+					margin-top: -$toolbar-toggle-icon-size;
+					@include opacity(0);
+					@include transform(translateY(20px) scale(0.7));
+					@include transition(transform .3s, opacity .15s);
+				}
+				&.active {
+					> i {
+						@include opacity(0);
+						@include transform(translateY(-20px) scale(0.7));
+					}
+					&:after {
+						@include opacity(1);
+						@include transform(translateY(0) scale(1));
+					}
+				}
+			}
+		}
+	}
+}
+
+// Cart Dropdown
+.cart-dropdown {
+	display: none;
+	position: absolute;
+	width: $cart-dropdown-width;
+	right: 0;
+	top: 100%;
+	list-style: none;
+	margin: 0;
+	margin-top: -14px;
+	padding: 25px 20px;
+	text-align: left;
+	background-color: $cart-dropdown-bg-color;
+	border: $cart-dropdown-border;
+	cursor: default;
+
+	& .widget {
+		padding: 0 !important;
+	}
+
+	.cart-item {
+		position: relative;
+		display: table;
+		width: 100%;
+		padding: 0 0 15px 0;
+		border-bottom: $cart-dropdown-border;
+		margin-bottom: 15px;
+		dl.variation {
+			display: none;
+		}
+		.item-thumb,
+		.item-details {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.item-thumb {
+			width: $cart-dropdown-thumb-width + 15;
+			padding-right: 15px;
+			> img { width: 100%; }
+		}
+		.item-title {
+			font-size: $font-size-small;
+			font-weight: normal;
+			padding-right: 20px;
+			margin-bottom: floor($line-height-computed / 4);
+			> a {
+				color: $nav-link-color;
+				text-decoration: none;
+				&:hover, &:focus {
+					color: $nav-link-hover-color;
+					text-decoration: none;
+				}
+			}
+		}
+		.item-price {
+			font-size: $font-size-small;
+			color: $gray;
+			margin-bottom: 0;
+		}
+		.close-btn {
+			position: absolute;
+			top: -3px;
+			right: -4px;
+			font-size: $font-size-base;
+			&:hover { color: $brand-danger; }
+		}
+	}
+	.cart-subtotal {
+		display: table;
+		width: 100%;
+		.column {
+			display: table-cell;
+			vertical-align: top;
+			width: 50%;
+		}
+		> span {
+			display: block;
+			font-size: $font-size-small;
+			color: $gray;
+		}
+		.amount {
+			font-size: $font-size-small;
+			color: $gray-dark;
+			font-weight: 500;
+			text-align: right;
+			float: right;
+		}
+	}
+	.cart-buttons {
+		display: table;
+		width: 100%;
+		.column {
+			display: table-cell;
+			vertical-align: top;
+			width: 50%;
+		}
+	}
+}
+.toolbar .inner .cart-btn:hover {
+	.cart-dropdown {
+		display: block;
+		@include animation(slideUp .4s);
+	}
+}
+
+// Main Navigation
+.main-navigation {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: {
+		right: ($toolbar-width-desktop + 50);
+		left: ($image-logo-width + 145);
+	}
+	> .menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li > a {
+			display: block;
+			color: $nav-link-color;
+			font: {
+				size: $nav-link-font-size;
+				weight: normal;
+			}
+			text: {
+				transform: uppercase;
+				decoration: none;
+			}
+		}
+		> li {
+			display: inline-block;
+			position: relative;
+			> a {
+				line-height: ($navbar-min-height - 2);
+				padding-right: 30px;
+			}
+			&.current-menu-item > a,
+			&.current_page_item > a,
+			&.current-menu-ancestor > a,
+			&.current-menu-parent > a,
+			&:hover > a,
+			&.active > a { color: $nav-link-hover-color; }
+
+			// Sub-Menu
+			.sub-menu {
+				display: none;
+				position: absolute;
+				width: $submenu-width;
+				left: 0;
+				top: 100%;
+				list-style: none;
+				margin: 0;
+				margin-top: -14px;
+				padding: 20px;
+				text-align: left;
+				background-color: $submenu-bg-color;
+				border: $submenu-border;
+				> li {
+					margin-top: 8px;
+					&:first-child { margin-top: 0; }
+					> a { font-size: $submenu-link-font-size; }
+					&.current-menu-item > a,
+					&.current_page_item > a,
+					&.current-menu-ancestor > a,
+					&.current-menu-parent > a,
+					&:hover > a { color: $nav-link-hover-color; }
+				}
+			}
+			&.menu-item-has-children {
+				> a:after {
+					display: inline-block;
+					vertical-align: middle;
+					font-family: 'Material Icons';
+					content:"\e5c5";
+					font-size: 1.2em;
+					margin-left: 1px;
+					margin-top: -2px;
+					@include transform(rotate(0));
+					@include transition(transform .3s);
+				}
+			}
+			&:hover {
+				.sub-menu {
+					display: block;
+					@include animation(slideUp .4s);
+				}
+			}
+		}
+	}
+	&.text-center {
+		> .menu > li > a {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+	&.text-right {
+		> .menu > li > a {
+			padding-right: 0;
+			padding-left: 30px;
+		}
+	}
+}
+
+// Mobile Menu Togle
+.mobile-menu-toggle {
+	> i {
+		position: relative;
+		display: inline-block;
+		font-style: normal;
+		@include opacity(1);
+		@include transform(translateY(0) scale(1));
+		@include transition(transform .3s, opacity .15s);
+	}
+	&:after {
+		display: block;
+		font-family:'Material Icons';
+		content:"\e5cd";
+		margin-top: -$toolbar-toggle-icon-size;
+		@include opacity(0);
+		@include transform(translateY(20px) scale(0.7));
+		@include transition(transform .3s, opacity .15s);
+	}
+	&.active {
+		> i {
+			@include opacity(0);
+			@include transform(translateY(-20px) scale(0.7));
+		}
+		&:after {
+			@include opacity(1);
+			@include transform(translateY(0) scale(1));
+		}
+	}
+}
+
+// Navbar Collapse
+@media #{$navbar-collapse} {
+	.toolbar {
+		width: $toolbar-width-mobile;
+		.inner > a {
+			&.mobile-menu-toggle { display: table-cell; }
+		}
+	}
+	.toolbar .inner .cart-btn:hover .cart-dropdown {
+		display: none;
+	}
+	.main-navigation {
+		position: fixed;
+		width: 100%;
+		height: calc(100% - #{$navbar-min-height});
+		top: $navbar-min-height;
+		left: 0;
+		background-color: $mobile-menu-bg-color;
+		padding: 0;
+		overflow-y: auto;
+		visibility: hidden;
+		@include opacity(0);
+		@include transition(visibility .3s, opacity .3s);
+		> .menu {
+			display: none;
+			padding: 20px 0;
+			> li {
+				display: block;
+				> a {
+					line-height: $line-height-base;
+					padding: 12px 15px;
+				}
+				.sub-menu {
+					display: block;
+					position: relative;
+					width: 100%;
+					max-height: 0;
+					left: 0;
+					top: 0;
+					margin: 0;
+					margin-top: 0;
+					padding: 0;
+					text-align: center;
+					background-color: $gray-lighter;
+					border: 0;
+					overflow: hidden;
+					@include transition(all .4s);
+					> li {
+						margin-top: 0;
+						> a { padding: 6px 15px; }
+					}
+				}
+				&:hover .sub-menu {
+					@include animation(none);
+				}
+				&.menu-item-has-children.active {
+					> a:after {
+						@include transform(rotate(180deg));
+					}
+					.sub-menu {
+						max-height: 600px;
+						padding: 20px 0;
+					}
+				}
+			}
+		}
+		&.open {
+			visibility: visible;
+			@include opacity(1);
+			> .menu {
+				display: block;
+				@include animation(slideUpLong .5s);
+			}
+		}
+	}
+}
+@media #{$tablet-port} {
+	.navbar { padding-left: 15px; }
+	.toolbar { right: 20px; }
+}
+
+// slideUp
+@include keyframes(slideUp) {
+  from {
+  	@include opacity(0);
+    @include transform(translate3d(0, 15px, 0));
+  }
+  to {
+  	@include opacity(1);
+    @include transform(none);
+  }
+}
+@include keyframes(slideUpLong) {
+  from {
+  	@include opacity(0);
+    @include transform(translate3d(0, 25px, 0));
+  }
+  to {
+  	@include opacity(1);
+    @include transform(none);
+  }
+}

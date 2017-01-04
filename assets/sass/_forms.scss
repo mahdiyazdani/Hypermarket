@@ -1,0 +1,386 @@
+//
+// Forms - Hypermarket Theme
+// --------------------------------------------------
+
+.form-control {
+  display: block;
+  width: 100%;
+  line-height: $line-height-base;
+  height: $input-height;
+  font-size: $input-font-size;
+  color: $input-color;
+  text-transform: none;
+  border: 2px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-bg;
+  padding: 0 16px;
+  margin-bottom: $line-height-computed;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  @include transition(all .3s);
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+
+	// Placeholder
+	@include placeholder();
+	&.placeholder {
+		color: $input-color-placeholder;
+	}
+}
+
+textarea.form-control {
+  height: auto !important;
+  padding: 13px 16px !important;
+}
+.form-group {
+  margin-bottom: $line-height-computed;
+}
+.form-element {
+  position: relative;
+	margin-bottom: $line-height-computed;
+  > i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-size: $input-icon-size;
+  }
+}
+.form-group,
+.form-element {
+  .form-control { margin-bottom: 0; }
+}
+label {
+  display: block;
+  color: $gray-dark;
+  font-size: $font-size-small;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+select.form-control::-ms-expand {
+  display: none;
+}
+select option {
+	color: $input-color;
+}
+
+// Small Inputs
+.form-control-sm {
+  height: $input-height-sm;
+}
+
+// Forms Validation
+.form-element {
+  &:before {
+    position: absolute;
+    display: block;
+    font-family: 'Material Icons';
+    font-size: $input-icon-size;
+    top: 50%;
+    right: 14px;
+    line-height: 1;
+    margin-top: -($input-icon-size / 2);
+    @include opacity(0);
+    @include transition(opacity .3s);
+  }
+  &.error {
+    .form-control {
+      border-color: $brand-danger;
+      padding-right: $input-icon-size + 20;
+    }
+    &:before {
+      content:"\e5c9";
+      color: $brand-danger;
+      @include opacity(1);
+    }
+    &:focus { border-color: $brand-danger; }
+  }
+  &.valid {
+    .form-control {
+      border-color: $brand-success;
+      padding-right: $input-icon-size + 20;
+    }
+    &:before {
+      content:"\e5ca";
+      color: $brand-success;
+      @include opacity(1);
+    }
+    &:focus { border-color: $brand-success; }
+  }
+  &.form-select:before {
+    content: "\e5c5";
+    font-size: $input-icon-size + 2;
+    margin-top: -($input-icon-size / 2) - 1;
+    color: $text-color;
+    @include opacity(1);
+  }
+}
+.status-message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-size: $font-size-base;
+  line-height: 1.8;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 25px;
+  visibility: hidden;
+  @include opacity(0);
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  @include transform(translateY(20px));
+  @include transition(all .4s);
+  &.error {
+    color: $brand-danger;
+    border-color: $brand-danger;
+  }
+  &.success {
+    color: $brand-success;
+    border-color: $brand-success;
+  }
+}
+.back-btn {
+  @extend .btn;
+  @extend .btn-sm;
+  line-height: ($btn-sm-height - 2) !important;
+  border: 1px solid $brand-danger !important;
+  background-color: transparent !important;
+  color: $brand-danger !important;
+  margin-top: 20px !important;
+  &:hover {
+    background-color: $brand-danger !important;
+    color: #fff !important;
+  }
+}
+.done-btn {
+  @extend .btn;
+  @extend .btn-sm;
+  line-height: ($btn-sm-height - 2) !important;
+  border: 1px solid $brand-success !important;
+  background-color: transparent !important;
+  color: $brand-success !important;
+  margin-top: 20px !important;
+  &:hover {
+    background-color: $brand-success !important;
+    color: #fff !important;
+  }
+}
+
+// Custom Checkboxes / Radios
+// --------------------------------------------------
+.form-control + .checkbox,
+.form-control + .checkbox-inline,
+.form-control + .radio,
+.form-control + .radio-inline {
+  margin-top: 20px;
+}
+.checkbox,
+.radio,
+.checkbox-inline,
+.radio-inline {
+  position: relative;
+  display: table;
+  width: auto;
+  font-size: $checkbox-radio-label-font-size;
+  color: $checkbox-radio-label-color;
+  text-transform: none;
+  font-weight: normal;
+  cursor: default;
+  margin-bottom: 12px;
+  margin-left: 2px;
+  @include user-select(none);
+  &.disabled {
+    color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+.text-light {
+  &.checkbox,
+  &.radio,
+  &.checkbox-inline,
+  &.radio-inline,
+  .checkbox,
+  .radio,
+  .checkbox-inline,
+  .radio-inline { color: #fff; }
+}
+label.hover {
+  cursor: pointer;
+}
+.checkbox-inline,
+.radio-inline {
+  display: inline-block;
+  margin-right: 18px;
+}
+.text-right .checkbox-inline,
+.text-right .radio-inline {
+  margin-left: 15px;
+  margin-right: 0;
+}
+.text-center .checkbox-inline,
+.text-center .radio-inline {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+// Checkbox/Radio replacement
+input[type="checkbox"], input[type="radio"] {
+  @include appearance(none);
+  @include position($input-icon-size/3 0 0 0);
+  @include transition(.2s);
+  height: 20px;
+  width: 20px;
+  background: $checkbox-radio-border-color;
+  color: $body-bg;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+  &:hover {
+    background: darken($gray-light, 15%);
+  }
+  &:checked {
+    background: $link-color;
+    // checkmark
+    &::before {
+      @include position(absolute);
+      @extend .text-center;
+      height: 20px;
+      width: 20px;
+      content: '\2714';
+      display: inline-block;
+      font-size: $input-icon-size/1.5;
+      line-height: $input-icon-size;
+    }
+  }
+}
+input[type="radio"] {
+  border-radius: 50%; 
+  &::after {
+    border-radius: 50%;
+  }
+}
+
+
+// Count Input (Quantity)
+.count-input {
+  position: relative;
+  width: 100px;
+  margin: 10px 0;
+  input {
+    width: 100%;
+    height: $btn-sm-height;
+    border: 2px solid $hr-border;
+    border-radius: $border-radius-small;
+    background: none;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    &::-webkit-inner-spin-button, 
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &:focus { outline: none; }
+  }
+  .incr-btn {
+    display: block;
+    position: absolute;
+    width: $btn-sm-height;
+    height: $btn-sm-height;
+    font-size: $font-size-lead;
+    color: $input-color;
+    font-weight: 300;
+    text-align: center;
+    line-height: $line-height-base;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    &.minus {
+      border-right: none;
+    }
+    &.plus {
+      border-left: none;
+    }
+    &:first-child {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+// Login Form
+.login-form {
+  .form-footer {
+    display: table;
+    width: 100%;
+    .rememberme,
+    .form-submit {
+      display: table-cell;
+      vertical-align: middle;
+      .btn { margin-top: 0; }
+    }
+    .rememberme { width: 60%; }
+    .form-submit { width: 40%; }
+  }
+}
+
+// Checkout Form
+.checkout-form {
+  &.container {
+    width: 100% !important;
+    padding: 0;
+  }
+}
+
+// Subscription Form
+.mc4wp-form, .mc4wp-form-fields {
+  position: relative;
+  display: block;
+  width: 100%;
+  .form-control {
+    margin-bottom: 0;
+  }
+  .mc4wp-response {
+    font-size: 70%;
+    padding-top: 24px;
+  }
+}
+
+// Search Box
+.search-box {
+  position: relative;
+  width: 100%;
+  .form-control {
+    padding-right: ($search-icon-size + 18);
+    margin-bottom: 0;
+  }
+  button[type=submit] {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    font-size: $search-icon-size;
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-top: -(($search-icon-size / 2) + 1);
+    @include transition(color .3s);
+    &:focus { outline: none; }
+    &:hover { color: $gray; }
+  }
+}
+
+// Color Select
+.color-select { min-width: 100px; }

@@ -1,0 +1,100 @@
+//
+// Mixins - Hypermarket Theme
+// --------------------------------------------------
+
+// Bootstrap Mixins
+
+// Utilities
+@import "mixins/hide-text";
+@import "mixins/opacity";
+@import "mixins/image";
+@import "mixins/labels";
+@import "mixins/reset-filter";
+@import "mixins/resize";
+@import "mixins/responsive-visibility";
+@import "mixins/size";
+@import "mixins/tab-focus";
+@import "mixins/text-emphasis";
+@import "mixins/text-overflow";
+@import "mixins/vendor-prefixes";
+
+// Components
+@import "mixins/alerts";
+@import "mixins/buttons";
+@import "mixins/panels";
+@import "mixins/pagination";
+@import "mixins/list-group";
+@import "mixins/nav-divider";
+@import "mixins/forms";
+@import "mixins/progress-bar";
+@import "mixins/table-row";
+
+// Skins
+@import "mixins/background-variant";
+@import "mixins/border-radius";
+@import "mixins/gradients";
+
+// Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+@import "mixins/nav-vertical-align";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+
+
+// Normal Button Variants
+@mixin button-variant($bg-color) {
+  background-color: $bg-color;
+  &:hover {
+    background-color: darken($bg-color, 9%);
+  }
+}
+
+// Ghost Button Variants
+@mixin ghost-button-variant($color, $border-color) {
+  background-color: transparent;
+  color: $color;
+  border-color: $border-color;
+  &:hover {
+    color: #fff;
+    background-color: $border-color;
+  }
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  } // Internet Explorer 10+
+  &::-webkit-input-placeholder  {
+    color: $color;
+  } // Safari and Chrome
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin font-icon($content) {
+  float: left;
+  content: $content;
+  font-family: 'Material Icons';
+  font-weight: $btn-font-weight;
+  font-style: $btn-font-weight;
+  line-height: $line-height-base;
+  letter-spacing: $btn-font-weight;
+  text-transform: $text-transform-h4;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: $btn-font-weight;
+  direction: ltr;
+  padding-right: 5px;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,161 @@
+//
+// Blog Styles - Hypermarket Theme
+// --------------------------------------------------
+
+// Post Meta
+.blog-post-meta {
+  display: table;
+  width: 100%;
+  color: $blog-post-meta-color;
+  font-size: $blog-post-meta-font-size;
+  padding-bottom: floor($line-height-computed / 1.3);
+  .column {
+    display: table-cell;
+    vertical-align: top;
+    margin-right: 15px;
+    &:last-child {
+      text-align: right;
+      margin-right: 0;
+    }
+  }
+  a:not(.read-more) {
+    color: $blog-post-meta-color;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+  i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+  .divider {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 11px;
+    background-color: rgba($blog-post-meta-color, .5);
+    margin: 0 8px;
+  }
+}
+
+// Post title
+.blog-post-title,
+.blog-post-title > a {
+  color: $text-color;
+  font-size: $blog-post-title;
+  font-weight: normal;
+  text-decoration: none;
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+  }
+}
+// Post Share
+.post-share {
+  font-size: $product-meta-font-size;
+  .social-bar {
+    display: inline-block;
+    margin: floor($line-height-computed / 2) 0;
+  }
+}
+// Author posts
+.author-posts {
+  list-style-type: square;
+}
+// Comments
+.comment-respond .tile form h3 {
+  margin-bottom: $line-height-computed;
+}
+.comment {
+  display: table;
+  width: 100%;
+  padding: floor($line-height-computed * 1.4) 0;
+  border-top: 1px solid $hr-border;
+  &:first-child { border-top: none; }
+  .comment-author-ava {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .comment-body {
+    display: block;
+    vertical-align: top;
+  }
+  .comment-author-ava {
+    width: $review-author-ava-size;
+    padding: 0 18px 18px 0;
+    > img { min-width: 80px; border-radius: 50%; }
+  }
+  p {
+    font-size: $review-body-font-size;
+    margin-bottom: 0;
+  }
+  .comment-meta {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px;
+    .column {
+      display: table-cell;
+      vertical-align: top;
+      width: 50%;
+      p.meta {
+        > strong {
+          font-size: $font-size-small;
+          color: $quote-author-font-color;
+          font-weight: normal;
+          font-style: normal;
+          margin-top: floor($line-height-computed / 2.5);
+          &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            width: 20px;
+            height: 1px;
+            background-color: $quote-author-font-color;
+            margin-right: 9px;
+          }
+        }
+      }
+      &:last-child { text-align: right; }
+      .star-rating {
+        top: 0;
+        right: 0;
+        float: right;
+        position: relative;
+      }
+    }
+    .comment-title {
+      font-size: $font-size-base;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .comment-reply {
+      display: inline-block;
+    }
+  }
+  @media screen and (max-width: 630px) {
+    .comment-meta {
+      .column {
+        display: block;
+        width: 100%;
+        &:last-child { text-align: left; }
+      }
+      .comment-title { margin-bottom: 8px; }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .comment-author-ava,
+    .comment-body { display: block; }
+    .comment-body { width: 100%; }
+  }
+}
+#comments {
+  ol.comment-list {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,87 @@
+//
+// Pagination + Pager - Hypermarket Theme
+// --------------------------------------------------
+
+// Pagination
+.pagination {
+  font-size: $pagination-link-font-size;
+  padding-top: floor($line-height-computed / 2); // ~12px
+  .page-numbers {
+    display: inline-block;
+    color: $pagination-link-color;
+    margin: 0 24px 12px 0;
+    a, span {
+      display: inline-block;
+      padding: 2px 10px 2px 0;
+    }
+    > a {
+      color: $pagination-link-color;
+      text-decoration: none;
+      &:hover {
+        color: $pagination-link-active-color;
+      }
+    }
+    .current {
+      color: $pagination-link-active-color;
+      cursor: default;
+    }
+  }
+  .pager {
+    display: inline-block;
+    a, span { display: inline-block; }
+    a {
+      color: $pagination-link-color;
+      text-decoration: none;
+      &:hover {
+        color: $pagination-link-active-color;
+      }
+    }
+    .current {
+      color: $pagination-link-active-color;
+      cursor: default;
+    }
+    span {
+      margin: 0 10px;
+      color: $gray;
+      @include opacity(.5);
+    }
+  }
+}
+
+// Page Navigation
+.page-nav {
+  display: block;
+  position: absolute;
+  top: 30%;
+  color: $pager-link-color;
+  font-size: $pager-link-size;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: -(ceil(($pager-link-size * $line-height-base) / 2));
+  &.page-prev { left: 30px; }
+  &.page-next { right: 30px; }
+  .page-preview {
+    display: block;
+    position: absolute;
+    width: $pager-preview-thumb-width;
+    top: -($pager-preview-thumb-width);
+    @include opacity(0);
+    @include transform(scale(.85));
+    @include transition(all .25s);
+  }
+  &:hover,
+  &:focus {
+    color: $pager-link-hover-color;
+    text-decoration: none;
+  }
+  &:hover {
+    .page-preview {
+      @include opacity(1);
+      @include transition(all .3s .15s);
+      @include transform(scale(1));
+    }
+  }
+  @media screen and (max-width: 890px) {
+    display: none;
+  }
+}

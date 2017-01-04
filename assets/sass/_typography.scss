@@ -1,0 +1,328 @@
+//
+// Typography - Hypermarket Theme
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: $headings-line-height;
+  color: $headings-color;
+  margin-top: 0;
+}
+h1, .h1 {
+  margin-bottom: floor($line-height-computed * 1.2);
+}
+h2, .h2 { margin-bottom: $line-height-computed; }
+h3, .h3 {
+  margin-bottom: floor($line-height-computed / 1.2);
+}
+h4, .h4 {
+  margin-bottom: floor($line-height-computed / 1.4);
+}
+h5, h6, .h5, .h6 {
+  margin-bottom: floor($line-height-computed / 2);
+}
+h1, .h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-h1;
+  font-style: $font-style-h1;
+  text-transform: $text-transform-h1;
+}
+h2, .h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
+  font-style: $font-style-h2;
+  text-transform: $text-transform-h2;
+}
+h3, .h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-h3;
+  font-style: $font-style-h3;
+  text-transform: $text-transform-h3;
+}
+h4, .h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-h4;
+  font-style: $font-style-h4;
+  text-transform: $text-transform-h4;
+}
+h5, .h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-weight-h5;
+  font-style: $font-style-h5;
+  text-transform: $text-transform-h5;
+}
+h6, .h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-h6;
+  font-style: $font-style-h6;
+  text-transform: $text-transform-h6;
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 $line-height-computed;
+}
+.lead { font-size: $font-size-lead; }
+.text-sm { font-size: $font-size-small; }
+.text-xs { font-size: $font-size-xs; }
+small,
+.small { font-size: 90%; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+.text-notransform     { text-transform: none; }
+
+.text-crossed { text-decoration: line-through; }
+
+// Font Weight
+.text-bold { font-weight: 600; }
+.text-semibold { font-weight: 500; }
+.text-normal { font-weight: normal; }
+.text-thin { font-weight: 300; }
+
+// Contextual colors
+.text-gray { color: $text-gray !important; }
+.text-light,
+.text-white {
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6 { color: #fff !important; }
+}
+
+// Contextual colors
+@include text-emphasis-variant('.text-default', $brand-default);
+@include text-emphasis-variant('.text-primary', $brand-primary);
+@include text-emphasis-variant('.text-success', $brand-success);
+@include text-emphasis-variant('.text-info', $brand-info);
+@include text-emphasis-variant('.text-warning', $brand-warning);
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
+// Contextual backgrounds
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
+}
+@include bg-variant('.bg-default', $brand-default);
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding-left: 18px;
+  margin-top: 0;
+  margin-bottom: $line-height-computed;
+  line-height: 1.8;
+  ul, ol { margin-bottom: 0; }
+}
+
+// List options
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-unstyled {
+  @include list-unstyled;
+}
+.list-featured {
+  list-style: none;
+  padding: 0;
+  li {
+    position: relative;
+    padding-left: 14px;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      left: 0;
+      top: 12px;
+      background-color: $brand-primary;
+    }
+  }
+  &.text-light {
+    li {
+      color: #fff;
+      &:before { background-color: #fff; }
+    }
+  }
+}
+.text-light {
+  .featured-list li {
+    color: #fff;
+    &:before { background-color: #fff; }
+  }
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Icon list
+.list-icon {
+  list-style: none;
+  padding: 0;
+  > li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: floor($line-height-computed / 2.5);
+    > i {
+      display: block;
+      position: absolute;
+      font-size: 1.25em;
+      top: 4px;
+      left: 0;
+      &.material-icons.phone { top: 6px; }
+      &.material-icons.email {
+        font-size: 1.15em;
+        top: 5px;
+      }
+    }
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  color: $headings-color;
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+  margin-bottom: 15px;
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: ($dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      @include text-overflow;
+    }
+    dd {
+      margin-left: $dl-horizontal-offset;
+    }
+  }
+}
+
+// Misc
+// -------------------------
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  @extend .text-uppercase;
+}
+
+// Blockquotes
+blockquote {
+  position: relative;
+  padding: floor($line-height-computed / 2) 0 floor($line-height-computed / 2) 25px;
+  margin: 0;
+  margin-bottom: $line-height-computed;
+  font-size: $quote-font-size;
+  text-transform: $quote-text-transform;
+  font-style: $quote-font-style;
+  color: $quote-font-color;
+  font-weight: $quote-font-weight;
+  border-left: $quote-border;
+
+  cite {
+    display: block;
+    font-size: $font-size-small;
+    color: $quote-author-font-color;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: floor($line-height-computed / 2.5);
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 20px;
+      height: 1px;
+      background-color: $quote-author-font-color;
+      margin-right: 9px;
+    }
+  }
+
+  p { margin-bottom: 0; }
+
+  // Light Skin
+  &.light-skin {
+    color: #fff;
+    cite {
+      color: #fff;
+      @include opacity(.8);
+    }
+  }
+
+  // Right Aligned
+  &.blockquote-reverse {
+    text-align: right;
+    padding: floor($line-height-computed / 2) 25px floor($line-height-computed / 2) 0;
+    border-left: none;
+    border-right: $quote-border;
+  }
+}
+
+// Addresses
+address {
+  margin-bottom: $line-height-computed;
+  font-style: normal;
+  line-height: $line-height-base;
+}

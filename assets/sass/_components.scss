@@ -1,0 +1,158 @@
+//
+// Components - Hypermarket Theme
+// --------------------------------------------------
+
+// Full Width Section
+// -------------------------
+.fw-section	{
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.container,
+	.container-fluid {
+		position: relative;
+		z-index: 5;
+	}
+
+	// Overlay
+	.overlay {
+    display: block;
+		position: absolute;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+  // Gray Background
+  &.bg-gray { background-color: $gray-lighter; }
+}
+
+
+// Category Link
+// -------------------------
+.category-link {
+  display: table;
+  padding: 0 15px;
+  margin: 0 auto 30px auto;
+  color: $category-link-color;
+  font-size: $category-link-font-size;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  > img {
+    display: block;
+    width: 100%;
+    max-width: $category-link-img-max-width;
+    margin-bottom: floor($line-height-computed / 2); // ~12px
+    @include opacity(1);
+    @include backface-visibility(hidden);
+    @include transform(scale(1));
+    @include transition(all .4s);
+  }
+
+  &:hover {
+    color: $category-link-hover-color;
+    > img {
+      @include opacity(.5);
+      @include transform(scale(1.05));
+    }
+  }
+  &:focus,
+  &:active {
+    color: $category-link-color;
+    text-decoration: none;
+  }
+}
+
+
+// Category Tile
+// -------------------------
+.category-tile {
+  display: block;
+  min-height: 250px;
+  background-color: $category-tile-bg;
+  text-decoration: none;
+  margin-bottom: 30px;
+  > .inner {
+    display: table;
+    width: 100%;
+    padding: floor($line-height-computed * 2);
+    > .column {
+      display: table-cell;
+      width: 50%;
+      &:first-child {
+        padding-right: $line-height-computed;
+      }
+      &:last-child {
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+  .category-thumb {
+    display: inline-block;
+    width: 100%;
+    max-width: $category-tile-thumb-max-width;
+    @include opacity(1);
+    @include backface-visibility(hidden);
+    @include transform(scale(1));
+    @include transition(all .4s);
+    > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &:hover,
+  &:focus { text-decoration: none; }
+  &:hover {
+    .category-thumb {
+      @include transform(scale(1.05));
+    }
+  }
+
+  @media screen and(max-width: 570px) {
+    > .inner > .column {
+      display: block;
+      width: 100%;
+      text-align: center;
+      &:first-child { padding-right: 0; }
+    }
+  }
+}
+
+// Info Box
+// -------------------------
+.info-box {
+  width: 100%;
+  padding: 40px 25px;
+  background-color: $gray-lighter;
+}
+
+// Quotation
+// -------------------------
+.quotation {
+  display: table;
+  width: 100%;
+  .quotation-author,
+  blockquote {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .quotation-author { padding-right: 24px; }
+  .quotation-author-ava {
+    width: $quotation-author-ava-size;
+    > img {
+      display: block;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}

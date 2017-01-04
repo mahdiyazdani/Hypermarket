@@ -1,0 +1,848 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Hypermarket\n"
+"POT-Creation-Date: 2017-01-04 20:30+0400\n"
+"PO-Revision-Date: 2017-01-04 20:30+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:13
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:16
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:29
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:50
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:34 comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36 comments.php:58
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:74
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:81 includes/classes/class-woocommerce.php:243
+msgid "Name"
+msgstr ""
+
+#: comments.php:81 includes/classes/class-woocommerce.php:243
+msgid "Name*"
+msgstr ""
+
+#: comments.php:83 includes/classes/class-woocommerce.php:245
+msgid "Email"
+msgstr ""
+
+#: comments.php:83 includes/classes/class-woocommerce.php:245
+msgid "Email*"
+msgstr ""
+
+#: comments.php:85
+msgid "Website"
+msgstr ""
+
+#: comments.php:88 includes/classes/class-woocommerce.php:258
+msgid "Comment"
+msgstr ""
+
+#: comments.php:88
+msgid "Comment*"
+msgstr ""
+
+#: comments.php:89
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:89
+#, php-format
+msgid "Be the first to comment &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:97
+msgid "Leave Comment"
+msgstr ""
+
+#: includes/back-compat.php:42 includes/back-compat.php:55
+#: includes/back-compat.php:71
+#, php-format
+msgid ""
+"Hypermarket requires at least WordPress version 4.4. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: includes/classes/class-customizer.php:79
+msgid "Site Title (<768px)"
+msgstr ""
+
+#: includes/classes/class-customizer.php:102
+msgid "Get Free Grid Builder!"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:117
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:222
+#: includes/template-functions.php:495
+msgid "Like"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:223
+#: includes/template-functions.php:491
+msgid "Unlike"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:224
+msgid "..."
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:242
+msgid "Shop Sidebar"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:244
+msgid "Widgets added to this region will appear in shop archive pages."
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:252
+#, php-format
+msgid "Footer %d"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:254
+#, php-format
+msgid "Widgetized Footer Area %d."
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:18
+msgid "Payment Method Icons"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:21
+msgid "A simple widget that displays payment method icons."
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:71
+msgid "Pay Secure"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:90
+#: includes/classes/class-social-icons-widget.php:126
+msgid "Title:"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:97
+#: includes/classes/class-social-icons-widget.php:133
+#, php-format
+msgid "Icon %1$s:"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:134
+#: includes/classes/class-social-icons-widget.php:185
+msgid "Select"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:135
+msgid "Visa"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:136
+msgid "Skrill"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:137
+msgid "MasterCard"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:138
+msgid "PayPal"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:139
+msgid "American Express"
+msgstr ""
+
+#: includes/classes/class-payment-method-icons-widget.php:140
+msgid "SSL Certificate"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:18
+msgid "Social Icons"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:21
+msgid "A simple widget that displays social network icons."
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:83
+msgid "Follow Us"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:186
+#: template-parts/hypermarket-post-sharing.php:27
+msgid "Facebook"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:187
+msgid "Google Plus"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:188
+msgid "Instagram"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:189
+msgid "Linkedin"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:190
+msgid "Pinterest"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:191
+msgid "Twitter"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:192
+msgid "Vimeo"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:193
+msgid "WordPress"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:194
+msgid "Youtube"
+msgstr ""
+
+#: includes/classes/class-social-icons-widget.php:199
+#, php-format
+msgid "Icon URL %1$s:"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:208 searchform.php:11
+msgid "Search for:"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:209 searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:237
+msgid "Leave a review"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:237
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:248
+msgid "Your Rating"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:249
+msgid "Rate*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:250
+msgid "Perfect"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:251
+msgid "Good"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:252
+msgid "Average"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:253
+msgid "Not that bad"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:254
+msgid "Very poor"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:258
+msgid "Review*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:260
+msgid "Leave Review"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:330
+#: includes/classes/class-woocommerce.php:418
+#: includes/classes/class-woocommerce.php:532
+msgctxt "placeholder"
+msgid "First name*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:338
+#: includes/classes/class-woocommerce.php:426
+#: includes/classes/class-woocommerce.php:540
+msgctxt "placeholder"
+msgid "Last name*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:346
+#: includes/classes/class-woocommerce.php:548
+msgctxt "placeholder"
+msgid "Email*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:354
+#: includes/classes/class-woocommerce.php:556
+msgctxt "placeholder"
+msgid "Phone*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:362
+#: includes/classes/class-woocommerce.php:434
+#: includes/classes/class-woocommerce.php:564
+msgctxt "placeholder"
+msgid "Address 1*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:370
+#: includes/classes/class-woocommerce.php:442
+#: includes/classes/class-woocommerce.php:572
+msgctxt "placeholder"
+msgid "Address 2"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:378
+#: includes/classes/class-woocommerce.php:450
+#: includes/classes/class-woocommerce.php:580
+msgctxt "placeholder"
+msgid "Company"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:386
+#: includes/classes/class-woocommerce.php:458
+#: includes/classes/class-woocommerce.php:588
+msgctxt "placeholder"
+msgid "Country*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:394
+#: includes/classes/class-woocommerce.php:466
+#: includes/classes/class-woocommerce.php:596
+msgctxt "placeholder"
+msgid "State*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:402
+#: includes/classes/class-woocommerce.php:474
+#: includes/classes/class-woocommerce.php:604
+msgctxt "placeholder"
+msgid "ZIP code*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:410
+#: includes/classes/class-woocommerce.php:482
+#: includes/classes/class-woocommerce.php:612
+msgctxt "placeholder"
+msgid "City*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:497
+msgctxt "placeholder"
+msgid "Username*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:505
+msgctxt "placeholder"
+msgid "Password*"
+msgstr ""
+
+#: includes/classes/class-woocommerce.php:513
+msgctxt "placeholder"
+msgid "Confirm password*"
+msgstr ""
+
+#: includes/extras.php:32
+msgid "Hypermarket is almost ready to help you start selling :)"
+msgstr ""
+
+#: includes/extras.php:34
+#, php-format
+msgid "Install and activate %s to start your e-commerce website now!"
+msgstr ""
+
+#: includes/extras.php:37
+msgid "Dismiss this notice."
+msgstr ""
+
+#: includes/extras.php:173
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/template-functions.php:312
+msgid "Not permitted"
+msgstr ""
+
+#: includes/woocommerce-template-functions.php:64
+#, php-format
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/woocommerce-template-functions.php:103
+msgid "Sale"
+msgstr ""
+
+#: includes/woocommerce-template-functions.php:492
+msgid "Back To Cart"
+msgstr ""
+
+#: loop-templates/content-author.php:22
+msgid "About:"
+msgstr ""
+
+#: loop-templates/content-author.php:51
+msgid "Posts by"
+msgstr ""
+
+#: loop-templates/content-author.php:61
+#: template-parts/hypermarket-post-meta.php:17
+msgid " ago"
+msgstr ""
+
+#: loop-templates/content-author.php:63 loop-templates/content-post.php:38
+#: template-parts/hypermarket-post-entry.php:24
+msgid "in"
+msgstr ""
+
+#: loop-templates/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: loop-templates/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: loop-templates/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: loop-templates/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: loop-templates/content-post.php:33
+#: template-parts/hypermarket-post-meta.php:14
+msgid "by"
+msgstr ""
+
+#: loop-templates/content-search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/hypermarket-footer-widget-areas.php:26
+#, php-format
+msgid "Get %1$s for free."
+msgstr ""
+
+#: template-parts/hypermarket-paging-navigation.php:44
+#: template-parts/hypermarket-paging-navigation.php:46
+msgid "Prev"
+msgstr ""
+
+#: template-parts/hypermarket-paging-navigation.php:52
+#: template-parts/hypermarket-paging-navigation.php:54
+msgid "Next"
+msgstr ""
+
+#: template-parts/hypermarket-post-entry.php:33
+msgid "Read More"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:16
+msgid "Share this product:"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:20
+msgid "Share this post:"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:27
+msgid "Share on Facebook"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:33
+msgid "Share on Google+"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:38
+msgid "Tweet this"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:43
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: template-parts/hypermarket-post-sharing.php:48
+msgid "Stumble it"
+msgstr ""
+
+#: template-parts/hypermarket-skip-links.php:12
+msgid "Skip to navigation"
+msgstr ""
+
+#: template-parts/hypermarket-skip-links.php:15
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/woocommerce/hypermarket-best-sellers.php:13
+msgid "Best Sellers"
+msgstr ""
+
+#: template-parts/woocommerce/hypermarket-new-arrivals.php:13
+msgid "New Arrivals"
+msgstr ""
+
+#: template-parts/woocommerce/hypermarket-shop-by-category.php:19
+msgid "Catalog"
+msgstr ""
+
+#: woocommerce/cart/cart.php:32
+#, php-format
+msgid "Currently %s%d item(s)"
+msgstr ""
+
+#: woocommerce/cart/cart.php:33
+msgid "in cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:86
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/cart/cart.php:102 woocommerce/checkout/form-coupon.php:29
+msgid "Have discount coupon?"
+msgstr ""
+
+#: woocommerce/cart/cart.php:105 woocommerce/checkout/form-coupon.php:33
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:106 woocommerce/checkout/form-coupon.php:34
+msgid "Enter coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:110 woocommerce/checkout/form-coupon.php:38
+msgid "Apply Coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:115
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Update Cart"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:49
+msgid "You May be Interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:60
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:73
+msgid "Most likely, уou just have not put anything into your basket."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:81
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:89
+msgid "View Cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:90
+#: woocommerce/cart/proceed-to-checkout-button.php:29
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:33
+msgid "Calculate Shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:38
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:54
+#: woocommerce/cart/shipping-calculator.php:60
+#: woocommerce/cart/shipping-calculator.php:76
+msgid "State / county"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:61
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:65
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:85
+msgid "City"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:92
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:97
+msgid "Update Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:57
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/global/form-login.php:32 woocommerce/global/form-login.php:33
+#: woocommerce/myaccount/form-lost-password.php:28
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/global/form-login.php:36 woocommerce/global/form-login.php:37
+#: woocommerce/myaccount/form-login.php:38
+#: woocommerce/myaccount/form-login.php:81
+msgid "Password"
+msgstr ""
+
+#: woocommerce/global/form-login.php:45 woocommerce/myaccount/form-login.php:46
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/global/form-login.php:49 woocommerce/myaccount/form-login.php:30
+#: woocommerce/myaccount/form-login.php:51
+msgid "Login"
+msgstr ""
+
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:56
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:25
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:39
+msgid "Showing"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:41
+#, php-format
+msgid " the single result"
+msgid_plural " all %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/loop/result-count.php:43
+#, php-format
+msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgid " the single result"
+msgid_plural " %1$d&ndash;%2$d of %3$d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/form-edit-account.php:30
+msgid "Account Details"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:33
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "First name*"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:38
+msgid "Last name*"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:42
+#: woocommerce/myaccount/form-login.php:76
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:43
+#: woocommerce/myaccount/form-login.php:77
+msgid "Email address*"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Password Change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:51
+#: woocommerce/myaccount/form-edit-account.php:52
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:56
+#: woocommerce/myaccount/form-edit-account.php:57
+msgid "New Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:60
+#: woocommerce/myaccount/form-edit-account.php:61
+msgid "Confirm New Password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:68
+msgid "Save changes"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Billing Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:23
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:42
+msgid "Save Address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:34
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:35
+msgid "Username or email address*"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:39
+#: woocommerce/myaccount/form-login.php:82
+msgid "Password*"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:66
+#: woocommerce/myaccount/form-login.php:94
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:71
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:72
+msgid "Username*"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:87
+msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:26
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:29
+msgid "Username or email*"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:36
+msgid "Reset Password"
+msgstr ""
+
+#: woocommerce/single-product/related.php:52
+msgid "Related Products"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:49
+msgid "You May Also Like&hellip;"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Hypermarket"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.mypreview.one/downloads/hypermarket"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"If you are looking for a stylish and elegant website template for your "
+"online store, Hypermarket is the perfect choice for you."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mahdi Yazdani"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.mypreview.one"
+msgstr ""

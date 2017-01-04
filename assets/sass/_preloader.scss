@@ -1,0 +1,46 @@
+//
+// Preloader - Hypermarket Theme
+// --------------------------------------------------
+.page-preloader {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $preloader-screen-bg;
+  @include transition(all .5s);
+}
+.page-preloading {
+  .page-wrapper {
+    @include opacity(0);
+    @include transition(all .5s .3s);
+  }
+  .page-preloader {
+    visibility: visible;
+    @include opacity(1);
+  }
+  &.loading-done {
+    .page-wrapper { @include opacity(1); }
+    .page-preloader {
+      visibility: hidden;
+      @include opacity(0);
+    }
+    &.link-clicked {
+      .page-wrapper {
+        @include opacity(0);
+      }
+    }
+  }
+}
+.preloader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $preloader-size;
+  margin: {
+    top: -(floor($preloader-size / 2));
+    left: -(floor($preloader-size / 2));
+  }
+}
