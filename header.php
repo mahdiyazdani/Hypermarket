@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.1
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +26,8 @@
 		 * Functions hooked into "hypermarket_before_header_area" action
 		 *
 		 * @hooked hypermarket_skip_links                		    - 0
-		 * @since 1.0
+		 * @hooked hypermarket_preloader                		    - 10
+		 * @since 1.0.1
 		 */
 		do_action('hypermarket_before_header_area');
 	?>
