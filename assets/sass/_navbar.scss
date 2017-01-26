@@ -111,6 +111,7 @@
 			}
 			&.mobile-menu-toggle {
 				display: none;
+				&.menu-text-right {text-align: right !important;}
 				&:after {
 					display: block;
 					font-family:'Material Icons';
