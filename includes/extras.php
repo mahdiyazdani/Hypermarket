@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.1
  */
 /**
  * Query WooCommerce activation.
@@ -21,28 +21,47 @@ endif;
 /**
  * Check if WooCommerce activated or not?
  *
- * @since 1.0
+ * @since 1.0.1
  */
 if (!function_exists('hypermarket_woocommerce_requirement_admin_notice')):
     function hypermarket_woocommerce_requirement_admin_notice()
     {
+        global $current_user;
+        $user_id = $current_user->ID;
+        if (!hypermarket_is_woocommerce_activated() && !get_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore')):
 ?>
-        <div class="notice notice-warning is-dismissible">
-            <p><strong><?php
-        _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
-            <p><?php
-        printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . hypermarket_sanitize_url( get_admin_url() ) . '/plugin-install.php?tab=plugin-information&amp;plugin=woocommerce&amp;TB_iframe=true" class="thickbox" data-title="WooCommerce">WooCommerce</a>'); ?></p>
-            <button type="button" class="notice-dismiss">
-                <span class="screen-reader-text"><?php
-        _e('Dismiss this notice.', 'hypermarket'); ?></span>
-            </button>
-        </div>
+            <div class="notice notice-warning" style="position:relative;">
+                <p><strong><?php
+            _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
+                <p><?php
+            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . hypermarket_sanitize_url( get_admin_url() ) . '/plugin-install.php?s=woocommerce&tab=search&type=term" target="_self">WooCommerce</a>'); ?></p>
+                <a href="?install-woocommerce-ignore-notice">
+                    <button class="notice-dismiss">
+                        <span class="screen-reader-text"><?php
+                _e('Dismiss this notice.', 'hypermarket'); ?></span>
+                    </button>
+                </a>
+            </div>
         <?php
+        endif;
     }
 endif;
-if (!hypermarket_is_woocommerce_activated()):
-    add_action('admin_notices', 'hypermarket_woocommerce_requirement_admin_notice');
+add_action('admin_notices', 'hypermarket_woocommerce_requirement_admin_notice');
+/**
+ * Ignore notice, if user already dismissed it.
+ *
+ * @since 1.0.1
+ */
+if (!function_exists('hypermarket_woocommerce_requirement_admin_notice_ignore')):
+    function hypermarket_woocommerce_requirement_admin_notice_ignore() {
+        global $current_user;
+        $user_id = $current_user->ID;
+        if (isset($_GET['install-woocommerce-ignore-notice'])) :
+            add_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore', 'true', true);
+        endif;
+    }
 endif;
+add_action('admin_init', 'hypermarket_woocommerce_requirement_admin_notice_ignore');
 /**
  * Query Homepage template usage.
  *
