@@ -55,6 +55,94 @@
     text-decoration: none;
   }
 }
+
+// Single Post
+.blog-post-open {
+  overflow-y: hidden;
+  &.hasScrollbar {
+    padding-right: 16px;
+    .navbar-sticky {
+      width: calc(100% - 16px);
+    }
+  }
+}
+.close-btn {
+  display: block;
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  color: $sidebar-icon-color;
+  font-size: $sidebar-icon-size;
+  cursor: pointer;
+  @include transition(color .3s);
+  &:hover { color: $sidebar-icon-hover-color; }
+}
+.single-post-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $navbar-zindex + 5;
+  cursor: default;
+  &.active { display: block; }
+}
+.single-post-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: $navbar-zindex + 10;
+  background-color: $single-post-wrap-bg;
+  overflow-y: auto;
+  visibility: hidden;
+  @include opacity(0);
+  @include box-shadow(0px 3px 50px 0px rgba(0,0,0,0.17));
+  @include transition(all .35s);
+  > .inner {
+    padding: 70px 40px 50px 40px;
+    visibility: hidden;
+    @include opacity(0);
+    @include transform(translate3d(0, 30px, 0));
+    @include transition(all .4s .5s);
+    &.loaded {
+      visibility: visible;
+      opacity: 1;
+      @include transform(none);
+    }
+  }
+  .preloader {
+    @include opacity(0);
+    @include transform(translate3d(0, 30px, 0));
+    @include transition(all .4s .25s);
+    &.active {
+      @include opacity(1);
+      @include transform(none);
+      @include transition(all .3s);
+    }
+  }
+  &.open {
+    visibility: visible;
+    @include opacity(1);
+    z-index: 999999;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 820px) {
+    width: 100%;
+  }
+}
+
 // Post Share
 .post-share {
   font-size: $product-meta-font-size;
