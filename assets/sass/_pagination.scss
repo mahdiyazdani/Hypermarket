@@ -57,9 +57,13 @@
   font-size: $pager-link-size;
   text-decoration: none;
   text-transform: uppercase;
+  z-index: 10;
   margin-top: -(ceil(($pager-link-size * $line-height-base) / 2));
   &.page-prev { left: 30px; }
-  &.page-next { right: 30px; }
+  &.page-next { 
+    right: 30px; 
+    .page-preview { right: 0; }
+  }
   .page-preview {
     display: block;
     position: absolute;
