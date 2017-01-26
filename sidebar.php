@@ -5,7 +5,7 @@
  * @see 		https://codex.wordpress.org/Function_Reference/dynamic_sidebar
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 		1.0
+ * @since 		1.0.1
  */
 
 if ( ! is_active_sidebar( 'sidebar' ) ) :
@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar' ) ) :
 endif;
 ?>
 <!-- Sidebar -->
-<div class="col-md-3 col-sm-4" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<div class="col-md-3 col-sm-4" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 	<aside class="sidebar sidebar-right">
 		<span class="sidebar-close"><i class="material-icons close"></i></span>
 		<div class="widgets">
