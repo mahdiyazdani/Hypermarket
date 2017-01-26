@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.1
  */
 /**
  * Functions hooked into "hypermarket_featured_image_single_post" action
@@ -23,7 +23,7 @@ do_action('hypermarket_featured_image_single_post');
 				the_post();
 		?>
 				<!-- Post -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting">
+				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom'); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 					<div class="col-sm-12">
 						<?php do_action('hypermarket_before_single_post_content'); ?>
 						<?php the_content(); ?>
