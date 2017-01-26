@@ -16,3 +16,16 @@ Hypermarket theme makes it easier for you to market your product online and reac
 [Offical theme post page] (https://www.mypreview.one/downloads/hypermarket/)
 
 [Visit live/online demo] (https://demo.mypreview.one/hypermarket/)
+
+*Change-log*
+
+<pre>
+= 1.0.1 =
+* Customizer JS file created.
+* Page preloading added.
+* Minor changes in schema markup.
+* WooCommerce installation method changed.
+* Minor improvements.
+= 1.0 =
+* Initial release.
+</pre>
