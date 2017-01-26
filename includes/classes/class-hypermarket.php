@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0
+ * @since 	    1.0.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -72,7 +72,7 @@ if (!class_exists('Hypermarket')):
 		 * runs before the init hook. The init hook is too late for some features, such
 		 * as indicating support for post thumbnails.
 		 *
-		 * @since 1.0
+		 * @since 1.0.1
 		 */
 		public function setup()
 
@@ -111,7 +111,7 @@ if (!class_exists('Hypermarket')):
 			* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 			*/
 			add_theme_support('post-thumbnails');
-			// This theme uses wp_nav_menu() in two location.
+			// This theme uses wp_nav_menu() in one location.
 			define('HypermarketPrimaryNavLocation', 'primary');
 			register_nav_menus(array(
 				HypermarketPrimaryNavLocation => __('Primary Menu', 'hypermarket')
@@ -127,10 +127,6 @@ if (!class_exists('Hypermarket')):
 				'gallery',
 				'caption',
 			));
-			/*
-			* Adding Thumbnail basic support
-			*/
-			add_theme_support('post-thumbnails');
 			/*
 			* Enable support for Post Formats.
 			* See http://codex.wordpress.org/Post_Formats
@@ -192,7 +188,8 @@ if (!class_exists('Hypermarket')):
 			 */
 			function hypermarket_flush_rewrite_rules()
 			{
-				flush_rewrite_rules();
+				global $wp_rewrite;
+    			$wp_rewrite->flush_rules();
 			}
 		}
 		/**
@@ -217,8 +214,9 @@ if (!class_exists('Hypermarket')):
 				'jquery',
 				'hypermarket-scripts'
 			) , HypermarketThemeVersion, true);
-			wp_localize_script('hypermarket-theme-scripts', 'hypermarket_simple_like', array(
+			wp_localize_script('hypermarket-theme-scripts', 'hypermarket_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
+				'security' => wp_create_nonce( 'hypermarket_theme_nonce' ),
 				'like' => __('Like', 'hypermarket') ,
 				'unlike' => __('Unlike', 'hypermarket') ,
 				'loading' => __('...', 'hypermarket')
