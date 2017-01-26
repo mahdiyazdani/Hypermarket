@@ -384,6 +384,9 @@
       right: auto;
       line-height: 2;
       position: relative;
+      & span {
+        height: 100%;
+      }
     } 
   }
 }
