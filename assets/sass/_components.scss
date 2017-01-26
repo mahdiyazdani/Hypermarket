@@ -2,6 +2,94 @@
 // Components - Hypermarket Theme
 // --------------------------------------------------
 
+// Hero Slider
+// -------------------------
+.hero-slider {
+  width: 100%;
+  overflow: hidden;
+  .from-top-13 {top: 13%;}
+  .from-bottom-right {bottom: 13%; right: 15px;}
+  .slide {
+    display: block;
+    width: 100%;
+    height: 790px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    > .container {
+      position: relative;
+      display: table;
+      width: 100% !important;
+      max-width: 1170px !important;
+      height: 100%;
+    }
+    h1, h2, h3, h4, h5, h6, p,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+  .owl-carousel .owl-controls .owl-nav {
+    .owl-prev, .owl-next {
+      width: ($carousel-navs-size * 2);
+      height: ($carousel-navs-size * 2);
+      line-height: ($carousel-navs-size * 2);
+      font-size: $carousel-navs-icon-size + 6;
+      @include transition(all .4s);
+      &:before { line-height: ($carousel-navs-size * 2); }
+    }
+    .owl-prev {
+      left: -(($carousel-navs-size * 2) + 40);
+    }
+    .owl-next {
+      right: -(($carousel-navs-size * 2) + 40);
+    }
+  }
+  &:hover {
+    .owl-carousel .owl-controls .owl-nav {
+      .owl-prev { left: 30px; }
+      .owl-next { right: 30px; }
+    }
+  }
+  .slider-layer { position: absolute; }
+  .owl-item {
+    .from-top, .from-bottom,
+    .from-left, .from-right,
+    .scale-up, .scale-down {
+      opacity: 0;
+      @include transition(all .5s .3s ease-in-out);
+      @include backface-visibility(hidden);
+    }
+    .from-top { @include transform(translateY(-45px)); }
+    .from-bottom { @include transform(translateY(45px)); }
+    .from-left { @include transform(translateX(-45px)); }
+    .from-right { @include transform(translateX(45px)); }
+    .scale-up { @include transform(scale(0.8)); }
+    .scale-down { @include transform(scale(1.2)); }
+    .delay-1 { @include transition-delay(.5s); }
+    .delay-2 { @include transition-delay(.7s); }
+    .delay-3 { @include transition-delay(.9s); }
+    .delay-4 { @include transition-delay(1.1s); }
+    &.active {
+      .from-top, .from-bottom {
+        opacity: 1;
+        @include transform(translateY(0));
+      }
+      .from-left, .from-right {
+        opacity: 1;
+        @include transform(translateX(0));
+      }
+      .scale-up, .scale-down {
+        opacity: 1;
+        @include transform(scale(1));
+      }
+    }
+  }
+  @media #{$tablet-port} {
+    .slide { height: 510px; }
+    .owl-carousel .owl-controls .owl-nav { display: none !important; }
+  }
+}
 // Full Width Section
 // -------------------------
 .fw-section	{
