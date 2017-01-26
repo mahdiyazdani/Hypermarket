@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_footer_area"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.1
  */
 if (is_active_sidebar('footer-3')):
 	$widget_columns = apply_filters('hypermarket_footer_widget_areas', 3);
@@ -21,9 +21,11 @@ for ($counter = 0; $counter <= $widget_columns; $counter++):
 		echo '<div class="column">' . PHP_EOL;
 		dynamic_sidebar('footer-' . intval($counter));
 		if($counter == 1):
-			echo '<p class="copyright space-top">' . esc_html(apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date('Y'))) . ' | ';
-			// You `HAVE` to keep this credit link. We really do appreciate it ;)
-			printf(esc_attr__('Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url( HypermarketThemeURI ) . '" rel="author" target="_blank">' . HypermarketThemeName . '</a>');
+			echo '<p class="copyright space-top"><span>' . apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date('Y')) . '</span>';
+			if( apply_filters( 'hypermarket_credit_link', true ) ):
+				// You `HAVE` to keep this credit link. We really do appreciate it ;)
+				printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url( HypermarketThemeURI ) . '" rel="author" target="_blank">' . HypermarketThemeName . '</a>');
+			endif;
 			echo '</p>' . PHP_EOL;
 		endif;
 		if($counter == $widget_columns):
