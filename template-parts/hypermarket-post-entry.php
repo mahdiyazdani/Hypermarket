@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.1
  */
 ?>
 <div class="col-md-offset-1 col-sm-8">
@@ -29,7 +29,7 @@
 			<?php endif; ?>
 		</div><!-- .column -->
 		<div class="column">
-			<a href="<?php the_permalink(); ?>" target="_self" class="read-more">
+			<a href="<?php the_permalink(); ?>" target="_self" class="<?php echo apply_filters('hypermarket_post_readmore_cls', 'read-more'); ?>" data-postid="<?php the_ID(); ?>">
 				<?php _e('Read More', 'hypermarket'); ?>
 			</a><!-- .read-more -->
 		</div><!-- .column -->
