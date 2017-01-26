@@ -5,7 +5,7 @@
  * @package 		Hooked into "woocommerce_single_product_summary"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.1
  */
 global $post;
 $post_title = wp_strip_all_tags( get_the_title($post->ID), false );
@@ -50,4 +50,4 @@ endif;
 			</a>
 		<?php endif; ?>
 	</div><!-- .social-bar -->
-</div><!-- .product-share -->
+</div><!-- .<?php echo $share_wrapper_class; ?> -->
