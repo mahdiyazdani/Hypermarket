@@ -5,16 +5,16 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.1
  */
 do_action('hypermarket_before_footer_area');
 /**
- * Functions hooked into "rumi_footer_area" action
+ * Functions hooked into "hypermarket_footer_area" action
  *
  * @hooked hypermarket_footer_wrapper_start	    - 10
  * @hooked hypermarket_footer_widget_areas  	- 20
- * @hooked rumi_footer_wrapper_end         		- 30
- * @since 1.0
+ * @hooked hypermarket_footer_wrapper_end       - 30
+ * @since 1.0.1
  */
 do_action('hypermarket_footer_area');
 
