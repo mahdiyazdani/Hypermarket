@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0
+ * @since 	    1.0.1
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -22,6 +22,18 @@ if (!function_exists('hypermarket_skip_links')):
 		get_template_part('template-parts/hypermarket-skip-links');
 	}
 endif;
+/**
+ * Page Preloading.
+ *
+ * @package Hooked into "hypermarket_before_header_area"
+ * @since 1.0.1
+ */
+if (!function_exists('hypermarket_preloader')):
+	function hypermarket_preloader()
+	{
+		get_template_part('template-parts/hypermarket-preloader');
+	}
+endif;
 // ======================================================================
 // Hooked into "hypermarket_header_area"
 // ======================================================================
@@ -36,14 +48,14 @@ if (!function_exists('hypermarket_header_wrapper_start')):
 	function hypermarket_header_wrapper_start()
 	{
 		echo '<!-- Navbar -->' . PHP_EOL;
-		echo '<header id="hypermarket-header" class="navbar">' . PHP_EOL;
+		echo '<header id="hypermarket-header" class="navbar" itemscope="itemscope" itemtype="http://schema.org/WPHeader">' . PHP_EOL;
 	}
 endif;
 /**
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 0.1
+ * @since 1.0
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
@@ -63,7 +75,7 @@ endif;
  * Primary Navigation.
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 0.1
+ * @since 1.0
  */
 if (!function_exists('hypermarket_primary_navigation')):
 	function hypermarket_primary_navigation()
@@ -83,7 +95,7 @@ endif;
  * Header Toolbar.
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 0.1
+ * @since 1.0
  */
 if (!function_exists('hypermarket_header_toolbar')):
 	function hypermarket_header_toolbar()
@@ -179,7 +191,7 @@ if (!function_exists('hypermarket_homepage_content'))
 if (!function_exists('hypermarket_footer_wrapper_start')):
 	function hypermarket_footer_wrapper_start()
 	{
-		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x">' . PHP_EOL;
+		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">' . PHP_EOL;
 	}
 endif;
 /**
