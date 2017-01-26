@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.1
  */
 ?>
 <div class="col-md-3 col-sm-4">
@@ -20,7 +20,7 @@
 			<?php echo hypermarket_get_simple_likes_button( $post->ID ); ?>
 		</div><!-- .column -->
 	</div><!-- .blog-post-meta -->
-	<h2 class="blog-post-title">
-		<a href="<?php the_permalink(); ?>" target="_self"><?php the_title(); ?></a>
+	<h2 class="blog-post-title" itemprop="headline">
+		<a href="<?php the_permalink(); ?>" class="<?php echo apply_filters('hypermarket_post_title_cls', ''); ?>" target="_self" data-postid="<?php the_ID(); ?>"><?php the_title(); ?></a>
 	</h2><!-- .blog-post-title -->
 </div><!-- .col-md-3 -->
