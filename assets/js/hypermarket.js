@@ -1,3 +1,10 @@
+/**
+ * Hypermarket Theme
+ *
+ * @author      Mahdi Yazdani
+ * @package     Hypermarket
+ * @since       1.0.1
+ */
 ;
 (function() {
     window.onload = function() {
@@ -148,19 +155,19 @@ jQuery(document).ready(function($) {
         }
     }
 
-    function hypermarket_control_update_cart_btn() {
-    	if($('body').hasClass('woocommerce-cart')) {
-	    	$('.quantity .qty').live('change', function(){
-	    		$('#update-cart-btn').removeAttr('disabled');
-	    	});
-	    	$('#update-cart-btn').live('click', function(){
-	    		$( 'div.woocommerce > form input[name="update_cart"]' ).trigger('click');
-	    	});
-    	}
+    function HypermarketControlUpdateCartBtn() {
+        if ($('body').hasClass('woocommerce-cart')) {
+            $('.quantity .qty').live('change', function() {
+                $('#update-cart-btn').removeAttr('disabled');
+            });
+            $('#update-cart-btn').live('click', function() {
+                $('div.woocommerce > form input[name="update_cart"]').trigger('click');
+            });
+        }
     }
 
     $(document).on('updated_wc_div', function() {
-        hypermarket_control_update_cart_btn();
+        HypermarketControlUpdateCartBtn();
     });
 
     $(document).on('click', '.plus, .minus', function() {
@@ -196,14 +203,14 @@ jQuery(document).ready(function($) {
         $qty.trigger('change');
     });
 
-    hypermarket_control_update_cart_btn();
+    HypermarketControlUpdateCartBtn();
 
     // Country / state dropdown - Shipping
     //------------------------------------------------------------------------------
-    $('#calc_shipping_country').live('change', function(){
-        if($('#calc_shipping_state').is('input') == true) {
+    $('#calc_shipping_country').live('change', function() {
+        if ($('#calc_shipping_state').is('input') == true) {
             $('#calc_shipping_state_field').removeClass('form-select');
-        }else {
+        } else {
             $('#calc_shipping_state_field').addClass('form-select');
         }
     });
@@ -269,21 +276,153 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
-
-    // Color Select
+    // Single Post via Ajax
     //------------------------------------------------------------------------------
-    $('.color-select').on('change', function() {
-        var target = $(this).find(':selected').data('image');
-        $('[href="#' + target + '"]').trigger('click');
-    });
+    var hypermarketAjaxPost = $('#hypermarket-ajax-post'),
+            ajaxPostLink = $('.ajax-post-link'),
+            postBackdrop = $('.single-post-backdrop'),
+            postContainer = $('.single-post-wrap'),
+            postContentWrap = $('.single-post-wrap .inner'),
+            postContent = $('.single-post-wrap .inner .post-content'),
+            closeBtn = $('.single-post-wrap .close-btn'),
+            postPreloader = $('.single-post-wrap .preloader');
+    if (hypermarketAjaxPost.length > 0) {
+        // Get Data via Ajax
+        function getData(postID) {
+            $.ajaxSetup({cache:true});
+            $.ajax({
+                type: 'POST',
+                url: hypermarket_vars.ajaxurl,
+                dataType: 'html',
+                timeout: 10000,
+                cache: false,
+                data: ({
+                    post_id: postID,
+                    action: 'hypermarket_get_ajax_post_content',
+                    security: hypermarket_vars.security
+                }),
+                success: successFn,
+                error: errorFn,
+                complete: function(xhr, status) {
+                    console.log('Request is complete!');
+                }
+            });
+        }
+
+        // Success
+        function successFn(result, status) {
+            postContent.prepend(result);
+            hypermarketTooltipInitialization('#hypermarket-ajax-post ');
+            hypermarketMakeIframeResponsive('#hypermarket-ajax-post ');
+            // Compatibility with BS3 Grid Builder
+            $('#hypermarket-ajax-post article .bs3-grid-builder-container').removeClass('container');
+            $('#hypermarket-ajax-post article .bs3-grid-builder-container').removeClass('container-fluid');
+            postContentWrap.addClass('loaded');
+        }
+
+        // Error
+        function errorFn(xhr, status, strErr) {
+            postContent.prepend('<p>' + strErr + '</p>');
+            postContentWrap.addClass('loaded');
+        }
+
+        // Open Post
+        function openPost(postID) {
+
+            $('body').addClass('blog-post-open');
+            postBackdrop.addClass('active');
+            postContainer.addClass('open');
+            postPreloader.addClass('active');
+
+            setTimeout(function() {
+                postPreloader.removeClass('active');
+                getData(postID);
+            }, 900);
+        }
+
+        // Close Post
+        function closePost() {
+            $('body').removeClass('blog-post-open');
+            postBackdrop.removeClass('active');
+            postContainer.removeClass('open');
+            postContentWrap.removeClass('loaded');
+            setTimeout(function() {
+                postContent.empty();
+            }, 500);
+        }
+
+        ajaxPostLink.on('click', function(e) {
+            var targetPost = $(this).data('postid');
+
+            openPost(targetPost);
+
+            e.preventDefault();
+        });
+
+        closeBtn.on('click', closePost);
+    }
+
+    // Hero Slider
+    //------------------------------------------------------------------------------
+    var heroSlider = $('.hero-slider .inner');
+    if (heroSlider.length > 0) {
+        heroSlider.each(function() {
+            var loop = ($(this).parent().data('loop') === 1) ? true : false,
+                autoplay = ($(this).parent().data('autoplay') === 1) ? true : false,
+                interval = $(this).parent().data('interval') || 3000,
+                nav = ($(this).parent().data('nav') === 1) ? true : false,
+                dots = ($(this).parent().data('dots') === 1) ? true : false,
+                mousedrag = ($(this).parent().data('mousedrag') === 1) ? true : false,
+                touchdrag = ($(this).parent().data('touchdrag') === 1) ? true : false,
+                hoverpause = ($(this).parent().data('hoverpause') === 1) ? true : false,
+                items = $(this).parent().data('items') || 1,
+                margin = $(this).parent().data('margin') || 0,
+                stagepadding = $(this).parent().data('stagepadding') || 0;
+            if ($(this).find('.slide').length === 1) {
+                loop = false;
+            }
+            $(this).owlCarousel({
+                loop: loop,
+                margin: 0,
+                nav: nav,
+                dots: dots,
+                navText: [, ],
+                autoplay: autoplay,
+                autoplayTimeout: interval,
+                mouseDrag: mousedrag,
+                touchDrag: touchdrag,
+                autoplayHoverPause: hoverpause,
+                margin: margin,
+                stagePadding: stagepadding,
+                smartSpeed: 450,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: items
+                    },
+                    1200: {
+                        items: items
+                    }
+                }
+            });
+        });
+    }
 
 
     // Tooltips
     //------------------------------------------------------------------------------
-    var $tooltip = $('[data-toggle="tooltip"]');
-    if ($tooltip.length > 0) {
-        $tooltip.tooltip();
+    function hypermarketTooltipInitialization(selector) {
+        if (typeof selector === "undefined" || selector === null) { 
+            selector = '';
+        }
+        var $tooltip = $(selector + '[data-toggle="tooltip"]');
+        if ($tooltip.length > 0) {
+            $tooltip.tooltip();
+        }
     }
+    hypermarketTooltipInitialization();
 
     // Setting background of sections
     //------------------------------------------------------------------------------
@@ -310,13 +449,13 @@ jQuery(document).ready(function($) {
 
     // Order comments
     //------------------------------------------------------------------------------
-    if($('#order_comments').length > 0) {
+    if ($('#order_comments').length > 0) {
         $('#order_comments').attr('rows', '8');
     }
 
     // Thank you page
     //------------------------------------------------------------------------------
-    if($('.woocommerce-order-received .woocommerce').length > 0) {
+    if ($('.woocommerce-order-received .woocommerce').length > 0) {
         $('.woocommerce-order-received .woocommerce').addClass('col-sm-12');
     }
 
@@ -330,58 +469,69 @@ jQuery(document).ready(function($) {
         var security = button.attr('data-nonce');
         var iscomment = button.attr('data-iscomment');
         var allbuttons;
-        if ( iscomment === '1' ) { /* Comments can have same id */
+        if (iscomment === '1') { /* Comments can have same id */
             allbuttons = $('.hypermarket-sl-comment-button-' + post_id);
         } else {
             allbuttons = $('.hypermarket-sl-button-' + post_id);
         }
         var loader = allbuttons.next('#hypermarket-sl-loader');
         if (post_id !== '') {
+            $.ajaxSetup({cache:true});
             $.ajax({
                 type: 'POST',
-                url: hypermarket_simple_like.ajaxurl,
-                data : {
-                    action : 'hypermarket_process_simple_like',
-                    post_id : post_id,
-                    nonce : security,
-                    is_comment : iscomment,
+                url: hypermarket_vars.ajaxurl,
+                timeout: 10000,
+                async: true,
+                cache: false,
+                data: {
+                    action: 'hypermarket_process_simple_like',
+                    post_id: post_id,
+                    nonce: security,
+                    is_comment: iscomment,
                 },
-                beforeSend:function(){
-                    loader.html('&nbsp;<span class="loader"><small><em>' + hypermarket_simple_like.loading + '</em></small></span>');
-                },  
-                success: function(response){
+                beforeSend: function() {
+                    loader.html('&nbsp;<span class="loader"><small><em>' + hypermarket_vars.loading + '</em></small></span>');
+                },
+                success: function(response) {
                     var icon = response.icon;
                     var count = response.count;
-                    allbuttons.html(icon+count);
-                    if(response.status === 'unliked') {
-                        var like_text = hypermarket_simple_like.like;
+                    allbuttons.html(icon + count);
+                    if (response.status === 'unliked') {
+                        var like_text = hypermarket_vars.like;
                         allbuttons.prop('title', like_text);
                         allbuttons.removeClass('liked');
                     } else {
-                        var unlike_text = hypermarket_simple_like.unlike;
+                        var unlike_text = hypermarket_vars.unlike;
                         allbuttons.prop('title', unlike_text);
                         allbuttons.addClass('liked');
                     }
-                    loader.empty();                 
+                    loader.empty();
                 }
             });
-            
+
         }
         return false;
     });
 
     // Wrap iframe with responsive embed classes
     //------------------------------------------------------------------------------
-    if ($('iframe').length > 0) {
-        $('iframe').each(function(){
-            if( $(this).hasClass('wp-embedded-content') ) {
-                $(this).wrap('<div class="center-block space-bottom"></div>');
-                $(this).attr('width', '100%');
-            }else {
-                $(this).wrap('<div class="embed-responsive embed-responsive-16by9 space-bottom"></div>');
-            }
-        });
+    
+    function hypermarketMakeIframeResponsive(selector) {
+        if (typeof selector === "undefined" || selector === null) { 
+            selector = '';
+        }
+        if ($(selector + 'iframe').length > 0) {
+            $(selector + 'iframe').each(function() {
+                if ($(this).hasClass('wp-embedded-content')) {
+                    $(this).wrap('<div class="center-block space-bottom"></div>');
+                    $(this).attr('width', '100%');
+                } else {
+                    $(this).wrap('<div class="embed-responsive embed-responsive-16by9 space-bottom"></div>');
+                }
+            });
+        }
     }
+    hypermarketMakeIframeResponsive();
 
     // Single post
     //------------------------------------------------------------------------------
@@ -400,18 +550,18 @@ jQuery(document).ready(function($) {
     // Compatibility with BS3 Grid Builder
     //------------------------------------------------------------------------------
     if ($('.bs3-grid-builder-container').closest('.col-sm-12').length > 0) {
-       $('.bs3-grid-builder-container').unwrap('.col-sm-12'); 
+        $('.bs3-grid-builder-container').unwrap('.col-sm-12');
     }
-        //// Blog loop - BS3 Grid Builder
-        ////------------------------------------------------------------------------------
-        if($('article.hypermarket-post-loop .bs3-grid-builder-container').length > 0) {
-            $('article .bs3-grid-builder-container').removeClass('container');
-            $('article .bs3-grid-builder-container').removeClass('container-fluid');
-        }
-        //// Single post - BS3 Grid Builder
-        ////------------------------------------------------------------------------------
-        if($('.single-post article .bs3-grid-builder-container').length > 0) {
-            $('article > hr, article .blog-post-meta, article .post-share').wrap('<div class="col-sm-12"></div>');
-        }
+    //// Blog loop - BS3 Grid Builder
+    ////------------------------------------------------------------------------------
+    if ($('article.hypermarket-post-loop .bs3-grid-builder-container').length > 0) {
+        $('article .bs3-grid-builder-container').removeClass('container');
+        $('article .bs3-grid-builder-container').removeClass('container-fluid');
+    }
+    //// Single post - BS3 Grid Builder
+    ////------------------------------------------------------------------------------
+    if ($('.single-post article .bs3-grid-builder-container').length > 0) {
+        $('article > hr, article .blog-post-meta, article .post-share').wrap('<div class="col-sm-12"></div>');
+    }
 
 }); /*Document Ready End*/
