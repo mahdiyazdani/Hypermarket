@@ -62,21 +62,3 @@ http://www.flaticon.com/packs/ecommerce-set
 
 site icon
 http://www.flaticon.com/free-icon/cart_134556#term=market&page=2&position=71
-
-
-
-Resources:
-
-* Bourbon - A simple and lightweight mixin library for Sass.
-* jQuery - most popular feature-rich JavaScript library.
-* Modernizr - JavaScript library that detects HTML5 and CSS3 features in the user’s browser.
-* Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
-* Velocity.js - Accelerated JavaScript animation.
-* Smooth Scroll - An extension for smooth scrolling in Google Chrome.
-* Waves - Click effect inspired by Google's Material Design.
-* Material Design Icons - Icon font for the web.
-* UnderStrap - Combines Automattic´s Underscores Starter Theme and Bootstrap 4.
-* WP Bootstrap Navwalker - A custom WordPress nav walker class.
-* Simple post like - A simple and efficient post like system for WordPress.
-* Skip link focus - Helps with accessibility for keyboard only users.
-* HTML5 Number polyfill - A polyfill for implementing the HTML5 <input type="number"> element in browsers that do not currently support it.
