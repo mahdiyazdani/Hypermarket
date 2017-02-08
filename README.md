@@ -20,6 +20,19 @@ Hypermarket theme makes it easier for you to market your product online and reac
 *Change-log*
 
 <pre>
+= 1.0.2 =
+* New WooCommerce page template for no products found page.
+* Blog post schema markup added.
+* New strings added/updated.
+* New hook for wrapping notice content on single product page.
+* New method for displaying shop page featured image.
+* Schema markup added to site logo.
+* Resolved the flush permalink method error.
+* Fixed the sidebar visibility issue on tablet.
+* New media variables (break-points) defined.
+* Fixed the grid layout adjustment in small screen devices
+* Popular badge added to best seller products.
+* New styles added/updated.
 = 1.0.1 =
 * Customizer JS file created.
 * Page preloading added.
