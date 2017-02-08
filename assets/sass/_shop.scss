@@ -191,6 +191,7 @@
   font-size: .875em;
   line-height: 1;
   width: 5.3em;
+  height: auto;
   color: $brand-warning;
   font-family: 'Material Icons';
   @include clearfix;
@@ -208,6 +209,9 @@
     left: 0;
     position: absolute;
     padding-top: 1.5em;
+    > strong {
+      @extend .sr-only;
+    }
     &:before {
       top: 0;
       left: 0;
@@ -244,11 +248,46 @@
 
 // Product loop
 .product {
-  &.first {
+  &.first:not(.without-sidebar) {
     clear: left;
   }
-  &.last {
+  &.last:not(.without-sidebar) {
     clear: right;
+  }
+  &:not(.without-sidebar):nth-child(1n) {
+    @media #{$tablet-land} {
+      clear: left;
+    }
+  }
+  &:not(.without-sidebar):nth-child(2n) {
+    @media #{$tablet-land} {
+      clear: right;
+    }
+  }
+  @media #{$tablet-port} {
+    clear: both;
+  }
+  &.without-sidebar {
+    &:nth-child(3n) {
+      @media #{$desktop} {
+        clear: right;
+      }
+    }
+    &:nth-child(3n + 1){
+      @media #{$desktop} {
+        clear: left;
+      }
+    }
+    &:nth-child(1n) {
+      @media #{$tablet-land} {
+        clear: left;
+      }
+    }
+    &:nth-child(2n) {
+      @media #{$tablet-land} {
+        clear: right;
+      }
+    }
   }
 }
 
@@ -648,13 +687,18 @@ h1.page-title {
 // WooCommerce Message
 .woocommerce-message {
   list-style: none;
+  margin-bottom: 14px;
   @extend .text-success;
 }
 .woocommerce-info {
   list-style: none;
+  margin-bottom: 14px;
   @extend .text-info;
 }
 .woocommerce-error {
+  padding-left: 0;
+  margin-bottom: 14px;
+  line-height: inherit;
   list-style: none;
   @extend .text-danger;
 }
@@ -780,6 +824,15 @@ h1.page-title {
         }
       }
     }
+  }
+  dl.variation {
+    & dt {
+      float: left;
+      display: inline-block;
+      font-weight: $text-weight;
+      padding-right: 5px;
+    }
+    & dd { clear: right; }
   }
 }
 .order_details, .customer_details {
@@ -991,4 +1044,8 @@ input#shipping_state,
       @extend .space-bottom-none;
     }
   }
+}
+// Search not found
+.woocommerce.search-no-results {
+  & .sidebar-toggle {display: none;}
 }
