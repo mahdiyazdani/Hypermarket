@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-01-04 20:30+0400\n"
-"PO-Revision-Date: 2017-01-04 20:30+0400\n"
+"POT-Creation-Date: 2017-02-08 13:39+0400\n"
+"PO-Revision-Date: 2017-02-08 13:39+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,11 @@ msgstr ""
 msgid "Site Title (<768px)"
 msgstr ""
 
-#: includes/classes/class-customizer.php:102
+#: includes/classes/class-customizer.php:98
+msgid "Looking for more options?"
+msgstr ""
+
+#: includes/classes/class-customizer.php:103
 msgid "Get Free Grid Builder!"
 msgstr ""
 
@@ -124,34 +128,38 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:222
-#: includes/template-functions.php:495
+#: includes/classes/class-hypermarket.php:217
+msgid "Popular"
+msgstr ""
+
+#: includes/classes/class-hypermarket.php:218
+#: includes/template-functions.php:507
 msgid "Like"
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:223
-#: includes/template-functions.php:491
+#: includes/classes/class-hypermarket.php:219
+#: includes/template-functions.php:503
 msgid "Unlike"
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:224
+#: includes/classes/class-hypermarket.php:220
 msgid "..."
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:242
+#: includes/classes/class-hypermarket.php:238
 msgid "Shop Sidebar"
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:244
+#: includes/classes/class-hypermarket.php:240
 msgid "Widgets added to this region will appear in shop archive pages."
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:252
+#: includes/classes/class-hypermarket.php:248
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: includes/classes/class-hypermarket.php:254
+#: includes/classes/class-hypermarket.php:250
 #, php-format
 msgid "Widgetized Footer Area %d."
 msgstr ""
@@ -316,113 +324,113 @@ msgid "Leave Review"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:330
-#: includes/classes/class-woocommerce.php:418
-#: includes/classes/class-woocommerce.php:532
+#: includes/classes/class-woocommerce.php:420
+#: includes/classes/class-woocommerce.php:534
 msgctxt "placeholder"
 msgid "First name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:338
-#: includes/classes/class-woocommerce.php:426
-#: includes/classes/class-woocommerce.php:540
+#: includes/classes/class-woocommerce.php:428
+#: includes/classes/class-woocommerce.php:542
 msgctxt "placeholder"
 msgid "Last name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:346
-#: includes/classes/class-woocommerce.php:548
+#: includes/classes/class-woocommerce.php:550
 msgctxt "placeholder"
 msgid "Email*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:354
-#: includes/classes/class-woocommerce.php:556
+#: includes/classes/class-woocommerce.php:355
+#: includes/classes/class-woocommerce.php:558
 msgctxt "placeholder"
 msgid "Phone*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:362
-#: includes/classes/class-woocommerce.php:434
-#: includes/classes/class-woocommerce.php:564
+#: includes/classes/class-woocommerce.php:364
+#: includes/classes/class-woocommerce.php:436
+#: includes/classes/class-woocommerce.php:566
 msgctxt "placeholder"
 msgid "Address 1*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:370
-#: includes/classes/class-woocommerce.php:442
-#: includes/classes/class-woocommerce.php:572
+#: includes/classes/class-woocommerce.php:372
+#: includes/classes/class-woocommerce.php:444
+#: includes/classes/class-woocommerce.php:574
 msgctxt "placeholder"
 msgid "Address 2"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:378
-#: includes/classes/class-woocommerce.php:450
-#: includes/classes/class-woocommerce.php:580
+#: includes/classes/class-woocommerce.php:380
+#: includes/classes/class-woocommerce.php:452
+#: includes/classes/class-woocommerce.php:582
 msgctxt "placeholder"
 msgid "Company"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:386
-#: includes/classes/class-woocommerce.php:458
-#: includes/classes/class-woocommerce.php:588
+#: includes/classes/class-woocommerce.php:388
+#: includes/classes/class-woocommerce.php:460
+#: includes/classes/class-woocommerce.php:590
 msgctxt "placeholder"
 msgid "Country*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:394
-#: includes/classes/class-woocommerce.php:466
-#: includes/classes/class-woocommerce.php:596
+#: includes/classes/class-woocommerce.php:396
+#: includes/classes/class-woocommerce.php:468
+#: includes/classes/class-woocommerce.php:598
 msgctxt "placeholder"
 msgid "State*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:402
-#: includes/classes/class-woocommerce.php:474
-#: includes/classes/class-woocommerce.php:604
+#: includes/classes/class-woocommerce.php:404
+#: includes/classes/class-woocommerce.php:476
+#: includes/classes/class-woocommerce.php:606
 msgctxt "placeholder"
 msgid "ZIP code*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:410
-#: includes/classes/class-woocommerce.php:482
-#: includes/classes/class-woocommerce.php:612
+#: includes/classes/class-woocommerce.php:412
+#: includes/classes/class-woocommerce.php:484
+#: includes/classes/class-woocommerce.php:614
 msgctxt "placeholder"
 msgid "City*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:497
+#: includes/classes/class-woocommerce.php:499
 msgctxt "placeholder"
 msgid "Username*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:505
+#: includes/classes/class-woocommerce.php:507
 msgctxt "placeholder"
 msgid "Password*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:513
+#: includes/classes/class-woocommerce.php:515
 msgctxt "placeholder"
 msgid "Confirm password*"
 msgstr ""
 
-#: includes/extras.php:32
+#: includes/extras.php:35
 msgid "Hypermarket is almost ready to help you start selling :)"
 msgstr ""
 
-#: includes/extras.php:34
+#: includes/extras.php:37
 #, php-format
 msgid "Install and activate %s to start your e-commerce website now!"
 msgstr ""
 
-#: includes/extras.php:37
+#: includes/extras.php:41
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/extras.php:173
+#: includes/extras.php:192
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/template-functions.php:312
+#: includes/template-functions.php:324
 msgid "Not permitted"
 msgstr ""
 
@@ -433,11 +441,11 @@ msgid_plural "%d"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/woocommerce-template-functions.php:103
+#: includes/woocommerce-template-functions.php:121
 msgid "Sale"
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:492
+#: includes/woocommerce-template-functions.php:540
 msgid "Back To Cart"
 msgstr ""
 
@@ -455,7 +463,7 @@ msgid " ago"
 msgstr ""
 
 #: loop-templates/content-author.php:63 loop-templates/content-post.php:38
-#: template-parts/hypermarket-post-entry.php:24
+#: template-parts/hypermarket-post-entry.php:33
 msgid "in"
 msgstr ""
 
@@ -491,9 +499,9 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/hypermarket-footer-widget-areas.php:26
+#: template-parts/hypermarket-footer-widget-areas.php:27
 #, php-format
-msgid "Get %1$s for free."
+msgid " | Get %1$s for free."
 msgstr ""
 
 #: template-parts/hypermarket-paging-navigation.php:44
@@ -506,7 +514,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: template-parts/hypermarket-post-entry.php:33
+#: template-parts/hypermarket-post-entry.php:42
 msgid "Read More"
 msgstr ""
 
@@ -538,6 +546,10 @@ msgstr ""
 msgid "Stumble it"
 msgstr ""
 
+#: template-parts/hypermarket-preloader.php:14
+msgid "Preloader"
+msgstr ""
+
 #: template-parts/hypermarket-skip-links.php:12
 msgid "Skip to navigation"
 msgstr ""
@@ -547,10 +559,12 @@ msgid "Skip to content"
 msgstr ""
 
 #: template-parts/woocommerce/hypermarket-best-sellers.php:13
+#: woocommerce/loop/no-products-found.php:35
 msgid "Best Sellers"
 msgstr ""
 
 #: template-parts/woocommerce/hypermarket-new-arrivals.php:13
+#: woocommerce/loop/no-products-found.php:54
 msgid "New Arrivals"
 msgstr ""
 
@@ -689,6 +703,12 @@ msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
 
+#: woocommerce/loop/no-products-found.php:26
+msgid ""
+"It looks like no products were found matching your selection. Maybe try one "
+"of the links below or a search?"
+msgstr ""
+
 #: woocommerce/loop/result-count.php:39
 msgid "Showing"
 msgstr ""
@@ -696,15 +716,15 @@ msgstr ""
 #: woocommerce/loop/result-count.php:41
 #, php-format
 msgid " the single result"
-msgid_plural " all %d results"
+msgid_plural " all %d items"
 msgstr[0] ""
 msgstr[1] ""
 
 #: woocommerce/loop/result-count.php:43
 #, php-format
-msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgctxt "%1$d = first, %2$d = last"
 msgid " the single result"
-msgid_plural " %1$d&ndash;%2$d of %3$d results"
+msgid_plural " %1$d&ndash;%2$d items"
 msgstr[0] ""
 msgstr[1] ""
 
