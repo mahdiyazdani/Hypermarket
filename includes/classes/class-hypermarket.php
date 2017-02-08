@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.1
+ * @since 	    1.0.2
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0
+		 * @since 1.0.2
 		 */
 		public function __construct()
 
@@ -30,7 +30,7 @@ if (!class_exists('Hypermarket')):
 			) , 10);
 			add_action('after_switch_theme', array(
 				$this,
-				'switch'
+				'after_switch'
 			) , 10);
 			add_action('wp_enqueue_scripts', array(
 				$this,
@@ -174,9 +174,9 @@ if (!class_exists('Hypermarket')):
 		 * Theme functions attached to this hook are only triggered
 		 * in the theme (and/or child theme) being activated.
 		 *
-		 * @since 1.0
+		 * @since 1.0.2
 		 */
-		public function switch ()
+		public function after_switch()
 
 		{
 			/**
@@ -186,11 +186,8 @@ if (!class_exists('Hypermarket')):
 			 *
 			 * @see https://codex.wordpress.org/Function_Reference/flush_rewrite_rules
 			 */
-			function hypermarket_flush_rewrite_rules()
-			{
-				global $wp_rewrite;
-    			$wp_rewrite->flush_rules();
-			}
+			global $wp_rewrite;
+			$wp_rewrite->flush_rules();
 		}
 		/**
 		 * Enqueue scripts and styles.
@@ -217,6 +214,7 @@ if (!class_exists('Hypermarket')):
 			wp_localize_script('hypermarket-theme-scripts', 'hypermarket_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'security' => wp_create_nonce( 'hypermarket_theme_nonce' ),
+				'popular' => __('Popular', 'hypermarket') ,
 				'like' => __('Like', 'hypermarket') ,
 				'unlike' => __('Unlike', 'hypermarket') ,
 				'loading' => __('...', 'hypermarket')
@@ -329,7 +327,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Replaces logo CSS class.
 		 *
-		 * @since 1.0
+		 * @since 1.0.2
 		 */
 		public function change_logo_class($html)
 
@@ -341,22 +339,22 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Control Excerpt Length Using Filters.
 		 *
-		 * @since 1.0
+		 * @since 1.0.2
 		 */
 		public function custom_excerpt_length($length)
 
 		{
-			return 55;
+			return apply_filters('hypermarket_excerpt_length', 55);
 		}
 		/**
 		 * Adds the ... to the end of excerpt read more link.
 		 *
-		 * @since 1.0
+		 * @since 1.0.2
 		 */
 		public function custom_excerpt_more($more)
 
 		{
-			return '...';
+			return apply_filters('hypermarket_excerpt_more', '...');
 		}
 	}
 endif;
