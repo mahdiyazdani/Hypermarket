@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0
+ * @since 	    1.0.2
  */
 // ======================================================================
 // Hooked into "wp"
@@ -14,11 +14,11 @@
  * Remove Sidebar on all the Single Product Pages.
  *
  * @package Hooked into "wp"
- * @since 1.0
+ * @since 1.0.2
  */
 function hypermarket_remove_sidebar_shop()
 {
-	if (is_singular('product')):
+	if (hypermarket_is_woocommerce_activated() && is_singular('product')):
 		remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar');
 	endif;
 }
@@ -67,6 +67,24 @@ if (!function_exists('hypermarket_cart_link')):
 	            </i>
 	        </a><!-- .cart-items -->
 		<?php
+		endif;
+	}
+endif;
+// ======================================================================
+// Hooked into "woocommerce_before_main_content"
+// ======================================================================
+
+/**
+ * Shop page featured image.
+ *
+ * @package Hooked into "woocommerce_before_main_content"
+ * @since 1.0.2
+ */
+if (!function_exists('hypermarket_shop_featured_image')):
+	function hypermarket_shop_featured_image()
+	{
+		if (hypermarket_is_woocommerce_activated() && is_shop() && !empty(get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id')))):
+			get_template_part('template-parts/hypermarket-featured-image-background-single-page');
 		endif;
 	}
 endif;
@@ -221,10 +239,9 @@ if (!function_exists('hypermarket_woocommerce_before_shop_loop')):
 				echo '<!-- Products Grid -->' . PHP_EOL;
 				echo '<div class="col-md-9 col-sm-8">' . PHP_EOL;
 			else:
-				echo '<div class="row">' . PHP_EOL;
 				echo '<!-- Products Grid -->' . PHP_EOL;
 				// 4 Columns
-				$GLOBALS['product_grid_classes'] = 'col-lg-3 col-md-4 col-sm-6';
+				$GLOBALS['product_grid_classes'] = 'col-lg-3 col-md-4 col-sm-6 without-sidebar';
 				$hypermarket_woocommerce_loop_columns = 4;
 				add_filter('hypermarket_woocommerce_loop_columns', function ($arg) use($hypermarket_woocommerce_loop_columns)
 				{
@@ -322,19 +339,18 @@ if (!function_exists('hypermarket_shop_catalog_wrapper_end')):
 	function hypermarket_shop_catalog_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .row -->' . PHP_EOL;
 			echo '</section><!-- .container -->' . PHP_EOL;
 		endif;
 	}
 endif;
 // ======================================================================
-// Hooked into "hypermarket_product_paging_navigation"
+// Hooked into "woocommerce_before_single_product"
 // ======================================================================
 
 /**
  * Navigation to next/previous set of products.
  *
- * @package Hooked into "hypermarket_product_paging_navigation"
+ * @package Hooked into "woocommerce_before_single_product"
  * @since 1.0
  */
 if (!function_exists('hypermarket_product_paging_navigation')):
@@ -342,6 +358,38 @@ if (!function_exists('hypermarket_product_paging_navigation')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			get_template_part('template-parts/woocommerce/hypermarket-product-paging-navigation');
+		endif;
+	}
+endif;
+/**
+ * WooCommerce notice wrapper start tag(s).
+ *
+ * @package Hooked into "woocommerce_before_single_product"
+ * @since 1.0.2
+ */
+if (!function_exists('hypermarket_product_notice_wrapper_start')):
+	function hypermarket_product_notice_wrapper_start()
+	{
+		if (hypermarket_is_woocommerce_activated()):
+			echo '<div id="hypermarket-single-product-notice" class="container">' . PHP_EOL;
+			echo '<div class="row">' . PHP_EOL;
+			echo '<div class="col-md-8 col-md-offset-2">' . PHP_EOL;
+		endif;
+	}
+endif;
+/**
+ * WooCommerce notice wrapper end tag(s).
+ *
+ * @package Hooked into "woocommerce_before_single_product"
+ * @since 1.0.2
+ */
+if (!function_exists('hypermarket_product_notice_wrapper_end')):
+	function hypermarket_product_notice_wrapper_end()
+	{
+		if (hypermarket_is_woocommerce_activated()):
+			echo '</div><!-- .col-md-8 -->';
+			echo '</div><!-- .row -->' . PHP_EOL;
+			echo '</div><!-- #hypermarket-single-product-notice -->' . PHP_EOL;
 		endif;
 	}
 endif;
@@ -481,7 +529,7 @@ endif;
  * Back to cart button.
  *
  * @package Hooked into "woocommerce_review_order_before_submit"
- * @since 1.0
+ * @since 1.0.2
  */
 if (!function_exists('hypermarket_back_to_cart_btn_before_submit')):
 	function hypermarket_back_to_cart_btn_before_submit()
@@ -490,7 +538,7 @@ if (!function_exists('hypermarket_back_to_cart_btn_before_submit')):
 			echo '<a href="' . hypermarket_sanitize_url(WC()->cart->get_cart_url()) . '" class="btn btn-default btn-ghost icon-left btn-block waves-effect waves-light" target="_self">';
 			echo '<i class="material-icons arrow_back"></i>';
 			_e('Back To Cart', 'hypermarket');
-			echo '</a><!-- .btn -->';
+			echo '</a><!-- .btn -->' . PHP_EOL;
 		endif;
 	}
 endif;
