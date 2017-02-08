@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.1
+ * @since 	    1.0.2
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -55,7 +55,7 @@ endif;
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0
+ * @since 1.0.2
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
@@ -66,8 +66,8 @@ if (!function_exists('hypermarket_site_brand')):
 		elseif (function_exists('jetpack_has_site_logo') && jetpack_has_site_logo()):
 			jetpack_the_site_logo();
 		else:
-			echo '<a id="site-logo-visible-desktop" href="' . esc_url(home_url('/')) . '" class="site-logo visible-desktop" rel="home">' . esc_attr(get_bloginfo('name')) . '</a><!-- site-logo.visible-desktop -->' . PHP_EOL;
-			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- site-logo.visible-mobile -->' . PHP_EOL;
+			echo '<a id="site-logo-visible-desktop" href="' . esc_url(home_url('/')) . '" class="site-logo visible-desktop" itemprop="headline" rel="home">' . esc_attr(get_bloginfo('name')) . '</a><!-- site-logo.visible-desktop -->' . PHP_EOL;
+			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- site-logo.visible-mobile -->' . PHP_EOL;
 		endif;
 	}
 endif;
