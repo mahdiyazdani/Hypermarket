@@ -392,9 +392,11 @@ $carousel-controls-opacity: 	.6;
 //## Descktop, Tablet, Mobile
 
 $desktop:   		   	"screen and (max-width: 1200px)";
+$desktop-min:   		"screen and (min-width: 1200px)";
 $tablet-land:      		"screen and (max-width: 991px)";
 $tablet-land-min:      	"screen and (min-width: 991px)";
 $tablet-port:    	 	"screen and (max-width: 768px)";
+$tablet-port-with-gap:  "screen and (max-width: 767px)";
 $tablet-port-min:    	"screen and (min-width: 768px)";
 $mobile-land:		 	"screen and (max-width: 480px)";
 $mobile-port:		 	"screen and (max-width: 360px)";
