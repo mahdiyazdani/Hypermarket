@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.1
+ * @since       1.0.2
  */
 ;
 (function() {
@@ -295,7 +295,8 @@ jQuery(document).ready(function($) {
                 url: hypermarket_vars.ajaxurl,
                 dataType: 'html',
                 timeout: 10000,
-                cache: false,
+                async: true,
+                cache: true,
                 data: ({
                     post_id: postID,
                     action: 'hypermarket_get_ajax_post_content',
@@ -328,16 +329,14 @@ jQuery(document).ready(function($) {
 
         // Open Post
         function openPost(postID) {
-
             $('body').addClass('blog-post-open');
             postBackdrop.addClass('active');
             postContainer.addClass('open');
             postPreloader.addClass('active');
-
+            getData(postID);
             setTimeout(function() {
                 postPreloader.removeClass('active');
-                getData(postID);
-            }, 900);
+            }, 1000);
         }
 
         // Close Post
@@ -353,9 +352,7 @@ jQuery(document).ready(function($) {
 
         ajaxPostLink.on('click', function(e) {
             var targetPost = $(this).data('postid');
-
             openPost(targetPost);
-
             e.preventDefault();
         });
 
@@ -432,6 +429,20 @@ jQuery(document).ready(function($) {
         }
     });
 
+    // Add custom badge to best seller products.
+    //------------------------------------------------------------------------------
+    function hypermarketBestSellerBadge() {
+        if($('#hypermarket-best-sellers-products').length > 0) {
+            $('#hypermarket-best-sellers-products .shop-item .shop-thumbnail').each(function(){
+                if($(this).find('span.onsale').length > 0){
+                    $(this).find('span.onsale').remove();
+                }
+                $(this).prepend('<span class="shop-label text-warning">' + hypermarket_vars.popular + '</span>');
+            });
+        }
+    }
+    hypermarketBestSellerBadge();
+
     // Single product
     //------------------------------------------------------------------------------
     if ($('.single-product .entry-summary .woocommerce-product-rating').length > 0) {
@@ -464,11 +475,11 @@ jQuery(document).ready(function($) {
     // @link: https://github.com/JonMasterson/WordPress-Post-Like-System
     //------------------------------------------------------------------------------
     $(document).on('click', '.hypermarket-sl-button', function() {
-        var button = $(this);
-        var post_id = button.attr('data-post-id');
-        var security = button.attr('data-nonce');
-        var iscomment = button.attr('data-iscomment');
-        var allbuttons;
+        var button = $(this),
+            post_id = button.attr('data-post-id'),
+            security = button.attr('data-nonce'),
+            iscomment = button.attr('data-iscomment'),
+            allbuttons;
         if (iscomment === '1') { /* Comments can have same id */
             allbuttons = $('.hypermarket-sl-comment-button-' + post_id);
         } else {
@@ -482,7 +493,7 @@ jQuery(document).ready(function($) {
                 url: hypermarket_vars.ajaxurl,
                 timeout: 10000,
                 async: true,
-                cache: false,
+                cache: true,
                 data: {
                     action: 'hypermarket_process_simple_like',
                     post_id: post_id,
@@ -515,7 +526,6 @@ jQuery(document).ready(function($) {
 
     // Wrap iframe with responsive embed classes
     //------------------------------------------------------------------------------
-    
     function hypermarketMakeIframeResponsive(selector) {
         if (typeof selector === "undefined" || selector === null) { 
             selector = '';
