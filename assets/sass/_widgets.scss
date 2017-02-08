@@ -176,7 +176,7 @@
 .sidebar-close { display: none; }
 
 // Sidebar on Mobile
-@media #{$tablet-port} {
+@media #{$tablet-port-with-gap} {
   .sidebar {
     position: fixed;
     height: 100%;
