@@ -17,6 +17,8 @@ Hypermarket theme makes it easier for you to market your product online and reac
 
 [Visit live/online demo] (https://demo.mypreview.one/hypermarket/)
 
+As always, We would love to connect with you and hear your thoughts about anything we are doing. Join our [support forums](https://support.mypreview.one) and let us help you.
+
 *Change-log*
 
 <pre>
