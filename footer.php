@@ -1,11 +1,11 @@
 <?php
 /**
  * The template for displaying the footer.
- * Contains the closing of the #content div and all content after
+ * Contains the closing of the .page-wrapper div and all content after
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.1
+ * @since       1.0.2
  */
 do_action('hypermarket_before_footer_area');
 /**
