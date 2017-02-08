@@ -6,7 +6,7 @@
  * @see 			http://codex.wordpress.org/The_Loop
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.2
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -26,7 +26,7 @@ do_action('hypermarket_before_loop_posts');
 				the_post();
 		?>
 				<!-- Post -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom hypermarket-post-loop'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom hypermarket-post-loop'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting">
 					<?php 
 						/**
 						 * Functions hooked into "hypermarket_loop_posts" action
