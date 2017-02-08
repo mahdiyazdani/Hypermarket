@@ -38,9 +38,9 @@ if ( ! woocommerce_products_will_display() )
 
 		echo '<span class="text-gray">' . __('Showing', 'hypermarket') . '</span>';
 		if ( $total <= $per_page || -1 === $per_page ):
-			printf( _n( ' the single result', ' all %d results', $total, 'hypermarket' ), $total );
+			printf( _n( ' the single result', ' all %d items', $total, 'hypermarket' ), $total );
 		else :
-			printf( _nx( ' the single result', ' %1$d&ndash;%2$d of %3$d results', $total, '%1$d = first, %2$d = last, %3$d = total', 'hypermarket' ), $first, $last, $total );
+			printf( _nx( ' the single result', ' %1$d&ndash;%2$d items', $total, '%1$d = first, %2$d = last', 'hypermarket' ), $first, $last, $total );
 		endif;
 		?>
 	</p><!-- .text-sm -->
