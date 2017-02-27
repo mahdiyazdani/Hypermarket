@@ -1,3 +1,6 @@
+= 1.0.3.1 =
+* Fixed Google fonts JS error.
+
 = 1.0.3 =
 * Language file updated.
 * HTML5 Validated.
