@@ -39,7 +39,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 		
 		<!-- Checkout Form -->
-		<div id="customer_details" class="col-sm-8">
+		<div id="customer_details" class="col-md-8">
 			<div class="row col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div><!-- .col-1 -->
