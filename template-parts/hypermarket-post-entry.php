@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.2
+ * @since 		    1.0.3
  */
 ?>
 <div class="col-md-offset-1 col-sm-8">
@@ -19,7 +19,7 @@
 			endif;
 		endif;
 		if (has_post_thumbnail() && !$featured_image_status):
-			the_post_thumbnail( 'large', array( 'class' => 'space-bottom', 'itemprop'=>'image' ) );
+			the_post_thumbnail( 'large', array( 'class' => 'space-bottom' ) );
 		endif;
 		do_action('hypermarket_archive_featured_image');
 		if ( strpos( get_the_content(), 'more-link' ) === false ):
@@ -30,8 +30,10 @@
 	?>
 	<div class="blog-post-meta space-top">
 		<div class="column">
-			<span><?php _e('in', 'hypermarket'); ?> </span>
-			<?php the_category(', '); ?>
+			<?php if( !empty(get_the_category()) ): ?>
+				<span><?php _e('in', 'hypermarket'); ?> </span>
+				<?php the_category(', '); ?>
+			<?php endif; ?>
 			<?php if( !empty( get_the_tags() ) ): ?>
 				<span class="divider"></span>
 				<?php the_tags('#', ' #', ''); ?>
