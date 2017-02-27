@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.1
+ * @since       1.0.3
  */
 if (!defined('ABSPATH')):
     exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_Customizer')):
         /**
          * Setup class.
          *
-         * @since 1.0.1
+         * @since 1.0.3
          */
         public function __construct()
 
@@ -27,10 +27,6 @@ if (!class_exists('Hypermarket_Customizer')):
             add_action('customize_register', array(
                 $this,
                 'customize_register'
-            ) , 10);
-            add_action('customize_controls_enqueue_scripts', array(
-                $this,
-                'enqueue'
             ) , 10);
         }
         /**
@@ -81,29 +77,6 @@ if (!class_exists('Hypermarket_Customizer')):
                 'type' => 'text',
                 'settings' => 'hypermarket_mobile_blogname'
             ));
-        }
-        /**
-         * Enqueue scripts and styles.
-         *
-         * @since 1.0.1
-         */
-        public function enqueue()
-
-        {
-            wp_register_script('hypermarket-customizer', get_template_directory_uri() . '/assets/admin/js/hypermarket-customizer.js', array(
-                'jquery'
-            ) , HypermarketThemeVersion, true);
-            wp_localize_script('hypermarket-customizer', 'hypermarket_upsell', array(
-                'upsellURL' => hypermarket_sanitize_url(HypermarketThemeAuthorURI) ,
-                'upsellLabel' => __('Looking for more options?', 'hypermarket')
-            ));
-            if (!class_exists('BS3_Grid_Builder_Activation')):
-                wp_localize_script('hypermarket-customizer', 'hypermarket_bs3_grid_builder', array(
-                    'bs3GridBuilderURL' => hypermarket_sanitize_url(get_admin_url()) . 'plugin-install.php?s=bs3+grid+builder&tab=search&type=term',
-                    'bs3GridBuilderLabel' => __('Get Free Grid Builder!', 'hypermarket')
-                ));
-            endif;
-            wp_enqueue_script('hypermarket-customizer');
         }
     }
 endif;
