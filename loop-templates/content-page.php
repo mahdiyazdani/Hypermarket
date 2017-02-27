@@ -1,11 +1,11 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content in page.php and fluid width template.
  *
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.3
  */
 /**
  * Functions hooked into "hypermarket_featured_image_single_page" action
@@ -16,8 +16,8 @@
 do_action('hypermarket_featured_image_single_page');
 ?>
 <!-- Content -->
-<section class="container padding-top-3x">
-	<h1 class="mobile-center" itemprop="headline"><?php the_title(); ?></h1>
+<section class="container<?php echo (apply_filters('hypermarket_fluid_template', false)) ? '-fluid' : ''; ?> padding-top-3x">
+	<h1 class="mobile-center"><?php the_title(); ?></h1>
 	<div id="page-<?php the_ID(); ?>" <?php post_class('row padding-top'); ?>>
 		<?php
 			/**
