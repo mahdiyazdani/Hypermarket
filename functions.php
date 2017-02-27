@@ -18,7 +18,7 @@
  * @see 		https://codex.wordpress.org/Plugin_API
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 		1.0
+ * @since 		1.0.3
  */
 // Assign the "Hypermarket" info to constants.
 $hypermarket_theme = wp_get_theme('hypermarket');
@@ -97,5 +97,15 @@ if (hypermarket_is_woocommerce_activated()):
 
 	// WooCommerce template functions.
 	require get_template_directory() . '/includes/woocommerce-template-functions.php';
+
+endif;
+/**
+ * Hypermarket welcome screen.
+ *
+ * @since 1.0.3
+ */
+if (current_user_can('administrator')):
+	// WooCommerce template functions.
+	require get_template_directory() . '/includes/classes/class-hypermarket-welcome-screen.php';
 
 endif;
