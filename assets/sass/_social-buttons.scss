@@ -8,15 +8,13 @@
 		vertical-align: middle;
 		font-size: $social-icon-size;
 		text-decoration: none;
-		margin-left: 9px;
-		margin-right: 9px;
-		margin-bottom: 5px;
-		@include transition(color .3s);
+		@include margin(null 9px 5px 9px);
 	}
 }
 /* Facebook */
 .hypermarket-facebook, .hypermarket-facebook-solid {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #3b5998 !important;
 	}
@@ -24,6 +22,7 @@
 /* Google+ */
 .hypermarket-google-plus, .hypermarket-google-plus-solid {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #dd4b39 !important;
 	}
@@ -31,6 +30,7 @@
 /* Instagram */
 .hypermarket-instagram {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #3f729b !important;
 	}
@@ -38,6 +38,7 @@
 /* LinkedIn */
 .hypermarket-linkedin, .hypermarket-linkedin-solid {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #0976b4 !important;
 	}
@@ -45,6 +46,7 @@
 /* Pinterest */
 .hypermarket-pinterest {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #cc2127 !important;
 	}
@@ -52,6 +54,7 @@
 /* Twitter */
 .hypermarket-twitter, .hypermarket-twitter-solid {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #55acee !important;
 	}
@@ -59,6 +62,7 @@
 /* Vimeo */
 .hypermarket-vimeo {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #1ab7ea !important;
 	}
@@ -66,6 +70,7 @@
 /* WordPress */
 .hypermarket-wordpress {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #21759b !important;
 	}
@@ -73,6 +78,7 @@
 /* YouTube */
 .hypermarket-youtube {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #e52d27 !important;
 	}
@@ -80,6 +86,7 @@
 /* StumbleUpon */
 .hypermarket-stumbleupon-solid {
 	color: $text-color;
+	@include transition(all .3s ease 0s);
 	&:hover, &:focus {
 		color: #eb4924 !important;
 	}

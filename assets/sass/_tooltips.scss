@@ -5,12 +5,12 @@
 
 // Base class
 .tooltip {
-  position: absolute;
   z-index: $zindex-tooltip;
   display: block;
   white-space: nowrap;
   font-size: $font-size-xs;
   @include transition(opacity .2s);
+  @include position(absolute, null null null null);
 
   @include opacity(0);
 
@@ -24,20 +24,19 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: $tooltip-max-width;
-  padding: 3px 10px;
   color: $tooltip-color;
   text-align: center;
   background-color: $tooltip-bg;
   border-radius: 0;
+  @include padding(3px 10px);
 }
 
 // Arrows
 .tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
+  @include square(0);
+  @include border-color(transparent);
+  @include border-style(solid);
+  @include position(absolute, null null null null);
 }
 // Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
 .tooltip {

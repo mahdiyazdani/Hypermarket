@@ -9,20 +9,22 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: $headings-line-height;
   color: $headings-color;
-  margin-top: 0;
+  @include margin(0 null null null);
 }
 h1, .h1 {
-  margin-bottom: floor($line-height-computed * 1.2);
+  @include margin(null null floor($line-height-computed * 1.2) null);
 }
-h2, .h2 { margin-bottom: $line-height-computed; }
+h2, .h2 { 
+  @include margin(null null $line-height-computed null); 
+}
 h3, .h3 {
-  margin-bottom: floor($line-height-computed / 1.2);
+  @include margin(null null floor($line-height-computed / 1.2) null);
 }
 h4, .h4 {
-  margin-bottom: floor($line-height-computed / 1.4);
+  @include margin(null null floor($line-height-computed / 1.4) null);
 }
 h5, h6, .h5, .h6 {
-  margin-bottom: floor($line-height-computed / 2);
+  @include margin(null null floor($line-height-computed / 2) null);
 }
 h1, .h1 {
   font-size: $font-size-h1;
@@ -131,37 +133,33 @@ small,
 
 // Unordered and Ordered lists
 ul, ol {
-  padding-left: 18px;
-  margin-top: 0;
-  margin-bottom: $line-height-computed;
   line-height: 1.8;
-  ul, ol { margin-bottom: 0; }
+  @include padding(null null null 18px);
+  @include margin(0 null $line-height-computed null);
+  ul, ol { @include margin(null null 0 null); }
 }
 
 // List options
 @mixin list-unstyled {
-  padding-left: 0;
   list-style: none;
+  @include padding(null null null 0);
 }
 .list-unstyled {
   @include list-unstyled;
 }
 .list-featured {
   list-style: none;
-  padding: 0;
+  @include padding(0);
   li {
-    position: relative;
-    padding-left: 14px;
+    @include padding(null null null 14px);
+    @include position(relative, null null null null);
     &:before {
-      position: absolute;
       display: block;
       content: "";
-      width: 5px;
-      height: 5px;
       border-radius: 50%;
-      left: 0;
-      top: 12px;
       background-color: $brand-primary;
+      @include square(5px);
+      @include position(absolute, 12px null null 0);
     }
   }
   &.text-light {
@@ -181,29 +179,26 @@ ul, ol {
 // Inline turns list items into inline-block
 .list-inline {
   @include list-unstyled;
-  margin-left: -5px;
+  @include margin(null null null -5px);
 
   > li {
     display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
+    @include padding(null 5px);
   }
 }
 
 // Icon list
 .list-icon {
   list-style: none;
-  padding: 0;
+  @include padding(0);
   > li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: floor($line-height-computed / 2.5);
+    @include position(relative, null null null null);
+    @include padding(null null null 25px);
+    @include margin(null null floor($line-height-computed / 2.5) null);
     > i {
       display: block;
-      position: absolute;
       font-size: 1.25em;
-      top: 4px;
-      left: 0;
+      @include position(absolute, 4px null null 0);
       &.material-icons.phone { top: 6px; }
       &.material-icons.email {
         font-size: 1.15em;
@@ -215,8 +210,7 @@ ul, ol {
 
 // Description Lists
 dl {
-  margin-top: 0; // Remove browser default
-  margin-bottom: $line-height-computed;
+  @include margin(0 null $line-height-computed null); // Remove browser default
 }
 dt,
 dd {
@@ -227,8 +221,7 @@ dt {
   font-weight: bold;
 }
 dd {
-  margin-left: 0; // Undo browser default
-  margin-bottom: 15px;
+  @include margin(null null 15px 0); // Undo browser default
 }
 
 // Horizontal description lists
@@ -271,16 +264,15 @@ abbr[data-original-title] {
 
 // Blockquotes
 blockquote {
-  position: relative;
-  padding: floor($line-height-computed / 2) 0 floor($line-height-computed / 2) 25px;
-  margin: 0;
-  margin-bottom: $line-height-computed;
   font-size: $quote-font-size;
   text-transform: $quote-text-transform;
   font-style: $quote-font-style;
   color: $quote-font-color;
   font-weight: $quote-font-weight;
   border-left: $quote-border;
+  @include position(relative, null null null null);
+  @include margin(0 0 $line-height-computed 0);
+  @include padding(floor($line-height-computed / 2) 0 floor($line-height-computed / 2) 25px);
 
   cite {
     display: block;
@@ -293,10 +285,9 @@ blockquote {
       display: inline-block;
       vertical-align: middle;
       content: "";
-      width: 20px;
-      height: 1px;
       background-color: $quote-author-font-color;
-      margin-right: 9px;
+      @include size(20px, 1px);
+      @include margin(null 9px null null);
     }
   }
 
@@ -314,9 +305,9 @@ blockquote {
   // Right Aligned
   &.blockquote-reverse {
     text-align: right;
-    padding: floor($line-height-computed / 2) 25px floor($line-height-computed / 2) 0;
     border-left: none;
     border-right: $quote-border;
+    @include padding(floor($line-height-computed / 2) 25px floor($line-height-computed / 2) 0);
   }
 }
 

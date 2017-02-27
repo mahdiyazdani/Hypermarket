@@ -1,0 +1,50 @@
+/**
+ * Hypermarket Theme
+ * Used to style the TinyMCE editor.
+ * 
+ * @author      Mahdi Yazdani
+ * @package     Hypermarket
+ * @since       1.0.3
+ */
+
+// Bourbon SASS Mixins Library
+@import "bourbon/bourbon"; // http://bourbon.io/
+
+// Core variables and mixins
+@import "bs-variables";
+@import "variables";
+@import "mixins";
+
+// Core CSS
+@import "typography";
+@import "tables";
+
+body {
+	color: $text-color;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $text-weight;
+	line-height: $line-height-base;
+	margin: 20px 40px;
+	vertical-align: baseline;
+}
+// Links
+a {
+  color: $link-color;
+  text-decoration: underline;
+  @include transition(color .3s);
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $link-hover-color;
+    outline: none;
+  }
+}
+a.link-title {
+  color: $text-color;
+  text-decoration: none;
+  &:hover { color: $gray; }
+}

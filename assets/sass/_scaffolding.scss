@@ -155,10 +155,9 @@ fieldset {
 
 // Horizontal rules
 hr {
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed;
   border: 0;
   border-top: 1px solid $hr-border;
+  @include margin($line-height-computed null $line-height-computed null);
 }
 
 .block { display: block; }
@@ -177,13 +176,12 @@ hr {
 // See: http://a11yproject.com/posts/how-to-hide-content/
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+  @include square(1px);
+  @include margin(-1px);
+  @include padding(0);
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.
@@ -193,11 +191,10 @@ hr {
   &:active,
   &:focus {
     position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
     overflow: visible;
     clip: auto;
+    @include margin(0);
+    @include square(auto);
   }
 }
 
@@ -321,8 +318,7 @@ kbd {
 
 .block-center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include margin(null auto);
 }
 .tablet-center {
   @media #{$tablet-land} {
@@ -340,9 +336,8 @@ kbd {
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
-  height: 1px;
-  width: 1px;
   overflow: hidden;
+  @include square(1px);
 }
 .screen-reader-text:focus {
   background-color: #f1f1f1;
@@ -357,19 +352,18 @@ kbd {
   height: auto;
   left: 5px;
   line-height: normal;
-  padding: 15px 23px 14px;
   text-decoration: none;
   top: 5px;
   width: auto;
   z-index: 100000; /* Above WP toolbar. */
+  @include padding(15px 23px 14px 23px);
 }
 
 // Container Fluid
 .container-fluid {
   max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 30px;
+  @include margin(null auto);
+  @include padding(0 30px);
 }
 
 // WordPress core classes
@@ -377,60 +371,62 @@ kbd {
   background: $body-bg;
   border: 1px solid $gray-lighter;
   max-width: 96%; /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
   text-align: center;
+  @include padding(5px 3px 10px 3px);
 }
-.wp-caption p.wp-caption-text, .gallery-caption {
+.wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px;
+  @include margin(0);
+  @include padding(0 4px 5px 4px);
 }
 .alignright {
   float:right;
-  margin: 5px 0 20px 20px;
+  @include margin(5px 0 20px 20px);
 }
 .alignleft {
   float: left;
-  margin: 5px 20px 20px 0;
+  @include margin(5px 20px 20px 0);
 }
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 5px auto 5px auto;
+  @include margin(5px auto);
 }
 a img.aligncenter {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include margin(null auto);
 }
 .bypostauthor { 
   background-color: $gray-light;
+  padding: floor($line-height-computed * 1.5) floor($line-height-computed / 2) !important;
 } 
-.sticky{
+.sticky:not(.post) {
   position: fixed;
 }
 .gallery { 
   overflow: hidden;
   position: relative;
-  margin: 0 auto 18px; 
+  @include margin(0 auto 18px auto); 
 }
 .gallery .gallery-item {
   float: left;
-  margin-top: 0;
   text-align: center;
   width: 33%;
+  @include padding(3px null);
+  @include margin(0 null null null);
 }
 .gallery-columns-2 .gallery-item { width: 50%; }
 .gallery-columns-4 .gallery-item { width: 25%; }
 .gallery img {
-  box-shadow: 0px 0px 4px #999;
-  border: 1px solid white;
-  padding: 8px;
-  margin: 0 auto;
-  background: #f2f2f2;
+  box-shadow: 0px 0px 4px $gray;
+  border: 1px solid $body-bg;
+  background: $brand-default;
+  @include padding(8px);
+  @include margin(0 auto);
+  @include transition (all .3s ease 0s);
 }
-.gallery img:hover {  background: white; }
+.gallery img:hover {  background: $gray-lighter; }
 .gallery-columns-2 .attachment-medium {
   max-width: 92%;
   height: auto;
@@ -440,9 +436,9 @@ a img.aligncenter {
   height: auto;
 }
 .gallery .gallery-caption {
-  color: #888;
+  color: $gray;
   font-size: 12px;
-  margin: 0 0 12px;
+  @include margin(floor($line-height-computed / 2) 0 floor($line-height-computed / 2) 0);
 }
-.gallery dl, .gallery dt { margin: 0; }
+.gallery dl, .gallery dt { @include margin(0); }
 .gallery br+br { display: none; }

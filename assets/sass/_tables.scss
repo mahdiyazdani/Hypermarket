@@ -3,10 +3,9 @@
 // --------------------------------------------------
 
 caption {
-  padding-top: $table-cell-padding;
-  padding-bottom: $table-cell-padding;
   color: $gray;
   text-align: left;
+  @include padding($table-cell-padding null $table-cell-padding null);
 }
 th { text-align: left; }
 
@@ -14,7 +13,7 @@ th { text-align: left; }
 table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $line-height-computed;
+  @include margin(null null $line-height-computed null);
   // Cells
   > thead,
   > tbody,
@@ -22,10 +21,10 @@ table {
     > tr {
       > th,
       > td {
-        padding: $table-cell-padding;
         line-height: $line-height-base;
         vertical-align: top;
         border-bottom: 1px solid $table-border-color;
+        @include padding($table-cell-padding);
       }
     }
   }
@@ -66,14 +65,14 @@ table {
 
   @media screen and (max-width: $screen-xs-max) {
     width: 100%;
-    margin-bottom: ($line-height-computed * 0.75);
+    @include margin(null null ($line-height-computed * 0.75) null);
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     //border: 1px solid $table-border-color;
 
     // Tighten up spacing
     > table {
-      margin-bottom: 0;
+      @include margin(null null 0 null);
 
       // Ensure the content doesn't wrap
       > thead,

@@ -30,6 +30,7 @@ $body-bg: 								#ffffff;
 $font-family-base: 						"Work Sans", Helvetica, Arial, sans-serif;
 $text-color: 							$gray-dark;
 $text-weight: 							normal;
+$text-weight-bold: 						bold;
 
 $font-size-base:          				16px;
 $font-size-lead:          				floor(($font-size-base * 1.125)); // ~18px
@@ -214,16 +215,6 @@ $nav-tabs-link-color: 					$gray;
 $nav-tabs-link-active-color:  			$gray-dark;
 
 
-//== Filters
-//
-
-$nav-filters-font-size:					floor(($font-size-base * 0.875)); // ~14px
-$nav-filters-link-color:                $gray;
-$nav-filters-link-active-color:         $gray-dark;
-$nav-filters-link-active-border-color:  $gray-dark;
-$nav-filters-count-color:               $gray;
-
-
 //== Panels and Accordions
 //
 
@@ -268,136 +259,100 @@ $review-body-font-size:   			   $font-size-small;
 // == Blog
 //
 
-$blog-post-meta-color:      	$gray;
-$blog-post-meta-font-size:  	$font-size-small;
-$blog-post-title:           	floor(($font-size-base * 1.375)); // ~22px
+$blog-post-meta-color:      			$gray;
+$blog-post-meta-font-size:  			$font-size-small;
+$blog-post-title:           			floor(($font-size-base * 1.375)); // ~22px
 
 // Single Post
-$single-post-wrap-bg:       	#ffffff;
+$single-post-wrap-bg:       			$body-bg;
 
 
 //== Widgets
 //
 
-$sidebar-max-width:          	300px;
-$sidebar-bg:                 	#ffffff;
-$sidebar-icon-size:          	24px;
-$sidebar-icon-box-size:      	48px;
-$sidebar-icon-color:         	$gray-dark;
-$sidebar-icon-hover-color:   	$gray;
-$widget-divider:             	2px solid $hr-border;
-$widget-link-font-size:      	$font-size-small;
-$widget-link-color:          	$gray;
-$widget-link-hover-color:    	$gray-dark;
-$widget-color-label-size:    	10px;
+$sidebar-max-width:          			300px;
+$sidebar-bg:                 			$body-bg;
+$sidebar-icon-size:          			24px;
+$sidebar-icon-box-size:      			48px;
+$sidebar-icon-color:         			$gray-dark;
+$sidebar-icon-hover-color:   			$gray;
+$widget-divider:             			2px solid $hr-border;
+$widget-link-font-size:      			$font-size-small;
+$widget-link-color:          			$gray;
+$widget-link-hover-color:    			$gray-dark;
+$widget-color-label-size:    			10px;
 
 // Tags
-$widget-tags-height:             30px;
-$widget-tags-font-size:          $font-size-xs;
-$widget-tags-color:              $gray;
-$widget-tags-hover-color:        $gray-dark;
-$widget-tags-border-color:       $hr-border;
-$widget-tags-hover-border-color: $gray-dark;
+$widget-tags-height:             		30px;
+$widget-tags-font-size:          		$font-size-xs;
+$widget-tags-color:              		$gray;
+$widget-tags-hover-color:        		$gray-dark;
+$widget-tags-border-color:       		$hr-border;
+$widget-tags-hover-border-color: 		$gray-dark;
 
 
 // == Components
 //
 
 // Category Links
-$category-link-img-max-width:  220px;
-$category-link-font-size:      $font-size-base;
-$category-link-color:          $gray-dark;
-$category-link-hover-color:    $gray;
+$category-link-img-max-width:  			220px;
+$category-link-font-size:      			$font-size-base;
+$category-link-color:          			$gray-dark;
+$category-link-hover-color:    			$gray;
 
 // Category Tiles
-$category-tile-bg:               $gray-lighter;
-$category-tile-thumb-max-width:  300px;
+$category-tile-bg:               		$gray-lighter;
+$category-tile-thumb-max-width:  		300px;
 
 // Quotation
-$quotation-author-ava-size:    74px;
-
-// Team
-$teammate-max-width:           380px;
-$teammate-name-font-size:      $font-size-base;
-$teammate-position-font-size:  $font-size-small;
-$teammate-position-color:      $gray;
-
-// Countdown
-$countdown-item-box-size:   	48px;
-$countdown-item-font-size:  	floor(($font-size-base * 1.375)); // ~22px
-$countdown-item-bg-color:   	#fff;
-$countdown-label-font-size: 	floor(($font-size-base * 0.875)); // ~14px
+$quotation-author-ava-size:    			74px;
 
 // Features
-$feature-title-size:        	$font-size-base;
-$feature-icon-color:        	darken($gray-light, 12%);
-$feature-text-color:        	darken($gray-light, 16%);
-$feature-text-size:         	$font-size-small;
-
-// Brands
-$brand-logo-max-width:      	150px;
-$brand-text-font-size:      	$font-size-small;
-$brand-text-color:          	$gray;
-
-// Video Popup Button
-$video-popup-btn-size: 			110px;
-$video-popup-icon-size: 		44px;
-$video-popup-btn-color: 		$gray-dark;
-$video-popup-btn-hover-color:	$gray;
-$video-popup-btn-light-color: 	#fff;
+$feature-title-size:        			$font-size-base;
+$feature-icon-color:        			darken($gray-light, 12%);
+$feature-text-color:        			darken($gray-light, 16%);
+$feature-text-size:         			$font-size-small;
 
 
 //== Preloader
 //
 
-$preloader-size:        		60px;
-$preloader-screen-bg:   		#ffffff;
+$preloader-size:        				60px;
+$preloader-screen-bg:   				$body-bg;
 
 
 //== Tooltips
 //
 
-$tooltip-opacity:    			1;
-$tooltip-max-width:  			200px;
-$tooltip-bg: 				 	$gray-darker;
-$tooltip-arrow-color: 			$tooltip-bg;
+$tooltip-opacity:    					1;
+$tooltip-max-width:  					200px;
+$tooltip-bg: 				 			$gray-darker;
+$tooltip-arrow-color: 					$tooltip-bg;
 
 
 //== Pagination
 //
 
-$pagination-link-font-size:    $font-size-small;
-$pagination-link-color:        $gray-dark;
-$pagination-link-active-color: rgba($pagination-link-color, .55);
+$pagination-link-font-size:    			$font-size-small;
+$pagination-link-color:        			$gray-dark;
+$pagination-link-active-color: 			rgba($pagination-link-color, .55);
 
-$pager-link-size:              $font-size-small; // ~14px
-$pager-link-color:             $gray;
-$pager-link-hover-color:       $gray-dark;
-$pager-preview-thumb-width:    80px;
-
-
-//== Carousel
-//
-
-$carousel-navs-size: 			40px;
-$carousel-navs-icon-size: 		18px;
-$carousel-navs-bg:          	#fff;
-$carousel-navs-color: 			$gray-dark;
-$carousel-dots-size: 			10px;
-$carousel-dots-color: 			#fff;
-$carousel-controls-opacity: 	.6;
+$pager-link-size:              			$font-size-small; // ~14px
+$pager-link-color:             			$gray;
+$pager-link-hover-color:       			$gray-dark;
+$pager-preview-thumb-width:    			80px;
 
 
 //== Media queries (responsive breackpoints)
 //## Descktop, Tablet, Mobile
 
-$desktop:   		   	"screen and (max-width: 1200px)";
-$desktop-min:   		"screen and (min-width: 1200px)";
-$tablet-land:      		"screen and (max-width: 991px)";
-$tablet-land-min:      	"screen and (min-width: 991px)";
-$tablet-port:    	 	"screen and (max-width: 768px)";
-$tablet-port-with-gap:  "screen and (max-width: 767px)";
-$tablet-port-min:    	"screen and (min-width: 768px)";
-$mobile-land:		 	"screen and (max-width: 480px)";
-$mobile-port:		 	"screen and (max-width: 360px)";
-$navbar-collapse:	 	"screen and (max-width: 1070px)";
+$desktop:   		   					"screen and (max-width: 1200px)";
+$desktop-min:   						"screen and (min-width: 1200px)";
+$tablet-land:      						"screen and (max-width: 991px)";
+$tablet-land-min:      					"screen and (min-width: 991px)";
+$tablet-port:    	 					"screen and (max-width: 768px)";
+$tablet-port-with-gap:  				"screen and (max-width: 767px)";
+$tablet-port-min:    					"screen and (min-width: 768px)";
+$mobile-land:		 					"screen and (max-width: 480px)";
+$mobile-port:		 					"screen and (max-width: 360px)";
+$navbar-collapse:	 					"screen and (max-width: 1070px)";

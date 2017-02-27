@@ -8,58 +8,47 @@
   table-layout: fixed;
 
   .column {
-    position: relative;
     display: table-cell;
     vertical-align: top;
     text-align: center;
-    background-color: $gray-lighter;
-    padding: 45px 25px;
+    @include background($gray-lighter);
+    @include padding(45px 25px);
+    @include position(relative, null null null null);
     &:nth-of-type(even) {
       background-color: darken($gray-lighter, 2%);
     }
     @media #{$tablet-land} {
       display: block;
       width: 100%;
-      padding: 45px 15px;
+      @include padding(45px 15px);
     }
     .widget {
-      padding: 0;
       border: none;
+      @include padding(floor($line-height-computed * 1.2) 0 0 0);
+      &:first-child { @include padding(0); }
     }
   }
   .copyright {
     font-size: $font-size-xs;
     color: $gray;
-    margin-bottom: 0;
-    margin-top: -5px;
+    @include margin(-5px null 0 null);
   }
-  .cards {
-    width: 100%;
-    max-width: 190px;
-    margin: 0 auto;
-  }
-  // Mailchimp plugin
-  .mc4wp-form {
-    max-width: 365px;
-    margin: 0 auto;
+  // Mailchimp Widget
+  .widget_mc4wp_form_widget .mc4wp-form {
     .form-control {
-      border-color: #fff;
-      &:focus {
-        border-color: $input-focus-border-color;
-      }
+      @include border-color($body-bg);
     }
   }
-  button[type='submit'] {
-    position: absolute;
-    display: block;
-    font-size: floor($font-size-base * 1.25); // 20px;
-    border: none;
-    background: none;
-    top: 50%;
-    margin-top: -19px;
-    right: 7px;
-    @include transition(color .3s);
-    &:focus { outline: none; }
-    &:hover { color: $brand-primary; }
+  // WooCommerce Products
+  .product_list_widget {
+    & > li {
+      text-align: left;
+    }
+  }
+  // Widget Calendar
+  .widget_calendar {
+    table {
+      th, td { @include padding(15px); }
+    }
   }
 }

@@ -13,40 +13,41 @@
   font-size: $font-size-small;
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: $line-height-computed;
+  @include margin(null null $line-height-computed null);
   small {
     display: block;
     color: $gray;
     font-size: $font-size-xs;
     text-transform: none;
-    margin-top: floor($line-height-computed / 1.2);
+    @include margin(floor($line-height-computed / 1.2) null null null);
   }
 }
 
 // Base Class
 .widget {
-  padding: floor($line-height-computed * 1.2) 0;
+  @include padding(floor($line-height-computed * 1.2) 0);
   border-bottom: $widget-divider;
-  &:first-child { padding-top: floor($line-height-computed / 1.6); }
+  &:first-child { @include padding(floor($line-height-computed / 1.6) null null null); }
   &:last-child { border-bottom: 0; }
   > ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
+    @include margin(0);
+    @include padding(0);
   }
   ul {
     font-size: $widget-link-font-size;
     > li {
-      margin-bottom: 5px;
-      &:last-child { margin-bottom: 0; }
+      @include margin(null null 5px null);
+      &:last-child { 
+        @include margin(null null 0 null);
+        @include padding(null null 0 null);
+      }
       > ins {
           text-decoration: none;
       }
       .star-rating {
-          top: auto;
-          right: auto;
-          position: relative;
           line-height: inherit;
+          @include position(relative, auto auto null null);
       }
       > a {
         color: $widget-link-color;
@@ -57,7 +58,7 @@
         // Icon
         > i {
           font-size: floor($widget-link-font-size * 1.1);
-          margin-right: 2px;
+          @include margin(null 2px null null);
         }
 
         // Color Dot
@@ -67,8 +68,7 @@
           width: $widget-color-label-size;
           height: $widget-color-label-size;
           border-radius: 50%;
-          margin-right: 3px;
-          margin-top: -2px;
+          @include margin(-2px 3px null null);
         }
       }
       &.active > a { color: $widget-link-hover-color; }
@@ -87,8 +87,8 @@
     text-decoration: none;
     border: 2px solid $widget-tags-border-color;
     border-radius: floor($widget-tags-height / 2);
-    padding: 0 12px;
-    margin: 0 2px 8px 0;
+    @include padding(0 12px);
+    @include margin(0 2px 8px 0);
     @include transition(all .3s);
     &:hover, &.active {
       color: $widget-tags-hover-color;
@@ -97,10 +97,22 @@
   }
 }
 
+// Widget Calendar
+.widget_calendar {
+  table {
+    @include margin(0);
+    th, td { @include padding(10px 0); }
+    td#today { font-weight: $text-weight-bold; }
+      tfoot{
+      td { border:none; }
+    }
+  }
+}
+
 // Price Range Slider
 .widget_price_filter {
     & .price_slider {
-      margin: 1.5em auto;
+      @include margin(1.5em auto);
     }
     .price_slider_amount {
       text-align: right;
@@ -114,27 +126,24 @@
       }
     }
     .price_label {
-      padding-top: 10px;
       display: inline-block;
       font-size: $font-size-small;
+      @include padding(10px null null null);
     }
     .ui-slider {
-      position: relative;
       text-align: left;
+      @include position(relative, null null null null);
     }
     .ui-slider .ui-slider-handle {
-      position: absolute;
       z-index: 2;
-      width: 16px;
-      height: 16px;
-      left: -8px;
-      top: -6px;
       @include opacity(1);
       outline: none;
-      border: 2px solid #ffffff;
+      border: 2px solid $body-bg;
       border-radius: 50%;
-      background: #606060;
+      background: $gray-dark;
       cursor: default;
+      @include square(16px);
+      @include position(absolute, -6px null null -8px);
       &:last-child {
         margin-left: -1em;
       }
@@ -144,7 +153,6 @@
       }
     }
     .ui-slider .ui-slider-range {
-      position: absolute;
       z-index: 1;
       display: block;
       border: none;
@@ -152,6 +160,7 @@
       @include transition(background .45s);
       @include border-top-radius(1em);
       @include border-bottom-radius(1em);
+      @include position(absolute, null null null null);
     }
     .price_slider_wrapper .ui-widget-content {
       @include border-top-radius(1em);
@@ -178,15 +187,13 @@
 // Sidebar on Mobile
 @media #{$tablet-port-with-gap} {
   .sidebar {
-    position: fixed;
     height: 100%;
     z-index: $navbar-zindex + 10;
-    top: 0;
-    left: -($sidebar-max-width);
-    padding: 30px $line-height-computed;
     background-color: $sidebar-bg;
     overflow-y: auto;
     -ms-overflow-style: none;
+    @include padding(30px $line-height-computed);
+    @include position(fixed, 0 null null (-$sidebar-max-width));
     @include box-shadow(0px 0px 0px 0px rgba(0,0,0,0.15));
     @include transition(left .4s cubic-bezier(0.785, 0.135, 0.150, 0.860) .3s, box-shadow .3s .3s);
     &.open {
@@ -206,18 +213,16 @@
   }
   .sidebar-toggle {
     display: block;
-    position: fixed;
     z-index: $navbar-zindex - 5;
     width: $sidebar-icon-box-size;
     height: $sidebar-icon-box-size;
-    top: 50%;
-    left: 0;
     line-height: $sidebar-icon-box-size;
     color: $sidebar-icon-color;
     font-size: $sidebar-icon-size;
     text-align: center;
     background-color: $sidebar-bg;
     cursor: pointer;
+    @include position(fixed, 50% null null 0);
     @include box-shadow(0px 3px 10px 0px rgba(0,0,0,0.15));
     @include transition(all .3s ease-in-out);
     &:hover { color: $sidebar-icon-hover-color; }
@@ -236,13 +241,11 @@
   }
   .sidebar-close {
     display: block;
-    position: absolute;
-    top: 8px;
-    right: 15px;
     color: $sidebar-icon-color;
     font-size: $sidebar-icon-size;
     cursor: pointer;
     @include transition(color .3s);
+    @include position(absolute, 8px 15px null null);
     &:hover { color: $sidebar-icon-hover-color; }
   }
   .sidebar::-webkit-scrollbar { display: none; }
@@ -250,15 +253,16 @@
 // Payment icons
 .hypermarket-payment-methods-icons-widget {
   ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
+    @include margin(0);
+    @include padding(0);
     & li {
       display: inline-block;
-      margin-right: .75em;
+      @include margin(null .75em null null);
       & i {
         color: $gray-dark;
         font-size: $font-size-h2 + 5;
+        @include transition(all .3s ease 0s);
         &.hypermarket-paypal,
         &.hypermarket-master-card,
         &.hypermarket-ssl {
@@ -293,10 +297,10 @@
 // Product list
 .product_list_widget {
   list-style: none;
-  margin-left: 0;
+  @include margin(null null null 0);
   li {
-    padding: 1em 0;
     @include clearfix;
+    @include padding(1em 0);
     img {
       max-width: 65px;
       float: right;
@@ -307,9 +311,9 @@
     > .reviewer {
       &:before {
         content: "\e0b9";
-        padding-right: 5px;
         display: inline-block;
         font-family: "Material Icons";
+        @include padding(null 5px null null);
       }
     }
   }
@@ -319,9 +323,9 @@
   & li.recentcomments {
     &:before {
       content: "\e0b9";
-      padding-right: 5px;
       display: inline-block;
       font-family: "Material Icons";
+      @include padding(null 5px null null);
     }
   }
 }
@@ -341,6 +345,29 @@
 .widget_rating_filter {
   > ul {
     overflow: hidden;
-    position: relative;
+    @include position(relative, null null null null);
+  }
+}
+
+// Mailchimp Widget
+.widget_mc4wp_form_widget .mc4wp-form {
+  max-width: 365px;
+  @include margin(0 auto);
+  .form-control {
+    @include border-color($widget-tags-border-color);
+    &:focus {
+      @include border-color($input-focus-border-color);
+    }
+  }
+  button[type='submit'] {
+    display: block;
+    font-size: floor($font-size-base * 1.25); // 20px;
+    border: none;
+    @include margin(-19px null null null);
+    @include background(none);
+    @include transition(color .3s);
+    @include position(absolute, 50% 7px null null);
+    &:focus { outline: none; }
+    &:hover { color: $brand-primary; }
   }
 }

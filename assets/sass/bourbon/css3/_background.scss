@@ -50,6 +50,6 @@
     $spec-backgrounds:   append($spec-backgrounds,   $spec-background,   comma);
   }
 
-  background: $webkit-backgrounds;
+  // background: $webkit-backgrounds;
   background: $spec-backgrounds;
 }

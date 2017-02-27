@@ -4,21 +4,20 @@
 
 .form-control {
   display: block;
-  width: 100%;
   line-height: $line-height-base;
-  height: $input-height;
   font-size: $input-font-size;
   color: $input-color;
   text-transform: none;
   border: 2px solid $input-border-color;
   border-radius: $input-border-radius;
   background-color: $input-bg;
-  padding: 0 16px;
-  margin-bottom: $line-height-computed;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
+  @include size(100%, $input-height);
+  @include margin(null null $line-height-computed null);
+  @include padding(0 16px);
   @include transition(all .3s);
   &:focus {
     border-color: $input-focus-border-color;
@@ -37,29 +36,27 @@ textarea.form-control {
   padding: 13px 16px !important;
 }
 .form-group {
-  margin-bottom: $line-height-computed;
+  @include margin(null null $line-height-computed null);
 }
 .form-element {
-  position: relative;
-	margin-bottom: $line-height-computed;
+  @include position(relative, null null null null);
+  @include margin(null null $line-height-computed null);
   > i {
     display: block;
-    position: absolute;
-    left: 0;
-    top: 13px;
     font-size: $input-icon-size;
+    @include position(absolute, 13px null null 0);
   }
 }
 .form-group,
 .form-element {
-  .form-control { margin-bottom: 0; }
+  .form-control { @include margin(null null 0 null); }
 }
 label {
   display: block;
   color: $gray-dark;
   font-size: $font-size-small;
-  margin-bottom: 8px;
   font-weight: 500;
+  @include margin(null null 8px null);
 }
 select.form-control::-ms-expand {
   display: none;
@@ -76,16 +73,14 @@ select option {
 // Forms Validation
 .form-element {
   &:before {
-    position: absolute;
     display: block;
     font-family: 'Material Icons';
     font-size: $input-icon-size;
-    top: 50%;
-    right: 14px;
     line-height: 1;
     margin-top: -($input-icon-size / 2);
     @include opacity(0);
     @include transition(opacity .3s);
+    @include position(absolute, 50% 14px null null);
   }
   &.error {
     .form-control {
@@ -120,20 +115,17 @@ select option {
   }
 }
 .status-message {
-  position: absolute;
   width: 100%;
   text-align: center;
-  padding: 12px 0;
   font-size: $font-size-base;
   line-height: 1.8;
-  top: 0;
-  left: 0;
   background-color: #fff;
-  padding: 25px;
   visibility: hidden;
-  @include opacity(0);
   border: 1px solid transparent;
   border-radius: $border-radius-base;
+  @include opacity(0);
+  @include padding(25px);
+  @include position(absolute, 0 null null 0);
   @include transform(translateY(20px));
   @include transition(all .4s);
   &.error {
@@ -178,13 +170,12 @@ select option {
 .form-control + .checkbox-inline,
 .form-control + .radio,
 .form-control + .radio-inline {
-  margin-top: 20px;
+  @include margin(20px null null null);
 }
 .checkbox,
 .radio,
 .checkbox-inline,
 .radio-inline {
-  position: relative;
   display: table;
   width: auto;
   font-size: $checkbox-radio-label-font-size;
@@ -192,8 +183,8 @@ select option {
   text-transform: none;
   font-weight: normal;
   cursor: default;
-  margin-bottom: 12px;
-  margin-left: 2px;
+  @include position(relative, null null null null);
+  @include margin(null null 12px 2px);
   @include user-select(none);
   &.disabled {
     color: $disabled-color;
@@ -216,17 +207,15 @@ label.hover {
 .checkbox-inline,
 .radio-inline {
   display: inline-block;
-  margin-right: 18px;
+  @include margin(null 18px null null);
 }
 .text-right .checkbox-inline,
 .text-right .radio-inline {
-  margin-left: 15px;
-  margin-right: 0;
+  @include margin(null 0 null 15px);
 }
 .text-center .checkbox-inline,
 .text-center .radio-inline {
-  margin-left: 10px;
-  margin-right: 10px;
+  @include margin(nill 10px);
 }
 
 // Checkbox/Radio replacement
@@ -234,16 +223,15 @@ input[type="checkbox"], input[type="radio"] {
   @include appearance(none);
   @include position($input-icon-size/3 0 0 0);
   @include transition(.2s);
-  height: 20px;
-  width: 20px;
   background: $checkbox-radio-border-color;
   color: $body-bg;
   cursor: pointer;
   display: inline-block;
-  margin-right: 0.5rem;
   outline: none;
-  position: relative;
   z-index: 1000;
+  @include square(20px);
+  @include margin(null 0.5rem null null);
+  @include position(relative, null null null null);
   &:hover {
     background: darken($gray-light, 15%);
   }
@@ -253,12 +241,11 @@ input[type="checkbox"], input[type="radio"] {
     &::before {
       @include position(absolute);
       @extend .text-center;
-      height: 20px;
-      width: 20px;
       content: '\2714';
       display: inline-block;
       font-size: $input-icon-size/1.5;
       line-height: $input-icon-size;
+      @include square(20px);
     }
   }
 }
@@ -272,12 +259,10 @@ input[type="radio"] {
 
 // Count Input (Quantity)
 .count-input {
-  position: relative;
   width: 100px;
-  margin: 10px 0;
+  @include margin(10px 0);
+  @include position(relative, null null null null);
   input {
-    width: 100%;
-    height: $btn-sm-height;
     border: 2px solid $hr-border;
     border-radius: $border-radius-small;
     background: none;
@@ -286,26 +271,24 @@ input[type="radio"] {
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
+    @include size(100%, $btn-sm-height);
     &::-webkit-inner-spin-button, 
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
-      margin: 0;
+      @include margin(0);
     }
     &:focus { outline: none; }
   }
   .incr-btn {
     display: block;
-    position: absolute;
-    width: $btn-sm-height;
-    height: $btn-sm-height;
     font-size: $font-size-lead;
     color: $input-color;
     font-weight: 300;
     text-align: center;
     line-height: $line-height-base;
     text-decoration: none;
-    top: 0;
-    right: 0;
+    @include square($btn-sm-height);
+    @include position(absolute, 0 0 null null);
     &.minus {
       border-right: none;
     }
@@ -328,7 +311,7 @@ input[type="radio"] {
     .form-submit {
       display: table-cell;
       vertical-align: middle;
-      .btn { margin-top: 0; }
+      .btn { @include margin(0 null null null); }
     }
     .rememberme { width: 60%; }
     .form-submit { width: 40%; }
@@ -339,44 +322,42 @@ input[type="radio"] {
 .checkout-form {
   &.container {
     width: 100% !important;
-    padding: 0;
+    @include padding(0);
   }
 }
 
 // Subscription Form
 .mc4wp-form, .mc4wp-form-fields {
-  position: relative;
   display: block;
   width: 100%;
+  @include position(relative, null null null null);
   .form-control {
-    margin-bottom: 0;
+    @include margin(null null 0 null);
   }
   .mc4wp-response {
     font-size: 70%;
-    padding-top: 24px;
+    @include padding(24px null null null);
   }
 }
 
 // Search Box
 .search-box {
-  position: relative;
   width: 100%;
+  @include position(relative, null null null null);
   .form-control {
-    padding-right: ($search-icon-size + 18);
-    margin-bottom: 0;
+    @include padding(null ($search-icon-size + 18) null null);
+    @include margin(null null 0 null);
   }
   button[type=submit] {
     display: block;
-    position: absolute;
-    top: 50%;
-    right: 12px;
     font-size: $search-icon-size;
     line-height: 1;
     border: none;
     background-color: transparent;
-    padding: 0;
     margin-top: -(($search-icon-size / 2) + 1);
     @include transition(color .3s);
+    @include padding(0);
+    @include position(absolute, 50% 12px null null);
     &:focus { outline: none; }
     &:hover { color: $gray; }
   }

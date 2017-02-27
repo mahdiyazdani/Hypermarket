@@ -17,13 +17,12 @@
   text-transform: $btn-text-transform;
   border: 2px solid transparent;
   border-radius: $border-radius-base;
-  padding: 0 22px;
-  margin: 10px 0;
-  margin-right: 8px;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   white-space: nowrap;
+  @include padding(0 22px);
+  @include margin(10px 8px 10px 0);
   @include transform(translateZ(0));
   @include user-select(none);
   @include transition(color 0.3s ease-out, background-color 0.3s ease-out);
@@ -144,8 +143,8 @@ a.btn {
   font-size: $btn-sm-font-size;
   font-weight: $btn-sm-font-weight;
   line-height: $btn-sm-height - 3;
-  padding: 0 15px;
   border-radius: $border-radius-small;
+  @include padding(0 15px);
   &.btn-ghost { font-weight: $btn-font-weight; }
 }
 
@@ -172,26 +171,25 @@ a.btn {
 // Inline Buttons
 // --------------------------------------------------
 .btn-inline {
-  margin-top: 0;
-  margin-bottom: 0;
+  @include margin(0 null);
 }
 
 // Button icons alignment
 // --------------------------------------------------
 .btn-icon-left {
-  padding-left: 18px;
-  i { margin-right: 7px; }
+  @include padding(null null null 18px);
+  i { @include margin(null 7px null null); }
   &.btn-sm {
-    padding-left: 12px;
-    i { margin-right: 5px; }
+    @include padding(null null null 12px);
+    i { @include margin(null 5px null null); }
   }
 }
 .btn-icon-right {
-  padding-right: 18px;
-  i { margin-left: 7px; }
+  @include padding(null 18px null null);
+  i { @include margin(null null null 7px); }
   &.btn-sm {
-    padding-right: 12px;
-    i { margin-left: 5px; }
+    @include padding(null 12px null null);
+    i { @include margin(null null null 5px); }
   }
 }
 
@@ -200,14 +198,13 @@ a.btn {
 .btn-block {
   display: block;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 0;
+  @include padding(null 15px);
+  @include margin(null 0 null null null);
 }
 
 // Vertically space out multiple block buttons
 .btn-block + .btn-block {
-  margin-top: 20px;
+  @include margin(20px null null null);
 }
 
 // Specificity overrides
@@ -221,11 +218,9 @@ input[type="button"] {
 
 // Buttons alignment
 .text-center .btn {
-  margin-left: 5px;
-  margin-right: 5px;
+  @include margin(null 5px);
   &.btn-block {
-    margin-left: 0;
-    margin-right: 0;
+    @include margin(null 0);
   }
 }
 .mobile-center {
@@ -242,36 +237,31 @@ input[type="button"] {
   }
 }
 .text-right .btn {
-  margin-left: 10px;
-  margin-right: 0;
-  &.btn-block { margin-left: 0; }
+  @include margin(null 0 null 10px);
+  &.btn-block { @include margin(null null null 0); }
 }
 
 // Scroll to Top Button
 .scroll-to-top-btn {
   display: block;
-  position: absolute;
-  width: $btn-height;
-  height: $btn-height;
   font-size: $scroll-top-btn-icon-size;
   color: $scroll-top-btn-color;
   line-height: $btn-height - 4;
   text-align: center;
   text-decoration: none;
-  right: 20px;
-  bottom: 0;
   background-color: $scroll-top-btn-bg;
   border: 2px solid $hr-border;
   border-bottom: 0;
   cursor: pointer;
+  @include square($btn-height);
+  @include position(absolute, null 20px 0 null);
   @include transition (color .3s);
   > i { @include transform(rotate(-90deg)); }
   &:hover { color: $scroll-top-btn-hover-color; }
   @media #{$mobile-land} {
-    width: $btn-height - 6;
-    height: $btn-height - 6;
     font-size: $scroll-top-btn-icon-size - 4;
     line-height: $btn-height - 10;
+    @include square($btn-height - 6);
   }
 }
 
@@ -279,14 +269,12 @@ input[type="button"] {
 .search-btn {
   @extend .btn;
   @extend .btn-ghost;
-  width: $btn-sm-height;
-  height: $btn-sm-height;
   line-height: $btn-sm-height - 2;
   color: $gray;
-  padding: 0;
   text-align: center;
-  margin: 0;
-  margin-left: 20px;
+  @include padding(0);
+  @include square($btn-sm-height);
+  @include margin(0 0 0 20px);
   > i::before {
     font-size: $search-button-icon-size;
   }

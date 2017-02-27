@@ -5,24 +5,21 @@
 // Shop Item
 .shop-item {
   width: 100%;
-  margin-bottom: floor($line-height-computed * 1.5);
+  @include margin(null null floor($line-height-computed * 1.5) null);
   .shop-thumbnail {
-    position: relative;
     background-color: $shop-item-thumb-bg;
     overflow: hidden;
+    @include position(relative, null null null null);
     .woocommerce-LoopProduct-link {
-      position: absolute;
       display: block;
       z-index: 1;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      @include square(100%);
+      @include position(absolute, 0 null null 0);
     }
     > img {
       display: block;
       width: auto;
-      margin: auto;
+      @include margin(auto);
       @include opacity(1);
       @include backface-visibility(hidden);
       @include transition(opacity .35s);
@@ -31,7 +28,7 @@
   .shop-item-details {
     display: table;
     width: 100%;
-    padding-top: $line-height-computed;
+    @include padding($line-height-computed null null null);
     .shop-item-title,
     .shop-item-price {
       display: table-cell;
@@ -61,13 +58,11 @@
     }
   }
   .shop-item-tools {
-    position: absolute;
     z-index: 2;
-    bottom: 22px;
-    right: 22px;
     text-align: right;
     visibility: hidden;
     @include opacity(0);
+    @include position(absolute, null 22px 22px null);
   	@include transition(opacity .35s, visibility .35s);
     .add-to-whishlist {
       display: inline-block;
@@ -85,8 +80,7 @@
       }
     }
     .add-to-cart {
-      margin: 0;
-      margin-left: 7px;
+      @include margin(0 null null 7px);
     }
     .added_to_cart {
       display: none;
@@ -107,17 +101,15 @@
 
 // Shop Label
 .shop-label {
-  position: absolute;
   z-index: 1;
   display: block;
   height: $shop-label-height;
   line-height: $shop-label-height;
-  top: 20px;
-  left: 20px;
   font-size: $shop-label-font-size;
   background-color: $shop-label-bg;
   border-radius: ($shop-label-height / 2);
-  padding: 0 14px;
+  @include position(absolute, 20px null null 20px);
+  @include padding(0 14px);
 }
 
 // Add to Cart Button
@@ -143,22 +135,17 @@
   }
   &:focus, &:active { color: $add-to-cart-color; }
   em {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     font-style: normal;
+    @include square(100%);
+    @include position(absolute, 0 null null 0);
     @include transform(translateZ(0));
     @include backface-visibility(hidden);
     @include transition(transform 0.3s);
   }
   svg {
     /* this is the check icon */
-    position: absolute;
-    left: 50%;
-    top: 50%;
     width: 100%;
+    @include position(absolute, 50% null null 50%);
     @include transform(translateX(50%) translateY(-50%));
     @include transition(transform 0.3s);
   }
@@ -331,7 +318,7 @@
     right: -($product-gallery-thumb-width + 15);
     width: $product-gallery-thumb-width;
     list-style: none;
-    padding: 0;
+    @include padding(0);
     @include transform(translateY(-50%));
     > li {
       display: block;
@@ -368,8 +355,7 @@
 // Single Product Info
 .product-info {
   max-width: $product-gallery-preview-max-width;
-  margin-left: auto;
-  margin-right: auto;
+  @include margin(null auto);
   .product_title {
     @extend .h2;
   }
@@ -401,7 +387,7 @@
   .tagged_as,
   .woocommerce-product-rating {
     display: inline-block;
-    margin: 0 16px 16px 0;
+    @include margin(0 16px 16px 0);
     span, a {
       color: $product-meta-color;
       text-decoration: none;
@@ -419,10 +405,8 @@
   .woocommerce-product-rating {
     margin-right: 0;
     .star-rating { 
-      top: auto;
-      right: auto;
       line-height: 2;
-      position: relative;
+      @include position(relative, auto auto null null);
       & span {
         height: 100%;
       }
@@ -435,8 +419,7 @@
     .product-sku,
     .product-category,
     .product-rating {
-      margin-left: 8px;
-      margin-right: 8px;
+      @include margin(null 8px);
     }
   }
 }
@@ -458,7 +441,7 @@
   margin-bottom: floor($line-height-computed / 2);
   .variations, .count-input, .single_add_to_cart_button {
     display: inline-block;
-    margin: 12px 12px 12px 0;
+    @include margin(12px 12px 12px 0);
   }
   table.variations {
     width: auto;
@@ -473,7 +456,7 @@
       @extend .form-control;
       @extend .form-control-sm;
       @extend .color-select;
-      margin: 0;
+      @include margin(0);
     }
     .reset_variations {
       display: none !important;
@@ -483,8 +466,7 @@
 .text-center {
   .product-tools > *,
   &.product-tools > * {
-    margin-left: 6px;
-    margin-right: 6px;
+    @include margin(6px);
   }
 }
 .text-right {
@@ -505,8 +487,8 @@
 // Reviews
 .woocommerce-Reviews {
   ol.commentlist {
-    padding: 0;
-    margin: 0;
+    @include margin(0);
+    @include padding(0);
   }
   .woocommerce-Reviews-title {
     @extend .sr-only
@@ -518,8 +500,8 @@
 .review {
   display: table;
   width: 100%;
-  padding: floor($line-height-computed * 1.4) 0;
   border-top: 1px solid $hr-border;
+  @include padding(floor($line-height-computed * 1.4) 0);
   &:first-child { @extend .padding-top-half; border-top: none; }
   .review-author-ava {
     display: table-cell;
@@ -531,7 +513,7 @@
   }
   .review-author-ava {
     width: $review-author-ava-size;
-    padding: 0 18px 18px 0;
+    @include padding(0 18px 18px 0);
     > img { min-width: 80px; border-radius: 50%; }
   }
   p {
@@ -590,7 +572,7 @@
       }
       .star-rating {
         float: left !important;
-        margin: 15px 0;
+        @include margin(15px 0);
       }
       .review-title { margin-bottom: 8px; }
     }
@@ -708,6 +690,7 @@ h1.page-title {
     @extend .text-center;
     @extend .space-bottom;
   }
+  .bs3-grid-builder-container { padding: 0; max-width: 100%; }
 }
 // Coupon Code
 .cart-coupon {
@@ -743,9 +726,8 @@ h1.page-title {
 .cart-collaterals {
   table {
     th, td {
-      padding-left: 0;
-      padding-right: 0;
       font-weight: $font-weight-h4;
+      @include padding(null 0);
     }
     td {
       @extend .text-right;
@@ -757,11 +739,14 @@ h1.page-title {
 }
 // Cart - Checkout
 .woocommerce-cart, .woocommerce-checkout {
+  form.woocommerce-checkout {
+    clear: both;
+    overflow: hidden;
+  }
   .woocommerce-message, .woocommerce-info, .woocommerce-error {
-    padding-left: $table-cell-padding;
-    padding-right: $table-cell-padding;
     @extend .text-left;
     @extend .space-bottom;
+    @include padding(null $table-cell-padding);
   }
   .cart-empty, .return-to-shop {
     padding-left: $table-cell-padding;
@@ -777,8 +762,7 @@ h1.page-title {
     @extend .form-control;
   }
   .form-row.create-account {
-    padding-left: $table-cell-padding;
-    padding-right: $table-cell-padding;
+    @include padding(null $table-cell-padding);
   }
   label[for="rememberme"] {
     padding-left: 2px;
@@ -787,9 +771,8 @@ h1.page-title {
   div.create-account, form.login-form {
     > p:first-of-type {
       font-style: italic;
-      padding-left: $table-cell-padding;
-      padding-right: $table-cell-padding;
       font-size: $font-size-small - 3;
+      @include padding(null $table-cell-padding);
     }
   }
 }
@@ -799,9 +782,8 @@ h1.page-title {
   }
   tbody {
     td {
-      padding-left: 0;
-      padding-right: 0;
       @extend .text-left;
+      @include padding(null 0);
       &:last-of-type {
         @extend .text-right;
       }
@@ -810,15 +792,13 @@ h1.page-title {
   tfoot {
     tr {
       th {
-        padding-left: 0;
-        padding-right: 0;
         font-weight: $font-weight-h4;
         @extend .text-left;
+        @include padding(null 0);
       }
       td {
-        padding-left: 0;
-        padding-right: 0;
         @extend .text-right;
+        @include padding(null 0);
         strong {
           font-weight: $font-weight-h4;
         }
@@ -839,9 +819,8 @@ h1.page-title {
   @extend .table-striped;
   thead {
     th {
-      padding-left: 3px;
-      padding-right: 3px;
       font-weight: $font-weight-h4;
+      @include padding(null 3px);
       &:last-of-type {
         @extend .text-right;
       }
@@ -849,17 +828,15 @@ h1.page-title {
   }
   tbody {
     th {
-      padding-left: 3px;
-      padding-right: 3px;
       font-weight: $font-weight-h4;
+      @include padding(null 3px);
       &:last-of-type {
         @extend .text-left;
       }
     }
     td {
-      padding-left: 3px;
-      padding-right: 3px;
       @extend .text-left;
+      @include padding(null 3px);
       &:last-of-type {
         @extend .text-right;
       }
@@ -868,15 +845,13 @@ h1.page-title {
   tfoot {
     tr {
       th {
-        padding-left: 3px;
-        padding-right: 3px;
         font-weight: $font-weight-h4;
         @extend .text-left;
+        @include padding(null 3px);
       }
       td {
-        padding-left: 3px;
-        padding-right: 3px;
         @extend .text-right;
+        @include padding(null 3px);
         strong {
           font-weight: $font-weight-h4;
         }
@@ -887,18 +862,17 @@ h1.page-title {
 // Billing and Shipping fields
 .woocommerce-billing-fields {
   @extend .padding-top;
-  position: relative;
   overflow: hidden;
+  @include position(relative, null null null null);
   > h3:first-of-type {
     @extend .sr-only;
   }
 }
 .woocommerce-shipping-fields {
-  position: relative;
   overflow: hidden;
+  @include position(relative, null null null null);
   #ship-to-different-address {
-    padding-left: $table-cell-padding;
-    padding-right: $table-cell-padding;
+    @include padding(null $table-cell-padding);
   }
   label[for="ship-to-different-address-checkbox"] {
     display: inline-block;
@@ -939,9 +913,13 @@ input#shipping_state,
       border: $widget-divider;
       border-radius: $border-radius-base;
       background-color: $input-bg;
-      padding: 0 16px;
+      @include padding(0 16px);
     }
   }
+}
+.select2-drop-active {
+  border: $widget-divider;
+  border-top-color:transparent; 
 }
 .woocommerce-invalid {
   @extend .error;
@@ -960,25 +938,25 @@ input#shipping_state,
   .input-radio, .input-checkbox {
     float: left;
     display: inline-block;
-    margin-right: 7px;
+    @include margin(null 7px null null);
     + label {
-      padding-top: 6px;
+      @include padding(6px null null null);
     }
   }
 }
 // Payment methods
 #payment {
   .wc_payment_methods {
-    padding: 0;
-    margin: 0;
     list-style: none;
+    @include padding(0);
+    @include margin(0);
   }
   .input-radio, .input-checkbox {
     float: left;
     display: inline-block;
-    margin-right: 7px;
+    @include margin(null 7px null null);
     + label {
-      padding-top: 3px;
+      @include padding(3px null null null);
     }
   }
   .payment_box {

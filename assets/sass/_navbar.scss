@@ -4,14 +4,12 @@
 
 // Navbar Base Class
 .navbar {
-	position: relative;
 	z-index: $navbar-zindex;
 	width: 100%;
 	min-height: $navbar-min-height;
 	background-color: $navbar-bg;
-	padding-left: 30px;
-	top: 0;
-	left: 0;
+	@include padding(null null null 30px);
+	@include position(relative, 0 null null 0);
 	&.navbar-sticky {
 		position: fixed;
 		& + * { margin-top: $navbar-min-height; }
@@ -28,8 +26,8 @@
 	font-size: floor($font-size-base * 1.25); // 20px
 	font-weight: 500;
 	text-decoration: none;
-	padding: 25px 0;
-	margin-right: 20px;
+	@include margin(null 20px null null);
+	@include padding(25px 0);
 	span { font-weight: normal; }
 	&:hover,
 	&:focus, &:active {
@@ -46,24 +44,19 @@
 		margin-right: 15px;
 		&.visible-desktop { display: none; }
 		&.visible-mobile { display: inline-block; }
-		img { max-width: $image-logo-sm-width; }
 	}
-	@media #{$mobile-port} { margin-right: 8px; }
+	@media #{$mobile-port} { @include margin(null 8px null null); }
 }
 
 // Toolbar
 .toolbar {
-	position: absolute;
 	z-index: 10;
-	width: $toolbar-width-desktop;
-	height: 100%;
-	top: -2px;
-	right: 30px;
+	@include size($toolbar-width-desktop, 100%);
+	@include position(absolute, -2px 30px null null);
 	.inner {
 		display: table;
-		width: 100%;
-		height: 100%;
 		table-layout: fixed;
+		@include square(100%);
 		> a,
 		.cart-btn > a {
 			font-size: $toolbar-toggle-icon-size;
@@ -96,18 +89,15 @@
 			vertical-align: middle;
 			text-align: center;
 			.count {
-				position: absolute;
 				display: block;
-				width: 16px;
-				height: 16px;
 				line-height: 16px;
 				font-size: $font-size-xs;
 				color: #fff;
 				text-align: center;
 				border-radius: 50%;
 				background-color: $brand-primary;
-				top: -2px;
-				right: -17px;
+				@include square(16px);
+				@include position(absolute, -2px -17px null null);
 			}
 			&.mobile-menu-toggle {
 				display: none;
@@ -139,19 +129,15 @@
 // Cart Dropdown
 .cart-dropdown {
 	display: none;
-	position: absolute;
 	width: $cart-dropdown-width;
-	right: 0;
-	top: 100%;
 	list-style: none;
-	margin: 0;
-	margin-top: -14px;
-	padding: 25px 20px;
 	text-align: left;
 	background-color: $cart-dropdown-bg-color;
 	border: $cart-dropdown-border;
 	cursor: default;
-
+	@include margin(-14px 0 0 0);
+	@include padding(25px 20px);
+	@include position(absolute, 100% 0 null null);
 	& .widget {
 		padding: 0 !important;
 	}
@@ -160,9 +146,9 @@
 		position: relative;
 		display: table;
 		width: 100%;
-		padding: 0 0 15px 0;
 		border-bottom: $cart-dropdown-border;
-		margin-bottom: 15px;
+		@include margin(null null 15px null);
+		@include padding(0 0 15px 0);
 		dl.variation {
 			display: none;
 		}
@@ -173,13 +159,13 @@
 		}
 		.item-thumb {
 			width: $cart-dropdown-thumb-width + 15;
-			padding-right: 15px;
+			@include padding(null 15px null null);
 			> img { width: 100%; }
 		}
 		.item-title {
 			font-size: $font-size-small;
 			font-weight: normal;
-			padding-right: 20px;
+			@include padding(null 20px null null);
 			margin-bottom: floor($line-height-computed / 4);
 			> a {
 				color: $nav-link-color;
@@ -193,13 +179,11 @@
 		.item-price {
 			font-size: $font-size-small;
 			color: $gray;
-			margin-bottom: 0;
+			@include margin(null null 0 null);
 		}
 		.close-btn {
-			position: absolute;
-			top: -3px;
-			right: -4px;
 			font-size: $font-size-base;
+			@include position(absolute, -3px -4px null null);
 			&:hover { color: $brand-danger; }
 		}
 	}
@@ -244,20 +228,17 @@
 // Main Navigation
 .main-navigation {
 	display: block;
-	position: absolute;
 	z-index: 5;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
+	@include square(100%);
+	@include position(absolute, 0 null null 0);
 	padding: {
 		right: ($toolbar-width-desktop + 50);
 		left: ($image-logo-width + 145);
 	}
 	> .menu {
 		list-style: none;
-		padding: 0;
-		margin: 0;
+		@include padding(0);
+		@include margin(0);
 		li > a {
 			display: block;
 			color: $nav-link-color;
@@ -275,7 +256,7 @@
 			position: relative;
 			> a {
 				line-height: ($navbar-min-height - 2);
-				padding-right: 30px;
+				@include padding(null 30px null null);
 			}
 			&.current-menu-item > a,
 			&.current_page_item > a,
@@ -287,17 +268,14 @@
 			// Sub-Menu
 			.sub-menu {
 				display: none;
-				position: absolute;
 				width: $submenu-width;
-				left: 0;
-				top: 100%;
 				list-style: none;
-				margin: 0;
-				margin-top: -14px;
-				padding: 20px;
 				text-align: left;
 				background-color: $submenu-bg-color;
 				border: $submenu-border;
+				@include padding(20px);
+				@include margin(-14px 0 0 0);
+				@include position(absolute, 100% null null 0);
 				> li {
 					margin-top: 8px;
 					&:first-child { margin-top: 0; }
@@ -316,8 +294,7 @@
 					font-family: 'Material Icons';
 					content:"\e5c5";
 					font-size: 1.2em;
-					margin-left: 1px;
-					margin-top: -2px;
+					@include margin(-2px null null 1px);
 					@include transform(rotate(0));
 					@include transition(transform .3s);
 				}
@@ -332,14 +309,12 @@
 	}
 	&.text-center {
 		> .menu > li > a {
-			padding-right: 15px;
-			padding-left: 15px;
+			@include padding(null 15px);
 		}
 	}
 	&.text-right {
 		> .menu > li > a {
-			padding-right: 0;
-			padding-left: 30px;
+			@include padding(null 0 null 30px);
 		}
 	}
 }
@@ -387,44 +362,39 @@
 		display: none;
 	}
 	.main-navigation {
-		position: fixed;
-		width: 100%;
-		height: calc(100% - #{$navbar-min-height});
-		top: $navbar-min-height;
-		left: 0;
 		background-color: $mobile-menu-bg-color;
-		padding: 0;
 		overflow-y: auto;
 		visibility: hidden;
+		@include square(100%);
 		@include opacity(0);
+		@include padding(0);
+		@include position(fixed, 0 null null 0);
 		@include transition(visibility .3s, opacity .3s);
 		> .menu {
 			display: none;
-			padding: 20px 0;
+			@include padding(20px 0);
+			@include margin($navbar-min-height null null null);
 			> li {
 				display: block;
 				> a {
 					line-height: $line-height-base;
-					padding: 12px 15px;
+					@include padding(12px 15px);
 				}
 				.sub-menu {
 					display: block;
-					position: relative;
 					width: 100%;
 					max-height: 0;
-					left: 0;
-					top: 0;
-					margin: 0;
-					margin-top: 0;
-					padding: 0;
 					text-align: center;
 					background-color: $gray-lighter;
 					border: 0;
 					overflow: hidden;
 					@include transition(all .4s);
+					@include position(relative, 0 null null 0);
+					@include padding(0);
+					@include margin(0);
 					> li {
 						margin-top: 0;
-						> a { padding: 6px 15px; }
+						> a { @include padding(6px 15px); }
 					}
 				}
 				&:hover .sub-menu {
@@ -436,7 +406,7 @@
 					}
 					.sub-menu {
 						max-height: 600px;
-						padding: 20px 0;
+						@include padding(20px 0);
 					}
 				}
 			}
@@ -450,9 +420,12 @@
 			}
 		}
 	}
+	.admin-bar {
+		& .main-navigation .menu { @include margin(($navbar-min-height + 30) null null null); }
+	}
 }
 @media #{$tablet-port} {
-	.navbar { padding-left: 15px; }
+	.navbar { @include padding(null null null 15px); }
 	.toolbar { right: 20px; }
 }
 

@@ -5,18 +5,18 @@
 
 // Base class
 .panel {
-  margin-bottom: floor($line-height-computed / 1.2);
   background-color: $panel-bg;
   border: none;
   border-radius: 0;
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
   border: none;
+  @include margin(null null floor($line-height-computed / 1.2) null);
 }
 
 // Panel contents
 .panel-body {
-  padding: 0 20px 20px 0;
   @include clearfix;
+  @include padding(0 20px 20px 0);
 }
 
 // Optional heading
@@ -27,9 +27,10 @@
     display: block;
     font-size: $panel-heading-font-size;
     font-weight: normal;
-    padding: 0 0 18px 0;
-    margin: 0;
     border-radius: 0;
+    @include margin(0);
+    @include padding(0 0 18px 0);
+
   }
   > a {
     position: relative;
@@ -42,9 +43,9 @@
       font-family: "Material Icons";
       font-size: 22px;
       content:"\e5c7";
-      margin-top: -2px;
       @include transform(rotate(0));
       @include transition(all .35s);
+      @include margin(-2px null null null);
     }
   }
   .panel-title.collapsed {
@@ -61,15 +62,15 @@
 
 // Collapsable panels (aka, accordion)
 .panel-group {
-  margin-bottom: floor($line-height-computed / 1.5);
+  @include margin(null null floor($line-height-computed / 1.5) null);
 
   // Tighten up margin so it's only between panels
   .panel {
-    margin-bottom: 0;
     border-radius: 0;
+    @include margin(null null 0 null);
 
     + .panel {
-      margin-top: 10px;
+      @include margin(10px null null null);
     }
   }
 
