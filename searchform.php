@@ -13,4 +13,4 @@
 	<button type="submit">
 		<i class="material-icons search"></i>
 	</button>
-</form>
+</form><!-- #searchform -->
