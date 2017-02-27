@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<span class="empty"><small><em><?php _e( 'Most likely, уou just have not put anything into your basket.', 'hypermarket' ); ?></em></small></span>
+		<span class="empty"><small><em><?php _e( 'Most likely, you just have not put anything into your basket.', 'hypermarket' ); ?></em></small></span>
 
 	<?php endif; ?>
 
