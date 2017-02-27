@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.3
+ * @since 	    1.0.3.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -76,7 +76,7 @@ if (!class_exists('Hypermarket')):
 		 * runs before the init hook. The init hook is too late for some features, such
 		 * as indicating support for post thumbnails.
 		 *
-		 * @since 1.0.1
+		 * @since 1.0.3.1
 		 */
 		public function setup()
 
@@ -178,8 +178,8 @@ if (!class_exists('Hypermarket')):
 			 *  specifically font, colors, icons, and column width.
 			 */
 			add_editor_style( array( get_stylesheet_directory_uri() . '/assets/css/hypermarket-editor-style.css', add_query_arg(apply_filters('hypermarket_default_font_family', array(
-				'family' => 'Work+Sans:400,300,500,600',
-				'subset' => 'latin,latin-ext'
+				'family' => urlencode('Work Sans:400,300,500,600'),
+				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css')));
 		}
 		/**
@@ -199,14 +199,14 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.3.1
 		 */
 		public function enqueue()
 
 		{
 			wp_enqueue_style('hypermarket-font', add_query_arg(apply_filters('hypermarket_default_font_family', array(
-				'family' => 'Work+Sans:400,300,500,600',
-				'subset' => 'latin,latin-ext'
+				'family' => urlencode('Work Sans:400,300,500,600'),
+				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
 			wp_enqueue_style('hypermarket-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket-core.min.css', array() , HypermarketThemeVersion);
 			wp_enqueue_style('hypermarket-theme-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket.css', array() , HypermarketThemeVersion);
