@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.3
+ * @since       1.0.3.1
  */
 
 jQuery(document).ready(function($) {
@@ -26,9 +26,6 @@ jQuery(document).ready(function($) {
     	hypermarketHideAllWelcomeScreenTabs();
     	hypermarketShowSelectedWelcomeScreenContent(current_tab);
     });
-
-    $("#accordion").accordion();
-
 
     function hypermarketHideAllWelcomeScreenTabs() {
     	$('#hypermarket-welcome-screen-nav > a').each(function(){
