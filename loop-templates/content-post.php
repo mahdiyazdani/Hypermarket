@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.1
+ * @since 		    1.0.3
  */
 /**
  * Functions hooked into "hypermarket_featured_image_single_post" action
@@ -17,13 +17,13 @@ do_action('hypermarket_featured_image_single_post');
 ?>
 <!-- Content -->
 <section class="container padding-top-3x">
-	<h1 class="mobile-center" itemprop="headline"><?php the_title(); ?></h1>
+	<h1 class="mobile-center"><?php the_title(); ?></h1>
 		<?php
 			while (have_posts()):
 				the_post();
 		?>
 				<!-- Post -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom'); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom'); ?>>
 					<div class="col-sm-12">
 						<?php do_action('hypermarket_before_single_post_content'); ?>
 						<?php the_content(); ?>
@@ -33,10 +33,12 @@ do_action('hypermarket_featured_image_single_post');
 								<span><?php _e('by', 'hypermarket'); ?> </span>
 								<?php the_author_posts_link(); ?>
 								<span class="divider"></span>
-								<?php the_time('j F'); ?>
-								<span class="divider"></span>
-								<span><?php _e('in', 'hypermarket'); ?> </span>
-								<?php the_category(', '); ?>
+								<?php the_date('j F', '', '', true); ?>
+								<?php if( !empty(get_the_category()) ): ?>
+									<span class="divider"></span>
+									<span><?php _e('in', 'hypermarket'); ?> </span>
+									<?php the_category(', '); ?>
+								<?php endif; ?>
 								<?php if( !empty(get_the_tags()) ): ?>
 									<span class="divider"></span>
 									<?php the_tags('#', ' #', ''); ?>
