@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.2
+ * @since 	    1.0.3
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.2
+		 * @since 1.0.3
 		 */
 		public function __construct()
 
@@ -30,7 +30,7 @@ if (!class_exists('Hypermarket')):
 			) , 10);
 			add_action('after_switch_theme', array(
 				$this,
-				'after_switch'
+				'flush_rules'
 			) , 10);
 			add_action('wp_enqueue_scripts', array(
 				$this,
@@ -39,6 +39,10 @@ if (!class_exists('Hypermarket')):
 			add_action('widgets_init', array(
 				$this,
 				'widgets'
+			) , 10);
+			add_action('load-themes.php', array(
+				$this,
+				'cleanup_default_widgets'
 			) , 10);
 			add_action('wp_enqueue_scripts', array(
 				$this,
@@ -169,42 +173,45 @@ if (!class_exists('Hypermarket')):
 			add_theme_support('woocommerce');
 			// Declare support for selective refreshing of widgets.
 			add_theme_support('customize-selective-refresh-widgets');
+			/**
+			 *  This theme styles the visual editor to resemble the theme style,
+			 *  specifically font, colors, icons, and column width.
+			 */
+			add_editor_style( array( get_stylesheet_directory_uri() . '/assets/css/hypermarket-editor-style.css', add_query_arg(apply_filters('hypermarket_default_font_family', array(
+				'family' => 'Work+Sans:400,300,500,600',
+				'subset' => 'latin,latin-ext'
+			)) , 'https://fonts.googleapis.com/css')));
 		}
 		/**
-		 * Theme functions attached to this hook are only triggered
-		 * in the theme (and/or child theme) being activated.
+		 * This function is useful when used with custom post types
+		 * as it allows for automatic flushing of the WordPress rewrite rules
+		 * (usually needs to be done manually for new custom post types).
 		 *
-		 * @since 1.0.2
+		 * @see https://codex.wordpress.org/Function_Reference/flush_rewrite_rules
+		 * @since 1.0.3
 		 */
-		public function after_switch()
+		public function flush_rules()
 
 		{
-			/**
-			 * This function is useful when used with custom post types
-			 * as it allows for automatic flushing of the WordPress rewrite rules
-			 * (usually needs to be done manually for new custom post types).
-			 *
-			 * @see https://codex.wordpress.org/Function_Reference/flush_rewrite_rules
-			 */
 			global $wp_rewrite;
 			$wp_rewrite->flush_rules();
 		}
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0
+		 * @since 1.0.3
 		 */
 		public function enqueue()
 
 		{
-			wp_enqueue_style('hypermarket-font', add_query_arg(array(
+			wp_enqueue_style('hypermarket-font', add_query_arg(apply_filters('hypermarket_default_font_family', array(
 				'family' => 'Work+Sans:400,300,500,600',
 				'subset' => 'latin,latin-ext'
-			) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
-			wp_enqueue_style('hypermarket-styles', get_stylesheet_directory_uri() . '/assets/css/core.min.css', array() , HypermarketThemeVersion);
+			)) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
+			wp_enqueue_style('hypermarket-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket-core.min.css', array() , HypermarketThemeVersion);
 			wp_enqueue_style('hypermarket-theme-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket.css', array() , HypermarketThemeVersion);
 			wp_enqueue_script('jquery');
-			wp_enqueue_script('hypermarket-scripts', get_template_directory_uri() . '/assets/js/core.min.js', array(
+			wp_enqueue_script('hypermarket-scripts', get_template_directory_uri() . '/assets/js/hypermarket-core.min.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
 			wp_register_script('hypermarket-theme-scripts', get_template_directory_uri() . '/assets/js/hypermarket.js', array(
@@ -228,17 +235,19 @@ if (!class_exists('Hypermarket')):
 		 * Declaring widget(s) and widget area(s).
 		 *
 		 * @see https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
-		 * @since 1.0
+		 * @since 1.0.3
 		 */
 		public function widgets()
 
 		{
-			// Main Sidebar
-			$sidebar_args['sidebar'] = array(
-				'name' => __('Shop Sidebar', 'hypermarket') ,
-				'id' => 'sidebar',
-				'description' => __('Widgets added to this region will appear in shop archive pages.', 'hypermarket')
-			);
+			// Main Shop Sidebar (if WooCommerce activated only!)
+			if(hypermarket_is_woocommerce_activated()):
+				$sidebar_args['sidebar'] = array(
+					'name' => __('Shop Sidebar', 'hypermarket') ,
+					'id' => 'sidebar',
+					'description' => __('Widgets added to this region will appear in shop archive pages.', 'hypermarket')
+				);
+			endif;
 			// Footer
 			$footer_widget_areas = apply_filters('hypermarket_footer_widget_areas', 3);
 			if (is_int($footer_widget_areas)):
@@ -264,7 +273,7 @@ if (!class_exists('Hypermarket')):
 				/**
 				 * Dynamically generated filter hooks.
 				 *
-				 * 'hypermarket_sidebar_widget_tags'
+				 * 'hypermarket_sidebar_widget_tags' (if WooCommerce activated only!)
 				 * 'hypermarket_footer_1_widget_tags'
 				 * 'hypermarket_footer_2_widget_tags'
 				 * 'hypermarket_footer_3_widget_tags'
@@ -276,6 +285,30 @@ if (!class_exists('Hypermarket')):
 					register_sidebar($args + $widget_tags);
 				endif;
 			endforeach;
+		}
+		/**
+		 * Clean-up all widgets from all widget areas.
+		 *
+		 * @since 1.0.3
+		 */
+		public function cleanup_default_widgets()
+
+		{
+			global $pagenow;
+			if(current_user_can('administrator') && isset($_GET['activated'] ) && $pagenow == 'themes.php'):
+				//get all registered sidebars
+			    global $wp_registered_sidebars;
+			    //get saved widgets
+			    $widgets = get_option('sidebars_widgets');
+			    //loop over the sidebars and remove all widgets
+			    foreach ($wp_registered_sidebars as $sidebar => $value):
+			        unset($widgets[$sidebar]);
+			    endforeach;
+			    //update with widgets removed
+			    update_option('sidebars_widgets',$widgets);
+			else:
+				return;
+		    endif;
 		}
 		/**
 		 * Enqueue child theme stylesheet.
