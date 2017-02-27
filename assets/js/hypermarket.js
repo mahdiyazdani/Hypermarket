@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.2
+ * @since       1.0.3
  */
 ;
 (function() {
@@ -62,6 +62,30 @@ jQuery(document).ready(function($) {
     $emptyLink.on('click', function(e) {
         e.preventDefault();
     });
+
+    // Page Transitions
+    if($('.page-preloading').length) {
+        $('a:not([href^="#"])').on('click', function(e) {
+        if( $(this).hasClass('gallery-item') === false && 
+            $(this).hasClass('ajax-post-link') === false && 
+            $(this).hasClass('read-more ajax-post-link') === false && 
+            $(this).hasClass('ajax_add_to_cart') === false && 
+            $(this).hasClass('comment-reply-link') === false && 
+            $(this).is('#cancel-comment-reply-link') === false && 
+            $(this).hasClass('hypermarket-sl-button') === false && 
+            $(this).hasClass('hypermarket-share-icon') === false &&
+            $(this).attr('target') !== '_blank') {
+          e.preventDefault();
+          var linkUrl = $(this).attr('href');
+          $('.page-preloading').addClass('link-clicked');
+          setTimeout(function(){
+            $('.page-preloading').removeClass('link-clicked');
+            window.open(linkUrl , '_self');
+          }, 550);
+        }
+      });
+    }
+
 
     // Animated Scroll to Top Button
     //------------------------------------------------------------------------------
@@ -126,6 +150,7 @@ jQuery(document).ready(function($) {
             $(this).parent().addClass('active');
         }
     });
+
 
     // Sidebar Toggle on Mobile
     //------------------------------------------------------------------------------
@@ -205,6 +230,7 @@ jQuery(document).ready(function($) {
 
     HypermarketControlUpdateCartBtn();
 
+
     // Country / state dropdown - Shipping
     //------------------------------------------------------------------------------
     $('#calc_shipping_country').live('change', function() {
@@ -215,6 +241,7 @@ jQuery(document).ready(function($) {
         }
     });
 
+
     // Waves Effect (on Buttons)
     //------------------------------------------------------------------------------
     if ($('.waves-effect').length) {
@@ -222,6 +249,7 @@ jQuery(document).ready(function($) {
             duration: 600
         });
     }
+
 
     // Add to Cart Button Effect
     //------------------------------------------------------------------------------
@@ -263,6 +291,7 @@ jQuery(document).ready(function($) {
     var galleryThumb = $('.product-gallery-thumblist a'),
         galleryPreview = $('.product-gallery-preview > li');
 
+
     // Thumbnails
     //------------------------------------------------------------------------------
     galleryThumb.on('click', function(e) {
@@ -276,150 +305,11 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
-    // Single Post via Ajax
-    //------------------------------------------------------------------------------
-    var hypermarketAjaxPost = $('#hypermarket-ajax-post'),
-            ajaxPostLink = $('.ajax-post-link'),
-            postBackdrop = $('.single-post-backdrop'),
-            postContainer = $('.single-post-wrap'),
-            postContentWrap = $('.single-post-wrap .inner'),
-            postContent = $('.single-post-wrap .inner .post-content'),
-            closeBtn = $('.single-post-wrap .close-btn'),
-            postPreloader = $('.single-post-wrap .preloader');
-    if (hypermarketAjaxPost.length > 0) {
-        // Get Data via Ajax
-        function getData(postID) {
-            $.ajaxSetup({cache:true});
-            $.ajax({
-                type: 'POST',
-                url: hypermarket_vars.ajaxurl,
-                dataType: 'html',
-                timeout: 10000,
-                async: true,
-                cache: true,
-                data: ({
-                    post_id: postID,
-                    action: 'hypermarket_get_ajax_post_content',
-                    security: hypermarket_vars.security
-                }),
-                success: successFn,
-                error: errorFn,
-                complete: function(xhr, status) {
-                    console.log('Request is complete!');
-                }
-            });
-        }
-
-        // Success
-        function successFn(result, status) {
-            postContent.prepend(result);
-            hypermarketTooltipInitialization('#hypermarket-ajax-post ');
-            hypermarketMakeIframeResponsive('#hypermarket-ajax-post ');
-            // Compatibility with BS3 Grid Builder
-            $('#hypermarket-ajax-post article .bs3-grid-builder-container').removeClass('container');
-            $('#hypermarket-ajax-post article .bs3-grid-builder-container').removeClass('container-fluid');
-            postContentWrap.addClass('loaded');
-        }
-
-        // Error
-        function errorFn(xhr, status, strErr) {
-            postContent.prepend('<p>' + strErr + '</p>');
-            postContentWrap.addClass('loaded');
-        }
-
-        // Open Post
-        function openPost(postID) {
-            $('body').addClass('blog-post-open');
-            postBackdrop.addClass('active');
-            postContainer.addClass('open');
-            postPreloader.addClass('active');
-            getData(postID);
-            setTimeout(function() {
-                postPreloader.removeClass('active');
-            }, 1000);
-        }
-
-        // Close Post
-        function closePost() {
-            $('body').removeClass('blog-post-open');
-            postBackdrop.removeClass('active');
-            postContainer.removeClass('open');
-            postContentWrap.removeClass('loaded');
-            setTimeout(function() {
-                postContent.empty();
-            }, 500);
-        }
-
-        ajaxPostLink.on('click', function(e) {
-            var targetPost = $(this).data('postid');
-            openPost(targetPost);
-            e.preventDefault();
-        });
-
-        closeBtn.on('click', closePost);
-    }
-
-    // Hero Slider
-    //------------------------------------------------------------------------------
-    var heroSlider = $('.hero-slider .inner');
-    if (heroSlider.length > 0) {
-        heroSlider.each(function() {
-            var loop = ($(this).parent().data('loop') === 1) ? true : false,
-                autoplay = ($(this).parent().data('autoplay') === 1) ? true : false,
-                interval = $(this).parent().data('interval') || 3000,
-                nav = ($(this).parent().data('nav') === 1) ? true : false,
-                dots = ($(this).parent().data('dots') === 1) ? true : false,
-                mousedrag = ($(this).parent().data('mousedrag') === 1) ? true : false,
-                touchdrag = ($(this).parent().data('touchdrag') === 1) ? true : false,
-                hoverpause = ($(this).parent().data('hoverpause') === 1) ? true : false,
-                items = $(this).parent().data('items') || 1,
-                margin = $(this).parent().data('margin') || 0,
-                stagepadding = $(this).parent().data('stagepadding') || 0;
-            if ($(this).find('.slide').length === 1) {
-                loop = false;
-            }
-            $(this).owlCarousel({
-                loop: loop,
-                margin: 0,
-                nav: nav,
-                dots: dots,
-                navText: [, ],
-                autoplay: autoplay,
-                autoplayTimeout: interval,
-                mouseDrag: mousedrag,
-                touchDrag: touchdrag,
-                autoplayHoverPause: hoverpause,
-                margin: margin,
-                stagePadding: stagepadding,
-                smartSpeed: 450,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: items
-                    },
-                    1200: {
-                        items: items
-                    }
-                }
-            });
-        });
-    }
-
 
     // Tooltips
     //------------------------------------------------------------------------------
-    function hypermarketTooltipInitialization(selector) {
-        if (typeof selector === "undefined" || selector === null) { 
-            selector = '';
-        }
-        var $tooltip = $(selector + '[data-toggle="tooltip"]');
-        if ($tooltip.length > 0) {
-            $tooltip.tooltip();
-        }
-    }
     hypermarketTooltipInitialization();
+
 
     // Setting background of sections
     //------------------------------------------------------------------------------
@@ -428,6 +318,7 @@ jQuery(document).ready(function($) {
             $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
         }
     });
+
 
     // Add custom badge to best seller products.
     //------------------------------------------------------------------------------
@@ -442,6 +333,7 @@ jQuery(document).ready(function($) {
         }
     }
     hypermarketBestSellerBadge();
+
 
     // Single product
     //------------------------------------------------------------------------------
@@ -458,17 +350,20 @@ jQuery(document).ready(function($) {
         $('#commentform .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
     }
 
+
     // Order comments
     //------------------------------------------------------------------------------
     if ($('#order_comments').length > 0) {
         $('#order_comments').attr('rows', '8');
     }
 
+
     // Thank you page
     //------------------------------------------------------------------------------
     if ($('.woocommerce-order-received .woocommerce').length > 0) {
         $('.woocommerce-order-received .woocommerce').addClass('col-sm-12');
     }
+
 
     // Simple post like
     // A simple and efficient post like system for WordPress.
@@ -485,7 +380,7 @@ jQuery(document).ready(function($) {
         } else {
             allbuttons = $('.hypermarket-sl-button-' + post_id);
         }
-        var loader = allbuttons.next('#hypermarket-sl-loader');
+        var loader = allbuttons.next('.hypermarket-sl-loader');
         if (post_id !== '') {
             $.ajaxSetup({cache:true});
             $.ajax({
@@ -524,38 +419,19 @@ jQuery(document).ready(function($) {
         return false;
     });
 
+
     // Wrap iframe with responsive embed classes
     //------------------------------------------------------------------------------
-    function hypermarketMakeIframeResponsive(selector) {
-        if (typeof selector === "undefined" || selector === null) { 
-            selector = '';
-        }
-        if ($(selector + 'iframe').length > 0) {
-            $(selector + 'iframe').each(function() {
-                if ($(this).hasClass('wp-embedded-content')) {
-                    $(this).wrap('<div class="center-block space-bottom"></div>');
-                    $(this).attr('width', '100%');
-                } else {
-                    $(this).wrap('<div class="embed-responsive embed-responsive-16by9 space-bottom"></div>');
-                }
-            });
-        }
-    }
     hypermarketMakeIframeResponsive();
+    
 
-    // Single post
+    // Comment style (Single page,post,attachment)
     //------------------------------------------------------------------------------
-    if ($('.single-post #comments .form-submit').length > 0) {
+    if ($('.single-post #comments .form-submit, .single-attachment #comments .form-submit, .type-page + #comments .form-submit').length > 0) {
         $('#comments .form-submit').before($('#comments .col-sm-12').get(0));
         $('#comments .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
     }
 
-    // Single page
-    //------------------------------------------------------------------------------
-    if ($('.type-page + #comments .form-submit').length > 0) {
-        $('#comments .form-submit').before($('#comments .col-sm-12').get(0));
-        $('#comments .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
-    }
 
     // Compatibility with BS3 Grid Builder
     //------------------------------------------------------------------------------
@@ -574,4 +450,34 @@ jQuery(document).ready(function($) {
         $('article > hr, article .blog-post-meta, article .post-share').wrap('<div class="col-sm-12"></div>');
     }
 
+
 }); /*Document Ready End*/
+
+// Wrap iframe with responsive embed classes (Function)
+//------------------------------------------------------------------------------
+function hypermarketMakeIframeResponsive(selector) {
+    if (typeof selector === "undefined" || selector === null) { 
+        selector = '';
+    }
+    if (jQuery(selector + 'iframe').length > 0) {
+        jQuery(selector + 'iframe').each(function() {
+            if (jQuery(this).hasClass('wp-embedded-content')) {
+                jQuery(this).wrap('<div class="center-block space-bottom"></div>');
+                jQuery(this).attr('width', '100%');
+            } else {
+                jQuery(this).wrap('<div class="embed-responsive embed-responsive-16by9 space-bottom"></div>');
+            }
+        });
+    }
+}
+// Tooltips (Function)
+//------------------------------------------------------------------------------
+function hypermarketTooltipInitialization(selector) {
+    if (typeof selector === "undefined" || selector === null) { 
+        selector = '';
+    }
+    var $tooltip = jQuery(selector + '[data-toggle="tooltip"]');
+    if ($tooltip.length > 0) {
+        $tooltip.tooltip();
+    }
+}
