@@ -44,7 +44,7 @@ if ( $products->have_posts() ) : ?>
 
 	<!-- Cross sells -->
 	<div class="clearfix"></div>
-	<section class="container padding-top padding-bottom cross-sells">
+	<section class="col-xs-12 padding-top padding-bottom cross-sells">
 		<hr>
 		<h3 class="padding-top"><?php _e( 'You May be Interested in&hellip;', 'hypermarket' ) ?></h3>
 		<div class="row padding-top">
@@ -58,7 +58,7 @@ if ( $products->have_posts() ) : ?>
 				woocommerce_product_loop_end(); 
 			?>
 		</div><!-- .row -->
-	</section><!-- .container -->
+	</section><!-- .col-xs-12 -->
 
 <?php endif;
 
