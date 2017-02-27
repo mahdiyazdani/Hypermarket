@@ -8,6 +8,7 @@
 * Added fluid page template.
 * Fixed WooCommerce overlay visibility on checkout page.
 * Theme sass files refactored.
+
 = 1.0.2 =
 * Language file updated.
 * Added WooCommerce page template added - No products found page.
@@ -17,8 +18,10 @@
 * Fixed the flush permalink method error.
 * Fixed the sidebar visibility issue on iPad PRO.
 * Fixed the shop grid layout adjustment in small screen devices.
+
 = 1.0.1 =
 * Page preloading added.
 * WooCommerce installation method changed.
+
 = 1.0 =
 * Initial release.
