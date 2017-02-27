@@ -20,9 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 if(! is_singular('product')):
+
+	// Check if current page template is "Fluid Template"?
+	$fluid = '';
+	if( get_post_field('page_template', get_option( 'woocommerce_shop_page_id' )) === 'page-templates/template-fluid.php'):
+		$fluid = '-fluid';
+	endif;
 ?>
 	<!-- Shop Catalog -->
-	<section class="container padding-top-3x">
+	<section class="container<?php echo $fluid; ?> padding-top-3x">
 	<?php if ( is_active_sidebar( 'sidebar' ) && ! is_singular() ) : ?>
 		<!-- Sidebar Toggle / visible only on mobile -->
 		<div class="sidebar-toggle sidebar-toggle-right">
