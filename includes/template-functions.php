@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.2
+ * @since 	    1.0.3
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -55,7 +55,7 @@ endif;
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0.2
+ * @since 1.0.3
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
@@ -67,7 +67,7 @@ if (!function_exists('hypermarket_site_brand')):
 			jetpack_the_site_logo();
 		else:
 			echo '<a id="site-logo-visible-desktop" href="' . esc_url(home_url('/')) . '" class="site-logo visible-desktop" itemprop="headline" rel="home">' . esc_attr(get_bloginfo('name')) . '</a><!-- site-logo.visible-desktop -->' . PHP_EOL;
-			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- site-logo.visible-mobile -->' . PHP_EOL;
+			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname', '[ H / M ]')) . '</a><!-- site-logo.visible-mobile -->' . PHP_EOL;
 		endif;
 	}
 endif;
@@ -186,12 +186,12 @@ if (!function_exists('hypermarket_homepage_content'))
  * Footer area wrapper start tag.
  *
  * @package Hooked into "hypermarket_footer_area"
- * @since 1.0
+ * @since 1.0.3
  */
 if (!function_exists('hypermarket_footer_wrapper_start')):
 	function hypermarket_footer_wrapper_start()
 	{
-		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">' . PHP_EOL;
+		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" itemscope="itemscope" itemtype="http://schema.org/WPFooter">' . PHP_EOL;
 	}
 endif;
 /**
@@ -496,7 +496,7 @@ if (!function_exists('hypermarket_get_simple_likes_button')):
 		$icon_empty = hypermarket_get_unliked_icon();
 		$icon_full = hypermarket_get_liked_icon();
 		// Loader
-		$loader = '<span id="hypermarket-sl-loader"></span>';
+		$loader = '<span class="hypermarket-sl-loader"></span>';
 		// Liked/Unliked Variables
 		if (hypermarket_already_liked($post_id, $is_comment)):
 			$class = esc_attr(' liked');
