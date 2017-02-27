@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.3
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -17,12 +17,18 @@ do_action('hypermarket_before_loop_posts');
 ?>
 <!-- Content -->
 <section class="container padding-top-3x">
-		<?php 
-			the_archive_title( '<h1 class="mobile-center">', '</h1>' );
-			the_archive_description( '<p class="taxonomy-description">', '</p>' );
-			while (have_posts()):
-				the_post();
-		?>
+		<div class="category-tile">
+			<div class="inner">
+				<?php
+					the_archive_title( '<h1 class="mobile-center">', '</h1>' );
+					the_archive_description( '<p class="taxonomy-description">', '</p>' );
+				?>
+			</div><!-- .inner ?> -->
+		</div><!-- .category-tile ?> -->
+			<?php
+				while (have_posts()):
+					the_post();
+			?>
 				<!-- Post -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom hypermarket-post-loop'); ?>>
 					<?php 
