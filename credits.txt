@@ -1,3 +1,5 @@
+**All images used on the demo site (https://demo.mypreview.one/hypermarket) are for demonstration purposes only and are NOT included in the download package due to licensing rights.**
+
 Product category
 
 http://nothingtochance.co/post/152892462628
@@ -6,7 +8,6 @@ http://nothingtochance.co/post/139016674788
 http://nothingtochance.co/post/130943999628
 http://nothingtochance.co/post/96863292523
 http://nothingtochance.co/post/153920689613
-
 
 
 Products
@@ -48,7 +49,6 @@ http://nothingtochance.co/post/58899143937
 http://nothingtochance.co/post/59292643176
 
 
-
 Image header (blog page)
 http://nothingtochance.co/post/58571955765
 http://nothingtochance.co/post/59290981343
@@ -60,5 +60,5 @@ HomePage
 https://www.fotolia.com/id/82907878
 http://www.flaticon.com/packs/ecommerce-set
 
-site icon
+Favicon
 http://www.flaticon.com/free-icon/cart_134556#term=market&page=2&position=71
