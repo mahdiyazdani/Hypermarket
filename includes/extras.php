@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.1
+ * @since       1.0.3
  */
 /**
  * Query WooCommerce activation.
@@ -19,23 +19,22 @@ if (!function_exists('hypermarket_is_woocommerce_activated')):
     }
 endif;
 /**
- * Check if WooCommerce activated or not?
+ * Check if WooCommerce activated/installed or not?
  *
- * @since 1.0.1
+ * @since 1.0.3
  */
 if (!function_exists('hypermarket_woocommerce_requirement_admin_notice')):
     function hypermarket_woocommerce_requirement_admin_notice()
     {
         global $current_user;
         $user_id = $current_user->ID;
-        if (!hypermarket_is_woocommerce_activated() && !get_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore')):
-?>
+        if (!hypermarket_is_woocommerce_activated() && !get_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore')): ?>
             <div class="notice notice-warning" style="position:relative;">
-                <p><strong><?php
-            _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
+                <p><strong><?php _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
                 <p><?php
-            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . hypermarket_sanitize_url( get_admin_url() ) . '/plugin-install.php?s=woocommerce&tab=search&type=term" target="_self">WooCommerce</a>'); ?></p>
-                <a href="?install-woocommerce-ignore-notice">
+                $install_woocommerce_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term'));
+            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
+                <a href="?hypermarket-install-woocommerce-ignore-notice">
                     <button class="notice-dismiss">
                         <span class="screen-reader-text"><?php
                 _e('Dismiss this notice.', 'hypermarket'); ?></span>
@@ -48,15 +47,15 @@ if (!function_exists('hypermarket_woocommerce_requirement_admin_notice')):
 endif;
 add_action('admin_notices', 'hypermarket_woocommerce_requirement_admin_notice');
 /**
- * Ignore notice, if user already dismissed it.
+ * Ignore notice, if user already dismissed WooCommerce activation/installation notice.
  *
- * @since 1.0.1
+ * @since 1.0.3
  */
 if (!function_exists('hypermarket_woocommerce_requirement_admin_notice_ignore')):
     function hypermarket_woocommerce_requirement_admin_notice_ignore() {
         global $current_user;
         $user_id = $current_user->ID;
-        if (isset($_GET['install-woocommerce-ignore-notice'])) :
+        if (isset($_GET['hypermarket-install-woocommerce-ignore-notice'])) :
             add_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore', 'true', true);
         endif;
     }
@@ -73,6 +72,33 @@ if (!function_exists('hypermarket_is_homepage_template')):
         return is_page_template('page-templates/template-homepage.php') ? true : false;
     }
 endif;
+/**
+ * Query Fluid template usage.
+ *
+ * @since 1.0.3
+ */
+if (!function_exists('hypermarket_is_fluid_template')):
+    function hypermarket_is_fluid_template()
+    {
+        return is_page_template('page-templates/template-fluid.php') ? true : false;
+    }
+endif;
+/**
+ * Append "fluid" class to sections with container class.
+ *
+ * @since 1.0.3
+ */
+if (!function_exists('hypermarket_fluid_template_class')):
+    function hypermarket_fluid_template_class()
+    {
+        if(hypermarket_is_fluid_template()):
+            return true;
+        else:
+            return false;
+        endif;
+    }
+endif;
+add_filter('hypermarket_fluid_template', 'hypermarket_fluid_template_class', 10);
 /**
  * Call/Run a shortcode function by tag name.
  *
