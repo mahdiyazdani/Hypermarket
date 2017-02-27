@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_homepage_template"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.3
  */
 $args = apply_filters('hypermarket_shop_by_category_args', array(
 	'parent'		=> 	0,
@@ -31,7 +31,7 @@ if(! empty($all_categories) ):
 	<section id="hypermarket-catalog" class="container-fluid padding-top-half" aria-label="<?php echo $args['title']; ?>">
 		<div class="row">
 			<?php 
-				do_shortcode('hypermarket_before_shop_by_category');
+				do_action('hypermarket_before_shop_by_category');
 				foreach ($all_categories as $category): 
 			?>
 				<div class="col-md-6">
@@ -57,7 +57,8 @@ if(! empty($all_categories) ):
 			<?php 
 				endforeach; 
 				woocommerce_reset_loop();
-				do_shortcode('hypermarket_after_shop_by_category');
+				wp_reset_postdata();
+				do_action('hypermarket_after_shop_by_category');
 			?>
 		</div><!-- .row -->
 	</section><!-- .container-fluid -->
