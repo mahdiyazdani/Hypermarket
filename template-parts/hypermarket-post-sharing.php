@@ -5,7 +5,7 @@
  * @package 		Hooked into "woocommerce_single_product_summary"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.1
+ * @since 		    1.0.3
  */
 global $post;
 $post_title = wp_strip_all_tags( get_the_title($post->ID), false );
@@ -24,28 +24,27 @@ endif;
 	<span><?php echo $share_before_notice; ?>&nbsp;</span>
 	<div class="social-bar">
 		<?php if( apply_filters('hypermarket_facebook_share_icon', true) ): ?>
-			<a href="http://www.facebook.com/sharer.php?u=<?php echo $post_permalink;?>&amp;t=<?php echo $post_title; ?>" title="<?php _e('Share on Facebook', 'hypermarket'); ?>" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Facebook', 'hypermarket'); ?>">
+			<a href="http://www.facebook.com/sharer.php?u=<?php echo $post_permalink;?>" class="hypermarket-share-icon" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Share on Facebook', 'hypermarket'); ?>">
 				<i class="hypermarket-icon hypermarket-facebook-solid"></i>
 			</a>
 		<?php endif; ?>
 		<?php if( apply_filters('hypermarket_google_plus_share_icon', true) ): ?>
-			<a href="https://plus.google.com/share?url=<?php echo $post_permalink; ?>" onclick="javascript:window.open(this.href,
-	  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Share on Google+', 'hypermarket'); ?>">
+			<a href="https://plus.google.com/share?url=<?php echo $post_permalink; ?>" class="hypermarket-share-icon" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Share on Google+', 'hypermarket'); ?>">
 				<i class="hypermarket-icon hypermarket-google-plus-solid"></i>
 			</a>
 		<?php endif; ?>
 		<?php if( apply_filters('hypermarket_twitter_share_icon', true) ): ?>
-			<a href="http://twitter.com/home/?status=<?php echo $post_title; ?> - <?php echo $post_permalink; ?>" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Tweet this', 'hypermarket'); ?>">
+			<a href="http://twitter.com/share?url=<?php echo $post_permalink; ?>&amp;text=<?php echo urlencode(html_entity_decode($post_title, ENT_COMPAT, 'UTF-8')); ?>" class="hypermarket-share-icon" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Tweet this', 'hypermarket'); ?>">
 				<i class="hypermarket-icon hypermarket-twitter-solid"></i>
 			</a>
 		<?php endif; ?>
 		<?php if( apply_filters('hypermarket_linkedin_share_icon', true) ): ?>
-			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php echo $post_title; ?>&amp;url=<?php echo $post_permalink; ?>" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Share on LinkedIn', 'hypermarket'); ?>">
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $post_permalink; ?>" class="hypermarket-share-icon" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Share on LinkedIn', 'hypermarket'); ?>">
 				<i class="hypermarket-icon hypermarket-linkedin-solid"></i>
 			</a>
 		<?php endif; ?>
 		<?php if( apply_filters('hypermarket_stumbleupon_share_icon', true) ): ?>
-			<a href="http://www.stumbleupon.com/submit?url=<?php echo $post_permalink; ?>&amp;title=<?php echo $post_title; ?>" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Stumble it', 'hypermarket'); ?>">
+			<a href="http://www.stumbleupon.com/submit?url=<?php echo $post_permalink; ?>&amp;title=<?php echo urlencode(html_entity_decode($post_title, ENT_COMPAT, 'UTF-8')); ?>" class="hypermarket-share-icon" target="_blank" data-toggle="tooltip" data-placement="top" title="<?php _e('Stumble it', 'hypermarket'); ?>">
 				<i class="hypermarket-icon hypermarket-stumbleupon-solid"></i>
 			</a>
 		<?php endif; ?>
