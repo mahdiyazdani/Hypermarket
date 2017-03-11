@@ -366,6 +366,12 @@ kbd {
   @include padding(0 30px);
 }
 
+// Container Full
+.bs3-grid-builder-container.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
 // WordPress core classes
 .wp-caption {
   background: $body-bg;
@@ -404,12 +410,12 @@ a img.aligncenter {
 .sticky:not(.post) {
   position: fixed;
 }
-.gallery { 
+.gallery:not(.grid-item) { 
   overflow: hidden;
   position: relative;
   @include margin(0 auto 18px auto); 
 }
-.gallery .gallery-item {
+.gallery:not(.grid-item) .gallery-item {
   float: left;
   text-align: center;
   width: 33%;
@@ -418,7 +424,7 @@ a img.aligncenter {
 }
 .gallery-columns-2 .gallery-item { width: 50%; }
 .gallery-columns-4 .gallery-item { width: 25%; }
-.gallery img {
+.gallery:not(.grid-item) img {
   box-shadow: 0px 0px 4px $gray;
   border: 1px solid $body-bg;
   background: $brand-default;
@@ -426,7 +432,7 @@ a img.aligncenter {
   @include margin(0 auto);
   @include transition (all .3s ease 0s);
 }
-.gallery img:hover {  background: $gray-lighter; }
+.gallery:not(.grid-item) img:hover {  background: $gray-lighter; }
 .gallery-columns-2 .attachment-medium {
   max-width: 92%;
   height: auto;
@@ -435,10 +441,10 @@ a img.aligncenter {
   max-width: 84%;
   height: auto;
 }
-.gallery .gallery-caption {
+.gallery:not(.grid-item) .gallery-caption {
   color: $gray;
   font-size: 12px;
   @include margin(floor($line-height-computed / 2) 0 floor($line-height-computed / 2) 0);
 }
-.gallery dl, .gallery dt { @include margin(0); }
-.gallery br+br { display: none; }
+.gallery:not(.grid-item) dl, .gallery dt { @include margin(0); }
+.gallery:not(.grid-item) br+br { display: none; }
