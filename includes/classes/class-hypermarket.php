@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.3.1
+ * @since 	    1.0.4
  */
 if (!defined('ABSPATH')):
 	exit;
