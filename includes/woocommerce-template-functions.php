@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.2
+ * @since 	    1.0.4
  */
 // ======================================================================
 // Hooked into "wp"
@@ -341,6 +341,51 @@ if (!function_exists('hypermarket_shop_catalog_wrapper_end')):
 		if (hypermarket_is_woocommerce_activated()):
 			echo '</section><!-- .container -->' . PHP_EOL;
 		endif;
+	}
+endif;
+// ======================================================================
+// Hooked into "woocommerce_before_subcategory"
+// ======================================================================
+
+/**
+ * Add "category-link" class name to category link.
+ *
+ * @package Hooked into "woocommerce_before_subcategory"
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_loop_category_link_open')):
+	function hypermarket_loop_category_link_open( $category ) {
+		echo '<a href="' . get_term_link( $category, 'product_cat' ) . '" class="category-link">';
+	}
+endif;
+// ======================================================================
+// Hooked into "subcategory_archive_thumbnail_size"
+// ======================================================================
+
+/**
+ * Subcategory thumbnails size.
+ *
+ * @package Hooked into "subcategory_archive_thumbnail_size"
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_subcategory_archive_thumbnail_size')):
+	function hypermarket_subcategory_archive_thumbnail_size() {
+		return 'full';
+	}
+endif;
+// ======================================================================
+// Hooked into "woocommerce_shop_loop_subcategory_title"
+// ======================================================================
+
+/**
+ * Show the subcategory title in the product loop.
+ *
+ * @package Hooked into "woocommerce_shop_loop_subcategory_title"
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_template_loop_subcategory_title')):
+	function hypermarket_template_loop_subcategory_title($category) {
+		echo $category->name;
 	}
 endif;
 // ======================================================================
