@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.3
+ * @since       1.0.4
  */
 ;
 (function() {
@@ -61,10 +61,12 @@ jQuery(document).ready(function($) {
     var $emptyLink = $('a[href=#]');
     $emptyLink.on('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
     });
 
     // Page Transitions
     if($('.page-preloading').length) {
+        var transitionDelay = 550;
         $('a:not([href^="#"])').on('click', function(e) {
         if( $(this).hasClass('gallery-item') === false && 
             $(this).hasClass('ajax-post-link') === false && 
@@ -74,14 +76,19 @@ jQuery(document).ready(function($) {
             $(this).is('#cancel-comment-reply-link') === false && 
             $(this).hasClass('hypermarket-sl-button') === false && 
             $(this).hasClass('hypermarket-share-icon') === false &&
+            $(this).hasClass('comment-permalink') === false &&
             $(this).attr('target') !== '_blank') {
           e.preventDefault();
           var linkUrl = $(this).attr('href');
           $('.page-preloading').addClass('link-clicked');
+          if($('#hypermarket-geo-topbar').length > 0){
+            $('#hypermarket-geo-topbar').slideUp('slow');
+            transitionDelay = 850;
+          }
           setTimeout(function(){
             $('.page-preloading').removeClass('link-clicked');
             window.open(linkUrl , '_self');
-          }, 550);
+          }, transitionDelay);
         }
       });
     }
@@ -100,7 +107,8 @@ jQuery(document).ready(function($) {
         });
         $scrollTop.on('click', function(e) {
             e.preventDefault();
-            $('html').velocity("scroll", {
+            e.stopPropagation();
+            $('html').velocity('scroll', {
                 offset: 0,
                 duration: 1000,
                 easing: 'easeOutExpo',
@@ -113,15 +121,27 @@ jQuery(document).ready(function($) {
     // Smooth scroll to element
     //------------------------------------------------------------------------------
     var $scrollTo = $('.scroll-to');
-    $scrollTo.on('click', function(event) {
-        var $elemOffsetTop = $(this).data('offset-top');
-        $('html').velocity("scroll", {
-            offset: $(this.hash).offset().top - $elemOffsetTop,
+    $scrollTo.on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $commentID = '#',
+            $elemOffsetTop = '',
+            $targetElement = '';
+        // Check if comment permalink clicked?
+        if($(this).hasClass('comment-permalink')) {
+            $commentID += $(this).data('comment-id');
+            $elemOffsetTop = 0;
+            $targetElement = $commentID;
+        }else {
+            $elemOffsetTop = $(this).data('offset-top');
+            $targetElement = $(this.hash);
+        }
+        $($targetElement).velocity('scroll', {
+            offset: $elemOffsetTop,
             duration: 1000,
             easing: 'easeOutExpo',
             mobileHA: false
         });
-        event.preventDefault();
     });
 
 
