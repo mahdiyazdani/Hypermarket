@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.3
+ * @since 	    1.0.4
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.4
 		 */
 		public function __construct()
 
@@ -35,6 +35,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 			add_action('admin_enqueue_scripts', array(
 				$this,
 				'enqueue'
+			) , 10);
+			add_action('admin_notices', array(
+				$this,
+				'wc_installation_admin_notice'
+			) , 10);
+			add_action('admin_init', array(
+				$this,
+				'wc_ignore_installation_admin_notice'
 			) , 10);
 		}
 		/**
@@ -54,7 +62,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.4
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -116,7 +124,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 										<div id="support-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Support and Documentation', 'hypermarket'); ?></span></h2>
 											<div class="inside">
-												<p><?php esc_attr_e('Thanks so much for downloading and using the plugin and providing positive feedback(s). The WordPress community has helped us a lot to improve the Hypermarket theme and make it compatible with more websites and plugins.', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('Thanks so much for downloading and using the Hypermarket theme and providing positive feedback(s). The WordPress community has helped us a lot to improve the Hypermarket theme and make it compatible with more plugins and third-parties.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('To keep doing this well, we kindly request that you post discussions and feedback(s) in our dedicated forum whenever possible, rather than in the WordPress community forum. Doing so will allow us to leverage support team and tools to answer your questions as quickly as possible. ', 'hypermarket'); ?></p>
 												<h3><?php esc_attr_e('To post your issues in the forum, please navigate to:', 'hypermarket'); ?></h3>
 												<br />
@@ -208,7 +216,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 													<li><a href="<?php echo hypermarket_sanitize_url('https://material.io/icons'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Material Design Icons - Icon font for the web', 'hypermarket'); ?></em></small></a></li>
 													<li><a href="<?php echo hypermarket_sanitize_url('https://understrap.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4', 'hypermarket'); ?></em></small></a></li>
 													<li><a href="<?php echo hypermarket_sanitize_url('http://twittem.github.io/wp-bootstrap-navwalker'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WP Bootstrap Navwalker - A custom WordPress nav walker class', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://hofmannsven.com/2013/laboratory/wordpress-post-like-system'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Simple post like - A simple and efficient post like system for WordPress', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo hypermarket_sanitize_url('https://woocommerce.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WooCommerce - An open source eCommerce plugin for WordPress', 'hypermarket'); ?></em></small></a></li>
 													<li><a href="<?php echo hypermarket_sanitize_url('https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Skip link focus - Helps with accessibility for keyboard only users', 'hypermarket'); ?></em></small></a></li>
 													<li><a href="<?php echo hypermarket_sanitize_url('https://github.com/jonstipe/number-polyfill'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('HTML5 Number polyfill - A polyfill for implementing the HTML5 number element in browsers that do not currently support it', 'hypermarket'); ?></em></small></a></li>
 												</ul>
@@ -298,6 +306,50 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 			wp_enqueue_script('hypermarket-welcome-screen-scripts', get_template_directory_uri() . '/assets/admin/js/hypermarket-welcome-screen.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
+		}
+		/**
+		 * Check if WooCommerce activated/installed or not?
+		 *
+		 * @since 1.0.4
+		 */
+		public function wc_installation_admin_notice() 
+
+		{
+			global $pagenow;
+			global $current_user;
+	        $user_id = $current_user->ID;
+	        if (!hypermarket_is_woocommerce_activated() && !get_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore') && $pagenow == 'themes.php'): 
+	        	if(isset($_GET['page']) && $_GET['page'] === 'hypermarket-welcome-screen'):
+		        	?>
+		            <div class="notice notice-warning" style="position:relative;">
+		                <p><strong><?php _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
+		                <p><?php
+		                $install_woocommerce_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term'));
+		            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
+		                <a href="?hypermarket-install-woocommerce-ignore-notice&page=hypermarket-welcome-screen">
+		                    <button class="notice-dismiss">
+		                        <span class="screen-reader-text"><?php
+		                _e('Dismiss this notice.', 'hypermarket'); ?></span>
+		                    </button>
+		                </a>
+		            </div>
+		        <?php
+		        endif;
+	        endif;
+		}
+		/**
+		 * Ignore notice, if user already dismissed WooCommerce activation/installation notice.
+		 *
+		 * @since 1.0.4
+		 */
+		public function wc_ignore_installation_admin_notice() 
+
+		{
+			global $current_user;
+	        $user_id = $current_user->ID;
+	        if (isset($_GET['hypermarket-install-woocommerce-ignore-notice'])) :
+	            add_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore', 'true', true);
+	        endif;
 		}
 	}
 endif;
