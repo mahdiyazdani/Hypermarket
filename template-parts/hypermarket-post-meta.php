@@ -5,21 +5,26 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.3
+ * @since 		    1.0.4
  */
 ?>
 <div class="col-md-3 col-sm-4">
-	<div class="blog-post-meta">
-		<div class="column">
-			<span><?php _e('by', 'hypermarket'); ?> </span>
-			<?php the_author_posts_link(); ?>
-			<span class="divider"></span>
-			<?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . __(' ago', 'hypermarket'); ?>
-		</div><!-- .column -->
-		<div class="column">
-			<?php echo hypermarket_get_simple_likes_button( $post->ID ); ?>
-		</div><!-- .column -->
-	</div><!-- .blog-post-meta -->
+	<?php 
+		//Exclude publish date and author name from static pages.
+		if(get_post_type() === 'post'): 
+	?>
+		<div class="blog-post-meta">
+			<div class="column">
+				<span><?php _e('by', 'hypermarket'); ?> </span>
+				<?php the_author_posts_link(); ?>
+				<span class="divider"></span>
+				<?php the_date(get_option('date_format')); ?>
+			</div><!-- .column -->
+			<div class="column">
+				<?php echo hypermarket_get_simple_likes_button( $post->ID ); ?>
+			</div><!-- .column -->
+		</div><!-- .blog-post-meta -->
+	<?php endif; ?>
 	<h2 class="blog-post-title">
 		<a href="<?php the_permalink(); ?>" class="<?php echo apply_filters('hypermarket_post_title_cls', ''); ?>" target="_self" data-postid="<?php the_ID(); ?>"><?php the_title(); ?></a>
 		<?php 
