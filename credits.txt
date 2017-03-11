@@ -1,3 +1,60 @@
+While making Hypermarket theme, we used third-party plugins and resources, and want to thank their creators:
+
+Bourbon - A simple and lightweight mixin library for Sass
+The MIT License - Copyright © 2011-2017 thoughtbot, inc.
+https://github.com/thoughtbot/bourbon/blob/master/LICENSE.md
+
+jQuery - most popular feature-rich JavaScript library
+Copyright JS Foundation and other contributors, https://js.foundation/
+https://github.com/jquery/jquery/blob/master/LICENSE.txt
+
+Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser
+The MIT License
+https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+
+Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
+Copyright (c) 2011-2017 Twitter, Inc.
+Copyright (c) 2011-2017 The Bootstrap Authors
+https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
+
+Velocity.js - Accelerated JavaScript animation
+The MIT License - Copyright (c) 2014 Julian Shapiro
+https://github.com/julianshapiro/velocity/blob/master/LICENSE.md
+
+Smooth Scroll - An extension for smooth scrolling in Google Chrome
+The MIT License - Copyright (c) 2010-2016 Balazs Galambosi
+https://github.com/galambalazs/smoothscroll/blob/master/LICENSE
+
+Waves - Click effect inspired by Googles Material Design
+The MIT License - Copyright (c) 2014 Alfiana E. Sibuea
+https://github.com/fians/Waves/blob/master/LICENSE
+
+UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4
+The GPL version 2 or (at your option) any later version
+https://github.com/holger1411/understrap#license
+
+WP Bootstrap Navwalker - A custom WordPress nav walker class
+GNU GENERAL PUBLIC LICENSE
+https://github.com/twittem/wp-bootstrap-navwalker/blob/master/LICENSE.txt
+
+HTML5 Number polyfill - A polyfill for implementing the HTML5 number element in browsers that do not currently support it
+The MIT License - Copyright (c) 2011 Jonathan Stipe
+https://github.com/jonstipe/number-polyfill#license-mit
+
+WooCommerce - An open source eCommerce plugin for WordPress
+The GPL version 2 - Copyright 2015 by the contributors
+https://github.com/woocommerce/woocommerce/blob/master/license.txt
+
+Material Design Icons - Icon font for the web
+The Apache License
+https://github.com/google/material-design-icons/blob/master/LICENSE
+
+Work Sans Google Font-Family
+Open Font License - Wei Huang
+https://fonts.google.com/specimen/Work+Sans?selection.family=Work+Sans
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+
+
 **All images used on the demo site (https://demo.mypreview.one/hypermarket) are for demonstration purposes only and are NOT included in the download package due to licensing rights.**
 
 Product category
