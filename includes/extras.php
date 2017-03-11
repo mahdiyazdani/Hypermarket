@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.3
+ * @since       1.0.4
  */
 /**
  * Query WooCommerce activation.
@@ -18,49 +18,6 @@ if (!function_exists('hypermarket_is_woocommerce_activated')):
         return class_exists('woocommerce') ? true : false;
     }
 endif;
-/**
- * Check if WooCommerce activated/installed or not?
- *
- * @since 1.0.3
- */
-if (!function_exists('hypermarket_woocommerce_requirement_admin_notice')):
-    function hypermarket_woocommerce_requirement_admin_notice()
-    {
-        global $current_user;
-        $user_id = $current_user->ID;
-        if (!hypermarket_is_woocommerce_activated() && !get_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore')): ?>
-            <div class="notice notice-warning" style="position:relative;">
-                <p><strong><?php _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
-                <p><?php
-                $install_woocommerce_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term'));
-            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
-                <a href="?hypermarket-install-woocommerce-ignore-notice">
-                    <button class="notice-dismiss">
-                        <span class="screen-reader-text"><?php
-                _e('Dismiss this notice.', 'hypermarket'); ?></span>
-                    </button>
-                </a>
-            </div>
-        <?php
-        endif;
-    }
-endif;
-add_action('admin_notices', 'hypermarket_woocommerce_requirement_admin_notice');
-/**
- * Ignore notice, if user already dismissed WooCommerce activation/installation notice.
- *
- * @since 1.0.3
- */
-if (!function_exists('hypermarket_woocommerce_requirement_admin_notice_ignore')):
-    function hypermarket_woocommerce_requirement_admin_notice_ignore() {
-        global $current_user;
-        $user_id = $current_user->ID;
-        if (isset($_GET['hypermarket-install-woocommerce-ignore-notice'])) :
-            add_user_meta($user_id, 'hypermarket_install_woocommerce_notice_ignore', 'true', true);
-        endif;
-    }
-endif;
-add_action('admin_init', 'hypermarket_woocommerce_requirement_admin_notice_ignore');
 /**
  * Query Homepage template usage.
  *
@@ -179,7 +136,7 @@ endif;
 /**
  * Comments list template.
  *
- * @since 1.0
+ * @since 1.0.4
  */
 if (!function_exists('hypermarket_comments_list')):
     function hypermarket_comments_list($comment, $args, $depth)
@@ -197,7 +154,7 @@ if (!function_exists('hypermarket_comments_list')):
                     <p class="meta">
                         <strong itemprop="author"><?php
         echo (!empty(get_comment_author_url($comment))) ? '<a href="' . get_comment_author_url($comment) . '" class="hypermarket-link-style" target="_blank" rel="external nofollow">' . get_comment_author($comment) . '</a>' : get_comment_author($comment); ?></strong> – <?php
-        echo '<time datetime="' . get_comment_date('c') . '">' . get_comment_date() . '</time>'; ?>:
+        echo '<a href="' . get_comment_link($comment) . '" class="comment-permalink scroll-to" target="_self" data-comment-id="comment-' . get_comment_ID() . '"><time datetime="' . get_comment_date('c') . '">' . get_comment_date() . '</time></a>'; ?>:
                     </p><!-- .meta -->
                 </div><!-- .column -->
                 <div class="column">
@@ -220,5 +177,34 @@ if (!function_exists('hypermarket_comments_list')):
 ?>
             </div><!-- .comment-body -->
             <?php
+    }
+endif;
+/**
+ * Hypermarket Credits.
+ * Hypermarket theme comes as standard with a free download link mark. If you wish to remove this and update it with your text, you need to purchase Hypermarket Copyright Credit plugin.
+ * 
+ * @link https://wp.me/p8930x-c2
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_credits')):
+    function hypermarket_credits()
+    {
+        echo '<p class="copyright space-top"><span>' . apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date('Y')) . '</span>';
+        if( apply_filters( 'hypermarket_credit_link', true ) ):
+            // You `HAVE` to keep this credit link. We really do appreciate it ;)
+            printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url( HypermarketThemeURI ) . '" rel="author" target="_blank">' . HypermarketThemeName . '</a>');
+        endif;
+        echo '</p>' . PHP_EOL;
+    }
+endif;
+/**
+ * This "Back to top" link allows users to smoothly scroll back to the top of the pages.
+ * 
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_scroll_top')):
+    function hypermarket_scroll_top()
+    {
+        echo '<!-- Scroll To Top Button --><div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>' . PHP_EOL;
     }
 endif;
