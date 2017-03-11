@@ -4,7 +4,7 @@ Theme URI: 		https://www.mypreview.one/downloads/hypermarket
 Author: 		Mahdi Yazdani
 Author URI: 	https://www.mypreview.one
 Description: 	If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
-Version: 		1.0.3.1
+Version: 		1.0.4-RC
 License: 		GNU General Public License v2 or later
 License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: 	hypermarket
@@ -24,7 +24,7 @@ Resources:
 * Material Design Icons - Icon font for the web.
 * UnderStrap - Combines Automattic´s Underscores Starter Theme and Bootstrap 4.
 * WP Bootstrap Navwalker - A custom WordPress nav walker class.
-* Simple post like - A simple and efficient post like system for WordPress.
+* WooCommerce - An open source eCommerce plugin for WordPress.
 * Skip link focus - Helps with accessibility for keyboard only users.
 * HTML5 Number polyfill - A polyfill for implementing the HTML5 <input type="number"> element in browsers that do not currently support it.
 
