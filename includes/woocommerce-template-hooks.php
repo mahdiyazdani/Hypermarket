@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.2
+ * @since 	    1.0.4
  */
 /**
  * Items present in cart
@@ -69,6 +69,20 @@ add_action('woocommerce_after_shop_loop', 'hypermarket_shop_loop_wrapper_end', 5
 add_action('woocommerce_after_shop_loop', 'hypermarket_paging_navigation', 15);
 add_action('woocommerce_after_shop_loop', 'hypermarket_woocommerce_after_shop_loop', 20);
 add_action('woocommerce_sidebar', 'hypermarket_shop_catalog_wrapper_end', 15);
+/**
+ * Categories
+ *
+ * @see  hypermarket_loop_category_link_open()					 -> woocommerce-template-functions.php
+ * @see  hypermarket_subcategory_archive_thumbnail_size()		 -> woocommerce-template-functions.php
+ * @see  hypermarket_template_loop_subcategory_title()			 -> woocommerce-template-functions.php
+ * @since 1.0.4
+ */
+remove_action('woocommerce_before_subcategory', 'woocommerce_template_loop_category_link_open', 10);
+remove_action('woocommerce_shop_loop_subcategory_title', 'woocommerce_template_loop_category_title', 10);
+add_action('woocommerce_before_subcategory', 'hypermarket_loop_category_link_open', 10);
+add_filter('subcategory_archive_thumbnail_size', 'hypermarket_subcategory_archive_thumbnail_size', 10);
+add_action('woocommerce_shop_loop_subcategory_title', 'hypermarket_template_loop_subcategory_title', 10, 1);
+add_filter('woocommerce_subcategory_count_html', '__return_false', 10);
 /**
  * Single product
  *
