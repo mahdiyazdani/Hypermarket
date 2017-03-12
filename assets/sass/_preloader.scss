@@ -27,6 +27,9 @@
       .page-wrapper {
         @include opacity(0);
       }
+      p.demo_store {
+        @include opacity(0);
+      }
     }
   }
 }
