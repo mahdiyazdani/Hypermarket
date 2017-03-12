@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.3
+ * @since       1.0.4
  */
 if (!defined('ABSPATH')):
     exit;
@@ -33,10 +33,34 @@ if (!class_exists('Hypermarket_Customizer')):
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.0
+         * @since 1.0.4
          */
         function customize_register($wp_customize)
         {
+            $wp_customize->add_setting('hypermarket_mobile_blogname', array(
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'hypermarket_sanitize_text'
+            ));
+            $wp_customize->add_control('hypermarket_mobile_blogname', array(
+                'label' => __('Site Title', 'hypermarket') ,
+                'description' => __('Works on small screen devices only!', 'hypermarket') ,
+                'section' => 'title_tagline',
+                'type' => 'text',
+                'priority' => 10,
+                'settings' => 'hypermarket_mobile_blogname'
+            ));
+            $wp_customize->add_setting('hypermarket_toggle_tagline', array(
+                'default' => apply_filters('hypermarket_toggle_tagline_default', false),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'hypermarket_sanitize_checkbox'
+            ));
+            $wp_customize->add_control('hypermarket_toggle_tagline', array(
+                'label' => __('Display Site Tagline', 'hypermarket') ,
+                'section' => 'title_tagline',
+                'type' => 'checkbox',
+                'priority' => 20,
+                'settings' => 'hypermarket_toggle_tagline'
+            ));
             // Abort if selective refresh is not available.
             if (isset($wp_customize->selective_refresh)):
                 $wp_customize->get_setting('blogname')->transport = 'postMessage';
@@ -54,14 +78,15 @@ if (!class_exists('Hypermarket_Customizer')):
                         return bloginfo('name');
                     }
                 ));
-            endif;
-            $wp_customize->add_setting('hypermarket_mobile_blogname', array(
-                'default' => '[ H / M ]',
-                'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'hypermarket_sanitize_text'
-            ));
-            // Abort if selective refresh is not available.
-            if (isset($wp_customize->selective_refresh)):
+                $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+                $wp_customize->get_control('blogdescription')->priority = 15;
+                $wp_customize->selective_refresh->add_partial('blogdescription', array(
+                    'selector' => '#site-tagline-visible-desktop',
+                    'render_callback' => function ()
+                    {
+                        return bloginfo('description');
+                    }
+                ));
                 $wp_customize->get_setting('hypermarket_mobile_blogname')->transport = 'postMessage';
                 $wp_customize->selective_refresh->add_partial('hypermarket_mobile_blogname', array(
                     'selector' => '#site-logo-visible-mobile',
@@ -71,12 +96,6 @@ if (!class_exists('Hypermarket_Customizer')):
                     }
                 ));
             endif;
-            $wp_customize->add_control('hypermarket_mobile_blogname', array(
-                'label' => __('Site Title (<768px)', 'hypermarket') ,
-                'section' => 'title_tagline',
-                'type' => 'text',
-                'settings' => 'hypermarket_mobile_blogname'
-            ));
         }
     }
 endif;
