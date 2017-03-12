@@ -41,8 +41,8 @@ if ( is_user_logged_in() ) {
 	<div class="form-footer col-sm-12 form-element form-row">
 		<?php wp_nonce_field( 'woocommerce-login' ); ?>
 		<div class="rememberme">
-			<label for="rememberme" class="inline">
-				<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'hypermarket' ); ?>
+			<label for="rememberme" class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+				<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'hypermarket' ); ?>
 			</label>
 		</div><!-- .rememberme -->
 		<div class="form-submit">
