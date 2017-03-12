@@ -5,16 +5,16 @@
  * @package 		Hooked into "woocommerce_before_single_product_summary"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4
  */
 global $post, $product, $woocommerce;
 
 $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-$attachment_ids = $product->get_gallery_attachment_ids();
+$attachment_ids = $product->get_gallery_image_ids();
 if(! empty($post_thumbnail_id)):
 ?>
 <!-- Product Gallery -->
-<div class="images product-gallery">
+<div class="images product-gallery woocommerce-product-gallery__wrapper">
 	<!-- Preview -->
 	<ul class="product-gallery-preview">
 			<?php
@@ -28,8 +28,8 @@ if(! empty($post_thumbnail_id)):
 					'data-large-image-width'  => $full_size_image[1],
 					'data-large-image-height' => $full_size_image[2],
 				);
-				echo '<li id="preview01" class="current">';
-					echo wp_get_attachment_image( $post_thumbnail_id, 'shop_single', false, $attributes );
+				echo '<li id="preview01" data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="current woocommerce-product-gallery__image">';
+					echo get_the_post_thumbnail( $post->ID, 'shop_single', $attributes );
 				echo '</li>';
 				if(is_array($attachment_ids) && ! empty($attachment_ids)):
 					$counter = 2;
@@ -44,7 +44,7 @@ if(! empty($post_thumbnail_id)):
 							'data-large-image-width'  => $full_size_image[1],
 							'data-large-image-height' => $full_size_image[2],
 						);
-						echo '<li id="preview0' . $counter . '">';
+						echo '<li id="preview0' . $counter . '" data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image">';
 							echo wp_get_attachment_image( $attachment_id, 'shop_single', false, $attributes );
 						echo '</li>';
 						$counter++;
@@ -65,9 +65,9 @@ if(! empty($post_thumbnail_id)):
 				'data-large-image-width'  => $full_size_image[1],
 				'data-large-image-height' => $full_size_image[2],
 			);
-			echo '<li class="active">';
+			echo '<li data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="active woocommerce-product-gallery__image">';
 				echo '<a href="#preview01">';
-					echo wp_get_attachment_image( $post_thumbnail_id, 'shop_single', false, $attributes );
+					echo get_the_post_thumbnail( $post->ID, 'shop_single', $attributes );
 				echo '</a>';
 			echo '</li>';
 			if(is_array($attachment_ids) && ! empty($attachment_ids)):
@@ -83,7 +83,7 @@ if(! empty($post_thumbnail_id)):
 						'data-large-image-width'  => $full_size_image[1],
 						'data-large-image-height' => $full_size_image[2],
 					);
-					echo '<li>';
+					echo '<li data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image">';
 						echo '<a href="#preview0' . $counter . '">';
 							echo wp_get_attachment_image( $attachment_id, 'shop_thumbnail', false, $attributes );
 						echo '</a>';
