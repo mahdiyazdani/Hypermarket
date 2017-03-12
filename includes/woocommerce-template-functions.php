@@ -185,7 +185,7 @@ if (!function_exists('woocommerce_template_loop_product_title')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
-			echo '<h3 class="shop-item-title"><a href="' . get_permalink($product->ID) . '" target="_self">' . get_the_title() . '</a></h3><!-- .shop-item-title -->' . PHP_EOL;
+			echo '<h3 class="shop-item-title"><a href="' . get_permalink($product->get_id()) . '" target="_self">' . get_the_title() . '</a></h3><!-- .shop-item-title -->' . PHP_EOL;
 		endif;
 	}
 endif;
@@ -277,6 +277,20 @@ if (!function_exists('hypermarket_shop_bar_wrapper_end')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			echo '</div><!-- .shop-bar -->' . PHP_EOL;
+		endif;
+	}
+endif;
+/**
+ * Main shop wrapper start tag.
+ *
+ * @package Hooked into "woocommerce_before_shop_loop"
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_shop_product_subcategories')):
+	function hypermarket_shop_product_subcategories()
+	{
+		if (hypermarket_is_woocommerce_activated()):
+			woocommerce_product_subcategories();
 		endif;
 	}
 endif;
@@ -500,20 +514,6 @@ if (!function_exists('hypermarket_single_add_to_cart_wrapper_end')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			echo '</div><!-- .product-tools -->' . PHP_EOL;
-		endif;
-	}
-endif;
-/**
- * Product sharing.
- *
- * @package Hooked into "woocommerce_single_product_summary"
- * @since 1.0
- */
-if (!function_exists('woocommerce_template_single_sharing')):
-	function woocommerce_template_single_sharing()
-	{
-		if (hypermarket_is_woocommerce_activated()):
-			get_template_part('template-parts/hypermarket-post-sharing');
 		endif;
 	}
 endif;
