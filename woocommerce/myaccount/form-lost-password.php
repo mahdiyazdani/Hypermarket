@@ -19,11 +19,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+?>
 
-wc_print_notices(); ?>
+<div class="col-xs-12 space-bottom">
+	<?php wc_print_notices(); ?>
+</div>
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
-	<p class="col-sm-12"><?php echo apply_filters( 'woocommerce_lost_password_message', __( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'hypermarket' ) ); ?></p>
+	<p class="col-sm-12 reset-password-notice"><?php echo apply_filters( 'woocommerce_lost_password_message', __( 'Enter your username or email address. You will receive a link to create a new password via email.', 'hypermarket' ) ); ?></p>
 	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row col-sm-6 form-element form-row-first">
 		<label for="user_login" class="sr-only"><?php _e( 'Username or email', 'hypermarket' ); ?></label>
 		<input class="woocommerce-Input woocommerce-Input--text form-control input-text" type="text" name="user_login" id="user_login" placeholder="<?php _e( 'Username or email*', 'hypermarket' ); ?>" />
