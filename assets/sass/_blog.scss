@@ -16,6 +16,11 @@
     &:last-child {
       text-align: right;
       @include margin(null 0 null null);
+      & i {
+        border: none;
+        @include square(auto);
+        @include padding(0);
+      }
     }
   }
   a:not(.read-more) {
@@ -61,14 +66,6 @@ small.sticky-badge {
   font-size: floor(($font-size-base * 0.75)) - 1;
 }
 
-// Post Share
-.post-share {
-  font-size: $product-meta-font-size;
-  .social-bar {
-    display: inline-block;
-    margin: floor($line-height-computed / 2) 0;
-  }
-}
 // Author posts
 .author-posts {
   list-style-type: square;
