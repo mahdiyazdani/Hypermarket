@@ -142,7 +142,7 @@ if (!class_exists('Hypermarket')):
 			 * Enable support for site logo
 			 */
 			add_theme_support('custom-logo', array(
-				'height' => 30,
+				'height' => 80,
 				'width' => 310,
 				'flex-width' => true,
 				'flex-height' => true
@@ -199,7 +199,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.3.1
+		 * @since 1.0.4
 		 */
 		public function enqueue()
 
@@ -221,10 +221,7 @@ if (!class_exists('Hypermarket')):
 			wp_localize_script('hypermarket-theme-scripts', 'hypermarket_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'security' => wp_create_nonce( 'hypermarket_theme_nonce' ),
-				'popular' => __('Popular', 'hypermarket') ,
-				'like' => __('Like', 'hypermarket') ,
-				'unlike' => __('Unlike', 'hypermarket') ,
-				'loading' => __('...', 'hypermarket')
+				'popular' => __('Popular', 'hypermarket')
 			));
 			wp_enqueue_script('hypermarket-theme-scripts');
 			if (is_singular() && comments_open() && get_option('thread_comments')):
