@@ -39,7 +39,6 @@ global $wp_query;
 	<?php if(is_array($page_numbers)): ?>
 		<div class="pager">
 			<?php
-				wp_link_pages('echo=false');
 				if(! empty(get_previous_posts_link())):
 					previous_posts_link(__('Prev', 'hypermarket'));
 				else:
