@@ -151,6 +151,10 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<p><?php esc_attr_e('MO files just compiled exports from the PO files and used by WordPress to get the conversion of each string to translate the theme. If you try to open a MO file with a regular text editor, you will not understand anything of its content.', 'hypermarket'); ?></p>
 												<p><a href="<?php echo hypermarket_sanitize_url('https://docs.mypreview.one/how-to-translate-hypermarket-theme-into-any-language/'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('How to translate Hypermarket theme with Poedit?', 'hypermarket'); ?></a></p>
 												<br />
+												<h3><?php esc_attr_e('WPML & Translation Ready', 'hypermarket'); ?></h3>
+												<p><?php esc_attr_e('Hypermarket theme is fully compatible and tested with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with WPML!', 'hypermarket'); ?></p>
+												<p><a href="<?php echo hypermarket_sanitize_url('https://wpml.org/theme/hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('WPML Certification', 'hypermarket'); ?></a></p>
+												<br />
 												<h3><?php esc_attr_e('Share your Language Files', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('In case you have already translated Hypermarket theme a lot of users would be thrilled if you share your translation files with the community.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('For translations of our Hypermarket theme just push the files to the main repository for all Hypermarket code, and we will include the translation files within your name and credit to the next release, so other people who speak your language can use it.', 'hypermarket'); ?></p>
