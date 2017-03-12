@@ -28,13 +28,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( ! WC()->cart->is_empty() ) : ?>
 
+		<?php do_action( 'woocommerce_before_mini_cart_contents' ); ?>
+
 		<?php
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 				$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
-					$product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
+					$product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
 					$thumbnail         = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 					$product_price     = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
@@ -54,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div><!-- .item-details -->
 						<?php
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-							'<a href="%s" class="close-btn remove" title="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons close"></i>
+							'<a href="%s" class="close-btn remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons close"></i>
 </a>',
 							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 							__( 'Remove this item', 'hypermarket' ),
@@ -67,6 +69,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 			}
 		?>
+
+		<?php do_action( 'woocommerce_mini_cart_contents' ); ?>
 
 	<?php else : ?>
 
@@ -86,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- .cart-subtotal -->
 	<div class="text-center">
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost button wc-forward"><?php _e( 'View Cart', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost waves-effect waves-light button wc-forward"><?php _e( 'View Cart', 'hypermarket' ); ?></a>
 		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-sm btn-primary waves-effect waves-light button checkout wc-forward"><?php _e( 'Checkout', 'hypermarket' ); ?></a>
 	</div><!-- .text-center -->
 
