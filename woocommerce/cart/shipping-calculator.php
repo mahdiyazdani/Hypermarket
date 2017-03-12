@@ -30,7 +30,7 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 
 <form class="woocommerce-shipping-calculator" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
-	<p><a href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'hypermarket' ); ?></a></p>
+	<p><a href="#!" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'hypermarket' ); ?></a></p>
 
 	<section class="shipping-calculator-form" style="display:none;">
 		<div id="calc_shipping_country_field" class="form-element form-select">
