@@ -36,7 +36,7 @@
         color: $pagination-link-active-color;
       }
     }
-    .current {
+    .current, &.post-pager {
       color: $pagination-link-active-color;
       cursor: default;
     }
