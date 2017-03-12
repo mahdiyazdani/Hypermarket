@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.1
+ * @since 	    1.0.4
  */
 /**
  * Before Header Area
@@ -70,23 +70,20 @@ add_action('hypermarket_after_single_page_content', 'hypermarket_after_single_pa
  *
  * @see  hypermarket_loop_posts_header_image()		 -> template-functions.php
  * @see  hypermarket_post_meta()					 -> template-functions.php
- * @see  hypermarket_process_simple_like()			 -> template-functions.php
  * @see  hypermarket_post_entry()					 -> template-functions.php
  * @see  hypermarket_paging_navigation()			 -> woocommerce-template-functions.php
- * @since 1.0
+ * @since 1.0.4
  */
 add_action('hypermarket_before_loop_posts', 'hypermarket_loop_posts_header_image', 10);
 add_action('hypermarket_loop_posts', 'hypermarket_post_meta', 10);
-add_action('wp_ajax_nopriv_hypermarket_process_simple_like', 'hypermarket_process_simple_like', 20);
-add_action('wp_ajax_hypermarket_process_simple_like', 'hypermarket_process_simple_like', 20);
 add_action('hypermarket_loop_posts', 'hypermarket_post_entry', 30);
 add_action('hypermarket_loop_posts_paging_navigation', 'hypermarket_paging_navigation', 10);
 /**
  * Single post
  *
  * @see  hypermarket_featured_image_background_single_page()		 -> template-functions.php
- * @see  hypermarket_post_sharing()									 -> template-functions.php
- * @since 1.0
+ * @see  hypermarket_single_post_paging()					  		 -> template-functions.php
+ * @since 1.0.4
  */
 add_action('hypermarket_featured_image_single_post', 'hypermarket_featured_image_background_single_page', 10);
-add_action('hypermarket_after_single_post_content', 'hypermarket_post_sharing', 20);
+add_action('hypermarket_end_single_post_content', 'hypermarket_single_post_paging', 10);
