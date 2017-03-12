@@ -22,7 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<?php wc_print_notices(); ?>
+<div class="col-xs-12 space-bottom">
+	<?php wc_print_notices(); ?>
+</div>
 
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 	
