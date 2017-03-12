@@ -105,6 +105,31 @@ if (!function_exists('hypermarket_sanitize_url')):
     }
 endif;
 /**
+ * Sanitize Checkbox
+ * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+ * as a boolean value, either TRUE or FALSE.
+ * 
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_sanitize_checkbox')):
+    function hypermarket_sanitize_checkbox($checked)
+    {
+        return ((isset($checked) && true == $checked) ? true : false);
+    }
+endif;
+/**
+ * Determines whether or not the current post is a paginated post.
+ * 
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_is_post_paginated')):
+    function hypermarket_is_post_paginated()
+    {
+        global $multipage;
+        return 0 !== $multipage;
+    }
+endif;
+/**
  * Returns true if a blog has more than 1 category.
  *
  * @since 1.0
