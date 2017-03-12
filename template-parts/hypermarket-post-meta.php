@@ -21,7 +21,16 @@
 				<?php the_date(get_option('date_format')); ?>
 			</div><!-- .column -->
 			<div class="column">
-				<?php echo hypermarket_get_simple_likes_button( $post->ID ); ?>
+				<?php
+					$is_comment_open = comments_open($post->ID);
+					$num_comments = get_comments_number();
+					if($is_comment_open || (!$is_comment_open && $num_comments >= 1)):
+				?>
+						<a href="<?php echo get_comments_link($post->ID); ?>" class="comments-link" target="_self">
+						<i class="material-icons comment"></i>
+							<?php echo ($num_comments >= 1) ? $num_comments : ''; ?>
+						</a><!-- .comments-link -->
+				<?php endif; ?>
 			</div><!-- .column -->
 		</div><!-- .blog-post-meta -->
 	<?php endif; ?>
