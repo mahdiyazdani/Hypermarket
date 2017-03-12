@@ -1,12 +1,19 @@
 = 1.0.4-RC =
 * Updated language file.
+* Added fluid post template.
 * Added license and attributions for all the resources(fonts, scripts, images) used in the theme.
 * Added custom style to WooCommerce subcategories.
 * Added comment permalink to comment date.
-* Added fluid post template.
+* Added display tagline checkbox to customizer.
+* Added WooCommerce 2.7.x (and above) compatibility.
+* Added sticky and custom style to site-wide store notice text.
+* Added support to split WordPress posts into multiple pages.
+* Fixed overlapping issue with long site title.
 * Fixed copyright shown issue if there is no footer widget.
 * Fixed hard-coded date format issue to follow and show the dates in the format selected by the user in Settings > General.
-* Removed date and author name from search result page.
+* Removed post and product sharing feature - Plugin territory restriction.
+* Removed post like feature - Plugin territory restriction.
+* Removed date and author name from static search result pages.
 * Removed WooCommerce installation notice globally and restricted to the theme welcome screen only.
 
 = 1.0.3.1 =
