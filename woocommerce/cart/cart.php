@@ -13,18 +13,16 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.3.8
+ * @version 2.7.0
  */
-if ( ! defined( 'ABSPATH' ) ):
-	exit; // Exit if accessed directly
-endif;
-global $woocommerce;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 wc_print_notices();
-do_action( 'woocommerce_before_cart' ); 
-?>
+do_action( 'woocommerce_before_cart' ); ?>
 <!-- Cart -->
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" class="col-sm-8 padding-bottom-2x">
-	<div class="shop_table shop_table_responsive cart">
+<form class="col-sm-8 padding-bottom-2x woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+	<div class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
 		<p class="text-sm">
 			<span class="text-gray">
 		    <?php 
@@ -52,42 +50,44 @@ do_action( 'woocommerce_before_cart' );
 								printf( '<a href="%s" class="item-thumb product-thumbnail">%s</a>', esc_url( $product_permalink ), $thumbnail );
 							endif;
 	              		?>
-	              		<div class="item-details">
-						<h3 class="item-title">
-							<?php
-								if ( ! $product_permalink ):
-									echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
-								else:
-									echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
-								endif;
-							?>
-						</h3>
-						<h4 class="item-price">
-							<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); ?>
-						</h4>
-						<?php
-							if ( $_product->is_sold_individually() ):
-								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
-							else:
-								$product_quantity = woocommerce_quantity_input( array(
-									'input_name'  => "cart[{$cart_item_key}][qty]",
-									'input_value' => $cart_item['quantity'],
-									'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-									'min_value'   => '0'
-								), $_product, false );
-							endif;
-							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
-						?>
-		          		</div>
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-								'<a href="%s" class="item-remove remove" data-toggle="tooltip" data-placement="top" title="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
-								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-								__( 'Remove', 'hypermarket' ),
-								esc_attr( $product_id ),
-								esc_attr( $_product->get_sku() )
-							), $cart_item_key );
-						?>
+		              		<div class="item-details">
+								<h3 class="item-title">
+									<?php
+										if ( ! $product_permalink ):
+											echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
+										else:
+											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
+										endif;
+									?>
+								</h3>
+								<h4 class="item-price">
+									<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); ?>
+								</h4>
+								<?php
+									if ( $_product->is_sold_individually() ):
+										$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
+									else:
+										$product_quantity = woocommerce_quantity_input( array(
+											'input_name'  => "cart[{$cart_item_key}][qty]",
+											'input_value' => $cart_item['quantity'],
+											'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
+											'min_value'   => '0',
+										), $_product, false );
+									endif;
+									echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
+								?>
+			          		</div>
+			          		<div class="product-remove">
+								<?php
+									echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+										'<a href="%s" class="item-remove remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
+										esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+											__( 'Remove this item', 'hypermarket' ),
+											esc_attr( $product_id ),
+											esc_attr( $_product->get_sku() )
+									), $cart_item_key );
+								?>
+							</div>
 						</div><!-- .item -->
 			<?php
 					endif;
