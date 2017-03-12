@@ -33,6 +33,7 @@ endif;
  * @see  hypermarket_woocommerce_before_shop_loop()				 -> woocommerce-template-functions.php
  * @see  hypermarket_shop_bar_wrapper_start()					 -> woocommerce-template-functions.php
  * @see  hypermarket_shop_bar_wrapper_end()						 -> woocommerce-template-functions.php
+ * @see  hypermarket_shop_product_subcategories()				 -> woocommerce-template-functions.php
  * @see  hypermarket_shop_loop_wrapper_start()					 -> woocommerce-template-functions.php
  * @see  hypermarket_shop_loop_wrapper_end()					 -> woocommerce-template-functions.php
  * @see  hypermarket_paging_navigation()						 -> woocommerce-template-functions.php
@@ -64,7 +65,8 @@ add_action('woocommerce_after_shop_loop_item', 'hypermarket_shop_item_details_wr
 add_action('woocommerce_before_shop_loop', 'hypermarket_woocommerce_before_shop_loop', 10);
 add_action('woocommerce_before_shop_loop', 'hypermarket_shop_bar_wrapper_start', 12);
 add_action('woocommerce_before_shop_loop', 'hypermarket_shop_bar_wrapper_end', 35);
-add_action('woocommerce_before_shop_loop', 'hypermarket_shop_loop_wrapper_start', 40);
+add_action('woocommerce_before_shop_loop', 'hypermarket_shop_product_subcategories', 40);
+add_action('woocommerce_before_shop_loop', 'hypermarket_shop_loop_wrapper_start', 50);
 add_action('woocommerce_after_shop_loop', 'hypermarket_shop_loop_wrapper_end', 5);
 add_action('woocommerce_after_shop_loop', 'hypermarket_paging_navigation', 15);
 add_action('woocommerce_after_shop_loop', 'hypermarket_woocommerce_after_shop_loop', 20);
