@@ -253,6 +253,7 @@ input[type="button"] {
   border: 2px solid $hr-border;
   border-bottom: 0;
   cursor: pointer;
+  z-index: 20;
   @include square($btn-height);
   @include position(absolute, null 20px 0 null);
   @include transition (color .3s);
