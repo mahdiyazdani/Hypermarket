@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0
+ * @since 	    1.0.4
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0
+		 * @since 1.0.4
 		 */
 		public function __construct()
 
@@ -77,13 +77,14 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				$this,
 				'override_default_address_fields'
 			) , 10, 1);
-			if (defined('WC_VERSION') && version_compare(WC_VERSION, '2.5', '<'))
-			{
-				add_action('wp_footer', array(
-					$this,
-					'star_rating_script'
-				) , 10);
-			}
+			add_filter('woocommerce_billing_fields', array(
+				$this,
+				'override_default_billing_address_fields'
+			) , 10, 1);
+			add_filter('theme_page_templates', array(
+				$this,
+				'reenable_page_template_for_shop'
+			) , 11, 3);
 		}
 		/**
 		 * Using appropriate image dimensions to avoid pixellation.
@@ -140,27 +141,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				$classes[] = 'hypermarket-woocommerce-running';
 			endif;
 			return $classes;
-		}
-		/**
-		 * Star rating compatibility script for older versions of WooCommerce ( < 2.5 ).
-		 *
-		 * @since 1.0
-		 */
-		public function star_rating_script()
-
-		{
-			if (wp_script_is('jquery', 'done') && is_product()):
-?>
-			<script type="text/javascript">
-				jQuery( function( $ ) {
-					$( 'body' ).on( 'click', '#respond p.stars a', function() {
-						var $container = $( this ).closest( '.stars' );
-						$container.addClass( 'selected' );
-					});
-				});
-			</script>
-		<?php
-			endif;
 		}
 		/**
 		 * Related Products Args.
@@ -522,7 +502,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Customize shipping and billing fields in edit address page(s).
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.0
+		 * @since 1.0.4
 		 */
 		public function override_default_address_fields($fields)
 
@@ -541,22 +521,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['last_name']['placeholder'] = _x('Last name*', 'placeholder', 'hypermarket');
 			$fields['last_name']['class'] = array(
-				'col-sm-6 form-element'
-			);
-			// Email
-			$fields['email']['label_class'] = array(
-				'sr-only'
-			);
-			$fields['email']['placeholder'] = _x('Email*', 'placeholder', 'hypermarket');
-			$fields['email']['class'] = array(
-				'col-sm-6 form-element'
-			);
-			// Phone
-			$fields['phone']['label_class'] = array(
-				'sr-only'
-			);
-			$fields['phone']['placeholder'] = _x('Phone*', 'placeholder', 'hypermarket');
-			$fields['phone']['class'] = array(
 				'col-sm-6 form-element'
 			);
 			// Address 1
@@ -616,6 +580,49 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'col-sm-6 form-element'
 			);
 			return $fields;
+		}
+		/**
+		 * Customize billing fields in edit address page(s).
+		 * $fields is passed via the filter!
+		 *
+		 * @since 1.0.4
+		 */
+		public function override_default_billing_address_fields($fields)
+
+		{
+			// Email
+			$fields['billing_email']['label_class'] = array(
+				'sr-only'
+			);
+			$fields['billing_email']['placeholder'] = _x('Email*', 'placeholder', 'hypermarket');
+			$fields['billing_email']['required'] = true;
+			$fields['billing_email']['class'] = array(
+				'col-sm-6 form-element'
+			);
+			// Phone
+			$fields['billing_phone']['label_class'] = array(
+				'sr-only'
+			);
+			$fields['billing_phone']['placeholder'] = _x('Phone*', 'placeholder', 'hypermarket');
+			$fields['billing_email']['required'] = true;
+			$fields['billing_phone']['class'] = array(
+				'col-sm-6 form-element'
+			);
+			return $fields;
+		}
+		/**
+		 * Re-enable template selection for the Shop page
+		 *
+		 * @since 1.0.4
+		 */
+		public function reenable_page_template_for_shop($page_templates, $class, $post)
+
+		{
+			$shop_page_id = wc_get_page_id('shop');
+			if ($post && absint($shop_page_id) === absint($post->ID)):
+				$page_templates['page-templates/template-fluid.php'] = 'Fluid Template';
+			endif;
+			return $page_templates;
 		}
 	}
 endif;
