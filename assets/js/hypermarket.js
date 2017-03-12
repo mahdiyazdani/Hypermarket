@@ -77,6 +77,7 @@ jQuery(document).ready(function($) {
             $(this).hasClass('hypermarket-sl-button') === false && 
             $(this).hasClass('hypermarket-share-icon') === false &&
             $(this).hasClass('comment-permalink') === false &&
+            $(this).hasClass('remove') === false &&
             $(this).attr('target') !== '_blank') {
           e.preventDefault();
           var linkUrl = $(this).attr('href');
@@ -324,6 +325,12 @@ jQuery(document).ready(function($) {
 
         e.preventDefault();
     });
+    // Back to first thumbnail on variation change.
+    $('.variations select').click(function(){
+        if($('.product-gallery-thumblist li:first-child').hasClass('active') === false){
+            $('.product-gallery-thumblist li:first-child a').trigger('click');
+        }
+    });
 
 
     // Tooltips
@@ -383,61 +390,6 @@ jQuery(document).ready(function($) {
     if ($('.woocommerce-order-received .woocommerce').length > 0) {
         $('.woocommerce-order-received .woocommerce').addClass('col-sm-12');
     }
-
-
-    // Simple post like
-    // A simple and efficient post like system for WordPress.
-    // @link: https://github.com/JonMasterson/WordPress-Post-Like-System
-    //------------------------------------------------------------------------------
-    $(document).on('click', '.hypermarket-sl-button', function() {
-        var button = $(this),
-            post_id = button.attr('data-post-id'),
-            security = button.attr('data-nonce'),
-            iscomment = button.attr('data-iscomment'),
-            allbuttons;
-        if (iscomment === '1') { /* Comments can have same id */
-            allbuttons = $('.hypermarket-sl-comment-button-' + post_id);
-        } else {
-            allbuttons = $('.hypermarket-sl-button-' + post_id);
-        }
-        var loader = allbuttons.next('.hypermarket-sl-loader');
-        if (post_id !== '') {
-            $.ajaxSetup({cache:true});
-            $.ajax({
-                type: 'POST',
-                url: hypermarket_vars.ajaxurl,
-                timeout: 10000,
-                async: true,
-                cache: true,
-                data: {
-                    action: 'hypermarket_process_simple_like',
-                    post_id: post_id,
-                    nonce: security,
-                    is_comment: iscomment,
-                },
-                beforeSend: function() {
-                    loader.html('&nbsp;<span class="loader"><small><em>' + hypermarket_vars.loading + '</em></small></span>');
-                },
-                success: function(response) {
-                    var icon = response.icon;
-                    var count = response.count;
-                    allbuttons.html(icon + count);
-                    if (response.status === 'unliked') {
-                        var like_text = hypermarket_vars.like;
-                        allbuttons.prop('title', like_text);
-                        allbuttons.removeClass('liked');
-                    } else {
-                        var unlike_text = hypermarket_vars.unlike;
-                        allbuttons.prop('title', unlike_text);
-                        allbuttons.addClass('liked');
-                    }
-                    loader.empty();
-                }
-            });
-
-        }
-        return false;
-    });
 
 
     // Wrap iframe with responsive embed classes
