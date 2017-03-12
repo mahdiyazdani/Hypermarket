@@ -476,14 +476,6 @@
     margin-right: 0;
   }
 }
-// Product Share
-.product-share {
-  font-size: $product-meta-font-size;
-  .social-bar {
-    display: inline-block;
-    margin: floor($line-height-computed / 2) 0;
-  }
-}
 // Reviews
 .woocommerce-Reviews {
   ol.commentlist {
@@ -721,6 +713,7 @@ h1.page-title {
   zoom: inherit !important;
   display: block !important;
   position: relative !important;
+  height: 100% !important;
 }
 // Cart totals
 .cart-collaterals {
@@ -901,25 +894,50 @@ input#shipping_state,
 #order_comments,
 #account_username,
 #account_password,
-#account_password-2 {
+#account_password-2,
+.select2-search__field {
   @extend .form-control;
 }
 #billing_country_field, #billing_state_field, #shipping_country_field, #shipping_state_field {
   .select2-container {
-    .select2-choice {
-      line-height: $line-height-base + 1.6;
+    .select2-selection {
+      height: auto;
+      outline: none !important;
       font-size: $font-size-small;
       color: $gray-dark;
       border: $widget-divider;
       border-radius: $border-radius-base;
       background-color: $input-bg;
       @include padding(0 16px);
+      .select2-selection__rendered {
+        line-height: $line-height-base + 1.6;
+        @include padding(0);
+      }
+      .select2-selection__arrow {
+        @include position(absolute, 10px 10px null null);
+      }
     }
   }
 }
-.select2-drop-active {
+.select2-container--open .select2-dropdown--below {
   border: $widget-divider;
+  border-radius: $border-radius-base;
   border-top-color:transparent; 
+  background-color: $input-bg;
+}
+.select2-container--default {
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: $brand-primary;
+  }
+  .select2-search__field {
+    border: $widget-divider !important;
+    border-radius: $border-radius-base;
+    @include margin(0);
+    @include padding(0 16px);
+  }
+}
+.select2-results__option {
+  @include padding(0 16px);
 }
 .woocommerce-invalid {
   @extend .error;
@@ -959,6 +977,7 @@ input#shipping_state,
       @include padding(3px null null null);
     }
   }
+  .input-checkbox { top: 0; }
   .payment_box {
     > p {
       font-style: italic;
@@ -1013,7 +1032,7 @@ input#shipping_state,
 // My Account
 .account-orders-table, .woocommerce-MyAccount-downloads {
   @extend .table-striped;
-  .order-actions {
+  .woocommerce-orders-table__cell-order-actions {
     > a {
       @extend .btn;
       @extend .btn-sm;
@@ -1026,4 +1045,23 @@ input#shipping_state,
 // Search not found
 .woocommerce.search-no-results {
   & .sidebar-toggle {display: none;}
+}
+// WooCommerce global notice
+p.demo_store {
+  z-index: 10;
+  color: $body-bg;
+  text-align: center;
+  font-size: $font-size-small;
+  background-color: $brand-primary;
+  @include margin(0);
+  @include size(100%, auto);
+  @include position(fixed, null 0 0 0);
+  @include box-shadow(0 1px 1em rgba(0, 0, 0, .2));
+  @include padding(floor(($font-size-base * 0.75)) null);
+}
+// Reset password form
+.reset-password-notice {
+  font-style: italic;
+  font-size: $font-size-small - 3;
+  @include padding(null $table-cell-padding);
 }
