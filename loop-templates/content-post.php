@@ -27,6 +27,15 @@ do_action('hypermarket_featured_image_single_post');
 					<div class="col-sm-12">
 						<?php do_action('hypermarket_before_single_post_content'); ?>
 						<?php the_content(); ?>
+						<?php
+							/**
+							 * Functions hooked into "hypermarket_end_single_post_content" action
+							 *
+							 * @hooked hypermarket_single_post_paging     - 10
+							 * @since 1.0.4
+							 */
+							do_action('hypermarket_end_single_post_content');
+						?>
 						<hr>
 						<div class="blog-post-meta">
 							<div class="column">
@@ -45,18 +54,19 @@ do_action('hypermarket_featured_image_single_post');
 								<?php endif; ?>
 							</div><!-- .column -->
 							<div class="column">
-								<?php echo hypermarket_get_simple_likes_button( $post->ID ); ?>
+								<?php
+									$is_comment_open = comments_open($post->ID);
+									$num_comments = get_comments_number();
+									if($is_comment_open || (!$is_comment_open && $num_comments >= 1)):
+								?>
+										<a href="#comments" class="single-comments-link scroll-to" target="_self">
+										<i class="material-icons comment"></i>
+											<?php echo ($num_comments >= 1) ? $num_comments : ''; ?>
+										</a><!-- .single-comments-link -->
+								<?php endif; ?>
 							</div><!-- .column -->
 						</div><!-- .blog-post-meta -->
-						<?php 
-							/**
-							 * Functions hooked into "hypermarket_after_single_post_content" action
-							 *
-							 * @hooked hypermarket_post_sharing        - 20
-							 * @since 1.0
-							 */
-							do_action('hypermarket_after_single_post_content'); 
-						?>
+						<?php do_action('hypermarket_after_single_post_content'); ?>
   					</div><!-- .col-sm-12 -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 		<?php 
