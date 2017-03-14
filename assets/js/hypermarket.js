@@ -403,6 +403,16 @@ jQuery(document).ready(function($) {
         $('#comments .form-submit').before($('#comments .col-sm-12').get(0));
         $('#comments .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
     }
+    
+
+    // Make the height of all selected products and subcategories exactly equal
+    //------------------------------------------------------------------------------
+    if($('.product-category').length > 0){
+        $('.product-category').matchHeight();
+    }
+    if($('.type-product').length > 0) {
+        $('.type-product').matchHeight();
+    }
 
 
     // Compatibility with BS3 Grid Builder
@@ -420,16 +430,6 @@ jQuery(document).ready(function($) {
     ////------------------------------------------------------------------------------
     if ($('.single-post article .bs3-grid-builder-container').length > 0) {
         $('article > hr, article .blog-post-meta, article .post-share').wrap('<div class="col-sm-12"></div>');
-    }
-
-
-    // Make the height of all selected products and subcategories exactly equal
-    //------------------------------------------------------------------------------
-    if($('.product-category').length > 0){
-        $('.product-category').matchHeight();
-    }
-    if($('.type-product').length > 0) {
-        $('.type-product').matchHeight();
     }
 
 
