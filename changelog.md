@@ -1,13 +1,13 @@
-= 1.0.4-RC =
+= 1.0.4 =
 * Updated language file.
 * Added fluid post template.
-* Added license and attributions for all the resources(fonts, scripts, images) used in the theme.
 * Added custom style to WooCommerce subcategories.
 * Added comment permalink to comment date.
 * Added display tagline checkbox to customizer.
-* Added WooCommerce 2.7.x (and above) compatibility.
-* Added sticky and custom style to site-wide store notice text.
+* Added custom style to site-wide store notice text.
 * Added support to split WordPress posts into multiple pages.
+* Added license and attributions for all the resources(fonts, scripts, images) used in the theme.
+* Added match height JS library to make height of all selected products and subcategories exactly equal.
 * Fixed overlapping issue with long site title.
 * Fixed copyright shown issue if there is no footer widget.
 * Fixed hard-coded date format issue to follow and show the dates in the format selected by the user in Settings > General.
