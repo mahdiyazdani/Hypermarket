@@ -184,27 +184,21 @@
   @include clearfix;
   &:before {
     float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
+    @include position(absolute, 0 null null 0);
     content: "\e83a\e83a\e83a\e83a\e83a";
   }
   & span {
     overflow: hidden;
     float: left;
-    top: 0;
-    left: 0;
-    position: absolute;
     padding-top: 1.5em;
+    @include position(absolute, 0 null null 0);
     > strong {
       @extend .sr-only;
     }
     &:before {
-      top: 0;
-      left: 0;
       color: $brand-warning;
-      position: absolute;
       content: "\e838\e838\e838\e838\e838";
+      @include position(absolute, 0 null null 0);
     }
   }
 }
@@ -283,7 +277,7 @@
   position: relative;
   width: 100%;
   max-width: $product-gallery-preview-max-width;
-  margin: auto;
+  @include margin(auto);
 
   // Preview
   .product-gallery-preview {
@@ -291,7 +285,7 @@
     position: relative;
     width: 100%;
     list-style: none;
-    padding: 0;
+    @include padding(0);
     > li {
       display: block;
       position: absolute;
@@ -335,13 +329,11 @@
 }
 @media screen and (max-width: 1100px) {
   .product-gallery .product-gallery-thumblist {
-    position: relative;
     width: 100%;
-    top: auto;
-    right: auto;
-    padding-top: $line-height-computed;
     text-align: center;
-    margin-bottom: 0;
+    @include margin(null null 0 null);
+    @include position(relative, auto auto null null);
+    @include padding($line-height-computed null null null);
     @include transform(none);
     > li {
       display: inline-block;
@@ -405,7 +397,8 @@
   .woocommerce-product-rating {
     margin-right: 0;
     .star-rating { 
-      line-height: 2;
+      line-height: 1.7;
+      font-size: 1em;
       @include position(relative, auto auto null null);
       & span {
         height: 100%;
@@ -429,16 +422,14 @@
     .product-sku,
     .product-category,
     .product-rating {
-      margin-left: 16px;
-      margin-right: 0;
+      @include margin(null 0 null 16px);
     }
   }
 }
 
 // Product Tools
 .product-tools {
-  margin-top: floor($line-height-computed / 4);
-  margin-bottom: floor($line-height-computed / 2);
+  @include margin(floor($line-height-computed / 4) null floor($line-height-computed / 2) null);
   .variations, .count-input, .single_add_to_cart_button {
     display: inline-block;
     @include margin(12px 12px 12px 0);
@@ -472,8 +463,7 @@
 .text-right {
   .product-tools > *,
   &.product-tools > * {
-    margin-left: 12px;
-    margin-right: 0;
+    @include margin(null 0 null 12px);
   }
 }
 // Reviews
@@ -487,7 +477,7 @@
   }
 }
 .review-respond .tile form h3 {
-  margin-bottom: $line-height-computed;
+  @include margin(null null $line-height-computed null);
 }
 .review {
   display: table;
@@ -515,7 +505,7 @@
   .review-meta {
     display: table;
     width: 100%;
-    margin-bottom: 12px;
+    @include margin(null null 12px null);
     .column {
       display: table-cell;
       vertical-align: top;
@@ -526,15 +516,14 @@
           color: $quote-author-font-color;
           font-weight: normal;
           font-style: normal;
-          margin-top: floor($line-height-computed / 2.5);
+          @include margin(floor($line-height-computed / 2.5) null null null);
           &:before {
             display: inline-block;
             vertical-align: middle;
             content: "";
-            width: 20px;
-            height: 1px;
             background-color: $quote-author-font-color;
-            margin-right: 9px;
+            @include size(20px, 1px);
+            @include margin(null 9px null null);
           }
         }
       }
@@ -595,9 +584,9 @@
 		position: relative;
 		display: table;
 		width: 100%;
-		padding: 0 45px 30px 0;
 		border-bottom: 2px solid $hr-border;
-		margin-bottom: 30px;
+    @include margin(null null 30px null);
+    @include padding(0 45px 30px 0);
 		.item-thumb,
 		.item-details {
 			display: table-cell;
@@ -611,7 +600,7 @@
 		.item-title {
 			font-size: $shopping-cart-item-title-size;
 			font-weight: normal;
-			margin-bottom: floor($line-height-computed / 2);
+			@include margin(null null floor($line-height-computed / 2) null);
 			> a {
 				color: $nav-link-color;
 				text-decoration: none;
@@ -628,17 +617,14 @@
 		}
 		.item-remove {
 			display: block;
-			position: absolute;
-			width: $btn-sm-height;
-			height: $btn-sm-height;
-			top: 0;
-			right: 0;
 			font-size: $shopping-cart-icon-size;
 			color: $nav-link-color;
 			text-align: center;
 			text-decoration: none;
 			border: 2px solid $hr-border;
 			border-radius: $border-radius-small;
+      @include square($btn-sm-height);
+      @include position(absolute, 0 null 0 null);
 			> i {
 				line-height: $btn-sm-height - 3;
 			}
@@ -648,10 +634,10 @@
 	.btn { margin-top: 0; }
 	@media #{$mobile-land} {
 		.item {
-			padding-bottom: 20px;
+			@include padding(null null 20px null);
 			.item-thumb,
 			.item-details { display: block; }
-			.item-thumb { margin-bottom: 20px; }
+			.item-thumb { @include margin(null null 20px null); }
 		}
 	}
 }
@@ -742,8 +728,7 @@ h1.page-title {
     @include padding(null $table-cell-padding);
   }
   .cart-empty, .return-to-shop {
-    padding-left: $table-cell-padding;
-    padding-right: $table-cell-padding;
+    @include padding(null $table-cell-padding);
   }
   .cart-dropdown {
     display: none !important;
@@ -768,6 +753,7 @@ h1.page-title {
       @include padding(null $table-cell-padding);
     }
   }
+  #order_comments { resize: none; }
 }
 .woocommerce-checkout-review-order-table {
   thead {
