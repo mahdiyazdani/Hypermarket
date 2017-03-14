@@ -443,11 +443,17 @@
     .label {
       display: none;
     }
-    select {
-      @extend .form-control;
-      @extend .form-control-sm;
-      @extend .color-select;
-      @include margin(0);
+    .form-select {
+      &:before {
+        right: 10px;
+      }
+      select {
+        @extend .form-control;
+        @extend .form-control-sm;
+        @extend .color-select;
+        @include margin(0);
+        @include padding(null 33px null null);
+      }
     }
     .reset_variations {
       display: none !important;
@@ -924,6 +930,21 @@ input#shipping_state,
 }
 .select2-results__option {
   @include padding(0 16px);
+}
+.select2-container {
+  .select2-choice {
+    line-height: $line-height-base + 1.6;
+    font-size: $font-size-small;
+    color: $gray-dark;
+    border: $widget-divider;
+    border-radius: $border-radius-base;
+    background-color: $input-bg;
+    @include padding(0 16px);
+  }
+}
+.select2-drop-active {
+  border: $widget-divider;
+  border-top-color:transparent; 
 }
 .woocommerce-invalid {
   @extend .error;
