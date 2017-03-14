@@ -36,7 +36,9 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				$this,
 				'body_class'
 			) , 10);
-			add_filter('woocommerce_enqueue_styles', '__return_empty_array', 10);
+			add_filter('woocommerce_enqueue_styles', 
+				'__return_empty_array'
+			, 10);
 			add_filter('woocommerce_output_related_products_args', array(
 				$this,
 				'related_products_args'
@@ -501,7 +503,8 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Customize shipping and billing fields in edit address page(s).
 		 * $fields is passed via the filter!
-		 *
+		 * billing_email & billing_phone hooked into "woocommerce_billing_fields"
+		 * 
 		 * @since 1.0.4
 		 */
 		public function override_default_address_fields($fields)
