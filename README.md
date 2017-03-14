@@ -1,4 +1,4 @@
-# Hypermarket
+# Hypermarket [![Compatible with WPML](https://img.shields.io/badge/Compatible%20with-WPML-308fb0.svg)](https://wpml.org/theme/hypermarket/)
 If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
