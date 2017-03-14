@@ -356,7 +356,7 @@
   .form-control {
     @include border-color($widget-tags-border-color);
     &:focus {
-      @include border-color($input-focus-border-color);
+      @include border-color($input-focus-border-color !important);
     }
   }
   button[type='submit'] {
