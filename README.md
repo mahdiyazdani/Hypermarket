@@ -3,7 +3,7 @@ If you are looking for a stylish and elegant website template for your online st
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
-►► If you are not a developer, please use the [Offical theme post page] (https://www.mypreview.one/downloads/hypermarket/) on mypreview.one.
+►► If you are not a developer, please use the Offical theme post page on mypreview.one.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
