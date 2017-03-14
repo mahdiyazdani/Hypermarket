@@ -29,6 +29,10 @@ Waves - Click effect inspired by Googles Material Design
 The MIT License - Copyright (c) 2014 Alfiana E. Sibuea
 https://github.com/fians/Waves/blob/master/LICENSE
 
+matchHeight - Responsive equal heights plugin
+The MIT License - Copyright (c) 2014 Liam Brummitt
+https://github.com/liabru/jquery-match-height/blob/master/LICENSE
+
 UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4
 The GPL version 2 or (at your option) any later version
 https://github.com/holger1411/understrap#license
