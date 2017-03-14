@@ -423,6 +423,16 @@ jQuery(document).ready(function($) {
     }
 
 
+    // Make the height of all selected products and subcategories exactly equal
+    //------------------------------------------------------------------------------
+    if($('.product-category').length > 0){
+        $('.product-category').matchHeight();
+    }
+    if($('.type-product').length > 0) {
+        $('.type-product').matchHeight();
+    }
+
+
 }); /*Document Ready End*/
 
 // Wrap iframe with responsive embed classes (Function)
