@@ -16,6 +16,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 	class Hypermarket_Welcome_Screen
 
 	{
+		private $admin_assets_url;
 		/**
 		 * Setup class.
 		 *
@@ -24,6 +25,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		public function __construct()
 
 		{
+			$this->admin_assets_url = esc_url(get_template_directory_uri() . '/assets/admin/');
 			add_action('admin_menu', array(
 				$this,
 				'register_welcome_menu'
@@ -153,7 +155,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<br />
 												<h3><?php esc_attr_e('WPML & Translation Ready', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('Hypermarket theme is fully compatible and tested with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with WPML!', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://wpml.org/theme/hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('WPML Certification', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo hypermarket_sanitize_url('https://wpml.org/theme/hypermarket'); ?>" target="_blank"><img src="<?php echo $this->admin_assets_url . 'img/hypermarket-wpml-certification-badge.jpg'; ?>" alt="<?php esc_attr_e('Hypermarket WPML Certification Badge', 'hypermarket'); ?>" width="210" height="210" /></a></p>
 												<br />
 												<h3><?php esc_attr_e('Share your Language Files', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('In case you have already translated Hypermarket theme a lot of users would be thrilled if you share your translation files with the community.', 'hypermarket'); ?></p>
@@ -303,12 +305,12 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.4
 		 */
 		public function enqueue()
 
 		{
-			wp_enqueue_script('hypermarket-welcome-screen-scripts', get_template_directory_uri() . '/assets/admin/js/hypermarket-welcome-screen.js', array(
+			wp_enqueue_script('hypermarket-welcome-screen-scripts', $this->admin_assets_url . 'js/hypermarket-welcome-screen.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
 		}
