@@ -1,7 +1,11 @@
 # Hypermarket
 If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
 
-If you are not a developer, please use the [Offical theme post page] (https://www.mypreview.one/downloads/hypermarket/) on mypreview.one.
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+►► If you are not a developer, please use the [Offical theme post page] (https://www.mypreview.one/downloads/hypermarket/) on mypreview.one.
+
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic.
 
