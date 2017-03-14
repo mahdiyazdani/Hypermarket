@@ -290,7 +290,13 @@ if (!function_exists('hypermarket_shop_product_subcategories')):
 	function hypermarket_shop_product_subcategories()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			woocommerce_product_subcategories();
+			$args = apply_filters('hypermarket_shop_product_subcategories_args', array(
+				'before' => '<div class="hypermarket-category-wrapper row padding-top padding-bottom-3x">',
+				'after' => '</div><!-- .hypermarket-category-wrapper -->',
+				'force_display' => true
+			));
+			woocommerce_product_subcategories($args);
+			woocommerce_reset_loop();
 		endif;
 	}
 endif;
@@ -368,8 +374,9 @@ endif;
  * @since 1.0.4
  */
 if (!function_exists('hypermarket_loop_category_link_open')):
-	function hypermarket_loop_category_link_open( $category ) {
-		echo '<a href="' . get_term_link( $category, 'product_cat' ) . '" class="category-link">';
+	function hypermarket_loop_category_link_open($category)
+	{
+		echo '<a href="' . get_term_link($category, 'product_cat') . '" class="category-link">';
 	}
 endif;
 // ======================================================================
@@ -383,7 +390,8 @@ endif;
  * @since 1.0.4
  */
 if (!function_exists('hypermarket_subcategory_archive_thumbnail_size')):
-	function hypermarket_subcategory_archive_thumbnail_size() {
+	function hypermarket_subcategory_archive_thumbnail_size()
+	{
 		return 'full';
 	}
 endif;
@@ -398,7 +406,8 @@ endif;
  * @since 1.0.4
  */
 if (!function_exists('hypermarket_template_loop_subcategory_title')):
-	function hypermarket_template_loop_subcategory_title($category) {
+	function hypermarket_template_loop_subcategory_title($category)
+	{
 		echo $category->name;
 	}
 endif;
