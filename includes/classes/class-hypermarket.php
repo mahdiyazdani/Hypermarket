@@ -16,14 +16,16 @@ if (!class_exists('Hypermarket')):
 	class Hypermarket
 
 	{
+		private $public_assets_url;
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.4
 		 */
 		public function __construct()
 
 		{
+			$this->public_assets_url = esc_url(get_template_directory_uri() . '/assets/');
 			add_action('after_setup_theme', array(
 				$this,
 				'setup'
@@ -131,13 +133,6 @@ if (!class_exists('Hypermarket')):
 				'gallery',
 				'caption',
 			));
-			/*
-			* Enable support for Post Formats.
-			* See http://codex.wordpress.org/Post_Formats
-			*/
-			add_theme_support('post-formats', array(
-				''
-			));
 			/**
 			 * Enable support for site logo
 			 */
@@ -208,13 +203,13 @@ if (!class_exists('Hypermarket')):
 				'family' => urlencode('Work Sans:400,300,500,600'),
 				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
-			wp_enqueue_style('hypermarket-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket-core.min.css', array() , HypermarketThemeVersion);
-			wp_enqueue_style('hypermarket-theme-styles', get_stylesheet_directory_uri() . '/assets/css/hypermarket.css', array() , HypermarketThemeVersion);
+			wp_enqueue_style('hypermarket-styles', $this->public_assets_url . 'css/hypermarket-core.min.css', array() , HypermarketThemeVersion);
+			wp_enqueue_style('hypermarket-theme-styles', $this->public_assets_url . 'css/hypermarket.css', array() , HypermarketThemeVersion);
 			wp_enqueue_script('jquery');
-			wp_enqueue_script('hypermarket-scripts', get_template_directory_uri() . '/assets/js/hypermarket-core.min.js', array(
+			wp_enqueue_script('hypermarket-scripts', $this->public_assets_url . 'js/hypermarket-core.min.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
-			wp_register_script('hypermarket-theme-scripts', get_template_directory_uri() . '/assets/js/hypermarket.js', array(
+			wp_register_script('hypermarket-theme-scripts', $this->public_assets_url . 'js/hypermarket.js', array(
 				'jquery',
 				'hypermarket-scripts'
 			) , HypermarketThemeVersion, true);
