@@ -128,3 +128,11 @@ add_action('woocommerce_after_cart', 'woocommerce_cross_sell_display', 10);
  * @since 1.0
  */
 add_action('woocommerce_review_order_before_submit', 'hypermarket_back_to_cart_btn_before_submit', 10);
+/**
+ * No Products Found
+ *
+ * @see  hypermarket_no_products_found()					 -> woocommerce-template-functions.php
+ * @since 1.0.4
+ */
+remove_action('woocommerce_no_products_found', 'wc_no_products_found', 10);
+add_action('woocommerce_no_products_found', 'hypermarket_no_products_found', 11);
