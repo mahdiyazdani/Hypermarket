@@ -24,7 +24,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		public function __construct()
 
 		{
-			add_filter('init', array(
+			add_action('after_switch_theme', array(
 				$this,
 				'image_dimensions'
 			) , 10);
@@ -154,7 +154,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		{
 			$args = apply_filters('hypermarket_related_products_args', array(
 				'posts_per_page' => 4,
-				'columns' => 4,
+				'columns' => 4
 			));
 			return $args;
 		}
@@ -181,12 +181,12 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Customize WooCommerce Products Search Form
 		 *
-		 * @since 1.0
+		 * @since 1.0.4
 		 */
 		public function custom_product_search_form($form)
 
 		{
-			$form = '<form method="get" id="searchform" action="' . esc_url(home_url('/')) . '" class="search-box">
+			$form = '<form method="get" id="searchform" action="' . hypermarket_sanitize_url(home_url('/')) . '" class="search-box">
 			<label class="screen-reader-text" for="s">' . __('Search for:', 'hypermarket') . '</label>
 			<input name="s" id="s" type="text" class="form-control" value="' . get_search_query() . '" required="required" placeholder="' . __('Search', 'hypermarket') . '" />
 			<input type="hidden" name="post_type" value="product" />
