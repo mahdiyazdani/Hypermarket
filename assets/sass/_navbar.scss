@@ -53,11 +53,12 @@
 .site-tagline {
 	color: $gray;
 	display: block;
+	max-width: 310px;
 	font-style: italic;
 	font-size: floor(($font-size-base * 0.7));
 	@include padding(0 0 9px 0);
 	@media #{$tablet-port} { 
-		&.visible-desktop { max-width: 310px; display: none; }
+		&.visible-desktop { display: none; }
 	}
 }
 
