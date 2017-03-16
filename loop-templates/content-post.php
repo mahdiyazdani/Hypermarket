@@ -57,7 +57,7 @@ do_action('hypermarket_featured_image_single_post');
 								<?php
 									$is_comment_open = comments_open($post->ID);
 									$num_comments = get_comments_number();
-									if($is_comment_open || (!$is_comment_open && $num_comments >= 1)):
+									if(($is_comment_open && post_password_required() === false) || (!$is_comment_open && $num_comments >= 1)):
 								?>
 										<a href="#comments" class="single-comments-link scroll-to" target="_self">
 										<i class="material-icons comment"></i>
