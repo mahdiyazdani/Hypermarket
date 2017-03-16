@@ -596,3 +596,21 @@ if (!function_exists('hypermarket_back_to_cart_btn_before_submit')):
 		endif;
 	}
 endif;
+// ======================================================================
+// Hooked into "woocommerce_no_products_found"
+// ======================================================================
+
+/**
+ * No products are found matching the current query.
+ *
+ * @package Hooked into "woocommerce_no_products_found"
+ * @since 1.0.4
+ */
+if (!function_exists('hypermarket_no_products_found')):
+	function hypermarket_no_products_found()
+	{
+		if (hypermarket_is_woocommerce_activated()):
+			get_template_part('template-parts/woocommerce/hypermarket-no-products-found');
+		endif;
+	}
+endif;
