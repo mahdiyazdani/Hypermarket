@@ -60,10 +60,28 @@
   }
 }
 
-//Sticky post
+// Sticky post
 small.sticky-badge {
   color: $gray;
   font-size: floor(($font-size-base * 0.75)) - 1;
+}
+
+// Single post
+.single-post {
+  article {
+    label {
+      font-size: $font-size-base;
+      input[type="password"] { 
+        @extend .form-control; 
+        @include margin(10px null null null); 
+      }
+    }
+    label + input[type="submit"] {
+      @extend .btn;
+      @extend .btn-primary;
+      @include margin(0);
+    }
+  }
 }
 
 // Author posts
