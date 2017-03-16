@@ -18,13 +18,13 @@
 				<span><?php _e('by', 'hypermarket'); ?> </span>
 				<?php the_author_posts_link(); ?>
 				<span class="divider"></span>
-				<?php the_date(get_option('date_format')); ?>
+				<?php echo get_the_date(get_option('date_format')); ?>
 			</div><!-- .column -->
 			<div class="column">
 				<?php
 					$is_comment_open = comments_open($post->ID);
 					$num_comments = get_comments_number();
-					if($is_comment_open || (!$is_comment_open && $num_comments >= 1)):
+					if(($is_comment_open && post_password_required() === false) || (!$is_comment_open && $num_comments >= 1)):
 				?>
 						<a href="<?php echo get_comments_link($post->ID); ?>" class="comments-link" target="_self">
 						<i class="material-icons comment"></i>
