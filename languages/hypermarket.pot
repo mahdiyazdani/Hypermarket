@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-03-15 01:18+0400\n"
-"PO-Revision-Date: 2017-03-15 01:18+0400\n"
+"POT-Creation-Date: 2017-03-16 04:19+0400\n"
+"PO-Revision-Date: 2017-03-16 04:19+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1017,13 +1017,19 @@ msgid "Skip to content"
 msgstr ""
 
 #: template-parts/woocommerce/hypermarket-best-sellers.php:13
-#: woocommerce/loop/no-products-found.php:35
+#: template-parts/woocommerce/hypermarket-no-products-found.php:24
 msgid "Best Sellers"
 msgstr ""
 
 #: template-parts/woocommerce/hypermarket-new-arrivals.php:13
-#: woocommerce/loop/no-products-found.php:54
+#: template-parts/woocommerce/hypermarket-no-products-found.php:43
 msgid "New Arrivals"
+msgstr ""
+
+#: template-parts/woocommerce/hypermarket-no-products-found.php:15
+msgid ""
+"It looks like no products were found matching your selection. Maybe try one "
+"of the links below or a search?"
 msgstr ""
 
 #: template-parts/woocommerce/hypermarket-shop-by-category.php:19
@@ -1178,12 +1184,6 @@ msgstr ""
 #: woocommerce/global/quantity-input.php:30
 msgctxt "Product quantity input tooltip"
 msgid "Qty"
-msgstr ""
-
-#: woocommerce/loop/no-products-found.php:26
-msgid ""
-"It looks like no products were found matching your selection. Maybe try one "
-"of the links below or a search?"
 msgstr ""
 
 #: woocommerce/loop/result-count.php:39
