@@ -46,6 +46,11 @@
     @include margin(0 8px);
   }
 }
+.bs3-grid-builder-container {
+  + .blog-post-meta {
+    margin-top: 0 !important;
+  }
+}
 
 // Post title
 .blog-post-title,
@@ -80,6 +85,11 @@ small.sticky-badge {
       @extend .btn;
       @extend .btn-primary;
       @include margin(0);
+    }
+    .bs3-grid-builder-container {
+      + .col-sm-12 {
+        > hr { @include margin(0 null null null); }
+      }
     }
   }
 }
