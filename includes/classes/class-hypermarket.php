@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4
+ * @since 	    1.0.4.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -78,7 +78,7 @@ if (!class_exists('Hypermarket')):
 		 * runs before the init hook. The init hook is too late for some features, such
 		 * as indicating support for post thumbnails.
 		 *
-		 * @since 1.0.3.1
+		 * @since 1.0.4.1
 		 */
 		public function setup()
 
@@ -131,7 +131,7 @@ if (!class_exists('Hypermarket')):
 				'comment-form',
 				'comment-list',
 				'gallery',
-				'caption',
+				'caption'
 			));
 			/**
 			 * Enable support for site logo
