@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.4.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -123,8 +123,8 @@ class Hypermarket_Social_Icons_Widget extends WP_Widget
         $icon_url_9 = empty($args['icon_url_9']) ? '' : esc_attr($args['icon_url_9']);
         // Display the fields
         echo '<p>' . PHP_EOL;
-        echo '<label for="' . $this->get_field_id('title') . '">' . __('Title:', 'hypermarket') . '</label>' . PHP_EOL;
-        echo '<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text"
+        echo '<label for="' . esc_attr($this->get_field_id('title')) . '">' . esc_html__('Title:', 'hypermarket') . '</label>' . PHP_EOL;
+        echo '<input class="widefat" id="' . esc_attr($this->get_field_id('title')) . '" name="' . esc_attr($this->get_field_name('title')) . '" type="text"
        value="' . esc_attr($title) . '" />' . PHP_EOL;
         echo '</p>' . PHP_EOL;
         for ($counter = 1; $counter <= 9; $counter++):
@@ -181,24 +181,24 @@ class Hypermarket_Social_Icons_Widget extends WP_Widget
             default:
                 break;
             endswitch;
-            echo '<select class="widefat" id="' . $this->get_field_id('icon_' . $counter) . '" name="' . $this->get_field_name('icon_' . $counter) . '" type="text">' . PHP_EOL;
-            echo '<option value="">.:: ' . __('Select', 'hypermarket') . ' ::.</option>' . PHP_EOL;
-            echo '<option value="facebook" ' . $facebook_selected . '>' . __('Facebook', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="google-plus" ' . $google_plus_selected . '>' . __('Google Plus', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="instagram" ' . $instagram_selected . '>' . __('Instagram', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="linkedin" ' . $linkedin_selected . '>' . __('Linkedin', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="pinterest" ' . $pinterest_selected . '>' . __('Pinterest', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="twitter" ' . $twitter_selected . '>' . __('Twitter', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="vimeo" ' . $vimeo_selected . '>' . __('Vimeo', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="wordpress" ' . $wordpress_selected . '>' . __('WordPress', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="youtube" ' . $youtube_selected . '>' . __('Youtube', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<select class="widefat" id="' . esc_attr($this->get_field_id('icon_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_' . $counter)) . '" type="text">' . PHP_EOL;
+            echo '<option value="">.:: ' . esc_html__('Select', 'hypermarket') . ' ::.</option>' . PHP_EOL;
+            echo '<option value="facebook" ' . $facebook_selected . '>' . esc_html__('Facebook', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="google-plus" ' . $google_plus_selected . '>' . esc_html__('Google Plus', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="instagram" ' . $instagram_selected . '>' . esc_html__('Instagram', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="linkedin" ' . $linkedin_selected . '>' . esc_html__('Linkedin', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="pinterest" ' . $pinterest_selected . '>' . esc_html__('Pinterest', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="twitter" ' . $twitter_selected . '>' . esc_html__('Twitter', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="vimeo" ' . $vimeo_selected . '>' . esc_html__('Vimeo', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="wordpress" ' . $wordpress_selected . '>' . esc_html__('WordPress', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="youtube" ' . $youtube_selected . '>' . esc_html__('Youtube', 'hypermarket') . '</option>' . PHP_EOL;
             echo '</select>' . PHP_EOL;
             echo '</p>' . PHP_EOL;
             echo '<p>' . PHP_EOL;
             echo '<label for="icon_url_' . $counter . '">' . PHP_EOL;
             printf(esc_attr__('Icon URL %1$s:', 'hypermarket') , $counter);
             echo '</label>' . PHP_EOL;
-            echo '<input class="widefat" id="' . $this->get_field_id('icon_url_' . $counter) . '" name="' . $this->get_field_name('icon_url_' . $counter) . '" type="text" value="' . esc_attr($args['icon_url_' . $counter]) . '" />' . PHP_EOL;
+            echo '<input class="widefat" id="' . esc_attr($this->get_field_id('icon_url_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_url_' . $counter)) . '" type="text" value="' . esc_attr($args['icon_url_' . $counter]) . '" />' . PHP_EOL;
             echo '</p>' . PHP_EOL;
         endfor;
     }
@@ -208,23 +208,23 @@ class Hypermarket_Social_Icons_Widget extends WP_Widget
         $instance = $old_instance;
         $instance['title'] = hypermarket_sanitize_text($new_instance['title']);
         $instance['icon_1'] = hypermarket_sanitize_text($new_instance['icon_1']);
-        $instance['icon_url_1'] = hypermarket_sanitize_url($new_instance['icon_url_1']);
+        $instance['icon_url_1'] = esc_url($new_instance['icon_url_1']);
         $instance['icon_2'] = hypermarket_sanitize_text($new_instance['icon_2']);
-        $instance['icon_url_2'] = hypermarket_sanitize_url($new_instance['icon_url_2']);
+        $instance['icon_url_2'] = esc_url($new_instance['icon_url_2']);
         $instance['icon_3'] = hypermarket_sanitize_text($new_instance['icon_3']);
-        $instance['icon_url_3'] = hypermarket_sanitize_url($new_instance['icon_url_3']);
+        $instance['icon_url_3'] = esc_url($new_instance['icon_url_3']);
         $instance['icon_4'] = hypermarket_sanitize_text($new_instance['icon_4']);
-        $instance['icon_url_4'] = hypermarket_sanitize_url($new_instance['icon_url_4']);
+        $instance['icon_url_4'] = esc_url($new_instance['icon_url_4']);
         $instance['icon_5'] = hypermarket_sanitize_text($new_instance['icon_5']);
-        $instance['icon_url_5'] = hypermarket_sanitize_url($new_instance['icon_url_5']);
+        $instance['icon_url_5'] = esc_url($new_instance['icon_url_5']);
         $instance['icon_6'] = hypermarket_sanitize_text($new_instance['icon_6']);
-        $instance['icon_url_6'] = hypermarket_sanitize_url($new_instance['icon_url_6']);
+        $instance['icon_url_6'] = esc_url($new_instance['icon_url_6']);
         $instance['icon_7'] = hypermarket_sanitize_text($new_instance['icon_7']);
-        $instance['icon_url_7'] = hypermarket_sanitize_url($new_instance['icon_url_7']);
+        $instance['icon_url_7'] = esc_url($new_instance['icon_url_7']);
         $instance['icon_8'] = hypermarket_sanitize_text($new_instance['icon_8']);
-        $instance['icon_url_8'] = hypermarket_sanitize_url($new_instance['icon_url_8']);
+        $instance['icon_url_8'] = esc_url($new_instance['icon_url_8']);
         $instance['icon_9'] = hypermarket_sanitize_text($new_instance['icon_9']);
-        $instance['icon_url_9'] = hypermarket_sanitize_url($new_instance['icon_url_9']);
+        $instance['icon_url_9'] = esc_url($new_instance['icon_url_9']);
         wp_cache_delete('hypermarket_payment_methods_icons_widget', 'widget');
         return $instance;
     }
