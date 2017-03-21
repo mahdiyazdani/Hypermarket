@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_homepage_template"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.3
+ * @since 		    1.0.4.1
  */
 $args = apply_filters('hypermarket_shop_by_category_args', array(
 	'parent'		=> 	0,
@@ -28,7 +28,7 @@ if(! empty($all_categories) ):
 	endif;
 ?>
 	<!-- Catalogs -->
-	<section id="hypermarket-catalog" class="container-fluid padding-top-half" aria-label="<?php echo $args['title']; ?>">
+	<section id="hypermarket-catalog" class="container-fluid padding-top-half" aria-label="<?php echo esc_attr($args['title']); ?>">
 		<div class="row">
 			<?php 
 				do_action('hypermarket_before_shop_by_category');
@@ -38,8 +38,8 @@ if(! empty($all_categories) ):
 					<a href="<?php echo esc_url( get_term_link($category->slug, 'product_cat') ); ?>" class="category-tile" target="_self">
 						<div class="inner">
 							<div class="column">
-								<h3 class="space-bottom-half"><?php echo $category->name; ?></h3>
-								<p class="text-sm text-gray"><?php echo $category->category_description; ?></p>
+								<h3 class="space-bottom-half"><?php echo esc_html($category->name); ?></h3>
+								<p class="text-sm text-gray"><?php echo esc_html($category->category_description); ?></p>
 							</div><!-- .column -->
 							<div class="column">
 								<div class="category-thumb">
