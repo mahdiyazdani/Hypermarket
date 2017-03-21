@@ -7,7 +7,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.4.1
  */
 
 /*
@@ -24,14 +24,32 @@ endif;
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-			printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;',
-				get_comments_number(), 'comments title', 'hypermarket' ),
-				number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				$comments_number = get_comments_number();
+				if ( 1 === $comments_number ):
+					printf(
+						/* translators: %s: post title */
+						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'hypermarket' ),
+						'<span>' . get_the_title() . '</span>'
+					);
+				else:
+					printf( // WPCS: XSS OK.
+						/* translators: 1: number of comments, 2: post title */
+						esc_html( _nx(
+							'%1$s thought on &ldquo;%2$s&rdquo;',
+							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							$comments_number,
+							'comments title',
+							'hypermarket'
+						) ),
+						number_format_i18n( $comments_number ),
+						'<span>' . get_the_title() . '</span>'
+					);
+				endif;
 			?>
 		</h3><!-- .comments-title -->
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-above">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'hypermarket' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_attr_e( 'Comment navigation', 'hypermarket' ); ?></h1>
 				<?php if ( get_previous_comments_link() ): ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'hypermarket' ) ); ?></div>
@@ -53,7 +71,7 @@ endif;
 		</ol><!-- .comment-list -->
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'hypermarket' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_attr_e( 'Comment navigation', 'hypermarket' ); ?></h1>
 				<?php if ( get_previous_comments_link() ): ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'hypermarket' ) ); ?></div>
@@ -71,7 +89,7 @@ endif;
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'hypermarket' ); ?></p>
+		<p class="no-comments"><?php esc_attr_e( 'Comments are closed.', 'hypermarket' ); ?></p>
 	<?php
 	endif;
 		$commenter = wp_get_current_commenter();
