@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class('container padding-top'); ?>>
+<div itemscope itemtype="<?php echo esc_attr(woocommerce_get_product_schema()); ?>" id="product-<?php the_ID(); ?>" <?php post_class('container padding-top'); ?>>
 
 	<?php
 		/**
