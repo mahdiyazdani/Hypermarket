@@ -5,7 +5,7 @@
  * @see 			https://codex.wordpress.org/Author_Templates
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4.1
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -58,7 +58,10 @@ $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name
 						<li>
 							<a rel="bookmark" href="<?php the_permalink() ?>" target="_self"><?php the_title(); ?></a>
 							<span class="divider"></span>
-							<?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . __(' ago', 'hypermarket'); ?>
+							<?php 
+								echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp'))); 
+								esc_html_e(' ago', 'hypermarket');
+							?>
 							<span class="divider"></span>
 							 <?php esc_html_e( 'in', 'hypermarket' ); ?> <?php the_category( '&' ); ?>
 						</li>
