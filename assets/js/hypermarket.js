@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4
+ * @since       1.0.4.1
  */
 ;
 (function() {
@@ -61,7 +61,6 @@ jQuery(document).ready(function($) {
     var $emptyLink = $('a[href=#]');
     $emptyLink.on('click', function(e) {
         e.preventDefault();
-        e.stopPropagation();
     });
 
     // Page Transitions
@@ -87,8 +86,8 @@ jQuery(document).ready(function($) {
             transitionDelay = 850;
           }
           setTimeout(function(){
-            $('.page-preloading').removeClass('link-clicked');
             window.open(linkUrl , '_self');
+            $('.page-preloading').removeClass('link-clicked');
           }, transitionDelay);
         }
       });
@@ -327,7 +326,7 @@ jQuery(document).ready(function($) {
     });
     // Back to first thumbnail on variation change.
     $('.variations select').click(function(){
-        if($('.product-gallery-thumblist li:first-child').hasClass('active') === false){
+        if($(this).val() !== '' && $('.product-gallery-thumblist li:first-child').hasClass('active') === false){
             $('.product-gallery-thumblist li:first-child a').trigger('click');
         }
     });
