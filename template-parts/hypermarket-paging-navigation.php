@@ -6,7 +6,7 @@
  * @package 		Hooked into "woocommerce_after_shop_loop"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4.1
  */
 global $wp_query;
 ?>
@@ -30,7 +30,18 @@ global $wp_query;
 			if (is_array($page_numbers)):
 				do_action('hypermarket_before_paging_navigation');
 				foreach($page_numbers as $page_number):
-					echo $page_number;
+					echo wp_kses($page_number, array(
+						'a' => array(
+							'id' => array() ,
+							'href' => array() ,
+							'title' => array() ,
+							'class' => array()
+						) ,
+						'span' => array(
+							'id' => array() ,
+							'class' => array()
+						)
+					));
 				endforeach;
 				do_action('hypermarket_after_paging_navigation');
 			endif;
@@ -40,17 +51,17 @@ global $wp_query;
 		<div class="pager">
 			<?php
 				if(! empty(get_previous_posts_link())):
-					previous_posts_link(__('Prev', 'hypermarket'));
+					previous_posts_link(esc_html__('Prev', 'hypermarket'));
 				else:
-					echo '<a href="#" class="current">' . __('Prev', 'hypermarket') . '</a>' . PHP_EOL;
+					echo '<a href="#" class="current">' . esc_html__('Prev', 'hypermarket') . '</a>' . PHP_EOL;
 				endif;
 			?>
 			<span>|</span>
 			<?php 
 				if(! empty(get_next_posts_link())):
-					next_posts_link(__('Next', 'hypermarket'));
+					next_posts_link(esc_html__('Next', 'hypermarket'));
 				else:
-					echo '<a href="#" class="current">' . __('Next', 'hypermarket') . '</a>' . PHP_EOL;
+					echo '<a href="#" class="current">' . esc_html__('Next', 'hypermarket') . '</a>' . PHP_EOL;
 				endif;
 			?>
 		</div><!-- .pager -->
