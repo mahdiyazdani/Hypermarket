@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4.1
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -19,7 +19,7 @@ do_action('hypermarket_before_loop_posts');
 <section class="container padding-top-3x">
 		<?php
 			echo '<h1 class="mobile-center">';
-				printf( __( 'Search Results for: %s', 'hypermarket' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Search Results for: %s', 'hypermarket' ), '<span>' . get_search_query() . '</span>' );
 			echo '</h1>';
 			while (have_posts()):
 				the_post();
