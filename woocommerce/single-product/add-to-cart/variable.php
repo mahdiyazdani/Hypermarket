@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'hypermarket' ); ?></p>
+		<p class="stock out-of-stock"><?php esc_html_e( 'This product is currently out of stock and unavailable.', 'hypermarket' ); ?></p>
 	<?php else : ?>
 		<table class="variations" cellspacing="0">
 			<tbody>

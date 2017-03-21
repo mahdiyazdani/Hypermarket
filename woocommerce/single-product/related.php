@@ -49,7 +49,7 @@ if ( $products->have_posts() ) : ?>
 	<!-- Related Products -->
 	<section class="container padding-top padding-bottom">
 		<hr>
-		<h3 class="padding-top"><?php _e( 'Related Products', 'hypermarket' ); ?></h3>
+		<h3 class="padding-top"><?php esc_html_e( 'Related Products', 'hypermarket' ); ?></h3>
 		<div class="row padding-top">
 			<?php 
 				woocommerce_product_loop_start();

@@ -27,38 +27,38 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 
 	<fieldset>
-		<legend><?php _e( 'Account Details', 'hypermarket' ); ?></legend>
+		<legend><?php esc_html_e( 'Account Details', 'hypermarket' ); ?></legend>
 		<div class="clearfix padding-bottom"></div>
 		<p class="woocommerce-FormRow woocommerce-FormRow--first col-sm-6 form-element form-row form-row-first">
-			<label for="account_first_name" class="sr-only"><?php _e( 'First name', 'hypermarket' ); ?> <span class="required">*</span></label>
-			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_first_name" id="account_first_name" placeholder="<?php _e( 'First name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->first_name ); ?>" />
+			<label for="account_first_name" class="sr-only"><?php esc_html_e( 'First name', 'hypermarket' ); ?> <span class="required">*</span></label>
+			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_first_name" id="account_first_name" placeholder="<?php esc_attr_e( 'First name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->first_name ); ?>" />
 		</p><!-- .col-sm-6 -->
 		<p class="woocommerce-FormRow woocommerce-FormRow--last col-sm-6 form-element form-row form-row-last">
-			<label for="account_last_name" class="sr-only"><?php _e( 'Last name', 'hypermarket' ); ?> <span class="required">*</span></label>
-			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_last_name" id="account_last_name" placeholder="<?php _e( 'Last name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->last_name ); ?>" />
+			<label for="account_last_name" class="sr-only"><?php esc_html_e( 'Last name', 'hypermarket' ); ?> <span class="required">*</span></label>
+			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_last_name" id="account_last_name" placeholder="<?php esc_attr_e( 'Last name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->last_name ); ?>" />
 		</p><!-- .col-sm-6 -->
 		<div class="clearfix"></div>
 		<p class="woocommerce-FormRow woocommerce-FormRow--wide col-sm-12 form-element form-row form-row-wide">
-			<label for="account_email" class="sr-only"><?php _e( 'Email address', 'hypermarket' ); ?> <span class="required">*</span></label>
-			<input type="email" class="woocommerce-Input woocommerce-Input--email form-control input-text" name="account_email" id="account_email" placeholder="<?php _e( 'Email address*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->user_email ); ?>" />
+			<label for="account_email" class="sr-only"><?php esc_html_e( 'Email address', 'hypermarket' ); ?> <span class="required">*</span></label>
+			<input type="email" class="woocommerce-Input woocommerce-Input--email form-control input-text" name="account_email" id="account_email" placeholder="<?php esc_attr_e( 'Email address*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->user_email ); ?>" />
 		</p><!-- .col-sm-12 -->
 	</fieldset>
 	<div class="clearfix"></div>
 	<fieldset class="space-top-2x space-bottom">
-		<legend><?php _e( 'Password Change', 'hypermarket' ); ?></legend>
+		<legend><?php esc_html_e( 'Password Change', 'hypermarket' ); ?></legend>
 		<div class="clearfix padding-bottom"></div>
 		<p class="woocommerce-FormRow woocommerce-FormRow--wide col-sm-12 form-element form-row form-row-wide">
-			<label for="password_current" class="sr-only"><?php _e( 'Current Password (leave blank to leave unchanged)', 'hypermarket' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_current" id="password_current" placeholder="<?php _e( 'Current Password (leave blank to leave unchanged)', 'hypermarket' ); ?>" />
+			<label for="password_current" class="sr-only"><?php esc_html_e( 'Current Password (leave blank to leave unchanged)', 'hypermarket' ); ?></label>
+			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_current" id="password_current" placeholder="<?php esc_attr_e( 'Current Password (leave blank to leave unchanged)', 'hypermarket' ); ?>" />
 		</p><!-- .col-sm-12 -->
 		<div class="clearfix"></div>
 		<p class="woocommerce-FormRow woocommerce-FormRow--wide col-sm-6 form-element form-row form-row-wide">
-			<label for="password_1" class="sr-only"><?php _e( 'New Password (leave blank to leave unchanged)', 'hypermarket' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_1" id="password_1" placeholder="<?php _e( 'New Password (leave blank to leave unchanged)', 'hypermarket' ); ?>" />
+			<label for="password_1" class="sr-only"><?php esc_html_e( 'New Password (leave blank to leave unchanged)', 'hypermarket' ); ?></label>
+			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_1" id="password_1" placeholder="<?php esc_attr_e( 'New Password (leave blank to leave unchanged)', 'hypermarket' ); ?>" />
 		</p><!-- .col-sm-6 -->
 		<p class="woocommerce-FormRow woocommerce-FormRow--wide col-sm-6 form-element form-row form-row-wide">
-			<label for="password_2" class="sr-only"><?php _e( 'Confirm New Password', 'hypermarket' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_2" id="password_2" placeholder="<?php _e( 'Confirm New Password', 'hypermarket' ); ?>" />
+			<label for="password_2" class="sr-only"><?php esc_html_e( 'Confirm New Password', 'hypermarket' ); ?></label>
+			<input type="password" class="woocommerce-Input woocommerce-Input--password form-control input-text" name="password_2" id="password_2" placeholder="<?php esc_attr_e( 'Confirm New Password', 'hypermarket' ); ?>" />
 		</p><!-- .col-sm-6 -->
 	</fieldset><!-- .space-top-2x space-bottom-2x -->
 	<div class="clearfix"></div>

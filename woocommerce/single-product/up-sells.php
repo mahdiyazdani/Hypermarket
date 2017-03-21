@@ -46,7 +46,7 @@ if ( $products->have_posts() ) : ?>
 	<!-- UpSells -->
 	<section class="container padding-top padding-bottom up-sells upsells products">
 		<hr>
-		<h3 class="padding-top"><?php _e( 'You May Also Like&hellip;', 'hypermarket' ) ?></h3>
+		<h3 class="padding-top"><?php esc_html_e( 'You May Also Like&hellip;', 'hypermarket' ) ?></h3>
 		<div class="row padding-top">
 			<?php 
 				woocommerce_product_loop_start();
