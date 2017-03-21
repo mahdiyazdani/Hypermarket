@@ -4,16 +4,16 @@
  *
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4.1
  */
 get_header();
 ?>
 <!-- Content -->
 <section class="container padding-top-3x">
-	<h1 class="mobile-center"><?php _e( 'Oops! That page can&rsquo;t be found.', 'hypermarket' ); ?></h1>
+	<h1 class="mobile-center"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hypermarket' ); ?></h1>
 		<div class="row padding-top">
 			<div class="col-sm-12 padding-bottom-2x">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
 							'hypermarket' ); ?></p>
 				<?php get_search_form(); ?>
 			</div><!-- .col-sm-12 -->
@@ -26,7 +26,7 @@ get_header();
 					if ( hypermarket_categorized_blog() ) :  
 				?>
 					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'hypermarket' ); ?></h2>
+						<h2 class="widgettitle"><?php esc_html_e( 'Most Used Categories', 'hypermarket' ); ?></h2>
 						<ul>
 							<?php
 							wp_list_categories( array(
