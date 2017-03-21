@@ -26,11 +26,11 @@ if ( ! wc_coupons_enabled() ) {
 ?>
 <!-- Coupon -->
 <div class="col-sm-12 cart-coupon">
-	<p class="text-gray text-sm"><?php _e('Have discount coupon?', 'hypermarket'); ?></p>
+	<p class="text-gray text-sm"><?php esc_html_e('Have discount coupon?', 'hypermarket'); ?></p>
 	<form class="checkout_coupon" method="post">
 		<div class="col-md-8 col-sm-7 coupon-input">
 			<div class="form-element">
-				<label class="screen-reader-text" for="coupon_code"><?php _e( 'Coupon:', 'hypermarket' ); ?></label>
+				<label class="screen-reader-text" for="coupon_code"><?php esc_html_e( 'Coupon:', 'hypermarket' ); ?></label>
 				<input type="text" name="coupon_code" class="form-control input-text" placeholder="<?php esc_attr_e( 'Enter coupon code', 'hypermarket' ); ?>" id="coupon_code" value="" required="required" />
 			</div>
 		</div><!-- .coupon-input -->

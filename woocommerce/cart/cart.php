@@ -27,8 +27,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<span class="text-gray">
 		    <?php 
 		    	$cart_items = WC()->cart->get_cart_contents_count();
-		    	printf(__('Currently %s%d item(s)', 'hypermarket'), '</span>', $cart_items); ?>
-			<span class="text-gray"><?php _e('in cart', 'hypermarket'); ?></span>
+		    	printf(esc_html__('Currently %1$s %2$d item(s)', 'hypermarket'), '</span>', $cart_items); ?>
+			<span class="text-gray"><?php esc_html_e('in cart', 'hypermarket'); ?></span>
 		</p>
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 		<div class="shopping-cart">
@@ -99,10 +99,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<?php if ( wc_coupons_enabled() ): ?>
 			<!-- Coupon -->
 			<div class="cart-coupon">
-				<p class="text-gray text-sm"><?php _e('Have discount coupon?', 'hypermarket'); ?></p>
+				<p class="text-gray text-sm"><?php esc_html_e('Have discount coupon?', 'hypermarket'); ?></p>
 				<div class="col-md-8 col-sm-7 coupon-input">
 					<div class="form-element">
-						<label class="screen-reader-text" for="coupon_code"><?php _e( 'Coupon:', 'hypermarket' ); ?></label>
+						<label class="screen-reader-text" for="coupon_code"><?php esc_html_e( 'Coupon:', 'hypermarket' ); ?></label>
 						<input type="text" name="coupon_code" class="form-control input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter coupon code', 'hypermarket' ); ?>" /> 
 					</div>
 				</div><!-- .coupon-input -->

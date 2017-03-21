@@ -54,7 +54,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 	
 	<div class="col-md-3 col-md-offset-1 padding-top-half padding-bottom">
 		<aside>
-			<h3 id="order_review_heading" class="sr-only"><?php _e( 'Your order', 'hypermarket' ); ?></h3>
+			<h3 id="order_review_heading" class="sr-only"><?php esc_html_e( 'Your order', 'hypermarket' ); ?></h3>
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 			<div id="order_review" class="woocommerce-checkout-review-order">
 				<?php do_action( 'woocommerce_checkout_order_review' ); ?>

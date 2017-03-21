@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <a href="#!" id="update-cart-btn" class="btn btn-default btn-block waves-effect waves-light" disabled="disabled">
-	<?php echo __( 'Update Cart', 'hypermarket' ); ?>
+	<?php esc_html_e( 'Update Cart', 'hypermarket' ); ?>
 </a>
 <a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="btn btn-primary btn-block waves-effect waves-light space-top-none checkout-button button alt wc-forward">
-	<?php echo __( 'Checkout', 'hypermarket' ); ?>
+	<?php esc_html_e( 'Checkout', 'hypermarket' ); ?>
 </a>

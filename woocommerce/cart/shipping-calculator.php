@@ -30,12 +30,12 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 
 <form class="woocommerce-shipping-calculator" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
-	<p><a href="#!" class="shipping-calculator-button"><?php _e( 'Calculate', 'hypermarket' ); ?></a></p>
+	<p><a href="#!" class="shipping-calculator-button"><?php esc_html_e( 'Calculate', 'hypermarket' ); ?></a></p>
 
 	<section class="shipping-calculator-form" style="display:none;">
 		<div id="calc_shipping_country_field" class="form-element form-select">
 			<select name="calc_shipping_country" id="calc_shipping_country" class="form-control country_to_state" rel="calc_shipping_state">
-				<option value=""><?php _e( 'Select a country&hellip;', 'hypermarket' ); ?></option>
+				<option value=""><?php esc_html_e( 'Select a country&hellip;', 'hypermarket' ); ?></option>
 				<?php
 					foreach( WC()->countries->get_shipping_countries() as $key => $value )
 						echo '<option value="' . esc_attr( $key ) . '"' . selected( WC()->customer->get_shipping_country(), esc_attr( $key ), false ) . '>' . esc_html( $value ) . '</option>';
@@ -58,11 +58,10 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 
 				?><div id="calc_shipping_state_field" class="form-element form-select">
 					<select name="calc_shipping_state" id="calc_shipping_state" class="form-control" placeholder="<?php esc_attr_e( 'State / county', 'hypermarket' ); ?>">
-						<option value=""><?php _e( 'Select a state&hellip;', 'hypermarket' ); ?></option>
+						<option value=""><?php esc_html_e( 'Select a state&hellip;', 'hypermarket' ); ?></option>
 						<?php
 							foreach ( $states as $ckey => $cvalue )
-								echo '<option value="' . esc_attr( $ckey ) . '" ' . selected( $current_r, $ckey, false ) . '>' . 
-								sprintf(__('%s', 'hypermarket'), esc_html( $cvalue ) ) .'</option>';
+								echo '<option value="' . esc_attr( $ckey ) . '" ' . selected( $current_r, $ckey, false ) . '>' . esc_html( $cvalue ) . '</option>';
 						?>
 					</select>
 				</div><!-- #calc_shipping_state_field -->
@@ -94,7 +93,7 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 
 		<?php endif; ?>
 
-		<p><button type="submit" name="calc_shipping" value="1" class="btn btn-default btn-block waves-effect waves-light button"><?php _e( 'Update Totals', 'hypermarket' ); ?></button></p>
+		<p><button type="submit" name="calc_shipping" value="1" class="btn btn-default btn-block waves-effect waves-light button"><?php esc_html_e( 'Update Totals', 'hypermarket' ); ?></button></p>
 
 		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 	</section>

@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php endif; ?>
 						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
 						<div class="item-details">
-						<h3 class="item-title"><a href="<?php echo esc_url( $product_permalink ); ?>" target="_self"><?php echo $product_name; ?></a></h3>
+						<h3 class="item-title"><a href="<?php echo esc_url( $product_permalink ); ?>" target="_self"><?php echo esc_html($product_name); ?></a></h3>
 						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<h4 class="item-price">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</h4>', $cart_item, $cart_item_key ); ?>
 						</div><!-- .item-details -->
 						<?php
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<span class="empty"><small><em><?php _e( 'Most likely, you just have not put anything into your basket.', 'hypermarket' ); ?></em></small></span>
+		<span class="empty"><small><em><?php esc_html_e( 'Most likely, you just have not put anything into your basket.', 'hypermarket' ); ?></em></small></span>
 
 	<?php endif; ?>
 
@@ -82,7 +82,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="cart-subtotal space-bottom">
 		<div class="column">
-			<span><?php _e( 'Subtotal', 'hypermarket' ); ?>:</span> 
+			<span><?php esc_html_e( 'Subtotal', 'hypermarket' ); ?>:</span> 
 		</div><!-- .column -->
 		<div class="column">
 			<?php echo WC()->cart->get_cart_subtotal(); ?>
@@ -90,8 +90,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- .cart-subtotal -->
 	<div class="text-center">
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost waves-effect waves-light button wc-forward"><?php _e( 'View Cart', 'hypermarket' ); ?></a>
-		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-sm btn-primary waves-effect waves-light button checkout wc-forward"><?php _e( 'Checkout', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-sm btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
 	</div><!-- .text-center -->
 
 <?php endif; ?>
