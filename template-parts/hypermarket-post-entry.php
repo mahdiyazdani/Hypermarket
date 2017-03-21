@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.3
+ * @since 		    1.0.4.1
  */
 ?>
 <div class="col-md-offset-1 col-sm-8">
@@ -31,7 +31,7 @@
 	<div class="blog-post-meta space-top">
 		<div class="column">
 			<?php if( !empty(get_the_category()) ): ?>
-				<span><?php _e('in', 'hypermarket'); ?> </span>
+				<span><?php esc_html_e('in', 'hypermarket'); ?> </span>
 				<?php the_category(', '); ?>
 			<?php endif; ?>
 			<?php if( !empty( get_the_tags() ) ): ?>
@@ -40,8 +40,8 @@
 			<?php endif; ?>
 		</div><!-- .column -->
 		<div class="column">
-			<a href="<?php the_permalink(); ?>" target="_self" class="<?php echo apply_filters('hypermarket_post_readmore_cls', 'read-more'); ?>" data-postid="<?php the_ID(); ?>">
-				<?php _e('Read More', 'hypermarket'); ?>
+			<a href="<?php the_permalink(); ?>" target="_self" class="<?php echo esc_html(apply_filters('hypermarket_post_readmore_cls', 'read-more')); ?>" data-postid="<?php the_ID(); ?>">
+				<?php esc_html_e('Read More', 'hypermarket'); ?>
 			</a><!-- .read-more -->
 		</div><!-- .column -->
 	</div><!-- .blog-post-meta -->
