@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0
+ * @since       1.0.4.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -87,8 +87,8 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
         $icon_6 = empty($args['icon_6']) ? '' : esc_attr($args['icon_6']);
         // Display the fields
         echo '<p>' . PHP_EOL;
-        echo '<label for="' . $this->get_field_id('title') . '">' . __('Title:', 'hypermarket') . '</label>' . PHP_EOL;
-        echo '<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text"
+        echo '<label for="' . esc_attr($this->get_field_id('title')) . '">' . esc_html__('Title:', 'hypermarket') . '</label>' . PHP_EOL;
+        echo '<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . esc_attr($this->get_field_name('title')) . '" type="text"
        value="' . esc_attr($title) . '" />' . PHP_EOL;
         echo '</p>' . PHP_EOL;
         for ($counter = 1; $counter <= 6; $counter++):
@@ -130,14 +130,14 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
             default:
                 break;
             endswitch;
-            echo '<select class="widefat" id="' . $this->get_field_id('icon_' . $counter) . '" name="' . $this->get_field_name('icon_' . $counter) . '" type="text">' . PHP_EOL;
-            echo '<option value="">.:: ' . __('Select', 'hypermarket') . ' ::.</option>' . PHP_EOL;
-            echo '<option value="visa" ' . $visa_selected . '>' . __('Visa', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="skrill" ' . $skrill_selected . '>' . __('Skrill', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="master-card" ' . $mastercard_selected . '>' . __('MasterCard', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="paypal" ' . $paypal_selected . '>' . __('PayPal', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="amx" ' . $amx_selected . '>' . __('American Express', 'hypermarket') . '</option>' . PHP_EOL;
-            echo '<option value="ssl" ' . $ssl_selected . '>' . __('SSL Certificate', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<select class="widefat" id="' . esc_attr($this->get_field_id('icon_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_' . $counter)) . '" type="text">' . PHP_EOL;
+            echo '<option value="">.:: ' . esc_html__('Select', 'hypermarket') . ' ::.</option>' . PHP_EOL;
+            echo '<option value="visa" ' . $visa_selected . '>' . esc_html__('Visa', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="skrill" ' . $skrill_selected . '>' . esc_html__('Skrill', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="master-card" ' . $mastercard_selected . '>' . esc_html__('MasterCard', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="paypal" ' . $paypal_selected . '>' . esc_html__('PayPal', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="amx" ' . $amx_selected . '>' . esc_html__('American Express', 'hypermarket') . '</option>' . PHP_EOL;
+            echo '<option value="ssl" ' . $ssl_selected . '>' . esc_html__('SSL Certificate', 'hypermarket') . '</option>' . PHP_EOL;
             echo '</select>' . PHP_EOL;
             echo '</p>' . PHP_EOL;
         endfor;
