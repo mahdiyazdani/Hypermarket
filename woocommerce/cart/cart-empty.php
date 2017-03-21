@@ -25,7 +25,7 @@ wc_print_notices();
 ?>
 
 <p class="cart-empty">
-	<?php _e( 'Most likely, you just have not put anything into your basket.', 'hypermarket' ) ?>
+	<?php esc_html_e( 'Most likely, you just have not put anything into your basket.', 'hypermarket' ) ?>
 </p>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
@@ -33,7 +33,7 @@ wc_print_notices();
 <?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop">
 		<a class="btn btn-primary waves-effect waves-light" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php _e( 'Return to shop', 'hypermarket' ) ?>
+			<?php esc_html_e( 'Return to shop', 'hypermarket' ) ?>
 		</a>
 	</p><!-- .return-to-shop -->
 <?php endif; ?>
