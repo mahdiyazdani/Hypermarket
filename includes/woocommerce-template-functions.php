@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4
+ * @since 	    1.0.4.1
  */
 // ======================================================================
 // Hooked into "wp"
@@ -48,7 +48,7 @@ endif;
  * Displayed a link to the cart including the number of items present.
  *
  * @package Hooked into "hypermarket_items_present_in_cart"
- * @since 1.0
+ * @since 1.0.4.1
  */
 if (!function_exists('hypermarket_cart_link')):
 	function hypermarket_cart_link()
@@ -56,13 +56,13 @@ if (!function_exists('hypermarket_cart_link')):
 		if (hypermarket_is_woocommerce_activated()):
 ?>
 			<a class="cart-items" href="<?php
-			echo hypermarket_sanitize_url(WC()->cart->get_cart_url()); ?>" target="_self">
+			echo esc_url(WC()->cart->get_cart_url()); ?>" target="_self">
 	            <i>
 	            	<span class="material-icons shopping_basket"></span>
 	        		<?php
 			// Number of items present and the cart total
-			$cart_items = wp_kses_data(sprintf(_n('%d', '%d', WC()->cart->get_cart_contents_count() , 'hypermarket') , WC()->cart->get_cart_contents_count()));
-			echo ($cart_items != 0) ? '<span class="count">' . $cart_items . '</span>' : '';
+			$cart_items = wp_kses_data(WC()->cart->get_cart_contents_count());
+			echo ($cart_items != 0) ? '<span class="count">' . esc_html($cart_items) . '</span>' : '';
 ?>
 	            </i>
 	        </a><!-- .cart-items -->
@@ -185,7 +185,7 @@ if (!function_exists('woocommerce_template_loop_product_title')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
-			echo '<h3 class="shop-item-title"><a href="' . get_permalink($product->get_id()) . '" target="_self">' . get_the_title() . '</a></h3><!-- .shop-item-title -->' . PHP_EOL;
+			echo '<h3 class="shop-item-title"><a href="' . esc_url(get_permalink($product->get_id())) . '" target="_self">' . esc_html(get_the_title()) . '</a></h3><!-- .shop-item-title -->' . PHP_EOL;
 		endif;
 	}
 endif;
@@ -193,7 +193,7 @@ endif;
  * Shop item price(s).
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0
+ * @since 1.0.4.1
  */
 if (!function_exists('woocommerce_template_loop_price')):
 	function woocommerce_template_loop_price()
@@ -201,8 +201,29 @@ if (!function_exists('woocommerce_template_loop_price')):
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
 			if ($price_html = $product->get_price_html()):
-				echo '<span class="shop-item-price">' . $price_html . '</span>';
-			endif;
+				echo '<span class="shop-item-price">';
+					echo wp_kses($price_html, array(
+						'a' => array(
+							'id' => array() ,
+							'href' => array() ,
+							'title' => array() ,
+							'class' => array()
+						) ,
+						'span' => array(
+							'id' => array() ,
+							'class' => array()
+						),
+						'del' => array(
+							'id' => array() ,
+							'class' => array()
+						),
+						'ins' => array(
+							'id' => array() ,
+							'class' => array()
+						)
+					));
+				echo '</span>' . PHP_EOL; 
+ 			endif;
 		endif;
 	}
 endif;
@@ -371,12 +392,12 @@ endif;
  * Add "category-link" class name to category link.
  *
  * @package Hooked into "woocommerce_before_subcategory"
- * @since 1.0.4
+ * @since 1.0.4.1
  */
 if (!function_exists('hypermarket_loop_category_link_open')):
 	function hypermarket_loop_category_link_open($category)
 	{
-		echo '<a href="' . get_term_link($category, 'product_cat') . '" class="category-link">';
+		echo '<a href="' . esc_url(get_term_link($category, 'product_cat')) . '" class="category-link">';
 	}
 endif;
 // ======================================================================
@@ -403,12 +424,12 @@ endif;
  * Show the subcategory title in the product loop.
  *
  * @package Hooked into "woocommerce_shop_loop_subcategory_title"
- * @since 1.0.4
+ * @since 1.0.4.1
  */
 if (!function_exists('hypermarket_template_loop_subcategory_title')):
 	function hypermarket_template_loop_subcategory_title($category)
 	{
-		echo $category->name;
+		echo esc_html($category->name);
 	}
 endif;
 // ======================================================================
@@ -583,15 +604,15 @@ endif;
  * Back to cart button.
  *
  * @package Hooked into "woocommerce_review_order_before_submit"
- * @since 1.0.2
+ * @since 1.0.4.1
  */
 if (!function_exists('hypermarket_back_to_cart_btn_before_submit')):
 	function hypermarket_back_to_cart_btn_before_submit()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<a href="' . hypermarket_sanitize_url(WC()->cart->get_cart_url()) . '" class="btn btn-default btn-ghost icon-left btn-block waves-effect waves-light" target="_self">';
+			echo '<a href="' . esc_url(WC()->cart->get_cart_url()) . '" class="btn btn-default btn-ghost icon-left btn-block waves-effect waves-light" target="_self">';
 			echo '<i class="material-icons arrow_back"></i>';
-			_e('Back To Cart', 'hypermarket');
+			esc_html_e('Back To Cart', 'hypermarket');
 			echo '</a><!-- .btn -->' . PHP_EOL;
 		endif;
 	}
