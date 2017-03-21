@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_featured_image_single_page"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.2
+ * @since 		    1.0.4.1
  */
 if (hypermarket_is_woocommerce_activated() && is_account_page() && is_user_logged_in() && !has_post_thumbnail()):
 	echo '<!-- Featured Background -->';
@@ -15,11 +15,11 @@ if (hypermarket_is_woocommerce_activated() && is_account_page() && is_user_logge
 	echo '</div><!-- .featured-background -->';
 elseif (hypermarket_is_woocommerce_activated() && is_shop() && !empty(get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id')))):
 	echo '<!-- Featured Image -->';
-	echo '<div class="featured-image data-background" data-background="' . get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id')) . '"></div><!-- .featured-image -->';
+	echo '<div class="featured-image data-background" data-background="' . esc_url(get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id'))) . '"></div><!-- .featured-image -->';
 else:
 	if (has_post_thumbnail()):
 		global $post;
 		echo '<!-- Featured Image -->';
-		echo '<div class="featured-image data-background" data-background="' . wp_get_attachment_image_src(get_post_thumbnail_id($post->ID) , 'full') [0] . '"></div><!-- .featured-image -->';
+		echo '<div class="featured-image data-background" data-background="' . esc_url(wp_get_attachment_image_src(get_post_thumbnail_id($post->ID) , 'full')[0]) . '"></div><!-- .featured-image -->';
 	endif;
 endif;
