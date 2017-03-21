@@ -29,12 +29,12 @@ if ( is_user_logged_in() ) {
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 	<?php if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
 	<p class="form-row col-sm-6 form-element form-row-first">
-		<label for="username" class="sr-only"><?php _e( 'Username or email', 'hypermarket' ); ?> <span class="required">*</span></label>
-		<input type="text" class="form-control input-text" name="username" id="username" placeholder="<?php _e( 'Username or email', 'hypermarket' ); ?>" />
+		<label for="username" class="sr-only"><?php esc_html_e( 'Username or email', 'hypermarket' ); ?> <span class="required">*</span></label>
+		<input type="text" class="form-control input-text" name="username" id="username" placeholder="<?php esc_attr( 'Username or email', 'hypermarket' ); ?>" />
 	</p><!-- .form-element -->
 	<p class="form-row col-sm-6 form-element form-row-last">
-		<label for="password" class="sr-only"><?php _e( 'Password', 'hypermarket' ); ?> <span class="required">*</span></label>
-		<input class="form-control input-text" type="password" name="password" id="password" placeholder="<?php _e( 'Password', 'hypermarket' ); ?>" />
+		<label for="password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?> <span class="required">*</span></label>
+		<input class="form-control input-text" type="password" name="password" id="password" placeholder="<?php esc_attr( 'Password', 'hypermarket' ); ?>" />
 	</p><!-- .form-element -->
 	<div class="clearfix"></div>
 	<?php do_action( 'woocommerce_login_form' ); ?>
@@ -42,7 +42,7 @@ if ( is_user_logged_in() ) {
 		<?php wp_nonce_field( 'woocommerce-login' ); ?>
 		<div class="rememberme">
 			<label for="rememberme" class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-				<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'hypermarket' ); ?>
+				<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php esc_html_e( 'Remember me', 'hypermarket' ); ?>
 			</label>
 		</div><!-- .rememberme -->
 		<div class="form-submit">
@@ -52,7 +52,7 @@ if ( is_user_logged_in() ) {
 	</div><!-- .form-footer -->
 	<div class="col-sm-12 lost_password space-bottom">
 		<p class="form-row">
-			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'hypermarket' ); ?></a>
+			<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'hypermarket' ); ?></a>
 		</p>
 	</div><!-- .lost_password -->
 	<div class="clearfix"></div>

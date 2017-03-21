@@ -28,7 +28,7 @@ if(! is_singular('product')):
 	endif;
 ?>
 	<!-- Shop Catalog -->
-	<section class="container<?php echo $fluid; ?> padding-top-3x">
+	<section class="container<?php echo esc_attr($fluid); ?> padding-top-3x">
 	<?php if ( is_active_sidebar( 'sidebar' ) && ! is_singular() ) : ?>
 		<!-- Sidebar Toggle / visible only on mobile -->
 		<div class="sidebar-toggle sidebar-toggle-right">
