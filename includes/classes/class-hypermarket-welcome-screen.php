@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4
+ * @since 	    1.0.4.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -64,7 +64,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.4.1
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -73,10 +73,10 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 				<div class="wrap">
 					<h2><?php esc_attr_e('Welcome to Hypermarket Theme', 'hypermarket'); ?></h2>
 					<h2 id="hypermarket-welcome-screen-nav" class="nav-tab-wrapper">
-						<a href="#welcome" class="nav-tab nav-tab-active"><?php _e('Welcome', 'hypermarket'); ?></a>
-						<a href="#support" class="nav-tab"><?php _e('Support', 'hypermarket'); ?></a>
-						<a href="#translate" class="nav-tab"><?php _e('Translate', 'hypermarket'); ?></a>
-						<a href="#contribute" class="nav-tab"><?php _e('Contribute', 'hypermarket'); ?></a>
+						<a href="#welcome" class="nav-tab nav-tab-active"><?php esc_html_e('Welcome', 'hypermarket'); ?></a>
+						<a href="#support" class="nav-tab"><?php esc_html_e('Support', 'hypermarket'); ?></a>
+						<a href="#translate" class="nav-tab"><?php esc_html_e('Translate', 'hypermarket'); ?></a>
+						<a href="#contribute" class="nav-tab"><?php esc_html_e('Contribute', 'hypermarket'); ?></a>
 					</h2><!-- #hypermarket-welcome-screen-nav -->
 					<div id="poststuff">
 						<div id="post-body" class="metabox-holder columns-2">
@@ -97,7 +97,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 													<tbody>
 														<tr class="alternate">
 															<td class="row-title">
-																<?php $install_woocommerce_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term')); ?>
+																<?php $install_woocommerce_url = esc_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term')); ?>
 																<a href="<?php echo $install_woocommerce_url; ?>" target="_self"><?php esc_attr_e('WooCommerce - A powerful, extendable eCommerce plugin that helps you sell anything', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('Hypermarket theme is fully compatible with the WooCommerce plugin for WordPress. It includes full design integration of the WooCommerce pages, shortcodes, and widgets.', 'hypermarket'); ?></em></small>
@@ -105,7 +105,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														</tr>
 														<tr class="alternate">
 															<td class="row-title">
-																<?php $install_bs3_grid_builder_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=bs3%20grid%20builder&tab=search&type=term')); ?>
+																<?php $install_bs3_grid_builder_url = esc_url(admin_url('plugin-install.php?s=bs3%20grid%20builder&tab=search&type=term')); ?>
 																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('BS3 Grid Builder - A plugin for designing and prototyping modern websites', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('Hypermarket comes with BS3 Grid Builder integration, drag and drops WordPress plugin, which provides backend page design and layout customization solutions you can make use of quickly and effortlessly.', 'hypermarket'); ?></em></small>
@@ -113,7 +113,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														</tr>
 														<tr class="alternate">
 															<td class="row-title">
-																<?php $install_mailchimp_for_wp_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=mailchimp%20for%20wp&tab=search&type=term')); ?>
+																<?php $install_mailchimp_for_wp_url = esc_url(admin_url('plugin-install.php?s=mailchimp%20for%20wp&tab=search&type=term')); ?>
 																<a href="<?php echo $install_mailchimp_for_wp_url; ?>" target="_self"><?php esc_attr_e('MailChimp for WP - Subscribe your WordPress site visitors to your MailChimp lists', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('The MailChimp integration with Hypermarket theme allows you to send newsletters to your subscribers and keep your contacts in one profile which will be very useful and convenient for you to make marketing strategies later on.', 'hypermarket'); ?></em></small>
@@ -131,14 +131,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<h3><?php esc_attr_e('To post your issues in the forum, please navigate to:', 'hypermarket'); ?></h3>
 												<br />
 												<p align="center">
-													<a href="<?php echo hypermarket_sanitize_url('https://support.mypreview.one'); ?>" class="button-primary" target="_blank"><strong><?php esc_attr_e('MyPreview Support Forum', 'hypermarket'); ?></strong></a>
+													<a href="<?php echo esc_url('https://support.mypreview.one'); ?>" class="button-primary" target="_blank"><strong><?php esc_attr_e('MyPreview Support Forum', 'hypermarket'); ?></strong></a>
 												</p>
 												<br />
 												<p><?php esc_attr_e('We look forward to listening to you and continuing our development of the Hypermarket theme.', 'hypermarket'); ?></p>
 												<hr>
 												<h3><?php esc_attr_e('View full documentation', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('Before you get started, please be sure always to check out theme documentation files. We outline all kinds of useful information and provide you with all the details you need know to use Hypermarket Theme.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://docs.mypreview.one/category/hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('Theme Documentation', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://docs.mypreview.one/category/hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('Theme Documentation', 'hypermarket'); ?></a></p>
 											</div><!-- .inside -->
 										</div><!-- #support-content -->
 										<div id="translate-content">
@@ -151,23 +151,23 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<p><?php esc_attr_e('WordPress uses PO and MO files to manage translations. In fact, WordPress only needs MO files to handle translations.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('PO files are human-readable; Those files contains a list of strings ready to be translated or with a translation already included.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('MO files just compiled exports from the PO files and used by WordPress to get the conversion of each string to translate the theme. If you try to open a MO file with a regular text editor, you will not understand anything of its content.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://docs.mypreview.one/how-to-translate-hypermarket-theme-into-any-language/'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('How to translate Hypermarket theme with Poedit?', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://docs.mypreview.one/how-to-translate-hypermarket-theme-into-any-language/'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('How to translate Hypermarket theme with Poedit?', 'hypermarket'); ?></a></p>
 												<br />
 												<h3><?php esc_attr_e('WPML & Translation Ready', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('Hypermarket theme is fully compatible and tested with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with WPML!', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://wpml.org/theme/hypermarket'); ?>" target="_blank"><img src="<?php echo $this->admin_assets_url . 'img/hypermarket-wpml-certification-badge.jpg'; ?>" alt="<?php esc_attr_e('Hypermarket WPML Certification Badge', 'hypermarket'); ?>" width="210" height="210" /></a></p>
+												<p><a href="<?php echo esc_url('https://wpml.org/theme/hypermarket'); ?>" target="_blank"><img src="<?php echo $this->admin_assets_url . 'img/hypermarket-wpml-certification-badge.jpg'; ?>" alt="<?php esc_attr_e('Hypermarket WPML Certification Badge', 'hypermarket'); ?>" width="210" height="210" /></a></p>
 												<br />
 												<h3><?php esc_attr_e('Share your Language Files', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('In case you have already translated Hypermarket theme a lot of users would be thrilled if you share your translation files with the community.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('For translations of our Hypermarket theme just push the files to the main repository for all Hypermarket code, and we will include the translation files within your name and credit to the next release, so other people who speak your language can use it.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://github.com/mahdiyazdani/Hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('GitHub Development Repository', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://github.com/mahdiyazdani/Hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('GitHub Development Repository', 'hypermarket'); ?></a></p>
 											</div><!-- .inside -->
 										</div><!-- #translate-content -->
 										<div id="contribute-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Contribute to Hypermarket', 'hypermarket'); ?></span></h2>
 											<div class="inside">
 												<p><?php esc_attr_e('Now that you have found the Hypermarket theme useful, here is how you can take action.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo hypermarket_sanitize_url('https://github.com/mahdiyazdani/Hypermarket'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('GitHub Development Repository', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://github.com/mahdiyazdani/Hypermarket'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('GitHub Development Repository', 'hypermarket'); ?></a></p>
 												<br />
 												<h3><?php esc_attr_e('Create an Issue', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('If you find a bug in a Hypermarket theme functionality (and you do not know how to fix it), have trouble following the documentation or have a question about the Hypermarket theme hooks (filters and actions) - create an issue! There is nothing to it and whatever issue you are having, you are likely not the only one, so others will find your issue helpful, too.', 'hypermarket'); ?></p>
@@ -212,20 +212,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 											<div class="inside">
 												<p><?php esc_attr_e('While making Hypermarket theme, we used third-party plugins and resources, and want to thank their creators:', 'hypermarket'); ?></p>
 												<ul>
-													<li><a href="<?php echo hypermarket_sanitize_url('http://bourbon.io'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Bourbon - A simple and lightweight mixin library for Sass', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://jquery.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('jQuery - most popular feature-rich JavaScript library', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://modernizr.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://getbootstrap.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('http://velocityjs.org'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Velocity.js - Accelerated JavaScript animation', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://www.smoothscroll.net'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Smooth Scroll - An extension for smooth scrolling in Google Chrome', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('http://fian.my.id/Waves'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Waves - Click effect inspired by Googles Material Design', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('http://brm.io/jquery-match-height'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('matchHeight - makes the height of all selected elements exactly equal', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://material.io/icons'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Material Design Icons - Icon font for the web', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://understrap.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('http://twittem.github.io/wp-bootstrap-navwalker'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WP Bootstrap Navwalker - A custom WordPress nav walker class', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://woocommerce.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WooCommerce - An open source eCommerce plugin for WordPress', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Skip link focus - Helps with accessibility for keyboard only users', 'hypermarket'); ?></em></small></a></li>
-													<li><a href="<?php echo hypermarket_sanitize_url('https://github.com/jonstipe/number-polyfill'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('HTML5 Number polyfill - A polyfill for implementing the HTML5 number element in browsers that do not currently support it', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('http://bourbon.io'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Bourbon - A simple and lightweight mixin library for Sass', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://jquery.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('jQuery - most popular feature-rich JavaScript library', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://modernizr.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://getbootstrap.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('http://velocityjs.org'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Velocity.js - Accelerated JavaScript animation', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://www.smoothscroll.net'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Smooth Scroll - An extension for smooth scrolling in Google Chrome', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('http://fian.my.id/Waves'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Waves - Click effect inspired by Googles Material Design', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('http://brm.io/jquery-match-height'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('matchHeight - makes the height of all selected elements exactly equal', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://material.io/icons'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Material Design Icons - Icon font for the web', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://understrap.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('http://twittem.github.io/wp-bootstrap-navwalker'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WP Bootstrap Navwalker - A custom WordPress nav walker class', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://woocommerce.com'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('WooCommerce - An open source eCommerce plugin for WordPress', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('Skip link focus - Helps with accessibility for keyboard only users', 'hypermarket'); ?></em></small></a></li>
+													<li><a href="<?php echo esc_url('https://github.com/jonstipe/number-polyfill'); ?>" rel="nofollow" target="_blank"><small><em><?php esc_attr_e('HTML5 Number polyfill - A polyfill for implementing the HTML5 number element in browsers that do not currently support it', 'hypermarket'); ?></em></small></a></li>
 												</ul>
 											</div><!-- .inside -->
 										</div><!-- #welcome-sidebar -->
@@ -298,7 +298,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 				<div id="hypermarket-welcome-message" class="notice notice-info is-dismissible">
 					<p><strong><?php esc_attr_e('WooHoo! :)', 'hypermarket'); ?></strong></p>
 					<p><?php esc_attr_e('Welcome to the Hypermarket theme! Clearly, you have impeccable taste in WooCommerce themes; we salute your fine choice!', 'hypermarket'); ?></p>
-					<p><a href="<?php echo hypermarket_sanitize_url(admin_url('themes.php?page=hypermarket-welcome-screen')); ?>" class="button-secondary"><?php esc_attr_e('Get the Tips!', 'hypermarket'); ?></a></p>
+					<p><a href="<?php echo esc_url(admin_url('themes.php?page=hypermarket-welcome-screen')); ?>" class="button-secondary"><?php esc_attr_e('Get the Tips!', 'hypermarket'); ?></a></p>
 				</div>
 			<?php
 		}
@@ -317,7 +317,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Check if WooCommerce activated/installed or not?
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.4.1
 		 */
 		public function wc_installation_admin_notice() 
 
@@ -329,14 +329,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 	        	if(isset($_GET['page']) && $_GET['page'] === 'hypermarket-welcome-screen'):
 		        	?>
 		            <div class="notice notice-warning" style="position:relative;">
-		                <p><strong><?php _e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
+		                <p><strong><?php esc_html_e('Hypermarket is almost ready to help you start selling :)', 'hypermarket'); ?></strong></p>
 		                <p><?php
-		                $install_woocommerce_url = hypermarket_sanitize_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term'));
-		            printf(__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
+		                $install_woocommerce_url = esc_url(admin_url('plugin-install.php?s=woocommerce&tab=search&type=term'));
+		            printf(esc_html__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
 		                <a href="?hypermarket-install-woocommerce-ignore-notice&page=hypermarket-welcome-screen">
 		                    <button class="notice-dismiss">
 		                        <span class="screen-reader-text"><?php
-		                _e('Dismiss this notice.', 'hypermarket'); ?></span>
+		                esc_html_e('Dismiss this notice.', 'hypermarket'); ?></span>
 		                    </button>
 		                </a>
 		            </div>
