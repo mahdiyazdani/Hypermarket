@@ -36,11 +36,11 @@ if ( ! woocommerce_products_will_display() )
 		$first    = ( $per_page * $paged ) - $per_page + 1;
 		$last     = min( $total, $wp_query->get( 'posts_per_page' ) * $paged );
 
-		echo '<span class="text-gray">' . __('Showing', 'hypermarket') . '</span>';
+		echo '<span class="text-gray">' . esc_html__('Showing', 'hypermarket') . '</span>';
 		if ( $total <= $per_page || -1 === $per_page ):
-			printf( _n( ' the single result', ' all %d items', $total, 'hypermarket' ), $total );
+			esc_html_e( ' the single result', 'hypermarket' );
 		else :
-			printf( _nx( ' the single result', ' %1$d&ndash;%2$d items', $total, '%1$d = first, %2$d = last', 'hypermarket' ), $first, $last, $total );
+			printf( esc_html__( ' %1$s&ndash;%2$d items', 'hypermarket' ), $first, $last );
 		endif;
 		?>
 	</p><!-- .text-sm -->
