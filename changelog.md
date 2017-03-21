@@ -1,3 +1,12 @@
+= 1.0.4.1 =
+* Updated language file.
+* Added escaping functions.
+* Added wp_kses to fallback menu.
+* Added sanitization to mini cart price.
+* Added sanitization method to page numbers loop.
+* Updated results count method.
+* Fixed broken styles in blog meta.
+
 = 1.0.4 =
 * Updated language file.
 * Added fluid post template.
