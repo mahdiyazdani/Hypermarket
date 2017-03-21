@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4
+ * @since 	    1.0.4.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -181,14 +181,14 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Customize WooCommerce Products Search Form
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.4.1
 		 */
 		public function custom_product_search_form($form)
 
 		{
-			$form = '<form method="get" id="searchform" action="' . hypermarket_sanitize_url(home_url('/')) . '" class="search-box">
-			<label class="screen-reader-text" for="s">' . __('Search for:', 'hypermarket') . '</label>
-			<input name="s" id="s" type="text" class="form-control" value="' . get_search_query() . '" required="required" placeholder="' . __('Search', 'hypermarket') . '" />
+			$form = '<form method="get" id="searchform" action="' . esc_url(home_url('/')) . '" class="search-box">
+			<label class="screen-reader-text" for="s">' . esc_html__('Search for:', 'hypermarket') . '</label>
+			<input name="s" id="s" type="text" class="form-control" value="' . get_search_query() . '" required="required" placeholder="' . esc_html__('Search', 'hypermarket') . '" />
 			<input type="hidden" name="post_type" value="product" />
 			<button type="submit">
 				<i class="material-icons search"></i>
