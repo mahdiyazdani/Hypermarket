@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-03-16 04:19+0400\n"
-"PO-Revision-Date: 2017-03-16 04:19+0400\n"
+"POT-Creation-Date: 2017-03-21 23:45+0400\n"
+"PO-Revision-Date: 2017-03-21 23:45+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -39,68 +39,74 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:27
+#: comments.php:31
 #, php-format
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:38
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:34 comments.php:56
+#: comments.php:52 comments.php:74
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:58
+#: comments.php:54 comments.php:76
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:40 comments.php:62
+#: comments.php:58 comments.php:80
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:74
+#: comments.php:92
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:81 includes/classes/class-woocommerce.php:225
+#: comments.php:99 includes/classes/class-woocommerce.php:225
 msgid "Name"
 msgstr ""
 
-#: comments.php:81 includes/classes/class-woocommerce.php:225
+#: comments.php:99 includes/classes/class-woocommerce.php:225
 msgid "Name*"
 msgstr ""
 
-#: comments.php:83 includes/classes/class-woocommerce.php:227
+#: comments.php:101 includes/classes/class-woocommerce.php:227
 msgid "Email"
 msgstr ""
 
-#: comments.php:83 includes/classes/class-woocommerce.php:227
+#: comments.php:101 includes/classes/class-woocommerce.php:227
 msgid "Email*"
 msgstr ""
 
-#: comments.php:85
+#: comments.php:103
 msgid "Website"
 msgstr ""
 
-#: comments.php:88 includes/classes/class-woocommerce.php:240
+#: comments.php:106 includes/classes/class-woocommerce.php:240
 msgid "Comment"
 msgstr ""
 
-#: comments.php:88
+#: comments.php:106
 msgid "Comment*"
 msgstr ""
 
-#: comments.php:89
+#: comments.php:107
 msgid "Leave a reply"
 msgstr ""
 
-#: comments.php:89
+#: comments.php:107
 #, php-format
 msgid "Be the first to comment &ldquo;%s&rdquo;"
 msgstr ""
 
-#: comments.php:97
+#: comments.php:115
 msgid "Leave Comment"
 msgstr ""
 
@@ -916,13 +922,6 @@ msgstr ""
 msgid " | Get %1$s for free."
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:64
-#, php-format
-msgid "%d"
-msgid_plural "%d"
-msgstr[0] ""
-msgstr[1] ""
-
 #: includes/woocommerce-template-functions.php:121
 msgid "Sale"
 msgstr ""
@@ -939,11 +938,11 @@ msgstr ""
 msgid "Posts by"
 msgstr ""
 
-#: loop-templates/content-author.php:61
+#: loop-templates/content-author.php:63
 msgid " ago"
 msgstr ""
 
-#: loop-templates/content-author.php:63 loop-templates/content-post.php:48
+#: loop-templates/content-author.php:66 loop-templates/content-post.php:48
 #: template-parts/hypermarket-post-entry.php:34
 msgid "in"
 msgstr ""
@@ -1050,7 +1049,7 @@ msgstr ""
 
 #: woocommerce/cart/cart.php:30
 #, php-format
-msgid "Currently %s%d item(s)"
+msgid "Currently %1$s %2$d item(s)"
 msgstr ""
 
 #: woocommerce/cart/cart.php:31
@@ -1109,7 +1108,7 @@ msgstr ""
 
 #: woocommerce/cart/shipping-calculator.php:54
 #: woocommerce/cart/shipping-calculator.php:60
-#: woocommerce/cart/shipping-calculator.php:76
+#: woocommerce/cart/shipping-calculator.php:75
 msgid "State / county"
 msgstr ""
 
@@ -1117,20 +1116,15 @@ msgstr ""
 msgid "Select a state&hellip;"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:65
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: woocommerce/cart/shipping-calculator.php:85
+#: woocommerce/cart/shipping-calculator.php:84
 msgid "City"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:92
+#: woocommerce/cart/shipping-calculator.php:91
 msgid "Postcode / ZIP"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:97
+#: woocommerce/cart/shipping-calculator.php:96
 msgid "Update Totals"
 msgstr ""
 
@@ -1157,13 +1151,12 @@ msgid ""
 "Shipping section."
 msgstr ""
 
-#: woocommerce/global/form-login.php:32 woocommerce/global/form-login.php:33
+#: woocommerce/global/form-login.php:32
 #: woocommerce/myaccount/form-lost-password.php:31
 msgid "Username or email"
 msgstr ""
 
-#: woocommerce/global/form-login.php:36 woocommerce/global/form-login.php:37
-#: woocommerce/myaccount/form-login.php:40
+#: woocommerce/global/form-login.php:36 woocommerce/myaccount/form-login.php:40
 #: woocommerce/myaccount/form-login.php:83
 msgid "Password"
 msgstr ""
@@ -1191,19 +1184,13 @@ msgid "Showing"
 msgstr ""
 
 #: woocommerce/loop/result-count.php:41
-#, php-format
 msgid " the single result"
-msgid_plural " all %d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: woocommerce/loop/result-count.php:43
 #, php-format
-msgctxt "%1$d = first, %2$d = last"
-msgid " the single result"
-msgid_plural " %1$d&ndash;%2$d items"
-msgstr[0] ""
-msgstr[1] ""
+msgid " %1$s&ndash;%2$d items"
+msgstr ""
 
 #: woocommerce/myaccount/form-edit-account.php:30
 msgid "Account Details"
