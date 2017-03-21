@@ -5,14 +5,14 @@
  * @package 		Hooked into "woocommerce_no_products_found"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4
+ * @since 		    1.0.4.1
  */
 
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar');
 ?>
 <div class="row padding-top">
 	<div class="col-sm-12 padding-bottom-2x">
-		<p><?php _e( 'It looks like no products were found matching your selection. Maybe try one of the links below or a search?',
+		<p><?php esc_html_e( 'It looks like no products were found matching your selection. Maybe try one of the links below or a search?',
 					'hypermarket' ); ?></p>
 		<?php the_widget( 'WC_Widget_Product_Search' ); ?>
 	</div><!-- .col-sm-12 -->			
@@ -26,7 +26,7 @@ $args = apply_filters( 'hypermarket_best_sellers_products_args', array(
 ?>
 <!-- Bestsellers -->
 <section id="hypermarket-best-sellers-products" class="padding-top">
-	<h3 class="text-center"><?php echo $args['title']; ?></h3>
+	<h3 class="text-center"><?php echo esc_html($args['title']); ?></h3>
 	<div class="row padding-top">
 	<?php
 		echo hypermarket_do_shortcode( 'best_selling_products', array(
@@ -45,7 +45,7 @@ $args = apply_filters( 'hypermarket_new_arrivals_products_args', array(
 ?>
 <!-- New Arrivals -->
 <section id="hypermarket-new-arrivals-products" class="padding-top-3x space-top-half">
-	<h3 class="text-center"><?php echo $args['title']; ?></h3>
+	<h3 class="text-center"><?php echo esc_html($args['title']); ?></h3>
 	<div class="row padding-top">
 	<?php
 		// 4 Columns
