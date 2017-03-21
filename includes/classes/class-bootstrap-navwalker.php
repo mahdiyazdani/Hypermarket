@@ -1,13 +1,13 @@
 <?php
 /**
- * Bootstrap Navwalker.
+ * Bootstrap Navwalker - Hypermarket Edition
  * Adapted from Edward McIntyre's wp_bootstrap_navwalker class.
  *
  * @link 		https://github.com/twittem/wp-bootstrap-navwalker
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
  * @version 	2.0.4
- * @since 	    1.0
+ * @since 	    1.0.4.1
  * License 		GPL-2.0+
  */
 class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
@@ -176,10 +176,29 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 			if ($menu_id) $fb_output.= ' id="' . $menu_id . '"';
 			if ($menu_class) $fb_output.= ' class="' . $menu_class . '"';
 			$fb_output.= '>';
-			$fb_output.= '<li><a href="' . admin_url('nav-menus.php') . '">Add a menu</a></li>';
+			$fb_output.= '<li><a href="' . admin_url('nav-menus.php') . '">' . esc_html__('Add a menu', 'hypermarket') . '</a></li>';
 			$fb_output.= '</ul>';
 			if ($container) $fb_output.= '</' . $container . '>';
-			echo $fb_output;
+			echo wp_kses($fb_output, array(
+				'a' => array(
+					'id' => array() ,
+					'href' => array() ,
+					'title' => array() ,
+					'class' => array()
+				) ,
+				'nav' => array(
+					'id' => array() ,
+					'class' => array()
+				) ,
+				'ul' => array(
+					'id' => array() ,
+					'class' => array()
+				) ,
+				'li' => array(
+					'id' => array() ,
+					'class' => array()
+				)
+			));
 		}
 	}
 }
