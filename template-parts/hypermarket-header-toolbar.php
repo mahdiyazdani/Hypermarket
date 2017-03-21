@@ -5,7 +5,7 @@
  * @package 	Hooked into "hypermarket_header_area"
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.1
+ * @since 	    1.0.4.1
  */
 ?>
 <!-- Toolbar -->
@@ -19,7 +19,7 @@
             endif;
         	// Append WooCommerce my-account page link
         	if (apply_filters('hypermarket_header_toolbar_myaccount', true) && hypermarket_is_woocommerce_activated() && get_option('users_can_register')):
-        		echo '<a href="' . get_permalink( get_option('woocommerce_myaccount_page_id') ) . '" target="_self"><i class="material-icons person"></i></a>' . PHP_EOL;
+        		echo '<a href="' . esc_url(get_permalink( get_option('woocommerce_myaccount_page_id') )) . '" target="_self"><i class="material-icons person"></i></a>' . PHP_EOL;
         	endif;
             // Append WooCommerce Mini Cart
         	if (apply_filters('hypermarket_header_toolbar_mini_cart', true) && hypermarket_is_woocommerce_activated()):
