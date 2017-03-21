@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4
+ * @since 	    1.0.4.1
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -55,7 +55,7 @@ endif;
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0.4
+ * @since 1.0.4.1
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
