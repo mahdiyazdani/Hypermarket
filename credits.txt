@@ -9,7 +9,7 @@ Copyright JS Foundation and other contributors, https://js.foundation/
 https://github.com/jquery/jquery/blob/master/LICENSE.txt
 
 Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser
-The MIT License
+The MIT License - Made by Faruk, Paul, Alex, Ryan, Patrick, Stu, and Richard.
 https://github.com/Modernizr/Modernizr/blob/master/LICENSE
 
 Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
@@ -29,9 +29,19 @@ Waves - Click effect inspired by Googles Material Design
 The MIT License - Copyright (c) 2014 Alfiana E. Sibuea
 https://github.com/fians/Waves/blob/master/LICENSE
 
+M-Store - Modern E-Commerce Template
+The GPL version 2 or (at your option) any later version
+Order#: WB0C3M094 Paid: 2017-01-03
+Extended License - de8dd598-6afc-41c0-a6de-34e0df5dd931
+http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses
+
 matchHeight - Responsive equal heights plugin
 The MIT License - Copyright (c) 2014 Liam Brummitt
 https://github.com/liabru/jquery-match-height/blob/master/LICENSE
+
+Twenty Sixteen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+http://www.gnu.org/licenses/gpl-2.0.html
 
 UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4
 The GPL version 2 or (at your option) any later version
@@ -49,9 +59,21 @@ WooCommerce - An open source eCommerce plugin for WordPress
 The GPL version 2 - Copyright 2015 by the contributors
 https://github.com/woocommerce/woocommerce/blob/master/license.txt
 
+WooCommerce Quantity Increment - WordPress Plugins
+The GPL version 2 or (at your option) any later version
+https://github.com/woocommerce/WooCommerce-Quantity-Increment
+
 Material Design Icons - Icon font for the web
 The Apache License
 https://github.com/google/material-design-icons/blob/master/LICENSE
+
+Icons Mind - Perfect icons start with icons mind
+Released under extended license
+https://iconsmind.com/classic-license/
+
+Socicon - The social icon font
+Released under SIL Open Font License 1.1
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 Work Sans Google Font-Family
 Open Font License - Wei Huang
