@@ -1,11 +1,11 @@
 <?php
 /**
- * Split WordPress Posts into Multiple Pages.
+ * Split WordPress Posts and Pages into Multiple Pages.
  *
  * @package 		Hooked into "hypermarket_end_single_post_content"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4
+ * @since 		    1.0.4.2
  */
 if (hypermarket_is_post_paginated()):
 	echo '<div class="pagination hypermarket-pagination">' . PHP_EOL;
