@@ -4,7 +4,7 @@
  * @author      	Mahdi Yazdani
  * @package     	Hypermarket
  * @dependencies 	Bourbon
- * @since       	1.0.4.1
+ * @since       	1.0.4.2
  */
 
 // Bourbon SASS Mixins Library
@@ -23,7 +23,6 @@
 @import "buttons";
 
 // Components
-@import "preloader";
 @import "social-buttons";
 @import "navbar";
 @import "blog";
