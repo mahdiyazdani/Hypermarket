@@ -48,22 +48,22 @@ endif;
  * Displayed a link to the cart including the number of items present.
  *
  * @package Hooked into "hypermarket_items_present_in_cart"
- * @since 1.0.4.1
+ * @since 1.0.4.2
  */
 if (!function_exists('hypermarket_cart_link')):
 	function hypermarket_cart_link()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-?>
+		?>
 			<a class="cart-items" href="<?php
 			echo esc_url(WC()->cart->get_cart_url()); ?>" target="_self">
 	            <i>
 	            	<span class="material-icons shopping_basket"></span>
 	        		<?php
-			// Number of items present and the cart total
-			$cart_items = wp_kses_data(WC()->cart->get_cart_contents_count());
-			echo ($cart_items != 0) ? '<span class="count">' . esc_html($cart_items) . '</span>' : '';
-?>
+						// Number of items present and the cart total
+						$cart_items = wp_kses_data(WC()->cart->get_cart_contents_count());
+						echo ($cart_items != 0) ? '<span class="count">' . esc_html($cart_items) . '</span>' : '';
+					?>
 	            </i>
 	        </a><!-- .cart-items -->
 		<?php
