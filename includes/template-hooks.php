@@ -10,11 +10,9 @@
  * Before Header Area
  *
  * @see  hypermarket_skip_links()			-> template-functions.php
- * @see  hypermarket_preloader()			-> template-functions.php
- * @since 1.0.1
+ * @since 1.0.4.2
  */
 add_action('hypermarket_before_header_area', 'hypermarket_skip_links', 0);
-add_action('hypermarket_before_header_area', 'hypermarket_preloader', 10);
 /**
  * Header Area
  *
