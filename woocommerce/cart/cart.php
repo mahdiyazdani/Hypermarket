@@ -26,7 +26,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<p class="text-sm">
 			<span class="text-gray">
 		    <?php 
-		    	$cart_items = WC()->cart->get_cart_contents_count();
+		    	$cart_items = wp_kses_data(WC()->cart->get_cart_contents_count());
 		    	printf(esc_html__('Currently %1$s %2$d item(s)', 'hypermarket'), '</span>', $cart_items); ?>
 			<span class="text-gray"><?php esc_html_e('in cart', 'hypermarket'); ?></span>
 		</p>
