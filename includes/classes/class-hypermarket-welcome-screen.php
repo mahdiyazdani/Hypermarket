@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.1
+ * @since 	    1.0.4.2
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -64,7 +64,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.4.1
+		 * @since 1.0.4.2
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -84,7 +84,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 							<div id="post-body-content">
 								<div class="meta-box-sortables ui-sortable">
 									<div class="postbox">
-										<div class="handlediv" title="<?php __('Click to toggle', 'hypermarket'); ?>"><br /></div>
+										<div class="handlediv" title="<?php esc_attr_e('Click to toggle', 'hypermarket'); ?>"><br /></div>
 										<!-- Toggle -->
 										<div id="welcome-content">
 											<h2 class="hndle"><span><?php esc_attr_e('This is where it all begins', 'hypermarket'); ?></span></h2>
@@ -205,7 +205,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 							<div id="postbox-container-1" class="postbox-container">
 								<div class="meta-box-sortables">
 									<div class="postbox">
-										<div class="handlediv" title="<?php __('Click to toggle', 'hypermarket'); ?>"><br /></div>
+										<div class="handlediv" title="<?php esc_attr_e('Click to toggle', 'hypermarket'); ?>"><br /></div>
 										<!-- Toggle -->
 										<div id="welcome-sidebar">
 											<h2 class="hndle"><span><?php esc_attr_e('Resources & Reference', 'hypermarket'); ?></span></h2>
