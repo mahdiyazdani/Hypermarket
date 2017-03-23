@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_homepage_template"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.4.2
  */
 $args = apply_filters( 'hypermarket_new_arrivals_products_args', array(
 	'limit'   => 8,
@@ -16,7 +16,7 @@ do_shortcode('hypermarket_before_new_arrivals');
 ?>
 <!-- New Arrivals -->
 <section id="hypermarket-new-arrivals-products" class="container padding-top-3x space-top-half">
-	<h3 class="text-center"><?php echo $args['title']; ?></h3>
+	<h3 class="text-center"><?php echo esc_html($args['title']); ?></h3>
 	<div class="row padding-top">
 	
 	<?php
