@@ -3,15 +3,8 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.1
+ * @since       1.0.4.2
  */
-;
-(function() {
-    window.onload = function() {
-        var preloading = document.querySelector('.page-preloading');
-        preloading.classList.add('loading-done');
-    };
-})();
 
 jQuery(document).ready(function($) {
     'use strict';
@@ -62,36 +55,6 @@ jQuery(document).ready(function($) {
     $emptyLink.on('click', function(e) {
         e.preventDefault();
     });
-
-    // Page Transitions
-    if($('.page-preloading').length) {
-        var transitionDelay = 550;
-        $('a:not([href^="#"])').on('click', function(e) {
-        if( $(this).hasClass('gallery-item') === false && 
-            $(this).hasClass('ajax-post-link') === false && 
-            $(this).hasClass('read-more ajax-post-link') === false && 
-            $(this).hasClass('ajax_add_to_cart') === false && 
-            $(this).hasClass('comment-reply-link') === false && 
-            $(this).is('#cancel-comment-reply-link') === false && 
-            $(this).hasClass('hypermarket-sl-button') === false && 
-            $(this).hasClass('hypermarket-share-icon') === false &&
-            $(this).hasClass('comment-permalink') === false &&
-            $(this).hasClass('remove') === false &&
-            $(this).attr('target') !== '_blank') {
-          e.preventDefault();
-          var linkUrl = $(this).attr('href');
-          $('.page-preloading').addClass('link-clicked');
-          if($('#hypermarket-geo-topbar').length > 0){
-            $('#hypermarket-geo-topbar').slideUp('slow');
-            transitionDelay = 850;
-          }
-          setTimeout(function(){
-            window.open(linkUrl , '_self');
-            $('.page-preloading').removeClass('link-clicked');
-          }, transitionDelay);
-        }
-      });
-    }
 
 
     // Animated Scroll to Top Button
