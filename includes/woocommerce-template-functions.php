@@ -110,15 +110,14 @@ endif;
  * Display sale badge on product archive page(s) only.
  *
  * @package Hooked into "woocommerce_before_shop_loop_item"
- * @since 1.0
+ * @since 1.0.4.2
  */
-if (!function_exists('woocommerce_show_product_loop_sale_flash')):
-	function woocommerce_show_product_loop_sale_flash()
-	{
+if (!function_exists('hypermarket_show_product_loop_sale_flash')):
+	function hypermarket_show_product_loop_sale_flash(){
 		if (hypermarket_is_woocommerce_activated()):
 			global $post, $product;
 			if ($product->is_on_sale()):
-				echo apply_filters('woocommerce_sale_flash', '<span class="shop-label text-danger onsale">' . __('Sale', 'hypermarket') . '</span>', $post, $product);
+				echo apply_filters('hypermarket_show_product_loop_sale_flash_markup', '<span class="shop-label text-danger onsale">' . esc_html__('Sale', 'hypermarket') . '</span>', $post, $product);
 			endif;
 		endif;
 	}
@@ -178,10 +177,10 @@ endif;
  * Shop item title wrapped with product URL.
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0
+ * @since 1.0.4.2
  */
-if (!function_exists('woocommerce_template_loop_product_title')):
-	function woocommerce_template_loop_product_title()
+if (!function_exists('hypermarket_template_loop_product_title')):
+	function hypermarket_template_loop_product_title()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
@@ -193,10 +192,10 @@ endif;
  * Shop item price(s).
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0.4.1
+ * @since 1.0.4.2
  */
-if (!function_exists('woocommerce_template_loop_price')):
-	function woocommerce_template_loop_price()
+if (!function_exists('hypermarket_template_loop_price')):
+	function hypermarket_template_loop_price()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
@@ -482,33 +481,25 @@ if (!function_exists('hypermarket_product_notice_wrapper_end')):
 		endif;
 	}
 endif;
-// ======================================================================
-// Hooked into "woocommerce_before_single_product_summary"
-// ======================================================================
-
 /**
  * Single product image and thumbnails.
  *
  * @package Hooked into "woocommerce_before_single_product_summary"
- * @since 1.0
+ * @since 1.0.4.2
  */
-if (!function_exists('woocommerce_show_product_images')):
-	function woocommerce_show_product_images()
+if (!function_exists('hypermarket_show_product_images')):
+	function hypermarket_show_product_images()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			get_template_part('template-parts/woocommerce/hypermarket-single-product-gallery');
 		endif;
 	}
 endif;
-// ======================================================================
-// Hooked into "woocommerce_single_product_summary"
-// ======================================================================
-
 /**
  * Product info wrapper start tag.
  *
  * @package Hooked into "woocommerce_single_product_summary"
- * @since 1.0
+ * @since 1.0.4.2
  */
 if (!function_exists('hypermarket_single_product_summary_wrapper_start')):
 	function hypermarket_single_product_summary_wrapper_start()
@@ -519,6 +510,10 @@ if (!function_exists('hypermarket_single_product_summary_wrapper_start')):
 		endif;
 	}
 endif;
+// ======================================================================
+// Hooked into "woocommerce_single_product_summary"
+// ======================================================================
+
 /**
  * Product tools wrapper start tag.
  *
