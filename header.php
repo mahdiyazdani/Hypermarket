@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.3
+ * @since       1.0.4.2
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -20,14 +20,13 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head(); ?>
 </head>
-<body <?php body_class('page-preloading'); ?>>
+<body <?php body_class(); ?>>
 	<?php
 		/**
 		 * Functions hooked into "hypermarket_before_header_area" action
 		 *
 		 * @hooked hypermarket_skip_links                		    - 0
-		 * @hooked hypermarket_preloader                		    - 10
-		 * @since 1.0.1
+		 * @since 1.0.4.2
 		 */
 		do_action('hypermarket_before_header_area');
 	?>
