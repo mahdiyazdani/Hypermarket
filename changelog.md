@@ -1,3 +1,9 @@
+= 1.0.4.2 =
+* Added support to split WordPress pages into multiple pages.
+* Added theme prefix to all missing WooCommerce methods.
+* Added new hooks to override WooCommerce methods.
+* Removed page preloading due to performance issues.
+
 = 1.0.4.1 =
 * Updated language file.
 * Added escaping functions.
