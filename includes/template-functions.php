@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.1
+ * @since 	    1.0.4.2
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -263,6 +263,22 @@ if (!function_exists('hypermarket_before_single_page_content_wrapper_start')):
 	}
 endif;
 // ======================================================================
+// Hooked into "hypermarket_end_single_page_content"
+// ======================================================================
+
+/**
+ * Split WordPress Pages into Multiple Pages.
+ *
+ * @package Hooked into "hypermarket_end_single_page_content"
+ * @since 1.0.4.2
+ */
+if (!function_exists('hypermarket_single_page_paging')):
+	function hypermarket_single_page_paging()
+	{
+		get_template_part('template-parts/hypermarket-single-paging');
+	}
+endif;
+// ======================================================================
 // Hooked into "hypermarket_after_single_page_content"
 // ======================================================================
 
@@ -351,11 +367,11 @@ endif;
  * Split WordPress Posts into Multiple Pages.
  *
  * @package Hooked into "hypermarket_end_single_post_content"
- * @since 1.0
+ * @since 1.0.4
  */
 if (!function_exists('hypermarket_single_post_paging')):
 	function hypermarket_single_post_paging()
 	{
-		get_template_part('template-parts/hypermarket-single-post-paging');
+		get_template_part('template-parts/hypermarket-single-paging');
 	}
 endif;
