@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-03-21 23:45+0400\n"
-"PO-Revision-Date: 2017-03-21 23:45+0400\n"
+"POT-Creation-Date: 2017-03-22 03:01+0400\n"
+"PO-Revision-Date: 2017-03-22 03:01+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -116,6 +116,10 @@ msgstr ""
 msgid ""
 "Hypermarket requires at least WordPress version 4.4. You are running version "
 "%s. Please upgrade and try again."
+msgstr ""
+
+#: includes/classes/class-bootstrap-navwalker.php:179
+msgid "Add a menu"
 msgstr ""
 
 #: includes/classes/class-customizer.php:45
@@ -913,11 +917,11 @@ msgctxt "placeholder"
 msgid "Confirm password*"
 msgstr ""
 
-#: includes/extras.php:200
+#: includes/extras.php:189
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/extras.php:220
+#: includes/extras.php:209
 #, php-format
 msgid " | Get %1$s for free."
 msgstr ""
@@ -926,7 +930,7 @@ msgstr ""
 msgid "Sale"
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:594
+#: includes/woocommerce-template-functions.php:615
 msgid "Back To Cart"
 msgstr ""
 
@@ -979,14 +983,14 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/hypermarket-paging-navigation.php:43
-#: template-parts/hypermarket-paging-navigation.php:45
+#: template-parts/hypermarket-paging-navigation.php:54
+#: template-parts/hypermarket-paging-navigation.php:56
 #: template-parts/hypermarket-single-post-paging.php:19
 msgid "Prev"
 msgstr ""
 
-#: template-parts/hypermarket-paging-navigation.php:51
-#: template-parts/hypermarket-paging-navigation.php:53
+#: template-parts/hypermarket-paging-navigation.php:62
+#: template-parts/hypermarket-paging-navigation.php:64
 #: template-parts/hypermarket-single-post-paging.php:18
 msgid "Next"
 msgstr ""
