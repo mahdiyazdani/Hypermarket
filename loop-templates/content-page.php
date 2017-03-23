@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.3
+ * @since 		    1.0.4.2
  */
 /**
  * Functions hooked into "hypermarket_featured_image_single_page" action
@@ -30,6 +30,13 @@ do_action('hypermarket_featured_image_single_page');
 			while (have_posts()):
 				the_post();
 				the_content();
+				/**
+				 * Functions hooked into "hypermarket_end_single_page_content" action
+				 *
+				 * @hooked hypermarket_single_page_paging     - 10
+				 * @since 1.0.4.2
+				 */
+				do_action('hypermarket_end_single_page_content');
 			endwhile;
 			/**
 			 * Functions hooked into "hypermarket_after_single_page_content" action
