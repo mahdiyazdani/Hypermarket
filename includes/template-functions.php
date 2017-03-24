@@ -22,18 +22,6 @@ if (!function_exists('hypermarket_skip_links')):
 		get_template_part('template-parts/hypermarket-skip-links');
 	}
 endif;
-/**
- * Page Preloading.
- *
- * @package Hooked into "hypermarket_before_header_area"
- * @since 1.0.1
- */
-if (!function_exists('hypermarket_preloader')):
-	function hypermarket_preloader()
-	{
-		get_template_part('template-parts/hypermarket-preloader');
-	}
-endif;
 // ======================================================================
 // Hooked into "hypermarket_header_area"
 // ======================================================================
