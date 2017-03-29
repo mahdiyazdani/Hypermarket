@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.1
+ * @since       1.0.4.3
  */
 if (!defined('ABSPATH')):
     exit;
@@ -37,7 +37,7 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
             return;
         endif;
         extract($args, EXTR_SKIP);
-        $title = empty($instance['title']) ? ' ' : apply_filters('widget_title', $instance['title']);
+        $title = empty($instance['title']) ? '' : apply_filters('hypermarket_payment_methods_icons_widget_title', $instance['title']);
         $icon_1 = empty($instance['icon_1']) ? '' : esc_attr($instance['icon_1']);
         $icon_2 = empty($instance['icon_2']) ? '' : esc_attr($instance['icon_2']);
         $icon_3 = empty($instance['icon_3']) ? '' : esc_attr($instance['icon_3']);
@@ -52,7 +52,7 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
         endif;
         $output.= '<ul>' . PHP_EOL;
         for ($counter = 1; $counter <= 6; $counter++):
-            if (!empty(esc_attr($instance['icon_' . $counter . '']))):
+            if (isset(${'icon_' . $counter}) && !empty(${'icon_' . $counter})):
                 $output.= '<li><i class="hypermarket-icon hypermarket-' . esc_attr($instance['icon_' . $counter . '']) . '"></i></li>' . PHP_EOL;
             endif;
         endfor;
@@ -78,7 +78,7 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
         );
         // Extract the data from the instance variable
         $args = wp_parse_args($instance, $defaults);
-        $title = esc_attr($args['title']);
+        $title = empty($args['title']) ? '' : esc_attr($args['title']);
         $icon_1 = empty($args['icon_1']) ? '' : esc_attr($args['icon_1']);
         $icon_2 = empty($args['icon_2']) ? '' : esc_attr($args['icon_2']);
         $icon_3 = empty($args['icon_3']) ? '' : esc_attr($args['icon_3']);
@@ -146,13 +146,13 @@ class Hypermarket_Payment_Method_Icons_Widget extends WP_Widget
     function update($new_instance, $old_instance)
     {
         $instance = $old_instance;
-        $instance['title'] = hypermarket_sanitize_text($new_instance['title']);
-        $instance['icon_1'] = hypermarket_sanitize_text($new_instance['icon_1']);
-        $instance['icon_2'] = hypermarket_sanitize_text($new_instance['icon_2']);
-        $instance['icon_3'] = hypermarket_sanitize_text($new_instance['icon_3']);
-        $instance['icon_4'] = hypermarket_sanitize_text($new_instance['icon_4']);
-        $instance['icon_5'] = hypermarket_sanitize_text($new_instance['icon_5']);
-        $instance['icon_6'] = hypermarket_sanitize_text($new_instance['icon_6']);
+        $instance['title'] = sanitize_text_field($new_instance['title']);
+        $instance['icon_1'] = sanitize_text_field($new_instance['icon_1']);
+        $instance['icon_2'] = sanitize_text_field($new_instance['icon_2']);
+        $instance['icon_3'] = sanitize_text_field($new_instance['icon_3']);
+        $instance['icon_4'] = sanitize_text_field($new_instance['icon_4']);
+        $instance['icon_5'] = sanitize_text_field($new_instance['icon_5']);
+        $instance['icon_6'] = sanitize_text_field($new_instance['icon_6']);
         wp_cache_delete('hypermarket_payment_methods_icons_widget', 'widget');
         return $instance;
     }
