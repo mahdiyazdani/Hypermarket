@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4
+ * @since       1.0.4.3
  */
 if (!defined('ABSPATH')):
     exit;
@@ -33,13 +33,13 @@ if (!class_exists('Hypermarket_Customizer')):
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.0.4
+         * @since 1.0.4.3
          */
         function customize_register($wp_customize)
         {
             $wp_customize->add_setting('hypermarket_mobile_blogname', array(
                 'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'hypermarket_sanitize_text'
+                'sanitize_callback' => 'sanitize_text_field'
             ));
             $wp_customize->add_control('hypermarket_mobile_blogname', array(
                 'label' => __('Site Title', 'hypermarket') ,
