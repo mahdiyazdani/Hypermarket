@@ -1,3 +1,7 @@
+= 1.0.4.3 =
+* Updated theme credits.
+* Updated custom widgets retrieving methods.
+
 = 1.0.4.2 =
 * Added support to split WordPress pages into multiple pages.
 * Added theme prefix to all missing WooCommerce methods.
