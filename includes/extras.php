@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.1
+ * @since       1.0.4.3
  */
 /**
  * Query WooCommerce activation.
@@ -72,33 +72,12 @@ if (!function_exists('hypermarket_do_shortcode')):
     }
 endif;
 /**
- * Sanitize text
- *
- * @since 1.0
- */
-if (!function_exists('hypermarket_sanitize_text')):
-    function hypermarket_sanitize_text($text)
-    {
-        return sanitize_text_field($text);
-    }
-endif;
-/**
- * Sanitize textarea
- *
- * @since 1.0
- */
-if (!function_exists('hypermarket_sanitize_textarea')):
-    function hypermarket_sanitize_textarea($text)
-    {
-        return esc_textarea($text);
-    }
-endif;
-/**
  * Sanitize Checkbox
  * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
  * as a boolean value, either TRUE or FALSE.
- * 
- * @since 1.0.4
+ *
+ * @link https://github.com/WPTRT/code-examples/blob/master/customizer/sanitization-callbacks.php
+ * @since 1.0.4.3
  */
 if (!function_exists('hypermarket_sanitize_checkbox')):
     function hypermarket_sanitize_checkbox($checked)
