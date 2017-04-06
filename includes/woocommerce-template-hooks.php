@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.2
+ * @since 	    1.0.5
  */
 /**
  * Items present in cart
@@ -119,10 +119,12 @@ add_action('woocommerce_after_single_product_summary', 'hypermarket_output_produ
 /**
  * Cart
  *
- * @since 1.0
+ * @see  hypermarket_update_remove_text()			-> woocommerce-template-functions.php
+ * @since 1.0.5
  */
 remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10);
 add_action('woocommerce_after_cart', 'woocommerce_cross_sell_display', 10);
+add_filter('gettext', 'hypermarket_update_remove_text', 20, 3);
 /**
  * Checkout
  *
