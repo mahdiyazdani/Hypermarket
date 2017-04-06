@@ -6,7 +6,7 @@
  * @package 		Hooked into "woocommerce_after_shop_loop"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4.1
+ * @since 		    1.0.5
  */
 global $wp_query;
 ?>
@@ -50,18 +50,20 @@ global $wp_query;
 	<?php if(is_array($page_numbers)): ?>
 		<div class="pager">
 			<?php
-				if(! empty(get_previous_posts_link())):
+				$get_prev_post_link = get_previous_posts_link();
+				if(! empty($get_prev_post_link)):
 					previous_posts_link(esc_html__('Prev', 'hypermarket'));
 				else:
-					echo '<a href="#" class="current">' . esc_html__('Prev', 'hypermarket') . '</a>' . PHP_EOL;
+					echo '<a href="#" class="current">' . esc_html__('Prev', 'hypermarket') . '</a>';
 				endif;
 			?>
 			<span>|</span>
 			<?php 
-				if(! empty(get_next_posts_link())):
+				$get_next_post_link = get_next_posts_link();
+				if(! empty($get_next_post_link)):
 					next_posts_link(esc_html__('Next', 'hypermarket'));
 				else:
-					echo '<a href="#" class="current">' . esc_html__('Next', 'hypermarket') . '</a>' . PHP_EOL;
+					echo '<a href="#" class="current">' . esc_html__('Next', 'hypermarket') . '</a>';
 				endif;
 			?>
 		</div><!-- .pager -->
