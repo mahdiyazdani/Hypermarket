@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.3
+ * @since       1.0.5
  */
 /**
  * Query WooCommerce activation.
@@ -129,7 +129,7 @@ endif;
 /**
  * Comments list template.
  *
- * @since 1.0.4.1
+ * @since 1.0.5
  */
 if (!function_exists('hypermarket_comments_list')):
     function hypermarket_comments_list($comment, $args, $depth)
@@ -146,7 +146,8 @@ if (!function_exists('hypermarket_comments_list')):
                 <div class="column">
                     <p class="meta">
                         <strong itemprop="author"><?php
-                            echo (!empty(get_comment_author_url($comment))) ? '<a href="' . esc_url(get_comment_author_url($comment)) . '" class="hypermarket-link-style" target="_blank" rel="external nofollow">' . esc_html(get_comment_author($comment)) . '</a>' : esc_html(get_comment_author($comment)); ?></strong> – <?php
+                            $get_comment_author_url = esc_url(get_comment_author_url($comment));
+                            echo (!empty($get_comment_author_url)) ? '<a href="' . $get_comment_author_url . '" class="hypermarket-link-style" target="_blank" rel="external nofollow">' . esc_html(get_comment_author($comment)) . '</a>' : esc_html(get_comment_author($comment)); ?></strong> &ndash; <?php
                             echo '<a href="' . esc_url(get_comment_link($comment)) . '" class="comment-permalink scroll-to" target="_self" data-comment-id="comment-' . esc_attr(get_comment_ID()) . '"><time datetime="' . esc_attr(get_comment_date('c')) . '">' . esc_html(get_comment_date()) . '</time></a>';         ?>:
                     </p><!-- .meta -->
                 </div><!-- .column -->
@@ -154,7 +155,7 @@ if (!function_exists('hypermarket_comments_list')):
                   <span class="comment-reply">
                     <?php
                         comment_reply_link(array_merge($args, array(
-                            'reply_text' => '<i class="material-icons reply"></i>',
+                            'reply_text' => wp_kses_post('<i class="material-icons reply"></i>'),
                             'depth' => $depth,
                             'max_depth' => $args['max_depth']
                         )));
@@ -165,7 +166,7 @@ if (!function_exists('hypermarket_comments_list')):
               <?php
                     comment_text($comment);
                     if ('0' == $comment->comment_approved):
-                        echo '<em class="hypermarket-comment-awaiting-moderation">' . esc_html__('Your comment is awaiting moderation.', 'hypermarket') . '</em>' . PHP_EOL;
+                        echo '<em class="hypermarket-comment-awaiting-moderation">' . esc_html__('Your comment is awaiting moderation.', 'hypermarket') . '</em>';
                     endif;
                 ?>
             </div><!-- .comment-body -->
@@ -187,7 +188,7 @@ if (!function_exists('hypermarket_credits')):
             // You `HAVE` to keep this credit link. We really do appreciate it ;)
             printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url( HypermarketThemeURI ) . '" rel="author" target="_blank">' . esc_attr(HypermarketThemeName) . '</a>');
         endif;
-        echo '</p>' . PHP_EOL;
+        echo '</p>';
     }
 endif;
 /**
@@ -198,6 +199,6 @@ endif;
 if (!function_exists('hypermarket_scroll_top')):
     function hypermarket_scroll_top()
     {
-        echo '<!-- Scroll To Top Button --><div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>' . PHP_EOL;
+        echo '<!-- Scroll To Top Button --><div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>';
     }
 endif;
