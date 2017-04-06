@@ -18,7 +18,7 @@ else:
 endif;
 for ($counter = 0; $counter <= $widget_columns; $counter++):
 	if (is_active_sidebar('footer-' . $counter)):
-		echo '<div class="column">' . PHP_EOL;
+		echo '<div class="column">';
 		dynamic_sidebar('footer-' . intval($counter));
 		if($counter == 1):
 			hypermarket_credits();
@@ -26,12 +26,12 @@ for ($counter = 0; $counter <= $widget_columns; $counter++):
 		if($counter == $widget_columns):
 			hypermarket_scroll_top();
 		endif;
-		echo '</div><!-- .column -->' . PHP_EOL;
+		echo '</div><!-- .column -->';
 	endif;
 endfor;
 if($widget_columns === 0):
-	echo '<div class="column">' . PHP_EOL;
+	echo '<div class="column">';
 		hypermarket_credits();
 		hypermarket_scroll_top();
-	echo '</div><!-- .column -->' . PHP_EOL;
+	echo '</div><!-- .column -->';
 endif;
