@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.1
+ * @since 	    1.0.5
  */
 // ======================================================================
 // Hooked into "wp"
@@ -78,13 +78,16 @@ endif;
  * Shop page featured image.
  *
  * @package Hooked into "woocommerce_before_main_content"
- * @since 1.0.2
+ * @since 1.0.5
  */
 if (!function_exists('hypermarket_shop_featured_image')):
 	function hypermarket_shop_featured_image()
 	{
-		if (hypermarket_is_woocommerce_activated() && is_shop() && !empty(get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id')))):
-			get_template_part('template-parts/hypermarket-featured-image-background-single-page');
+		if (hypermarket_is_woocommerce_activated() && is_shop()):
+			$get_shop_page_featured_image_url = get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id'));
+			if (!empty($get_shop_page_featured_image_url)):
+				get_template_part('template-parts/hypermarket-featured-image-background-single-page');
+			endif;
 		endif;
 	}
 endif;
@@ -102,7 +105,7 @@ if (!function_exists('hypermarket_shop_thumbnail_wrapper_start')):
 	function hypermarket_shop_thumbnail_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-thumbnail">' . PHP_EOL;
+			echo '<div class="shop-thumbnail">';
 		endif;
 	}
 endif;
@@ -136,7 +139,7 @@ if (!function_exists('hypermarket_shop_item_tools_wrapper_start')):
 	function hypermarket_shop_item_tools_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-item-tools">' . PHP_EOL;
+			echo '<div class="shop-item-tools">';
 		endif;
 	}
 endif;
@@ -154,8 +157,8 @@ if (!function_exists('hypermarket_shop_thumbnail_item_tools_wrapper_end')):
 	function hypermarket_shop_thumbnail_item_tools_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-item-tools -->' . PHP_EOL;
-			echo '</div><!-- .shop-thumbnail -->' . PHP_EOL;
+			echo '</div><!-- .shop-item-tools -->';
+			echo '</div><!-- .shop-thumbnail -->';
 		endif;
 	}
 endif;
@@ -169,7 +172,7 @@ if (!function_exists('hypermarket_shop_item_details_wrapper_start')):
 	function hypermarket_shop_item_details_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-item-details">' . PHP_EOL;
+			echo '<div class="shop-item-details">';
 		endif;
 	}
 endif;
@@ -184,7 +187,7 @@ if (!function_exists('hypermarket_template_loop_product_title')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			global $product;
-			echo '<h3 class="shop-item-title"><a href="' . esc_url(get_permalink($product->get_id())) . '" target="_self">' . esc_html(get_the_title()) . '</a></h3><!-- .shop-item-title -->' . PHP_EOL;
+			echo '<h3 class="shop-item-title"><a href="' . esc_url(get_permalink($product->get_id())) . '" target="_self">' . esc_html(get_the_title()) . '</a></h3><!-- .shop-item-title -->';
 		endif;
 	}
 endif;
@@ -221,7 +224,7 @@ if (!function_exists('hypermarket_template_loop_price')):
 							'class' => array()
 						)
 					));
-				echo '</span>' . PHP_EOL; 
+				echo '</span>'; 
  			endif;
 		endif;
 	}
@@ -236,7 +239,7 @@ if (!function_exists('hypermarket_shop_item_details_wrapper_end')):
 	function hypermarket_shop_item_details_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-item-details -->' . PHP_EOL;
+			echo '</div><!-- .shop-item-details -->';
 		endif;
 	}
 endif;
@@ -255,11 +258,11 @@ if (!function_exists('hypermarket_woocommerce_before_shop_loop')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			if (is_active_sidebar('sidebar')):
-				echo '<div class="row padding-top">' . PHP_EOL;
-				echo '<!-- Products Grid -->' . PHP_EOL;
-				echo '<div class="col-md-9 col-sm-8">' . PHP_EOL;
+				echo '<div class="row padding-top">';
+				echo '<!-- Products Grid -->';
+				echo '<div class="col-md-9 col-sm-8">';
 			else:
-				echo '<!-- Products Grid -->' . PHP_EOL;
+				echo '<!-- Products Grid -->';
 				// 4 Columns
 				$GLOBALS['product_grid_classes'] = 'col-lg-3 col-md-4 col-sm-6 without-sidebar';
 				$hypermarket_woocommerce_loop_columns = 4;
@@ -281,8 +284,8 @@ if (!function_exists('hypermarket_shop_bar_wrapper_start')):
 	function hypermarket_shop_bar_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Shop Bar -->' . PHP_EOL;
-			echo '<div class="shop-bar">' . PHP_EOL;
+			echo '<!-- Shop Bar -->';
+			echo '<div class="shop-bar">';
 		endif;
 	}
 endif;
@@ -296,7 +299,7 @@ if (!function_exists('hypermarket_shop_bar_wrapper_end')):
 	function hypermarket_shop_bar_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-bar -->' . PHP_EOL;
+			echo '</div><!-- .shop-bar -->';
 		endif;
 	}
 endif;
@@ -330,7 +333,7 @@ if (!function_exists('hypermarket_shop_loop_wrapper_start')):
 	function hypermarket_shop_loop_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="row">' . PHP_EOL;
+			echo '<div class="row">';
 		endif;
 	}
 endif;
@@ -348,8 +351,8 @@ if (!function_exists('hypermarket_shop_loop_wrapper_end')):
 	function hypermarket_shop_loop_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .row -->' . PHP_EOL;
-			echo '<hr>' . PHP_EOL;
+			echo '</div><!-- .row -->';
+			echo '<hr>';
 		endif;
 	}
 endif;
@@ -364,7 +367,7 @@ if (!function_exists('hypermarket_woocommerce_after_shop_loop')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			if (is_active_sidebar('sidebar')):
-				echo '</div><!-- .col-md-9 col-sm-8 -->' . PHP_EOL;
+				echo '</div><!-- .col-md-9 col-sm-8 -->';
 			endif;
 		endif;
 	}
@@ -379,7 +382,7 @@ if (!function_exists('hypermarket_shop_catalog_wrapper_end')):
 	function hypermarket_shop_catalog_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</section><!-- .container -->' . PHP_EOL;
+			echo '</section><!-- .container -->';
 		endif;
 	}
 endif;
@@ -459,9 +462,9 @@ if (!function_exists('hypermarket_product_notice_wrapper_start')):
 	function hypermarket_product_notice_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div id="hypermarket-single-product-notice" class="container">' . PHP_EOL;
-			echo '<div class="row">' . PHP_EOL;
-			echo '<div class="col-md-8 col-md-offset-2">' . PHP_EOL;
+			echo '<div id="hypermarket-single-product-notice" class="container">';
+			echo '<div class="row">';
+			echo '<div class="col-md-8 col-md-offset-2">';
 		endif;
 	}
 endif;
@@ -476,8 +479,8 @@ if (!function_exists('hypermarket_product_notice_wrapper_end')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			echo '</div><!-- .col-md-8 -->';
-			echo '</div><!-- .row -->' . PHP_EOL;
-			echo '</div><!-- #hypermarket-single-product-notice -->' . PHP_EOL;
+			echo '</div><!-- .row -->';
+			echo '</div><!-- #hypermarket-single-product-notice -->';
 		endif;
 	}
 endif;
@@ -505,8 +508,8 @@ if (!function_exists('hypermarket_single_product_summary_wrapper_start')):
 	function hypermarket_single_product_summary_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Product Info -->' . PHP_EOL;
-			echo '<div class="product-info padding-top-2x padding-bottom-3x text-center">' . PHP_EOL;
+			echo '<!-- Product Info -->';
+			echo '<div class="product-info padding-top-2x padding-bottom-3x text-center">';
 		endif;
 	}
 endif;
@@ -524,7 +527,7 @@ if (!function_exists('hypermarket_single_add_to_cart_wrapper_start')):
 	function hypermarket_single_add_to_cart_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="product-tools shop-item">' . PHP_EOL;
+			echo '<div class="product-tools shop-item">';
 		endif;
 	}
 endif;
@@ -538,7 +541,7 @@ if (!function_exists('hypermarket_single_add_to_cart_wrapper_end')):
 	function hypermarket_single_add_to_cart_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .product-tools -->' . PHP_EOL;
+			echo '</div><!-- .product-tools -->';
 		endif;
 	}
 endif;
@@ -556,9 +559,9 @@ if (!function_exists('hypermarket_single_product_summary_wrapper_end')):
 	function hypermarket_single_product_summary_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .product-info -->' . PHP_EOL;
-			echo '</div><!-- .container -->' . PHP_EOL;
-			echo '</section><!-- .fw-section.bg-gray -->' . PHP_EOL;
+			echo '</div><!-- .product-info -->';
+			echo '</div><!-- .container -->';
+			echo '</section><!-- .fw-section.bg-gray -->';
 		endif;
 	}
 endif;
@@ -572,8 +575,8 @@ if (!function_exists('hypermarket_output_product_data_tabs_wrapper_start')):
 	function hypermarket_output_product_data_tabs_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Product Tabs -->' . PHP_EOL;
-			echo '<section class="container padding-top-2x">' . PHP_EOL;
+			echo '<!-- Product Tabs -->';
+			echo '<section class="container padding-top-2x">';
 		endif;
 	}
 endif;
@@ -587,8 +590,31 @@ if (!function_exists('hypermarket_output_product_data_tabs_wrapper_end')):
 	function hypermarket_output_product_data_tabs_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</section><!-- .container -->' . PHP_EOL;
+			echo '</section><!-- .container -->';
 		endif;
+	}
+endif;
+// ======================================================================
+// Hooked into "gettext"
+// ======================================================================
+
+/**
+ * Update remove text to material icon in cart and checkout pages.
+ *
+ * @package Hooked into "gettext"
+ * @since 1.0.5
+ */
+if (!function_exists('hypermarket_change_remove_text')):
+	function hypermarket_update_remove_text($translated_text, $text, $domain)
+	{
+		if (hypermarket_is_woocommerce_activated() && (is_cart() || is_checkout())):
+			switch ($translated_text):
+				case esc_attr('[Remove]'):
+					$translated_text = wp_kses_post('<i class="material-icons close"></i>');
+					break;
+			endswitch;
+		endif;
+		return $translated_text;
 	}
 endif;
 // ======================================================================
@@ -608,7 +634,7 @@ if (!function_exists('hypermarket_back_to_cart_btn_before_submit')):
 			echo '<a href="' . esc_url(WC()->cart->get_cart_url()) . '" class="btn btn-default btn-ghost icon-left btn-block waves-effect waves-light" target="_self">';
 			echo '<i class="material-icons arrow_back"></i>';
 			esc_html_e('Back To Cart', 'hypermarket');
-			echo '</a><!-- .btn -->' . PHP_EOL;
+			echo '</a><!-- .btn -->';
 		endif;
 	}
 endif;
