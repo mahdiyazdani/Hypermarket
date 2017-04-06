@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4.1
+ * @since 		    1.0.5
  */
 /**
  * Functions hooked into "hypermarket_featured_image_single_post" action
@@ -43,12 +43,18 @@ do_action('hypermarket_featured_image_single_post');
 								<?php the_author_posts_link(); ?>
 								<span class="divider"></span>
 								<?php the_date(get_option('date_format')); ?>
-								<?php if( !empty(get_the_category()) ): ?>
+								<?php 
+									$get_categories = get_the_category();
+									if( !empty( $get_categories ) ): 
+								?>
 									<span class="divider"></span>
 									<span><?php esc_html_e('in', 'hypermarket'); ?> </span>
 									<?php the_category(', '); ?>
 								<?php endif; ?>
-								<?php if( !empty(get_the_tags()) ): ?>
+								<?php 
+									$get_tags = get_the_tags();
+									if( !empty( $get_tags ) ): 
+								?>
 									<span class="divider"></span>
 									<?php the_tags('#', ' #', ''); ?>
 								<?php endif; ?>
