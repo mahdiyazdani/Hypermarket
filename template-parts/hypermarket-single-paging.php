@@ -8,8 +8,8 @@
  * @since 		    1.0.4.2
  */
 if (hypermarket_is_post_paginated()):
-	echo '<div class="pagination hypermarket-pagination">' . PHP_EOL;
-	echo '<div class="pager post-pager">' . PHP_EOL;
+	echo '<div class="pagination hypermarket-pagination">';
+	echo '<div class="pager post-pager">';
 	$args = apply_filters('hypermarket_post_paging_args', array(
 		'before' => __('Pages:', 'hypermarket') . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
 		'after' => '',
@@ -20,6 +20,6 @@ if (hypermarket_is_post_paginated()):
 		'pagelink' => '%'
 	));
 	wp_link_pages($args);
-	echo '</div><!-- .pager -->' . PHP_EOL;
-	echo '</div><!-- .pagination -->' . PHP_EOL;
+	echo '</div><!-- .pager -->';
+	echo '</div><!-- .pagination -->';
 endif;
