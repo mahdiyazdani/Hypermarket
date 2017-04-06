@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-03-22 03:01+0400\n"
-"PO-Revision-Date: 2017-03-22 03:01+0400\n"
+"POT-Creation-Date: 2017-04-05 02:26+0400\n"
+"PO-Revision-Date: 2017-04-05 02:26+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -669,107 +669,107 @@ msgstr ""
 msgid "Widgetized Footer Area %d."
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:18
+#: includes/classes/class-payment-method-icons-widget.php:27
 msgid "Payment Method Icons"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:21
+#: includes/classes/class-payment-method-icons-widget.php:30
 msgid "A simple widget that displays payment method icons."
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:71
+#: includes/classes/class-payment-method-icons-widget.php:89
 msgid "Pay Secure"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:90
-#: includes/classes/class-social-icons-widget.php:126
+#: includes/classes/class-payment-method-icons-widget.php:108
+#: includes/classes/class-social-icons-widget.php:144
 msgid "Title:"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:97
-#: includes/classes/class-social-icons-widget.php:133
+#: includes/classes/class-payment-method-icons-widget.php:115
+#: includes/classes/class-social-icons-widget.php:151
 #, php-format
 msgid "Icon %1$s:"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:134
-#: includes/classes/class-social-icons-widget.php:185
+#: includes/classes/class-payment-method-icons-widget.php:118
+#: includes/classes/class-social-icons-widget.php:154
 msgid "Select"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:135
+#: includes/classes/class-payment-method-icons-widget.php:119
 msgid "Visa"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:136
+#: includes/classes/class-payment-method-icons-widget.php:120
 msgid "Skrill"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:137
+#: includes/classes/class-payment-method-icons-widget.php:121
 msgid "MasterCard"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:138
+#: includes/classes/class-payment-method-icons-widget.php:122
 msgid "PayPal"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:139
+#: includes/classes/class-payment-method-icons-widget.php:123
 msgid "American Express"
 msgstr ""
 
-#: includes/classes/class-payment-method-icons-widget.php:140
+#: includes/classes/class-payment-method-icons-widget.php:124
 msgid "SSL Certificate"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:18
+#: includes/classes/class-social-icons-widget.php:27
 msgid "Social Icons"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:21
+#: includes/classes/class-social-icons-widget.php:30
 msgid "A simple widget that displays social network icons."
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:83
+#: includes/classes/class-social-icons-widget.php:101
 msgid "Follow Us"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:186
+#: includes/classes/class-social-icons-widget.php:155
 msgid "Facebook"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:187
+#: includes/classes/class-social-icons-widget.php:156
 msgid "Google Plus"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:188
+#: includes/classes/class-social-icons-widget.php:157
 msgid "Instagram"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:189
+#: includes/classes/class-social-icons-widget.php:158
 msgid "Linkedin"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:190
+#: includes/classes/class-social-icons-widget.php:159
 msgid "Pinterest"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:191
+#: includes/classes/class-social-icons-widget.php:160
 msgid "Twitter"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:192
+#: includes/classes/class-social-icons-widget.php:161
 msgid "Vimeo"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:193
+#: includes/classes/class-social-icons-widget.php:162
 msgid "WordPress"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:194
+#: includes/classes/class-social-icons-widget.php:163
 msgid "Youtube"
 msgstr ""
 
-#: includes/classes/class-social-icons-widget.php:199
+#: includes/classes/class-social-icons-widget.php:168
 #, php-format
 msgid "Icon URL %1$s:"
 msgstr ""
@@ -917,20 +917,20 @@ msgctxt "placeholder"
 msgid "Confirm password*"
 msgstr ""
 
-#: includes/extras.php:189
+#: includes/extras.php:169
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: includes/extras.php:209
+#: includes/extras.php:189
 #, php-format
 msgid " | Get %1$s for free."
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:121
+#: includes/woocommerce-template-functions.php:123
 msgid "Sale"
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:615
+#: includes/woocommerce-template-functions.php:636
 msgid "Back To Cart"
 msgstr ""
 
@@ -946,8 +946,8 @@ msgstr ""
 msgid " ago"
 msgstr ""
 
-#: loop-templates/content-author.php:66 loop-templates/content-post.php:48
-#: template-parts/hypermarket-post-entry.php:34
+#: loop-templates/content-author.php:66 loop-templates/content-post.php:51
+#: template-parts/hypermarket-post-entry.php:37
 msgid "in"
 msgstr ""
 
@@ -983,19 +983,19 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/hypermarket-paging-navigation.php:54
-#: template-parts/hypermarket-paging-navigation.php:56
-#: template-parts/hypermarket-single-post-paging.php:19
+#: template-parts/hypermarket-paging-navigation.php:55
+#: template-parts/hypermarket-paging-navigation.php:57
+#: template-parts/hypermarket-single-paging.php:19
 msgid "Prev"
 msgstr ""
 
-#: template-parts/hypermarket-paging-navigation.php:62
 #: template-parts/hypermarket-paging-navigation.php:64
-#: template-parts/hypermarket-single-post-paging.php:18
+#: template-parts/hypermarket-paging-navigation.php:66
+#: template-parts/hypermarket-single-paging.php:18
 msgid "Next"
 msgstr ""
 
-#: template-parts/hypermarket-post-entry.php:44
+#: template-parts/hypermarket-post-entry.php:50
 msgid "Read More"
 msgstr ""
 
@@ -1003,11 +1003,7 @@ msgstr ""
 msgid "(Sticky)"
 msgstr ""
 
-#: template-parts/hypermarket-preloader.php:14
-msgid "Preloader"
-msgstr ""
-
-#: template-parts/hypermarket-single-post-paging.php:14
+#: template-parts/hypermarket-single-paging.php:14
 msgid "Pages:"
 msgstr ""
 
@@ -1043,7 +1039,7 @@ msgstr ""
 msgid "Awaiting product image"
 msgstr ""
 
-#: woocommerce/cart/cart-empty.php:28 woocommerce/cart/mini-cart.php:77
+#: woocommerce/cart/cart-empty.php:28 woocommerce/cart/mini-cart.php:76
 msgid "Most likely, you just have not put anything into your basket."
 msgstr ""
 
@@ -1051,53 +1047,53 @@ msgstr ""
 msgid "Return to shop"
 msgstr ""
 
-#: woocommerce/cart/cart.php:30
+#: woocommerce/cart/cart.php:32
 #, php-format
 msgid "Currently %1$s %2$d item(s)"
 msgstr ""
 
-#: woocommerce/cart/cart.php:31
+#: woocommerce/cart/cart.php:33
 msgid "in cart"
 msgstr ""
 
-#: woocommerce/cart/cart.php:85 woocommerce/cart/mini-cart.php:62
+#: woocommerce/cart/cart.php:87 woocommerce/cart/mini-cart.php:61
 msgid "Remove this item"
 msgstr ""
 
-#: woocommerce/cart/cart.php:102 woocommerce/checkout/form-coupon.php:29
+#: woocommerce/cart/cart.php:104 woocommerce/checkout/form-coupon.php:29
 msgid "Have discount coupon?"
 msgstr ""
 
-#: woocommerce/cart/cart.php:105 woocommerce/checkout/form-coupon.php:33
+#: woocommerce/cart/cart.php:107 woocommerce/checkout/form-coupon.php:33
 msgid "Coupon:"
 msgstr ""
 
-#: woocommerce/cart/cart.php:106 woocommerce/checkout/form-coupon.php:34
+#: woocommerce/cart/cart.php:108 woocommerce/checkout/form-coupon.php:34
 msgid "Enter coupon code"
 msgstr ""
 
-#: woocommerce/cart/cart.php:110 woocommerce/checkout/form-coupon.php:38
+#: woocommerce/cart/cart.php:112 woocommerce/checkout/form-coupon.php:38
 msgid "Apply Coupon"
 msgstr ""
 
-#: woocommerce/cart/cart.php:115
+#: woocommerce/cart/cart.php:117
 #: woocommerce/cart/proceed-to-checkout-button.php:26
 msgid "Update Cart"
 msgstr ""
 
-#: woocommerce/cart/cross-sells.php:48
+#: woocommerce/cart/cross-sells.php:28
 msgid "You May be Interested in&hellip;"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:85
+#: woocommerce/cart/mini-cart.php:84
 msgid "Subtotal"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:93
+#: woocommerce/cart/mini-cart.php:92
 msgid "View Cart"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:94
+#: woocommerce/cart/mini-cart.php:93
 #: woocommerce/cart/proceed-to-checkout-button.php:29
 msgid "Checkout"
 msgstr ""
@@ -1178,7 +1174,7 @@ msgstr ""
 msgid "Lost your password?"
 msgstr ""
 
-#: woocommerce/global/quantity-input.php:30
+#: woocommerce/global/quantity-input.php:31
 msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
@@ -1188,7 +1184,7 @@ msgid "Showing"
 msgstr ""
 
 #: woocommerce/loop/result-count.php:41
-msgid " the single result"
+msgid " the single item"
 msgstr ""
 
 #: woocommerce/loop/result-count.php:43
@@ -1313,11 +1309,11 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: woocommerce/single-product/related.php:52
+#: woocommerce/single-product/related.php:28
 msgid "Related Products"
 msgstr ""
 
-#: woocommerce/single-product/up-sells.php:49
+#: woocommerce/single-product/up-sells.php:28
 msgid "You May Also Like&hellip;"
 msgstr ""
 
