@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_loop_posts"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4.1
+ * @since 		    1.0.5
  */
 ?>
 <div class="col-md-offset-1 col-sm-8">
@@ -30,11 +30,17 @@
 	?>
 	<div class="blog-post-meta space-top">
 		<div class="column">
-			<?php if( !empty(get_the_category()) ): ?>
+			<?php 
+				$get_categories = get_the_category();
+				if( !empty( $get_categories ) ): 
+			?>
 				<span><?php esc_html_e('in', 'hypermarket'); ?> </span>
 				<?php the_category(', '); ?>
 			<?php endif; ?>
-			<?php if( !empty( get_the_tags() ) ): ?>
+			<?php 
+				$get_tags = get_the_tags();
+				if( !empty( $get_tags ) ): 
+			?>
 				<span class="divider"></span>
 				<?php the_tags('#', ' #', ''); ?>
 			<?php endif; ?>
