@@ -13,11 +13,13 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.3.8
+ * @version 3.0.0
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 <!-- Cart -->
@@ -54,9 +56,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 								<h3 class="item-title">
 									<?php
 										if ( ! $product_permalink ):
-											echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
+											echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
 										else:
-											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
+											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
 										endif;
 									?>
 								</h3>
@@ -118,7 +120,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			wp_nonce_field( 'woocommerce-cart' ); 
 			do_action( 'woocommerce_after_cart_contents' );
 		?>
-	</div><!-- .shop_table -->
+	</div><!-- .col-sm-8 -->
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 <div class="col-md-3 col-md-offset-1 col-sm-4 padding-bottom-2x">
