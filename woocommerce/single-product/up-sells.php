@@ -20,28 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $product, $woocommerce_loop;
-
-if ( ! $upsells = $product->get_upsells() ) {
-	return;
-}
-
-$args = array(
-	'post_type'           => 'product',
-	'ignore_sticky_posts' => 1,
-	'no_found_rows'       => 1,
-	'posts_per_page'      => $posts_per_page,
-	'orderby'             => $orderby,
-	'post__in'            => $upsells,
-	'post__not_in'        => array( $product->id ),
-	'meta_query'          => WC()->query->get_meta_query()
-);
-
-$products                    = new WP_Query( $args );
-$woocommerce_loop['name']    = 'up-sells';
-$woocommerce_loop['columns'] = apply_filters( 'woocommerce_up_sells_columns', $columns );
-
-if ( $products->have_posts() ) : ?>
+if ( $upsells ) : ?>
 
 	<!-- UpSells -->
 	<section class="container padding-top padding-bottom up-sells upsells products">
@@ -52,9 +31,11 @@ if ( $products->have_posts() ) : ?>
 				woocommerce_product_loop_start();
 				// 4 Columns
 				$GLOBALS['product_grid_classes'] = 'col-lg-3 col-sm-6';
-				while ( $products->have_posts() ) : $products->the_post();
+				foreach( $upsells as $upsell ):
+					$post_object = get_post( $upsell->get_id() );
+					setup_postdata( $GLOBALS['post'] =& $post_object );
 					wc_get_template_part( 'content', 'product' );
-				endwhile; // end of the loop.
+				endforeach; // end of the loop.
 				woocommerce_product_loop_end(); 
 			?>
 		</div><!-- .row -->

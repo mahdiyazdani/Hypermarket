@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 <?php else : ?>
 	<form method="post">
 		<fieldset class="space-bottom">
-			<legend><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></legend>
+			<legend><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></legend>
 			<div class="clearfix padding-bottom"></div>
 			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
 			<?php foreach ( $address as $key => $field ) : ?>

@@ -25,7 +25,7 @@ if ( is_user_logged_in() ) {
 }
 
 ?>
-<form method="post" class="login-form login" <?php if ( $hidden ) echo 'style="display:none;"'; ?>>
+<form method="post" class="woocomerce-form woocommerce-form-login login-form login" <?php if ( $hidden ) echo 'style="display:none;"'; ?>>
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 	<?php if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
 	<p class="form-row col-sm-6 form-element form-row-first">

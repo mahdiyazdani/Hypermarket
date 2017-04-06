@@ -30,20 +30,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endforeach; ?>
 			</select>
 		</div><!-- .form-select -->
-		<?php
-			// Keep query string vars intact
-			foreach ( $_GET as $key => $val ) {
-				if ( 'orderby' === $key || 'submit' === $key ):
-					continue;
-				endif;
-				if ( is_array( $val ) ):
-					foreach( $val as $innerVal ):
-						echo '<input type="hidden" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $innerVal ) . '" />';
-					endforeach;
-				else:
-					echo '<input type="hidden" name="' . esc_attr( $key ) . '" value="' . esc_attr( $val ) . '" />';
-				endif;
-			}
-		?>
+		<?php wc_query_string_form_fields( null, array( 'orderby', 'submit' ) ); ?>
 	</form>
 </div><!-- .column -->
