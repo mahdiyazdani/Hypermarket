@@ -25,7 +25,7 @@ if (have_posts() &&  '' !== get_post()->post_content):
 			<?php
 				while (have_posts()):
 					the_post();
-					the_content() . PHP_EOL;
+					the_content();
 				endwhile;
 			?>
 		</div><!-- .col-sm-12 -->
