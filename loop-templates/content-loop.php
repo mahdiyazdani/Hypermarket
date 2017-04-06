@@ -6,7 +6,7 @@
  * @see 			http://codex.wordpress.org/The_Loop
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.3
+ * @since 		    1.0.5
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -19,7 +19,8 @@ do_action('hypermarket_before_loop_posts');
 <!-- Content -->
 <section class="container padding-top-3x">
 		<?php 
-			if( !empty(get_option('page_for_posts', true)) ):
+			$get_posts_page = get_option('page_for_posts', true);
+			if( !empty($get_posts_page) ):
 				echo '<h1 class="mobile-center">' . get_the_title( get_option('page_for_posts', true) ) . '</h1>'; 
 			endif;
 			while (have_posts()):
