@@ -1,3 +1,9 @@
+= 1.0.5 =
+* Updated language file.
+* Updated WordPress gallery styles.
+* Compatibility with WooCommerce 3.0.
+* Compatibility with PHP 5.6 and above.
+
 = 1.0.4.3 =
 * Updated theme credits.
 * Updated custom widgets retrieving methods.
