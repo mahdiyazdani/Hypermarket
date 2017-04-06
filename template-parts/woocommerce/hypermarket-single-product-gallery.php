@@ -5,12 +5,12 @@
  * @package 		Hooked into "woocommerce_before_single_product_summary"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4.1
+ * @since 		    1.0.5
  */
 global $post, $product, $woocommerce;
 
 $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-$attachment_ids = $product->get_gallery_attachment_ids();
+$attachment_ids = $product->get_gallery_image_ids();
 ?>
 <!-- Product Gallery -->
 <div class="images product-gallery woocommerce-product-gallery__wrapper">
