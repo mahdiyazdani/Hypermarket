@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.2
+ * @since 	    1.0.5
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -35,15 +35,15 @@ endif;
 if (!function_exists('hypermarket_header_wrapper_start')):
 	function hypermarket_header_wrapper_start()
 	{
-		echo '<!-- Navbar -->' . PHP_EOL;
-		echo '<header id="hypermarket-header" class="navbar" itemscope="itemscope" itemtype="http://schema.org/WPHeader">' . PHP_EOL;
+		echo '<!-- Navbar -->';
+		echo '<header id="hypermarket-header" class="navbar" itemscope="itemscope" itemtype="http://schema.org/WPHeader">';
 	}
 endif;
 /**
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0.4.1
+ * @since 1.0.5
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
@@ -55,14 +55,15 @@ if (!function_exists('hypermarket_site_brand')):
 			jetpack_the_site_logo();
 		else:
 			$display_tagline = false;
-			if(!empty(get_theme_mod('hypermarket_toggle_tagline')) && get_theme_mod('hypermarket_toggle_tagline') === true):
+			$toggle_tagline = get_theme_mod('hypermarket_toggle_tagline');
+			if(!empty($toggle_tagline) && get_theme_mod('hypermarket_toggle_tagline') === true):
 				$display_tagline = true;
 			endif;
-			echo '<a id="site-logo-visible-desktop" href="' . esc_url(home_url('/')) . '" class="site-logo visible-desktop' . (true === $display_tagline ? ' padding-bottom-none' : '') . '" itemprop="headline" rel="home">' . esc_attr(get_bloginfo('name')) . '</a><!-- .site-logo.visible-desktop -->' . PHP_EOL;
+			echo '<a id="site-logo-visible-desktop" href="' . esc_url(home_url('/')) . '" class="site-logo visible-desktop' . (true === $display_tagline ? ' padding-bottom-none' : '') . '" itemprop="headline" rel="home">' . esc_attr(get_bloginfo('name')) . '</a><!-- .site-logo.visible-desktop -->';
 			if(true === $display_tagline):
-				echo '<span id="site-tagline-visible-desktop" class="site-tagline visible-desktop">' . esc_attr(get_bloginfo('description')) . '</span><!-- .site-tagline.visible-desktop -->' . PHP_EOL;
+				echo '<span id="site-tagline-visible-desktop" class="site-tagline visible-desktop">' . esc_attr(get_bloginfo('description')) . '</span><!-- .site-tagline.visible-desktop -->';
 			endif;
-			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- .site-logo.visible-mobile -->' . PHP_EOL;
+			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- .site-logo.visible-mobile -->';
 			
 		endif;
 	}
@@ -108,8 +109,8 @@ endif;
 if (!function_exists('hypermarket_header_wrapper_end')):
 	function hypermarket_header_wrapper_end()
 	{
-		echo '</header>' . PHP_EOL;
-		echo '<!-- .navbar -->' . PHP_EOL;
+		echo '</header>';
+		echo '<!-- .navbar -->';
 	}
 endif;
 // ======================================================================
@@ -187,7 +188,7 @@ if (!function_exists('hypermarket_homepage_content'))
 if (!function_exists('hypermarket_footer_wrapper_start')):
 	function hypermarket_footer_wrapper_start()
 	{
-		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" itemscope="itemscope" itemtype="http://schema.org/WPFooter">' . PHP_EOL;
+		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" itemscope="itemscope" itemtype="http://schema.org/WPFooter">';
 	}
 endif;
 /**
