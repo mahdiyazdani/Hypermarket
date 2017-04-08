@@ -59,6 +59,7 @@ add_filter('hypermarket_fluid_template', 'hypermarket_fluid_template_class', 10)
 /**
  * Call/Run a shortcode function by tag name.
  *
+ * @link https://github.com/woocommerce/storefront/blob/master/inc/storefront-functions.php#L33-L52
  * @since 1.0
  */
 if (!function_exists('hypermarket_do_shortcode')):
@@ -183,7 +184,7 @@ endif;
 if (!function_exists('hypermarket_credits')):
     function hypermarket_credits()
     {
-        echo '<p class="copyright space-top"><span>' . apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date('Y')) . '</span>';
+        echo '<p class="copyright space-top"><span>' . apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date_i18n(__('Y','hypermarket'))) . '</span>';
         if( apply_filters( 'hypermarket_credit_link', true ) ):
             // You `HAVE` to keep this credit link. We really do appreciate it ;)
             printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url( HypermarketThemeURI ) . '" rel="author" target="_blank">' . esc_attr(HypermarketThemeName) . '</a>');
