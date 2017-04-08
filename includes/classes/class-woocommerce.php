@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.1
+ * @since 	    1.0.5.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,15 +19,23 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.5.1
 		 */
 		public function __construct()
 
 		{
-			add_action('after_switch_theme', array(
+			add_filter('woocommerce_get_image_size_shop_single', array(
 				$this,
-				'image_dimensions'
-			) , 10);
+				'single_image_dimensions'
+			) , 10, 1);
+			add_filter('woocommerce_get_image_size_shop_catalog', array(
+				$this,
+				'catalog_image_dimensions'
+			) , 10, 1);
+			add_filter('woocommerce_get_image_size_shop_thumbnail', array(
+				$this,
+				'thumbnail_image_dimensions'
+			) , 10, 1);
 			add_filter('loop_shop_columns', array(
 				$this,
 				'loop_columns'
@@ -90,36 +98,51 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		}
 		/**
 		 * Using appropriate image dimensions to avoid pixellation.
+		 * Single product image
 		 *
-		 * @since 1.0
+		 * @since 1.0.5.1
 		 */
-		public function image_dimensions()
+		public function single_image_dimensions(array $single = array())
+
+		{
+			$single = apply_filters('hypermarket_single_image_dimensions', array(
+				'width' => '954', // px
+				'height' => '782', // px
+				'crop' => 1 // true
+			));
+			return $single;
+		}
+		/**
+		 * Using appropriate image dimensions to avoid pixellation.
+		 * Catalog product image(s)
+		 *
+		 * @since 1.0.5.1
+		 */
+		public function catalog_image_dimensions(array $catalog = array())
 
 		{
 			$catalog = apply_filters('hypermarket_catalog_image_dimensions', array(
 				'width' => '500', // px
 				'height' => '455', // px
-				'crop' => 1
-				// true
+				'crop' => 1 // true
 			));
-			$single = apply_filters('hypermarket_single_image_dimensions', array(
-				'width' => '954', // px
-				'height' => '782', // px
-				'crop' => 1
-				// true
-			));
+			return $catalog;
+		}
+		/**
+		 * Using appropriate image dimensions to avoid pixellation.
+		 * Thumbnail product image(s)
+		 *
+		 * @since 1.0.5.1
+		 */
+		public function thumbnail_image_dimensions(array $thumbnail = array())
+
+		{
 			$thumbnail = apply_filters('hypermarket_thumbnail_image_dimensions', array(
 				'width' => '160', // px
 				'height' => '131', // px
-				'crop' => 1
-				// false
+				'crop' => 1 // true
 			));
-			// Product category thumbs
-			update_option('shop_catalog_image_size', $catalog);
-			// Single product image
-			update_option('shop_single_image_size', $single);
-			// Image gallery thumbs
-			update_option('shop_thumbnail_image_size', $thumbnail);
+			return $thumbnail;
 		}
 		/**
 		 * Default loop columns on product archives (Shop).
