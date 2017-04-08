@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.5
+ * @since       1.0.5.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -147,4 +147,16 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
         }
     }
 endif;
-add_action('widgets_init', create_function('', 'return register_widget("Hypermarket_Payment_Method_Icons_Widget");'));
+/**
+ * Register the Widget.
+ *
+ * @package Hooked into "widgets_init"
+ * @since 1.0.5.1
+ */
+if (!function_exists('hypermarket_register_payment_methods_icons_widget')):
+    function hypermarket_register_payment_methods_icons_widget()
+    {
+        register_widget( 'Hypermarket_Payment_Method_Icons_Widget' );
+    }
+endif;
+add_action('widgets_init', 'hypermarket_register_payment_methods_icons_widget', 10);

@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.5
+ * @since       1.0.5.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -174,7 +174,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         /**
          * Processes the widget's options to be saved.
          *
-         * @since 1.0.5
+         * @since 1.0.5.1
          */
         public function update($new_instance, $old_instance)
         
@@ -182,26 +182,39 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
             $instance = $old_instance;
             $instance['title'] = sanitize_text_field($new_instance['title']);
             $instance['icon_1'] = sanitize_text_field($new_instance['icon_1']);
-            $instance['icon_url_1'] = esc_url($new_instance['icon_url_1']);
+            $instance['icon_url_1'] = esc_url_raw($new_instance['icon_url_1']);
             $instance['icon_2'] = sanitize_text_field($new_instance['icon_2']);
-            $instance['icon_url_2'] = esc_url($new_instance['icon_url_2']);
+            $instance['icon_url_2'] = esc_url_raw($new_instance['icon_url_2']);
             $instance['icon_3'] = sanitize_text_field($new_instance['icon_3']);
-            $instance['icon_url_3'] = esc_url($new_instance['icon_url_3']);
+            $instance['icon_url_3'] = esc_url_raw($new_instance['icon_url_3']);
             $instance['icon_4'] = sanitize_text_field($new_instance['icon_4']);
-            $instance['icon_url_4'] = esc_url($new_instance['icon_url_4']);
+            $instance['icon_url_4'] = esc_url_raw($new_instance['icon_url_4']);
             $instance['icon_5'] = sanitize_text_field($new_instance['icon_5']);
-            $instance['icon_url_5'] = esc_url($new_instance['icon_url_5']);
+            $instance['icon_url_5'] = esc_url_raw($new_instance['icon_url_5']);
             $instance['icon_6'] = sanitize_text_field($new_instance['icon_6']);
-            $instance['icon_url_6'] = esc_url($new_instance['icon_url_6']);
+            $instance['icon_url_6'] = esc_url_raw($new_instance['icon_url_6']);
             $instance['icon_7'] = sanitize_text_field($new_instance['icon_7']);
-            $instance['icon_url_7'] = esc_url($new_instance['icon_url_7']);
+            $instance['icon_url_7'] = esc_url_raw($new_instance['icon_url_7']);
             $instance['icon_8'] = sanitize_text_field($new_instance['icon_8']);
-            $instance['icon_url_8'] = esc_url($new_instance['icon_url_8']);
+            $instance['icon_url_8'] = esc_url_raw($new_instance['icon_url_8']);
             $instance['icon_9'] = sanitize_text_field($new_instance['icon_9']);
-            $instance['icon_url_9'] = esc_url($new_instance['icon_url_9']);
+            $instance['icon_url_9'] = esc_url_raw($new_instance['icon_url_9']);
             wp_cache_delete('hypermarket_payment_methods_icons_widget', 'widget');
             return $instance;
         }
     }
 endif;
 add_action('widgets_init', create_function('', 'return register_widget("Hypermarket_Social_Icons_Widget");'));
+/**
+ * Register the Widget.
+ *
+ * @package Hooked into "widgets_init"
+ * @since 1.0.5.1
+ */
+if (!function_exists('hypermarket_register_social_icons_widget')):
+    function hypermarket_register_social_icons_widget()
+    {
+        register_widget( 'Hypermarket_Social_Icons_Widget' );
+    }
+endif;
+add_action('widgets_init', 'hypermarket_register_social_icons_widget', 10);
