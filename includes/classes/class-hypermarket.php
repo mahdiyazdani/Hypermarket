@@ -30,10 +30,6 @@ if (!class_exists('Hypermarket')):
 				$this,
 				'setup'
 			) , 10);
-			add_action('after_switch_theme', array(
-				$this,
-				'flush_rules'
-			) , 10);
 			add_action('wp_enqueue_scripts', array(
 				$this,
 				'enqueue'
@@ -41,10 +37,6 @@ if (!class_exists('Hypermarket')):
 			add_action('widgets_init', array(
 				$this,
 				'widgets'
-			) , 10);
-			add_action('load-themes.php', array(
-				$this,
-				'cleanup_default_widgets'
 			) , 10);
 			add_action('wp_enqueue_scripts', array(
 				$this,
@@ -178,20 +170,6 @@ if (!class_exists('Hypermarket')):
 			)) , 'https://fonts.googleapis.com/css')));
 		}
 		/**
-		 * This function is useful when used with custom post types
-		 * as it allows for automatic flushing of the WordPress rewrite rules
-		 * (usually needs to be done manually for new custom post types).
-		 *
-		 * @see https://codex.wordpress.org/Function_Reference/flush_rewrite_rules
-		 * @since 1.0.3
-		 */
-		public function flush_rules()
-
-		{
-			global $wp_rewrite;
-			$wp_rewrite->flush_rules();
-		}
-		/**
 		 * Enqueue scripts and styles.
 		 *
 		 * @since 1.0.4.2
@@ -277,30 +255,6 @@ if (!class_exists('Hypermarket')):
 					register_sidebar($args + $widget_tags);
 				endif;
 			endforeach;
-		}
-		/**
-		 * Clean-up all widgets from all widget areas.
-		 *
-		 * @since 1.0.3
-		 */
-		public function cleanup_default_widgets()
-
-		{
-			global $pagenow;
-			if(current_user_can('administrator') && isset($_GET['activated'] ) && $pagenow == 'themes.php'):
-				//get all registered sidebars
-			    global $wp_registered_sidebars;
-			    //get saved widgets
-			    $widgets = get_option('sidebars_widgets');
-			    //loop over the sidebars and remove all widgets
-			    foreach ($wp_registered_sidebars as $sidebar => $value):
-			        unset($widgets[$sidebar]);
-			    endforeach;
-			    //update with widgets removed
-			    update_option('sidebars_widgets',$widgets);
-			else:
-				return;
-		    endif;
 		}
 		/**
 		 * Enqueue child theme stylesheet.
