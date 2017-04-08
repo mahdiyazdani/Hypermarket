@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.2
+ * @since 	    1.0.5.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -51,12 +51,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		 * Register the welcome screen page.
 		 *
 		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_page
-		 * @since 1.0.3
+		 * @since 1.0.5.1
 		 */
 		public function register_welcome_menu()
 
 		{
-			add_theme_page('Hypermarket', 'Hypermarket', 'activate_plugins', 'hypermarket-welcome-screen', array(
+			$page_title = esc_html__('Welcome to Hypermarket Theme', 'hypermarket');
+			$menu_title = esc_html__('Hypermarket', 'hypermarket');
+			add_theme_page($page_title, $menu_title, 'activate_plugins', 'hypermarket-welcome-screen', array(
 				$this,
 				'hypermarket_welcome_screen'
 			));
@@ -271,13 +273,13 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Call for an admin notice upon successful activation.
 		 *
-		 * @since 1.0.3
+		 * @since 1.0.5.1
 		 */
 		public function activation_admin_notice()
 
 		{
 			global $pagenow;
-			if (current_user_can('administrator') && isset($_GET['activated']) && $pagenow == 'themes.php'):
+			if (current_user_can('manage_options') && isset($_GET['activated']) && $pagenow == 'themes.php'):
 				add_action('admin_notices', array(
 					$this,
 					'welcome_admin_notice'
