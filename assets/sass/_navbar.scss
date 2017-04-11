@@ -196,6 +196,7 @@
 			@include margin(null null 0 null);
 		}
 		.close-btn {
+			color: inherit;
 			font-size: $font-size-base;
 			@include position(absolute, -3px -4px null null);
 			&:hover { color: $brand-danger; }
