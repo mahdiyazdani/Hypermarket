@@ -418,29 +418,15 @@ a img.aligncenter {
 .gallery:not(.grid-item) .gallery-item {
   float: left;
   text-align: center;
-  width: 33%;
   @include padding(3px null);
   @include margin(0 null null null);
 }
-.gallery-columns-2 .gallery-item { width: 50%; }
-.gallery-columns-4 .gallery-item { width: 25%; }
 .gallery:not(.grid-item) img {
   box-shadow: 0px 0px 4px $gray;
-  border: 1px solid $body-bg;
-  background: $brand-default;
-  @include padding(8px);
   @include margin(0 auto);
   @include transition (all .3s ease 0s);
 }
-.gallery:not(.grid-item) img:hover {  background: $gray-lighter; }
-.gallery-columns-2 .attachment-medium {
-  max-width: 92%;
-  height: auto;
-}
-.gallery-columns-4 .attachment-thumbnail {
-  max-width: 84%;
-  height: auto;
-}
+.gallery:not(.grid-item) img:hover { background: $gray-lighter; }
 .gallery:not(.grid-item) .gallery-caption {
   color: $gray;
   font-size: 12px;
@@ -448,3 +434,41 @@ a img.aligncenter {
 }
 .gallery:not(.grid-item) dl, .gallery dt { @include margin(0); }
 .gallery:not(.grid-item) br+br { display: none; }
+.gallery:not(.grid-item).gallery-columns-1 .gallery-item {
+    width: 100%;
+    float: none;
+}
+.gallery:not(.grid-item).gallery-columns-2 .gallery-item {
+    width: 50%
+}
+.gallery:not(.grid-item).gallery-columns-3 .gallery-item {
+    width: 33.3333%
+}
+.gallery:not(.grid-item).gallery-columns-4 .gallery-item {
+    width: 25%
+}
+.gallery:not(.grid-item).gallery-columns-5 .gallery-item {
+    width: 20%
+}
+.gallery:not(.grid-item).gallery-columns-6 .gallery-item {
+    width: 16.6667%
+}
+.gallery:not(.grid-item).gallery-columns-7 .gallery-item {
+    width: 14.2857%
+}
+.gallery:not(.grid-item).gallery-columns-8 .gallery-item {
+    width: 12.5%
+}
+.gallery:not(.grid-item).gallery-columns-9 .gallery-item {
+    width: 11.1111%
+}
+.gallery:not(.grid-item).gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery:not(.grid-item).gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery:not(.grid-item).gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery:not(.grid-item).gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery:not(.grid-item).gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery:not(.grid-item).gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery:not(.grid-item).gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery:not(.grid-item).gallery-columns-9 .gallery-item:nth-child(9n+1) {
+  clear: left;
+}
