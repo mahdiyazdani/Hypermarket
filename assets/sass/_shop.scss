@@ -761,6 +761,15 @@ h1.page-title {
   }
   #order_comments { resize: none; }
 }
+a.woocommerce-remove-coupon {
+  color: $gray-dark;
+  &:hover { color: $brand-danger; }
+}
+.woocommerce-additional-fields {
+  & > h3:first-of-type {
+    @extend .sr-only;
+  }
+}
 .woocommerce-checkout-review-order-table {
   thead {
     @extend .sr-only;
@@ -858,6 +867,7 @@ h1.page-title {
   @include position(relative, null null null null);
   #ship-to-different-address {
     @include padding(null $table-cell-padding);
+    @include margin(null null floor(($font-size-base * 1.875)) null);
   }
   label[for="ship-to-different-address-checkbox"] {
     display: inline-block;
