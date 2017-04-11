@@ -15,7 +15,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.0.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,7 +28,7 @@ if ( ! woocommerce_products_will_display() )
 	return;
 ?>
 <div class="column">
-	<p class="text-sm space-bottom-none">
+	<p class="text-sm space-bottom-none woocommerce-result-count">
 		<?php
 		$paged    = max( 1, $wp_query->get( 'paged' ) );
 		$per_page = $wp_query->get( 'posts_per_page' );
