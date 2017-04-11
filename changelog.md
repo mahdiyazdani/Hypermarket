@@ -1,10 +1,13 @@
+= 1.0.5.2 =
+* Updated outdated WooCommerce template files.
+
 = 1.0.5.1 =
 * Updated language file.
-* Added unminified version of main stylesheet and editor style files.
-* Added new method to set WooCommerce image dimensions upon theme activation.
-* Updated create_function method in custom widgets to make the theme child-theme ready.
+* Added the un-minified version of main stylesheet and editor style files.
+* Added a new method to set WooCommerce image dimensions upon theme activation.
+* Updated create_function method in custom widgets to make the theme child theme ready.
 * Removed automatic flushing of the WordPress rewrite rules - Plugin territory restriction.
-* Removed clean-up all widgets from all widget areas method upon theme activatio - Plugin territory restriction.
+* Removed clean-up all widgets from all widget areas method upon theme activation - Plugin territory restriction.
 
 = 1.0.5 =
 * Updated language file.
