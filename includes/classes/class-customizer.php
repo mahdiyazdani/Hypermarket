@@ -35,7 +35,8 @@ if (!class_exists('Hypermarket_Customizer')):
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
          * @since 1.0.4.3
          */
-        function customize_register($wp_customize)
+        public function customize_register($wp_customize)
+        
         {
             $wp_customize->add_setting('hypermarket_mobile_blogname', array(
                 'capability' => 'edit_theme_options',
