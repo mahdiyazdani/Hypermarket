@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -61,6 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_add_to_cart - 30
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
@@ -77,8 +78,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
-
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
