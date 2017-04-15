@@ -15,6 +15,7 @@
     @include margin(null 15px null null);
     &:last-child {
       text-align: right;
+      white-space: nowrap;
       @include margin(null 0 null null);
       & i {
         border: none;
