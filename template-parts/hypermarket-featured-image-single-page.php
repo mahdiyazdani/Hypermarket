@@ -5,7 +5,7 @@
  * @package 		Hooked into "hypermarket_featured_image_single_page"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.5
+ * @since 		    1.0.6
  */
 if (hypermarket_is_woocommerce_activated() && is_account_page() && is_user_logged_in() && !has_post_thumbnail()):
 	echo '<!-- Featured Background -->';
@@ -22,7 +22,8 @@ elseif (hypermarket_is_woocommerce_activated() && is_shop()):
 else:
 	if (has_post_thumbnail()):
 		global $post;
+		$image_id = get_post_thumbnail_id($post->ID);
 		echo '<!-- Featured Image -->';
-		echo '<div class="featured-image data-background" data-background="' . esc_url(wp_get_attachment_image_src(get_post_thumbnail_id($post->ID) , 'full')[0]) . '"></div><!-- .featured-image -->';
+		echo '<div class="featured-image data-background" data-background="' . esc_url(wp_get_attachment_image_url($image_id, 'full')) . '"></div><!-- .featured-image -->';
 	endif;
 endif;
