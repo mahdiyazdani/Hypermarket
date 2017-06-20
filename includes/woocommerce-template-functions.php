@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.5
+ * @since 	    1.0.6
  */
 // ======================================================================
 // Hooked into "wp"
@@ -78,7 +78,7 @@ endif;
  * Shop page featured image.
  *
  * @package Hooked into "woocommerce_before_main_content"
- * @since 1.0.5
+ * @since 1.0.6
  */
 if (!function_exists('hypermarket_shop_featured_image')):
 	function hypermarket_shop_featured_image()
@@ -86,7 +86,7 @@ if (!function_exists('hypermarket_shop_featured_image')):
 		if (hypermarket_is_woocommerce_activated() && is_shop()):
 			$get_shop_page_featured_image_url = get_the_post_thumbnail_url(get_option('woocommerce_shop_page_id'));
 			if (!empty($get_shop_page_featured_image_url)):
-				get_template_part('template-parts/hypermarket-featured-image-background-single-page');
+				get_template_part('template-parts/hypermarket-featured-image-single-page');
 			endif;
 		endif;
 	}
