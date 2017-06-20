@@ -1,0 +1,25 @@
+/**
+ * Hypermarket Welcome Screen
+ *
+ * @author      Mahdi Yazdani
+ * @package     Hypermarket
+ * @since       1.0.6
+ */
+table#hypermarket-plus {
+	width: 100%;
+}
+table#hypermarket-plus tbody tr {
+	vertical-align: top;
+	padding-bottom: 15px;
+	display: block;
+}
+table#hypermarket-plus tbody tr td.icon {
+	width: 5%;
+}
+table#hypermarket-plus tbody tr td.content {
+	width: 45%;
+}
+table#hypermarket-plus tbody tr td.content strong {
+	padding-bottom: 7px;
+	display: inline-block;
+}
