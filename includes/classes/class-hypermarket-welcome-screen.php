@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.5.1
+ * @since 	    1.0.6
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.4.2
+		 * @since 1.0.6
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -76,6 +76,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 					<h2><?php esc_attr_e('Welcome to Hypermarket Theme', 'hypermarket'); ?></h2>
 					<h2 id="hypermarket-welcome-screen-nav" class="nav-tab-wrapper">
 						<a href="#welcome" class="nav-tab nav-tab-active"><?php esc_html_e('Welcome', 'hypermarket'); ?></a>
+						<a href="#goplus" class="nav-tab"><?php esc_html_e('Go Plus!', 'hypermarket'); ?></a>
 						<a href="#support" class="nav-tab"><?php esc_html_e('Support', 'hypermarket'); ?></a>
 						<a href="#translate" class="nav-tab"><?php esc_html_e('Translate', 'hypermarket'); ?></a>
 						<a href="#contribute" class="nav-tab"><?php esc_html_e('Contribute', 'hypermarket'); ?></a>
@@ -107,6 +108,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														</tr>
 														<tr class="alternate">
 															<td class="row-title">
+																<?php $install_bs3_grid_builder_url = esc_url(admin_url('plugin-install.php?s=woo%20store%20vacation&tab=search&type=term')); ?>
+																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('Woo Store Vacataion - A plugin to put your shop on pause or hold mode for a certain amount of time', 'hypermarket'); ?></a>
+																<br />
+																<small style="font-size:70%;"><em><?php esc_attr_e('Going on vacation? Use Woo Store Vacation settings to make sure your buyers are not disappointed by buying items and unexpectedly waiting a long time to receive them.', 'hypermarket'); ?></em></small>
+															</td>
+														</tr>
+														<tr class="alternate">
+															<td class="row-title">
 																<?php $install_bs3_grid_builder_url = esc_url(admin_url('plugin-install.php?s=bs3%20grid%20builder&tab=search&type=term')); ?>
 																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('BS3 Grid Builder - A plugin for designing and prototyping modern websites', 'hypermarket'); ?></a>
 																<br />
@@ -125,6 +134,59 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</table>
 											</div><!-- .inside -->
 										</div><!-- #welcome-content -->
+										<div id="goplus-content">
+											<h2 class="hndle"><span><?php esc_attr_e('Are You Still Free? Go Plus Now!', 'hypermarket'); ?></span></h2>
+											<div class="inside">
+												<h3><?php esc_attr_e('Everything you need to build stunning e-commerce website in a fast & efficient way.', 'hypermarket'); ?></h3>
+												<br/>
+												<table cellpadding="10" id="hypermarket-plus">
+													<tbody>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-format-image"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Product image flipper', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Secondary product thumbnail on archives that is revealed when you hover over the main product image.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-cloud"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Ajaxify blog posts', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Fetch & display post content without the user moving away from the current page.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-format-gallery"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Gallery post type', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('An easy way to create sortable lightbox galleries consisting of images & videos.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-share"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Share buttons', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Buttons designed to be minimal, yet powerful, with support of popular networks to make your products go viral and get more traffic.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-products"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Copyright credit', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Optionally remove the Hypermarket credit and add your own custom copyright message, including HTML.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-welcome-view-site"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Hero slider', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Image & content slider which supports touch navigation with a swipe gesture.', 'hypermarket'); ?>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div><!-- .inside -->
+										</div><!-- #goplus-content -->
 										<div id="support-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Support and Documentation', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -231,10 +293,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</ul>
 											</div><!-- .inside -->
 										</div><!-- #welcome-sidebar -->
-										<div id="support-sidebar">
-											<h2 class="hndle"><span><?php esc_attr_e('Thank you for using Hypermarket!', 'hypermarket'); ?></span></h2>
+										<div id="goplus-sidebar">
+											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
 												<p><?php esc_attr_e('As you might have already gathered, we love hearing your feedback, And you seem to love giving it!', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('Being on the cutting edge of WordPress development is something we wanted to do from the start. Because of that, we made sure that we avoided the use of clunky additional admin panels and instead, opted to utilize a powerful, options panel using Customizer API. With this setup, you can preview all of the changes you make to your site live without any need to switch windows or refresh the browser in addition to searching for exactly what you need. When you are happy with your changes, hit "Save Changes" button and your updates will go live.', 'hypermarket'); ?></p>
+												<p align="center">
+													<a href="<?php echo esc_url('https://demo.mypreview.one/hypermarket'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Live Demo', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
+												</p>
+											</div><!-- .inside -->
+										</div><!-- #goplus-sidebar -->
+										<div id="support-sidebar">
+											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus', 'hypermarket'); ?></span></h2>
+											<div class="inside">
+												<p><?php esc_attr_e('Every purchase of Hypermarket Plus! includes all extensions (plus updates) for Free!', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('Our top priority is that you have a great experience with us and learn to create amazing code-free websites quickly.', 'hypermarket'); ?></p>
 											</div><!-- .inside -->
 										</div><!-- #support-sidebar -->
@@ -307,11 +379,12 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.4
+		 * @since 1.0.6
 		 */
 		public function enqueue()
 
 		{
+			wp_enqueue_style('hypermarket-welcome-screen-styles', $this->admin_assets_url . 'css/hypermarket-welcome-screen.css', array() , HypermarketThemeVersion);
 			wp_enqueue_script('hypermarket-welcome-screen-scripts', $this->admin_assets_url . 'js/hypermarket-welcome-screen.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
