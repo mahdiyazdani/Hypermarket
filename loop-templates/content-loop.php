@@ -6,7 +6,7 @@
  * @see 			http://codex.wordpress.org/The_Loop
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.5
+ * @since 		    1.0.6
  */
 /**
  * Functions hooked into "hypermarket_before_loop_posts" action
@@ -33,9 +33,8 @@ do_action('hypermarket_before_loop_posts');
 						 * Functions hooked into "hypermarket_loop_posts" action
 						 *
 						 * @hooked hypermarket_post_meta                    - 10
-						 * @hooked hypermarket_process_simple_like          - 20
 						 * @hooked hypermarket_post_entry    			    - 30
-						 * @since 1.0
+						 * @since 1.0.6
 						 */
 						do_action('hypermarket_loop_posts');
 					?>
