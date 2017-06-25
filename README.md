@@ -7,6 +7,8 @@ If you are looking for a stylish and elegant website template for your online st
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
+![Buy Hypermarket Plus](https://www.mypreview.one/assets/img/hypermarket-screenshot.png)
+
 Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic.
 
 In case you want to start an e-commerce project, the Hypermarket WordPress theme is one of the first things you need. The whole design of Hypermarket is ultra-responsive and Retina ready, offering you a site that can be accessed from any device, no matter the size or technology of its screen.
