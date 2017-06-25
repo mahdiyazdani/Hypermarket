@@ -1,4 +1,7 @@
 # Hypermarket   [![Compatible with WPML](https://img.shields.io/badge/Compatible%20with-WPML-308fb0.svg)](https://wpml.org/theme/hypermarket/) [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-hypermarket.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.0.6-77cde3.svg)](https://wp.me/p8930x-8q)
+
+![Buy Hypermarket Plus](https://www.mypreview.one/assets/img/hypermarket-screenshot.png)
+
 If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
@@ -6,9 +9,6 @@ If you are looking for a stylish and elegant website template for your online st
 ►► If you are not a developer, please use the Offical theme post page on wordpress.org.
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-
-
-![Buy Hypermarket Plus](https://www.mypreview.one/assets/img/hypermarket-screenshot.png)
 
 Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic.
 
