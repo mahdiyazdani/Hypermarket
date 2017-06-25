@@ -7,6 +7,7 @@ If you are looking for a stylish and elegant website template for your online st
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
+
 ![Buy Hypermarket Plus](https://www.mypreview.one/assets/img/hypermarket-screenshot.png)
 
 Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic.
