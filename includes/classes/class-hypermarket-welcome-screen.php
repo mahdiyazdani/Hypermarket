@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.6
+ * @since 	    1.0.6.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.6
+		 * @since 1.0.6.1
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -77,6 +77,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 					<h2 id="hypermarket-welcome-screen-nav" class="nav-tab-wrapper">
 						<a href="#welcome" class="nav-tab nav-tab-active"><?php esc_html_e('Welcome', 'hypermarket'); ?></a>
 						<a href="#goplus" class="nav-tab"><?php esc_html_e('Go Plus!', 'hypermarket'); ?></a>
+						<a href="#childtheme" class="nav-tab"><?php esc_html_e('Child Theme', 'hypermarket'); ?></a>
 						<a href="#support" class="nav-tab"><?php esc_html_e('Support', 'hypermarket'); ?></a>
 						<a href="#translate" class="nav-tab"><?php esc_html_e('Translate', 'hypermarket'); ?></a>
 						<a href="#contribute" class="nav-tab"><?php esc_html_e('Contribute', 'hypermarket'); ?></a>
@@ -187,6 +188,30 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</table>
 											</div><!-- .inside -->
 										</div><!-- #goplus-content -->
+										<div id="childtheme-content">
+											<h2 class="hndle"><span><?php esc_attr_e('Make any customization using a child theme', 'hypermarket'); ?></span></h2>
+											<div class="inside">
+												<p><?php esc_attr_e('If you want to customize the theme at coding level, not just CSS, we would strongly suggest using a child theme for that. A child theme allows you to override the parent theme\'s functions, template files and CSS so you will be able to adjust them as you want.', 'hypermarket'); ?></p>
+												<hr/>
+												<h3><?php esc_attr_e('To download a blank Hypermarket child theme, please navigate to:', 'hypermarket'); ?></h3>
+												<br />
+												<p align="center">
+													<a href="<?php echo esc_url('https://github.com/mahdiyazdani/Hypermarket-Child/releases'); ?>" class="button-primary" target="_blank"><strong><?php esc_attr_e('Download Hypermarket Child Theme', 'hypermarket'); ?></strong></a>
+												</p>
+												<br />
+												<br />
+												<h3><?php esc_attr_e('Overriding Parent Theme\'s Template Files', 'hypermarket'); ?></h3>
+												<p><?php esc_attr_e('If you want to edit the code in the theme\'s template files like "header.php", "index.php", etc, you can just copy the file from the parent theme and put it into your child theme folder then edit it from there.', 'hypermarket'); ?></p>
+												<h3><?php esc_attr_e('Overriding Parent Theme\'s Functions', 'hypermarket'); ?></h3>
+												<p><?php esc_attr_e('If you want to edit the functions of the parent theme, for example, the "hypermarket_comments_list()" function, you can do that by copying only the function from the parent theme and put it into the "functions.php" file of your child theme.', 'hypermarket'); ?></p>
+												<p><em><?php esc_attr_e('* Note that, you must copy only the "function() {...}" part, NOT including the "function_exists()" wrapper.', 'hypermarket'); ?></em></p>
+												<h3><?php esc_attr_e('Overriding Parent Theme\'s CSS', 'hypermarket'); ?></h3>
+												<p><?php esc_attr_e('You can do this by either using the "Custom CSS" field in our Customizer or adding your custom CSS code into the "style.css" file of your child theme.', 'hypermarket'); ?></p>
+												<h3><?php esc_attr_e('Remember!', 'hypermarket'); ?></h3>
+												<p><?php esc_attr_e('Whenever you finished updating the parent theme, make sure to check all the code you use in your child theme and update them as necessary to reflect any changes in the parent theme. You might back up your custom code first, update the files with the latest version, then apply your custom code back.', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('By doing this, it ensures that the files and code in your child theme are always up-to-date and to prevent any problem that might occur.', 'hypermarket'); ?></p>
+											</div><!-- .inside -->
+										</div><!-- #childtheme-content -->
 										<div id="support-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Support and Documentation', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -296,17 +321,25 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 										<div id="goplus-sidebar">
 											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
-												<p><?php esc_attr_e('As you might have already gathered, we love hearing your feedback, And you seem to love giving it!', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('Every purchase of Hypermarket Plus! includes all extensions (plus updates) for Free!', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('Being on the cutting edge of WordPress development is something we wanted to do from the start. Because of that, we made sure that we avoided the use of clunky additional admin panels and instead, opted to utilize a powerful, options panel using Customizer API. With this setup, you can preview all of the changes you make to your site live without any need to switch windows or refresh the browser in addition to searching for exactly what you need. When you are happy with your changes, hit "Save Changes" button and your updates will go live.', 'hypermarket'); ?></p>
 												<p align="center">
-													<a href="<?php echo esc_url('https://demo.mypreview.one/hypermarket'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Live Demo', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
+													<a href="<?php echo esc_url(HypermarketThemeAuthorURI); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Buy Now', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
+													<a href="<?php echo esc_url('https://demo.mypreview.one/hypermarket'); ?>" class="button-secondary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Live Demo', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
 												</p>
 											</div><!-- .inside -->
 										</div><!-- #goplus-sidebar -->
-										<div id="support-sidebar">
-											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus', 'hypermarket'); ?></span></h2>
+										<div id="childtheme-sidebar">
+											<h2 class="hndle"><span><?php esc_attr_e('What is a child theme?', 'hypermarket'); ?></span></h2>
 											<div class="inside">
-												<p><?php esc_attr_e('Every purchase of Hypermarket Plus! includes all extensions (plus updates) for Free!', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('A Child Theme is a theme that inherits the same functionality and styling of another theme, called the parent theme. By creating and working on a child theme, you can add, modify or disable parts of your site without changing the original files of the parent theme.', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('You don’t have to worry anymore about updates to the parent theme since there is no need to exclude your modified files from the updating process or to re-add your changes to fit the new version. After the creation of a Child Theme, you end up significantly speeding up your development time.', 'hypermarket'); ?></p>
+											</div><!-- .inside -->
+										</div><!-- #childtheme-sidebar -->
+										<div id="support-sidebar">
+											<h2 class="hndle"><span><?php esc_attr_e('Gain direct access to us', 'hypermarket'); ?></span></h2>
+											<div class="inside">
+												<p><?php esc_attr_e('As you might have already gathered, we love hearing your feedback, And you seem to love giving it!', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('Our top priority is that you have a great experience with us and learn to create amazing code-free websites quickly.', 'hypermarket'); ?></p>
 											</div><!-- .inside -->
 										</div><!-- #support-sidebar -->
