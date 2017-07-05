@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.5
+ * @since       1.0.6.1
  */
 /**
  * Query WooCommerce activation.
@@ -176,10 +176,10 @@ if (!function_exists('hypermarket_comments_list')):
 endif;
 /**
  * Hypermarket Credits.
- * Hypermarket theme comes as standard with a free download link mark. If you wish to remove this and update it with your text, you need to purchase Hypermarket Copyright Credit plugin.
+ * Hypermarket theme comes as standard with a free download link mark. If you wish to remove this and update it with your text, you need to purchase Hypermarket Plus plugin.
  * 
- * @link https://wp.me/p8930x-c2
- * @since 1.0.4.1
+ * @link https://www.mypreview.one
+ * @since 1.0.6.1
  */
 if (!function_exists('hypermarket_credits')):
     function hypermarket_credits()
