@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.3
+ * @since       1.0.6.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -16,24 +16,30 @@ if (!class_exists('Hypermarket_Customizer')):
     class Hypermarket_Customizer
 
     {
+        private $admin_assets_url;
         /**
          * Setup class.
          *
-         * @since 1.0.3
+         * @since 1.0.6.1
          */
         public function __construct()
 
         {
+            $this->admin_assets_url = esc_url(get_template_directory_uri() . '/assets/admin/');
             add_action('customize_register', array(
                 $this,
                 'customize_register'
             ) , 10);
+            add_action('customize_controls_enqueue_scripts', array(
+                $this,
+                'enqueue'
+            ) , 0);
         }
         /**
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.0.4.3
+         * @since 1.0.6.1
          */
         public function customize_register($wp_customize)
         
@@ -97,6 +103,32 @@ if (!class_exists('Hypermarket_Customizer')):
                     }
                 ));
             endif;
+            require get_template_directory() . '/includes/classes/class-customizer-go-plus.php';
+            $wp_customize->register_section_type('Hypermarket_Customizer_Go_Plus');
+            $wp_customize->add_section(
+                new Hypermarket_Customizer_Go_Plus(
+                    $wp_customize,
+                    'hypermarket_go_plus_control',
+                    array(
+                        'title'     => __('Hypermarket', 'hypermarket') ,
+                        'go_plus_text'     => __('Go Plus', 'hypermarket') ,
+                        'go_plus_url' => esc_url(HypermarketThemeAuthorURI)
+                    )
+                )
+            );
+        }
+        /**
+         * Enqueue scripts and styles.
+         *
+         * @since 1.0.6.1
+         */
+        public function enqueue()
+        
+        {
+            wp_enqueue_style('hypermarket-customizer-styles', $this->admin_assets_url . 'css/hypermarket-customizer-styles.css', array() , HypermarketThemeVersion);
+            wp_enqueue_script('hypermarket-customizer-scripts', $this->admin_assets_url . 'js/hypermarket-customizer-styles.js', array(
+                'jquery'
+            ) , HypermarketThemeVersion, true);
         }
     }
 endif;
