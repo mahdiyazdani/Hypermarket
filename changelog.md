@@ -1,3 +1,6 @@
+= 1.0.6.1 =
+* Minor changes.
+
 = 1.0.6 =
 * Compatibility with WooCommerce 4.8.
 * Minor changes.
