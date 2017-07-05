@@ -1,0 +1,21 @@
+/**
+ * Hypermarket Customizer
+ *
+ * @author      Mahdi Yazdani
+ * @package     Hypermarket
+ * @since       1.0.6.1
+ */
+#accordion-section-hypermarket_go_plus_control {
+	display: list-item !important;
+	position: relative !important;
+	height: auto !important;
+}
+#accordion-section-hypermarket_go_plus_control .accordion-section-title:hover,
+#accordion-section-hypermarket_go_plus_control .accordion-section-title:focus {
+    background-color: #FFF;
+}
+#accordion-section-hypermarket_go_plus_control .accordion-section-title .button {
+    margin-top: -4px;
+    font-weight: 400;
+    margin-left: 8px;
+}
