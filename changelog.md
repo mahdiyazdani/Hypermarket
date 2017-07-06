@@ -1,8 +1,14 @@
+= 1.0.6.2 =
+* Updated language file.
+* Updated outdated WooCommerce template file.
+
 = 1.0.6.1 =
+* Updated language file.
 * Minor changes.
 
 = 1.0.6 =
-* Compatibility with WooCommerce 4.8.
+* Updated language file.
+* Compatibility with WordPress 4.8.
 * Minor changes.
 
 = 1.0.5.3 =
