@@ -1,3 +1,6 @@
+= 1.0.6.3 =
+* Updated outdated WooCommerce template file.
+
 = 1.0.6.2 =
 * Updated language file.
 * Updated outdated WooCommerce template file.
