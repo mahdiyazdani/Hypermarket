@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.5.1
+ * @since 	    1.0.6.3
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.5.1
+		 * @since 1.0.6.3
 		 */
 		public function __construct()
 
@@ -95,6 +95,10 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				$this,
 				'reenable_page_template_for_shop'
 			) , 11, 3);
+			add_filter('wc_empty_cart_message', array(
+				$this,
+				'empty_cart_message'
+			) , 10, 1);
 		}
 		/**
 		 * Using appropriate image dimensions to avoid pixellation.
@@ -649,6 +653,19 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				$page_templates['page-templates/template-fluid.php'] = 'Fluid Template';
 			endif;
 			return $page_templates;
+		}
+		/**
+		 * Modify empty cart notice
+		 *
+		 * @since 1.0.6.3
+		 */
+		public function empty_cart_message($notice)
+
+		{
+			$output = '<p class="cart-empty">';
+			$output.= esc_html__( 'Most likely, you just have not put anything into your basket.', 'hypermarket' );
+			$output.= '</p>';
+			return $output;
 		}
 	}
 endif;
