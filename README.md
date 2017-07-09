@@ -1,5 +1,7 @@
 # Hypermarket   [![Compatible with WPML](https://img.shields.io/badge/Compatible%20with-WPML-308fb0.svg)](https://wpml.org/theme/hypermarket/) [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-hypermarket.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.0.6.3-77cde3.svg)](https://wp.me/p8930x-8q)
 
+![Buy Hypermarket Plus](https://i.gyazo.com/b9cb600729a4f5c299c2d7224491e72d.png)
+
 ![Buy Hypermarket Plus](https://www.mypreview.one/assets/img/hypermarket-screenshot.png)
 
 If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
