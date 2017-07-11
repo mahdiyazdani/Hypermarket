@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.2
+ * @since       1.0.6.4
  */
 
 jQuery(document).ready(function($) {
@@ -366,17 +366,6 @@ jQuery(document).ready(function($) {
         $('#comments .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
     }
     
-
-    // Make the height of all selected products and subcategories exactly equal
-    //------------------------------------------------------------------------------
-    if($('.product-category').length > 0){
-        $('.product-category').matchHeight();
-    }
-    if($('.type-product').length > 0) {
-        $('.type-product').matchHeight();
-    }
-
-
     // Compatibility with BS3 Grid Builder
     //------------------------------------------------------------------------------
     if ($('.bs3-grid-builder-container').closest('.col-sm-12').length > 0) {
