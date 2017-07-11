@@ -1,3 +1,8 @@
+= 1.0.6.4 =
+* Updated language file.
+* Updated matchHeight to use data API.
+* Updated WooCommerce template files.
+
 = 1.0.6.3 =
 * Updated outdated WooCommerce template file.
 
