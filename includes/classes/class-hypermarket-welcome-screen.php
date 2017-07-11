@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.6.1
+ * @since 	    1.0.6.4
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.6.1
+		 * @since 1.0.6.4
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -182,6 +182,34 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Hero slider', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Image & content slider which supports touch navigation with a swipe gesture.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-clock"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Product countdown', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Promote your sale campaigns in WooCommerce. Show a countdown box with the product on sale.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-format-video"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Video popup', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Embed YouTube or Vimeo videos on a call to action box using a popup lightbox overlay display.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-screenoptions"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Footer bar', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('A full-width widgetized region which will display any widget added to this region above the Hypermarket footer widget area.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-update"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Automatic updates', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('You can update the plugin automatically via the admin panel providing you have activated a valid license key.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
@@ -333,7 +361,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 											<h2 class="hndle"><span><?php esc_attr_e('What is a child theme?', 'hypermarket'); ?></span></h2>
 											<div class="inside">
 												<p><?php esc_attr_e('A Child Theme is a theme that inherits the same functionality and styling of another theme, called the parent theme. By creating and working on a child theme, you can add, modify or disable parts of your site without changing the original files of the parent theme.', 'hypermarket'); ?></p>
-												<p><?php esc_attr_e('You don’t have to worry anymore about updates to the parent theme since there is no need to exclude your modified files from the updating process or to re-add your changes to fit the new version. After the creation of a Child Theme, you end up significantly speeding up your development time.', 'hypermarket'); ?></p>
+												<p><?php esc_attr_e('You do not have to worry anymore about updates to the parent theme since there is no need to exclude your modified files from the updating process or to re-add your changes to fit the new version. After the creation of a Child Theme, you end up significantly speeding up your development time.', 'hypermarket'); ?></p>
 											</div><!-- .inside -->
 										</div><!-- #childtheme-sidebar -->
 										<div id="support-sidebar">
