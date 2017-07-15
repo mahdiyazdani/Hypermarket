@@ -1,3 +1,9 @@
+= 1.0.7.0 =
+* Updated language file.
+* Updated main stylesheet.
+* Updated homepage new arrivals component.
+* Updated homepage best sellers component.
+
 = 1.0.6.4 =
 * Updated language file.
 * Updated matchHeight to use data API.
