@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.6.4
+ * @since 	    1.0.7.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.6.4
+		 * @since 1.0.7.0
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -76,7 +76,9 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 					<h2><?php esc_attr_e('Welcome to Hypermarket Theme', 'hypermarket'); ?></h2>
 					<h2 id="hypermarket-welcome-screen-nav" class="nav-tab-wrapper">
 						<a href="#welcome" class="nav-tab nav-tab-active"><?php esc_html_e('Welcome', 'hypermarket'); ?></a>
-						<a href="#goplus" class="nav-tab"><?php esc_html_e('Go Plus!', 'hypermarket'); ?></a>
+						<?php if(apply_filters('hypermarket_are_you_still_free', true)): ?>
+							<a href="#goplus" class="nav-tab goplus"><?php esc_html_e('Go Plus!', 'hypermarket'); ?></a>
+						<?php endif; ?>
 						<a href="#childtheme" class="nav-tab"><?php esc_html_e('Child Theme', 'hypermarket'); ?></a>
 						<a href="#support" class="nav-tab"><?php esc_html_e('Support', 'hypermarket'); ?></a>
 						<a href="#translate" class="nav-tab"><?php esc_html_e('Translate', 'hypermarket'); ?></a>
@@ -135,6 +137,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</table>
 											</div><!-- .inside -->
 										</div><!-- #welcome-content -->
+										<?php if(apply_filters('hypermarket_are_you_still_free', true)): ?>
 										<div id="goplus-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Are You Still Free? Go Plus Now!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -212,10 +215,39 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<?php esc_attr_e('You can update the plugin automatically via the admin panel providing you have activated a valid license key.', 'hypermarket'); ?>
 															</td>
 														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-star-empty"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Service Widget', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Service widget makes it really easy to select a Google material icon to go along with your feature.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-megaphone"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Call to Action Widget', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('A CTA is an ideal way to convert more of your passive website visitors into active leads and customers.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-move"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Homepage Control', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Toggle the visibility and reorder the homepage components or any function hooked by Hypermarket theme or [H/M] Plus plugin.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-businessman"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Testimonials', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('A clean and easy-to-use testimonials management system to load in what your customers are saying about your business.', 'hypermarket'); ?>
+															</td>
+														</tr>
 													</tbody>
 												</table>
 											</div><!-- .inside -->
 										</div><!-- #goplus-content -->
+										<?php endif; ?>
 										<div id="childtheme-content">
 											<h2 class="hndle"><span><?php esc_attr_e('Make any customization using a child theme', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -346,6 +378,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</ul>
 											</div><!-- .inside -->
 										</div><!-- #welcome-sidebar -->
+										<?php if(apply_filters('hypermarket_are_you_still_free', true)): ?>
 										<div id="goplus-sidebar">
 											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -357,6 +390,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												</p>
 											</div><!-- .inside -->
 										</div><!-- #goplus-sidebar -->
+										<?php endif; ?>
 										<div id="childtheme-sidebar">
 											<h2 class="hndle"><span><?php esc_attr_e('What is a child theme?', 'hypermarket'); ?></span></h2>
 											<div class="inside">
@@ -433,7 +467,12 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 				<div id="hypermarket-welcome-message" class="notice notice-info is-dismissible">
 					<p><strong><?php esc_attr_e('WooHoo! :)', 'hypermarket'); ?></strong></p>
 					<p><?php esc_attr_e('Welcome to the Hypermarket theme! Clearly, you have impeccable taste in WooCommerce themes; we salute your fine choice!', 'hypermarket'); ?></p>
-					<p><a href="<?php echo esc_url(admin_url('themes.php?page=hypermarket-welcome-screen')); ?>" class="button-secondary"><?php esc_attr_e('Get the Tips!', 'hypermarket'); ?></a></p>
+					<p>
+						<a href="<?php echo esc_url(admin_url('themes.php?page=hypermarket-welcome-screen')); ?>" class="button-secondary"><?php esc_attr_e('Get the Tips', 'hypermarket'); ?></a>
+						<?php if(apply_filters('hypermarket_are_you_still_free', true)): ?>
+							&nbsp;<a href="<?php echo esc_url(admin_url('themes.php?page=hypermarket-welcome-screen&?tab=#goplus')); ?>" class="button-primary"><?php esc_attr_e('Go Plus!', 'hypermarket'); ?></a>
+						<?php endif; ?>
+					</p>
 				</div>
 			<?php
 		}
@@ -453,7 +492,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Check if WooCommerce activated/installed or not?
 		 *
-		 * @since 1.0.4.1
+		 * @since 1.0.7.0
 		 */
 		public function wc_installation_admin_notice() 
 
@@ -471,8 +510,9 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		            printf(esc_html__('Install and activate %s to start your e-commerce website now!', 'hypermarket') , '<a href="' . $install_woocommerce_url . '" target="_self">WooCommerce</a>'); ?></p>
 		                <a href="?hypermarket-install-woocommerce-ignore-notice&page=hypermarket-welcome-screen">
 		                    <button class="notice-dismiss">
-		                        <span class="screen-reader-text"><?php
-		                esc_html_e('Dismiss this notice.', 'hypermarket'); ?></span>
+		                        <span class="screen-reader-text">
+		                        	<?php esc_html_e('Dismiss this notice.', 'hypermarket'); ?>
+		                        </span>
 		                    </button>
 		                </a>
 		            </div>
