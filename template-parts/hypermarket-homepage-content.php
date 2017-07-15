@@ -10,7 +10,7 @@
 if (have_posts() &&  '' !== get_post()->post_content):
 ?>
 <!-- Homepage Content -->
-<section id="hypermarket-content" class="container padding-top-2x padding-bottom-2x">
+<section id="hypermarket-content" class="container padding-top padding-bottom space-top space-bottom">
 	<?php 
 		if(hypermarket_is_woocommerce_activated()):
 			echo '<hr>';

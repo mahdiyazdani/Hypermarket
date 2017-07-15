@@ -28,7 +28,7 @@ if(! empty($all_categories) ):
 	endif;
 ?>
 	<!-- Catalogs -->
-	<section id="hypermarket-catalog" class="container-fluid padding-top-half" aria-label="<?php echo esc_attr($args['title']); ?>">
+	<section id="hypermarket-catalog" class="container-fluid padding-top padding-bottom space-top space-bottom" aria-label="<?php echo esc_attr($args['title']); ?>">
 		<div class="row">
 			<?php 
 				do_action('hypermarket_before_shop_by_category');
