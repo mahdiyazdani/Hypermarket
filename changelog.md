@@ -1,3 +1,6 @@
+= 1.0.7.1 =
+* Fixed homepage spacing issues.
+
 = 1.0.7.0 =
 * Updated language file.
 * Updated main stylesheet.
