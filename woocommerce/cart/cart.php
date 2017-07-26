@@ -82,7 +82,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			          		<div class="product-remove">
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-										'<a href="%s" class="item-remove remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
+										'<a href="%s" class="item-remove remove pull-right" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
 										esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 											__( 'Remove this item', 'hypermarket' ),
 											esc_attr( $product_id ),
