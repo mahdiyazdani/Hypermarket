@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.7.0
+ * @since 	    1.0.8.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.7.0
+		 * @since 1.0.8.0
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -218,13 +218,13 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														<tr>
 															<td class="icon"><span class="dashicons dashicons-star-empty"></span></td>
 															<td class="content">
-																<strong><?php esc_attr_e('Service Widget', 'hypermarket'); ?></strong>
+																<strong><?php esc_attr_e('Service widget', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Service widget makes it really easy to select a Google material icon to go along with your feature.', 'hypermarket'); ?>
 															</td>
 															<td class="icon"><span class="dashicons dashicons-megaphone"></span></td>
 															<td class="content">
-																<strong><?php esc_attr_e('Call to Action Widget', 'hypermarket'); ?></strong>
+																<strong><?php esc_attr_e('Call to action widget', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('A CTA is an ideal way to convert more of your passive website visitors into active leads and customers.', 'hypermarket'); ?>
 															</td>
@@ -232,7 +232,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														<tr>
 															<td class="icon"><span class="dashicons dashicons-move"></span></td>
 															<td class="content">
-																<strong><?php esc_attr_e('Homepage Control', 'hypermarket'); ?></strong>
+																<strong><?php esc_attr_e('Homepage control', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Toggle the visibility and reorder the homepage components or any function hooked by Hypermarket theme or [H/M] Plus plugin.', 'hypermarket'); ?>
 															</td>
@@ -241,6 +241,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Testimonials', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('A clean and easy-to-use testimonials management system to load in what your customers are saying about your business.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-art"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Color scheme', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Easily change the colors of all the main elements of the site to give your shop a unique look.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-editor-textcolor"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Typography', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Easy access to any fonts you want from Google Web Fonts, the best free fonts available. Choose between more than 600 fonts.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
