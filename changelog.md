@@ -1,3 +1,7 @@
+= 1.0.8.0 =
+* Updated language file.
+* Fixed styling issues of shipping checkboxes on WooCommerce pages.
+
 = 1.0.7.1 =
 * Fixed homepage spacing issues.
 
