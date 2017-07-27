@@ -1,6 +1,7 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
   - [Theme Installation](install-hypermarket-wordpress-theme.md)
+  - [Plugin Installation](install-hypermarket-plus-plugin.md)
 
 - [Minimum Requirements](minimum-requirements.md)
 
