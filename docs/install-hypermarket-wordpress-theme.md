@@ -2,7 +2,7 @@
 
 If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hypermarket/) WordPress theme from the [wordpress.org themes directory](https://wordpress.org/themes/), then the easiest way is by using the WordPress admin theme search functionality.
 
-## Install from the official directory 
+## Official directory 
 
 *(Recommended)*
 
@@ -14,7 +14,7 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 * WordPress will now install the Hypermarket theme and show you a success message along with the link to activate or live preview.
 * Click on the **activate** button, and you’ve successfully installed and activated the Hypermarket WordPress theme.
 
-## Install using WordPress admin panel
+## WordPress admin panel
 
 * Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/).
 * Go to **Appearance** » **Themes**. 
@@ -23,7 +23,7 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 * Choose **hypermarket.zip** from your local computer or machine and hit **Install Now** button.
 * Activate Hypermarket by clicking on the **activate** button.
 
-## Install manually - FTP Method
+## Manually - FTP Method
 
 * Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/).
 * Upload the extracted folder of **hypermarket.zip** to the ```/wp-content/themes/``` dir on your server via FTP.
