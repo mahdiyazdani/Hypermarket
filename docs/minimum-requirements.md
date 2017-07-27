@@ -10,6 +10,6 @@ To run Hypermarket theme or Hypermarket Plus plugin we recommend your host suppo
 
 ?> PHP 5.4 reached [end of life](http://php.net/supported-versions.php) and is no longer maintained.
 
-### Moving Hosts
+## Moving Hosts
 
 !> Need a new host? Check out our [recommended](http://one.me/enaewdxw) service provider OR dedicated WordPress web hosts listed [here](https://wordpress.org/hosting).
