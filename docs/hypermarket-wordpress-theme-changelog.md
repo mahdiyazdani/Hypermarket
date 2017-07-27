@@ -1,3 +1,13 @@
+# 1.0.4.1/ 2017-03-21
+
+  * Updated language file.
+  * Updated results count method.
+  * Added escaping functions.
+  * Added wp_kses to fallback menu.
+  * Added sanitization to mini cart price.
+  * Added sanitization method to page numbers loop.
+  * Fixed broken styles in blog meta.
+
 # 1.0.4/ 2017-03-16
 
   * Updated language file.
