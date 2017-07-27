@@ -2,7 +2,9 @@
 
 If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hypermarket/) WordPress theme from the [wordpress.org themes directory](https://wordpress.org/themes/), then the easiest way is by using the WordPress admin theme search functionality.
 
-## Install from the official directory *(Recommended)*
+## Install from the official directory 
+
+*(Recommended)*
 
 * Go to **Appearance** » **Themes**.
 * Once you are on the themes page, click on the **Add New** button at the top.
