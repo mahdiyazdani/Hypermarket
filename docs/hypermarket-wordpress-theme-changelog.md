@@ -1,3 +1,10 @@
+# 1.0.5/ 2017-05-04
+
+  * Updated language file.
+  * Updated WordPress gallery styles.
+  * Compatibility with WooCommerce 3.X.
+  * Compatibility with PHP 5.6 and above.
+  
 # 1.0.4.3/ 2017-03-26
 
   * Updated theme credits.
