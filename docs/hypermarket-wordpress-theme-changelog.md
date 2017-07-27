@@ -1,4 +1,21 @@
-# 1.0.5/ 2017-05-04
+# 1.0.5.3/ 2017-04-08
+
+  * Updated outdated WooCommerce template files.
+  
+# 1.0.5.2/ 2017-04-06
+
+  * Updated outdated WooCommerce template files.
+
+# 1.0.5.1/ 2017-04-05
+
+  * Updated language file.
+  * Updated create_function method in custom widgets to make the theme child theme ready.
+  * Added the un-minified version of main stylesheet and editor style files.
+  * Added a new method to set WooCommerce image dimensions upon theme activation.
+  * Removed automatic flushing of the WordPress rewrite rules - Plugin territory restriction.
+  * Removed clean-up all widgets from all widget areas method upon theme activation - Plugin territory restriction.
+
+# 1.0.5/ 2017-04-05
 
   * Updated language file.
   * Updated WordPress gallery styles.
