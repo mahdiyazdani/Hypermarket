@@ -40,3 +40,35 @@
 > matchHeight - Responsive equal heights plugin.<br/>
 > The MIT License - Copyright (c) 2014 Liam Brummitt.<br/>
 > [https://github.com/liabru/jquery-match-height/blob/master/LICENSE](https://github.com/liabru/jquery-match-height/blob/master/LICENSE)
+
+> Twenty Sixteen — Free WordPress Theme.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+
+> UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> [https://github.com/holger1411/understrap#license](https://github.com/holger1411/understrap#license)
+
+> WP Bootstrap Navwalker - A custom WordPress nav walker class.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> [https://github.com/twittem/wp-bootstrap-navwalker/blob/master/LICENSE.txt](https://github.com/twittem/wp-bootstrap-navwalker/blob/master/LICENSE.txt)
+
+> HTML5 Number polyfill - A polyfill for implementing the HTML5 number element in browsers that do not currently support it.<br/>
+> The MIT License - Copyright (c) 2011 Jonathan Stipe.<br/>
+> [https://github.com/jonstipe/number-polyfill#license-mit](https://github.com/jonstipe/number-polyfill#license-mit)
+
+> WooCommerce - An open source eCommerce plugin for WordPress.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> [https://github.com/woocommerce/woocommerce/blob/master/license.txt](https://github.com/woocommerce/woocommerce/blob/master/license.txt)
+
+> WooCommerce Quantity Increment - WordPress Plugins.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> [https://github.com/woocommerce/WooCommerce-Quantity-Increment](https://github.com/woocommerce/WooCommerce-Quantity-Increment)
+
+> Material Design Icons - Icon font for the web.<br/>
+> The Apache Licensen.<br/>
+> [https://github.com/google/material-design-icons/blob/master/LICENSE](https://github.com/google/material-design-icons/blob/master/LICENSE)
+
+> Icons Mind - Perfect icons start with icons mind.<br/>
+> Released under extended license.<br/>
+> [https://iconsmind.com/classic-license/](https://iconsmind.com/classic-license/)
