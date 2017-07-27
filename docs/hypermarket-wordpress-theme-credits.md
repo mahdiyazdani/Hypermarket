@@ -25,4 +25,18 @@
 
 > Smooth Scroll - An extension for smooth scrolling in Google Chrome.<br/>
 > The MIT License - Copyright (c) 2010-2016 Balazs Galambosi.<br/>
-> [https://github.com/galambalazs/smoothscroll/blob/master/LICENSE](https://github.com/galambalazs/smoothscroll/blob/master/LICENSE)
+> [https://github.com/galambalazs/smoothscroll/blob/master/LICENSE (https://github.com/galambalazs/smoothscroll/blob/master/LICENSE)
+
+> Waves - Click effect inspired by Googles Material Design.<br/>
+> The MIT License - Copyright (c) 2014 Alfiana E. Sibuea.<br/>
+> [https://github.com/fians/Waves/blob/master/LICENSE](https://github.com/fians/Waves/blob/master/LICENSE)
+
+> M-Store - Modern E-Commerce Template.<br/>
+> The GPL version 2 or (at your option) any later version.<br/>
+> Order#: WB0C3M094 Paid: 2017-01-03.<br/>
+> Extended License - de8dd598-6afc-41c0-a6de-34e0df5dd931.<br/>
+> [http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses](http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses)
+
+> matchHeight - Responsive equal heights plugin.<br/>
+> The MIT License - Copyright (c) 2014 Liam Brummitt.<br/>
+> [https://github.com/liabru/jquery-match-height/blob/master/LICENSE](https://github.com/liabru/jquery-match-height/blob/master/LICENSE)
