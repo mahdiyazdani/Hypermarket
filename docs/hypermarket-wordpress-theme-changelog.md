@@ -1,3 +1,22 @@
+# 1.0.4/ 2017-03-16
+
+  * Updated language file.
+  * Added fluid post template.
+  * Added custom style to WooCommerce subcategories.
+  * Added comment permalink to comment date.
+  * Added display tagline checkbox to customizer.
+  * Added custom style to site-wide store notice text.
+  * Added support to split WordPress posts into multiple pages.
+  * Added license and attributions for all the resources(fonts, scripts, images) used in the theme.
+  * Added match height JS library to make height of all selected products and subcategories exactly equal.
+  * Fixed overlapping issue with long site title.
+  * Fixed copyright shown issue if there is no footer widget.
+  * Fixed hard-coded date format issue to follow and show the dates in the format selected by the user in Settings > General.
+  * Removed post and product sharing feature - Plugin territory restriction.
+  * Removed post like feature - Plugin territory restriction.
+  * Removed date and author name from static search result pages.
+  * Removed WooCommerce installation notice globally and restricted to the theme welcome screen only.
+  
 # 1.0.3.1/ 2017-02-28
 
   * Fixed Google fonts JS error.
