@@ -48,7 +48,7 @@ Check out the [Live Demo](https://demo.mypreview.one/hypermarket) to visit Hyper
 
 ## Get the Theme
 
-Install Hypermarket WordPress theme from the [WordPress.org](https://wordpress.org/themes/hypermarket) themes directory for free.
+Install Hypermarket theme from the [WordPress.org](https://wordpress.org/themes/hypermarket) themes directory for free.
 
 ## Get the Plugin
 
