@@ -10,4 +10,4 @@
 
 
 [Get Theme](https://wordpress.org/themes/hypermarket/)
-[Documentation](#hypermarket)
+[Documentation](#hypermarket-wordpress-theme)
