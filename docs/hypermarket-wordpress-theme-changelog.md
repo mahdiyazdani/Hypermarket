@@ -1,3 +1,15 @@
+# 1.0.4.3/ 2017-03-26
+
+  * Updated theme credits.
+  * Updated custom widgets retrieving methods.
+  
+# 1.0.4.2/ 2017-03-23
+
+  * Added support to split WordPress pages into multiple pages.
+  * Added theme prefix to all missing WooCommerce methods.
+  * Added new hooks to override WooCommerce methods.
+  * Removed page preloading due to performance issues.
+
 # 1.0.4.1/ 2017-03-21
 
   * Updated language file.
