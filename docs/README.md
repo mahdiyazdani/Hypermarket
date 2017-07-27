@@ -55,3 +55,5 @@ Install Hypermarket theme from the [WordPress.org](https://wordpress.org/themes/
 The Hypermarket Plus plugin is only available to purchase from [mypreview.one](https://www.mypreview.one). :moneybag:
 
 ## Statistics
+
+<a href="http://info.flagcounter.com/hUqi"><img src="//s07.flagcounter.com/count2/hUqi/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_20/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
