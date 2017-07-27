@@ -13,7 +13,7 @@ See the [Installation](installation) for more details.
 * Bootstrap 3.3.7
 * Valid HTML Code
 * Gallery post type
-* Blog posts and products share buttons
+* Posts and products share buttons
 * Product countdown
 * Footer bar
 * Service widget
