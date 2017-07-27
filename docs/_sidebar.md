@@ -2,6 +2,8 @@
   - [WordPress Installation](wordpress-installation.md)
   - [Theme Installation](install-hypermarket-wordpress-theme.md)
 
+- [Minimum Requirements](minimum-requirements.md)
+
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
   - [Hypermarket Plus](hypermarket-plus-plugin-credits.md)
