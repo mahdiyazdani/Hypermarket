@@ -1,3 +1,7 @@
+# 1.0.3.1/ 2017-02-28
+
+  * Fixed Google fonts JS error.
+
 # 1.0.3/ 2017-02-27
 
   * Updated language file.
