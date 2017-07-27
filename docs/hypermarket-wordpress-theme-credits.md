@@ -72,3 +72,29 @@
 > Icons Mind - Perfect icons start with icons mind.<br/>
 > Released under extended license.<br/>
 > [https://iconsmind.com/classic-license/](https://iconsmind.com/classic-license/)
+
+> Socicon - The social icon font.<br/>
+> Released under SIL Open Font License 1.1.<br/>
+> [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+
+> Work Sans Google Font-Family.<br/>
+> Open Font License - Wei Huang.<br/>
+> [https://fonts.google.com/specimen/Work+Sans?selection.family=Work+Sans
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web](https://fonts.google.com/specimen/Work+Sans?selection.family=Work+Sans
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+
+> A photo by Summa - Free for commercial use No attribution required.<br/>
+> Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0.<br/>
+> [https://pixabay.com/en/cosmetics-powder-lipstick-1543276](https://pixabay.com/en/cosmetics-powder-lipstick-1543276)
+
+> A photo by LeSpecialiste - Free for commercial use No attribution required.<br/>
+> Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0.<br/>
+> [https://pixabay.com/en/bag-burlap-casket-1431449](https://pixabay.com/en/bag-burlap-casket-1431449)
+
+> A photo by gefrorene_wand - Free for commercial use No attribution required.<br/>
+> Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0.<br/>
+> [https://pixabay.com/en/dessert-milk-product-delicious-1647467](https://pixabay.com/en/dessert-milk-product-delicious-1647467)
+
+> A photo by Pexels - Free for commercial use No attribution required.<br/>
+> Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0.<br/>
+> [https://pixabay.com/en/fashion-clothes-sweater-wool-1283863](https://pixabay.com/en/fashion-clothes-sweater-wool-1283863)
