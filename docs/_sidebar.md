@@ -1,5 +1,6 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
+  - [Theme Installation](install-hypermarket-wordpress-theme.md)
 
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
