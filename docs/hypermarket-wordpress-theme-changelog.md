@@ -1,3 +1,14 @@
+# 1.0.6.1/ 2017-06-21
+
+  * Updated language file.
+  * Minor changes.
+  
+# 1.0.6/ 2017-06-17
+
+  * Updated language file.
+  * Compatibility with WordPress 4.8.
+  * Minor changes.
+
 # 1.0.5.3/ 2017-04-08
 
   * Updated outdated WooCommerce template files.
