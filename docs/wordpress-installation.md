@@ -15,8 +15,8 @@ If you installed WordPress in a subdirectory called blog, for example, you shoul
 
 ## Additional Links
 
-[Installing WordPress](http://codex.wordpress.org/Installing_WordPress)
-[Things to know before installing WordPress](http://codex.wordpress.org/Installing_WordPress#Things_to_Know_Before_Installing_WordPress)
-[Famous 5-Minutes Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)
-[Common Installation Problems](http://codex.wordpress.org/Installing_WordPress#Common_Installation_Problems)
-[Install WordPress in your language](http://codex.wordpress.org/Installing_WordPress_in_Your_Language)
+* [Installing WordPress](http://codex.wordpress.org/Installing_WordPress)
+* [Things to know before installing WordPress](http://codex.wordpress.org/Installing_WordPress#Things_to_Know_Before_Installing_WordPress)
+* [Famous 5-Minutes Install](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)
+* [Common Installation Problems](http://codex.wordpress.org/Installing_WordPress#Common_Installation_Problems)
+* [Install WordPress in your language](http://codex.wordpress.org/Installing_WordPress_in_Your_Language)
