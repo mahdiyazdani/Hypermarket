@@ -1,6 +1,6 @@
 ## Hypermarket WordPress Theme
 
-> Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic. In case you want to start an e-commerce project, the Hypermarket theme is one of the first things you need. The whole design of theme is ultra-responsive and Retina ready, offering you a site that can be accessed from any device, no matter the size or technology of its screen. Try Hypermarket now!
+> Hypermarket WordPress theme is all about design. It offers a beautiful and impressive look for your site, which is one of the ways through which you can retain traffic. In case you want to start an e-commerce project, the Hypermarket theme is one of the first things you need. Try Hypermarket now!
 
 ## What is it
 
