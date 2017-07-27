@@ -1,0 +1,4 @@
+- [Server Requirements](server-requirements.md)
+- [Credits](credits.md)
+- [License](license.md)
+- [Changelog](changelog.md)
