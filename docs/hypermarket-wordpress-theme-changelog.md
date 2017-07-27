@@ -1,3 +1,19 @@
+# 1.0.8/ 2017-07-11
+
+  * Updated language file.
+  * Fixed styling issues of shipping checkboxes on WooCommerce pages.
+  
+# 1.0.7.1/ 2017-07-07
+
+  * Fixed homepage spacing issues.
+  
+# 1.0.7/ 2017-07-06
+
+  * Updated language file.
+  * Updated main stylesheet.
+  * Updated homepage new arrivals component.
+  * Updated homepage best sellers component.
+
 # 1.0.6.4/ 2017-07-03
 
   * Updated language file.
