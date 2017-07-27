@@ -1,3 +1,7 @@
+- License
+  - [Hypermarket](hypermarket-wordpress-theme-license.md)
+  - [Hypermarket Plus](hypermarket-plus-plugin-license.md)
+
 - Changelog
-  - [Changelog Theme](hypermarket-wordpress-theme-changelog.md)
-  - [Changelog Plugin](hypermarket-plus-plugin-changelog.md)
+  - [Hypermarket](hypermarket-wordpress-theme-changelog.md)
+  - [Hypermarket Plus](hypermarket-plus-plugin-changelog.md)
