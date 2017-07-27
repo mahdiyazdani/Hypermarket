@@ -1,6 +1,3 @@
-- [Server Requirements](server-requirements.md)
-- [Credits](credits.md)
-- [License](license.md)
 - Changelog
   - [Changelog Theme](hypermarket-wordpress-theme-changelog.md)
   - [Changelog Plugin](hypermarket-plus-plugin-changelog.md)
