@@ -35,7 +35,7 @@
 
 > Smooth Scroll - An extension for smooth scrolling in Google Chrome.<br/>
 > The MIT License - Copyright (c) 2010-2016 Balazs Galambosi.<br/>
-> [https://github.com/galambalazs/smoothscroll/blob/master/LICENSE (https://github.com/galambalazs/smoothscroll/blob/master/LICENSE)
+> [https://github.com/galambalazs/smoothscroll/blob/master/LICENSE] (https://github.com/galambalazs/smoothscroll/blob/master/LICENSE)
 
 <hr/>
 
