@@ -23,7 +23,7 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 * Choose **hypermarket.zip** from your local computer or machine and hit **Install Now** button.
 * Activate Hypermarket by clicking on the **activate** button.
 
-## Manually - FTP Method
+## Manually - FTP method
 
 * Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/).
 * Upload the extracted folder of **hypermarket.zip** to the ```/wp-content/themes/``` dir on your server via FTP.
