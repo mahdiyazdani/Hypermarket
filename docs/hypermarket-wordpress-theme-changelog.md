@@ -1,3 +1,18 @@
+# 1.0.6.4/ 2017-07-03
+
+  * Updated language file.
+  * Updated matchHeight to use data API.
+  * Updated WooCommerce template files.
+  
+# 1.0.6.3/ 2017-06-29
+
+  * Updated outdated WooCommerce template file.
+  
+# 1.0.6.2/ 2017-06-27
+
+  * Updated language file.
+  * Updated outdated WooCommerce template file.
+
 # 1.0.6.1/ 2017-06-21
 
   * Updated language file.
