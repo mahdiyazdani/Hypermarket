@@ -25,17 +25,17 @@ Before making changes to the theme code, we recommend that you install a [child 
 
 You do not have to worry anymore about updates to the parent theme since there is no need to exclude your modified files from the updating process or to re-add your changes to fit the new version. After the creation of a Child Theme, you end up significantly speeding up your development time.
 
-## Overriding Template Files
+## Overriding template files
 
 If you want to edit the code in the theme's template files like ```header.php```, ```index.php```, etc, you can just copy the file from the parent theme and put it into your child theme folder then edit it from there.
 
-## Overriding Functions
+## Overriding functions
 
 If you want to edit the functions of the parent theme, for example, the ```hypermarket_comments_list()``` function, you can do that by copying only the function from the parent theme and put it into the "functions.php" file of your child theme.
 
 !> Note that, you must copy only the ```function() {...}``` part, **NOT** including the ```function_exists()``` wrapper.
 
-## Overriding Theme's CSS
+## Overriding theme's CSS
 
 You can do this by either using the **Additional CSS** section in WordPress Customizer or adding your custom CSS code into the ```assets/css/hypermarket-child.css``` file of your child theme.
 
