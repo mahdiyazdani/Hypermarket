@@ -1,4 +1,4 @@
-# WordPress Installation
+# WordPress installation
 
 [Download](https://wordpress.org/download/) and unzip the WordPress package if you haven’t already. Create a database for WordPress on your web server, as well as a [MySQL](http://codex.wordpress.org/Glossary#MySQL) user who has all privileges for accessing and modifying it.
 
