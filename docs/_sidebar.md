@@ -2,7 +2,6 @@
   - [WordPress Installation](wordpress-installation.md)
   - [Theme Installation](install-hypermarket-wordpress-theme.md)
   - [Plugin Installation](install-hypermarket-plus-plugin.md)
-  - [License Activation](hypermarket-plus-license-activation.md)
   - [WooCommerce Installation](installing-woocommerce.md)
   - [Importing Dummy Data](import-hypermarket-dummy-data.md)
   - [Translating with Poedit](translating-with-poedit.md)
