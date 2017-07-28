@@ -22,7 +22,7 @@ If you want to edit the code in the theme's template files like ```header.php```
 
 If you want to edit the functions of the parent theme, for example, the ```hypermarket_comments_list()``` function, you can do that by copying only the function from the parent theme and put it into the "functions.php" file of your child theme.
 
-!> Note that, you must copy only the ```function() {...}``` part, NOT including the ```function_exists()``` wrapper.
+!> Note that, you must copy only the ```function() {...}``` part, **NOT** including the ```function_exists()``` wrapper.
 
 ## Overriding Theme's CSS
 
