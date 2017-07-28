@@ -1,6 +1,7 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
   - [Theme Installation](install-hypermarket-wordpress-theme.md)
+  - [Child Theme Installation](install-hypermarket-wordpress-child-theme.md)
   - [Plugin Installation](install-hypermarket-plus-plugin.md)
   - [WooCommerce Installation](installing-woocommerce.md)
   - [Importing Dummy Data](import-hypermarket-dummy-data.md)
