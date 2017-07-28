@@ -6,5 +6,5 @@ To get started and creating an online shop, you need to install free [WooCommerc
 ![Installing WooCommerce](img/installing-woocommerce.png)
 ![Installing WooCommerce Notice](img/install-woocommerce-notice.png)
 
-* After activating Hypermarket theme, you’ll see a notice about installing WooCommerce plugin, to proceed click WooCommerce hyperlink.
+* After activating Hypermarket theme, you’ll see a notice about installing WooCommerce plugin, to proceed click WooCommerce hyperlink.<br/>
 *You will be redirected to plugin installation page*
