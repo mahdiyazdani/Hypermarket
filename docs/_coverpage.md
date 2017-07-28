@@ -1,4 +1,4 @@
-![logo](img/hypermarket-logo.png)
+![logo](img/mypreview-logo.png)
 
 # Hypermarket <small>1.0.9.0</small>
 
