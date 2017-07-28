@@ -25,3 +25,11 @@ When you are about to save your new translation file from Poedit, the software a
 After saving the files on your hard disk, use any FTP client application to upload both files to the **languages** folder in Hypermarket theme directory. Now all you have to do is notify WordPress to use your new translation files.
 
 WordPress will automatically detect and use the right language files if they already exist.
+
+## PO and MO translation files
+
+WordPress uses **PO and MO** files to manage translations. In fact, WordPress only needs MO files to handle translations.
+
+PO files are human-readable; Those files contains a list of strings ready to be translated or with a translation already included.
+
+MO files just compiled exports from the PO files and used by WordPress to get the conversion of each string to translate the theme. If you try to open a MO file with a regular text editor, you won’t understand anything of its content.
