@@ -2,7 +2,7 @@
 
 By default after fresh installation of [Hypermarket](https://wordpress.org/themes/hypermarket/), the homepage will look like a **blog**, and this is how WordPress is intended to work.
 
-?> Hypermarket comes with a unique **Homepage template** which is perfect for e-commerce websites and shop owners, as it displays a lot of products and product categories to visitors as soon as they land on your website.
+?> Hypermarket theme comes with a unique **Homepage template** which is perfect for e-commerce websites and shop owners, as it displays a lot of products and product categories to visitors as soon as they land on your website.
 
 ![Setup a homepage template](img/setup-homepage-template.png)
 
