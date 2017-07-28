@@ -4,7 +4,9 @@ Right after installing a fresh copy of [Hypermarket](https://wordpress.org/theme
 
 This sample data for WooCommerce is located in a file called dummy-data.xml, which is located in the WooCommerce plugin folder under ```woocommerce/dummy-data/```. You can certainly re-download WooCommerce to your computer, or get the file from your server via SFTP, etc…, but the easiest might be to just right click and [download it from here](https://plugins.svn.wordpress.org/woocommerce/tags/3.0.0/dummy-data/dummy-data.xml?dl=1).
 
-!> **Dummy data contains products with images that will work with any theme. However, it doesn’t contain the same photos as the [Hypermarket demo](https://demo.mypreview.one/hypermarket), as the demo uses proprietary photography.**
+!> We do not supply the exact images you see on our Hypermarket demo within the WooCommerce Dummy Data as the pictures of the site cannot be redistributed due to copyright restrictions and are for demo purposes only. The WooCommerce Dummy Data instead comes with our unique unrestricted images that we can redistribute within product import data.
+
+!> We do not recommend this if you have existing content in your WordPress installation, as it will add numerous posts, pages, categories, media and more to your site. Also, we recommend replacing all content as soon as possible to avoid negative SEO effects or image licensing repercussions.
 
 ![Importing WooCommerce Dummy Data](img/import-woocommerce-dummy-data.png)
 
