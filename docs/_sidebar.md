@@ -8,6 +8,7 @@
   - [Translating with Poedit](translating-with-poedit.md)
 
 - First Steps
+  - [Site Logo](upload-site-logo.md)
   - [Set Up Homepage](setup-homepage-template.md)
 
 - [Minimum Requirements](minimum-requirements.md)
