@@ -1,6 +1,6 @@
 # Create and setup a homepage template
 
-By default after fresh installation of [Hypermarket](https://wordpress.org/themes/hypermarket/), the homepage will look like a **blog**, and this is how WordPress is intended to work.
+By default after fresh installation of [Hypermarket](https://wordpress.org/themes/hypermarket/) theme, the homepage will look like a **blog**, and this is how WordPress is intended to work. This is the same page template used on the [Hypermarket Demo](https://demo.mypreview.one/hypermarket/).
 
 ?> Hypermarket theme comes with a unique **Homepage template** which is perfect for e-commerce websites and shop owners, as it displays a lot of products and product categories to visitors as soon as they land on your website.
 
