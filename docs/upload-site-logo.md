@@ -1,6 +1,6 @@
 # Site logo
 
-?> Note that if the logo is not uploaded, then your site name will be used.
+?> Note that if the logo is not uploaded, then your **site title** will be used.
 
 * Navigate to **Appearance** » **Customize**.
 * Click on the **Site Identity** section.
