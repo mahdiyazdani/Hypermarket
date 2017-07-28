@@ -2,6 +2,8 @@
 
 ?> Note that if the logo is not uploaded, then your **site title** will be used.
 
+![Upload a site logo](img/upload-site-logo.png)
+
 * Navigate to **Appearance** » **Customize**.
 * Click on the **Site Identity** section.
 * Click the **Select Logo** button to open the WordPress media library.
