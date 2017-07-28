@@ -6,6 +6,8 @@ This sample data for WooCommerce is located in a file called dummy-data.xml, whi
 
 !> **Dummy data contains products with images that will work with any theme. However, it doesn’t contain the same photos as the [Hypermarket demo](https://demo.mypreview.one/hypermarket), as the demo uses proprietary photography.**
 
+![logo](img/import-woocommerce-dummy-data.png)
+
 * Navigate to **Tools** » **Import** and select the WordPress option.
 * If you don’t have the WordPress importer installed, first install it by selecting **Install Now**.
 * Once it’s installed select **Run Importer**.
