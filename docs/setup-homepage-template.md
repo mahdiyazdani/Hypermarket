@@ -2,6 +2,8 @@
 
 The **Homepage template** is perfect for store owners, as it displays a lot of products and product categories to visitors as soon as they land on your website. This is the page template used on the [Hypermarket Demo](https://demo.mypreview.one/hypermarket/) and is used by default on a fresh install for brand new shops.
 
+![Setup a homepage template](img/setup-homepage-template.png)
+
 * Create a new page, by visiting **Pages** » **Add New**.
 * Set the **page title** and then from the Template drop-down in the **Page Attributes** meta box select **Homepage template**.
 * **Publish** the page.
