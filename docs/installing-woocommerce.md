@@ -18,4 +18,4 @@ To **install** WooCommerce:
 *Once WooCommerce is activated, the WooCommerce Onboarding Wizard can help you set up your shop.*
 * Select **Let’s Go!** to get started. Or select **Not Right Now** if you prefer to set up your WooCommerce shop manually.
 
-![WooCommerce Setup Wizard](img/welcome-screen-for-the-woocommerce-setup-wizard.png.png)
+![WooCommerce Setup Wizard](img/welcome-screen-for-the-woocommerce-setup-wizard.png)
