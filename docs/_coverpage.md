@@ -9,5 +9,5 @@
 - Bulletproof integration with WooCommerce Core
 
 
-[Get Theme](https://wordpress.org/themes/hypermarket/)
+[Live Preview](https://demo.mypreview.one/hypermarket/)
 [Documentation](#hypermarket-wordpress-theme)
