@@ -13,6 +13,6 @@ This sample data for WooCommerce is located in a file called dummy-data.xml, whi
 * Select the **Choose file** button and then select the dummy-data.xml file you downloaded earlier.
 * Select the **Upload file** and click the **import** button.
 * Create a new user, or assign the posts to an existing user.
-* **Check** or **uncheck** the Download and import file attachments checkbox. 
+* **Check** or **uncheck** the Download and import file attachments checkbox.<br/>
 *This will import all the sample product images to your site if checked.*
 * Click **Submit** and your dummy data will be imported.
