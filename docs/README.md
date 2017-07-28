@@ -6,7 +6,7 @@
 
 New to Extra? Get started here with a collection of tutorials that cover the basics.
 
-See the [Installation](installation) for more details.
+See the [Installation](install-hypermarket-wordpress-theme) for more details.
 
 ## Main Features
 
