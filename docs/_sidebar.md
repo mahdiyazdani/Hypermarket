@@ -3,7 +3,7 @@
   - [Theme Installation](install-hypermarket-wordpress-theme.md)
   - [Plugin Installation](install-hypermarket-plus-plugin.md)
   - [WooCommerce Installation](installing-woocommerce.md)
-  - [Dummy Data](import-hypermarket-dummy-data.md)
+  - [Importing Dummy Data](import-hypermarket-dummy-data.md)
   - [Translating with Poedit](translating-with-poedit.md)
 
 - [Minimum Requirements](minimum-requirements.md)
