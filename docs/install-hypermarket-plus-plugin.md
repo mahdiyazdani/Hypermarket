@@ -1,5 +1,7 @@
 # Install and activate Hypermarket Plus plugin
 
+!> Take a moment to review the [minimum requirements](https://mahdiyazdani.github.io/Hypermarket/#/minimum-requirements) before installation or you may encounter issues when using the plugin. 
+
 ?> Note that paid WordPress plugins (e.g. Hypermarket Plus) are not listed in the WordPress plugin directory. These plugins cannot be installed using the official wordpress repository and that’s why WordPress has the Upload method to install such plugins.
 
 !> Whenever you are downloading the plugin files from your purchase receipt, you will get an archive file within **.zip** extension. After downloading the files you will be able to find **hypermarket-plus.zip** on your local machine, in case you are seeing the folder without zip extension it means your browser automatically unzipped the downloaded file while downloading, you need to zip it again to be able to upload on WordPress.
