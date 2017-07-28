@@ -12,6 +12,8 @@ Before making changes to the theme code, we recommend that you install a [child 
 * Click **Browse** and choose the file you just downloaded, then click **Install Now**.
 * Once it is installed, click on the **activate** button, and you’ve successfully installed and activated the Hypermarket child theme.
 
+<hr/>
+
 ## Manually - FTP method
 
 * Start by [downloading the Hypermarket child theme](https://github.com/mahdiyazdani/Hypermarket-Child/releases).
