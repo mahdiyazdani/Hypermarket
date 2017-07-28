@@ -15,6 +15,6 @@ The page that you created and added the homepage page template to will now be di
 
 The **product categories** are displayed in accordance to the order they appear in the dashboard. Change the order at **Products** » **Categories**, then **drag and drop the categories** to suit your preference.
 
-?> If you’d like to reorder the components on the homepage, purchase a copy of [Hypermarket Plus](https://www.mypreview.one) plugin and use **homepage control section** to customize the homepage template layout, add new components, rearrange or hide sections, toggle components and much more with the [Hypermarket Plus](https://www.mypreview.one) plugin.
+?> If you’d like to reorder the components on the homepage, purchase a copy of [Hypermarket Plus](https://www.mypreview.one) plugin and use **homepage control section** to customize the homepage template layout, add new components, rearrange or hide sections, toggle components and much more.
 
 !> Remember, if you want to have a page to **display your blog posts** too, you will have to create another page (you can leave the content blank) and set that as the Posts Page in the same settings section like above where we created a blank page titled **Blog** on our site and set that as the **posts page**.
