@@ -10,3 +10,5 @@ The **Homepage template** is perfect for store owners, as it displays a lot of p
 The page that you created and added the homepage page template to will now be displayed when anyone visits your site's homepage.
 
 ?> Assuming you added some products to your shop, you should see links to them and links to the top level product categories when visiting the **front page**. Rearrange or hide sections using the [Hypermarket Plus](https://www.mypreview.one) plugin.
+
+!> Remember, if you want to have a page to **display your blog posts** too, you will have to create another page (you can leave the content blank) and set that as the Posts Page in the same settings section like above where we created a blank page titled **Blog** on our site and set that as the **posts page**.
