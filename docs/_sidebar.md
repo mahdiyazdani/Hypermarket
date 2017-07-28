@@ -7,6 +7,9 @@
   - [Importing Dummy Data](import-hypermarket-dummy-data.md)
   - [Translating with Poedit](translating-with-poedit.md)
 
+- First Steps
+  - [Set Up Homepage](setup-homepage-template.md)
+
 - [Minimum Requirements](minimum-requirements.md)
 
 - Credits
