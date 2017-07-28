@@ -8,6 +8,8 @@
 
 ## WordPress admin panel
 
+*(Recommended)*
+
 * Visit **Plugins** » **Add New** page.
 * Click on the **Upload Plugin** button on top of the page.
 * This will bring you to the plugin upload page.
