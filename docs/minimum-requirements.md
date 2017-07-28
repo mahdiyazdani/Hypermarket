@@ -1,4 +1,4 @@
-# Server Requirements
+# Minimum Requirements
 
 To run Hypermarket theme or Hypermarket Plus plugin we recommend your host supports:
 
