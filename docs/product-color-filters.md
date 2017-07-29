@@ -23,3 +23,5 @@ Similar to categories on your products in WooCommerce, you can **add, delete, an
 When you add a new product through **Products** » **Add Product**, you’ll be able to select this new product color from the list.
 
 ![Adding color attribute](img/adding-color-attribute.png)
+
+## Adding color filters widget
