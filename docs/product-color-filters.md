@@ -7,6 +7,7 @@ Color attributes lets you to place the color filter widget on your shop and allo
 ## Add or edit product colors
 
 Color filters are managed from the **Products** » **Colors** screen.
+
 Similar to categories on your products in WooCommerce, you can **add, delete, and edit** your product color filters here.
 
 * Add a **Name**.
