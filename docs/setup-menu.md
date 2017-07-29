@@ -31,7 +31,7 @@ You can add different link types into your menu, these are split between panes l
 ## Assigning your menu to a location
 
 * Scroll to the bottom of the menu editor window.
-* In the section titled **Theme locations**, click the check box for the **Primary Menu** location.
+* In the section titled **Menu Settings**, click the check box for the **Primary Menu** location.
 * Click **Save Menu** once you've made your selection.
 
 ## Adding a my-account icon to menu
