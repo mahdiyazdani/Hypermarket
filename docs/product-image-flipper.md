@@ -4,6 +4,8 @@ Adds a secondary product thumbnail on archives that is revealed when you hover o
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
+![Product image flipper](img/secondary-product-image.png)
+
 * Click the **Products** tab.
 * Edit the **product** that you want to add a secondary product thumbnail.
 * On the edit product page, scroll down until you locate the **Secondary product image** meta box in the bottom right-hand corner of the page.
