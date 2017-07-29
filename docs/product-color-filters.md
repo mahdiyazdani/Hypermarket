@@ -24,4 +24,6 @@ When you add a new product through **Products** » **Add Product**, you’ll be 
 
 ![Adding color attribute](img/adding-color-attribute.png)
 
-## Adding color filters widget
+## Color filters widget
+
+![Color filters widget](img/color-filters-widget.png)
