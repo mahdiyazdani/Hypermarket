@@ -14,4 +14,4 @@ Similar to categories on your products in WooCommerce, you can **add, delete, an
 *You can leave slug name field **empty**, and it will be generated automatically from the color name.*
 * Optionally, give a **Description**.
 * Click the **Select Color** swatch to bring up the color picker dialog box.
-* Select your desired color using the color palette or just insert HEX color code directly to the color code field.
+* Select your desired color using the color palette or just insert **HEX** color code directly to the color code field.
