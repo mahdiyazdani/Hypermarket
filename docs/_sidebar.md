@@ -16,6 +16,7 @@
   - [Footer Copyright](update-footer-copyright.md)
   - [Page Title Toggle](page-title-toggle.md)
   - [Homepage Control](homepage-control.md)
+  - [Product Image Flipper](product-image-flipper.md)
 - [Minimum Requirements](minimum-requirements.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
