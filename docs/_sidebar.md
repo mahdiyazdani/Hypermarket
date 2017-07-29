@@ -12,6 +12,7 @@
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
 - Features
+  - [Homepage Control](homepage-control.md)
   - [Fluid Template](fluid-template.md)
   - [Page Title Toggle](page-title-toggle.md)
 - [Minimum Requirements](minimum-requirements.md)
