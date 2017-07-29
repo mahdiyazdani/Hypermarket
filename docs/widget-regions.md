@@ -2,6 +2,8 @@
 
 Hypermarket theme includes five widget regions.
 
+![Widget Regions](img/hypermarket-widget-regions.png)
+
 ## Shop Sidebar
 
 Widgets placed to this region will appear to the right of the shop archive page content.
@@ -10,3 +12,9 @@ Widgets placed to this region will appear to the right of the shop archive page 
 
 The three footer widget regions are arranged into equal width columns dependent on how many regions are active.
 As an example if you have widgets in the **Footer 1** region and widgets in the **Footer 2** region, they are organized in **two equal-width columns** while Footer 3 won’t display.
+
+## Footer Bar
+
+!> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
+
+A **full-width** widgetized region which will display any widget added to this region above the [Hypermarket](https://wordpress.org/themes/hypermarket/) footer widget area.
