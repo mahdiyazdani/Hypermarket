@@ -17,4 +17,4 @@ Homepage control components can be adjusted with a few clicks via the WordPress 
 
 ?> Note that any new components added after the initial configuration will need to be manually toggled in the **Homepage Control** panel.
 
-?> If there are no settings displaying in the WordPress customizer for **Homepage Control** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Homepage Control** customizer settings will only display if you have this page template set as the front page of your site. 
+?> If there are no components displaying in the WordPress customizer for **Homepage Control** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Homepage Control** customizer settings will only display if you have this page template set as the front page of your site. 
