@@ -10,6 +10,8 @@ Color filters are managed from the **Products** » **Colors** screen.
 
 Similar to categories on your products in WooCommerce, you can **add, delete, and edit** your product color filters here.
 
+![Product color filters](img/product-color-filters.png)
+
 * Add a **Name**.
 * Optionally, add a **Slug**; this is the URL-friendly version of the name.
 *You can leave slug name field **empty**, and it will be generated automatically from the color name.*
