@@ -4,6 +4,9 @@ Color attributes lets you to place the color filter widget on your shop and allo
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
-To start using color filters you need to create at least one color attribute. To create your first color filter follow the steps below:
+## Add or edit product colors
 
-* Navigate to **Products** » **Colors**.
+Color filters are managed from the **Products** » **Colors** screen.
+Similar to categories on your products in WooCommerce, you can **add, delete, and edit** your product color filters here.
+
+* Add a **Name**.
