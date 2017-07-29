@@ -12,7 +12,7 @@
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
 - Features
-- [Fluid Template](fluid-template.md)
+  - [Fluid Template](fluid-template.md)
 - [Minimum Requirements](minimum-requirements.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
