@@ -22,3 +22,14 @@ You can add different link types into your menu, these are split between panes l
 * Click the **Save Menu** button once you've added all the menu items you want.
 
 ## Deleting a menu item
+
+* Locate the menu item that you want to remove in the menu editor window.
+* Click on the **arrow icon** in the top right-hand corner of the menu item to expand it.
+* Click on the **Remove** link. The menu item will be immediately removed.
+* Click the **Save Menu** button to save your changes.
+
+## Assigning your menu to a location
+
+* Scroll to the bottom of the menu editor window.
+* In the section titled **Theme locations**, click the check box for the **Primary Menu** location.
+* Click **Save Menu** once you've made your selection.
