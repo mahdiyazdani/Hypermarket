@@ -20,3 +20,15 @@ As an example if you have widgets in the **Footer 1** region and widgets in the 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
 A **full-width** widgetized region which will display any widget added to this region above the [Hypermarket](https://wordpress.org/themes/hypermarket/) footer widget area.
+
+## Adding widget to a sidebar
+
+There are several ways to add widgets to sidebars available in your Hypermarket theme. The easiest one is to simply drag and drop them to your widget region.
+
+![Adding widget to a sidebar](img/fill-sidebars-with-widgets.gif)
+
+You can also click on a widget title from the list of available widget. WordPress will show you the list of widget regions where you can add this widget.
+
+Simply select the widget region where you want to add the widget, and then click on **Add widget** button to add it.
+
+?> There is also an **accessibility mode** for users who need it. To enable accessibility mode, you need to click on the **screen options** button at the top right corner of the screen.
