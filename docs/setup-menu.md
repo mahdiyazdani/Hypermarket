@@ -20,3 +20,5 @@ You can add different link types into your menu, these are split between panes l
 * Select the pages that you want to add by **clicking the checkbox** next to each page's title.
 * Click the **Add to Menu** button located at the bottom of this pane to add your selection(s) to the menu that you created in the previous step.
 * Click the **Save Menu** button once you've added all the menu items you want.
+
+## Deleting a menu item
