@@ -11,6 +11,6 @@ Copyright section can be adjusted with a few clicks via the WordPress **customiz
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
 * Navigate to **Copyright** section.
-* Add your own custom copyright message, including HTML.
+* Add your own custom copyright message, including HTML.<br/>
 *There is another option which allows you to remove Hypermarket credit link; you can optionally enable that too*
 * **Save & Publish**.
