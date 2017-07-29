@@ -26,6 +26,8 @@ When you add a new product through **Products** » **Add Product**, you’ll be 
 
 ## Color filters widget
 
-Add ```WC Color Filters``` widget to any widgetized area of your choice, it will start working instantly. Visitors will be able of filtering WooCommerce products by available color filters.
+Add ```WC Color Filters``` widget to any widgetized area of your choice. 
+
+It will start working instantly and visitors will be able of filtering WooCommerce products by available color filters.
 
 ![Color filters widget](img/color-filters-widget.png)
