@@ -19,3 +19,7 @@ Similar to categories on your products in WooCommerce, you can **add, delete, an
 * Optionally, give a **Description**.
 * Click the **Select Color** swatch to bring up the color picker dialog box.
 * Select your desired color using the color palette or just insert **HEX** color code directly to the color code field.
+
+When you add a new product through **Products** » **Add Product**, you’ll be able to select this new product color from the list.
+
+![Adding color attribute](img/adding-color-attribute.png)
