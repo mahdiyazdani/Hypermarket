@@ -13,6 +13,6 @@ Homepage control components can be adjusted with a few clicks via the WordPress 
 * Navigate to **Homepage Control** section.
 * **Drag and drop** items to reorder.
 * **Check or uncheck** the checkbox of each component to turn the display on or off.
-* Save & Publish.
+* **Save & Publish**.
 
 ?> Note that any new components added after the initial configuration will need to be manually toggled in the **Homepage Control** panel.
