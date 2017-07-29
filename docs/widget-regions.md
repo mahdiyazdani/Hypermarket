@@ -2,6 +2,8 @@
 
 Hypermarket theme includes five widget regions.
 
+?> Widgets can be found on **Appearance** » **Widgets** page in your WordPress admin area.
+
 ![Widget Regions](img/hypermarket-widget-regions.png)
 
 ## Shop Sidebar
