@@ -15,6 +15,8 @@ You can add different link types into your menu, these are split between panes l
 
 ?> The **screen options** allow you to choose which items you can use to add to a menu. Certain items, like **Posts** are hidden by default. The screen options are located in the top right corner of your WordPress dashboard.
 
+![Adding items to a menu](img/adding-pages-to-your-menu.gif)
+
 * Locate the pane entitled **Pages**.
 * Within this pane, select the **View All** link to bring up a list of all the currently **published pages** on your site.
 * Select the pages that you want to add by **clicking the checkbox** next to each page's title.
