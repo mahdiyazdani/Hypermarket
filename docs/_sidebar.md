@@ -10,6 +10,7 @@
 - First Steps
   - [Site Logo](upload-site-logo.md)
   - [Set Up Homepage](setup-homepage-template.md)
+  - [Widget regions](widget-regions.md)
 
 - [Minimum Requirements](minimum-requirements.md)
 
