@@ -8,9 +8,9 @@ The page attributes meta box allows you to select a parent page for the page and
 
 ![Fluid post and page template](img/fluid-template.png)
 
-* Default Page Template - See the [live demo](https://demo.mypreview.one/hypermarket/default).
+* Default Page Template - View [live demo](https://demo.mypreview.one/hypermarket/default).
 *(Use for a responsive fixed width container)*
-* Fluid Page Template - See the [live demo](https://demo.mypreview.one/hypermarket/fluid).
+* Fluid Page Template - View [live demo](https://demo.mypreview.one/hypermarket/fluid).
 *(Use for a full-width container, spanning the entire width of your viewport)*
 
 Also, it is possible to change the template of a page through the main page list page. All you have to do is click on the **Quick Edit** link.
