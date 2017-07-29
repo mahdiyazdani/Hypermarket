@@ -9,6 +9,7 @@
 
 - First Steps
   - [Site Logo](upload-site-logo.md)
+  - [Set Up Menu](setup-menu.md)
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
 
