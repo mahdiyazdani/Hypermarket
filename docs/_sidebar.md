@@ -13,6 +13,7 @@
   - [Widget Regions](widget-regions.md)
 - Features
   - [Fluid Template](fluid-template.md)
+  - [Page Title Toggle](page-title-toggle.md)
 - [Minimum Requirements](minimum-requirements.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
