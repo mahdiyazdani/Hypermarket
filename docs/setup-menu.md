@@ -33,3 +33,10 @@ You can add different link types into your menu, these are split between panes l
 * Scroll to the bottom of the menu editor window.
 * In the section titled **Theme locations**, click the check box for the **Primary Menu** location.
 * Click **Save Menu** once you've made your selection.
+
+## Adding a my-account icon to menu
+
+WordPress comes with built-in functionality to manage user registrations. By default, it is turned off, but you can quickly turn it on.
+* Head over to **Settings** » **General** page in your WordPress admin area. 
+* Scroll down to the **Membership** section and check the box next to **Anyone can register** option.
+* Next you need to select the default user role. This is the user role assigned to each new user who registers on your website, in most cases it should be a **Customer**
