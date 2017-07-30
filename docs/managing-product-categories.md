@@ -1,4 +1,4 @@
-# Managing Product Categories
+# Managing product categories
 
 Product categories are the main way to group products with similar features. You can also add sub categories if needed.
 
