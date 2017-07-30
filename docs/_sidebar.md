@@ -11,6 +11,7 @@
   - [Set Up Menu](setup-menu.md)
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
+  - [Blurry Product Images](blurry-product-images.md)
 - Features
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
