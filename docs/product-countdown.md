@@ -4,6 +4,10 @@ This option lets you to promote your sale campaigns in WooCommerce. Show a count
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
+Product countdown section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
+
+![Product countdown](img/product-countdown.png)
+
 * Navigate to **Products**.
 * **Edit** the product that you want to put on sale.
 * Scroll down to the **Product Data** meta box where the majority of important data is added for your products.
