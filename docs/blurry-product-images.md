@@ -56,4 +56,13 @@ remove_all_filters('woocommerce_get_image_size_shop_catalog');
 remove_all_filters('woocommerce_get_image_size_shop_thumbnail');
 ```
 
+## Set image sizes
+
+Assuming setting fields are already **enabled**, you can add new dimensions to WooCommerce to ensure that future image sizes will be rendered as expected.
+
+* Go to **Woocommerce** » **Settings** » **Products** » **Display**.
+* Scroll down on the page until you see the **Product images** section.
+* Optionally, change the WooCommerce image sizes for specific needs.
+* Then **Save Changes**.
+
 ?> Note that saving changes does **NOT** automatically update all previously uploaded product imagery. To update old images, WordPress needs to [regenerate the thumbnails](http://wordpress.org/extend/plugins/regenerate-thumbnails). This is to ensure that all affected images are resized to match the new dimensions.
