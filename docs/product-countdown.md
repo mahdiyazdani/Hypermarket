@@ -20,7 +20,8 @@ Product countdown section can be adjusted with a few clicks via the WordPress **
 * Navigate to **Product Countdown** section.
 * Locate the **On Sale Product** option.
 * Select the product for which you want to activate the countdown.
-* Upload an **image**.
+* Optionally, enter promotional content, including HTML.
+* Upload a custom product **image** for the countdown component.
 * Set the **ending date** of the sale.
 * **Save & Publish**.
 
