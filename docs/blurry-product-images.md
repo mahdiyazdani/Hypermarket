@@ -1,7 +1,8 @@
 # Blurry Product Images
 
-!> For any customization and prior making any changes to the theme code, we recommend that you install [Hypermarket child theme](install-hypermarket-wordpress-child-theme). This ensures that your changes won’t be lost when updating to a new version of Hypermarket.
+WooCommerce includes settings to change the size of product images for **Catalog**, **Single Product** and Thumbnail Images. When you install the theme, each of those settings will be set to the recommended sizes.
 
+!> For any customization and prior making any changes to the theme code, we recommend that you install [Hypermarket child theme](install-hypermarket-wordpress-child-theme). This ensures that your changes won’t be lost when updating to a new version of Hypermarket.
 
 ## Image types & sizes
 
@@ -44,5 +45,7 @@ function hypermarket_child_thumbnail_image_dimensions($thumbnail) {
 }
 add_filter('hypermarket_single_image_dimensions', 'hypermarket_child_thumbnail_image_dimensions', 10, 1);
 ```
+
+When you install the [Hypermarket](https://wordpress.org/themes/hypermarket) theme, each of those settings will be set to the **recommended sizes** and since different filters are overwriting these values in the theme settings of these image sizes have been **disabled**.
 
 ?> Note that saving changes does **NOT** automatically update all previously uploaded product imagery. To update old images, WordPress needs to [regenerate the thumbnails](http://wordpress.org/extend/plugins/regenerate-thumbnails). This is to ensure that all affected images are resized to match the new dimensions.
