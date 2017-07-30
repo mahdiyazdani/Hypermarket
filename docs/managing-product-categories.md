@@ -34,6 +34,6 @@ Alternatively, you can go to **Products** » **Add Product** directly, and selec
 
 ![Grid based layout](img/shop-by-category-grid-layout.png)
 
-* Go to Settings » [H/M] Plus Settings.
+* Go to **Settings** » **[H/M] Plus Settings**.
 * Optionally, check the **Shop by category** checkbox to enable grid based layout.
 * Then **Save Changes**.
