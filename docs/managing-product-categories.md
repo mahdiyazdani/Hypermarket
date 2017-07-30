@@ -20,3 +20,5 @@ Similar to **categories** on your posts in WordPress, you can **add, delete, and
 **Both** will display subcategories and products below that.*
 * Optionally, **Upload or Add Image**.<br/>
 *Hypermarket theme by default shows product category images on the homepage template.*
+
+?> Categories can also be **reordered** by **dragging and dropping** – this order will be used by default on the front end whenever the categories are listed.
