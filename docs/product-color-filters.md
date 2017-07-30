@@ -13,7 +13,7 @@ Similar to categories on your products in WooCommerce, you can **add, delete, an
 ![Product color filters](img/product-color-filters.png)
 
 * Add a **Name**.
-* Optionally, add a **Slug**; this is the URL-friendly version of the name.
+* Optionally, add a **Slug**; this is the URL-friendly version of the name.<br/>
 *You can leave slug name field **empty**, and it will be generated automatically from the color name.*
 * Optionally, choose a **Parent** dependence.*
 * Optionally, give a **Description**.
