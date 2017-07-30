@@ -6,6 +6,8 @@ Product categories are the main way to group products with similar features. You
 
 Similar to **categories** on your posts in WordPress, you can **add, delete, and edit** your product categories here.
 
+![Managing product categories](img/hypermarket-product-categories.png)
+
 * Add a **Name**.
 * Optionally, add a **Slug**; this is the URL-friendly version of the name.<br/>
 *You can leave slug name field **empty**, and it will be generated automatically from the color name.*
