@@ -15,7 +15,8 @@ Similar to **categories** on your posts in WordPress, you can **add, delete, and
 * Optionally, give a Description.<br/>
 *Hypermarket theme will display this below the category title.*
 * Choose the **Display type**. Here, you decide what is shown on the category’s landing page. <br/>
-*Standard will take your theme’s default. **Subcategories** will display only the subcategories.* <br/>
+*Standard will take your theme’s default. 
+*Subcategories will display only the subcategories.* <br/>
 *Products will only display products.* <br/>
 *Both will display subcategories and products below that.*
 * Optionally, **Upload or Add Image**.<br/>
