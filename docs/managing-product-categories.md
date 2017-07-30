@@ -29,3 +29,11 @@ When you add a new product through **Products** » **Add Product**, you’ll be 
 Alternatively, you can go to **Products** » **Add Product** directly, and select **Add new category** there.
 
 ![Add product categories](img/add-product-categories.png)
+
+## Grid based layout
+
+![Grid based layout](img/shop-by-category-grid-layout.png)
+
+* Go to Settings » [H/M] Plus Settings.
+* Optionally, check the **Shop by category** checkbox to enable grid based layout.
+* Then **Save Changes**.
