@@ -11,6 +11,8 @@
   - [Set Up Menu](setup-menu.md)
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
+- How To's
+  - [Blurry Product Images](blurry-product-images.md)
   - [Managing Product Categories](managing-product-categories.md)
 - Features
   - [Fluid Template](fluid-template.md)
@@ -19,8 +21,6 @@
   - [Homepage Control](homepage-control.md)
   - [Product Color Filters](product-color-filters.md)
   - [Product Image Flipper](product-image-flipper.md)
-- How To's
-  - [Blurry Product Images](blurry-product-images.md)
 - [Minimum Requirements](minimum-requirements.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
