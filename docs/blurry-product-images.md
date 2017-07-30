@@ -1,4 +1,4 @@
-# Blurry Product Images
+# Blurry product images
 
 When your product images are blurry two things could be happening. 
 
