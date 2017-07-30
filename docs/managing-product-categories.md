@@ -32,6 +32,8 @@ Alternatively, you can go to **Products** » **Add Product** directly, and selec
 
 ## Grid based layout
 
+!> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
+
 ![Grid based layout](img/shop-by-category-grid-layout.png)
 
 * Go to **Settings** » **[H/M] Plus Settings**.
