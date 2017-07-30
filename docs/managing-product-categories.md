@@ -26,6 +26,6 @@ Similar to **categories** on your posts in WordPress, you can **add, delete, and
 
 When you add a new product through **Products** » **Add Product**, you’ll be able to select this new product category from the list.
 
-Alternatively, you can go to **Products** » **Add Product** directly, and select **Add New Product Category** there.
+Alternatively, you can go to **Products** » **Add Product** directly, and select **Add new category** there.
 
 ![Add product categories](img/add-product-categories.png)
