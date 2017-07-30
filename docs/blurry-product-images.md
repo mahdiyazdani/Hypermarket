@@ -67,4 +67,6 @@ Assuming setting fields are already **enabled**, you can add new dimensions to W
 * Optionally, change the WooCommerce image sizes for specific needs.
 * Then **Save Changes**.
 
+Any new product images that are uploaded will now have thumbnails in these settings, and should appear without distortion or blurriness.
+
 ?> Note that saving changes does **NOT** automatically update all previously uploaded product imagery. To update old images, WordPress needs to [regenerate the thumbnails](http://wordpress.org/extend/plugins/regenerate-thumbnails). This is to ensure that all affected images are resized to match the new dimensions.
