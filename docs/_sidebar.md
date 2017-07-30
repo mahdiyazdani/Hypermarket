@@ -17,6 +17,7 @@
 - Features
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
+  - [Product Countdown](product-countdown.md)
   - [Page Title Toggle](page-title-toggle.md)
   - [Homepage Control](homepage-control.md)
   - [Product Color Filters](product-color-filters.md)
