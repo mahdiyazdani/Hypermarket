@@ -11,7 +11,7 @@
 
 ## Overwriting theme's image sizes
 
-In your child theme’s ```functions.php``` add the below code snippet and modify the values to meet your needs.
+In your child theme’s ```functions.php``` add the below code snippet and modify the default values to meet your needs.
 
 ```php
 // Single product image
