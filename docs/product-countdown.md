@@ -24,5 +24,6 @@ Product countdown section can be adjusted with a few clicks via the WordPress **
 * Set the **ending date** of the sale.
 * **Save & Publish**.
 
-
 ?> Note that you can keep the product on sale for as long as you want.
+
+?> If there are no components displaying in the WordPress customizer for **Product Countdown** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Product Countdown** customizer settings will only display if you have this page template set as the front page of your site. 
