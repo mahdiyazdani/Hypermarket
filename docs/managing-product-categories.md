@@ -10,7 +10,7 @@ Similar to **categories** on your posts in WordPress, you can **add, delete, and
 
 * Add a **Name**.
 * Optionally, add a **Slug**; this is the URL-friendly version of the name.<br/>
-*You can leave slug name field **empty**, and it will be generated automatically from the color name.*
+*You can leave slug name field **empty**, and it will be generated automatically from the category name.*
 * Choose a **Parent** if this is a subcategory.
 * Optionally, give a Description.<br/>
 *Hypermarket theme will display this below the category title.*
