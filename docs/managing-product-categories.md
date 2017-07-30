@@ -16,5 +16,5 @@ Similar to **categories** on your posts in WordPress, you can **add, delete, and
 ***Standard** will take your theme’s default. **Subcategories** will display only the subcategories. <br/>
 **Products** will only display products. <br/>
 **Both** will display subcategories and products below that.*
-* Optionally, Upload/Add Image.<br/>
+* Optionally, **Upload or Add Image**.<br/>
 *Hypermarket theme by default shows product category images on the homepage template.*
