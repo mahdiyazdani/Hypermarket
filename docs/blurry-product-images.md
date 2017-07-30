@@ -1,5 +1,11 @@
 # Blurry Product Images
 
+When your product images are blurry there are two things that could be happening. 
+
+**One,** your image size settings may not be adequate *(too small)* for Hypermarket theme. This can cause problems as the Hypermarket theme wants an image at 954 x 782 pixels, but you are giving it one at 400 x 400 pixels.
+
+**Two,** the original images you uploaded aren’t **high resolution enough**. Even if your image settings are right, the original image source is too small. The only thing you can do in this case is re-upload appropriate sized images to begin with.
+
 !> For any customization and prior making any changes to the theme code, we recommend that you install [Hypermarket child theme](install-hypermarket-wordpress-child-theme). This ensures that your changes won’t be lost when updating to a new version of Hypermarket.
 
 ## Image types & sizes
