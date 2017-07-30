@@ -1,7 +1,5 @@
 # Blurry Product Images
 
-WooCommerce includes settings to change the size of product images for **Catalog**, **Single Product** and Thumbnail Images. When you install the theme, each of those settings will be set to the recommended sizes.
-
 !> For any customization and prior making any changes to the theme code, we recommend that you install [Hypermarket child theme](install-hypermarket-wordpress-child-theme). This ensures that your changes won’t be lost when updating to a new version of Hypermarket.
 
 ## Image types & sizes
