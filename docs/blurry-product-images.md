@@ -48,7 +48,7 @@ add_filter('hypermarket_single_image_dimensions', 'hypermarket_child_thumbnail_i
 
 ## Enable settings of image sizes
 
-?> When you install the [Hypermarket](https://wordpress.org/themes/hypermarket) theme, each of those settings will be set to the **recommended sizes** and since different filters are overwriting these values in the theme, settings of these image sizes have been **disabled**.
+When you install the [Hypermarket](https://wordpress.org/themes/hypermarket) theme, each of those settings will be set to the **recommended sizes** and since different filters are overwriting these values in the theme, settings of these image sizes have been **disabled**.
 
 To **enable the inputs** when a filter overwrites the sizes add the below code snippet in your child theme’s ```functions.php```
 
