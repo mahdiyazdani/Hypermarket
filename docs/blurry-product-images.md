@@ -60,7 +60,7 @@ remove_all_filters('woocommerce_get_image_size_shop_thumbnail');
 
 Assuming setting fields are already **enabled**, you can add new dimensions to WooCommerce to ensure that future image sizes will be rendered as expected.
 
-![Set product image sizes](img/set-product-image-dimensions.png)
+![Set product image sizes](img/set-woocommerce-product-image-dimensions.png)
 
 * Go to **Woocommerce** » **Settings** » **Products** » **Display**.
 * Scroll down on the page until you see the **Product images** section.
