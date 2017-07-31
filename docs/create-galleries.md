@@ -41,3 +41,7 @@ A full shortcode could look like:
 ```php
 [hypermarket-plus-gallery gap="true" col="3" filter="true" all_filter="true" order="DESC" orderby="none" size="full" limit="9" category_ids="" pagination="ajax"]
 ```
+
+Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the gallery tooltip will appear, then click the **gallery button**.
+
+After clicking the interface button, a modal dialog with a few options to config will appear, optionally fill the blanks and hit the **OK** button to generate a new gallery shortcode.
