@@ -27,6 +27,8 @@ Product countdown section can be adjusted with a few clicks via the WordPress **
 
 ?> Note that you can keep the product on sale for as long as you want.
 
+!> You can toggle the visibility and reorder the product countdown component position throught the [homepage control](homepage-control) section.
+
 ## Merge product countdown
 
 ![Product countdown with merged layout](img/product-countdown-merged-layout.png)
