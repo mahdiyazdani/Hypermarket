@@ -24,6 +24,7 @@
   - [Product Countdown](product-countdown.md)
   - [Product Color Filters](product-color-filters.md)
   - [Product Image Flipper](product-image-flipper.md)
+  - [Testimonial & Quotation](testimonial-quotation.md)
 - [Minimum Requirements](minimum-requirements.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
