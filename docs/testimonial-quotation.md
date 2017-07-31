@@ -17,3 +17,5 @@ Testimonial section can be adjusted with a few clicks via the WordPress **custom
 * **Save & Publish**.
 
 !> You can toggle the visibility and reorder the testimonial component position using the [homepage control](homepage control) section.
+
+?> If there are no components displaying in the WordPress customizer for **Testimonial** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Testimonial** customizer settings will only display if you have this page template set as the front page of your site. 
