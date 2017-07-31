@@ -16,5 +16,5 @@ Similar to posts in WordPress, you can **add, delete, and edit** your gallery it
 * Optionally, enter a **URL** to a file or **media resource**.
 * Optionally, enter a **description** or **excerpt** about the item.
 * As needed, select a **Category**.
-* Upload a **featured image**.
+* Upload a **Gallery Item Image**.
 * **Publish** or **Update** the item.
