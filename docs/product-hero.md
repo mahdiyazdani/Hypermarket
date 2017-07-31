@@ -47,3 +47,5 @@ A full shortcode could look like:
 ```php
 [hypermarket-plus-hero-product product_id="87" product_heading="Name of the product goes here" product_image_id="2507" add_to_cart_btn="true" details_btn="true" layer_parallax="true" full_height="false" full_width="true"]
 ```
+
+Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the hero product tooltip will appear, then click the hero product button.
