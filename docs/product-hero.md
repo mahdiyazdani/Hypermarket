@@ -6,6 +6,8 @@ This option allows you to add a hero component to the homepage template, or on a
 
 Product hero section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
+![Product hero](img/product-hero.png)
+
 * Navigate to **Products**.
 * Select the **star** in the featured column.<br/>
 *Alternatively, select **Quick Edit** and then the **Featured** option.*
