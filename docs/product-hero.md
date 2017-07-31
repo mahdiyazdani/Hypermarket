@@ -29,7 +29,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 
 ## Shortcode
 
-You can add the product hero component to any page using the [hypermarket-plus-hero-product] shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero components.
+You can add the product hero component to any page using the ```[hypermarket-plus-hero-product]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
 
 ```php
 product_id
