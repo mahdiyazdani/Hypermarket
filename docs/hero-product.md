@@ -17,7 +17,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 * Navigate to **Hero Product** section.
 * Locate the **Featured Product** option.
 * Select the product for which you want to activate the hero component.
-* Specify the text to be displayed in the hero component header.
+* Specify the text to be displayed in the hero component header.<br/>
 *You can leave this field blank to display the product title.*
 * Upload a **background image** for the hero component.
 * Toggle the display of the product **add to cart** button.
