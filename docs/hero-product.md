@@ -27,7 +27,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 * Optionally, check the **Full Height** checkbox, when enabled the product hero will intelligently resize the fill the browser window on page load.
 * **Save & Publish**.
 
-!> You can toggle the visibility and reorder the hero product component position using the [homepage control](homepage control) section.
+!> You can toggle the visibility and reorder the hero product component position using the [homepage control](homepage control) section
 
 ?> If there are no components displaying in the WordPress customizer for **Hero Product** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Hero Product** customizer settings will only display if you have this page template set as the front page of your site. 
 
