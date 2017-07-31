@@ -19,7 +19,7 @@ Testimonial section can be adjusted with a few clicks via the WordPress **custom
   * Specify the quote **author name** to be displayed in the testimonial component author info area.
   * Specify the quote **author designation** or **job title** to be displayed in the testimonial component author info area.
   * Upload a **avatar image** for the testimonial component.
-  * Specify the **quote** to be displayed in the testimonial component **content area**, including HTML.
+  * Specify the **quote** to be displayed in the testimonial component **content area**, *including HTML*.
   * Toggle the quote display in the testimonial component.
 * **Save & Publish**.
 
