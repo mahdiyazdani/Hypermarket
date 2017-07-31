@@ -8,9 +8,12 @@
 
 Similar to posts in WordPress, you can **add, delete, and edit** your gallery items here.
 
+![Adding galleries](img/add-gallery-item.png)
+
 * Navigate to the **Gallery** tab.
 * Click the **Add New** button in the top left-hand corner of the page.
 * Add a **Title**.
+* Optionally, enter a **URL** to a file or **media resource**.
 * Optionally, enter a **description** or **excerpt** about the item.
 * As needed, select a **Category**.
 * Upload a **featured image**.
