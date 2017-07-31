@@ -33,3 +33,4 @@
 - Changelog
   - [Hypermarket](hypermarket-wordpress-theme-changelog.md)
   - [Hypermarket Plus](hypermarket-plus-plugin-changelog.md)
+  
