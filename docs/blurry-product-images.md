@@ -57,9 +57,12 @@ When you install the [Hypermarket](https://wordpress.org/themes/hypermarket) the
 To **enable the inputs** when a filter overwrites the sizes add the below code snippet in your child theme’s ```functions.php```
 
 ```php
-remove_all_filters('woocommerce_get_image_size_shop_single');
-remove_all_filters('woocommerce_get_image_size_shop_catalog');
-remove_all_filters('woocommerce_get_image_size_shop_thumbnail');
+function hypermarket_child_enable_image_size_settings() {
+	remove_all_filters('woocommerce_get_image_size_shop_single');
+        remove_all_filters('woocommerce_get_image_size_shop_catalog');
+        remove_all_filters('woocommerce_get_image_size_shop_thumbnail');
+}
+add_action('init', 'hypermarket_child_enable_image_size_settings', 10);
 ```
 
 ## Set image sizes
