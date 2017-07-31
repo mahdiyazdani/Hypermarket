@@ -14,7 +14,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 * **Update** the product to save the changes.
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
-* Navigate to **Product Hero** section.
+* Navigate to **Hero Product** section.
 * Locate the **Featured Product** option.
 * Select the product for which you want to activate the hero component.
 * Specify the text to be displayed in the hero component header.
