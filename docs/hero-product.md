@@ -49,6 +49,6 @@ A full shortcode could look like:
 ```
 ![Generate a product hero shortcode](img/generate-product-hero-shortcode.gif)
 
-Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the hero product tooltip will appear, then click the hero product button.
+Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the hero product tooltip will appear, then click the **hero product button**.
 
-After clicking the interface button, a modal dialog with a few options to config will appear, optionally fill the blanks and hit the OK button to generate a new hero product shortcode.
+After clicking the interface button, a modal dialog with a few options to config will appear, optionally fill the blanks and hit the **OK** button to generate a new hero product shortcode.
