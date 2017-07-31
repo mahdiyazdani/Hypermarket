@@ -18,3 +18,26 @@ Similar to posts in WordPress, you can **add, delete, and edit** your gallery it
 * As needed, select a **Category**.
 * Upload a **Gallery Item Image**.
 * **Publish** or **Update** the item.
+
+## Shortcode
+
+You can add the gallery component to any page using the ```[hypermarket-plus-gallery]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
+
+```php
+gap
+col
+filter
+all_filter
+order
+orderby
+size
+limit
+category_ids
+pagination
+```
+
+A full shortcode could look like:
+
+```php
+[hypermarket-plus-gallery gap="true" col="3" filter="true" all_filter="true" order="DESC" orderby="none" size="full" limit="9" category_ids="" pagination="ajax"]
+```
