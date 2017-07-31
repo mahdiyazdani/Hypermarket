@@ -18,6 +18,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 * Locate the **Featured Product** option.
 * Select the product for which you want to activate the hero component.
 * Specify the text to be displayed in the hero component header.
+*You can leave this field blank to display the product title.*
 * Upload a **background image** for the hero component.
 * Toggle the display of the product **add to cart** button.
 * Toggle the display of the product **details/description** button.
@@ -25,3 +26,24 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 *Parallax Engine reacts to the orientation of a smart device. Where no gyroscope or motion detection hardware is available, the position of the cursor is used instead.*
 * Optionally, check the **Full Height** checkbox, when enabled the product hero will intelligently resize the fill the browser window on page load.
 * **Save & Publish**.
+
+## Shortcode
+
+You can add the product hero component to any page using the [hypermarket-plus-hero-product] shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero components.
+
+```php
+product_id
+product_heading
+product_image_id
+add_to_cart_btn
+details_btn
+layer_parallax
+full_height
+full_width
+```
+
+A full shortcode could look like:
+
+```php
+[hypermarket-plus-hero-product product_id="87" product_heading="Name of the product goes here" product_image_id="2507" add_to_cart_btn="true" details_btn="true" layer_parallax="true" full_height="false" full_width="true"]
+```
