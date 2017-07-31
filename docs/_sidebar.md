@@ -18,6 +18,7 @@
   - [Hero Product](hero-product.md)
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
+  - [Create Galleries](create-galleries.md)
   - [Page Title Toggle](page-title-toggle.md)
   - [Homepage Control](homepage-control.md)
   - [Product Countdown](product-countdown.md)
