@@ -6,6 +6,8 @@ The testimonial or quotation option enables you to load in what your customers a
 
 Testimonial section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
+![Testimonial & Quotation](img/testimonials-quotation.png)
+
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
 * Navigate to **Testimonial** section.
