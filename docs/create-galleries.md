@@ -9,7 +9,7 @@
 Similar to posts in WordPress, you can **add, delete, and edit** your gallery items here.
 
 * Navigate to the **Gallery** tab.
-* Click the **Add New** button on the top left corner of the page.
+* Click the **Add New** button in the top left-hand corner of the page.
 * Add a **Title**.
 * Optionally, enter a **description** or **excerpt** about the item.
 * As needed, select a **Category**.
