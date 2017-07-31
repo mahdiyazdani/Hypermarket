@@ -15,6 +15,7 @@
   - [Blurry Product Images](blurry-product-images.md)
   - [Managing Product Categories](managing-product-categories.md)
 - Features
+  - [Hero Product](hero-product.md)
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
   - [Page Title Toggle](page-title-toggle.md)
