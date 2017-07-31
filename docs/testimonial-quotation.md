@@ -16,7 +16,6 @@ Testimonial section can be adjusted with a few clicks via the WordPress **custom
 * Choose your default **testimonial style** with altering the component's appearance.
 * **Add quotes** using the testimonials repeater field which allows you to create a set of sub quotes that can be repeated while editing content.<br/>
 *You can reorder the quotes via **drag and drop**.*
- * sdsd
 * **Save & Publish**.
 
 !> You can toggle the visibility and reorder the testimonial component position using the [homepage control](homepage control) section.
