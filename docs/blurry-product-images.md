@@ -32,8 +32,8 @@ add_filter('hypermarket_single_image_dimensions', 'hypermarket_child_single_imag
 // Catalog product image(s)
 function hypermarket_child_catalog_image_dimensions($catalog) {
 	return array(
-		'width' => '954', // px
-		'height' => '782', // px
+		'width' => '500', // px
+		'height' => '455', // px
 		'crop' => 1 // true
 	);
 }
@@ -42,8 +42,8 @@ add_filter('hypermarket_single_image_dimensions', 'hypermarket_child_catalog_ima
 // Thumbnail product image(s)
 function hypermarket_child_thumbnail_image_dimensions($thumbnail) {
 	return array(
-		'width' => '954', // px
-		'height' => '782', // px
+		'width' => '160', // px
+		'height' => '131', // px
 		'crop' => 1 // true
 	);
 }
