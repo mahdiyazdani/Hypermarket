@@ -1,4 +1,4 @@
-# Product hero
+# Hero product
 
 This option allows you to add a hero component to the homepage template, or on any page via shortcode. You can upload a background image (and set it to layer parallax effect) and tweak other appearance settings.
 
