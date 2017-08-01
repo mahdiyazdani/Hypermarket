@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.4.2
+ * @since 	    1.0.9.0
  */
 /**
  * Before Header Area
@@ -55,13 +55,13 @@ add_action('hypermarket_footer_area', 'hypermarket_footer_wrapper_end', 30);
 /**
  * Single page
  *
- * @see  hypermarket_featured_image_background_single_page()		 -> template-functions.php
+ * @see  hypermarket_featured_image_single_page()					 -> template-functions.php
  * @see  hypermarket_before_single_page_content_wrapper_start()		 -> template-functions.php
  * @see  hypermarket_single_page_paging()							 -> template-functions.php
  * @see  hypermarket_after_single_page_content_wrapper_end()		 -> template-functions.php
- * @since 1.0.4.2
+ * @since 1.0.9.0
  */
-add_action('hypermarket_featured_image_single_page', 'hypermarket_featured_image_background_single_page', 10);
+add_action('hypermarket_before_single_page', 'hypermarket_featured_image_single_page', 10);
 add_action('hypermarket_before_single_page_content', 'hypermarket_before_single_page_content_wrapper_start', 20);
 add_action('hypermarket_end_single_page_content', 'hypermarket_single_page_paging', 10);
 add_action('hypermarket_after_single_page_content', 'hypermarket_after_single_page_content_wrapper_end', 30);
@@ -81,9 +81,9 @@ add_action('hypermarket_loop_posts_paging_navigation', 'hypermarket_paging_navig
 /**
  * Single post
  *
- * @see  hypermarket_featured_image_background_single_page()		 -> template-functions.php
- * @see  hypermarket_single_post_paging()					  		 -> template-functions.php
+ * @see  hypermarket_featured_image_single_page()		 -> template-functions.php
+ * @see  hypermarket_single_post_paging()				 -> template-functions.php
  * @since 1.0.4
  */
-add_action('hypermarket_featured_image_single_post', 'hypermarket_featured_image_background_single_page', 10);
+add_action('hypermarket_before_single_post', 'hypermarket_featured_image_single_page', 10);
 add_action('hypermarket_end_single_post_content', 'hypermarket_single_post_paging', 10);
