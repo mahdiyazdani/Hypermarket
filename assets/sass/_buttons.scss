@@ -66,6 +66,27 @@ a.btn {
     pointer: not-allowed;
   }
 }
+// Search Button
+.search-btn {
+  @extend .btn;
+  @extend .btn-ghost;
+  line-height: $btn-sm-height - 2;
+  color: $gray;
+  text-align: center;
+  @include square($btn-sm-height);
+  @include padding(0);
+  @include margin(0 0 0 20px);
+  > i::before {
+    font-size: $search-button-icon-size;
+    @include margin(-3px null null);
+  }
+  &:hover,
+  &.active {
+    background-color: transparent;
+    color: $gray-dark;
+  }
+  &:focus { color: $gray-dark; }
+}
 
 // Alternate buttons
 // --------------------------------------------------
