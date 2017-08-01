@@ -56,7 +56,7 @@ The Hypermarket Plus plugin is only available to purchase from [mypreview.one](h
 
 ## Something missing?
 
-Join our [support forums](https://support.mypreview.one) and let us help you.
+As always, We would love to connect with you and hear your thoughts about anything we are doing. Join our [support forums](https://support.mypreview.one) and let us help you.
 
 ## Statistics
 
