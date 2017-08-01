@@ -368,8 +368,29 @@ kbd {
 
 // Container Full
 .bs3-grid-builder-container.container-full {
-  margin: 0 auto;
   width: 100%;
+  @include margin(0 auto);
+}
+
+// Homepage control
+.page-template-template-homepage {
+  #hypermarket-header {
+    & + section:not(.hypermarket-plus-hero-slider) {
+      margin-top: 0 !important;
+      padding-top: 7px !important;
+      & hr { display: none; }
+    }
+    & + section.hypermarket-plus-hero-slider {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+  #hypermarket-new-arrivals-products {
+    & + section {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
 }
 
 // WordPress core classes
