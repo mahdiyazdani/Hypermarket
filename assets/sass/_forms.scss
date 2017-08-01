@@ -321,6 +321,20 @@ input[type="radio"] {
     .form-submit { width: 40%; }
   }
 }
+.woocommerce-checkout {
+  .login-form {
+    .form-footer {
+      .rememberme { 
+        width: 66.66666667%;
+        @include padding(null 15px null null);
+      }
+      .form-submit { 
+        width: 33.33333333%;
+        @include padding(null null null 15px);
+      }
+    }
+  }
+}
 
 // Checkout Form
 .checkout-form {
