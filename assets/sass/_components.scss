@@ -19,6 +19,18 @@
     @include position(relative, null null null null);
 	}
 
+  &.no-cover { background-size: auto; }
+
+  // Full Height
+  &.full-height {
+    min-height: 95vh;
+  }
+  &.full-width {
+    width: 100vw;
+    @include margin(null null null -50vw);
+    @include position(relative, null null null 50%);
+  }
+
 	// Overlay
 	.overlay {
     display: block;
