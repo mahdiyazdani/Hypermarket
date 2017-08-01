@@ -5,23 +5,23 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.5
+ * @since 		    1.0.9.0
  */
 /**
- * Functions hooked into "hypermarket_featured_image_single_post" action
+ * Functions hooked into "hypermarket_before_single_post" action
  *
- * @hooked hypermarket_featured_image_background_single_post        - 10
- * @since 1.0
+ * @hooked hypermarket_featured_image_single_post     - 10
+ * @since 1.0.9.0
  */
-do_action('hypermarket_featured_image_single_post');
+do_action('hypermarket_before_single_post');
 ?>
 <!-- Content -->
-<section class="container<?php echo (apply_filters('hypermarket_fluid_template', false)) ? '-fluid' : ''; ?> padding-top-3x">
+<section id="hypermarket-post-content" class="container<?php echo (apply_filters('hypermarket_fluid_template', false)) ? '-fluid' : ''; ?> padding-top-3x">
 	<h1 class="mobile-center"><?php the_title(); ?></h1>
 		<?php
 			while (have_posts()):
 				the_post();
-		?>
+			?>
 				<!-- Post -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('row padding-top paddin-bottom'); ?>>
 					<div class="col-sm-12">
