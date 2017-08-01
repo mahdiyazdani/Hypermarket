@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.6.4
+ * @since       1.0.9.0
  */
 
 jQuery(document).ready(function($) {
@@ -237,7 +237,7 @@ jQuery(document).ready(function($) {
     // Add to Cart Button Effect
     //------------------------------------------------------------------------------
     var animating = false;
-    $('.shop-item').each(function() {
+    $('.shop-item, .hero-product').each(function() {
         var addToCartBtn = $(this).find('.add-to-cart:not(.product_type_variable)');
         addToCartBtn.on('click', function() {
             if (!animating) {
@@ -302,26 +302,11 @@ jQuery(document).ready(function($) {
 
     // Setting background of sections
     //------------------------------------------------------------------------------
-    $('div.data-background').each(function() {
+    $('.data-background').each(function() {
         if ($(this).attr('data-background')) {
             $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
         }
     });
-
-
-    // Add custom badge to best seller products.
-    //------------------------------------------------------------------------------
-    function hypermarketBestSellerBadge() {
-        if($('#hypermarket-best-sellers-products').length > 0) {
-            $('#hypermarket-best-sellers-products .shop-item .shop-thumbnail').each(function(){
-                if($(this).find('span.onsale').length > 0){
-                    $(this).find('span.onsale').remove();
-                }
-                $(this).prepend('<span class="shop-label text-warning">' + hypermarket_vars.popular + '</span>');
-            });
-        }
-    }
-    hypermarketBestSellerBadge();
 
 
     // Single product
