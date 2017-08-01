@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.8.0
+ * @since 	    1.0.9.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.8.0
+		 * @since 1.0.9.0
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -212,7 +212,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 															<td class="content">
 																<strong><?php esc_attr_e('Automatic updates', 'hypermarket'); ?></strong>
 																<br/>
-																<?php esc_attr_e('You can update the plugin automatically via the admin panel providing you have activated a valid license key.', 'hypermarket'); ?>
+																<?php esc_attr_e('You can update the plugin automatically via the WordPress admin panel providing you have activated a valid license key.', 'hypermarket'); ?>
 															</td>
 														</tr>
 														<tr>
@@ -255,6 +255,45 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Typography', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Easy access to any fonts you want from Google Web Fonts, the best free fonts available. Choose between more than 600 fonts.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-sort"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Extend product sorting', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Allows you to optionally, extend, add or remove the default and core WooCommerce product order by options on the shop page.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-filter"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Product color filters', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Place the color filter widget on your shop & allow visitors to browse your products by using color filters.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-hidden"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Page title toggle', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Easily remove the page title from specific single pages, shop or homepage template.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-cart"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Hero product', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Add an elegant hero component to the homepage template of your Hypermarket powered shop, or on any page via shortcode - Watch conversions soar!', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-editor-table"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Tabbed interface', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Unique homepage layout that prominently displays a variety of products in an intuitive tabbed interface.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"></td>
+															<td class="content">
 															</td>
 														</tr>
 													</tbody>
