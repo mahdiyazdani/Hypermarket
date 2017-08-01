@@ -59,9 +59,15 @@
   text-transform: uppercase;
   z-index: 10;
   margin-top: -(ceil(($pager-link-size * $line-height-base) / 2));
-  &.page-prev { left: 30px; }
+  &.page-prev { 
+    left: 30px; 
+    max-width: 110px; 
+    text-align: left; 
+  }
   &.page-next { 
+    max-width: 110px;
     right: 30px; 
+    text-align: right;
     .page-preview { right: 0; }
   }
   .page-preview {
