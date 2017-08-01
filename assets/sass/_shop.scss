@@ -55,6 +55,11 @@
         color: $gray;
         text-decoration: line-through;
       }
+      del {
+        font-size: $font-size-small;
+        color: $gray;
+        text-decoration: line-through;
+      }
     }
   }
   .shop-item-tools {
@@ -189,8 +194,9 @@
   }
   & span {
     overflow: hidden;
+    height: 100%;
     float: left;
-    padding-top: 1.5em;
+    @include padding(1.7em null null null);
     @include position(absolute, 0 null null 0);
     > strong {
       @extend .sr-only;
@@ -220,8 +226,7 @@
       display: block;
       width: 100%;
       &:first-child {
-        padding-right: 0;
-        padding-bottom: 15px;
+        @include padding(null 0 15px null);
       }
     }
   }
@@ -749,17 +754,29 @@ h1.page-title {
     @include padding(null $table-cell-padding);
   }
   label[for="rememberme"] {
-    padding-left: 2px;
     font-weight: $font-weight-h4;
+    @include padding(null null null 2px);
   }
   div.create-account, form.login-form {
-    > p:first-of-type {
+    > p:not(.form-row):first-of-type {
       font-style: italic;
       font-size: $font-size-small - 3;
       @include padding(null $table-cell-padding);
     }
   }
   #order_comments { resize: none; }
+  #shipping_method {
+    list-style: none;
+    @include padding(0);
+    input[type="radio"] {
+      float: left;
+      display: inline-block;
+      @include margin(null 7px null null);
+      + label {
+        @include padding(3px null null null);
+      }
+    }
+  }
 }
 a.woocommerce-remove-coupon {
   color: $gray-dark;
@@ -919,11 +936,22 @@ input#shipping_state,
         @include position(absolute, 10px 10px null null);
       }
     }
+    &.select2-container--open {
+        & .select2-selection {
+          border-bottom: none;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+    }
   }
 }
 .select2-container--open .select2-dropdown--below {
   border: $widget-divider;
-  border-radius: $border-radius-base;
+  border-top: none;
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-top-color:transparent; 
   background-color: $input-bg;
 }
