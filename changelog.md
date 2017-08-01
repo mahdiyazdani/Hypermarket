@@ -1,3 +1,8 @@
+= 1.0.9.0 =
+* Updated language file.
+* Updated homepage template components.
+* Added matchHeight data API to category blocks.
+
 = 1.0.8.0 =
 * Updated language file.
 * Fixed styling issues of shipping checkboxes on WooCommerce pages.
