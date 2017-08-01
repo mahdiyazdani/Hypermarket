@@ -102,3 +102,113 @@
     }
   }
 }
+
+// Tabs
+// --------------------------------------------------
+.nav-tabs {
+  @include margin(null null 0 null);
+  @include padding(null null null 0);
+  list-style: none;
+  border: none;
+  border-bottom: 2px solid $hr-border;
+  > li {
+    position: relative;
+    display: inline-block;
+    @include margin(null null -2px null);
+    > a {
+      position: relative;
+      z-index: 0;
+      display: block;
+      color: $nav-tabs-link-color;
+      font-size: $nav-tabs-font-size;
+      text-decoration: none;
+      font-weight: normal;
+      text-transform: uppercase;
+      @include padding(18px);
+      line-height: $line-height-base;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+      @include user-select(none);
+      @include transition(all .3s);
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        outline: none;
+      }
+      &:hover {
+        color: $nav-tabs-link-active-color;
+        background: none;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-tabs-link-active-color;
+        background: none;
+        border: none;
+        cursor: default;
+        border-bottom: 2px solid $nav-tabs-link-active-color;
+      }
+    }
+  }
+}
+
+// Tabbable tabs
+.tab-content {
+  padding-top: floor($line-height-computed * 1.5);
+  > .tab-pane { display: none; }
+  > .active { display: block; }
+}
+
+// Component Animations
+.transition {
+  &.fade {
+    @include opacity(0);
+    @include transition(all .4s ease-in-out);
+    @include backface-visibility(hidden);
+    &.in { @include opacity(1); }
+  }
+  &.scale.fade {
+    @include transform(scale(0.9));
+  }
+  &.scaledown.fade {
+    @include transform(scale(1.1));
+  }
+  &.scale.fade.in,
+  &.scaledown.fade.in {
+    @include transform(scale(1));
+  }
+  &.left.fade {
+    @include transform(translateX(40px));
+  }
+  &.right.fade {
+    @include transform(translateX(-40px));
+  }
+  &.left.fade.in,
+  &.right.fade.in {
+    @include transform(translateX(0px));
+  }
+  &.top.fade {
+    @include transform(translateY(-40px));
+  }
+  &.bottom.fade {
+    @include transform(translateY(40px));
+  }
+  &.top.fade.in,
+  &.bottom.fade.in {
+    @include transform(translateY(0px));
+  }
+  &.flip.fade {
+    @include transform(rotateY(-90deg) scale(1.1));
+    @include transform-origin(50% 50%);
+  }
+  &.flip.fade.in {
+    @include transform(rotateY(0deg) scale(1));
+    @include transform-origin(50% 50%);
+  }
+}
