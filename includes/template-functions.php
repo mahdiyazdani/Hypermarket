@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.6
+ * @since 	    1.0.9.0
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -216,17 +216,17 @@ if (!function_exists('hypermarket_footer_wrapper_end')):
 	}
 endif;
 // ======================================================================
-// Hooked into "hypermarket_featured_image_single_page"
+// Hooked into "hypermarket_before_single_page"
 // ======================================================================
 
 /**
  * Single page content wrapper start tag.
  *
- * @package Hooked into "hypermarket_featured_image_single_page"
- * @since 1.0.6
+ * @package Hooked into "hypermarket_before_single_page"
+ * @since 1.0.9.0
  */
-if (!function_exists('hypermarket_featured_image_background_single_page')):
-	function hypermarket_featured_image_background_single_page()
+if (!function_exists('hypermarket_featured_image_single_page')):
+	function hypermarket_featured_image_single_page()
 	{
 		get_template_part('template-parts/hypermarket-featured-image-single-page');
 	}
