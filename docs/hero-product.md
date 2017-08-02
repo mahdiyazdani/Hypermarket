@@ -34,7 +34,7 @@ Hero product section can be adjusted with a few clicks via the WordPress **custo
 
 ## Shortcode
 
-You can add the product hero component to any page using the ```[hypermarket-plus-hero-product]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
+You can add the hero product component to any page using the ```[hypermarket-plus-hero-product]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
 
 ```php
 product_id
@@ -52,7 +52,7 @@ A full shortcode could look like:
 ```php
 [hypermarket-plus-hero-product product_id="87" product_heading="Name of the product goes here" product_image_id="2507" add_to_cart_btn="true" details_btn="true" layer_parallax="true" full_height="false" full_width="true"]
 ```
-![Generate a product hero shortcode](img/generate-product-hero-shortcode.gif)
+![Generate a hero product shortcode](img/generate-product-hero-shortcode.gif)
 
 Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the hero product tooltip will appear, then click the **hero product button**.
 
