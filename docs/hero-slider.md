@@ -5,3 +5,5 @@ This option allows you to create a high-quality image and **content hero slider*
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
 Hero slider section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
+
+![Hero product](img/hero-slider.png)
