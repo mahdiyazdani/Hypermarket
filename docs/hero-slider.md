@@ -26,6 +26,20 @@ The slider repeater field allows you to create a set of sub slides which can be 
 * Specify the **URL** the button in the slide component links to.	
 * Toggle the slide display in the slider component.	
 
+## Settings
+
+* Loop - Infinity loop. Duplicate last and first items to get loop illusion.
+* Navs - Show next and previous buttons.
+* Dots - Show dots navigation.
+* Hover Pause - Pause the slider on mouse hover.
+* Mouse Drag - Toggle mouse drag.
+* Touch Drag - Toggle touch drag.
+* Autoplay - Slider can switch its slides automatically.
+* Autoplay Timeout - Autoplay interval timeout (Delay) between slides.
+* Slides - The number of slides you want to see on the screen.
+* Gutter - Horizontal space between slide elements.
+* Stage Padding - Padding left and right on stage (can see neighbours).
+
 !> You can toggle the visibility and reorder the hero slider component position using the [homepage control](homepage control) section.
 
 ?> If there are no components displaying in the WordPress customizer for **Hero Slider** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Hero Slider** customizer settings will only display if you have this page template set as the front page of your site. 
