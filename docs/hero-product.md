@@ -4,7 +4,7 @@ This option allows you to add a hero component to the homepage template, or on a
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
-Product hero section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
+Hero product section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
 ![Product hero](img/product-hero.png)
 
