@@ -7,3 +7,8 @@ This option allows you to create a high-quality image and **content hero slider*
 Hero slider section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
 ![Hero product](img/hero-slider.png)
+
+
+!> You can toggle the visibility and reorder the hero slider component position using the [homepage control](homepage control) section.
+
+?> If there are no components displaying in the WordPress customizer for **Hero Slider** you may not yet have the default Hypermarket homepage template configured and [set as the front page](setup-homepage-template) of your WordPress site as the **Hero Slider** customizer settings will only display if you have this page template set as the front page of your site. 
