@@ -12,7 +12,7 @@
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
 - How To's
-  - [Add Custom CSS](add-custom-css.md)
+  - [Adding Custom CSS](add-custom-css.md)
   - [Blurry Product Images](blurry-product-images.md)
   - [Managing Product Categories](managing-product-categories.md)
 - Features
