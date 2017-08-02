@@ -9,6 +9,22 @@ Inside of this section there are two sub-sections: **Slides** and **Settings**.
 
 ![Hero product](img/hero-slider.png)
 
+* On the frontend, in the Admin bar, click **Site Name** » **Customize**.
+* On the backend, click **Appearance** » **Customize**.
+* Navigate to **Hero Slider** section.
+
+## Slides
+
+The slider repeater field allows you to create a set of sub slides which can be repeated while editing content! You can reorder the slides via **drag and drop**.
+
+* Enter text to be displayed in the slide component **header**, including HTML.
+* Specify the text to be displayed in the slide component **content area**, including HTML.
+* Upload a **background image** for the slide component.	
+* Select the slide **layout**.
+* Specify the **text** displayed on the button in the slide component.<br/>
+*If this field is empty, no button will be displayed.*
+* Specify the **URL** the button in the slide component links to.	
+* Toggle the slide display in the slider component.	
 
 !> You can toggle the visibility and reorder the hero slider component position using the [homepage control](homepage control) section.
 
