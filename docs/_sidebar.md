@@ -10,6 +10,7 @@
   - [Site Logo](upload-site-logo.md)
   - [Set Up Menu](setup-menu.md)
   - [Create Post](create-post.md)
+  - [Create Page](create-page.md)
   - [Set Up Homepage](setup-homepage-template.md)
   - [Widget Regions](widget-regions.md)
 - How To's
