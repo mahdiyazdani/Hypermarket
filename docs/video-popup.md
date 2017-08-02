@@ -9,6 +9,12 @@ Video popup section can be adjusted with a few clicks via the WordPress **custom
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
 * Navigate to **Video Popup** section.
+* Enter **Youtube** or **Vimeo** page url, video will appear on popup window.
+* Adjust the video play button & content **float**.
+* Choose a default video button & content **skin mode**.
+* Adjust the video play button **position**.
+* Upload a custom **background image** for the video popup component.
+* Optionally, give a **video description** or content, including HTML.
 
 !> You can toggle the visibility and reorder the video popup component position using the [homepage control](homepage control) section.
 
