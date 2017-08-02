@@ -17,6 +17,7 @@ Video popup section can be adjusted with a few clicks via the WordPress **custom
 * Adjust the video play button **position**.
 * Upload a custom **background image** for the video popup component.
 * Optionally, give a **video description** or content, including HTML.
+* **Save & Publish**.
 
 !> You can toggle the visibility and reorder the video popup component position using the [homepage control](homepage control) section.
 
