@@ -16,6 +16,7 @@
   - [Blurry Product Images](blurry-product-images.md)
   - [Managing Product Categories](managing-product-categories.md)
 - Features
+  - [Hero Slider](hero-slider.md)
   - [Hero Product](hero-product.md)
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
