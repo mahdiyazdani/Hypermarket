@@ -28,17 +28,17 @@ The slider repeater field allows you to create a set of sub slides which can be 
 
 ## Settings
 
-* Loop - Infinity loop. Duplicate last and first items to get loop illusion.
-* Navs - Show next and previous buttons.
-* Dots - Show dots navigation.
-* Hover Pause - Pause the slider on mouse hover.
-* Mouse Drag - Toggle mouse drag.
-* Touch Drag - Toggle touch drag.
-* Autoplay - Slider can switch its slides automatically.
-* Autoplay Timeout - Autoplay interval timeout (Delay) between slides.
-* Slides - The number of slides you want to see on the screen.
-* Gutter - Horizontal space between slide elements.
-* Stage Padding - Padding left and right on stage (can see neighbours).
+* Loop - *Infinity loop. Duplicate last and first items to get loop illusion.*
+* Navs - *Show next and previous buttons.*
+* Dots - *Show dots navigation.*
+* Hover Pause - *Pause the slider on mouse hover.*
+* Mouse Drag - *Toggle mouse drag.*
+* Touch Drag - *Toggle touch drag.*
+* Autoplay - *Slider can switch its slides automatically.*
+* Autoplay Timeout - *Autoplay interval timeout (Delay) between slides.*
+* Slides - *The number of slides you want to see on the screen.*
+* Gutter - *Horizontal space between slide elements.*
+* Stage Padding - *Padding left and right on stage (can see neighbours).*
 
 !> You can toggle the visibility and reorder the hero slider component position using the [homepage control](homepage control) section.
 
