@@ -18,6 +18,7 @@
 - Features
   - [Hero Slider](hero-slider.md)
   - [Hero Product](hero-product.md)
+  - [Video Popup](video-popup.md)
   - [Fluid Template](fluid-template.md)
   - [Footer Copyright](update-footer-copyright.md)
   - [Create Galleries](create-galleries.md)
