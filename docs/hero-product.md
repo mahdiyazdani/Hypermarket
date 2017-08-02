@@ -17,6 +17,7 @@ Product hero section can be adjusted with a few clicks via the WordPress **custo
 * Navigate to **Hero Product** section.
 * Locate the **Featured Product** option.
 * Select the product for which you want to activate the hero component.
+*The list of selectable products is the products that are currently marked as **featured** at your shop. This is to avoid loading your entire product list in the Customizer. Be sure that the product you want to display in your product hero is marked as featured or it won't be selectable here. Likewise, if you don’t have any featured products, then the setting won't appear at all.*
 * Specify the text to be displayed in the hero component header.<br/>
 *You can leave this field blank to display the product title.*
 * Upload a **background image** for the hero component.
