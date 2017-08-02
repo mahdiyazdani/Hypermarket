@@ -6,6 +6,8 @@ This option lets you to embed **YouTube** or **Vimeo** videos on a call to actio
 
 Video popup section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
+![Video popup](img/video-popup.png)
+
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
 * Navigate to **Video Popup** section.
