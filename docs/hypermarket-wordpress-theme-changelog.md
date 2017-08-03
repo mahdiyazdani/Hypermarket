@@ -1,3 +1,9 @@
+# 1.0.9/ 2017-07-23
+
+  * Updated language file.
+  * Updated homepage template components.
+  * Added matchHeight data API to category blocks.
+  
 # 1.0.8/ 2017-07-11
 
   * Updated language file.
