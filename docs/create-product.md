@@ -45,3 +45,6 @@ The Product Data meta box is where the majority of important data is added for y
 * **Price** 
   * **Regular Price** – Item’s normal/regular price.
   * **Sale Price** – Item’s discounted price that can then be scheduled for certain date ranges.
+* The **inventory section** allows you to manage stock for the product individually and define whether to allow back orders and more. If stock management is disabled from the settings page, only the *Manage stock?* option is visible.
+* **Shipping**
+  * 
