@@ -47,4 +47,9 @@ The Product Data meta box is where the majority of important data is added for y
   * **Sale Price** – Item’s discounted price that can then be scheduled for certain date ranges.
 * The **inventory section** allows you to manage stock for the product individually and define whether to allow back orders and more. If stock management is disabled from the settings page, only the *Manage stock?* option is visible.
 * **Shipping**
-  * 
+  * **Weight** – Weight of the item.
+  * **Dimensions** – Length, width and height for the item.
+  * **Shipping Class** – Shipping classes are used by certain shipping methods to group similar products.
+* Using **up-sells** and **cross-sells**, you can cross promote your products.<br/>
+*Up-sells are displayed on the product details page.*<br/>
+*Cross-sells are products that are displayed with the cart and related to the user’s cart contents.*
