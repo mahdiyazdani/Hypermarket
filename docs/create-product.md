@@ -14,3 +14,5 @@
 *A product your will add to your store but buyers will be sent to another site to purchase it. Affiliates work well or products you may make a commission on.*
 * Variable Product<br/>
 *Some products will have different variations and multiple images. For example a t-shirt, that comes in different sizes and colors, with different prices.*
+
+!> Note that some extensions or third-party plugins if installed will add more product date choices, such as **subscriptions**.
