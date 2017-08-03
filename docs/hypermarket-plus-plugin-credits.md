@@ -48,3 +48,9 @@
 > Homepage Control - Re-order or disable the homepage components in certain themes.<br/>
 > The GPL version 2 or (at your option) any later version.<br/>
 > [https://github.com/woocommerce/homepage-control](https://github.com/woocommerce/homepage-control)
+
+<hr/>
+
+> Plugin Update Checker - A custom update checker for WordPress plugins.<br/>
+> The MIT License - Copyright (c) 2017 YahnisElsts.<br/>
+> [https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt](https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt)
