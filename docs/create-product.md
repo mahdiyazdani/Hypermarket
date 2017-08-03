@@ -66,3 +66,12 @@ The Product Data meta box is where the majority of important data is added for y
 * Using **up-sells** and **cross-sells**, you can cross promote your products.<br/>
 *Up-sells are displayed on the product details page.*<br/>
 *Cross-sells are products that are displayed with the cart and related to the user’s cart contents.*
+
+## Catalog visibility
+
+In the **Publish** panel, you can set catalog visibility for your product.
+
+* **Catalog and search** – Visible everywhere, shop pages, category pages, & search results.
+* **Catalog** – Visible in shop pages & category pages, but not search results.
+* **Search** – Visible in search results, but not in the shop page or category pages.
+* **Hidden** – Only visible on the single product page – not on any other pages.
