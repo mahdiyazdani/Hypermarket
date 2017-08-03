@@ -35,6 +35,19 @@ Under the editor is the Product Type panel. Define the product type (as outlined
 
 ?> Note that virtual products **don’t require shipping** — an order containing virtual products won’t calculate any shipping costs.
 
+## Adding a virtual product
+
+When adding a simple product, you can check the **Virtual** box in the product type panel. This removes unnecessary fields, such as dimensions.
+
+## Adding a downloadable product
+
+When adding a simple product, you can check the **downloadable** box in the product type panel. This adds two new fields:
+
+* **File path** — Path or url to your downloadable file.
+* **Download limit** – Limit on number of times the customer can download file. Left blank for unlimited downloads.
+
+?> For maximum flexibility, downloadable products also incur a shipping cost (if, for example, you were offering both a packaged and a downloadable version of a product, this would be ideal). You can also check the **Virtual** box if the downloadable product **is not shippable**.
+
 ## Product data
 
 The Product Data meta box is where the majority of important data is added for your products.
