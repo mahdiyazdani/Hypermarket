@@ -1,5 +1,7 @@
 # Create product
 
+There are several sorts of products that you can add to your online shop using [WooCommerce](installing-woocommerce.md). In this brief guide, you will find out about the basics of adding a product to your store.
+
 ## Type of products
 
 * Simple Product<br/>
