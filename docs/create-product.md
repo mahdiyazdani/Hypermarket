@@ -34,3 +34,14 @@ Adding a simple product is similar to [writing a post](create-post.md) in WordPr
 Under the editor is the Product Type panel. Define the product type (as outlined above) and whether it is a downloadable (digital) or virtual (service) product.
 
 ?> Note that virtual products **don’t require shipping** — an order containing virtual products won’t calculate any shipping costs.
+
+## Product data
+
+The Product Data meta box is where the majority of important data is added for your products.
+
+![WooCommerce product data meta box](img/woocommerce-product-data.png)
+
+* **SKU** – Stock keep unit (SKU) tracks products. Must be unique and should be formatted so it does not match any post IDs. For example, post IDs are numbers so a SKU could be WS01. That could stand for WooShirt 01.
+* **Price** 
+ * **Regular Price** – Item’s normal/regular price.
+ * **Sale Price** – Item’s discounted price that can then be scheduled for certain date ranges.
