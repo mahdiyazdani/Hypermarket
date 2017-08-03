@@ -16,3 +16,7 @@
 *Some products will have different variations and multiple images. For example a t-shirt, that comes in different sizes and colors, with different prices.*
 
 !> Note that some extensions or third-party plugins if installed will add more product date choices, such as **subscriptions**.
+
+## Product categories
+
+Product categories and tags work in much the same way as normal categories and tags you have when writing posts in WordPress. They can be created, edited, and selected at any time. This can be done when you first create a product or come back and edit it or the category/tag specifically.
