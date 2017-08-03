@@ -28,8 +28,10 @@ Hypermarket will work for you, even if you never owned an online store before. I
 
 Hypermarket theme makes it easier for you to market your product online and reach a wider range of audience, thanks to its robust social media integration.
 
-[Offical theme post page](https://wordpress.org/themes/hypermarket/)
+[Offical theme post page](https://wordpress.org/themes/hypermarket)
 
-[Visit live/online demo](https://demo.mypreview.one/hypermarket/)
+[Visit live/online demo](https://demo.mypreview.one/hypermarket)
+
+[View full documentation](https://mahdiyazdani.github.io/Hypermarket)
 
 Something missing? Join our [support forums](https://support.mypreview.one) and let us help you.
