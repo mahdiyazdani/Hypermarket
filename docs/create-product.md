@@ -43,5 +43,5 @@ The Product Data meta box is where the majority of important data is added for y
 
 * **SKU** – Stock keep unit (SKU) tracks products. Must be unique and should be formatted so it does not match any post IDs. For example, post IDs are numbers so a SKU could be WS01. That could stand for WooShirt 01.
 * **Price** 
- * **Regular Price** – Item’s normal/regular price.
- * **Sale Price** – Item’s discounted price that can then be scheduled for certain date ranges.
+  * **Regular Price** – Item’s normal/regular price.
+  * **Sale Price** – Item’s discounted price that can then be scheduled for certain date ranges.
