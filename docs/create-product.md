@@ -19,4 +19,16 @@
 
 ## Product categories
 
-Product categories and tags work in much the same way as normal categories and tags you have when writing posts in WordPress. They can be created, edited, and selected at any time. This can be done when you first create a product or come back and edit it or the category/tag specifically.
+[Product categories](managing-product-categories.md) and tags work in much the same way as normal categories and tags you have when writing posts in WordPress. They can be created, edited, and selected at any time. This can be done when you first create a product or come back and edit it or the category/tag specifically.
+
+## Attributes
+
+These can be added per product, or you can set up **global attributes** for the entire store to use (e.g., in layered navigation).
+
+## Adding a simple product
+
+Adding a simple product is similar to [writing a post](create-post.md) in WordPress. Hover over the **Products** menu, then select **Add Product**. You then have a familiar interface and should immediately feel at home.
+
+Under the editor is the Product Type panel. Define the product type (as outlined above) and whether it is a downloadable (digital) or virtual (service) product.
+
+?> Note that virtual products **don’t require shipping** — an order containing virtual products won’t calculate any shipping costs.
