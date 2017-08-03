@@ -29,7 +29,7 @@ These can be added per product, or you can set up **global attributes** for the 
 
 Adding a simple product is similar to [writing a post](create-post.md) in WordPress. Hover over the **Products** menu, then select **Add Product**. You then have a familiar interface and should immediately feel at home.
 
-![Create a product](create-product.md)
+![Create a product](img/create-product.md)
 
 Under the editor is the Product Type panel. Define the product type (as outlined above) and whether it is a downloadable (digital) or virtual (service) product.
 
