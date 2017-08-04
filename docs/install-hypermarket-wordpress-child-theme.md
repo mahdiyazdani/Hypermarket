@@ -2,6 +2,17 @@
 
 Before making changes to the theme code, we recommend that you install a [child theme](https://github.com/mahdiyazdani/Hypermarket-Child/releases). This ensures that your changes won’t be lost when updating to a new version of Hypermarket.
 
+!> Here’s the thing that causes the most confusion: **You don’t always need a child theme**.
+
+Have you, or do you plan to, modify your theme’s underlying code? That includes any of the following:
+
+* Edit the theme’s CSS stylesheet.
+* Edit any of the theme’s PHP templates.
+* Edit the theme’s functions.php file. Even just to add a single line of code.
+* Modify any of the theme’s assets stored in the theme folder — including javascript files and images.
+
+If you answered **Yes** to any of these questions, you need a child theme.
+
 ## WordPress admin panel
 
 *(Recommended)*
