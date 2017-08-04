@@ -50,7 +50,7 @@ If you want to edit the functions of the parent theme, for example, the ```hyper
 
 ## Overriding theme's CSS
 
-You can do this by either using the **Additional CSS** section in WordPress Customizer or adding your custom CSS code into the ```assets/css/hypermarket-child.css``` file of your child theme.
+You can do this by either using the **[Additional CSS](add-custom-css.md)** section in WordPress Customizer or adding your custom CSS code into the ```assets/css/hypermarket-child.css``` file of your child theme.
 
 ?> Whenever you finished updating the parent theme, make sure to check all the code you use in your child theme and update them as necessary to reflect any changes in the parent theme. You might back up your custom code first, update the files with the latest version, then apply your custom code back.
 By doing this, it ensures that the files and code in your child theme are always up-to-date and to prevent any problem that might occur.
