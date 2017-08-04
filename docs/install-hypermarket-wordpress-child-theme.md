@@ -8,7 +8,7 @@ Have you, or do you plan to, modify your theme’s underlying code? That include
 
 * Edit the theme’s CSS stylesheet.
 * Edit any of the theme’s PHP templates.
-* Edit the theme’s functions.php file. Even just to add a single line of code.
+* Edit the theme’s ```functions.php``` file. Even just to add a single line of code.
 * Modify any of the theme’s assets stored in the theme folder — including javascript files and images.
 
 If you answered **Yes** to any of these questions, you need a child theme.
