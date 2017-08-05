@@ -22,6 +22,6 @@ Administration tasks require much memory than usual operation. When in the admin
 
 ```php
 define( 'WP_MAX_MEMORY_LIMIT', '256M' );
-````
+```
 
 !> Please note, this has to be put before ```wp-settings.php``` inclusion.
