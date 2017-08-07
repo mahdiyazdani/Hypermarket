@@ -2,7 +2,7 @@
 
   * Updated language file.
   * Updated all Customizer checkbox controls with switch field type.
-  * Added new tilted block header style.
+  * Added tilted block header style.
   * Added video popup shortcode generator.
   * Fixed invalid argument supplied warning on extend product sorting class.
 
