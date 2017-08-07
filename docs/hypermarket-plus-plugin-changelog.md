@@ -1,3 +1,11 @@
+# 1.6.0/ 2017-08-08
+
+  * Updated language file.
+  * Updated all Customizer checkbox controls with switch field type.
+  * Added new tilted block header style.
+  * Added video popup shortcode generator.
+  * Fixed invalid argument supplied warning on extend product sorting class.
+
 # 1.5.0/ 2017-07-24
 
   * Updated language file.
