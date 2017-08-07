@@ -1,5 +1,6 @@
 # 1.1.0/ 2017-08-07
 
+  * Updated language file.
   * Updated main stylesheet.
   * Updated header HTML markup.
   * Added new hooks to WooCommerce template files.
