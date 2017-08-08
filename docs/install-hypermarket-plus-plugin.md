@@ -30,7 +30,7 @@
 
 ## Activation instruction
 
-To enable receiving automatic and one-click updates, locate the Hypermarket Plus plugin on plugins table page, then click **Enter License Key** and then enter your key (located above) into the text field.
+To enable receiving automatic and one-click updates, locate the Hypermarket Plus plugin on plugins table page, then click **Enter License Key** and then enter your key (located in your purchase receipt) into the text field.
 
 ![Hypermarket Plus license key](img/enter-license-key.gif)
 
