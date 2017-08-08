@@ -32,6 +32,8 @@
 
 To enable receiving automatic and one-click updates, locate the Hypermarket Plus plugin on plugins table page, then click **Enter License Key** and then enter your key (located above) into the text field.
 
+![Hypermarket Plus license key](img/enter-license-key.gif)
+
 ?> Once your license key is activated, whenever a new update is released you will be notified in WordPress Plugins page about it.
 
 ## Transfer license key
