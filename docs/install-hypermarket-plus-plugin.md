@@ -28,12 +28,12 @@
 * visit the WordPress admin area and click on the **Plugins** link in the admin menu.. 
 * click on the **Activate** link below the plugin. Upon activating, you may need to configure the plugin settings.
 
-## Activation Instruction
+## Activation instruction
 
 To enable receiving automatic and one-click updates, locate the Hypermarket Plus plugin on plugins table page, then click **Enter License Key** and then enter your key (located above) into the text field.
 
 ?> Once your license key is activated, whenever a new update is released you will be notified in WordPress Plugins page about it.
 
-## Transfer License Key
+## Transfer license key
 
 If you wish to transfer your license key to another domain name, be sure to **revoke** the registered key before deleting or uninstalling the plugin, or else you may need to purchase a new license key from [mypreview.one](https://www.mypreview.one) online store.
