@@ -81,18 +81,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="cart-subtotal space-bottom">
 		<div class="column">
-			<span><?php esc_html_e( 'Subtotal', 'hypermarket' ); ?>:</span> 
+			<?php if (! apply_filters('hypermarket_tilted_toolbar_minicart_style', false)): ?>
+			<span>
+				<?php esc_html_e( 'Subtotal', 'hypermarket' ); ?>:
+			</span> 
+			<?php else: ?>
+			<h3 class="toolbar-title">
+				<?php esc_html_e( 'Subtotal', 'hypermarket' ); ?>:
+			</h3> 
+			<?php endif; ?>
 		</div><!-- .column -->
 		<div class="column">
+			<?php if (! apply_filters('hypermarket_tilted_toolbar_minicart_style', false)): ?>
 			<?php echo WC()->cart->get_cart_subtotal(); ?>
+			<?php else: ?>
+			<h3 class="amount">
+				<?php echo WC()->cart->get_cart_subtotal(); ?>
+			</h3>
+			<?php endif; ?>
 		</div><!-- .column -->
 	</div><!-- .cart-subtotal -->
-	<div class="text-center">
+	<div class="<?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? 'text-right' : 'text-center'; ?>">
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn btn-sm btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
-		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-sm btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm'; ?> btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm'; ?> btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
 	</div><!-- .text-center -->
-
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_mini_cart' ); ?>
