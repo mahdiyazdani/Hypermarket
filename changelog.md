@@ -1,3 +1,9 @@
+= 1.1.0 =
+* Updated language file.
+* Updated main stylesheet.
+* Updated header HTML markup.
+* Added new hooks to WooCommerce template files.
+
 = 1.0.9.0 =
 * Updated language file.
 * Updated homepage template components.
