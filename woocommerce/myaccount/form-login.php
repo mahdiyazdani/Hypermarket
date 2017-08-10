@@ -22,14 +22,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<div class="col-xs-12 space-bottom">
+<div class="<?php echo (apply_filters('hypermarket_tilted_toolbar_account_style', false)) ? '' : 'col-xs-12 space-bottom'; ?>">
 	<?php wc_print_notices(); ?>
 </div>
 
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
-	
+	<?php if (! apply_filters('hypermarket_tilted_toolbar_account_style', false)): ?>
 	<div class="col-md-5 padding-bottom">
 		<h3><?php esc_html_e( 'Login', 'hypermarket' ); ?></h3>
+		<?php else: ?>
+		<h3 class="toolbar-title login-form-toolbar-title space-bottom"><?php esc_html_e('You are not logged in.', 'hypermarket'); ?></h3>
+		<?php endif; ?>
 		<form method="post" class="login-form login">
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
@@ -60,12 +63,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div><!-- .lost_password -->
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 		</form><!-- .login-form -->
+	<?php if (! apply_filters('hypermarket_tilted_toolbar_account_style', false)): ?>
 	</div><!-- .col-md-6 -->
+	<?php elseif (apply_filters('hypermarket_tilted_toolbar_account_style', false) && get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes'): ?>
+	<p class="text-sm space-top signup-form-notice"><?php esc_html_e('Don’t have an account?', 'hypermarket'); ?> <a class="toggle-signup-form"><?php echo esc_html_e('Signup here', 'hypermarket'); ?></a></p>
+	<?php endif; ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
+	<?php if (! apply_filters('hypermarket_tilted_toolbar_account_style', false)): ?>
 	<div class="col-md-6 col-md-offset-1">
 		<h3><?php esc_html_e( 'Register', 'hypermarket' ); ?></h3>
+		<?php else: ?>
+		<h3 class="toolbar-title signup-form-toolbar-title space-bottom"><?php esc_html_e('Sign up, it\'s free.', 'hypermarket'); ?></h3>
+		<?php endif; ?>
 		<form method="post" class="login-form register">
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
@@ -98,7 +109,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div><!-- .form-footer -->
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 		</form>
+	<?php if (! apply_filters('hypermarket_tilted_toolbar_account_style', false)): ?>
 	</div><!-- .col-md-6 -->
+	<?php else: ?>
+	<p class="text-sm space-top login-form-notice"><?php esc_html_e('Already have an account?', 'hypermarket'); ?> <a class="toggle-login-form"><?php echo esc_html_e('Login here', 'hypermarket'); ?></a></p>
+	<?php endif; ?>
 
 <?php endif; ?>
 
