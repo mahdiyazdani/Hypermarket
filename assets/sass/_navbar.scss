@@ -11,8 +11,10 @@
 	@include padding(null null null 30px);
 	@include position(relative, 0 null null 0);
 	&.navbar-sticky {
-		position: fixed;
-		& + * { margin-top: $navbar-min-height; }
+		position: sticky;
+		position: -webkit-sticky;
+		position: -moz-sticky;
+		position: -o-sticky;
 	}
 }
 
