@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.9.0
+ * @since       1.1.0
  */
 
 jQuery(document).ready(function($) {
