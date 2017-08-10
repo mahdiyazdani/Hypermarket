@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-07-23 20:56+0400\n"
-"PO-Revision-Date: 2017-07-23 20:56+0400\n"
+"POT-Creation-Date: 2017-08-08 00:16+0400\n"
+"PO-Revision-Date: 2017-08-08 00:16+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1476,15 +1476,15 @@ msgstr ""
 msgid "You May be Interested in&hellip;"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:84
+#: woocommerce/cart/mini-cart.php:86 woocommerce/cart/mini-cart.php:90
 msgid "Subtotal"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:92
+#: woocommerce/cart/mini-cart.php:106
 msgid "View Cart"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:93
+#: woocommerce/cart/mini-cart.php:107
 #: woocommerce/cart/proceed-to-checkout-button.php:29
 msgid "Checkout"
 msgstr ""
@@ -1547,21 +1547,21 @@ msgstr ""
 msgid "Username or email"
 msgstr ""
 
-#: woocommerce/global/form-login.php:36 woocommerce/myaccount/form-login.php:40
-#: woocommerce/myaccount/form-login.php:83
+#: woocommerce/global/form-login.php:36 woocommerce/myaccount/form-login.php:43
+#: woocommerce/myaccount/form-login.php:94
 msgid "Password"
 msgstr ""
 
-#: woocommerce/global/form-login.php:45 woocommerce/myaccount/form-login.php:48
+#: woocommerce/global/form-login.php:45 woocommerce/myaccount/form-login.php:51
 msgid "Remember me"
 msgstr ""
 
 #: woocommerce/global/form-login.php:49 woocommerce/myaccount/form-login.php:32
-#: woocommerce/myaccount/form-login.php:53
+#: woocommerce/myaccount/form-login.php:56
 msgid "Login"
 msgstr ""
 
-#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:58
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:61
 msgid "Lost your password?"
 msgstr ""
 
@@ -1604,12 +1604,12 @@ msgid "Last name*"
 msgstr ""
 
 #: woocommerce/myaccount/form-edit-account.php:42
-#: woocommerce/myaccount/form-login.php:78
+#: woocommerce/myaccount/form-login.php:89
 msgid "Email address"
 msgstr ""
 
 #: woocommerce/myaccount/form-edit-account.php:43
-#: woocommerce/myaccount/form-login.php:79
+#: woocommerce/myaccount/form-login.php:90
 msgid "Email address*"
 msgstr ""
 
@@ -1648,34 +1648,58 @@ msgstr ""
 msgid "Save Address"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:36
+#: woocommerce/myaccount/form-login.php:34
+msgid "You are not logged in."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:39
 msgid "Username or email address"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:40
 msgid "Username or email address*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:41
-#: woocommerce/myaccount/form-login.php:84
+#: woocommerce/myaccount/form-login.php:44
+#: woocommerce/myaccount/form-login.php:95
 msgid "Password*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:68
-#: woocommerce/myaccount/form-login.php:96
+#: woocommerce/myaccount/form-login.php:69
+msgid "Don’t have an account?"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:69
+msgid "Signup here"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:76
+#: woocommerce/myaccount/form-login.php:107
 msgid "Register"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:73
+#: woocommerce/myaccount/form-login.php:78
+msgid "Sign up, it's free."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:84
 msgid "Username"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:74
+#: woocommerce/myaccount/form-login.php:85
 msgid "Username*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:89
+#: woocommerce/myaccount/form-login.php:100
 msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:115
+msgid "Already have an account?"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:115
+msgid "Login here"
 msgstr ""
 
 #: woocommerce/myaccount/form-lost-password.php:29
