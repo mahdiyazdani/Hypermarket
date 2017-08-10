@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.9.0
+ * @since 	    1.1.0
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -30,13 +30,17 @@ endif;
  * Header wrapper start tag(s).
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0
+ * @since 1.1.0
  */
 if (!function_exists('hypermarket_header_wrapper_start')):
 	function hypermarket_header_wrapper_start()
 	{
+		$navbar_sticky = '';
 		echo '<!-- Navbar -->';
-		echo '<header id="hypermarket-header" class="navbar" itemscope="itemscope" itemtype="http://schema.org/WPHeader">';
+		if (apply_filters('hypermarket_sticky_header', false)):
+			$navbar_sticky = 'navbar-sticky';
+		endif;
+		echo '<header id="hypermarket-header" class="navbar ' . $navbar_sticky . '" itemscope="itemscope" itemtype="http://schema.org/WPHeader">';
 	}
 endif;
 /**
