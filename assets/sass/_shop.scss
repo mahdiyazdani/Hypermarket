@@ -232,51 +232,6 @@
   }
 }
 
-// Product loop
-.product {
-  &.first:not(.without-sidebar) {
-    clear: left;
-  }
-  &.last:not(.without-sidebar) {
-    clear: right;
-  }
-  &:not(.without-sidebar):nth-child(1n) {
-    @media #{$tablet-land} {
-      clear: left;
-    }
-  }
-  &:not(.without-sidebar):nth-child(2n) {
-    @media #{$tablet-land} {
-      clear: right;
-    }
-  }
-  @media #{$tablet-port} {
-    clear: both;
-  }
-  &.without-sidebar {
-    &:nth-child(3n) {
-      @media #{$desktop} {
-        clear: right;
-      }
-    }
-    &:nth-child(3n + 1){
-      @media #{$desktop} {
-        clear: left;
-      }
-    }
-    &:nth-child(1n) {
-      @media #{$tablet-land} {
-        clear: left;
-      }
-    }
-    &:nth-child(2n) {
-      @media #{$tablet-land} {
-        clear: right;
-      }
-    }
-  }
-}
-
 // Single Product Gallery
 .product-gallery {
   position: relative;
