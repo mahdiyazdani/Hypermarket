@@ -33,3 +33,13 @@ WordPress uses **PO and MO** files to manage translations. In fact, WordPress on
 PO files are human-readable; Those files contains a list of strings ready to be translated or with a translation already included.
 
 MO files just compiled exports from the PO files and used by WordPress to get the conversion of each string to translate the theme. If you try to open a MO file with a regular text editor, you won’t understand anything of its content.
+
+## Loading translation files
+
+Translations can be filed in the ```/languages/``` directory.
+Hypermarket theme will look in this directory for translations as a fallback. 
+
+It is however recommended that you use the global WordPress language directory and install your translations like so: ```/wp-content/languages/themes/hypermarket-it_IT.mo```. 
+*That way they will not be lost or overwritten during Hypermarket updates.*
+
+Alternatively you can put translations in your [child theme](https://mahdiyazdani.github.io/Hypermarket/#/install-hypermarket-wordpress-child-theme): ```/wp-content/themes/hypermarket-child/languages/it_IT.mo```.
