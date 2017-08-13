@@ -1,8 +1,20 @@
+# 1.7.0/ 2017-08-14
+
+  * Updated language file.
+  * Added sidenav header style.
+  * Added shop filters bar support.
+  * Added Ajax load more products pagination.
+  * Added new options to plugin's settings page.
+  * Fixed minor security issues.
+  * Updated WooCommerce sorting options widget.
+  * Updated plugin auto update methods.
+  * Updated color picker controls.
+
 # 1.6.0/ 2017-08-08
 
   * Updated language file.
   * Updated all Customizer checkbox controls with switch field type.
-  * Added tilted block header style.
+  * Added tilted toolbar header style.
   * Added video popup shortcode generator.
   * Fixed invalid argument supplied warning on extend product sorting class.
 
