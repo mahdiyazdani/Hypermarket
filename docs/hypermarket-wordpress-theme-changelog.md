@@ -1,3 +1,12 @@
+# 1.1.1/ 2017-08-07
+
+  * Updated language file.
+  * Updated main stylesheet.
+  * Updated header HTML markup.
+  * Updated WooCommerce Ajax add to cart method.
+  * Added new CSS class names to WooCommerce content wrappers.
+  * Added new filters to toggle WooCommerce options.
+
 # 1.1.0/ 2017-08-07
 
   * Updated language file.
