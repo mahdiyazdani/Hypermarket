@@ -11,7 +11,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 ## Main Features
 
 * Bootstrap 3.3.7
-* Valid HTML Code
+* Valid HTML code
 * Gallery post type
 * Posts and products share buttons
 * Product countdown
@@ -29,7 +29,9 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Automatic updates
 * Tabbed products interface
 * Hero product
-* Mobile Optimized
+* Mobile optimized
+* Load more products
+* Header style variations
 * Call to action widget
 * WooCommerce popular tags widget
 * WooCommerce sort by widget
