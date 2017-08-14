@@ -33,7 +33,7 @@
   - [Testimonial & Quotation](testimonial-quotation.md)
 - [Minimum Requirements](minimum-requirements.md)
 - [WordPress Memory Limit](wp-memory-limit.md)
-- [Update your PHP version](update-php-version.md)
+- [Update your PHP Version](update-php-version.md)
 - Credits
   - [Hypermarket](hypermarket-wordpress-theme-credits.md)
   - [Hypermarket Plus](hypermarket-plus-plugin-credits.md)
