@@ -1,8 +1,8 @@
 # Update your PHP version
 
-To run [Hypermarket theme](https://demo.mypreview.one/hypermarket/) or [Hypermarket Plus](https://www.mypreview.one/) plugin we recommend your host supports **PHP version 7** or greater.
+PHP is the most popular **server-side** scripting language, powering millions of websites including most WooCommerce shops.
 
-?> Take a moment to review the [theme documentation](minimum-requirements) to find out more about minimum requirements to run plugin or theme correctly and as expected.
+!> Running your shop on an **outdated and unmaintained** version of PHP will definitely affect your website’s performance (a lot) lower than it should be, you may find that things do not work as you expect and be **open to security vulnerabilities**!
 
 ## What is PHP?
 
