@@ -1,6 +1,6 @@
 # Update your PHP version
 
-PHP is the most popular **server-side** scripting language, powering millions of websites including most WooCommerce shops.
+[PHP](http://www.php.net) is the most popular **server-side** scripting language, powering millions of websites including most WooCommerce shops.
 
 !> Running your shop on an **outdated and unmaintained** version of PHP will definitely affect your website’s performance (a lot) lower than it should be, you may find that things do not work as you expect and be open to **security vulnerabilities**!
 
