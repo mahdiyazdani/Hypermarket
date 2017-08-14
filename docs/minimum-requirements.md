@@ -2,7 +2,7 @@
 
 To run Hypermarket theme or Hypermarket Plus plugin we recommend your host supports:
 
-* [PHP](http://www.php.net) version 7 or greater.
+* [PHP](update-php-version.md) version 7 or greater.
 * [MySQL](http://www.mysql.com) version 5.6 or greater OR [MariaDB](https://mariadb.org) version 10.0 or greater.
 * [WordPress](http://www.wordpress.org) version 4.8 or greater.
 * [WooCommerce](https://wordpress.org/plugins/woocommerce) version 3.1 or greater.
