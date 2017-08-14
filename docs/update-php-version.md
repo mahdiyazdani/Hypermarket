@@ -19,7 +19,9 @@ I’m running a WooCommerce webshop on one of your servers and Hypermarket Plus 
 
 https://wordpress.org/about/requirements/<br/>
 https://mahdiyazdani.github.io/Hypermarket/#/minimum-requirements
+
 <br/>
+
 Looking forward to your reply.
 </blockquote>
 
