@@ -13,13 +13,12 @@ Contacting your hosting company is usually the easiest way to find out how you c
 ?> The upgrade process is an easy process and should be something your host can do for you **without impacting your website or charging you a fee**. Here’s a letter you can send to your service provider company:
 
 <blockquote>
-Dear service provider,<br/>
+Dear service provider,
 
-I’m running a WooCommerce webshop on one of your servers and Hypermarket Plus plugin has recommended using at least PHP 7.0 or above. Also, WordPress, the content management system that WooCommerce uses, has listed PHP 7 as the recommended version on their requirements page:<br/>
+I’m running a WooCommerce webshop on one of your servers and Hypermarket Plus plugin has recommended using at least PHP 7.0 or above. Also, WordPress, the content management system that WooCommerce uses, has listed PHP 7 as the recommended version on their requirements page:
 
-https://wordpress.org/about/requirements/
+https://wordpress.org/about/requirements/<br/>
 https://mahdiyazdani.github.io/Hypermarket/#/minimum-requirements
-<br/>
 
 Looking forward to your reply.
 </blockquote>
