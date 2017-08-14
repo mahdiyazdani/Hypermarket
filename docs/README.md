@@ -10,7 +10,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 
 ## Main Features
 
-* Bootstrap 3.3.7
+* Bootstrap based
 * Valid HTML code
 * Gallery post type
 * Posts and products share buttons
