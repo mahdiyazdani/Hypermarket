@@ -18,3 +18,27 @@ Similar to posts in WordPress, you can **add, delete, and edit** your FAQ items 
 *This will appear as a FAQ’s answer.*
 * As needed, select a **Group** for question.
 * **Publish** or **Update** the item.
+
+## Shortcode
+
+You can add the FAQ component to any page and product using the ```[hypermarket-plus-faq]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
+
+```php
+group_id
+collapse
+order
+orderby
+limit
+```
+
+A full shortcode could look like:
+
+```php
+[hypermarket-plus-faq group_id="4" collapse="in" order="DESC" orderby="none" limit=""]
+```
+
+![Generate a gallery shortcode](img/generate-faq-shortcode.gif)
+
+Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the FAQ tooltip will appear, then click the **FAQ button**.
+
+After clicking the interface button, a modal dialog with a few options to config will appear, optionally fill the blanks and hit the **OK** button to generate a new FAQ shortcode.
