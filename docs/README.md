@@ -17,6 +17,8 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Product countdown
 * Footer bar
 * Service widget
+* Ajax contact form
+* Google Maps API
 * Payment method icons widget
 * Social network icons widget
 * Testimonials & Quotation
@@ -28,6 +30,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Product color filters
 * Automatic updates
 * Tabbed products interface
+* FAQ (Frequently Asked Questions)
 * Hero product
 * Mobile optimized
 * Load more products
