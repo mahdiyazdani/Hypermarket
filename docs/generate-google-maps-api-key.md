@@ -27,4 +27,8 @@ yourdomain.com
 !> To avoid problems with **www** and **non-www** versions of your domain, don’t include the **www** part of your website URL.
 
 * After clicking the Create API Key button, you’ll be shown your new API key.
-* 
+* Copy the key shown in the screen/field.
+* Go to **Settings** » **[H/M] Plus Settings**.
+* Click the **Google Maps** tab.
+* Enter or paste the newly generated key into the **API Key field**.
+* Then **Save Changes**.
