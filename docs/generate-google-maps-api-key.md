@@ -6,6 +6,8 @@ As **from 22 June 2016**, all calls to the Google Maps **requires an API key**.
 
 To obtain a Google Maps JavaScript API Key, follow the instructions below:
 
+![Google cloud platform console](img/google-cloud-platform-console.png)
+
 * First, You’ll need to sign in with a **Google account** if you’re not already logged in.
 * Go to the [Google Cloud Platform Console](https://console.cloud.google.com/start) page.
 * Click the link to the Google Maps Javascript API in the listing under Google Maps APIs.
