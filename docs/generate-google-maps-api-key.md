@@ -14,7 +14,7 @@ To obtain a Google Maps JavaScript API Key, follow the instructions below:
 * Then click the Use Google APIs panel.
 * You’ll be prompted to **choose a name** for a new project and to accept the API agreement.
 * On the page that appears after the project has saved you will need to enable **three Google Maps API options**.<br/> 
-*Enable **Google Maps Javascript API**, **Google Places API Web Service** and **Google Maps Geocoding API**.*
+*Make sure to enable the **Google Maps Javascript API**, **Google Places API Web Service** and **Google Maps Geocoding API**.*
 * After the all the APIs are activated, click **Go to Credentials**.
 * On the credentials screen, make sure that Google Maps Javascript API is selected under **Which API are you using?**
 * Now set the **Where will you be calling the API from?** dropdown to say Web browser (Javascript) and click **What credentials do I need?**
