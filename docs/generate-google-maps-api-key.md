@@ -13,3 +13,13 @@ To obtain a Google Maps JavaScript API Key, follow the instructions below:
 * You’ll be prompted to **choose a name** for a new project and to accept the API agreement.
 * On the page that appears after the project has saved you will need to enable **three Google Maps API options**.<br/> 
 *Enable on **Google Maps Javascript API**, **Google Places API Web Service** and **Google Maps Geocoding API**.*
+* After the all the APIs are activated, click **Go to Credentials**.
+* On the credentials screen, make sure that Google Maps Javascript API is selected under **Which API are you using?**
+* Now set the **Where will you be calling the API from?** dropdown to say Web browser (Javascript) and click **What credentials do I need?**
+* On the next screen enter a name for the API key.
+* You’ll also need to add the domain name of the site where you’re using Hypermarket Plus plugin.
+* To make sure that map requests work from anywhere on your domain, we recommend adding more than one entry using the following patterns:
+```js
+*.yourdomain.com
+yourdomain.com
+```
