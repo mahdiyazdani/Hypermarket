@@ -19,6 +19,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Service widget
 * Ajax contact form
 * Google Maps API
+* Snazzy maps support
 * Payment method icons widget
 * Social network icons widget
 * Testimonials & Quotation
