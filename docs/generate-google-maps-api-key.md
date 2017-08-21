@@ -5,3 +5,11 @@ As **from 22 June 2016**, all calls to the Google Maps **requires an API key**.
 !> Note that this does not necessarily mean that you will have to pay more as you are still allowed up to **25000 map requests per day** for free. If your shop requires more than 25000 requests per day, you will be responsible for extra charges. However, for 90% of website owners, this will not be needed.
 
 To obtain a Google Maps JavaScript API Key, follow the instructions below:
+
+* First, You’ll need to sign in with a **Google account** if you’re not already logged in.
+* Go to the [Google Cloud Platform Console](https://console.cloud.google.com/start) page.
+* Click the link to the Google Maps Javascript API in the listing under Google Maps APIs.
+* Then click the Use Google APIs panel.
+* You’ll be prompted to **choose a name** for a new project and to accept the API agreement.
+* On the page that appears after the project has saved you will need to enable **three Google Maps API options**.<br/> 
+*Enable on **Google Maps Javascript API**, **Google Places API Web Service** and **Google Maps Geocoding API**.*
