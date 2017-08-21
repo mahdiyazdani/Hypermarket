@@ -37,7 +37,7 @@ A full shortcode could look like:
 [hypermarket-plus-faq group_id="4" collapse="in" order="DESC" orderby="none" limit=""]
 ```
 
-![Generate a gallery shortcode](img/generate-faq-shortcode.gif)
+![Generate a FAQ shortcode](img/generate-faq-shortcode.gif)
 
 Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the FAQ tooltip will appear, then click the **FAQ button**.
 
