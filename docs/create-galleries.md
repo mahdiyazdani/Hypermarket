@@ -22,7 +22,7 @@ Similar to posts in WordPress, you can **add, delete, and edit** your gallery it
 
 ## Shortcode
 
-You can add the gallery component to any page using the ```[hypermarket-plus-gallery]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
+You can add the gallery component to any post, page and product using the ```[hypermarket-plus-gallery]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
 
 ```php
 gap
