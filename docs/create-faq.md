@@ -4,7 +4,7 @@
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
-## Adding FAQs
+## Adding FAQ
 
 Similar to posts in WordPress, you can **add, delete, and edit** your FAQ items here.
 
