@@ -18,6 +18,7 @@
   - [Adding Custom CSS](add-custom-css.md)
   - [Blurry Product Images](blurry-product-images.md)
   - [Managing Product Categories](managing-product-categories.md)
+  - [Generate a Google Maps API Key](generate-google-maps-api-key.md)
 - Features
   - [Hero Slider](hero-slider.md)
   - [Hero Product](hero-product.md)
