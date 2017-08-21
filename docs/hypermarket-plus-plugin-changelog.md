@@ -1,3 +1,15 @@
+# 1.7.0/ 2017-08-21
+
+  * Updated language file.
+  * Added Ajax contact form.
+  * Added FAQ post type.
+  * Added Google Map shortcode generator.
+  * Added Google Map API support.
+  * Added snazzy map custom styling support.
+  * Updated WooCommerce Ajax load more functionality.
+  * Updated video control shortcode generator.
+  * Updated shop filters bar HTML markup.
+
 # 1.7.0/ 2017-08-14
 
   * Updated language file.
