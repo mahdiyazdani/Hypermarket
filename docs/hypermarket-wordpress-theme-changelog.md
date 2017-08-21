@@ -4,7 +4,7 @@
   * Updated main stylesheet.
   * Added multi-level dropdown menu support.
 
-# 1.1.1/ 2017-08-07
+# 1.1.1/ 2017-08-14
 
   * Updated language file.
   * Updated main stylesheet.
