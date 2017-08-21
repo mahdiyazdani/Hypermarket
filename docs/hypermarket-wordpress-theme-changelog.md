@@ -1,3 +1,9 @@
+# 1.2.0/ 2017-08-21
+
+  * Updated language file.
+  * Updated main stylesheet.
+  * Added multi-level dropdown menu support.
+
 # 1.1.1/ 2017-08-07
 
   * Updated language file.
