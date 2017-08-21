@@ -1,4 +1,4 @@
-# Generate Google Maps API key
+# Generate a Google Maps API key
 
 As **from 22 June 2016**, all calls to the Google Maps **requires an API key**.
 
