@@ -1,3 +1,7 @@
 # Generate Google Maps API key
 
-As from 22 June 2016, all calls to the Google Maps API require an API key. In the past, Google Maps API allowed you to make calls to the API without an API key – this has changed. Please note that this does not necessarily mean that you will have to pay more as you are still allowed up to 25 000 map requests per day for free – the only difference now is that it is mandatory to have an API key when the request is made. Should you require more than 25 000 requests per day, you will be responsible for extra charges. However, for 99.9% of our customers, this will not be necessary.
+As **from 22 June 2016**, all calls to the Google Maps **requires an API key**.
+
+!> Note that this does not necessarily mean that you will have to pay more as you are still allowed up to **25000 map requests per day** for free. If your shop requires more than 25000 requests per day, you will be responsible for extra charges. However, for 90% of website owners, this will not be needed.
+
+To obtain a Google Maps JavaScript API Key, follow the instructions below:
