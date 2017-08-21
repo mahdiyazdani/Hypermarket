@@ -23,3 +23,8 @@ To obtain a Google Maps JavaScript API Key, follow the instructions below:
 *.yourdomain.com
 yourdomain.com
 ```
+
+!> To avoid problems with **www** and **non-www** versions of your domain, don’t include the **www** part of your website URL.
+
+* After clicking the Create API Key button, you’ll be shown your new API key.
+* 
