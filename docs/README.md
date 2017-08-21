@@ -26,7 +26,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Page title toggle
 * Extend product sorting
 * Color scheme
-* Retina Ready
+* Retina ready
 * Google web fonts  - Typography
 * Product color filters
 * Automatic updates
