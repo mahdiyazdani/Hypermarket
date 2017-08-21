@@ -1,4 +1,4 @@
-# 1.7.0/ 2017-08-21
+# 1.8.0/ 2017-08-21
 
   * Updated language file.
   * Added Ajax contact form.
