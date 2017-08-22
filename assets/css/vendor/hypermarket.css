@@ -5,7 +5,7 @@
  * @author        Mahdi Yazdani
  * @package       Hypermarket
  * @dependencies  Bourbon
- * @since         1.1.0
+ * @since         1.1.1
  */
 * {
   -webkit-box-sizing: border-box;
@@ -374,16 +374,24 @@ kbd {
   width: 100%;
   margin: 0 auto; }
 
-.page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-slider) {
+.page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-slider), .page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-product) {
+  margin-top: 0 !important;
   padding-top: 7px !important; }
-  .page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-slider) hr {
+  .page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-slider) hr, .page-template-template-homepage #hypermarket-header + section:not(.hypermarket-plus-hero-product) hr {
     display: none; }
-.page-template-template-homepage #hypermarket-header + section.hypermarket-plus-hero-slider {
+.page-template-template-homepage #hypermarket-header + section.hypermarket-plus-hero-slider, .page-template-template-homepage #hypermarket-header + section.hypermarket-plus-hero-product {
+  margin-top: 0 !important;
   padding-top: 0 !important; }
-.page-template-template-homepage #hypermarket-header:not(.navbar-sticky) + section:not(.hypermarket-plus-hero-slider) {
-  margin-top: 0 !important; }
-.page-template-template-homepage #hypermarket-header:not(.navbar-sticky) + section.hypermarket-plus-hero-slider {
-  margin-top: 0 !important; }
+.page-template-template-homepage #hypermarket-header + .content-wrapper section:not(.hypermarket-plus-hero-slider),
+.page-template-template-homepage #hypermarket-header + .content-wrapper section:not(.hypermarket-plus-hero-product) {
+  margin-top: 0 !important;
+  padding-top: 40px !important; }
+.page-template-template-homepage #hypermarket-header + .content-wrapper section.hypermarket-plus-hero-slider,
+.page-template-template-homepage #hypermarket-header + .content-wrapper section.hypermarket-plus-hero-product {
+  margin-top: 0 !important;
+  padding-top: 0 !important; }
+.page-template-template-homepage #hypermarket-header + .content-wrapper hr {
+  display: none; }
 .page-template-template-homepage #hypermarket-new-arrivals-products + section {
   margin-top: 0 !important;
   padding-top: 0 !important; }
@@ -882,7 +890,8 @@ input#shipping_state,
 #account_username,
 #account_password,
 #account_password-2,
-.select2-search__field {
+.select2-search__field,
+.product-search-field {
   display: block;
   line-height: 1.5;
   font-size: 14px;
@@ -926,7 +935,8 @@ input#shipping_state,
   #account_username:focus,
   #account_password:focus,
   #account_password-2:focus,
-  .select2-search__field:focus {
+  .select2-search__field:focus,
+  .product-search-field:focus {
     border-color: #77cde3;
     outline: none; }
   .form-control::-moz-placeholder, .single-post article label input[type="password"]::-moz-placeholder, .product-tools table.variations .form-select select::-moz-placeholder, .woocommerce-cart #calc_shipping_state::-moz-placeholder, .woocommerce-checkout #calc_shipping_state::-moz-placeholder, #billing_first_name::-moz-placeholder,
@@ -953,7 +963,8 @@ input#shipping_state,
   #account_username::-moz-placeholder,
   #account_password::-moz-placeholder,
   #account_password-2::-moz-placeholder,
-  .select2-search__field::-moz-placeholder {
+  .select2-search__field::-moz-placeholder,
+  .product-search-field::-moz-placeholder {
     color: #606060;
     opacity: 1; }
   .form-control:-ms-input-placeholder, .single-post article label input[type="password"]:-ms-input-placeholder, .product-tools table.variations .form-select select:-ms-input-placeholder, .woocommerce-cart #calc_shipping_state:-ms-input-placeholder, .woocommerce-checkout #calc_shipping_state:-ms-input-placeholder, #billing_first_name:-ms-input-placeholder,
@@ -980,7 +991,8 @@ input#shipping_state,
   #account_username:-ms-input-placeholder,
   #account_password:-ms-input-placeholder,
   #account_password-2:-ms-input-placeholder,
-  .select2-search__field:-ms-input-placeholder {
+  .select2-search__field:-ms-input-placeholder,
+  .product-search-field:-ms-input-placeholder {
     color: #606060; }
   .form-control::-webkit-input-placeholder, .single-post article label input[type="password"]::-webkit-input-placeholder, .product-tools table.variations .form-select select::-webkit-input-placeholder, .woocommerce-cart #calc_shipping_state::-webkit-input-placeholder, .woocommerce-checkout #calc_shipping_state::-webkit-input-placeholder, #billing_first_name::-webkit-input-placeholder,
   #shipping_first_name::-webkit-input-placeholder,
@@ -1006,7 +1018,8 @@ input#shipping_state,
   #account_username::-webkit-input-placeholder,
   #account_password::-webkit-input-placeholder,
   #account_password-2::-webkit-input-placeholder,
-  .select2-search__field::-webkit-input-placeholder {
+  .select2-search__field::-webkit-input-placeholder,
+  .product-search-field::-webkit-input-placeholder {
     color: #606060; }
   .form-control.placeholder, .single-post article label input.placeholder[type="password"], .product-tools table.variations .form-select select.placeholder, .woocommerce-cart .placeholder#calc_shipping_state, .woocommerce-checkout .placeholder#calc_shipping_state, .placeholder#billing_first_name,
   .placeholder#shipping_first_name,
@@ -1032,7 +1045,8 @@ input#shipping_state,
   .placeholder#account_username,
   .placeholder#account_password,
   .placeholder#account_password-2,
-  .placeholder.select2-search__field {
+  .placeholder.select2-search__field,
+  .placeholder.product-search-field {
     color: #606060; }
 
 textarea.form-control, .woocommerce-cart textarea#calc_shipping_state, .woocommerce-checkout textarea#calc_shipping_state, textarea#billing_first_name,
@@ -1057,7 +1071,8 @@ textarea#order_comments,
 textarea#account_username,
 textarea#account_password,
 textarea#account_password-2,
-textarea.select2-search__field {
+textarea.select2-search__field,
+textarea.product-search-field {
   height: auto !important;
   padding: 13px 16px !important; }
 
@@ -1099,6 +1114,7 @@ textarea.select2-search__field {
 .form-group #account_password,
 .form-group #account_password-2,
 .form-group .select2-search__field,
+.form-group .product-search-field,
 .form-element .form-control,
 .woocommerce-cart #calc_shipping_state_field .form-control,
 .woocommerce-checkout #calc_shipping_state_field .form-control,
@@ -1194,7 +1210,10 @@ textarea.select2-search__field {
 .woocommerce-checkout #calc_shipping_state_field #account_password-2,
 .form-element .select2-search__field,
 .woocommerce-cart #calc_shipping_state_field .select2-search__field,
-.woocommerce-checkout #calc_shipping_state_field .select2-search__field {
+.woocommerce-checkout #calc_shipping_state_field .select2-search__field,
+.form-element .product-search-field,
+.woocommerce-cart #calc_shipping_state_field .product-search-field,
+.woocommerce-checkout #calc_shipping_state_field .product-search-field {
   margin-bottom: 0; }
 
 label {
@@ -1226,7 +1245,8 @@ select#order_comments::-ms-expand,
 select#account_username::-ms-expand,
 select#account_password::-ms-expand,
 select#account_password-2::-ms-expand,
-select.select2-search__field::-ms-expand {
+select.select2-search__field::-ms-expand,
+select.product-search-field::-ms-expand {
   display: none; }
 
 select option {
@@ -1393,7 +1413,13 @@ select option {
 .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid .select2-search__field,
 .woocommerce-checkout .error#calc_shipping_state_field .select2-search__field,
 .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid .select2-search__field,
-.form-element.woocommerce-invalid .select2-search__field {
+.form-element.woocommerce-invalid .select2-search__field,
+.form-element.error .product-search-field,
+.woocommerce-cart .error#calc_shipping_state_field .product-search-field,
+.woocommerce-cart #calc_shipping_state_field.woocommerce-invalid .product-search-field,
+.woocommerce-checkout .error#calc_shipping_state_field .product-search-field,
+.woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid .product-search-field,
+.form-element.woocommerce-invalid .product-search-field {
   border-color: #ef0568;
   padding-right: 40px; }
 .form-element.error:before, .woocommerce-cart .error#calc_shipping_state_field:before, .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid:before, .woocommerce-checkout .error#calc_shipping_state_field:before, .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid:before, .form-element.woocommerce-invalid:before {
@@ -1547,7 +1573,13 @@ select option {
 .woocommerce-cart #calc_shipping_state_field.woocommerce-validated .select2-search__field,
 .woocommerce-checkout .valid#calc_shipping_state_field .select2-search__field,
 .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated .select2-search__field,
-.form-element.woocommerce-validated .select2-search__field {
+.form-element.woocommerce-validated .select2-search__field,
+.form-element.valid .product-search-field,
+.woocommerce-cart .valid#calc_shipping_state_field .product-search-field,
+.woocommerce-cart #calc_shipping_state_field.woocommerce-validated .product-search-field,
+.woocommerce-checkout .valid#calc_shipping_state_field .product-search-field,
+.woocommerce-checkout #calc_shipping_state_field.woocommerce-validated .product-search-field,
+.form-element.woocommerce-validated .product-search-field {
   border-color: #a7c04d;
   padding-right: 40px; }
 .form-element.valid:before, .woocommerce-cart .valid#calc_shipping_state_field:before, .woocommerce-cart #calc_shipping_state_field.woocommerce-validated:before, .woocommerce-checkout .valid#calc_shipping_state_field:before, .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated:before, .form-element.woocommerce-validated:before {
@@ -1640,6 +1672,7 @@ input#shipping_state + .checkbox,
 #account_password + .checkbox,
 #account_password-2 + .checkbox,
 .select2-search__field + .checkbox,
+.product-search-field + .checkbox,
 .form-control + .checkbox-inline,
 .single-post article label input[type="password"] + .checkbox-inline,
 .product-tools table.variations .form-select select + .checkbox-inline,
@@ -1670,6 +1703,7 @@ input#shipping_state + .checkbox-inline,
 #account_password + .checkbox-inline,
 #account_password-2 + .checkbox-inline,
 .select2-search__field + .checkbox-inline,
+.product-search-field + .checkbox-inline,
 .form-control + .radio,
 .single-post article label input[type="password"] + .radio,
 .product-tools table.variations .form-select select + .radio,
@@ -1700,6 +1734,7 @@ input#shipping_state + .radio,
 #account_password + .radio,
 #account_password-2 + .radio,
 .select2-search__field + .radio,
+.product-search-field + .radio,
 .form-control + .radio-inline,
 .single-post article label input[type="password"] + .radio-inline,
 .product-tools table.variations .form-select select + .radio-inline,
@@ -1729,7 +1764,8 @@ input#shipping_state + .radio-inline,
 #account_username + .radio-inline,
 #account_password + .radio-inline,
 #account_password-2 + .radio-inline,
-.select2-search__field + .radio-inline {
+.select2-search__field + .radio-inline,
+.product-search-field + .radio-inline {
   margin-top: 20px; }
 
 .checkbox,
@@ -1951,7 +1987,8 @@ input[type="radio"] {
   .mc4wp-form #account_username,
   .mc4wp-form #account_password,
   .mc4wp-form #account_password-2,
-  .mc4wp-form .select2-search__field, .mc4wp-form-fields .form-control, .mc4wp-form-fields .single-post article label input[type="password"], .single-post article label .mc4wp-form-fields input[type="password"], .mc4wp-form-fields .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form-fields select, .mc4wp-form-fields .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields #billing_first_name,
+  .mc4wp-form .select2-search__field,
+  .mc4wp-form .product-search-field, .mc4wp-form-fields .form-control, .mc4wp-form-fields .single-post article label input[type="password"], .single-post article label .mc4wp-form-fields input[type="password"], .mc4wp-form-fields .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form-fields select, .mc4wp-form-fields .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields #billing_first_name,
   .mc4wp-form-fields #shipping_first_name,
   .mc4wp-form-fields #billing_last_name,
   .mc4wp-form-fields #shipping_last_name,
@@ -1975,7 +2012,8 @@ input[type="radio"] {
   .mc4wp-form-fields #account_username,
   .mc4wp-form-fields #account_password,
   .mc4wp-form-fields #account_password-2,
-  .mc4wp-form-fields .select2-search__field {
+  .mc4wp-form-fields .select2-search__field,
+  .mc4wp-form-fields .product-search-field {
     margin-bottom: 0; }
   .mc4wp-form .mc4wp-response, .mc4wp-form-fields .mc4wp-response {
     font-size: 70%;
@@ -2008,7 +2046,8 @@ input[type="radio"] {
   .search-box #account_username,
   .search-box #account_password,
   .search-box #account_password-2,
-  .search-box .select2-search__field {
+  .search-box .select2-search__field,
+  .search-box .product-search-field {
     padding-right: 38px;
     margin-bottom: 0; }
   .search-box button[type=submit] {
@@ -2628,9 +2667,10 @@ input[type="button"]#place_order {
   top: 0;
   left: 0; }
   .navbar.navbar-sticky {
-    position: fixed; }
-    .navbar.navbar-sticky + * {
-      margin-top: 80px !important; }
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky; }
 
 .site-logo {
   z-index: 10;
@@ -3549,32 +3589,6 @@ small.sticky-badge {
       .shop-bar > .column:first-child {
         padding-right: 0;
         padding-bottom: 15px; } }
-
-.product.first:not(.without-sidebar) {
-  clear: left; }
-.product.last:not(.without-sidebar) {
-  clear: right; }
-@media screen and (max-width: 991px) {
-  .product:not(.without-sidebar):nth-child(1n) {
-    clear: left; } }
-@media screen and (max-width: 991px) {
-  .product:not(.without-sidebar):nth-child(2n) {
-    clear: right; } }
-@media screen and (max-width: 768px) {
-  .product {
-    clear: both; } }
-@media screen and (max-width: 1200px) {
-  .product.without-sidebar:nth-child(3n) {
-    clear: right; } }
-@media screen and (max-width: 1200px) {
-  .product.without-sidebar:nth-child(3n + 1) {
-    clear: left; } }
-@media screen and (max-width: 991px) {
-  .product.without-sidebar:nth-child(1n) {
-    clear: left; } }
-@media screen and (max-width: 991px) {
-  .product.without-sidebar:nth-child(2n) {
-    clear: right; } }
 
 .product-gallery {
   position: relative;
@@ -4571,7 +4585,8 @@ p.demo_store {
   .widget_mc4wp_form_widget .mc4wp-form #account_username,
   .widget_mc4wp_form_widget .mc4wp-form #account_password,
   .widget_mc4wp_form_widget .mc4wp-form #account_password-2,
-  .widget_mc4wp_form_widget .mc4wp-form .select2-search__field {
+  .widget_mc4wp_form_widget .mc4wp-form .select2-search__field,
+  .widget_mc4wp_form_widget .mc4wp-form .product-search-field {
     border-color: #e5e5e5; }
     .widget_mc4wp_form_widget .mc4wp-form .form-control:focus, .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"]:focus, .single-post article label .widget_mc4wp_form_widget .mc4wp-form input[type="password"]:focus, .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select:focus, .product-tools table.variations .form-select .widget_mc4wp_form_widget .mc4wp-form select:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state:focus, .woocommerce-cart .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state:focus, .woocommerce-checkout .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form #billing_first_name:focus,
     .widget_mc4wp_form_widget .mc4wp-form #shipping_first_name:focus,
@@ -4597,7 +4612,8 @@ p.demo_store {
     .widget_mc4wp_form_widget .mc4wp-form #account_username:focus,
     .widget_mc4wp_form_widget .mc4wp-form #account_password:focus,
     .widget_mc4wp_form_widget .mc4wp-form #account_password-2:focus,
-    .widget_mc4wp_form_widget .mc4wp-form .select2-search__field:focus {
+    .widget_mc4wp_form_widget .mc4wp-form .select2-search__field:focus,
+    .widget_mc4wp_form_widget .mc4wp-form .product-search-field:focus {
       border-color: #77cde3 !important; }
   .widget_mc4wp_form_widget .mc4wp-form button[type='submit'] {
     display: block;
@@ -5404,7 +5420,8 @@ p.demo_store {
   .footer .widget_mc4wp_form_widget .mc4wp-form #account_username,
   .footer .widget_mc4wp_form_widget .mc4wp-form #account_password,
   .footer .widget_mc4wp_form_widget .mc4wp-form #account_password-2,
-  .footer .widget_mc4wp_form_widget .mc4wp-form .select2-search__field {
+  .footer .widget_mc4wp_form_widget .mc4wp-form .select2-search__field,
+  .footer .widget_mc4wp_form_widget .mc4wp-form .product-search-field {
     border-color: #ffffff; }
   .footer .product_list_widget > li {
     text-align: left; }
