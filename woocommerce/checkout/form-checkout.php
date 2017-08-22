@@ -52,7 +52,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 	<?php endif; ?>
 	
-	<div class="col-md-3 col-md-offset-1 padding-top-half padding-bottom">
+	<div class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', true) ? 'col-md-3 col-md-offset-1' : 'col-md-4'; ?> padding-top-half padding-bottom">
 		<aside>
 			<h3 id="order_review_heading" class="sr-only"><?php esc_html_e( 'Your order', 'hypermarket' ); ?></h3>
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
