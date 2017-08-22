@@ -19,9 +19,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+global $orderby_options;
+$orderby_options = $catalog_orderby_options;
 ?>
-<div class="column">
+<div class="column<?php echo (apply_filters('hypermarket_toggle_wc_ordering', false)) ? ' hidden' : ''; ?>">
 	<form class="woocommerce-ordering" method="get">
 		<div class="form-element form-select space-bottom-none">
 			<select name="orderby" class="orderby form-control">
