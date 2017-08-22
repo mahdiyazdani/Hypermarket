@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.9.0
+ * @since 	    1.1.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.0.9.0
+		 * @since 1.1.1
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -112,7 +112,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 														<tr class="alternate">
 															<td class="row-title">
 																<?php $install_bs3_grid_builder_url = esc_url(admin_url('plugin-install.php?s=woo%20store%20vacation&tab=search&type=term')); ?>
-																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('Woo Store Vacataion - A plugin to put your shop on pause or hold mode for a certain amount of time', 'hypermarket'); ?></a>
+																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('Woo Store Vacataion - Put your shop on pause or hold mode for a certain amount of time', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('Going on vacation? Use Woo Store Vacation settings to make sure your buyers are not disappointed by buying items and unexpectedly waiting a long time to receive them.', 'hypermarket'); ?></em></small>
 															</td>
@@ -264,7 +264,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<br/>
 																<?php esc_attr_e('Allows you to optionally, extend, add or remove the default and core WooCommerce product order by options on the shop page.', 'hypermarket'); ?>
 															</td>
-															<td class="icon"><span class="dashicons dashicons-filter"></span></td>
+															<td class="icon"><span class="dashicons dashicons-image-filter"></span></td>
 															<td class="content">
 																<strong><?php esc_attr_e('Product color filters', 'hypermarket'); ?></strong>
 																<br/>
@@ -292,8 +292,25 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<br/>
 																<?php esc_attr_e('Unique homepage layout that prominently displays a variety of products in an intuitive tabbed interface.', 'hypermarket'); ?>
 															</td>
-															<td class="icon"></td>
+															<td class="icon"><span class="dashicons dashicons-image-rotate"></span></td>
 															<td class="content">
+																<strong><?php esc_attr_e('Load more products', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Enhance the customer\'s product browsing experience by replacing the default behavior of WooCommerce pagination and loading products via Ajax!', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-welcome-widgets-menus"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Header variations', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Select the perfect layout for your shop header. There are 3 pre-designed layouts and each one provides a special design for your header area.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-filter"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Shop filters bar', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Convert WooCommerce sidebar into toggle-able filters bar & help customers to find what they really want.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
@@ -309,7 +326,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<h3><?php esc_attr_e('To download a blank Hypermarket child theme, please navigate to:', 'hypermarket'); ?></h3>
 												<br />
 												<p align="center">
-													<a href="<?php echo esc_url('https://github.com/mahdiyazdani/Hypermarket-Child/releases'); ?>" class="button-primary" target="_blank"><strong><?php esc_attr_e('Download Hypermarket Child Theme', 'hypermarket'); ?></strong></a>
+													<a href="<?php echo esc_url('https://mahdiyazdani.github.io/Hypermarket/#/install-hypermarket-wordpress-child-theme'); ?>" class="button-primary" target="_blank"><strong><?php esc_attr_e('Download Hypermarket Child Theme', 'hypermarket'); ?></strong></a>
 												</p>
 												<br />
 												<br />
@@ -340,7 +357,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<hr>
 												<h3><?php esc_attr_e('View full documentation', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('Before you get started, please be sure always to check out theme documentation files. We outline all kinds of useful information and provide you with all the details you need know to use Hypermarket Theme.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo esc_url('https://docs.mypreview.one/category/hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('Theme Documentation', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://mahdiyazdani.github.io/Hypermarket'); ?>" class="button-secondary" target="_blank"><?php esc_attr_e('Theme Documentation', 'hypermarket'); ?></a></p>
 											</div><!-- .inside -->
 										</div><!-- #support-content -->
 										<div id="translate-content">
@@ -353,7 +370,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 												<p><?php esc_attr_e('WordPress uses PO and MO files to manage translations. In fact, WordPress only needs MO files to handle translations.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('PO files are human-readable; Those files contains a list of strings ready to be translated or with a translation already included.', 'hypermarket'); ?></p>
 												<p><?php esc_attr_e('MO files just compiled exports from the PO files and used by WordPress to get the conversion of each string to translate the theme. If you try to open a MO file with a regular text editor, you will not understand anything of its content.', 'hypermarket'); ?></p>
-												<p><a href="<?php echo esc_url('https://docs.mypreview.one/how-to-translate-hypermarket-theme-into-any-language/'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('How to translate Hypermarket theme with Poedit?', 'hypermarket'); ?></a></p>
+												<p><a href="<?php echo esc_url('https://mahdiyazdani.github.io/Hypermarket/#/translating-with-poedit'); ?>" class="button-primary" target="_blank"><?php esc_attr_e('How to translate Hypermarket theme with Poedit?', 'hypermarket'); ?></a></p>
 												<br />
 												<h3><?php esc_attr_e('WPML & Translation Ready', 'hypermarket'); ?></h3>
 												<p><?php esc_attr_e('Hypermarket theme is fully compatible and tested with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with WPML!', 'hypermarket'); ?></p>
