@@ -112,7 +112,7 @@ if (!class_exists('Hypermarket_Customizer')):
                     array(
                         'title'     => __('Hypermarket', 'hypermarket') ,
                         'go_plus_text'     => __('Go Plus', 'hypermarket') ,
-                        'go_plus_url' => esc_url(HypermarketThemeAuthorURI)
+                        'go_plus_url' => esc_url(HypermarketThemeURI)
                     )
                 )
             );
