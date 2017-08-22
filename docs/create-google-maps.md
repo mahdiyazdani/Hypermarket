@@ -4,6 +4,8 @@ This option allows you to embed Google Maps with custom markers and info title i
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
+![Google Maps](img/google-maps-shortcode.png)
+
 ## Map themes
 
 **[Snazzy Maps](https://snazzymaps.com)** is a repository of different color schemes for Google Maps aimed towards web designers and developers. So basicly you can go from plain and usual to awesome quickly.
