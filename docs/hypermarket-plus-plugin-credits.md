@@ -54,3 +54,9 @@
 > Plugin Update Checker - A custom update checker for WordPress plugins.<br/>
 > The MIT License - Copyright (c) 2017 YahnisElsts.<br/>
 > [https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt](https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt)
+
+<hr/>
+
+> Gmap3 - jQuery plugin to create Google maps.<br/>
+> The GPL version 3 or (at your option) any later version.<br/>
+> [https://github.com/jbdemonte/gmap3#licence](https://github.com/jbdemonte/gmap3#licence)
