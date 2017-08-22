@@ -123,7 +123,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</div><!-- .col-sm-8 -->
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
-<div class="col-md-3 col-md-offset-1 col-sm-4 padding-bottom-2x">
+<div class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', true) ? 'col-md-3 col-md-offset-1' : 'col-md-4'; ?> col-sm-4 padding-bottom-2x">
 	<div class="cart-collaterals">
 		<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	</div>
