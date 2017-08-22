@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.9.0
+ * @since 	    1.1.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -204,7 +204,7 @@ if (!class_exists('Hypermarket')):
 		 * Declaring widget(s) and widget area(s).
 		 *
 		 * @see https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
-		 * @since 1.0.3
+		 * @since 1.1.1
 		 */
 		public function widgets()
 
@@ -233,12 +233,12 @@ if (!class_exists('Hypermarket')):
 			 * Widget wrapper and title tags.
 			 */
 			foreach($sidebar_args as $sidebar => $args):
-				$widget_tags = array(
+				$widget_tags = apply_filters('hypermarket_widget_markup_args', array(
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget' => '</div>',
 					'before_title' => '<h3 class="widget-title">',
 					'after_title' => '</h3>'
-				);
+				));
 				/**
 				 * Dynamically generated filter hooks.
 				 *
