@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.1.0
+ * @since       1.1.1
  */
 
 jQuery(document).ready(function($) {
@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
     // Toggle Mobile Menu
     //------------------------------------------------------------------------------
     var menuToggle = $('.mobile-menu-toggle'),
-        mobileMenu = $('.main-navigation');
+        mobileMenu = $('.main-navigation, .mobile-menu-wrapper');
     menuToggle.on('click', function() {
         $(this).toggleClass('active');
         mobileMenu.toggleClass('open');
@@ -236,37 +236,7 @@ jQuery(document).ready(function($) {
 
     // Add to Cart Button Effect
     //------------------------------------------------------------------------------
-    var animating = false;
-    $('.shop-item, .hero-product').each(function() {
-        var addToCartBtn = $(this).find('.add-to-cart:not(.product_type_variable)');
-        addToCartBtn.on('click', function() {
-            if (!animating) {
-                //animate if not already animating
-                animating = true;
-                // resetCustomization(addToCartBtn);
-
-                addToCartBtn.addClass('is-added').find('path').eq(0).animate({
-                    //draw the check icon
-                    'stroke-dashoffset': 0
-                }, 300, function() {
-                    setTimeout(function() {
-                        // updateCart();
-                        addToCartBtn.removeClass('is-added').find('em').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-                            //wait for the end of the transition to reset the check icon
-                            addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
-                            animating = false;
-                        });
-
-                        if ($('.no-csstransitions').length > 0) {
-                            // check if browser doesn't support css transitions
-                            addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
-                            animating = false;
-                        }
-                    }, 600);
-                });
-            }
-        });
-    });
+    hypermarketAddToCartEffect();
 
 
     // Product Gallery
@@ -293,6 +263,10 @@ jQuery(document).ready(function($) {
             $('.product-gallery-thumblist li:first-child a').trigger('click');
         }
     });
+
+    // Maintain scorll position
+    //------------------------------------------------------------------------------
+    jQuery.fn.matchHeight._maintainScroll = true;
 
 
     // Tooltips
@@ -398,4 +372,39 @@ function hypermarketTooltipInitialization(selector) {
     if ($tooltip.length > 0) {
         $tooltip.tooltip();
     }
+}
+// Add to Cart Button Effect (Function)
+//------------------------------------------------------------------------------
+function hypermarketAddToCartEffect() {
+    var animating = false;
+    jQuery('.shop-item, .hero-product').each(function() {
+        var addToCartBtn = jQuery(this).find('.add-to-cart:not(.product_type_variable)');
+        addToCartBtn.on('click', function() {
+            if (!animating) {
+                //animate if not already animating
+                animating = true;
+                // resetCustomization(addToCartBtn);
+
+                addToCartBtn.addClass('is-added').find('path').eq(0).animate({
+                    //draw the check icon
+                    'stroke-dashoffset': 0
+                }, 300, function() {
+                    setTimeout(function() {
+                        // updateCart();
+                        addToCartBtn.removeClass('is-added').find('em').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                            //wait for the end of the transition to reset the check icon
+                            addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
+                            animating = false;
+                        });
+
+                        if (jQuery('.no-csstransitions').length > 0) {
+                            // check if browser doesn't support css transitions
+                            addToCartBtn.find('path').eq(0).css('stroke-dashoffset', '19.79');
+                            animating = false;
+                        }
+                    }, 600);
+                });
+            }
+        });
+    });
 }
