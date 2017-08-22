@@ -5,10 +5,11 @@
  * @package 		Hooked into "hypermarket_product_paging_navigation"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0.4.1
+ * @since 		    1.1.1
  */
 $prev_single_product = get_previous_post();
 $next_single_product = get_next_post();
+if (apply_filters('hypermarket_toggle_single_prodcut_paging', true)):
 ?>
 <!-- Page Navigation -->
 <?php if( ! empty($prev_single_product) ): ?>
@@ -30,4 +31,5 @@ $next_single_product = get_next_post();
 		</span><!-- .page-preview -->
 		<?php echo esc_html($next_single_product->post_title); ?>&nbsp;&mdash;
 	</a><!-- .page-next -->
+<?php endif; ?>
 <?php endif; ?>
