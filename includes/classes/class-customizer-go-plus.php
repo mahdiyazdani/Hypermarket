@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.6.1
+ * @since       1.1.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -35,7 +35,7 @@ if (!class_exists('Hypermarket_Customizer_Go_Plus')):
         /**
          * Outputs the Underscore.js template.
          *
-         * @since 1.0.6.1
+         * @since 1.1.1
          */
         protected function render_template()
         
@@ -45,7 +45,7 @@ if (!class_exists('Hypermarket_Customizer_Go_Plus')):
 				<h3 class="accordion-section-title">
 					{{ data.title }}
 					<# if ( data.go_plus_text && data.go_plus_url ) { #>
-						<a href="{{ data.go_plus_url }}" class="button button-secondary alignright" target="_blank">{{ data.go_plus_text }}</a>
+						<a href="{{ data.go_plus_url }}" class="button button-primary alignright" target="_blank">{{ data.go_plus_text }}</a>
 					<# } #>
 				</h3>
 			</li>
