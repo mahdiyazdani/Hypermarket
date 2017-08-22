@@ -10,6 +10,10 @@ This option allows you to embed Google Maps with custom markers and info title i
 
 Custom styles can be passed directly into the Google maps object. Snazzy maps outputs these styles as JSON code which can be parsed in JavaScript and passed in.
 
+Optionally, grab some custom map styling from [snazzymap.com](https://snazzymaps.com) and paste it into the **Snazzy Style field**.
+
+![Snazzy maps style](img/google-maps-snazzy-style.png)
+
 ## Shortcode
 
 You can add the Google Maps component to any page and product using the ```[hypermarket-plus-gmaps]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom Google Maps elements.
