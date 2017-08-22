@@ -21,7 +21,7 @@ Similar to posts in WordPress, you can **add, delete, and edit** your FAQ items 
 
 ## Shortcode
 
-You can add the FAQ component to any page and product using the ```[hypermarket-plus-faq]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom hero elements.
+You can add the FAQ component to any page and product using the ```[hypermarket-plus-faq]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom FAQ elements.
 
 ```php
 group_id
