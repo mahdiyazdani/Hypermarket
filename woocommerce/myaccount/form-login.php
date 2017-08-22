@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if (! apply_filters('hypermarket_tilted_toolbar_account_style', false)): ?>
 	</div><!-- .col-md-6 -->
 	<?php elseif (apply_filters('hypermarket_tilted_toolbar_account_style', false) && get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes'): ?>
-	<p class="text-sm space-top signup-form-notice"><?php esc_html_e('Don’t have an account?', 'hypermarket'); ?> <a class="toggle-signup-form"><?php echo esc_html_e('Signup here', 'hypermarket'); ?></a></p>
+	<p class="text-sm space-top signup-form-notice"><?php esc_html_e('Don\'t have an account?', 'hypermarket'); ?> <a class="toggle-signup-form"><?php echo esc_html_e('Signup here', 'hypermarket'); ?></a></p>
 	<?php endif; ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
