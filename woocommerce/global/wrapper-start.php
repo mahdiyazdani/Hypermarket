@@ -29,7 +29,7 @@ if(! is_singular('product')):
 ?>
 	<!-- Shop Catalog -->
 	<section class="container<?php echo esc_attr($fluid); ?> padding-top-3x">
-	<?php if ( is_active_sidebar( 'sidebar' ) && ! is_singular() ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar' ) && ! is_singular() && apply_filters('hypermarket_toggle_wc_sidebar_filter_list', true) ) : ?>
 		<!-- Sidebar Toggle / visible only on mobile -->
 		<div class="sidebar-toggle sidebar-toggle-right">
 			<i class="material-icons filter_list"></i>
