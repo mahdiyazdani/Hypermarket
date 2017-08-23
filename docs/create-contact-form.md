@@ -1,5 +1,13 @@
 # Create contact form
 
+## Spam protection
+
+Contact form component comes with built in [honey pot](https://en.wikipedia.org/wiki/Honeypot_(computing)) trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
+
+In most cases, the robot fills out the invisible field and tries to submit the form which will be prevented to send by contact form.
+
+Although it's a very simple concept it helps you to reduce spammy submissions.
+
 ## Shortcode
 
 You can add the contact form component to any page using the ```[hypermarket-plus-contact]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create contact form elements.
