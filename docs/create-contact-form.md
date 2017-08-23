@@ -22,7 +22,7 @@ add_filter('hypermarket_plus_cf_to', 'hypermarket_child_cf_to', 10, 1);
 
 ## Spam protection
 
-Contact form component comes with built in [honey pot](https://en.wikipedia.org/wiki/Honeypot_(computing)/) trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
+Contact form component comes with built in [honey pot](https://en.wikipedia.org/wiki/Honeypot_(computing)#) trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
 
 In most cases, the robot fills out the invisible field and tries to submit the form which will be prevented to send by contact form.
 
