@@ -13,9 +13,9 @@ Similar to posts in WordPress, you can **add, delete, and edit** your FAQ items 
 * Navigate to the **FAQ** tab.
 * Click the **Add New** button in the top left-hand corner of the page.
 * Add a **Title**.<br/>
-*This will appear as a FAQ’s question.*
+*This will appear as FAQ question.*
 * Enter a **description** or custom content.<br/>
-*This will appear as a FAQ’s answer.*
+*This will appear as FAQ answer.*
 * As needed, select a **Group** for question.
 * **Publish** or **Update** the item.
 
