@@ -14,7 +14,7 @@ However, Add this snippet to your [child theme](install-hypermarket-wordpress-ch
 
 ```php
 function hypermarket_child_cf_to($email) {
-	 $email = 'info@example.com';
+   $email = 'info@example.com';
    return $email;
 }
 add_filter('hypermarket_plus_cf_to', 'hypermarket_child_cf_to', 10, 1);
