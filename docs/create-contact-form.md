@@ -4,13 +4,15 @@ This component lets you create a simple contact form using Ajax technology and a
 
 !> Note that this component is built to keep stuff simple. If you need more advanced features such as creating complex web forms or if you need a form builder, feel free to visit WordPress plugin repository website and find out more about contact form plugins.
 
+![Contact form](img/contact-from.png)
+
 ## Spam protection
 
 Contact form component comes with built in [honey pot](https://en.wikipedia.org/wiki/Honeypot_(computing)) trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
 
 In most cases, the robot fills out the invisible field and tries to submit the form which will be prevented to send by contact form.
 
-?> Although it's a very simple concept it helps you to reduce spammy submissions.
+?> Although it's a very simple concept, it helps you to reduce spammy submissions.
 
 ## Shortcode
 
