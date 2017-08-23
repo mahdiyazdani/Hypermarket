@@ -3,8 +3,8 @@
   * Updated language file.
   * Added Ajax contact form.
   * Added FAQ post type.
-  * Added Google Map shortcode generator.
-  * Added Google Map API support.
+  * Added Google Maps shortcode generator.
+  * Added Google Maps API support.
   * Added snazzy map custom styling support.
   * Updated WooCommerce Ajax load more functionality.
   * Updated video control shortcode generator.
