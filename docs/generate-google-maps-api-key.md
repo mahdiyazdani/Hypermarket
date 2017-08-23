@@ -21,12 +21,13 @@ To obtain a Google Maps JavaScript API Key, follow the instructions below:
 * On the next screen **enter a name** for the API key.
 * You’ll also need to **add the domain name** of the site whereever you’re using [Hypermarket Plus](https://www.mypreview.one) plugin.
 * We recommend adding more than one entry using the following patterns:
+
+?> To avoid problems with **www** and **non-www** versions of your domain, don’t include the **www** part of your website URL.
+
 ```txt
 *.yourdomain.com
 yourdomain.com
 ```
-
-?> To avoid problems with **www** and **non-www** versions of your domain, don’t include the **www** part of your website URL.
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
