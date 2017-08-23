@@ -10,7 +10,7 @@ This component lets you create a simple contact form using Ajax technology and a
 
 The contact form defauls to what email address you have your **admin account** with. You're going to have to change what's in there at **Dashboard** » **Users** » **Your profile**.
 
-However, Add this snippet to your [child theme](install-hypermarket-wordpress-child-theme.md)'s ```functions.php``` if you would like to update the email address it points to without modifying the user settings via WordPress admin panel.
+However, if you would like to update the email address it points to without modifying the user settings via WordPress admin panel, add the below code snippet to your [child theme](install-hypermarket-wordpress-child-theme.md)'s ```functions.php``` 
 
 ```php
 function hypermarket_child_cf_to($email) {
