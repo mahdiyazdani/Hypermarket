@@ -6,7 +6,7 @@ Contact form component comes with built in [honey pot](https://en.wikipedia.org/
 
 In most cases, the robot fills out the invisible field and tries to submit the form which will be prevented to send by contact form.
 
-Although it's a very simple concept it helps you to reduce spammy submissions.
+?> Although it's a very simple concept it helps you to reduce spammy submissions.
 
 ## Shortcode
 
