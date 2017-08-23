@@ -4,7 +4,7 @@ This component lets you create a simple contact form using Ajax technology and a
 
 !> Note that this component is built to keep stuff simple. If you need more advanced features such as creating complex web forms or if you need a form builder, feel free to visit WordPress plugin repository website and find out more about contact form plugins.
 
-![Contact form](img/contact-from.png)
+![Contact form](img/contact-form-shortcode.png)
 
 ## Spam protection
 
