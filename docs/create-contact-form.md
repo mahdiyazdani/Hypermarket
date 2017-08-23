@@ -1,10 +1,24 @@
 # Create contact form
 
-This component lets you create a simple contact form using Ajax technology and advanced email address validation. All emails will be sent to admin's email address without page refresh.
+This component lets you create a simple contact form using Ajax technology and advanced email address validation. All emails will be sent to **admin's email address** without page refresh.
 
 !> Note that this component is built to keep stuff simple. If you need more advanced features such as creating complex web forms or if you need a form builder, feel free to visit WordPress plugin repository website and find out more about contact form plugins.
 
 ![Contact form](img/contact-form-shortcode.png)
+
+## Update the email address form points to
+
+The contact form defauls to what email address you have your **admin account** with. You're going to have to change what's in there at **Dashboard** » **Users** » **Your profile**.
+
+However, Add this snippet to your [child theme](install-hypermarket-wordpress-child-theme.md)'s ```functions.php``` if you would like to update the email address it points to without modifying the user settings via WordPress admin panel.
+
+```php
+function hypermarket_child_cf_to($email) {
+	 $email = 'info@example.com';
+   return $email;
+}
+add_filter('hypermarket_plus_cf_to', 'hypermarket_child_cf_to', 10, 1);
+```
 
 ## Spam protection
 
