@@ -28,6 +28,8 @@ yourdomain.com
 
 !> To avoid problems with **www** and **non-www** versions of your domain, don’t include the **www** part of your website URL.
 
+!> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
+
 * After clicking the Create API Key button, you’ll be shown your new API key.
 * Copy the key shown in the screen/field.
 * Go to **Settings** » **[H/M] Plus Settings**.
