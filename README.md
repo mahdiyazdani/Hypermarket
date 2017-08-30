@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<a href="https://www.mypreview.one" target="_blank"><img src="https://www.mypreview.one/assets/img/hypermarket-screenshot.png" alt="Buy Hypermarket Plus" /></a>
+<a href="https://www.mypreview.one" target="_blank"><img src="https://i.gyazo.com/1f6549d55f29bdb49ea8fedef0880cc7.png" alt="Buy Hypermarket Plus" /></a>
 </p>
 
 If you are looking for a stylish and elegant website template for your online store, Hypermarket is the perfect choice for you.
