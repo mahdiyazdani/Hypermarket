@@ -1,3 +1,8 @@
+= 1.2.0 =
+* Updated language file.
+* Updated main stylesheet.
+* Added multi-level dropdown menu support.
+
 = 1.1.1 =
 * Updated language file.
 * Updated main stylesheet.
