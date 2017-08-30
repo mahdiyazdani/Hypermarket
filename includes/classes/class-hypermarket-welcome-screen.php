@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.1.1
+ * @since 	    1.2.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.1.1
+		 * @since 1.2.0
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -311,6 +311,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Shop filters bar', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Convert WooCommerce sidebar into toggle-able filters bar & help customers to find what they really want.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-location-alt"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Google Maps', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Embed Google Maps with custom markers and info title in your WordPress website within a few seconds.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-format-chat"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('FAQ', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Easily create, order and publicize FAQs. Optionally, display the questions in groups by tagging them, and even load them closed or readily open.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
