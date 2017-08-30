@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.1.1
+ * @since 	    1.2.0
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -84,13 +84,13 @@ endif;
  * Primary Navigation.
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0
+ * @since 1.2.0
  */
 if (!function_exists('hypermarket_primary_navigation')):
 	function hypermarket_primary_navigation()
 	{
 		wp_nav_menu(array(
-			'depth' => 2,
+			'depth' => 3,
 			'container' => 'nav',
 			'container_class' => 'main-navigation text-center',
 			'menu_id' => 'hypermarket-main-navigation',
