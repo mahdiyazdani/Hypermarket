@@ -1,3 +1,9 @@
+# 1.2.1/ 2017-09-01
+
+  * Updated language file.
+  * Updated main stylesheet.
+  * Added subtitle field to payment method widget.
+
 # 1.2.0/ 2017-08-21
 
   * Updated language file.
@@ -162,7 +168,7 @@
   
 # 1.0.1/ 2017-01-26
 
-  * Added Page preloading.
+  * Added page preloading.
   * Updated WooCommerce installation method.
   
 # 1.0.0/ 2017-01-04
