@@ -38,13 +38,14 @@ address_2
 phone
 mobile
 email
+skype
 hours
 ```
 
 A full shortcode could look like:
 
 ```php
-[hypermarket-plus-contact address_1="45 Park Avenue, Apt. 303" address_2="New York, NY 10016, USA" phone="001 (917) 555-4836" mobile="001 (800) 333-6578" email="info@example.com" hours="10am - 8pm, Mn - St"]
+[hypermarket-plus-contact address_1="45 Park Avenue, Apt. 303" address_2="New York, NY 10016, USA" phone="001 (917) 555-4836" mobile="001 (800) 333-6578" email="info@example.com" skype="skype" hours="10am - 8pm, Mn - St"]
 ```
 
 ![Generate a contact form shortcode](img/generate-contact-form-shortcode.gif)
