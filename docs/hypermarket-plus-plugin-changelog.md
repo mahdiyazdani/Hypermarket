@@ -1,26 +1,38 @@
+# 1.8.5/ 2017-09-01
+
+  * Updated language file.
+  * Updated contact form shortcode method.
+  * Updated FAQ form shortcode method.
+  * Updated hero slider shortcode method.
+  * Updated hero product shortcode method.
+  * Updated video popup shortcode method.
+  * Updated Google Maps shortcode method.
+  * Added team members post type.
+  * Added MailChimp newsletter subscription widget.
+
 # 1.8.0/ 2017-08-21
 
   * Updated language file.
+  * Updated WooCommerce Ajax load more functionality.
+  * Updated video control shortcode generator.
+  * Updated shop filters bar HTML markup.
   * Added Ajax contact form.
   * Added FAQ post type.
   * Added Google Maps shortcode generator.
   * Added Google Maps API support.
   * Added snazzy map custom styling support.
-  * Updated WooCommerce Ajax load more functionality.
-  * Updated video control shortcode generator.
-  * Updated shop filters bar HTML markup.
 
 # 1.7.0/ 2017-08-14
 
   * Updated language file.
+  * Updated WooCommerce sorting options widget.
+  * Updated plugin auto update methods.
+  * Updated color picker controls.
   * Added sidenav header style.
   * Added shop filters bar support.
   * Added Ajax load more products pagination.
   * Added new options to plugin's settings page.
   * Fixed minor security issues.
-  * Updated WooCommerce sorting options widget.
-  * Updated plugin auto update methods.
-  * Updated color picker controls.
 
 # 1.6.0/ 2017-08-08
 
@@ -83,7 +95,6 @@
 # 1.0.1/ 2017-06-22
 
   * Removed "Go Plus" button from customizer API.
-
 
 # 1.0.0/ 2017-06-17
 
