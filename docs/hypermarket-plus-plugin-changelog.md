@@ -2,7 +2,7 @@
 
   * Updated language file.
   * Updated contact form shortcode method.
-  * Updated FAQ form shortcode method.
+  * Updated FAQ shortcode method.
   * Updated hero slider shortcode method.
   * Updated hero product shortcode method.
   * Updated video popup shortcode method.
