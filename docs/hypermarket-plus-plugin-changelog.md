@@ -1,4 +1,4 @@
-# 1.8.5/ 2017-09-01
+# 1.8.5/ 2017-09-02
 
   * Updated language file.
   * Updated contact form shortcode method.
