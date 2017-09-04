@@ -294,14 +294,39 @@
 				@include margin(-14px 0 0 0);
 				@include position(absolute, 100% null null 0);
 				> li {
+					position: relative;
 					margin-top: 8px;
 					&:first-child { margin-top: 0; }
-					> a { font-size: $submenu-link-font-size; }
+					> a { 
+						position: relative;
+						font-size: $submenu-link-font-size; 
+					}
 					&.current-menu-item > a,
 					&.current_page_item > a,
 					&.current-menu-ancestor > a,
 					&.current-menu-parent > a,
 					&:hover > a { color: $nav-link-hover-color; }
+					&.menu-item-has-children {
+						> a:after {
+							display: inline-block;
+							vertical-align: middle;
+							font-family: 'Material Icons';
+							content:"\e037";
+							font-size: .9em;
+							@include margin(-3px null null 8px);
+						}
+					}
+				}
+				.sub-menu {
+					top: 0;
+					left: 100%;
+					margin-top: -6px;
+				}
+				> li:hover {
+					.sub-menu {
+						display: block;
+						@include animation(slideRight .4s);
+					}
 				}
 			}
 			&.menu-item-has-children {
@@ -320,6 +345,7 @@
 				.sub-menu {
 					display: block;
 					@include animation(slideUp .4s);
+					.sub-menu { display: none; }
 				}
 			}
 		}
@@ -412,6 +438,27 @@
 					> li {
 						margin-top: 0;
 						> a { @include padding(6px 15px); }
+						&:hover .sub-menu {
+							display: block !important;
+							@include animation(none);
+						}
+						&.menu-item-has-children {
+							> a:after {
+								display: inline-block;
+								vertical-align: middle;
+								font-family: 'Material Icons';
+								content:"\e5c5";
+								font-size: 1.4em;
+								@include margin(-3px null null 5px);
+							}
+						}
+					}
+					.sub-menu {
+						display: block !important;
+						@include animation(none);
+						padding: 10px 0 !important;
+						background-color: darken($gray-lighter, 3%);
+						@include position(relative, 0 null null 0);
 					}
 				}
 				&:hover .sub-menu {
@@ -461,6 +508,17 @@
   from {
   	@include opacity(0);
     @include transform(translate3d(0, 25px, 0));
+  }
+  to {
+  	@include opacity(1);
+    @include transform(none);
+  }
+}
+// slideRight
+@include keyframes(slideRight) {
+  from {
+  	@include opacity(0);
+    @include transform(translate3d(-15px, 0, 0));
   }
   to {
   	@include opacity(1);
