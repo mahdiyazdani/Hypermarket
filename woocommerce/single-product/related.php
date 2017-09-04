@@ -23,9 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
 
 	<!-- Related Products -->
-	<section class="container padding-top padding-bottom">
+	<section class="container padding-top">
 		<hr>
-		<h3 class="padding-top"><?php esc_html_e( 'Related Products', 'hypermarket' ); ?></h3>
+		<h3 class="padding-top"><?php esc_html_e('Related Products', 'hypermarket'); ?></h3>
 		<div class="row padding-top">
 			<?php 
 				woocommerce_product_loop_start();
@@ -34,7 +34,7 @@ if ( $related_products ) : ?>
 				foreach ( $related_products as $related_product ) :
 					$post_object = get_post( $related_product->get_id() );
 					setup_postdata( $GLOBALS['post'] =& $post_object );
-					wc_get_template_part( 'content', 'product' );
+					wc_get_template_part('content', 'product');
 				endforeach; // end of the loop.
 				woocommerce_product_loop_end(); 
 			?>
