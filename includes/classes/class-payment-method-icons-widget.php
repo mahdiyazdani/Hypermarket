@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.5.1
+ * @since       1.2.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -33,7 +33,7 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
         /**
          * Outputs the content of the widget.
          *
-         * @since 1.0.5
+         * @since 1.2.1
          */
         public function widget($args, $instance)
 
@@ -52,6 +52,7 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
             endif;
             extract($args, EXTR_SKIP);
             $title = empty($instance['title']) ? '' : apply_filters('hypermarket_payment_methods_icons_widget_title', $instance['title']);
+            $subtitle = empty($instance['subtitle']) ? '' : esc_attr($instance['subtitle']);
             $icon_1 = empty($instance['icon_1']) ? '' : esc_attr($instance['icon_1']);
             $icon_2 = empty($instance['icon_2']) ? '' : esc_attr($instance['icon_2']);
             $icon_3 = empty($instance['icon_3']) ? '' : esc_attr($instance['icon_3']);
@@ -62,7 +63,13 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
             $output = $args['before_widget'];
             // The title and the text output
             if ($title):
-                $output.= $args['before_title'] . $title . $args['after_title'];
+                $output.= $args['before_title'] . $title;
+            endif;
+            if ($subtitle):
+                $output.= '<small>' . $subtitle . '</small>';
+            endif;
+            if ($title):
+                $output.= $args['after_title'];
             endif;
             $output.= '<ul>';
             for ($counter = 1; $counter <= 6; $counter++):
@@ -80,7 +87,7 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
         /**
          * Generates the administration form for the widget.
          * 
-         * @since 1.0.5
+         * @since 1.2.1
          */
         public function form($instance)
 
@@ -97,6 +104,7 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
             // Extract the data from the instance variable
             $args = wp_parse_args($instance, $defaults);
             $title = empty($args['title']) ? '' : esc_attr($args['title']);
+            $subtitle = empty($args['subtitle']) ? '' : esc_attr($args['subtitle']);
             $icon_1 = empty($args['icon_1']) ? '' : esc_attr($args['icon_1']);
             $icon_2 = empty($args['icon_2']) ? '' : esc_attr($args['icon_2']);
             $icon_3 = empty($args['icon_3']) ? '' : esc_attr($args['icon_3']);
@@ -104,38 +112,44 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
             $icon_5 = empty($args['icon_5']) ? '' : esc_attr($args['icon_5']);
             $icon_6 = empty($args['icon_6']) ? '' : esc_attr($args['icon_6']);
             // Display the fields
-            echo '<p>';
-            echo '<label for="' . esc_attr($this->get_field_id('title')) . '">' . esc_html__('Title:', 'hypermarket') . '</label>';
-            echo '<input class="widefat" id="' . esc_attr($this->get_field_id('title')) . '" name="' . esc_attr($this->get_field_name('title')) . '" type="text"
-           value="' . esc_attr($title) . '" />';
-            echo '</p>';
-            for ($counter = 1; $counter <= 6; $counter++):
-                echo '<p>';
-                echo '<label for="icon_' . $counter . '">';
-                printf(esc_attr__('Icon %1$s:', 'hypermarket') , $counter);
-                echo '</label>';
-                echo '<select class="widefat" id="' . esc_attr($this->get_field_id('icon_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_' . $counter)) . '" type="text">';
-                echo '<option value="">.:: ' . esc_html__('Select', 'hypermarket') . ' ::.</option>';
-                echo '<option value="visa" ' . esc_attr(selected(${'icon_' . $counter}, 'visa')) . '>' . esc_html__('Visa', 'hypermarket') . '</option>';
-                echo '<option value="skrill" ' . esc_attr(selected(${'icon_' . $counter}, 'skrill')) . '>' . esc_html__('Skrill', 'hypermarket') . '</option>';
-                echo '<option value="master-card" ' . esc_attr(selected(${'icon_' . $counter}, 'master-card')) . '>' . esc_html__('MasterCard', 'hypermarket') . '</option>';
-                echo '<option value="paypal" ' . esc_attr(selected(${'icon_' . $counter}, 'paypal')) . '>' . esc_html__('PayPal', 'hypermarket') . '</option>';
-                echo '<option value="amx" ' . esc_attr(selected(${'icon_' . $counter}, 'amx')) . '>' . esc_html__('American Express', 'hypermarket') . '</option>';
-                echo '<option value="ssl" ' . esc_attr(selected(${'icon_' . $counter}, 'ssl')) . '>' . esc_html__('SSL Certificate', 'hypermarket') . '</option>';
-                echo '</select>';
-                echo '</p>';
+            ?>
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title', 'hypermarket'); ?>:</label>
+                <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo $title; ?>" class="widefat" />
+            </p>
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('subtitle')); ?>"><?php esc_html_e('Subtitle', 'hypermarket'); ?>:</label>
+                <input type="text" id="<?php echo esc_attr($this->get_field_id('subtitle')); ?>" name="<?php echo esc_attr($this->get_field_name('subtitle')); ?>" value="<?php echo $subtitle; ?>" class="widefat" />
+            </p>
+            <?php for ($counter = 1; $counter <= 6; $counter++): ?>
+            <p>
+                <label for="icon_<?php echo $counter; ?>">
+                    <?php printf(esc_attr__('Icon %1$s:', 'hypermarket') , $counter); ?>
+                </label>
+                <select class="widefat" id="<?php echo esc_attr($this->get_field_id('icon_' . $counter)); ?>" name="<?php echo esc_attr($this->get_field_name('icon_' . $counter)); ?>">
+                    <option value="">.:: <?php esc_html_e('Select', 'hypermarket'); ?> ::.</option>
+                    <option value="visa" <?php echo esc_attr(selected(${'icon_' . $counter}, 'visa')); ?>><?php esc_html_e('Visa', 'hypermarket'); ?></option>
+                    <option value="skrill" <?php echo esc_attr(selected(${'icon_' . $counter}, 'skrill')); ?>><?php esc_html_e('Skrill', 'hypermarket'); ?></option>
+                    <option value="master-card" <?php echo esc_attr(selected(${'icon_' . $counter}, 'master-card')); ?>><?php esc_html_e('MasterCard', 'hypermarket'); ?></option>
+                    <option value="paypal" <?php echo esc_attr(selected(${'icon_' . $counter}, 'paypal')); ?>><?php esc_html_e('PayPal', 'hypermarket'); ?></option>
+                    <option value="amx" <?php echo esc_attr(selected(${'icon_' . $counter}, 'amx')); ?>><?php esc_html_e('American Express', 'hypermarket'); ?></option>
+                    <option value="ssl" <?php echo esc_attr(selected(${'icon_' . $counter}, 'ssl')); ?>><?php esc_html_e('SSL Certificate', 'hypermarket'); ?></option>
+                </select>
+            </p>
+            <?php
             endfor;
         }
         /**
          * Processes the widget's options to be saved.
          *
-         * @since 1.0.5
+         * @since 1.2.1
          */
         public function update($new_instance, $old_instance)
 
         {
             $instance = $old_instance;
             $instance['title'] = sanitize_text_field($new_instance['title']);
+            $instance['subtitle'] = sanitize_text_field($new_instance['subtitle']);
             $instance['icon_1'] = sanitize_text_field($new_instance['icon_1']);
             $instance['icon_2'] = sanitize_text_field($new_instance['icon_2']);
             $instance['icon_3'] = sanitize_text_field($new_instance['icon_3']);
@@ -156,7 +170,7 @@ endif;
 if (!function_exists('hypermarket_register_payment_methods_icons_widget')):
     function hypermarket_register_payment_methods_icons_widget()
     {
-        register_widget( 'Hypermarket_Payment_Method_Icons_Widget' );
+        register_widget('Hypermarket_Payment_Method_Icons_Widget');
     }
 endif;
 add_action('widgets_init', 'hypermarket_register_payment_methods_icons_widget', 10);
