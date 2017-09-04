@@ -5,7 +5,7 @@
  * @author        Mahdi Yazdani
  * @package       Hypermarket
  * @dependencies  Bourbon
- * @since         1.1.1
+ * @since         1.2.0
  */
 * {
   -webkit-box-sizing: border-box;
@@ -2954,13 +2954,32 @@ input[type="button"]#place_order {
         top: 100%;
         left: 0; }
         .main-navigation > .menu > li .sub-menu > li {
+          position: relative;
           margin-top: 8px; }
           .main-navigation > .menu > li .sub-menu > li:first-child {
             margin-top: 0; }
           .main-navigation > .menu > li .sub-menu > li > a {
+            position: relative;
             font-size: 12px; }
           .main-navigation > .menu > li .sub-menu > li.current-menu-item > a, .main-navigation > .menu > li .sub-menu > li.current_page_item > a, .main-navigation > .menu > li .sub-menu > li.current-menu-ancestor > a, .main-navigation > .menu > li .sub-menu > li.current-menu-parent > a, .main-navigation > .menu > li .sub-menu > li:hover > a {
             color: #a6a6a6; }
+          .main-navigation > .menu > li .sub-menu > li.menu-item-has-children > a:after {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: 'Material Icons';
+            content: "\e037";
+            font-size: .9em;
+            margin-top: -3px;
+            margin-left: 8px; }
+        .main-navigation > .menu > li .sub-menu .sub-menu {
+          top: 0;
+          left: 100%;
+          margin-top: -6px; }
+        .main-navigation > .menu > li .sub-menu > li:hover .sub-menu {
+          display: block;
+          -webkit-animation: slideRight 0.4s;
+          -o-animation: slideRight 0.4s;
+          animation: slideRight 0.4s; }
       .main-navigation > .menu > li.menu-item-has-children > a:after {
         display: inline-block;
         vertical-align: middle;
@@ -2982,6 +3001,8 @@ input[type="button"]#place_order {
         -webkit-animation: slideUp 0.4s;
         -o-animation: slideUp 0.4s;
         animation: slideUp 0.4s; }
+        .main-navigation > .menu > li:hover .sub-menu .sub-menu {
+          display: none; }
   .main-navigation.text-center > .menu > li > a, input.main-navigation[type="checkbox"]:checked::before > .menu > li > a, input.main-navigation[type="radio"]:checked::before > .menu > li > a, .single-product .main-navigation.woocommerce-message > .menu > li > a, .single-product .main-navigation.woocommerce-info > .menu > li > a, .single-product .main-navigation.woocommerce-error > .menu > li > a, .main-navigation.wc-tabs > .menu > li > a, .woocommerce-MyAccount-navigation ul.main-navigation > .menu > li > a {
     padding-right: 15px;
     padding-left: 15px; }
@@ -3088,6 +3109,29 @@ input[type="button"]#place_order {
             margin-top: 0; }
             .main-navigation > .menu > li .sub-menu > li > a {
               padding: 6px 15px; }
+            .main-navigation > .menu > li .sub-menu > li:hover .sub-menu {
+              display: block !important;
+              -webkit-animation: none;
+              -o-animation: none;
+              animation: none; }
+            .main-navigation > .menu > li .sub-menu > li.menu-item-has-children > a:after {
+              display: inline-block;
+              vertical-align: middle;
+              font-family: 'Material Icons';
+              content: "\e5c5";
+              font-size: 1.4em;
+              margin-top: -3px;
+              margin-left: 5px; }
+          .main-navigation > .menu > li .sub-menu .sub-menu {
+            display: block !important;
+            -webkit-animation: none;
+            -o-animation: none;
+            animation: none;
+            padding: 10px 0 !important;
+            background-color: #e7e7e7;
+            position: relative;
+            top: 0;
+            left: 0; }
         .main-navigation > .menu > li:hover .sub-menu {
           -webkit-animation: none;
           -o-animation: none;
@@ -3181,6 +3225,41 @@ input[type="button"]#place_order {
     -ms-transform: translate3d(0, 25px, 0);
     -o-transform: translate3d(0, 25px, 0);
     transform: translate3d(0, 25px, 0); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; } }
+@-webkit-keyframes slideRight {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(-15px, 0, 0); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: none; } }
+@-moz-keyframes slideRight {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate3d(-15px, 0, 0); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: none; } }
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate3d(-15px, 0, 0);
+    -moz-transform: translate3d(-15px, 0, 0);
+    -ms-transform: translate3d(-15px, 0, 0);
+    -o-transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-15px, 0, 0); }
   to {
     opacity: 1;
     filter: alpha(opacity=100);
