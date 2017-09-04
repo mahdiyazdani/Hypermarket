@@ -869,7 +869,8 @@ input#shipping_state,
 #account_username,
 #account_password,
 #account_password-2,
-.select2-search__field {
+.select2-search__field,
+.product-search-field {
   @extend .form-control;
 }
 #billing_country_field, #billing_state_field, #shipping_country_field, #shipping_state_field {
