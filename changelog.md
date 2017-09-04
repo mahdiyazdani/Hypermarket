@@ -1,3 +1,8 @@
+= 1.2.1 =
+* Updated language file.
+* Updated main stylesheet.
+* Added subtitle field to payment method widget.
+
 = 1.2.0 =
 * Updated language file.
 * Updated main stylesheet.
@@ -64,16 +69,16 @@
 
 = 1.0.5.1 =
 * Updated language file.
+* Updated create_function method in custom widgets to make the theme child theme ready.
 * Added the un-minified version of main stylesheet and editor style files.
 * Added a new method to set WooCommerce image dimensions upon theme activation.
-* Updated create_function method in custom widgets to make the theme child theme ready.
 * Removed automatic flushing of the WordPress rewrite rules - Plugin territory restriction.
 * Removed clean-up all widgets from all widget areas method upon theme activation - Plugin territory restriction.
 
 = 1.0.5 =
 * Updated language file.
 * Updated WordPress gallery styles.
-* Compatibility with WooCommerce 3.0.
+* Compatibility with WooCommerce 3.X.
 * Compatibility with PHP 5.6 and above.
 
 = 1.0.4.3 =
@@ -88,11 +93,11 @@
 
 = 1.0.4.1 =
 * Updated language file.
+* Updated results count method.
 * Added escaping functions.
 * Added wp_kses to fallback menu.
 * Added sanitization to mini cart price.
 * Added sanitization method to page numbers loop.
-* Updated results count method.
 * Fixed broken styles in blog meta.
 
 = 1.0.4 =
@@ -117,7 +122,6 @@
 * Fixed Google fonts JS error.
 
 = 1.0.3 =
-* HTML5 Validated.
 * Updated language file.
 * Added category and tag description support.
 * Added WP-Editor stylesheet file.
@@ -126,19 +130,20 @@
 * Added fluid page template.
 * Fixed WooCommerce overlay visibility on checkout page.
 * Theme sass files refactored.
+* HTML5 Validated.
 
 = 1.0.2 =
 * Updated language file.
 * Added WooCommerce page template - No products found page.
 * Added hook for wrapping notice content on single product page.
 * Added method to display shop page featured image.
-* Added Popular badge to best seller products.
+* Added "Popular" badge to best seller products.
 * Fixed the flush permalink method error.
 * Fixed the sidebar visibility issue on iPad PRO.
 * Fixed the shop grid layout adjustment in small screen devices.
 
 = 1.0.1 =
-* Added Page preloading.
+* Added page preloading.
 * Updated WooCommerce installation method.
 
 = 1.0 =
