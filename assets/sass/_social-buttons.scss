@@ -10,6 +10,16 @@
 		text-decoration: none;
 		@include margin(null 9px 5px 9px);
 	}
+	&.text-center {
+		a {
+			@include margin(null 9px);
+		}
+	}
+	&.text-right {
+		a {
+			@include margin(null 0 null 18px);
+		}
+	}
 }
 /* Facebook */
 .hypermarket-facebook, .hypermarket-facebook-solid {
