@@ -7,7 +7,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.4.1
+ * @since       1.2.1
  */
 
 /*
@@ -19,7 +19,7 @@ if ( post_password_required() ):
 	return;
 endif;
 ?>
-<div class="comments-area padding-top-2x" id="comments">
+<div class="comments-area padding-top-2x padding-bottom" id="comments">
 
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
