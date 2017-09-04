@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.2.0
+ * @since 	    1.2.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.2.0
+		 * @since 1.2.1
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -123,14 +123,6 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('BS3 Grid Builder - A plugin for designing and prototyping modern websites', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('Hypermarket comes with BS3 Grid Builder integration, drag and drops WordPress plugin, which provides backend page design and layout customization solutions you can make use of quickly and effortlessly.', 'hypermarket'); ?></em></small>
-															</td>
-														</tr>
-														<tr class="alternate">
-															<td class="row-title">
-																<?php $install_mailchimp_for_wp_url = esc_url(admin_url('plugin-install.php?s=mailchimp%20for%20wp&tab=search&type=term')); ?>
-																<a href="<?php echo $install_mailchimp_for_wp_url; ?>" target="_self"><?php esc_attr_e('MailChimp for WP - Subscribe your WordPress site visitors to your MailChimp lists', 'hypermarket'); ?></a>
-																<br />
-																<small style="font-size:70%;"><em><?php esc_attr_e('The MailChimp integration with Hypermarket theme allows you to send newsletters to your subscribers and keep your contacts in one profile which will be very useful and convenient for you to make marketing strategies later on.', 'hypermarket'); ?></em></small>
 															</td>
 														</tr>
 													</tbody>
@@ -325,6 +317,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('FAQ', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Easily create, order and publicize FAQs. Optionally, display the questions in groups by tagging them, and even load them closed or readily open.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-groups"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Team members', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Easy-to-use team profile management system for Hypermarket theme. Load in your team members and display their profiles via a shortcode.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-feedback"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Contact form', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Create a simple contact form using Ajax technology and advanced email address validation.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
