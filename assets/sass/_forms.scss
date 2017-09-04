@@ -345,7 +345,7 @@ input[type="radio"] {
 }
 
 // Subscription Form
-.mc4wp-form, .mc4wp-form-fields {
+.subscribe-form, .mc4wp-form, .mc4wp-form-fields {
   display: block;
   width: 100%;
   @include position(relative, null null null null);
