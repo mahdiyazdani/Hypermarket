@@ -350,7 +350,7 @@
 }
 
 // Mailchimp Widget
-.widget_mc4wp_form_widget .mc4wp-form {
+.subscribe-form, .widget_mc4wp_form_widget .mc4wp-form {
   max-width: 365px;
   @include margin(0 auto);
   .form-control {
