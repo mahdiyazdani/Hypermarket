@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.5.1
+ * @since       1.2.1
  */
 if (!defined('ABSPATH')):
     exit;
@@ -92,7 +92,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         /**
          * Generates the administration form for the widget.
          * 
-         * @since 1.0.5
+         * @since 1.2.1
          */
         public function form($instance)
 
@@ -140,35 +140,36 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
             $icon_9 = empty($args['icon_9']) ? '' : esc_attr($args['icon_9']);
             $icon_url_9 = empty($args['icon_url_9']) ? '' : esc_url($args['icon_url_9']);
             // Display the fields
-            echo '<p>';
-            echo '<label for="' . esc_attr($this->get_field_id('title')) . '">' . esc_html__('Title:', 'hypermarket') . '</label>';
-            echo '<input class="widefat" id="' . esc_attr($this->get_field_id('title')) . '" name="' . esc_attr($this->get_field_name('title')) . '" type="text"
-           value="' . esc_attr($title) . '" />';
-            echo '</p>';
-            for ($counter = 1; $counter <= 9; $counter++):
-                echo '<p>';
-                echo '<label for="icon_' . $counter . '">';
-                printf(esc_attr__('Icon %1$s:', 'hypermarket') , $counter);
-                echo '</label>';
-                echo '<select class="widefat" id="' . esc_attr($this->get_field_id('icon_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_' . $counter)) . '" type="text">';
-                echo '<option value="">.:: ' . esc_html__('Select', 'hypermarket') . ' ::.</option>';
-                echo '<option value="facebook" ' . esc_attr(selected(${'icon_' . $counter}, 'facebook')) . '>' . esc_html__('Facebook', 'hypermarket') . '</option>';
-                echo '<option value="google-plus" ' . esc_attr(selected(${'icon_' . $counter}, 'google-plus')) . '>' . esc_html__('Google Plus', 'hypermarket') . '</option>';
-                echo '<option value="instagram" ' . esc_attr(selected(${'icon_' . $counter}, 'instagram')) . '>' . esc_html__('Instagram', 'hypermarket') . '</option>';
-                echo '<option value="linkedin" ' . esc_attr(selected(${'icon_' . $counter}, 'linkedin')) . '>' . esc_html__('Linkedin', 'hypermarket') . '</option>';
-                echo '<option value="pinterest" ' . esc_attr(selected(${'icon_' . $counter}, 'pinterest')) . '>' . esc_html__('Pinterest', 'hypermarket') . '</option>';
-                echo '<option value="twitter" ' . esc_attr(selected(${'icon_' . $counter}, 'twitter')) . '>' . esc_html__('Twitter', 'hypermarket') . '</option>';
-                echo '<option value="vimeo" ' . esc_attr(selected(${'icon_' . $counter}, 'vimeo')) . '>' . esc_html__('Vimeo', 'hypermarket') . '</option>';
-                echo '<option value="wordpress" ' . esc_attr(selected(${'icon_' . $counter}, 'wordpress')) . '>' . esc_html__('WordPress', 'hypermarket') . '</option>';
-                echo '<option value="youtube" ' . esc_attr(selected(${'icon_' . $counter}, 'youtube')) . '>' . esc_html__('Youtube', 'hypermarket') . '</option>';
-                echo '</select>';
-                echo '</p>';
-                echo '<p>';
-                echo '<label for="icon_url_' . $counter . '">';
-                printf(esc_attr__('Icon URL %1$s:', 'hypermarket') , $counter);
-                echo '</label>';
-                echo '<input class="widefat" id="' . esc_attr($this->get_field_id('icon_url_' . $counter)) . '" name="' . esc_attr($this->get_field_name('icon_url_' . $counter)) . '" type="text" value="' . esc_url($args['icon_url_' . $counter]) . '" />';
-                echo '</p>';
+            ?>
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title', 'hypermarket'); ?>:</label>
+                <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo $title; ?>" class="widefat" />
+            </p>
+            <?php for ($counter = 1; $counter <= 9; $counter++): ?>
+            <p>
+                <label for="icon_<?php echo $counter; ?>">
+                    <?php printf(esc_attr__('Icon %1$s:', 'hypermarket') , $counter); ?>
+                </label>
+                <select class="widefat" id="<?php echo esc_attr($this->get_field_id('icon_' . $counter)); ?>" name="<?php echo esc_attr($this->get_field_name('icon_' . $counter)); ?>">
+                    <option value="">.:: <?php esc_html_e('Select', 'hypermarket'); ?> ::.</option>
+                    <option value="facebook" <?php echo esc_attr(selected(${'icon_' . $counter}, 'facebook')); ?>><?php esc_html_e('Facebook', 'hypermarket'); ?></option>
+                    <option value="google-plus" <?php echo esc_attr(selected(${'icon_' . $counter}, 'google-plus')); ?>><?php esc_html_e('Google Plus', 'hypermarket'); ?></option>
+                    <option value="instagram" <?php echo esc_attr(selected(${'icon_' . $counter}, 'instagram')); ?>><?php esc_html_e('Instagram', 'hypermarket'); ?></option>
+                    <option value="linkedin" <?php echo esc_attr(selected(${'icon_' . $counter}, 'linkedin')); ?>><?php esc_html_e('Linkedin', 'hypermarket'); ?></option>
+                    <option value="pinterest" <?php echo esc_attr(selected(${'icon_' . $counter}, 'pinterest')); ?>><?php esc_html_e('Pinterest', 'hypermarket'); ?></option>
+                    <option value="twitter" <?php echo esc_attr(selected(${'icon_' . $counter}, 'twitter')); ?>><?php esc_html_e('Twitter', 'hypermarket'); ?></option>
+                    <option value="vimeo" <?php echo esc_attr(selected(${'icon_' . $counter}, 'vimeo')); ?>><?php esc_html_e('Vimeo', 'hypermarket'); ?></option>
+                    <option value="wordpress" <?php echo esc_attr(selected(${'icon_' . $counter}, 'wordpress')); ?>><?php esc_html_e('WordPress', 'hypermarket'); ?></option>
+                    <option value="youtube" <?php echo esc_attr(selected(${'icon_' . $counter}, 'youtube')); ?>><?php esc_html_e('Youtube', 'hypermarket'); ?></option>
+                </select>
+            </p>
+            <p>
+                <label for="icon_url_<?php echo $counter; ?>">
+                    <?php printf(esc_attr__('Icon URL %1$s:', 'hypermarket') , $counter); ?>
+                </label>
+                <input class="widefat" id="<?php echo esc_attr($this->get_field_id('icon_url_' . $counter)); ?>" name="<?php echo esc_attr($this->get_field_name('icon_url_' . $counter)); ?>" type="text" value="<?php echo esc_url($args['icon_url_' . $counter]); ?>" />
+            </p>
+            <?php
             endfor;
         }
         /**
@@ -204,7 +205,6 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         }
     }
 endif;
-add_action('widgets_init', create_function('', 'return register_widget("Hypermarket_Social_Icons_Widget");'));
 /**
  * Register the Widget.
  *
@@ -214,7 +214,7 @@ add_action('widgets_init', create_function('', 'return register_widget("Hypermar
 if (!function_exists('hypermarket_register_social_icons_widget')):
     function hypermarket_register_social_icons_widget()
     {
-        register_widget( 'Hypermarket_Social_Icons_Widget' );
+        register_widget('Hypermarket_Social_Icons_Widget');
     }
 endif;
 add_action('widgets_init', 'hypermarket_register_social_icons_widget', 10);
