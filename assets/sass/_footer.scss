@@ -47,7 +47,7 @@
     @include margin(-5px null 0 null);
   }
   // Mailchimp Widget
-  .widget_mc4wp_form_widget .mc4wp-form {
+  .subscribe-form, .widget_mc4wp_form_widget .mc4wp-form {
     .form-control {
       @include border-color($body-bg);
     }
