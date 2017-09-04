@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.1.1
+ * @since 	    1.2.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -70,7 +70,7 @@ if (!class_exists('Hypermarket')):
 		 * runs before the init hook. The init hook is too late for some features, such
 		 * as indicating support for post thumbnails.
 		 *
-		 * @since 1.0.4.1
+		 * @since 1.2.1
 		 */
 		public function setup()
 
@@ -115,7 +115,7 @@ if (!class_exists('Hypermarket')):
 				HypermarketPrimaryNavLocation => __('Primary Menu', 'hypermarket')
 			));
 			/*
-			* Switch default core markup for search form, comment form, and comments
+			* Switch default core markup for search form, comment form, comments, galleries, captions and widgets
 			* to output valid HTML5.
 			*/
 			add_theme_support('html5', array(
@@ -123,7 +123,8 @@ if (!class_exists('Hypermarket')):
 				'comment-form',
 				'comment-list',
 				'gallery',
-				'caption'
+				'caption',
+				'widgets'
 			));
 			/**
 			 * Enable support for site logo
