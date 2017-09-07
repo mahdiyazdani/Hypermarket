@@ -1,3 +1,8 @@
+# 1.2.2/ 2017-09-02
+
+  * Updated WooCommerce upsell template file.
+  * Added new filter to update WooCommerce loop columns class.
+
 # 1.2.1/ 2017-09-01
 
   * Updated language file.
