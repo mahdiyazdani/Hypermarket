@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $upsells ) : ?>
 
 	<!-- UpSells -->
-	<section class="container padding-top padding-bottom up-sells upsells products">
+	<section class="container padding-top up-sells upsells products">
 		<hr>
 		<h3 class="padding-top"><?php esc_html_e( 'You May Also Like&hellip;', 'hypermarket' ) ?></h3>
 		<div class="row padding-top">
