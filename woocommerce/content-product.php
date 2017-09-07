@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php post_class($GLOBALS['product_grid_classes']); ?> data-mh="mh-products">
+<div <?php post_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes'])); ?> data-mh="mh-products">
 	<div class="shop-item">
 		<?php
 		/**
