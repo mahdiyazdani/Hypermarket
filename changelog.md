@@ -1,3 +1,7 @@
+= 1.2.2 =
+* Updated WooCommerce upsell template file.
+* Added new filter to update WooCommerce loop columns class.
+
 = 1.2.1 =
 * Updated language file.
 * Updated main stylesheet.
