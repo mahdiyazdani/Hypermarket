@@ -380,25 +380,25 @@ kbd {
 // Homepage control
 .page-template-template-homepage {
   #hypermarket-header {
-    & + section:not(.hypermarket-plus-hero-slider), 
-    & + section:not(.hypermarket-plus-hero-product) {
+    & + section:not(.hero-slider), 
+    & + section:not(.hero-product) {
       margin-top: 0 !important;
       padding-top: 7px !important;
       & hr { display: none; }
     }
-    & + section.hypermarket-plus-hero-slider, 
-    & + section.hypermarket-plus-hero-product {
+    & + section.hero-slider, 
+    & + section.hero-product {
       margin-top: 0 !important;
       padding-top: 0 !important;
     }
     & + .content-wrapper {
-      section:not(.hypermarket-plus-hero-slider),
-      section:not(.hypermarket-plus-hero-product) {
+      section:not(.hero-slider),
+      section:not(.hero-product) {
         margin-top: 0 !important;
         padding-top: 40px !important;
       }
-      section.hypermarket-plus-hero-slider, 
-      section.hypermarket-plus-hero-product {
+      section.hero-slider, 
+      section.hero-product {
         margin-top: 0 !important;
         padding-top: 0 !important;
       }
