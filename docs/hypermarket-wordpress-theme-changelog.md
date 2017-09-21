@@ -1,3 +1,9 @@
+# 1.3.0/ 2017-09-22
+  * Added mobile site logo control.
+  * Updated main stylesheet.
+  * Code refactoring.
+
+
 # 1.2.2/ 2017-09-02
 
   * Updated WooCommerce upsell template file.
