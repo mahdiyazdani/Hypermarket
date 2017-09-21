@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.2.0
+ * @since 	    1.3.0
  */
 // ======================================================================
 // Hooked into "hypermarket_before_header_area"
@@ -14,7 +14,7 @@
  * Skip links.
  *
  * @package Hooked into "hypermarket_before_header_area"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_skip_links')):
 	function hypermarket_skip_links()
@@ -55,14 +55,19 @@ endif;
  * Site brand/logo
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0.5
+ * @since 1.3.0
  */
 if (!function_exists('hypermarket_site_brand')):
 	function hypermarket_site_brand()
 	{
+		$mobile_logo = absint(get_theme_mod('hypermarket_mobile_logo', ''));
 		if (function_exists('the_custom_logo') && has_custom_logo()):
-			$logo = get_custom_logo();
-			echo $logo;
+			the_custom_logo();
+			if (! empty($mobile_logo)):
+				echo '<a href="' . esc_url(home_url('/')) . '" class="site-logo custom-logo-link visible-mobile" target="_self">
+						' . wp_get_attachment_image($mobile_logo, 'full', '', array('class' => 'img-responsive')) . '
+					</a>';
+			endif;
 		elseif (function_exists('jetpack_has_site_logo') && jetpack_has_site_logo()):
 			jetpack_the_site_logo();
 		else:
@@ -76,7 +81,6 @@ if (!function_exists('hypermarket_site_brand')):
 				echo '<span id="site-tagline-visible-desktop" class="site-tagline visible-desktop">' . esc_attr(get_bloginfo('description')) . '</span><!-- .site-tagline.visible-desktop -->';
 			endif;
 			echo '<a id="site-logo-visible-mobile" href="' . esc_url(home_url('/')) . '" class="site-logo visible-mobile" itemprop="headline" rel="home">' . esc_attr(get_theme_mod('hypermarket_mobile_blogname')) . '</a><!-- .site-logo.visible-mobile -->';
-			
 		endif;
 	}
 endif;
@@ -104,7 +108,7 @@ endif;
  * Header Toolbar.
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_header_toolbar')):
 	function hypermarket_header_toolbar()
@@ -116,13 +120,15 @@ endif;
  * Header wrapper end tag(s).
  *
  * @package Hooked into "hypermarket_header_area"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_header_wrapper_end')):
 	function hypermarket_header_wrapper_end()
 	{
-		echo '</header>';
-		echo '<!-- .navbar -->';
+		?>
+		</header>
+		<!-- .navbar -->
+		<?php
 	}
 endif;
 // ======================================================================
@@ -133,7 +139,7 @@ endif;
  * Product Categorie(s).
  *
  * @package Hooked into "hypermarket_homepage_template"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_by_category'))
 {
@@ -148,7 +154,7 @@ if (!function_exists('hypermarket_shop_by_category'))
  * Best Seller(s).
  *
  * @package Hooked into "hypermarket_homepage_template"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_best_sellers'))
 {
@@ -163,7 +169,7 @@ if (!function_exists('hypermarket_best_sellers'))
  * Recent Product(s).
  *
  * @package Hooked into "hypermarket_homepage_template"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_new_arrivals'))
 {
@@ -178,7 +184,7 @@ if (!function_exists('hypermarket_new_arrivals'))
  * Homepage content.
  *
  * @package Hooked into "hypermarket_homepage_template"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_homepage_content'))
 {
@@ -200,14 +206,17 @@ if (!function_exists('hypermarket_homepage_content'))
 if (!function_exists('hypermarket_footer_wrapper_start')):
 	function hypermarket_footer_wrapper_start()
 	{
-		echo '<!-- Footer --><footer id="hypermarket-footer" class="footer space-top-3x" itemscope="itemscope" itemtype="http://schema.org/WPFooter">';
+		?>
+		<!-- Footer -->
+		<footer id="hypermarket-footer" class="footer space-top-3x" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+		<?php
 	}
 endif;
 /**
  * Footer area wrapper start tag.
  *
  * @package Hooked into "hypermarket_footer_area"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_footer_widget_areas')):
 	function hypermarket_footer_widget_areas()
@@ -219,7 +228,7 @@ endif;
  * Footer area wrapper end tag.
  *
  * @package Hooked into "hypermarket_footer_area"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_footer_wrapper_end')):
 	function hypermarket_footer_wrapper_end()
@@ -251,7 +260,7 @@ endif;
  * Single page content wrapper start tag.
  *
  * @package Hooked into "hypermarket_before_single_page_content"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_before_single_page_content_wrapper_start')):
 	function hypermarket_before_single_page_content_wrapper_start()
@@ -287,7 +296,7 @@ endif;
  * Single page content wrapper end tag.
  *
  * @package Hooked into "hypermarket_after_single_page_content"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_after_single_page_content_wrapper_end')):
 	function hypermarket_after_single_page_content_wrapper_end()
@@ -307,7 +316,7 @@ endif;
  * The post meta.
  *
  * @package Hooked into "hypermarket_before_loop_posts"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_loop_posts_header_image')):
 	function hypermarket_loop_posts_header_image()
@@ -323,7 +332,7 @@ endif;
  * The post meta.
  *
  * @package Hooked into "hypermarket_loop_posts"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_post_meta')):
 	function hypermarket_post_meta()
@@ -335,7 +344,7 @@ endif;
  * The post entry.
  *
  * @package Hooked into "hypermarket_loop_posts"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_post_entry')):
 	function hypermarket_post_entry()
@@ -352,7 +361,7 @@ endif;
  *
  * @package Hooked into "hypermarket_loop_posts_paging_navigation"
  * @package Hooked into "woocommerce_after_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_paging_navigation')):
 	function hypermarket_paging_navigation()
