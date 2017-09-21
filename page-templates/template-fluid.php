@@ -13,14 +13,14 @@
 
 get_header();
 
-if ( have_posts() ) :
+if (have_posts()) :
 	if(is_page()):
-		get_template_part( 'loop-templates/content', 'page' );
+		get_template_part('loop-templates/content', 'page');
 	else:
-		get_template_part( 'loop-templates/content', 'post' );
+		get_template_part('loop-templates/content', 'post');
 	endif;
 else:
-	get_template_part( 'loop-templates/content', 'none' );
+	get_template_part('loop-templates/content', 'none');
 endif;
 
 get_footer();

@@ -12,7 +12,7 @@
 <div class="toolbar">
     <div class="inner">
         <?php
-            if(!hypermarket_is_woocommerce_activated()):
+            if(! hypermarket_is_woocommerce_activated()):
                 echo '<a href="#" class="mobile-menu-toggle menu-text-right"><i class="material-icons menu"></i></a>';
             else:
                 echo '<a href="#" class="mobile-menu-toggle"><i class="material-icons menu"></i></a>';
@@ -23,7 +23,7 @@
         	endif;
             // Append WooCommerce Mini Cart
         	if (apply_filters('hypermarket_header_toolbar_mini_cart', true) && hypermarket_is_woocommerce_activated()):
-        ?>
+            ?>
 		        <div class="cart-btn">
 	            	<?php do_action('hypermarket_items_present_in_cart'); ?>		
 		            <!-- Cart Dropdown -->

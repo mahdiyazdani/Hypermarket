@@ -8,7 +8,7 @@
  * @since 		1.0.1
  */
 
-if ( ! is_active_sidebar( 'sidebar' ) ) :
+if (! is_active_sidebar('sidebar')) :
 	return;
 endif;
 ?>
@@ -17,7 +17,7 @@ endif;
 	<aside class="sidebar sidebar-right">
 		<span class="sidebar-close"><i class="material-icons close"></i></span>
 		<div class="widgets">
-			<?php dynamic_sidebar( 'sidebar' ); ?>
+			<?php dynamic_sidebar('sidebar'); ?>
 		</div><!-- .widgets -->
 	</aside><!-- .sidebar -->
 </div><!-- .col-md-3.col-sm-4 -->

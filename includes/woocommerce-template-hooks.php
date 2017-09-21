@@ -10,7 +10,7 @@
  * Items present in cart
  *
  * @see  hypermarket_cart_link()		 -> woocommerce-template-functions.php
- * @since 1.0
+ * @since 1.0.0
  */
 add_action('hypermarket_items_present_in_cart', 'hypermarket_cart_link');
 if (defined('WC_VERSION') && version_compare(WC_VERSION, '2.3', '>=')):
@@ -119,7 +119,7 @@ add_action('woocommerce_after_single_product_summary', 'hypermarket_output_produ
 /**
  * Cart
  *
- * @see  hypermarket_update_remove_text()			-> woocommerce-template-functions.php
+ * @see  hypermarket_update_remove_text()				-> woocommerce-template-functions.php
  * @since 1.0.5
  */
 remove_action('woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10);
@@ -128,14 +128,14 @@ add_filter('gettext', 'hypermarket_update_remove_text', 20, 3);
 /**
  * Checkout
  *
- * @see  hypermarket_back_to_cart_btn_before_submit()		 -> woocommerce-template-functions.php
- * @since 1.0
+ * @see  hypermarket_back_to_cart_btn_before_submit()	 -> woocommerce-template-functions.php
+ * @since 1.0.0
  */
 add_action('woocommerce_review_order_before_submit', 'hypermarket_back_to_cart_btn_before_submit', 10);
 /**
  * No Products Found
  *
- * @see  hypermarket_no_products_found()					 -> woocommerce-template-functions.php
+ * @see  hypermarket_no_products_found()				 -> woocommerce-template-functions.php
  * @since 1.0.4
  */
 remove_action('woocommerce_no_products_found', 'wc_no_products_found', 10);

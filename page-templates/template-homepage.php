@@ -9,7 +9,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.0
+ * @since 		    1.0.0
  *
  */
 get_header();
@@ -22,7 +22,7 @@ get_header();
  * @hooked hypermarket_new_arrivals         	   - 30
  * @hooked hypermarket_homepage_content            - 40
  *
- * @since 1.0
+ * @since 1.0.0
  */
 do_action('hypermarket_homepage_template');
 

@@ -5,7 +5,7 @@
  * @package 	Hooked into "hypermarket_before_header_area"
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0
+ * @since 	    1.0.0
  */
 ?>
 <a class="skip-link screen-reader-text" href="#hypermarket-main-navigation">
