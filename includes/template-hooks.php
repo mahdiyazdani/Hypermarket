@@ -9,7 +9,7 @@
 /**
  * Before Header Area
  *
- * @see  hypermarket_skip_links()			-> template-functions.php
+ * @see  hypermarket_skip_links()				-> template-functions.php
  * @since 1.0.4.2
  */
 add_action('hypermarket_before_header_area', 'hypermarket_skip_links', 0);
@@ -21,7 +21,7 @@ add_action('hypermarket_before_header_area', 'hypermarket_skip_links', 0);
  * @see  hypermarket_primary_navigation()		 -> template-functions.php
  * @see  hypermarket_header_toolbar()			 -> template-functions.php
  * @see  hypermarket_header_wrapper_end()		 -> template-functions.php
- * @since 1.0
+ * @since 1.0.0
  */
 add_action('hypermarket_header_area', 'hypermarket_header_wrapper_start', 2);
 add_action('hypermarket_header_area', 'hypermarket_site_brand', 5);
@@ -35,7 +35,7 @@ add_action('hypermarket_header_area', 'hypermarket_header_wrapper_end', 12);
  * @see  hypermarket_best_sellers()				 -> template-functions.php
  * @see  hypermarket_new_arrivals()				 -> template-functions.php
  * @see  hypermarket_homepage_content()			 -> template-functions.php
- * @since 1.0
+ * @since 1.0.0
  */
 add_action('hypermarket_homepage_template', 'hypermarket_shop_by_category', 10);
 add_action('hypermarket_homepage_template', 'hypermarket_best_sellers', 20);
@@ -47,7 +47,7 @@ add_action('hypermarket_homepage_template', 'hypermarket_homepage_content', 40);
  * @see  hypermarket_footer_wrapper_start()		 -> template-functions.php
  * @see  hypermarket_footer_widget_areas()		 -> template-functions.php
  * @see  hypermarket_footer_wrapper_end()		 -> template-functions.php
- * @since 1.0
+ * @since 1.0.0
  */
 add_action('hypermarket_footer_area', 'hypermarket_footer_wrapper_start', 10);
 add_action('hypermarket_footer_area', 'hypermarket_footer_widget_areas', 20);

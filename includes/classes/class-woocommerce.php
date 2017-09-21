@@ -151,7 +151,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Default loop columns on product archives (Shop).
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function loop_columns()
 
@@ -161,7 +161,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Add 'hypermarket-woocommerce-running' class to the body tag.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function body_class($classes)
 
@@ -174,7 +174,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Related Products Args.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function related_products_args($args)
 
@@ -188,7 +188,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Product gallery thumnail columns on single product page.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function thumbnail_columns()
 
@@ -198,7 +198,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Products per page on product archives (Shop).
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function products_per_page()
 
@@ -226,7 +226,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Remove product description heading text
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function remove_product_description_heading()
 
@@ -237,7 +237,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * The template for displaying review comment form.
 		 *
 		 * @link http://hookr.io/filters/woocommerce_product_review_comment_form_args/
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function review_comment_form_args($comment_form)
 
@@ -273,7 +273,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Reorder billing fields in WooCommerce Checkout template.
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function billing_checkout_order_fields($fields)
 
@@ -301,7 +301,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Reorder shipping fields in WooCommerce Checkout template.
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function shipping_checkout_order_fields($fields)
 
@@ -327,7 +327,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Customize shipping and billing fields.
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function override_checkout_fields($fields)
 

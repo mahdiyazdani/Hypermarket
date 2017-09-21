@@ -20,8 +20,8 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @param int $depth Depth of page. Used for padding.
 	 */
-	public function start_lvl(&$output, $depth = 0, $args = array(
-))
+	public function start_lvl(&$output, $depth = 0, $args = array())
+
 	{
 		$indent = str_repeat("\t", $depth);
 		$output.= "\n$indent<ul role=\"menu\" class=\" sub-menu\">\n";
@@ -36,8 +36,8 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 	 * @param int $current_page Menu item ID.
 	 * @param object $args
 	 */
-	public function start_el(&$output, $item, $depth = 0, $args = array(
-) , $id = 0)
+	public function start_el(&$output, $item, $depth = 0, $args = array() , $id = 0)
+
 	{
 		$indent = ($depth) ? str_repeat("\t", $depth) : '';
 		/**
@@ -48,24 +48,15 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 		 * comparison that is not case sensitive. The strcasecmp() function returns
 		 * a 0 if the strings are equal.
 		 */
-		if (strcasecmp($item->attr_title, 'divider') == 0 && $depth === 1)
-		{
+		if (strcasecmp($item->attr_title, 'divider') == 0 && $depth === 1):
 			$output.= $indent . '<li role="presentation" class="divider">';
-		}
-		else if (strcasecmp($item->title, 'divider') == 0 && $depth === 1)
-		{
+		elseif (strcasecmp($item->title, 'divider') == 0 && $depth === 1):
 			$output.= $indent . '<li role="presentation" class="divider">';
-		}
-		else if (strcasecmp($item->attr_title, 'dropdown-header') == 0 && $depth === 1)
-		{
+		elseif (strcasecmp($item->attr_title, 'dropdown-header') == 0 && $depth === 1):
 			$output.= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr($item->title);
-		}
-		else if (strcasecmp($item->attr_title, 'disabled') == 0)
-		{
+		elseif (strcasecmp($item->attr_title, 'disabled') == 0):
 			$output.= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr($item->title) . '</a>';
-		}
-		else
-		{
+		else:
 			$class_names = $value = '';
 			$classes = empty($item->classes) ? array() : (array)$item->classes;
 			$classes[] = 'menu-item-' . $item->ID;
@@ -81,27 +72,22 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 			$atts['target'] = !empty($item->target) ? $item->target : '';
 			$atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
 			// If item has_children add atts to a.
-			if ($args->has_children && $depth === 0)
-			{
+			if ($args->has_children && $depth === 0):
 				$atts['href'] = '#';
 				$atts['data-toggle'] = 'dropdown';
 				$atts['class'] = 'dropdown-toggle';
 				$atts['aria-haspopup'] = 'true';
-			}
-			else
-			{
+			else:
 				$atts['href'] = !empty($item->url) ? $item->url : '';
-			}
+			endif;
 			$atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args);
 			$attributes = '';
-			foreach($atts as $attr => $value)
-			{
-				if (!empty($value))
-				{
+			foreach($atts as $attr => $value):
+				if (!empty($value)):
 					$value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
 					$attributes.= ' ' . $attr . '="' . $value . '"';
-				}
-			}
+				endif;
+			endforeach;
 			$item_output = $args->before;
 			/*
 			* Glyphicons
@@ -116,7 +102,7 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 			$item_output.= ($args->has_children && 0 === $depth) ? ' <span class="caret"></span></a>' : '</a>';
 			$item_output.= $args->after;
 			$output.= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-		}
+		endif;
 	}
 	/**
 	 * Traverse elements to create list from elements.
@@ -161,17 +147,15 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 	public static function fallback($args)
 
 	{
-		if (current_user_can('manage_options'))
-		{
+		if (current_user_can('manage_options')):
 			extract($args);
 			$fb_output = null;
-			if ($container)
-			{
+			if ($container):
 				$fb_output = '<' . $container;
 				if ($container_id) $fb_output.= ' id="' . $container_id . '"';
 				if ($container_class) $fb_output.= ' class="' . $container_class . '"';
 				$fb_output.= '>';
-			}
+			endif;
 			$fb_output.= '<ul';
 			if ($menu_id) $fb_output.= ' id="' . $menu_id . '"';
 			if ($menu_class) $fb_output.= ' class="' . $menu_class . '"';
@@ -199,6 +183,6 @@ class Hypermarket_Bootstrap_Navwalker extends Walker_Nav_Menu
 					'class' => array()
 				)
 			));
-		}
+		endif;
 	}
 }

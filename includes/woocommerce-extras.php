@@ -16,7 +16,7 @@ if (!function_exists('hypermarket_is_account_page_not_logged_in')):
     function hypermarket_is_account_page_not_logged_in()
     {
     	if (hypermarket_is_woocommerce_activated()):
-        	return ( is_account_page() && ! is_user_logged_in() ) ? true : false;
+        	return (is_account_page() && ! is_user_logged_in()) ? true : false;
     	endif;
     }
 endif;
