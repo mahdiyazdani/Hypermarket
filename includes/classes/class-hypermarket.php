@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.2.1
+ * @since 	    1.3.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -166,7 +166,7 @@ if (!class_exists('Hypermarket')):
 			 *  specifically font, colors, icons, and column width.
 			 */
 			add_editor_style( array( get_stylesheet_directory_uri() . '/assets/css/hypermarket-editor-style.css', add_query_arg(apply_filters('hypermarket_default_font_family', array(
-				'family' => urlencode('Work Sans:400,300,500,600'),
+				'family' => urlencode('Work Sans:300,400,500,600'),
 				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css')));
 		}
@@ -179,7 +179,7 @@ if (!class_exists('Hypermarket')):
 
 		{
 			wp_enqueue_style('hypermarket-font', add_query_arg(apply_filters('hypermarket_default_font_family', array(
-				'family' => urlencode('Work Sans:400,300,500,600'),
+				'family' => urlencode('Work Sans:300,400,500,600'),
 				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
 			wp_enqueue_style('hypermarket-styles', $this->public_assets_url . 'css/hypermarket-core.min.css', array() , HypermarketThemeVersion);
@@ -261,7 +261,7 @@ if (!class_exists('Hypermarket')):
 		 * A separate function is required as the child theme css needs to be enqueued _after_ the parent theme
 		 * primary css and the separate WooCommerce css.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function child_scripts()
 
@@ -273,7 +273,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Adds custom classes to the array of body classes.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function body_classes($classes)
 
@@ -291,7 +291,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Adds custom classes to the array of body classes.
 		 *
-		 * @since 1.0
+		 * @since 1.0.0
 		 */
 		public function adjust_body_class($classes)
 
@@ -306,13 +306,18 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Replaces logo CSS class.
 		 *
-		 * @since 1.0.2
+		 * @since 1.3.0
 		 */
 		public function change_logo_class($html)
 
 		{
+			$mobile_logo = absint(get_theme_mod('hypermarket_mobile_logo', ''));
+			if (! empty($mobile_logo)):
+				$html = str_replace('class="custom-logo-link"', 'class="site-logo custom-logo-link visible-desktop"', $html);
+			else:
+				$html = str_replace('class="custom-logo-link"', 'class="site-logo custom-logo-link"', $html);
+			endif;
 			$html = str_replace('class="custom-logo"', 'class="img-responsive"', $html);
-			$html = str_replace('class="custom-logo-link"', 'class="site-logo custom-logo-link"', $html);
 			return $html;
 		}
 		/**
