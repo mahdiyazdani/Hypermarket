@@ -721,13 +721,16 @@ h1.page-title {
   }
   #order_comments { resize: none; }
   #shipping_method {
+    display: inline-block;
     list-style: none;
     @include padding(0);
+    li { text-align: left; }
     input[type="radio"] {
       float: left;
       display: inline-block;
       @include margin(null 7px null null);
       + label {
+        display: inline-block;
         @include padding(3px null null null);
       }
     }
