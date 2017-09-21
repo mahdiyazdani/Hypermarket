@@ -1,3 +1,8 @@
+= 1.3.0 =
+* Added mobile site logo control.
+* Updated main stylesheet.
+* Code refactoring.
+
 = 1.2.2 =
 * Updated WooCommerce upsell template file.
 * Added new filter to update WooCommerce loop columns class.
