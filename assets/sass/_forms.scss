@@ -111,6 +111,7 @@ select option {
     font-size: $input-icon-size + 2;
     margin-top: -($input-icon-size / 2) - 1;
     color: $text-color;
+    pointer-events: none;
     @include opacity(1);
   }
 }
