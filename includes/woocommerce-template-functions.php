@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.1.0
+ * @since 	    1.1.1
  */
 // ======================================================================
 // Hooked into "wp"
@@ -30,7 +30,7 @@ function hypermarket_remove_sidebar_shop()
  * Ensure cart contents update when products are added to the cart via AJAX.
  *
  * @package Hooked into "hypermarket_items_present_in_cart"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_cart_link_fragment')):
 	function hypermarket_cart_link_fragment($fragments)
@@ -55,8 +55,7 @@ if (!function_exists('hypermarket_cart_link')):
 	{
 		if (hypermarket_is_woocommerce_activated()):
 		?>
-			<a class="cart-items <?php echo (apply_filters('hypermarket_toolbar_toggle_cls', false)) ? 'toolbar-toggle' : ''; ?>" href="<?php
-			echo esc_url(WC()->cart->get_cart_url()); ?>" target="_self">
+			<a class="cart-items <?php echo (apply_filters('hypermarket_toolbar_toggle_cls', false)) ? 'toolbar-toggle' : ''; ?>" href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" target="_self">
 	            <i>
 	            	<span class="material-icons shopping_basket"></span>
 	        		<?php
@@ -99,13 +98,15 @@ endif;
  * Shop thumbnail wrapper start tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop_item"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_thumbnail_wrapper_start')):
 	function hypermarket_shop_thumbnail_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-thumbnail">';
+			?>
+			<div class="shop-thumbnail">
+			<?php
 		endif;
 	}
 endif;
@@ -135,13 +136,15 @@ endif;
  * Shop tools (Button(s)) wrapper start tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop_item_title"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_item_tools_wrapper_start')):
 	function hypermarket_shop_item_tools_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-item-tools">';
+			?>
+			<div class="shop-item-tools">
+			<?php
 		endif;
 	}
 endif;
@@ -153,14 +156,16 @@ endif;
  * Shop tools (Button(s)) and thumbnail wrapper end tag(s).
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_thumbnail_item_tools_wrapper_end')):
 	function hypermarket_shop_thumbnail_item_tools_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-item-tools -->';
-			echo '</div><!-- .shop-thumbnail -->';
+			?>
+			</div><!-- .shop-item-tools -->
+			</div><!-- .shop-thumbnail -->
+			<?php
 		endif;
 	}
 endif;
@@ -168,13 +173,15 @@ endif;
  * Shop item details wrapper start tag.
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_item_details_wrapper_start')):
 	function hypermarket_shop_item_details_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="shop-item-details">';
+			?>
+			<div class="shop-item-details">
+			<?php
 		endif;
 	}
 endif;
@@ -235,13 +242,15 @@ endif;
  * Shop item details wrapper end tag.
  *
  * @package Hooked into "woocommerce_after_shop_loop_item"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_item_details_wrapper_end')):
 	function hypermarket_shop_item_details_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-item-details -->';
+			?>
+			</div><!-- .shop-item-details -->
+			<?php
 		endif;
 	}
 endif;
@@ -253,18 +262,22 @@ endif;
  * Shop wrapper start tag(s) before main loop.
  *
  * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_woocommerce_before_shop_loop')):
 	function hypermarket_woocommerce_before_shop_loop()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			if (is_active_sidebar('sidebar')):
-				echo '<div class="row padding-top">';
-				echo '<!-- Products Grid -->';
-				echo '<div class="col-md-9 col-sm-8">';
+				?>
+				<div class="row padding-top">
+				<!-- Products Grid -->
+				<div class="col-md-9 col-sm-8">
+				<?php
 			else:
-				echo '<!-- Products Grid -->';
+				?>
+				<!-- Products Grid -->
+				<?php
 				// 4 Columns
 				$GLOBALS['product_grid_classes'] = 'col-lg-3 col-md-4 col-sm-6 without-sidebar';
 				$hypermarket_woocommerce_loop_columns = 4;
@@ -280,14 +293,16 @@ endif;
  * Shop bar wrapper start tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_bar_wrapper_start')):
 	function hypermarket_shop_bar_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Shop Bar -->';
-			echo '<div class="shop-bar">';
+			?>
+			<!-- Shop Bar -->
+			<div class="shop-bar">
+			<?php
 		endif;
 	}
 endif;
@@ -295,13 +310,15 @@ endif;
  * Shop bar wrapper end tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_bar_wrapper_end')):
 	function hypermarket_shop_bar_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .shop-bar -->';
+			?>
+			</div><!-- .shop-bar -->
+			<?php
 		endif;
 	}
 endif;
@@ -329,13 +346,15 @@ endif;
  * Main shop wrapper start tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.0
+ * @since 1.1.1
  */
 if (!function_exists('hypermarket_shop_loop_wrapper_start')):
 	function hypermarket_shop_loop_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="row">';
+			?>
+			<div class="row hypermarket-woocommerce-loop">
+			<?php
 		endif;
 	}
 endif;
@@ -347,14 +366,16 @@ endif;
  * Main shop wrapper start tag.
  *
  * @package Hooked into "woocommerce_after_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_loop_wrapper_end')):
 	function hypermarket_shop_loop_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .row -->';
-			echo '<hr>';
+			?>
+			</div><!-- .row -->
+			<hr>
+			<?php
 		endif;
 	}
 endif;
@@ -362,14 +383,16 @@ endif;
  * Main shop wrapper end tag.
  *
  * @package Hooked into "woocommerce_after_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_woocommerce_after_shop_loop')):
 	function hypermarket_woocommerce_after_shop_loop()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			if (is_active_sidebar('sidebar')):
-				echo '</div><!-- .col-md-9 col-sm-8 -->';
+				?>
+				</div><!-- .col-md-9 col-sm-8 -->
+				<?php
 			endif;
 		endif;
 	}
@@ -378,13 +401,15 @@ endif;
  * Shop catalog wrapper end tag.
  *
  * @package Hooked into "woocommerce_after_shop_loop"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_shop_catalog_wrapper_end')):
 	function hypermarket_shop_catalog_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</section><!-- .container -->';
+			?>
+			</section><!-- .container -->
+			<?php
 		endif;
 	}
 endif;
@@ -444,7 +469,7 @@ endif;
  * Navigation to next/previous set of products.
  *
  * @package Hooked into "woocommerce_before_single_product"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_product_paging_navigation')):
 	function hypermarket_product_paging_navigation()
@@ -464,9 +489,11 @@ if (!function_exists('hypermarket_product_notice_wrapper_start')):
 	function hypermarket_product_notice_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div id="hypermarket-single-product-notice" class="container">';
-			echo '<div class="row">';
-			echo '<div class="col-md-8 col-md-offset-2">';
+			?>
+			<div id="hypermarket-single-product-notice" class="container">
+			<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+			<?php
 		endif;
 	}
 endif;
@@ -480,9 +507,11 @@ if (!function_exists('hypermarket_product_notice_wrapper_end')):
 	function hypermarket_product_notice_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .col-md-8 -->';
-			echo '</div><!-- .row -->';
-			echo '</div><!-- #hypermarket-single-product-notice -->';
+			?>
+			</div><!-- .col-md-8 -->
+			</div><!-- .row -->
+			</div><!-- #hypermarket-single-product-notice -->
+			<?php
 		endif;
 	}
 endif;
@@ -510,8 +539,10 @@ if (!function_exists('hypermarket_single_product_summary_wrapper_start')):
 	function hypermarket_single_product_summary_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Product Info -->';
-			echo '<div class="product-info padding-top-2x padding-bottom-3x text-center">';
+			?>
+			<!-- Product Info -->
+			<div class="product-info padding-top-2x padding-bottom-3x text-center">
+			<?php
 		endif;
 	}
 endif;
@@ -523,13 +554,15 @@ endif;
  * Product tools wrapper start tag.
  *
  * @package Hooked into "woocommerce_single_product_summary"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_single_add_to_cart_wrapper_start')):
 	function hypermarket_single_add_to_cart_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<div class="product-tools shop-item">';
+			?>
+			<div class="product-tools shop-item">
+			<?php
 		endif;
 	}
 endif;
@@ -537,13 +570,15 @@ endif;
  * Product tools wrapper end tag.
  *
  * @package Hooked into "woocommerce_single_product_summary"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_single_add_to_cart_wrapper_end')):
 	function hypermarket_single_add_to_cart_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .product-tools -->';
+			?>
+			</div><!-- .product-tools -->
+			<?php
 		endif;
 	}
 endif;
@@ -555,15 +590,17 @@ endif;
  * Product info and main section wrapper end tag(s).
  *
  * @package Hooked into "woocommerce_after_single_product_summary"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_single_product_summary_wrapper_end')):
 	function hypermarket_single_product_summary_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</div><!-- .product-info -->';
-			echo '</div><!-- .container -->';
-			echo '</section><!-- .fw-section.bg-gray -->';
+			?>
+			</div><!-- .product-info -->
+			</div><!-- .container -->
+			</section><!-- .fw-section.bg-gray -->
+			<?php
 		endif;
 	}
 endif;
@@ -571,14 +608,16 @@ endif;
  * Product tabs wrapper start tag.
  *
  * @package Hooked into "woocommerce_after_single_product_summary"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_output_product_data_tabs_wrapper_start')):
 	function hypermarket_output_product_data_tabs_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '<!-- Product Tabs -->';
-			echo '<section class="container padding-top-2x">';
+			?>
+			<!-- Product Tabs -->
+			<section class="container padding-top-2x">
+			<?php
 		endif;
 	}
 endif;
@@ -586,13 +625,15 @@ endif;
  * Single product main wrapper end tag.
  *
  * @package Hooked into "woocommerce_after_single_product_summary"
- * @since 1.0
+ * @since 1.0.0
  */
 if (!function_exists('hypermarket_output_product_data_tabs_wrapper_end')):
 	function hypermarket_output_product_data_tabs_wrapper_end()
 	{
 		if (hypermarket_is_woocommerce_activated()):
-			echo '</section><!-- .container -->';
+			?>
+			</section><!-- .container -->
+			<?php
 		endif;
 	}
 endif;
