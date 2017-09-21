@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.6.1
+ * @since       1.3.0
  */
 if (!defined('ABSPATH')):
     exit;
@@ -39,11 +39,26 @@ if (!class_exists('Hypermarket_Customizer')):
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.0.6.1
+         * @since 1.3.0
          */
         public function customize_register($wp_customize)
         
         {
+            $wp_customize->add_setting('hypermarket_mobile_logo', array(
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'absint'
+            ));
+            $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'hypermarket_mobile_logo', array(
+                'label' => __('Logo', 'restarter') ,
+                'description' => __('Works on small screen devices only!', 'hypermarket') ,
+                'section' => 'title_tagline',
+                'priority' => 9,
+                'settings' => 'hypermarket_mobile_logo',
+                'height' => 80,
+                'width' => 310,
+                'flex_width'  => true,
+                'flex-height' => false
+            )));
             $wp_customize->add_setting('hypermarket_mobile_blogname', array(
                 'capability' => 'edit_theme_options',
                 'sanitize_callback' => 'sanitize_text_field'
@@ -110,9 +125,9 @@ if (!class_exists('Hypermarket_Customizer')):
                     $wp_customize,
                     'hypermarket_go_plus_control',
                     array(
-                        'title'     => __('Hypermarket', 'hypermarket') ,
-                        'go_plus_text'     => __('Go Plus', 'hypermarket') ,
-                        'go_plus_url' => esc_url(HypermarketThemeURI)
+                        'title' =>   __('Hypermarket', 'hypermarket') ,
+                        'go_plus_text'  =>   __('Go Plus', 'hypermarket') ,
+                        'go_plus_url'   =>  esc_url(HypermarketThemeURI)
                     )
                 )
             );
