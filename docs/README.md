@@ -48,6 +48,10 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Well documented
 * Free updates every month
 
+## WPML & Translation
+
+Hypermarket theme is [fully compatible and tested](https://wpml.org/theme/hypermarket/) with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with **WPML**!
+
 ## Live Demo
 
 Check out the [Live Demo](https://demo.mypreview.one/hypermarket) to visit Hypermarket theme in action.
