@@ -28,6 +28,8 @@ When you add a new product through **Products** » **Add Product**, you’ll be 
 
 Alternatively, you can go to **Products** » **Add Product** directly, and select **Add new category** there.
 
+!> The **product categories** are displayed in accordance to the order they appear in the dashboard. Change the order at **Products** » **Categories**, then **drag and drop the categories** to suit your preference.
+
 ![Add product categories](img/add-product-categories.png)
 
 ## Grid based layout
