@@ -44,3 +44,7 @@ It is however recommended that you use the global WordPress language directory a
 *That way they will not be lost or overwritten during Hypermarket updates.*
 
 Alternatively you can put translations in your [child theme](https://mahdiyazdani.github.io/Hypermarket/#/install-hypermarket-wordpress-child-theme): ```/wp-content/themes/hypermarket-child/languages/it_IT.mo```.
+
+## WPML & Translation
+
+Hypermarket theme is [fully compatible and tested](https://wpml.org/theme/hypermarket/) with most popular WordPress plugin that supports the creation of multilingual layouts. Translate your website into any language with **WPML**!
