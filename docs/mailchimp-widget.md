@@ -22,7 +22,7 @@ To get the form code to add to your site, follow these steps:
 
 ## Spam protection
 
-MailChimp newsletter subscription form component comes with built in **Honeypot** trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
+MailChimp newsletter form component comes with built in **Honeypot** trap which is used to create a form with an extra field that is hidden to human visitors but readable by robots.
 
 In most cases, the robot fills out the invisible field and tries to submit the form which will be prevented to send false info by newsletter form.
 
