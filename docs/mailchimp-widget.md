@@ -6,6 +6,10 @@ This option lets you you to embed a MailChimp list signup form on any widget reg
 
 To get the form code to add to your site, follow these steps:
 
+![MailChimp forml](img/mailchimp-form-action.png)
+
+![MailChimp form honeypot](img/mailchimp-form-honeypot.png)
+
 * Login to your MailChimp account.
 * Navigate to the **Lists** page.
 * Click the drop-down menu next to the list you want to work with, and choose **Signup forms**.
