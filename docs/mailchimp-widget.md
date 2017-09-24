@@ -6,7 +6,7 @@ This option lets you you to embed a MailChimp list signup form on any widget reg
 
 ?> Note that this component is built to keep stuff simple. If you need more advanced features such as creating complex newsletter subscription forms or if you need a form builder, feel free to visit [WordPress plugin repository](https://wordpress.org/plugins/search/mailchimp) website and find out more about existing MailChimp newsletter plugins.
 
-![mailchimp](https://i.gyazo.com/f7876863899d420f6a4a5c503d953397.png)
+![mailchimp](https://i.gyazo.com/7d82b13d2068c90fa4ea58f386840a09.png)
 
 To get the form code to add to your site, follow these steps:
 
