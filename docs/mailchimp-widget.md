@@ -1,4 +1,4 @@
-## MailChimp newsletter subscription widget
+# MailChimp newsletter subscription widget
 
 This option lets you you to embed a MailChimp list signup form on any widget region using MailChimp newsletter subscription widget.
 
