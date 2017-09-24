@@ -15,7 +15,7 @@ To get the form code to add to your site, follow these steps:
 * Select **Embedded** forms.
 * Choose the **Naked** form type and customize the form options.
 * Highlight all the code in the **Copy/paste onto your site** field.
-* Optionally, copy the hidden **honeypot** field value to your clipboard.
+* Optionally, copy the hidden **Honeypot** field value to your clipboard.
 * Paste the antispam key into your **Honeypot** field on your widget settings.
 * Copy the form **action** URL to your clipboard.
 * Paste the embed form action URL into your **Embedded URL** field on your widget settings.
