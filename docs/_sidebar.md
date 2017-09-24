@@ -29,6 +29,7 @@
   - [Create Galleries](create-galleries.md)
   - [Create Google Maps](create-google-maps.md)
   - [Create Contact Form](create-contact-form.md)
+  - [MailChimp Widget](mailchimp-widget.md)
   - [Page Title Toggle](page-title-toggle.md)
   - [Homepage Control](homepage-control.md)
   - [Product Countdown](product-countdown.md)
