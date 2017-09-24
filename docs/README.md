@@ -37,6 +37,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Load more products
 * Header style variations
 * Call to action widget
+* MailChimp newsletter widget
 * WooCommerce popular tags widget
 * WooCommerce sort by widget
 * Homepage control
