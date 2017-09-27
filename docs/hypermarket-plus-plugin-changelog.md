@@ -1,3 +1,20 @@
+# 1.9.0/ 2017-09-27
+  * Updated language file.
+  * Updated FAQ shortcode method.
+  * Updated WooCommerce Ajax load more functionality.
+  * Added new control - Modify number of WooCommerce products displayed per page.
+  * Added new control - Toggle the visibility of the result count.
+  * Added new control - Toggle the visibility of the drop-down select field for ordering.
+  * Added new control - Toggle the visibility of the "Sale" flash from items that are on sale.
+  * Added new control - Toggle the visibility of the "Sold Out" flash from items that are out of stock.
+  * Added new control - Toggle the visibility of the "Popular" flash from items that are best selling.
+  * Added new control - Toggle the visibility of the "New" flash from items that are newly arrived.
+  * Added new control - Toggle the visibility of the add to cart buttons.
+  * Added new control - Toggle the visibility of the product catalog thumbnail from the view.
+  * Added new control - Toggle the visibility of the product prices from the view.
+  * Added new control - Toggle the visibility of the product star ratings from the view.
+  * Added new control - Toggle the visibility of the product categories from the view.
+
 # 1.8.5/ 2017-09-02
 
   * Updated language file.
