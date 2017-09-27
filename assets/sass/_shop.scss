@@ -964,6 +964,7 @@ input#shipping_state,
     + label {
       @include padding(6px null null null);
     }
+    + span { display: table-cell; }
   }
 }
 // Payment methods
