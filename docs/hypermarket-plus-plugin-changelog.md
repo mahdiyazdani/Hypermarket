@@ -2,7 +2,7 @@
   * Updated language file.
   * Updated FAQ shortcode method.
   * Updated WooCommerce Ajax load more functionality.
-  * Added new control - Modify number of WooCommerce products displayed per page.
+  * Added new control - Modify the number of WooCommerce products displayed per page.
   * Added new control - Toggle the visibility of the result count.
   * Added new control - Toggle the visibility of the drop-down select field for ordering.
   * Added new control - Toggle the visibility of the "Sale" flash from items that are on sale.
