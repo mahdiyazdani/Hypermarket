@@ -156,8 +156,8 @@
 	@include position(absolute, 100% 0 null null);
 	& .widget {
 		padding: 0 !important;
+		a.checkout { @include margin(null 0 null null); }
 	}
-
 	.cart-item {
 		position: relative;
 		display: table;
