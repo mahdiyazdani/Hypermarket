@@ -1,3 +1,10 @@
+= 1.3.5 =
+* Updated language file.
+* Updated main stylesheet.
+* Updated editor stylesheet.
+* Updated enqueue method.
+* Removed "Popular" badge from featured products.
+
 = 1.3.0 =
 * Added mobile site logo control.
 * Updated main stylesheet.
