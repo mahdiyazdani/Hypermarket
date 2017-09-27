@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.2.2
+ * @since 	    1.3.5
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.2.2
+		 * @since 1.3.5
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -331,6 +331,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Contact form', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Create a simple contact form using Ajax technology and advanced email address validation.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-store"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Product archive customizer', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Toggle the display of core elements and enable some that are not included in WooCommerce core.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-email"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('MailChimp widget', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('An easy, lightweight way to let your users sign up for several different MailChimp lists by creating multiple instances of the widget.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
