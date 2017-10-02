@@ -6,7 +6,7 @@
 
 ## Adding team members
 
-Similar to posts in WordPress, you can **add, delete, and edit** your team members items here.
+Similar to posts in WordPress, you can **add, delete, and edit** your team members here.
 
 ![Team members](img/team-members.jpg)
 
