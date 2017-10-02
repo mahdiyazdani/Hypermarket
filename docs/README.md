@@ -41,6 +41,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * WooCommerce popular tags widget
 * WooCommerce sort by widget
 * Homepage control
+* Team members
 * Video pop-up
 * Credits removal
 * Product image flipper
