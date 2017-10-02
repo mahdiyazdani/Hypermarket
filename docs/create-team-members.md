@@ -4,6 +4,12 @@
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
+## Adding team members
+
+Similar to posts in WordPress, you can **add, delete, and edit** your team members items here.
+
+![Team members](img/team-members.jpg)
+
 ## Shortcode
 
 You can add the team members component to any page using the ```[hypermarket-plus-team]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom team members elements.
