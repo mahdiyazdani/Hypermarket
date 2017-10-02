@@ -10,6 +10,47 @@ Similar to posts in WordPress, you can **add, delete, and edit** your team membe
 
 ![Team members](img/team-members.jpg)
 
+* Navigate to the **Team** tab.
+* Click the **Add New** button in the top left-hand corner of the page.
+* Add a team members name in the **title** field.
+* Upload an image via the **Featured Image** metabox.
+* Add a **role** in the team member details panel.
+* Optionally, input users social media website profile URLs.
+* **Publish** or **Update** the item.
+
+### Supports the following social media sites
+
+* Behance
+* DeviantArt
+* Digg
+* Dribbble
+* Facebook
+* Flickr
+* Foursquare
+* Github
+* Google+
+* Instagram
+* Last.fm
+* LinkedIn
+* PayPal
+* Pinterest
+* Reddit
+* Skype
+* SoundCloud
+* Stack Overflow
+* Steam
+* StumbleUpon
+* Tumblr
+* Twitch
+* Twitter
+* Vine
+* Vkontakte
+* WordPress
+* Xing
+* Yahoo!
+* Yelp
+* YouTube
+
 ## Shortcode
 
 You can add the team members component to any page using the ```[hypermarket-plus-team]``` shortcode. Also, it is possible to pass the following attributes to the shortcode to create custom team members elements.
