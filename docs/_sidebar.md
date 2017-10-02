@@ -27,6 +27,7 @@
   - [Footer Copyright](update-footer-copyright.md)
   - [Create FAQs](create-faq.md)
   - [Create Galleries](create-galleries.md)
+  - [Create Team Members](create-team-members.md)
   - [Create Google Maps](create-google-maps.md)
   - [Create Contact Form](create-contact-form.md)
   - [MailChimp Widget](mailchimp-widget.md)
