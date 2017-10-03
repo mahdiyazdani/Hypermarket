@@ -1,3 +1,6 @@
+# 1.3.6/ 2017-10-04
+  * Updated enqueue method.
+  
 # 1.3.5/ 2017-09-27
   * Updated language file.
   * Updated main stylesheet.
