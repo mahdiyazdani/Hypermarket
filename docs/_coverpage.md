@@ -1,6 +1,6 @@
 ![logo](img/mypreview-logo.png)
 
-# Hypermarket <small>1.3.5</small>
+# Hypermarket <small>1.3.6</small>
 
 > #1 Flexible WooCommerce Theme
 
