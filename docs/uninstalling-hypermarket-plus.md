@@ -15,9 +15,9 @@ To uninstall the Hypermarket Plus plugin from your WordPress site, follow these 
 
 * Click the **Installed Plugins** link on the **Plugins** menu.
 * Locate the Hypermarket Plus plugin.
-* Click the **Deactivate** link below the plugin title.
+* Click the **Deactivate** link below the plugin title.<br/>
 *The Plugins page refreshes, and the plugin now appears as deactivated (or inactive).*
-* Click the **Delete** link that now appears below the plugin title.
+* Click the **Delete** link that now appears below the plugin title.<br/>
 *The Delete Plugin page opens, and a confirmation message displays asking you whether you're sure you want to delete this plugin.*
 * Click the **Yes, Delete These Files** button.
 * You're done.
