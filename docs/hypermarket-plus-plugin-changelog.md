@@ -1,4 +1,12 @@
+# 1.9.1/ 2017-10-04
+
+  * Updated language file.
+  * Updated plugin's uninstall method.
+  * Fixed translation issue on product countdown module.
+  * Fixed invalid redeclaration of method on product archive module.
+
 # 1.9.0/ 2017-09-27
+
   * Updated language file.
   * Updated FAQ shortcode method.
   * Updated WooCommerce Ajax load more functionality.
