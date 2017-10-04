@@ -1,0 +1,1 @@
+# Uninstalling Hypermarket Plus plugin
