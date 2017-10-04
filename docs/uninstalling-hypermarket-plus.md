@@ -7,7 +7,9 @@ There are two things to understand when uninstalling or removing **Hypermarket P
 
 !> Open your site's ```wp-config.php``` file and add ```define( 'HYPERMARKET_PLUS_REMOVE_ALL_DATA', true);``` on its own line above the ```/* That’s all, stop editing! Happy blogging. */``` line. 
 
-?> Then when you deactivate and delete **Hypermarket Plus** plugin it will remove all of its data.
+Then when you deactivate and delete **Hypermarket Plus** plugin it will remove all of its data.
+
+?> Be sure to [revoke](transfer-license-key) the registered key before deleting or uninstalling the plugin
 
 To uninstall the Hypermarket Plus plugin from your WordPress site, follow these steps:
 
