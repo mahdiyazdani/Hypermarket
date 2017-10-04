@@ -9,7 +9,7 @@ There are two things to understand when uninstalling or removing **Hypermarket P
 
 Then when you deactivate and delete **Hypermarket Plus** plugin it will remove all of its data.
 
-?> Be sure to [revoke](transfer-license-key) the registered key before deleting or uninstalling the plugin
+?> Be sure to [revoke](install-hypermarket-plus-plugin?id=transfer-license-key) the registered key before deleting or uninstalling the plugin
 
 To uninstall the Hypermarket Plus plugin from your WordPress site, follow these steps:
 
