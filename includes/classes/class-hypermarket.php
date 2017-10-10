@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.3.5
+ * @since 	    1.3.6
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -173,7 +173,7 @@ if (!class_exists('Hypermarket')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.3.5
+		 * @since 1.3.6
 		 */
 		public function enqueue()
 
@@ -187,11 +187,11 @@ if (!class_exists('Hypermarket')):
 			wp_register_script('hypermarket-scripts', $this->public_assets_url . 'js/hypermarket.js', array(
 				'jquery'
 			) , HypermarketThemeVersion, true);
-			wp_localize_script('hypermarket-theme-scripts', 'hypermarket_vars', array(
+			wp_localize_script('hypermarket-scripts', 'hypermarket_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'security' => wp_create_nonce( 'hypermarket_theme_nonce' )
 			));
-			wp_enqueue_script('hypermarket-theme-scripts');
+			wp_enqueue_script('hypermarket-scripts');
 			if (is_singular() && comments_open() && get_option('thread_comments')):
 				wp_enqueue_script('comment-reply');
 			endif;
