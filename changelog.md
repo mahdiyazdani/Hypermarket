@@ -1,3 +1,6 @@
+= 1.3.6 =
+* Updated enqueue method.
+
 = 1.3.5 =
 * Updated language file.
 * Updated main stylesheet.
