@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.1.1
+ * @since 	    1.3.5
  */
 // ======================================================================
 // Hooked into "wp"
@@ -114,15 +114,13 @@ endif;
  * Display sale badge on product archive page(s) only.
  *
  * @package Hooked into "woocommerce_before_shop_loop_item"
- * @since 1.0.9.0
+ * @since 1.3.5
  */
 if (!function_exists('hypermarket_show_product_loop_sale_flash')):
 	function hypermarket_show_product_loop_sale_flash(){
 		if (hypermarket_is_woocommerce_activated()):
 			global $post, $product;
-			if($product->is_featured()):
-				echo apply_filters('hypermarket_show_product_loop_popular_flash_markup', '<span class="shop-label text-warning popular">' . esc_html__('Popular', 'hypermarket') . '</span>', $post, $product);
-			elseif ($product->is_on_sale()):
+			if ($product->is_on_sale()):
 				echo apply_filters('hypermarket_show_product_loop_sale_flash_markup', '<span class="shop-label text-danger onsale">' . esc_html__('Sale', 'hypermarket') . '</span>', $post, $product);
 			endif;
 		endif;
