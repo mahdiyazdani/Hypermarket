@@ -1,3 +1,9 @@
+# 1.9.2/ 2017-10-12
+
+  * Updated video popup shortcode method.
+  * Added new field to choose which products should show in the related products.
+  * Compatibility with WooCommerce 3.2.X
+
 # 1.9.1/ 2017-10-04
 
   * Updated language file.
