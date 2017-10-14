@@ -1,3 +1,6 @@
+= 1.3.7 =
+* Compatibility with WooCommerce 3.2.X
+
 = 1.3.6 =
 * Updated enqueue method.
 
