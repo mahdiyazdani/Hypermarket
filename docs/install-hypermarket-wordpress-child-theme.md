@@ -13,6 +13,8 @@ Have you, or do you plan to, modify your theme’s underlying code? That include
 
 If you answered **Yes** to any of these questions, you need a child theme.
 
+[![Install and activate Hypermarket child theme](img/install-and-activate-hypermarket-child-theme.jpg)](https://www.youtube.com/watch?v=i21P_ypxaZw "Install and activate Hypermarket theme - Click to Watch!")
+
 ## WordPress admin panel
 
 *(Recommended)*
