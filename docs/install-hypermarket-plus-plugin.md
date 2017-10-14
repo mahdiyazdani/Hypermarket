@@ -42,7 +42,7 @@ To enable receiving automatic and one-click updates, locate the Hypermarket Plus
 
 If you wish to transfer your license key to another domain name, be sure to **revoke** the registered key before deleting or uninstalling the plugin, or else you may need to purchase a new license key from [mypreview.one](https://www.mypreview.one) online store.
 
-![Transfer license key](img/revoke-hypermarket-plus-license.png)
+[![Transfer license key](img/transfer-license-key-hypermarket-plus-plugin.jpg)](https://www.youtube.com/watch?v=0BlzR4RqfyQ "Transfer Hypermarket Plus license key - Click to Watch!")
 
 ## Multisite or developers license
 
