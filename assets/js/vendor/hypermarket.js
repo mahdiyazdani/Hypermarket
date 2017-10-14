@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.2.0
+ * @since       1.3.7
  */
 
 jQuery(document).ready(function($) {
@@ -297,6 +297,11 @@ jQuery(document).ready(function($) {
         $('#commentform .form-submit').before($('#commentform .col-sm-12').get(0));
         $('#commentform .form-submit').addClass('space-bottom-none col-lg-3 col-md-4 col-sm-6 col-lg-offset-9 col-md-offset-8 col-sm-offset-6');
     }
+    if ($('.single-product .woocommerce-tabs .reviews_tab > a').length > 0) {
+        var reviewCount = $('.single-product .woocommerce-tabs .reviews_tab > a').text().trim().replace('(', '<sup>').replace(')', '</sup>');
+        $('.single-product .woocommerce-tabs .reviews_tab > a').html(reviewCount);
+    }
+    
 
 
     // Order comments
@@ -405,6 +410,9 @@ function hypermarketAddToCartEffect() {
                     }, 600);
                 });
             }
+            setTimeout(function(){
+                hypermarketTooltipInitialization();
+            }, 1000);
         });
     });
 }
