@@ -22,7 +22,7 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 
 ## WordPress admin panel
 
-* Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/).
+* Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/hypermarket/).
 * Go to **Appearance** » **Themes**. 
 * Click **Add New** tab, located at the top of the screen.
 * Click **Upload Theme**.
@@ -33,7 +33,7 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 
 ## Manually - FTP method
 
-* Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/).
+* Download the latest version of Hypermarket from [wordpress.org themes directory](https://wordpress.org/themes/hypermarket/).
 * Upload the extracted folder of **hypermarket.zip** to the ```/wp-content/themes/``` dir on your server via FTP.
 * Go to **Appearance** » **Themes**. 
 * Activate Hypermarket by clicking on the **activate** button.
