@@ -6,8 +6,6 @@ If you’re looking to install the [Hypermarket](https://wordpress.org/themes/hy
 
 [![Install and activate Hypermarket theme](img/install-activate-hypermarket-theme-video-cover.jpg)](https://vimeo.com/238212109 "Install and activate Hypermarket theme - Click to Watch!")
 
-![Install and activate Hypermarket theme](img/install-hypermarket-theme.jpg)
-
 ## Official directory 
 
 *(Recommended)*
