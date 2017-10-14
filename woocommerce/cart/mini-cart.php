@@ -15,7 +15,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.1.0
+ * @version 	3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -56,10 +56,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div><!-- .item-details -->
 						<?php
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-							'<a href="%s" class="close-btn remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons close"></i></a>',
+							'<a href="%s" class="close-btn remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"><i class="material-icons close"></i></a>',
 							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 							__( 'Remove this item', 'hypermarket' ),
 							esc_attr( $product_id ),
+							esc_attr( $cart_item_key ),
 							esc_attr( $_product->get_sku() )
 						), $cart_item_key );
 						?>

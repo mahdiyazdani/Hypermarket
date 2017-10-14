@@ -10,10 +10,10 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 2.6.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -96,8 +96,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</p><!-- .form-element -->
 			<?php endif; ?>
 			<div class="clearfix"></div>
-			<!-- Spam Trap -->
-			<div style="<?php echo ( ( is_rtl() ) ? 'right' : 'left' ); ?>: -999em; position: absolute;"><label for="trap" class="sr-only"><?php esc_html_e( 'Anti-spam', 'hypermarket' ); ?></label><input type="text" name="email_2" id="trap" tabindex="-1" autocomplete="off" /></div>
 			<?php do_action( 'woocommerce_register_form' ); ?>
 			<?php do_action( 'register_form' ); ?>
 			<div class="form-footer form-element form-row">
