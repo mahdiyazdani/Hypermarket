@@ -28,7 +28,7 @@
 * Download the latest version of Hypermarket Plus plugin from your purchase receipt.
 * Upload the extracted folder of **hypermarket-plus.zip** to the ```/wp-content/plugins/``` dir on your server via FTP.
 * Visit the WordPress admin area and click on the **Plugins** link in the admin menu.
-* click on the **Activate** link below the plugin. Upon activating, you may need to configure the plugin settings.
+* Click on the **Activate** link below the plugin. Upon activating, you may need to configure the plugin settings.
 
 ## Activation instruction
 
