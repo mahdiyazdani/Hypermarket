@@ -38,6 +38,12 @@ To enable receiving automatic and one-click updates, locate the Hypermarket Plus
 
 ?> Once your license key is activated, whenever a new update is released you will be notified in WordPress Plugins page about it.
 
+## Automatic updates
+
+Have peace of mind knowing our products can be updated regularly through the WordPress update system. You can update the plugin automatically via the WordPress admin panel providing you have activated a **valid license key**.
+
+[![Automatic updates](img/automatic-updates-hypermarket-plus-plugin.jpg)](https://www.youtube.com/watch?v=nG6mJUZvTBg "Hypermarket Plus automatic updates - Click to Watch!")
+
 ## Transfer license key
 
 If you wish to transfer your license key to another domain name, be sure to **revoke** the registered key before deleting or uninstalling the plugin, or else you may need to purchase a new license key from [mypreview.one](https://www.mypreview.one) online store.
