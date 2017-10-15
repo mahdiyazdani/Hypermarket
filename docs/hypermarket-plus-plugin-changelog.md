@@ -1,3 +1,7 @@
+# 1.9.3/ 2017-10-15
+
+  * Minor back-end changes and improvements.
+
 # 1.9.2/ 2017-10-12
 
   * Updated video popup shortcode method.
