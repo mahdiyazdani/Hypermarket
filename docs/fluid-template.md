@@ -6,7 +6,7 @@ Hypermarket theme requires a containing element to wrap site contents and house 
 
 The **page attributes** meta box allows you to select a parent page for the page and assign its order in the page hierarchy. The middle option allows you to change the template. All you have to do is select the template you want your page to use and then update the page.
 
-![Fluid post and page template](img/fluid-template.png)
+[![Fluid post and page template](img/fluid-post-and-page-template-hypermarket-theme.jpg)](https://www.youtube.com/watch?v=uv2x_mDFVss "Fluid post and page template - Click to Watch!")
 
 * Default Page Template - View [live demo](https://demo.mypreview.one/hypermarket/default).<br/>
 *(Use for a responsive fixed width container)*
