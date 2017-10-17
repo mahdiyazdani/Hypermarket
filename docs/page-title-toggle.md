@@ -4,7 +4,7 @@ This option lets you easily remove the page title from specific single pages, sh
 
 !> This feature is available only to **Hypermarket Plus** users! [Upgrade now](https://www.mypreview.one).
 
-![Page Title Toggle](img/page-title-toggle.png)
+[![Page Title Toggle](img/page-title-toggle-hypermarket-plus-plugin.jpg)](https://www.youtube.com/watch?v=AGcYvSvrynI Page Title Toggle - Hypermarket Plus plugin - Click to Watch!")
 
 * Click the **Pages** tab.
 * Edit the page that you want to hide the title.
