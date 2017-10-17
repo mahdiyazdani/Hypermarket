@@ -6,7 +6,7 @@ Copyright section gives users the option to customize the footer text as well as
 
 Copyright section can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
-![Remove footer copyright](img/hypermarket-copyright-removal.png)
+[![Page Title Toggle](img/update-or-remove-footer-copyright-hypermarket-plus-plugin.jpg)](https://www.youtube.com/watch?v=YyLAR0gonYI "Update or remove footer copyright - Click to Watch!")
 
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
