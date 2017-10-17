@@ -1,4 +1,4 @@
-# Page Title Toggle
+# Page title toggle
 
 This option lets you easily remove the page title from specific single pages, shop or homepage template.
 
