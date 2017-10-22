@@ -18,7 +18,6 @@ To get the form code to add to your site, follow these steps:
 * Click the drop-down menu next to the list you want to work with, and choose **Signup forms**.
 * Select **Embedded** forms.
 * Choose the **Naked** form type and customize the form options.
-* Highlight all the code in the **Copy/paste onto your site** field.
 * Optionally, copy the hidden **Honeypot** field value to your clipboard.
 * Paste the antispam key into your **Honeypot** field on your widget settings.
 * Copy the form **action** URL to your clipboard.
