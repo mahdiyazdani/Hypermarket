@@ -46,7 +46,7 @@ Have peace of mind knowing our products can be updated regularly through the Wor
 
 ## Transfer license key
 
-If you wish to transfer your license key to another domain name, be sure to **revoke** the registered key before deleting or uninstalling the plugin, or else you may need to purchase a new license key from [mypreview.one](https://www.mypreview.one) online store.
+If you wish to transfer your license key to another domain name, be sure to **revoke** the registered key before deleting or uninstalling the plugin, or else you may need to purchase a new license key from [mypreview.one](https://www.mypreview.one/hypermarket-plus.html) online store.
 
 [![Transfer license key](img/transfer-license-key-hypermarket-plus-plugin.jpg)](https://www.youtube.com/watch?v=0BlzR4RqfyQ "Transfer Hypermarket Plus license key - Click to Watch!")
 
