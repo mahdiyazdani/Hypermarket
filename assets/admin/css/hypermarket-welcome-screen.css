@@ -23,31 +23,33 @@ table#hypermarket-plus tbody tr td.content strong {
 	padding-bottom: 7px;
 	display: inline-block;
 }
-/* HyPermarket Welcome message */
+img.hypermarket-plus-featured-image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 div#hypermarket-welcome-message {
 	text-align: center;
-    	border: 2px solid #77cde3;
-    	border-radius: 5px;
-    	padding-top: 40px;
-    	padding-bottom: 40px;
-    	box-shadow: -1px 3px 8px 2px #adadad;
+	border: 2px solid #77cde3;
+	border-radius: 5px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	box-shadow: -1px 3px 8px 2px #adadad;
 }
 div#hypermarket-welcome-message:before {
-    	content: "\f328";
-    	font-family: dashicons;
-    	font-size: 40px;
-   	background-color: #77cde3;
-   	color: #fff;
-    	border-radius: 100%;
-    	padding: 4px;
+	content: "\f328";
+	font-family: dashicons;
+	font-size: 40px;
+	background-color: #77cde3;
+	color: #fff;
+	border-radius: 100%;
+	padding: 4px;
 }
 div#hypermarket-welcome-message .notice-dismiss:before {
 	color: rgba(114, 119, 124, 0.14);
 }
-div#hypermarket-welcome-message .notice-dismiss:active:before, 
-div#hypermarket-welcome-message .notice-dismiss:focus:before, 
-div#hypermarket-welcome-message .notice-dismiss:hover:before {
-    	color: #8ad0e1;
+div#hypermarket-welcome-message .notice-dismiss:active:before, div#hypermarket-welcome-message .notice-dismiss:focus:before, div#hypermarket-welcome-message .notice-dismiss:hover:before {
+	color: #8ad0e1;
 }
 div#hypermarket-welcome-message p {
 	font-size: 16px;
@@ -57,50 +59,47 @@ div#hypermarket-welcome-message strong {
 }
 div#hypermarket-welcome-message .button-secondary {
 	background-color: transparent;
-    	border-color: #e5e5e5;
+	border-color: #e5e5e5;
 	color: #606060;
 }
-div#hypermarket-welcome-message .button-secondary:focus,
-div#hypermarket-welcome-message .button-secondary:hover {
+div#hypermarket-welcome-message .button-secondary:focus, div#hypermarket-welcome-message .button-secondary:hover {
 	background-color: #e5e5e5;
 }
 div#hypermarket-welcome-message .button-primary {
 	background-color: #77cde3;
 	border-color: #77cde3;
 }
-div#hypermarket-welcome-message .button-primary:focus,
-div#hypermarket-welcome-message .button-primary:hover {
+div#hypermarket-welcome-message .button-primary:focus, div#hypermarket-welcome-message .button-primary:hover {
 	background-color: #51bfdb;
 	border-color: #51bfdb;
 }
-div#hypermarket-welcome-message .button-secondary,
-div#hypermarket-welcome-message .button-primary {
+div#hypermarket-welcome-message .button-secondary, div#hypermarket-welcome-message .button-primary {
 	border-style: solid;
 	border-width: 2px;
 	height: 48px;
-    	line-height: 45px;
-    	font-size: 14px;
+	line-height: 45px;
+	font-size: 14px;
 	box-shadow: none;
-    	border-radius: 5px;
-    	padding: 0 22px;
-    	margin: 10px 8px 10px 0;
-    	text-transform: uppercase;
-    	-webkit-transition: color 0.3s ease-out,background-color 0.3s ease-out;
-    	-o-transition: color 0.3s ease-out,background-color 0.3s ease-out;
-    	transition: color 0.3s ease-out,background-color 0.3s ease-out;
+	border-radius: 5px;
+	padding: 0 22px;
+	margin: 10px 8px 10px 0;
+	text-transform: uppercase;
+	-webkit-transition: color 0.3s ease-out,background-color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out,background-color 0.3s ease-out;
+	transition: color 0.3s ease-out,background-color 0.3s ease-out;
 	text-shadow: none;
 }
 div#hypermarket-welcome-message a.button-secondary:before {
 	content: "\f105";
-}
-div#hypermarket-welcome-message a.button-primary:before {
-   	content: "\f313";
-}
-div#hypermarket-welcome-message a.button-secondary:before,
-div#hypermarket-welcome-message a.button-primary:before {
 	font-family: dashicons;
-    	margin-right: 5px;
-    	font-size: 17px;
-    	vertical-align: bottom;
+	margin-right: 5px;
+	font-size: 17px;
+	vertical-align: bottom;
 }
-/* End HyPermarket Welcome message */
+div#hypermarket-welcome-message a.button-primary:before {
+	content: "\f313";
+	font-family: dashicons;
+	margin-right: 5px;
+	font-size: 17px;
+	vertical-align: bottom;
+}
