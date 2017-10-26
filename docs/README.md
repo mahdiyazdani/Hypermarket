@@ -61,7 +61,7 @@ Install Hypermarket theme from the [WordPress.org](https://wordpress.org/themes/
 
 ## Get the Plugin
 
-The Hypermarket Plus plugin is only available to purchase from [mypreview.one](https://www.mypreview.one). :moneybag:
+The Hypermarket Plus plugin is only available to purchase from [mypreview.one](https://www.mypreview.one/hypermarket-plus.html). :moneybag:
 
 ## Something missing?
 
