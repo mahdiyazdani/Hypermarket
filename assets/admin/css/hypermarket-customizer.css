@@ -1,0 +1,40 @@
+/**
+ * Hypermarket Customizer
+ *
+ * @author      Mahdi Yazdani
+ * @package     Hypermarket
+ * @since       1.3.8
+ */
+#accordion-section-hypermarket_go_plus_control {
+	display: list-item !important;
+	position: relative !important;
+	height: auto !important;
+}
+#accordion-section-hypermarket_go_plus_control .accordion-section-title:hover, #accordion-section-hypermarket_go_plus_control .accordion-section-title:focus {
+	background-color: #FFF;
+}
+#accordion-section-hypermarket_go_plus_control .accordion-section-title .button {
+	border: none;
+	box-shadow: none;
+	background-color: #77cde3;
+	text-transform: uppercase;
+	min-width: 98% !important;
+	margin: 10px 0;
+	height: 36px !important;
+	line-height: 36px;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+	text-align: center;
+	display: block;
+	float: left;
+	text-shadow: none;
+	font-weight: 600;
+}
+.control-section-hypermarket-plus .accordion-section-title {
+	padding-bottom: 60px;
+	text-align: center;
+}
+#accordion-section-hypermarket_go_plus_control .accordion-section-title .button:hover {
+	background-color: #51bfdb;
+}
