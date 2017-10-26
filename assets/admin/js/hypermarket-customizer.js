@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.6.1
+ * @since       1.3.8
  */
 (function(api) {
 
