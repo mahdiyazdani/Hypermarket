@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.3.0
+ * @since       1.3.8
  */
 if (!defined('ABSPATH')):
     exit;
@@ -39,7 +39,7 @@ if (!class_exists('Hypermarket_Customizer')):
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.3.0
+         * @since 1.3.8
          */
         public function customize_register($wp_customize)
         
@@ -49,7 +49,7 @@ if (!class_exists('Hypermarket_Customizer')):
                 'sanitize_callback' => 'absint'
             ));
             $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'hypermarket_mobile_logo', array(
-                'label' => __('Logo', 'restarter') ,
+                'label' => __('Logo', 'hypermarket') ,
                 'description' => __('Works on small screen devices only!', 'hypermarket') ,
                 'section' => 'title_tagline',
                 'priority' => 9,
@@ -125,8 +125,8 @@ if (!class_exists('Hypermarket_Customizer')):
                     $wp_customize,
                     'hypermarket_go_plus_control',
                     array(
-                        'title' =>   __('Hypermarket', 'hypermarket') ,
-                        'go_plus_text'  =>   __('Go Plus', 'hypermarket') ,
+                        'title' =>   __('Hypermarket Plus', 'hypermarket') ,
+                        'go_plus_text'  =>   __('Upgrade Now!', 'hypermarket') ,
                         'go_plus_url'   =>  esc_url(HypermarketThemeURI)
                     )
                 )
@@ -135,13 +135,13 @@ if (!class_exists('Hypermarket_Customizer')):
         /**
          * Enqueue scripts and styles.
          *
-         * @since 1.0.6.1
+         * @since 1.3.8
          */
         public function enqueue()
         
         {
-            wp_enqueue_style('hypermarket-customizer-styles', $this->admin_assets_url . 'css/hypermarket-customizer-styles.css', array() , HypermarketThemeVersion);
-            wp_enqueue_script('hypermarket-customizer-scripts', $this->admin_assets_url . 'js/hypermarket-customizer-styles.js', array(
+            wp_enqueue_style('hypermarket-customizer-styles', $this->admin_assets_url . 'css/hypermarket-customizer.css', array() , HypermarketThemeVersion);
+            wp_enqueue_script('hypermarket-customizer-scripts', $this->admin_assets_url . 'js/hypermarket-customizer.js', array(
                 'jquery'
             ) , HypermarketThemeVersion, true);
         }
