@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.3.5
+ * @since 	    1.3.8
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -115,14 +115,6 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('Woo Store Vacataion - Put your shop on pause or hold mode for a certain amount of time', 'hypermarket'); ?></a>
 																<br />
 																<small style="font-size:70%;"><em><?php esc_attr_e('Going on vacation? Use Woo Store Vacation settings to make sure your buyers are not disappointed by buying items and unexpectedly waiting a long time to receive them.', 'hypermarket'); ?></em></small>
-															</td>
-														</tr>
-														<tr class="alternate">
-															<td class="row-title">
-																<?php $install_bs3_grid_builder_url = esc_url(admin_url('plugin-install.php?s=bs3%20grid%20builder&tab=search&type=term')); ?>
-																<a href="<?php echo $install_bs3_grid_builder_url; ?>" target="_self"><?php esc_attr_e('BS3 Grid Builder - A plugin for designing and prototyping modern websites', 'hypermarket'); ?></a>
-																<br />
-																<small style="font-size:70%;"><em><?php esc_attr_e('Hypermarket comes with BS3 Grid Builder integration, drag and drops WordPress plugin, which provides backend page design and layout customization solutions you can make use of quickly and effortlessly.', 'hypermarket'); ?></em></small>
 															</td>
 														</tr>
 													</tbody>
@@ -347,6 +339,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<?php esc_attr_e('An easy, lightweight way to let your users sign up for several different MailChimp lists by creating multiple instances of the widget.', 'hypermarket'); ?>
 															</td>
 														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-admin-site"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('WPML compatible', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Hypermarket theme is fully compatible and tested with most popular WordPress plugin that supports the creation of multilingual layouts.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-tickets-alt"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Custom related products', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Choose which products should show in the related products instead of pulling them in by category or tag.', 'hypermarket'); ?>
+															</td>
+														</tr>
 													</tbody>
 												</table>
 											</div><!-- .inside -->
@@ -486,10 +492,14 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 										<div id="goplus-sidebar">
 											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
-												<p><?php esc_attr_e('Every purchase of Hypermarket Plus! includes all extensions (plus updates) for Free!', 'hypermarket'); ?></p>
+												<p>
+													<a href="<?php echo esc_url(HypermarketThemeAuthorURI . '/hypermarket-plus.html'); ?>" target="_blank">
+														<img class="hypermarket-plus-featured-image" src="<?php echo $this->admin_assets_url . 'img/hypermarket-plus.png'; ?>" alt="<?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?>" />
+													</a>
+												</p>
 												<p><?php esc_attr_e('Being on the cutting edge of WordPress development is something we wanted to do from the start. Because of that, we made sure that we avoided the use of clunky additional admin panels and instead, opted to utilize a powerful, options panel using Customizer API. With this setup, you can preview all of the changes you make to your site live without any need to switch windows or refresh the browser in addition to searching for exactly what you need. When you are happy with your changes, hit "Save Changes" button and your updates will go live.', 'hypermarket'); ?></p>
 												<p align="center">
-													<a href="<?php echo esc_url(HypermarketThemeAuthorURI . '/#buy'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Buy Now', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
+													<a href="<?php echo esc_url(HypermarketThemeAuthorURI . '/hypermarket-plus.html'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Buy Now', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
 													<a href="<?php echo esc_url('https://demo.mypreview.one/hypermarket'); ?>" class="button-secondary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Live Demo', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
 												</p>
 											</div><!-- .inside -->
