@@ -48,6 +48,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Hero slider
 * Ajaxify blog posts
 * Well documented
+* RTL language support
 * Free updates every month
 
 ## Live Demo
