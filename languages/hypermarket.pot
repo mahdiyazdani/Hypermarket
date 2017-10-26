@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2017-09-27 20:03+0400\n"
-"PO-Revision-Date: 2017-09-27 20:03+0400\n"
+"POT-Creation-Date: 2017-10-14 19:47+0400\n"
+"PO-Revision-Date: 2017-10-14 19:47+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -114,14 +114,12 @@ msgstr ""
 msgid "Display Site Tagline"
 msgstr ""
 
-#. Theme Name of the plugin/theme
 #: includes/classes/class-customizer.php:128
-#: includes/classes/class-hypermarket-welcome-screen.php:60
-msgid "Hypermarket"
+msgid "Hypermarket Plus"
 msgstr ""
 
 #: includes/classes/class-customizer.php:129
-msgid "Go Plus"
+msgid "Upgrade Now!"
 msgstr ""
 
 #: includes/classes/class-hypermarket-welcome-screen.php:59
@@ -129,12 +127,17 @@ msgstr ""
 msgid "Welcome to Hypermarket Theme"
 msgstr ""
 
+#. Theme Name of the plugin/theme
+#: includes/classes/class-hypermarket-welcome-screen.php:60
+msgid "Hypermarket"
+msgstr ""
+
 #: includes/classes/class-hypermarket-welcome-screen.php:78
 msgid "Welcome"
 msgstr ""
 
 #: includes/classes/class-hypermarket-welcome-screen.php:80
-#: includes/classes/class-hypermarket-welcome-screen.php:577
+#: includes/classes/class-hypermarket-welcome-screen.php:587
 msgid "Go Plus!"
 msgstr ""
 
@@ -155,7 +158,7 @@ msgid "Contribute"
 msgstr ""
 
 #: includes/classes/class-hypermarket-welcome-screen.php:93
-#: includes/classes/class-hypermarket-welcome-screen.php:461
+#: includes/classes/class-hypermarket-welcome-screen.php:467
 msgid "Click to toggle"
 msgstr ""
 
@@ -202,332 +205,340 @@ msgid ""
 "receive them."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:123
-msgid ""
-"BS3 Grid Builder - A plugin for designing and prototyping modern websites"
-msgstr ""
-
-#: includes/classes/class-hypermarket-welcome-screen.php:125
-msgid ""
-"Hypermarket comes with BS3 Grid Builder integration, drag and drops "
-"WordPress plugin, which provides backend page design and layout "
-"customization solutions you can make use of quickly and effortlessly."
-msgstr ""
-
-#: includes/classes/class-hypermarket-welcome-screen.php:134
+#: includes/classes/class-hypermarket-welcome-screen.php:126
 msgid "Are You Still Free? Go Plus Now!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:136
+#: includes/classes/class-hypermarket-welcome-screen.php:128
 msgid ""
 "Everything you need to build stunning e-commerce website in a fast & "
 "efficient way."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:143
+#: includes/classes/class-hypermarket-welcome-screen.php:135
 msgid "Product image flipper"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:145
+#: includes/classes/class-hypermarket-welcome-screen.php:137
 msgid ""
 "Secondary product thumbnail on archives that is revealed when you hover over "
 "the main product image."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:149
+#: includes/classes/class-hypermarket-welcome-screen.php:141
 msgid "Ajaxify blog posts"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:151
+#: includes/classes/class-hypermarket-welcome-screen.php:143
 msgid ""
 "Fetch & display post content without the user moving away from the current "
 "page."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:157
+#: includes/classes/class-hypermarket-welcome-screen.php:149
 msgid "Gallery post type"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:159
+#: includes/classes/class-hypermarket-welcome-screen.php:151
 msgid ""
 "An easy way to create sortable lightbox galleries consisting of images & "
 "videos."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:163
+#: includes/classes/class-hypermarket-welcome-screen.php:155
 msgid "Share buttons"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:165
+#: includes/classes/class-hypermarket-welcome-screen.php:157
 msgid ""
 "Buttons designed to be minimal, yet powerful, with support of popular "
 "networks to make your products go viral and get more traffic."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:171
+#: includes/classes/class-hypermarket-welcome-screen.php:163
 msgid "Copyright credit"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:173
+#: includes/classes/class-hypermarket-welcome-screen.php:165
 msgid ""
 "Optionally remove the Hypermarket credit and add your own custom copyright "
 "message, including HTML."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:177
+#: includes/classes/class-hypermarket-welcome-screen.php:169
 msgid "Hero slider"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:179
+#: includes/classes/class-hypermarket-welcome-screen.php:171
 msgid ""
 "Image & content slider which supports touch navigation with a swipe gesture."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:185
+#: includes/classes/class-hypermarket-welcome-screen.php:177
 msgid "Product countdown"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:187
+#: includes/classes/class-hypermarket-welcome-screen.php:179
 msgid ""
 "Promote your sale campaigns in WooCommerce. Show a countdown box with the "
 "product on sale."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:191
+#: includes/classes/class-hypermarket-welcome-screen.php:183
 msgid "Video popup"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:193
+#: includes/classes/class-hypermarket-welcome-screen.php:185
 msgid ""
 "Embed YouTube or Vimeo videos on a call to action box using a popup lightbox "
 "overlay display."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:199
+#: includes/classes/class-hypermarket-welcome-screen.php:191
 msgid "Footer bar"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:201
+#: includes/classes/class-hypermarket-welcome-screen.php:193
 msgid ""
 "A full-width widgetized region which will display any widget added to this "
 "region above the Hypermarket footer widget area."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:205
+#: includes/classes/class-hypermarket-welcome-screen.php:197
 msgid "Automatic updates"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:207
+#: includes/classes/class-hypermarket-welcome-screen.php:199
 msgid ""
 "You can update the plugin automatically via the WordPress admin panel "
 "providing you have activated a valid license key."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:213
+#: includes/classes/class-hypermarket-welcome-screen.php:205
 msgid "Service widget"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:215
+#: includes/classes/class-hypermarket-welcome-screen.php:207
 msgid ""
 "Service widget makes it really easy to select a Google material icon to go "
 "along with your feature."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:219
+#: includes/classes/class-hypermarket-welcome-screen.php:211
 msgid "Call to action widget"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:221
+#: includes/classes/class-hypermarket-welcome-screen.php:213
 msgid ""
 "A CTA is an ideal way to convert more of your passive website visitors into "
 "active leads and customers."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:227
+#: includes/classes/class-hypermarket-welcome-screen.php:219
 msgid "Homepage control"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:229
+#: includes/classes/class-hypermarket-welcome-screen.php:221
 msgid ""
 "Toggle the visibility and reorder the homepage components or any function "
 "hooked by Hypermarket theme or [H/M] Plus plugin."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:233
+#: includes/classes/class-hypermarket-welcome-screen.php:225
 msgid "Testimonials"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:235
+#: includes/classes/class-hypermarket-welcome-screen.php:227
 msgid ""
 "A clean and easy-to-use testimonials management system to load in what your "
 "customers are saying about your business."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:241
+#: includes/classes/class-hypermarket-welcome-screen.php:233
 msgid "Color scheme"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:243
+#: includes/classes/class-hypermarket-welcome-screen.php:235
 msgid ""
 "Easily change the colors of all the main elements of the site to give your "
 "shop a unique look."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:247
+#: includes/classes/class-hypermarket-welcome-screen.php:239
 msgid "Typography"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:249
+#: includes/classes/class-hypermarket-welcome-screen.php:241
 msgid ""
 "Easy access to any fonts you want from Google Web Fonts, the best free fonts "
 "available. Choose between more than 600 fonts."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:255
+#: includes/classes/class-hypermarket-welcome-screen.php:247
 msgid "Extend product sorting"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:257
+#: includes/classes/class-hypermarket-welcome-screen.php:249
 msgid ""
 "Allows you to optionally, extend, add or remove the default and core "
 "WooCommerce product order by options on the shop page."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:261
+#: includes/classes/class-hypermarket-welcome-screen.php:253
 msgid "Product color filters"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:263
+#: includes/classes/class-hypermarket-welcome-screen.php:255
 msgid ""
 "Place the color filter widget on your shop & allow visitors to browse your "
 "products by using color filters."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:269
+#: includes/classes/class-hypermarket-welcome-screen.php:261
 msgid "Page title toggle"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:271
+#: includes/classes/class-hypermarket-welcome-screen.php:263
 msgid ""
 "Easily remove the page title from specific single pages, shop or homepage "
 "template."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:275
+#: includes/classes/class-hypermarket-welcome-screen.php:267
 msgid "Hero product"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:277
+#: includes/classes/class-hypermarket-welcome-screen.php:269
 msgid ""
 "Add an elegant hero component to the homepage template of your Hypermarket "
 "powered shop, or on any page via shortcode - Watch conversions soar!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:283
+#: includes/classes/class-hypermarket-welcome-screen.php:275
 msgid "Tabbed interface"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:285
+#: includes/classes/class-hypermarket-welcome-screen.php:277
 msgid ""
 "Unique homepage layout that prominently displays a variety of products in an "
 "intuitive tabbed interface."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:289
+#: includes/classes/class-hypermarket-welcome-screen.php:281
 msgid "Load more products"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:291
+#: includes/classes/class-hypermarket-welcome-screen.php:283
 msgid ""
 "Enhance the customer's product browsing experience by replacing the default "
 "behavior of WooCommerce pagination and loading products via Ajax!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:297
+#: includes/classes/class-hypermarket-welcome-screen.php:289
 msgid "Header variations"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:299
+#: includes/classes/class-hypermarket-welcome-screen.php:291
 msgid ""
 "Select the perfect layout for your shop header. There are 3 pre-designed "
 "layouts and each one provides a special design for your header area."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:303
+#: includes/classes/class-hypermarket-welcome-screen.php:295
 msgid "Shop filters bar"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:305
+#: includes/classes/class-hypermarket-welcome-screen.php:297
 msgid ""
 "Convert WooCommerce sidebar into toggle-able filters bar & help customers to "
 "find what they really want."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:311
+#: includes/classes/class-hypermarket-welcome-screen.php:303
 msgid "Google Maps"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:313
+#: includes/classes/class-hypermarket-welcome-screen.php:305
 msgid ""
 "Embed Google Maps with custom markers and info title in your WordPress "
 "website within a few seconds."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:317
+#: includes/classes/class-hypermarket-welcome-screen.php:309
 msgid "FAQ"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:319
+#: includes/classes/class-hypermarket-welcome-screen.php:311
 msgid ""
 "Easily create, order and publicize FAQs. Optionally, display the questions "
 "in groups by tagging them, and even load them closed or readily open."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:325
+#: includes/classes/class-hypermarket-welcome-screen.php:317
 msgid "Team members"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:327
+#: includes/classes/class-hypermarket-welcome-screen.php:319
 msgid ""
 "Easy-to-use team profile management system for Hypermarket theme. Load in "
 "your team members and display their profiles via a shortcode."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:331
+#: includes/classes/class-hypermarket-welcome-screen.php:323
 msgid "Contact form"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:333
+#: includes/classes/class-hypermarket-welcome-screen.php:325
 msgid ""
 "Create a simple contact form using Ajax technology and advanced email "
 "address validation."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:339
+#: includes/classes/class-hypermarket-welcome-screen.php:331
 msgid "Product archive customizer"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:341
+#: includes/classes/class-hypermarket-welcome-screen.php:333
 msgid ""
 "Toggle the display of core elements and enable some that are not included in "
 "WooCommerce core."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:345
+#: includes/classes/class-hypermarket-welcome-screen.php:337
 msgid "MailChimp widget"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:347
+#: includes/classes/class-hypermarket-welcome-screen.php:339
 msgid ""
 "An easy, lightweight way to let your users sign up for several different "
 "MailChimp lists by creating multiple instances of the widget."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:356
+#: includes/classes/class-hypermarket-welcome-screen.php:345
+msgid "WPML compatible"
+msgstr ""
+
+#: includes/classes/class-hypermarket-welcome-screen.php:347
+msgid ""
+"Hypermarket theme is fully compatible and tested with most popular WordPress "
+"plugin that supports the creation of multilingual layouts."
+msgstr ""
+
+#: includes/classes/class-hypermarket-welcome-screen.php:351
+msgid "Custom related products"
+msgstr ""
+
+#: includes/classes/class-hypermarket-welcome-screen.php:353
+msgid ""
+"Choose which products should show in the related products instead of pulling "
+"them in by category or tag."
+msgstr ""
+
+#: includes/classes/class-hypermarket-welcome-screen.php:362
 msgid "Make any customization using a child theme"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:358
+#: includes/classes/class-hypermarket-welcome-screen.php:364
 msgid ""
 "If you want to customize the theme at coding level, not just CSS, we would "
 "strongly suggest using a child theme for that. A child theme allows you to "
@@ -535,30 +546,30 @@ msgid ""
 "able to adjust them as you want."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:360
+#: includes/classes/class-hypermarket-welcome-screen.php:366
 msgid "To download a blank Hypermarket child theme, please navigate to:"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:363
+#: includes/classes/class-hypermarket-welcome-screen.php:369
 msgid "Download Hypermarket Child Theme"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:367
+#: includes/classes/class-hypermarket-welcome-screen.php:373
 msgid "Overriding Parent Theme's Template Files"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:368
+#: includes/classes/class-hypermarket-welcome-screen.php:374
 msgid ""
 "If you want to edit the code in the theme's template files like \"header.php"
 "\", \"index.php\", etc, you can just copy the file from the parent theme and "
 "put it into your child theme folder then edit it from there."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:369
+#: includes/classes/class-hypermarket-welcome-screen.php:375
 msgid "Overriding Parent Theme's Functions"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:370
+#: includes/classes/class-hypermarket-welcome-screen.php:376
 msgid ""
 "If you want to edit the functions of the parent theme, for example, the "
 "\"hypermarket_comments_list()\" function, you can do that by copying only "
@@ -566,28 +577,28 @@ msgid ""
 "file of your child theme."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:371
+#: includes/classes/class-hypermarket-welcome-screen.php:377
 msgid ""
 "* Note that, you must copy only the \"function() {...}\" part, NOT including "
 "the \"function_exists()\" wrapper."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:372
+#: includes/classes/class-hypermarket-welcome-screen.php:378
 msgid "Overriding Parent Theme's CSS"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:373
+#: includes/classes/class-hypermarket-welcome-screen.php:379
 msgid ""
 "You can do this by either using the \"Custom CSS\" field in our Customizer "
 "or adding your custom CSS code into the \"style.css\" file of your child "
 "theme."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:374
+#: includes/classes/class-hypermarket-welcome-screen.php:380
 msgid "Remember!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:375
+#: includes/classes/class-hypermarket-welcome-screen.php:381
 msgid ""
 "Whenever you finished updating the parent theme, make sure to check all the "
 "code you use in your child theme and update them as necessary to reflect any "
@@ -595,17 +606,17 @@ msgid ""
 "update the files with the latest version, then apply your custom code back."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:376
+#: includes/classes/class-hypermarket-welcome-screen.php:382
 msgid ""
 "By doing this, it ensures that the files and code in your child theme are "
 "always up-to-date and to prevent any problem that might occur."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:380
+#: includes/classes/class-hypermarket-welcome-screen.php:386
 msgid "Support and Documentation"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:382
+#: includes/classes/class-hypermarket-welcome-screen.php:388
 msgid ""
 "Thanks so much for downloading and using the Hypermarket theme and providing "
 "positive feedback(s). The WordPress community has helped us a lot to improve "
@@ -613,7 +624,7 @@ msgid ""
 "parties."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:383
+#: includes/classes/class-hypermarket-welcome-screen.php:389
 msgid ""
 "To keep doing this well, we kindly request that you post discussions and "
 "feedback(s) in our dedicated forum whenever possible, rather than in the "
@@ -621,70 +632,70 @@ msgid ""
 "and tools to answer your questions as quickly as possible. "
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:384
+#: includes/classes/class-hypermarket-welcome-screen.php:390
 msgid "To post your issues in the forum, please navigate to:"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:387
+#: includes/classes/class-hypermarket-welcome-screen.php:393
 msgid "MyPreview Support Forum"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:390
+#: includes/classes/class-hypermarket-welcome-screen.php:396
 msgid ""
 "We look forward to listening to you and continuing our development of the "
 "Hypermarket theme."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:392
+#: includes/classes/class-hypermarket-welcome-screen.php:398
 msgid "View full documentation"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:393
+#: includes/classes/class-hypermarket-welcome-screen.php:399
 msgid ""
 "Before you get started, please be sure always to check out theme "
 "documentation files. We outline all kinds of useful information and provide "
 "you with all the details you need know to use Hypermarket Theme."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:394
+#: includes/classes/class-hypermarket-welcome-screen.php:400
 msgid "Theme Documentation"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:398
+#: includes/classes/class-hypermarket-welcome-screen.php:404
 msgid "Translate Hypermarket theme into any language"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:400
+#: includes/classes/class-hypermarket-welcome-screen.php:406
 msgid ""
 "Hypermarket WordPress theme is translation-ready and localized using the GNU "
 "framework. It is the common way to translate WordPress core and almost any "
 "theme or plugin."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:401
+#: includes/classes/class-hypermarket-welcome-screen.php:407
 msgid ""
 "If you need more advanced features such as translating menu items, "
 "categories, etc. Feel free to visit WPML website and find out more about "
 "their premium services and plugin."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:403
+#: includes/classes/class-hypermarket-welcome-screen.php:409
 msgid "What are PO and MO translation files?"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:404
+#: includes/classes/class-hypermarket-welcome-screen.php:410
 msgid ""
 "WordPress uses PO and MO files to manage translations. In fact, WordPress "
 "only needs MO files to handle translations."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:405
+#: includes/classes/class-hypermarket-welcome-screen.php:411
 msgid ""
 "PO files are human-readable; Those files contains a list of strings ready to "
 "be translated or with a translation already included."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:406
+#: includes/classes/class-hypermarket-welcome-screen.php:412
 msgid ""
 "MO files just compiled exports from the PO files and used by WordPress to "
 "get the conversion of each string to translate the theme. If you try to open "
@@ -692,36 +703,36 @@ msgid ""
 "its content."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:407
+#: includes/classes/class-hypermarket-welcome-screen.php:413
 msgid "How to translate Hypermarket theme with Poedit?"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:409
+#: includes/classes/class-hypermarket-welcome-screen.php:415
 msgid "WPML & Translation Ready"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:410
+#: includes/classes/class-hypermarket-welcome-screen.php:416
 msgid ""
 "Hypermarket theme is fully compatible and tested with most popular WordPress "
 "plugin that supports the creation of multilingual layouts. Translate your "
 "website into any language with WPML!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:411
+#: includes/classes/class-hypermarket-welcome-screen.php:417
 msgid "Hypermarket WPML Certification Badge"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:413
+#: includes/classes/class-hypermarket-welcome-screen.php:419
 msgid "Share your Language Files"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:414
+#: includes/classes/class-hypermarket-welcome-screen.php:420
 msgid ""
 "In case you have already translated Hypermarket theme a lot of users would "
 "be thrilled if you share your translation files with the community."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:415
+#: includes/classes/class-hypermarket-welcome-screen.php:421
 msgid ""
 "For translations of our Hypermarket theme just push the files to the main "
 "repository for all Hypermarket code, and we will include the translation "
@@ -729,26 +740,26 @@ msgid ""
 "speak your language can use it."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:416
-#: includes/classes/class-hypermarket-welcome-screen.php:423
+#: includes/classes/class-hypermarket-welcome-screen.php:422
+#: includes/classes/class-hypermarket-welcome-screen.php:429
 msgid "GitHub Development Repository"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:420
+#: includes/classes/class-hypermarket-welcome-screen.php:426
 msgid "Contribute to Hypermarket"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:422
+#: includes/classes/class-hypermarket-welcome-screen.php:428
 msgid ""
 "Now that you have found the Hypermarket theme useful, here is how you can "
 "take action."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:425
+#: includes/classes/class-hypermarket-welcome-screen.php:431
 msgid "Create an Issue"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:426
+#: includes/classes/class-hypermarket-welcome-screen.php:432
 msgid ""
 "If you find a bug in a Hypermarket theme functionality (and you do not know "
 "how to fix it), have trouble following the documentation or have a question "
@@ -757,61 +768,61 @@ msgid ""
 "the only one, so others will find your issue helpful, too."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:428
+#: includes/classes/class-hypermarket-welcome-screen.php:434
 msgid "Issues Pro Tips"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:430
+#: includes/classes/class-hypermarket-welcome-screen.php:436
 msgid ""
 "Check existing issues for your issue. Duplicating an issue is slower for "
 "both parties so search through open and closed issues to see if what you are "
 "running into has been addressed already."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:431
+#: includes/classes/class-hypermarket-welcome-screen.php:437
 msgid ""
 "Be clear about what your problem is: what was the expected outcome, what "
 "happened instead? Detail how someone else can recreate the problem."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:432
+#: includes/classes/class-hypermarket-welcome-screen.php:438
 msgid ""
 "Make sure the title of your issue report explains shortly what is going on."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:433
+#: includes/classes/class-hypermarket-welcome-screen.php:439
 msgid ""
 "Take your time to post as much information about your issue and server "
 "environment if it is possible."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:434
+#: includes/classes/class-hypermarket-welcome-screen.php:440
 msgid ""
 "Paste error output or logs in your issue or in a Gist. If pasting them in "
 "the issue, wrap it in three backticks: ``` so that it renders nicely."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:437
+#: includes/classes/class-hypermarket-welcome-screen.php:443
 msgid "Pull Request (PR)"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:438
+#: includes/classes/class-hypermarket-welcome-screen.php:444
 msgid ""
 "If you are able to patch the bug or add the feature yourself - fantastic, "
 "make a pull request with the code!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:439
+#: includes/classes/class-hypermarket-welcome-screen.php:445
 msgid ""
 "Once you have submitted a pull request we can compare your branch to the "
 "existing one and decide whether or not to incorporate (pull in) your changes."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:441
+#: includes/classes/class-hypermarket-welcome-screen.php:447
 msgid "Pull Request Pro Tips"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:443
+#: includes/classes/class-hypermarket-welcome-screen.php:449
 msgid ""
 "Fork the Hypermarket theme repository and clone it locally. Connect your "
 "local to the original \"upstream\" repository by adding it as a remote. Pull "
@@ -819,22 +830,22 @@ msgid ""
 "you submit your pull request, merge conflicts will be less likely."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:444
+#: includes/classes/class-hypermarket-welcome-screen.php:450
 msgid "UpStream generally refers to the original repo that you have forked."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:446
+#: includes/classes/class-hypermarket-welcome-screen.php:452
 msgid "Create a branch for your edits."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:447
+#: includes/classes/class-hypermarket-welcome-screen.php:453
 msgid ""
 "Be clear about what problem is occurring and how someone can recreate that "
 "problem or why your feature will help. Then be equally as clear about the "
 "steps you took to make your changes."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:448
+#: includes/classes/class-hypermarket-welcome-screen.php:454
 msgid ""
 "It is best to test. Run your changes against any existing tests if they "
 "exist and create new ones when needed. Whether tests exist or not, make sure "
@@ -842,104 +853,99 @@ msgid ""
 "conflicts with WordPress or WooCommerce functionality."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:449
+#: includes/classes/class-hypermarket-welcome-screen.php:455
 msgid ""
 "If changes are visual and related to any aspects of user interface be sure "
 "to include screenshots of the before and after if your changes include "
 "differences in HTML/CSS."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:450
+#: includes/classes/class-hypermarket-welcome-screen.php:456
 msgid ""
 "Contribute in the style of the project to the best of your abilities. This "
 "may mean using indents, semi colons or comments differently than you would "
 "in your own repository."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:464
+#: includes/classes/class-hypermarket-welcome-screen.php:470
 msgid "Resources & Reference"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:466
+#: includes/classes/class-hypermarket-welcome-screen.php:472
 msgid ""
 "While making Hypermarket theme, we used third-party plugins and resources, "
 "and want to thank their creators:"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:468
+#: includes/classes/class-hypermarket-welcome-screen.php:474
 msgid "Bourbon - A simple and lightweight mixin library for Sass"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:469
+#: includes/classes/class-hypermarket-welcome-screen.php:475
 msgid "jQuery - most popular feature-rich JavaScript library"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:470
+#: includes/classes/class-hypermarket-welcome-screen.php:476
 msgid ""
 "Modernizr - JavaScript library that detects HTML5 and CSS3 features in the "
 "users browser"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:471
+#: includes/classes/class-hypermarket-welcome-screen.php:477
 msgid ""
 "Bootstrap - Most popular HTML, CSS, and JS framework for developing "
 "responsive, mobile first projects on the web"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:472
+#: includes/classes/class-hypermarket-welcome-screen.php:478
 msgid "Velocity.js - Accelerated JavaScript animation"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:473
+#: includes/classes/class-hypermarket-welcome-screen.php:479
 msgid "Smooth Scroll - An extension for smooth scrolling in Google Chrome"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:474
+#: includes/classes/class-hypermarket-welcome-screen.php:480
 msgid "Waves - Click effect inspired by Googles Material Design"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:475
+#: includes/classes/class-hypermarket-welcome-screen.php:481
 msgid "matchHeight - makes the height of all selected elements exactly equal"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:476
+#: includes/classes/class-hypermarket-welcome-screen.php:482
 msgid "Material Design Icons - Icon font for the web"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:477
+#: includes/classes/class-hypermarket-welcome-screen.php:483
 msgid ""
 "UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:478
+#: includes/classes/class-hypermarket-welcome-screen.php:484
 msgid "WP Bootstrap Navwalker - A custom WordPress nav walker class"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:479
+#: includes/classes/class-hypermarket-welcome-screen.php:485
 msgid "WooCommerce - An open source eCommerce plugin for WordPress"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:480
+#: includes/classes/class-hypermarket-welcome-screen.php:486
 msgid "Skip link focus - Helps with accessibility for keyboard only users"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:481
+#: includes/classes/class-hypermarket-welcome-screen.php:487
 msgid ""
 "HTML5 Number polyfill - A polyfill for implementing the HTML5 number element "
 "in browsers that do not currently support it"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:487
+#: includes/classes/class-hypermarket-welcome-screen.php:493
+#: includes/classes/class-hypermarket-welcome-screen.php:497
 msgid "Hypermarket Plus!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:489
-msgid ""
-"Every purchase of Hypermarket Plus! includes all extensions (plus updates) "
-"for Free!"
-msgstr ""
-
-#: includes/classes/class-hypermarket-welcome-screen.php:490
+#: includes/classes/class-hypermarket-welcome-screen.php:500
 msgid ""
 "Being on the cutting edge of WordPress development is something we wanted to "
 "do from the start. Because of that, we made sure that we avoided the use of "
@@ -951,19 +957,19 @@ msgid ""
 "updates will go live."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:492
+#: includes/classes/class-hypermarket-welcome-screen.php:502
 msgid "Buy Now"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:493
+#: includes/classes/class-hypermarket-welcome-screen.php:503
 msgid "Live Demo"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:499
+#: includes/classes/class-hypermarket-welcome-screen.php:509
 msgid "What is a child theme?"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:501
+#: includes/classes/class-hypermarket-welcome-screen.php:511
 msgid ""
 "A Child Theme is a theme that inherits the same functionality and styling of "
 "another theme, called the parent theme. By creating and working on a child "
@@ -971,7 +977,7 @@ msgid ""
 "the original files of the parent theme."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:502
+#: includes/classes/class-hypermarket-welcome-screen.php:512
 msgid ""
 "You do not have to worry anymore about updates to the parent theme since "
 "there is no need to exclude your modified files from the updating process or "
@@ -979,103 +985,103 @@ msgid ""
 "Theme, you end up significantly speeding up your development time."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:506
+#: includes/classes/class-hypermarket-welcome-screen.php:516
 msgid "Gain direct access to us"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:508
+#: includes/classes/class-hypermarket-welcome-screen.php:518
 msgid ""
 "As you might have already gathered, we love hearing your feedback, And you "
 "seem to love giving it!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:509
+#: includes/classes/class-hypermarket-welcome-screen.php:519
 msgid ""
 "Our top priority is that you have a great experience with us and learn to "
 "create amazing code-free websites quickly."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:513
+#: includes/classes/class-hypermarket-welcome-screen.php:523
 msgid "Files that enable translation"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:516
+#: includes/classes/class-hypermarket-welcome-screen.php:526
 msgid ""
 ".pot: This file is a \"portable object template\" that contains all of the "
 "text to be translated."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:517
+#: includes/classes/class-hypermarket-welcome-screen.php:527
 msgid ""
 ".po: The \"portable object\" file contains the original text and the "
 "translations."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:518
+#: includes/classes/class-hypermarket-welcome-screen.php:528
 msgid ""
 ".mo: This is the \"machine object file.\" When your translation is complete, "
 "you will convert or export your .po file to this file type so that WordPress "
 "can use it."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:523
+#: includes/classes/class-hypermarket-welcome-screen.php:533
 msgid "The fundamentals are:"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:526
+#: includes/classes/class-hypermarket-welcome-screen.php:536
 msgid "Fork the project & clone locally."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:527
+#: includes/classes/class-hypermarket-welcome-screen.php:537
 msgid "Create an upstream remote and sync your local copy before you branch."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:528
+#: includes/classes/class-hypermarket-welcome-screen.php:538
 msgid "Branch for each separate piece of work."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:529
+#: includes/classes/class-hypermarket-welcome-screen.php:539
 msgid ""
 "Do the work, write good commit messages, and read the CONTRIBUTING file if "
 "there is one."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:530
+#: includes/classes/class-hypermarket-welcome-screen.php:540
 msgid "Push to your origin repository."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:531
+#: includes/classes/class-hypermarket-welcome-screen.php:541
 msgid "Create a new PR in GitHub."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:532
+#: includes/classes/class-hypermarket-welcome-screen.php:542
 msgid "Respond to any code review feedback."
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:572
+#: includes/classes/class-hypermarket-welcome-screen.php:582
 msgid "WooHoo! :)"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:573
+#: includes/classes/class-hypermarket-welcome-screen.php:583
 msgid ""
 "Welcome to the Hypermarket theme! Clearly, you have impeccable taste in "
 "WooCommerce themes; we salute your fine choice!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:575
+#: includes/classes/class-hypermarket-welcome-screen.php:585
 msgid "Get the Tips"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:611
+#: includes/classes/class-hypermarket-welcome-screen.php:621
 msgid "Hypermarket is almost ready to help you start selling :)"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:614
+#: includes/classes/class-hypermarket-welcome-screen.php:624
 #, php-format
 msgid "Install and activate %s to start your e-commerce website now!"
 msgstr ""
 
-#: includes/classes/class-hypermarket-welcome-screen.php:618
+#: includes/classes/class-hypermarket-welcome-screen.php:628
 msgid "Dismiss this notice."
 msgstr ""
 
@@ -1285,75 +1291,75 @@ msgstr ""
 
 #: includes/classes/class-woocommerce.php:339
 #: includes/classes/class-woocommerce.php:429
-#: includes/classes/class-woocommerce.php:544
+#: includes/classes/class-woocommerce.php:552
 msgctxt "placeholder"
 msgid "First name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:347
 #: includes/classes/class-woocommerce.php:437
-#: includes/classes/class-woocommerce.php:552
+#: includes/classes/class-woocommerce.php:560
 msgctxt "placeholder"
 msgid "Last name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:355
-#: includes/classes/class-woocommerce.php:627
+#: includes/classes/class-woocommerce.php:635
 msgctxt "placeholder"
 msgid "Email*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:364
-#: includes/classes/class-woocommerce.php:636
+#: includes/classes/class-woocommerce.php:644
 msgctxt "placeholder"
 msgid "Phone*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:373
 #: includes/classes/class-woocommerce.php:445
-#: includes/classes/class-woocommerce.php:560
+#: includes/classes/class-woocommerce.php:568
 msgctxt "placeholder"
 msgid "Address 1*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:381
 #: includes/classes/class-woocommerce.php:453
-#: includes/classes/class-woocommerce.php:568
+#: includes/classes/class-woocommerce.php:576
 msgctxt "placeholder"
 msgid "Address 2"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:389
 #: includes/classes/class-woocommerce.php:461
-#: includes/classes/class-woocommerce.php:576
+#: includes/classes/class-woocommerce.php:584
 msgctxt "placeholder"
 msgid "Company"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:397
 #: includes/classes/class-woocommerce.php:469
-#: includes/classes/class-woocommerce.php:584
+#: includes/classes/class-woocommerce.php:592
 msgctxt "placeholder"
 msgid "Country*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:405
 #: includes/classes/class-woocommerce.php:477
-#: includes/classes/class-woocommerce.php:592
+#: includes/classes/class-woocommerce.php:600
 msgctxt "placeholder"
 msgid "State*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:413
 #: includes/classes/class-woocommerce.php:485
-#: includes/classes/class-woocommerce.php:600
+#: includes/classes/class-woocommerce.php:608
 msgctxt "placeholder"
 msgid "ZIP code*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:421
 #: includes/classes/class-woocommerce.php:493
-#: includes/classes/class-woocommerce.php:608
+#: includes/classes/class-woocommerce.php:616
 msgctxt "placeholder"
 msgid "City*"
 msgstr ""
@@ -1363,17 +1369,17 @@ msgctxt "placeholder"
 msgid "Username*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:516
+#: includes/classes/class-woocommerce.php:522
 msgctxt "placeholder"
 msgid "Password*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:524
+#: includes/classes/class-woocommerce.php:531
 msgctxt "placeholder"
 msgid "Confirm password*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:666 woocommerce/cart/mini-cart.php:76
+#: includes/classes/class-woocommerce.php:674 woocommerce/cart/mini-cart.php:77
 msgid "Most likely, you just have not put anything into your basket."
 msgstr ""
 
@@ -1391,14 +1397,10 @@ msgid " | Get %1$s for free."
 msgstr ""
 
 #: includes/woocommerce-template-functions.php:124
-msgid "Popular"
-msgstr ""
-
-#: includes/woocommerce-template-functions.php:126
 msgid "Sale"
 msgstr ""
 
-#: includes/woocommerce-template-functions.php:679
+#: includes/woocommerce-template-functions.php:677
 msgid "Back To Cart"
 msgstr ""
 
@@ -1557,15 +1559,15 @@ msgstr ""
 msgid "You May be Interested in&hellip;"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:86 woocommerce/cart/mini-cart.php:90
+#: woocommerce/cart/mini-cart.php:87 woocommerce/cart/mini-cart.php:91
 msgid "Subtotal"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:106
+#: woocommerce/cart/mini-cart.php:107
 msgid "View Cart"
 msgstr ""
 
-#: woocommerce/cart/mini-cart.php:107
+#: woocommerce/cart/mini-cart.php:108
 #: woocommerce/cart/proceed-to-checkout-button.php:29
 msgid "Checkout"
 msgstr ""
@@ -1755,7 +1757,7 @@ msgid "Signup here"
 msgstr ""
 
 #: woocommerce/myaccount/form-login.php:76
-#: woocommerce/myaccount/form-login.php:107
+#: woocommerce/myaccount/form-login.php:105
 msgid "Register"
 msgstr ""
 
@@ -1771,15 +1773,11 @@ msgstr ""
 msgid "Username*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:100
-msgid "Anti-spam"
-msgstr ""
-
-#: woocommerce/myaccount/form-login.php:115
+#: woocommerce/myaccount/form-login.php:113
 msgid "Already have an account?"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:115
+#: woocommerce/myaccount/form-login.php:113
 msgid "Login here"
 msgstr ""
 
@@ -1814,7 +1812,7 @@ msgid "You May Also Like&hellip;"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://demo.mypreview.one/hypermarket"
+msgid "https://www.mypreview.one/hypermarket-plus.html"
 msgstr ""
 
 #. Description of the plugin/theme
