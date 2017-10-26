@@ -1,3 +1,7 @@
+= 1.3.8 =
+* Updated language file.
+* Removed password confirmation field from checkout page.
+
 = 1.3.7 =
 * Compatibility with WooCommerce 3.2.X
 
