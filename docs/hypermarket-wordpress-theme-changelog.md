@@ -1,3 +1,8 @@
+# 1.4.0/ 2017-10-26
+  * Updated main stylesheet.
+  * Updated WooCommerce drop-down field styles.
+  * Added RTL language support.
+
 # 1.3.8/ 2017-10-14
   * Updated language file.
   * Removed password confirmation field from checkout page.
