@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.0.9.0
+ * @since 	    1.3.8
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -327,7 +327,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Customize shipping and billing fields.
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.0.0
+		 * @since 1.3.8
 		 */
 		public function override_checkout_fields($fields)
 
@@ -506,9 +506,15 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'sr-only'
 			);
 			$fields['account']['account_username']['placeholder'] = _x('Username*', 'placeholder', 'hypermarket');
-			$fields['account']['account_username']['class'] = array(
-				'col-sm-12 form-element'
-			);
+			if (! is_checkout()):
+				$fields['account']['account_username']['class'] = array(
+					'col-sm-12 form-element'
+				);
+			else:
+				$fields['account']['account_username']['class'] = array(
+					'col-sm-6 form-element'
+				);
+			endif;
 			// Password
 			$fields['account']['account_password']['label_class'] = array(
 				'sr-only'
@@ -517,14 +523,16 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			$fields['account']['account_password']['class'] = array(
 				'col-sm-6 form-element'
 			);
-			// Password 2
-			$fields['account']['account_password-2']['label_class'] = array(
-				'sr-only'
-			);
-			$fields['account']['account_password-2']['placeholder'] = _x('Confirm password*', 'placeholder', 'hypermarket');
-			$fields['account']['account_password-2']['class'] = array(
-				'col-sm-6 form-element'
-			);
+			if (! is_checkout()):
+				// Password 2
+				$fields['account']['account_password-2']['label_class'] = array(
+					'sr-only'
+				);
+				$fields['account']['account_password-2']['placeholder'] = _x('Confirm password*', 'placeholder', 'hypermarket');
+				$fields['account']['account_password-2']['class'] = array(
+					'col-sm-6 form-element'
+				);
+			endif;
 			return $fields;
 		}
 		/**
