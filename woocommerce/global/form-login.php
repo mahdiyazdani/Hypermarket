@@ -30,11 +30,11 @@ if ( is_user_logged_in() ) {
 	<?php if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
 	<p class="form-row col-sm-6 form-element form-row-first">
 		<label for="username" class="sr-only"><?php esc_html_e( 'Username or email', 'hypermarket' ); ?> <span class="required">*</span></label>
-		<input type="text" class="form-control input-text" name="username" id="username" placeholder="<?php esc_attr( 'Username or email', 'hypermarket' ); ?>" />
+		<input type="text" class="form-control input-text" name="username" id="username" placeholder="<?php esc_attr_e( 'Username or email', 'hypermarket' ); ?>" />
 	</p><!-- .form-element -->
 	<p class="form-row col-sm-6 form-element form-row-last">
 		<label for="password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?> <span class="required">*</span></label>
-		<input class="form-control input-text" type="password" name="password" id="password" placeholder="<?php esc_attr( 'Password', 'hypermarket' ); ?>" />
+		<input class="form-control input-text" type="password" name="password" id="password" placeholder="<?php esc_attr_e( 'Password', 'hypermarket' ); ?>" />
 	</p><!-- .form-element -->
 	<div class="clearfix"></div>
 	<?php do_action( 'woocommerce_login_form' ); ?>
