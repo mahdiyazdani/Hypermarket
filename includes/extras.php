@@ -5,7 +5,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.0.6.1
+ * @since       1.3.8
  */
 /**
  * Query WooCommerce activation.
@@ -203,6 +203,9 @@ endif;
 if (!function_exists('hypermarket_scroll_top')):
     function hypermarket_scroll_top()
     {
-        echo '<!-- Scroll To Top Button --><div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>';
+        ?>
+        <!-- Scroll To Top Button -->
+        <div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>
+        <?php
     }
 endif;
