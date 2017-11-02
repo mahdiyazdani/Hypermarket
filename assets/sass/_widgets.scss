@@ -29,6 +29,9 @@
   border-bottom: $widget-divider;
   &:first-child { @include padding(floor($line-height-computed / 1.6) null null null); }
   &:last-child { border-bottom: 0; }
+  select {
+    @extend .form-control;
+  }
   > ul {
     list-style: none;
     @include margin(0);
