@@ -5,7 +5,7 @@
  * @author        Mahdi Yazdani
  * @package       Hypermarket
  * @dependencies  Bourbon, Bootstrap, Material Design Icons, Hypermarket Icons 
- * @since         1.3.5
+ * @since         1.4.0
  */
 /*!
  * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=5e96b7b2ca540eec17e1d3a9785dfca8)
@@ -5003,7 +5003,7 @@ input#shipping_state,
 #account_password,
 #account_password-2,
 .select2-search__field,
-.product-search-field {
+.product-search-field, .widget select {
   display: block;
   line-height: 1.5;
   font-size: 14px;
@@ -5048,7 +5048,7 @@ input#shipping_state,
   #account_password:focus,
   #account_password-2:focus,
   .select2-search__field:focus,
-  .product-search-field:focus {
+  .product-search-field:focus, .widget select:focus {
     border-color: #77cde3;
     outline: none; }
   .form-control::-moz-placeholder, .single-post article label input[type="password"]::-moz-placeholder, .product-tools table.variations .form-select select::-moz-placeholder, .woocommerce-cart #calc_shipping_state::-moz-placeholder, .woocommerce-checkout #calc_shipping_state::-moz-placeholder, #billing_first_name::-moz-placeholder,
@@ -5076,7 +5076,7 @@ input#shipping_state,
   #account_password::-moz-placeholder,
   #account_password-2::-moz-placeholder,
   .select2-search__field::-moz-placeholder,
-  .product-search-field::-moz-placeholder {
+  .product-search-field::-moz-placeholder, .widget select::-moz-placeholder {
     color: #606060;
     opacity: 1; }
   .form-control:-ms-input-placeholder, .single-post article label input[type="password"]:-ms-input-placeholder, .product-tools table.variations .form-select select:-ms-input-placeholder, .woocommerce-cart #calc_shipping_state:-ms-input-placeholder, .woocommerce-checkout #calc_shipping_state:-ms-input-placeholder, #billing_first_name:-ms-input-placeholder,
@@ -5104,7 +5104,7 @@ input#shipping_state,
   #account_password:-ms-input-placeholder,
   #account_password-2:-ms-input-placeholder,
   .select2-search__field:-ms-input-placeholder,
-  .product-search-field:-ms-input-placeholder {
+  .product-search-field:-ms-input-placeholder, .widget select:-ms-input-placeholder {
     color: #606060; }
   .form-control::-webkit-input-placeholder, .single-post article label input[type="password"]::-webkit-input-placeholder, .product-tools table.variations .form-select select::-webkit-input-placeholder, .woocommerce-cart #calc_shipping_state::-webkit-input-placeholder, .woocommerce-checkout #calc_shipping_state::-webkit-input-placeholder, #billing_first_name::-webkit-input-placeholder,
   #shipping_first_name::-webkit-input-placeholder,
@@ -5131,7 +5131,7 @@ input#shipping_state,
   #account_password::-webkit-input-placeholder,
   #account_password-2::-webkit-input-placeholder,
   .select2-search__field::-webkit-input-placeholder,
-  .product-search-field::-webkit-input-placeholder {
+  .product-search-field::-webkit-input-placeholder, .widget select::-webkit-input-placeholder {
     color: #606060; }
   .form-control.placeholder, .single-post article label input.placeholder[type="password"], .product-tools table.variations .form-select select.placeholder, .woocommerce-cart .placeholder#calc_shipping_state, .woocommerce-checkout .placeholder#calc_shipping_state, .placeholder#billing_first_name,
   .placeholder#shipping_first_name,
@@ -5158,7 +5158,7 @@ input#shipping_state,
   .placeholder#account_password,
   .placeholder#account_password-2,
   .placeholder.select2-search__field,
-  .placeholder.product-search-field {
+  .placeholder.product-search-field, .widget select.placeholder {
     color: #606060; }
 
 textarea.form-control, .woocommerce-cart textarea#calc_shipping_state, .woocommerce-checkout textarea#calc_shipping_state, textarea#billing_first_name,
@@ -5226,7 +5226,7 @@ textarea.product-search-field {
 .form-group #account_password,
 .form-group #account_password-2,
 .form-group .select2-search__field,
-.form-group .product-search-field,
+.form-group .product-search-field, .form-group .widget select, .widget .form-group select,
 .form-element .form-control,
 .woocommerce-cart #calc_shipping_state_field .form-control,
 .woocommerce-checkout #calc_shipping_state_field .form-control,
@@ -5325,7 +5325,13 @@ textarea.product-search-field {
 .woocommerce-checkout #calc_shipping_state_field .select2-search__field,
 .form-element .product-search-field,
 .woocommerce-cart #calc_shipping_state_field .product-search-field,
-.woocommerce-checkout #calc_shipping_state_field .product-search-field {
+.woocommerce-checkout #calc_shipping_state_field .product-search-field,
+.form-element .widget select,
+.widget .form-element select,
+.woocommerce-cart #calc_shipping_state_field .widget select,
+.widget .woocommerce-cart #calc_shipping_state_field select,
+.woocommerce-checkout #calc_shipping_state_field .widget select,
+.widget .woocommerce-checkout #calc_shipping_state_field select {
   margin-bottom: 0; }
 
 label {
@@ -5358,7 +5364,7 @@ select#account_username::-ms-expand,
 select#account_password::-ms-expand,
 select#account_password-2::-ms-expand,
 select.select2-search__field::-ms-expand,
-select.product-search-field::-ms-expand {
+select.product-search-field::-ms-expand, .widget select::-ms-expand {
   display: none; }
 
 select option {
@@ -5531,7 +5537,7 @@ select option {
 .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid .product-search-field,
 .woocommerce-checkout .error#calc_shipping_state_field .product-search-field,
 .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid .product-search-field,
-.form-element.woocommerce-invalid .product-search-field {
+.form-element.woocommerce-invalid .product-search-field, .form-element.error .widget select, .widget .form-element.error select, .woocommerce-cart .error#calc_shipping_state_field .widget select, .widget .woocommerce-cart .error#calc_shipping_state_field select, .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid .widget select, .widget .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid select, .woocommerce-checkout .error#calc_shipping_state_field .widget select, .widget .woocommerce-checkout .error#calc_shipping_state_field select, .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid .widget select, .widget .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid select, .form-element.woocommerce-invalid .widget select, .widget .form-element.woocommerce-invalid select {
   border-color: #ef0568;
   padding-right: 40px; }
 .form-element.error:before, .woocommerce-cart .error#calc_shipping_state_field:before, .woocommerce-cart #calc_shipping_state_field.woocommerce-invalid:before, .woocommerce-checkout .error#calc_shipping_state_field:before, .woocommerce-checkout #calc_shipping_state_field.woocommerce-invalid:before, .form-element.woocommerce-invalid:before {
@@ -5691,7 +5697,7 @@ select option {
 .woocommerce-cart #calc_shipping_state_field.woocommerce-validated .product-search-field,
 .woocommerce-checkout .valid#calc_shipping_state_field .product-search-field,
 .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated .product-search-field,
-.form-element.woocommerce-validated .product-search-field {
+.form-element.woocommerce-validated .product-search-field, .form-element.valid .widget select, .widget .form-element.valid select, .woocommerce-cart .valid#calc_shipping_state_field .widget select, .widget .woocommerce-cart .valid#calc_shipping_state_field select, .woocommerce-cart #calc_shipping_state_field.woocommerce-validated .widget select, .widget .woocommerce-cart #calc_shipping_state_field.woocommerce-validated select, .woocommerce-checkout .valid#calc_shipping_state_field .widget select, .widget .woocommerce-checkout .valid#calc_shipping_state_field select, .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated .widget select, .widget .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated select, .form-element.woocommerce-validated .widget select, .widget .form-element.woocommerce-validated select {
   border-color: #a7c04d;
   padding-right: 40px; }
 .form-element.valid:before, .woocommerce-cart .valid#calc_shipping_state_field:before, .woocommerce-cart #calc_shipping_state_field.woocommerce-validated:before, .woocommerce-checkout .valid#calc_shipping_state_field:before, .woocommerce-checkout #calc_shipping_state_field.woocommerce-validated:before, .form-element.woocommerce-validated:before {
@@ -5785,7 +5791,7 @@ input#shipping_state + .checkbox,
 #account_password + .checkbox,
 #account_password-2 + .checkbox,
 .select2-search__field + .checkbox,
-.product-search-field + .checkbox,
+.product-search-field + .checkbox, .widget select + .checkbox,
 .form-control + .checkbox-inline,
 .single-post article label input[type="password"] + .checkbox-inline,
 .product-tools table.variations .form-select select + .checkbox-inline,
@@ -5817,6 +5823,7 @@ input#shipping_state + .checkbox-inline,
 #account_password-2 + .checkbox-inline,
 .select2-search__field + .checkbox-inline,
 .product-search-field + .checkbox-inline,
+.widget select + .checkbox-inline,
 .form-control + .radio,
 .single-post article label input[type="password"] + .radio,
 .product-tools table.variations .form-select select + .radio,
@@ -5848,6 +5855,7 @@ input#shipping_state + .radio,
 #account_password-2 + .radio,
 .select2-search__field + .radio,
 .product-search-field + .radio,
+.widget select + .radio,
 .form-control + .radio-inline,
 .single-post article label input[type="password"] + .radio-inline,
 .product-tools table.variations .form-select select + .radio-inline,
@@ -5878,7 +5886,8 @@ input#shipping_state + .radio-inline,
 #account_password + .radio-inline,
 #account_password-2 + .radio-inline,
 .select2-search__field + .radio-inline,
-.product-search-field + .radio-inline {
+.product-search-field + .radio-inline,
+.widget select + .radio-inline {
   margin-top: 20px; }
 
 .checkbox,
@@ -6101,7 +6110,7 @@ input[type="radio"] {
   .subscribe-form #account_password,
   .subscribe-form #account_password-2,
   .subscribe-form .select2-search__field,
-  .subscribe-form .product-search-field, .mc4wp-form .form-control, .mc4wp-form .single-post article label input[type="password"], .single-post article label .mc4wp-form input[type="password"], .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form select, .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form #calc_shipping_state, .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form #calc_shipping_state, .mc4wp-form #billing_first_name,
+  .subscribe-form .product-search-field, .subscribe-form .widget select, .widget .subscribe-form select, .mc4wp-form .form-control, .mc4wp-form .single-post article label input[type="password"], .single-post article label .mc4wp-form input[type="password"], .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form select, .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form #calc_shipping_state, .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form #calc_shipping_state, .mc4wp-form #billing_first_name,
   .mc4wp-form #shipping_first_name,
   .mc4wp-form #billing_last_name,
   .mc4wp-form #shipping_last_name,
@@ -6126,7 +6135,7 @@ input[type="radio"] {
   .mc4wp-form #account_password,
   .mc4wp-form #account_password-2,
   .mc4wp-form .select2-search__field,
-  .mc4wp-form .product-search-field, .mc4wp-form-fields .form-control, .mc4wp-form-fields .single-post article label input[type="password"], .single-post article label .mc4wp-form-fields input[type="password"], .mc4wp-form-fields .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form-fields select, .mc4wp-form-fields .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields #billing_first_name,
+  .mc4wp-form .product-search-field, .mc4wp-form .widget select, .widget .mc4wp-form select, .mc4wp-form-fields .form-control, .mc4wp-form-fields .single-post article label input[type="password"], .single-post article label .mc4wp-form-fields input[type="password"], .mc4wp-form-fields .product-tools table.variations .form-select select, .product-tools table.variations .form-select .mc4wp-form-fields select, .mc4wp-form-fields .woocommerce-cart #calc_shipping_state, .woocommerce-cart .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .mc4wp-form-fields #calc_shipping_state, .mc4wp-form-fields #billing_first_name,
   .mc4wp-form-fields #shipping_first_name,
   .mc4wp-form-fields #billing_last_name,
   .mc4wp-form-fields #shipping_last_name,
@@ -6151,7 +6160,7 @@ input[type="radio"] {
   .mc4wp-form-fields #account_password,
   .mc4wp-form-fields #account_password-2,
   .mc4wp-form-fields .select2-search__field,
-  .mc4wp-form-fields .product-search-field {
+  .mc4wp-form-fields .product-search-field, .mc4wp-form-fields .widget select, .widget .mc4wp-form-fields select {
     margin-bottom: 0; }
   .subscribe-form .mc4wp-response, .mc4wp-form .mc4wp-response, .mc4wp-form-fields .mc4wp-response {
     font-size: 70%;
@@ -6185,7 +6194,7 @@ input[type="radio"] {
   .search-box #account_password,
   .search-box #account_password-2,
   .search-box .select2-search__field,
-  .search-box .product-search-field {
+  .search-box .product-search-field, .search-box .widget select, .widget .search-box select {
     padding-right: 38px;
     margin-bottom: 0; }
   .search-box button[type=submit] {
@@ -6834,11 +6843,16 @@ input[type="button"]#place_order {
     text-decoration: none; }
   .site-logo img {
     width: 100%;
-    max-width: 115px; }
+    max-width: 173px;
+    margin-top: 6px;
+    margin-left: 0.7px; }
   .site-logo.visible-desktop {
     max-width: 310px; }
   .site-logo.visible-mobile {
     display: none; }
+  .site-logo > .site-logo {
+    padding: 0;
+    margin: 0; }
   @media screen and (max-width: 768px) {
     .site-logo {
       z-index: 20;
@@ -6984,6 +6998,8 @@ input[type="button"]#place_order {
   right: 0; }
   .cart-dropdown .widget {
     padding: 0 !important; }
+    .cart-dropdown .widget a.checkout {
+      margin-right: 0; }
   .cart-dropdown .cart-item {
     position: relative;
     display: table;
@@ -8349,23 +8365,24 @@ a.woocommerce-remove-coupon {
   .woocommerce-shipping-fields label[for="ship-to-different-address-checkbox"] {
     display: inline-block; }
 
-#billing_country_field .select2-container .select2-selection, #billing_state_field .select2-container .select2-selection, #shipping_country_field .select2-container .select2-selection, #shipping_state_field .select2-container .select2-selection {
+#billing_country_field .select2-container .select2-selection, #billing_state_field .select2-container .select2-selection, #shipping_country_field .select2-container .select2-selection, #shipping_state_field .select2-container .select2-selection, #calc_shipping_country_field .select2-container .select2-selection, #calc_shipping_state_field .select2-container .select2-selection, .woocommerce-widget-layered-nav .select2-container .select2-selection {
   height: auto;
   outline: none !important;
+  text-align: left;
   font-size: 14px;
   color: #606060;
   border: 2px solid #e5e5e5;
   border-radius: 5px;
   background-color: #fff;
   padding: 0 16px; }
-  #billing_country_field .select2-container .select2-selection .select2-selection__rendered, #billing_state_field .select2-container .select2-selection .select2-selection__rendered, #shipping_country_field .select2-container .select2-selection .select2-selection__rendered, #shipping_state_field .select2-container .select2-selection .select2-selection__rendered {
+  #billing_country_field .select2-container .select2-selection .select2-selection__rendered, #billing_state_field .select2-container .select2-selection .select2-selection__rendered, #shipping_country_field .select2-container .select2-selection .select2-selection__rendered, #shipping_state_field .select2-container .select2-selection .select2-selection__rendered, #calc_shipping_country_field .select2-container .select2-selection .select2-selection__rendered, #calc_shipping_state_field .select2-container .select2-selection .select2-selection__rendered, .woocommerce-widget-layered-nav .select2-container .select2-selection .select2-selection__rendered {
     line-height: 3.1;
     padding: 0; }
-  #billing_country_field .select2-container .select2-selection .select2-selection__arrow, #billing_state_field .select2-container .select2-selection .select2-selection__arrow, #shipping_country_field .select2-container .select2-selection .select2-selection__arrow, #shipping_state_field .select2-container .select2-selection .select2-selection__arrow {
+  #billing_country_field .select2-container .select2-selection .select2-selection__arrow, #billing_state_field .select2-container .select2-selection .select2-selection__arrow, #shipping_country_field .select2-container .select2-selection .select2-selection__arrow, #shipping_state_field .select2-container .select2-selection .select2-selection__arrow, #calc_shipping_country_field .select2-container .select2-selection .select2-selection__arrow, #calc_shipping_state_field .select2-container .select2-selection .select2-selection__arrow, .woocommerce-widget-layered-nav .select2-container .select2-selection .select2-selection__arrow {
     position: absolute;
     top: 10px;
     right: 10px; }
-#billing_country_field .select2-container.select2-container--open .select2-selection, #billing_state_field .select2-container.select2-container--open .select2-selection, #shipping_country_field .select2-container.select2-container--open .select2-selection, #shipping_state_field .select2-container.select2-container--open .select2-selection {
+#billing_country_field .select2-container.select2-container--open .select2-selection, #billing_state_field .select2-container.select2-container--open .select2-selection, #shipping_country_field .select2-container.select2-container--open .select2-selection, #shipping_state_field .select2-container.select2-container--open .select2-selection, #calc_shipping_country_field .select2-container.select2-container--open .select2-selection, #calc_shipping_state_field .select2-container.select2-container--open .select2-selection, .woocommerce-widget-layered-nav .select2-container.select2-container--open .select2-selection {
   border-bottom: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
@@ -8389,7 +8406,8 @@ a.woocommerce-remove-coupon {
   padding: 0 16px; }
 
 .select2-results__option {
-  padding: 0 16px; }
+  padding: 0 16px;
+  outline: none !important; }
 
 .select2-container .select2-choice {
   line-height: 3.1;
@@ -8416,6 +8434,8 @@ a.woocommerce-remove-coupon {
   margin-right: 7px; }
   .create-account .input-radio + label, .create-account .input-checkbox + label {
     padding-top: 6px; }
+  .create-account .input-radio + span, .create-account .input-checkbox + span {
+    display: table-cell; }
 
 #payment .wc_payment_methods {
   list-style: none;
@@ -8813,7 +8833,7 @@ p.demo_store {
   .subscribe-form #account_password,
   .subscribe-form #account_password-2,
   .subscribe-form .select2-search__field,
-  .subscribe-form .product-search-field, .widget_mc4wp_form_widget .mc4wp-form .form-control, .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"], .single-post article label .widget_mc4wp_form_widget .mc4wp-form input[type="password"], .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .widget_mc4wp_form_widget .mc4wp-form select, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .widget_mc4wp_form_widget .mc4wp-form #billing_first_name,
+  .subscribe-form .product-search-field, .subscribe-form .widget select, .widget .subscribe-form select, .widget_mc4wp_form_widget .mc4wp-form .form-control, .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"], .single-post article label .widget_mc4wp_form_widget .mc4wp-form input[type="password"], .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .widget_mc4wp_form_widget .mc4wp-form select, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .widget_mc4wp_form_widget .mc4wp-form #billing_first_name,
   .widget_mc4wp_form_widget .mc4wp-form #shipping_first_name,
   .widget_mc4wp_form_widget .mc4wp-form #billing_last_name,
   .widget_mc4wp_form_widget .mc4wp-form #shipping_last_name,
@@ -8838,7 +8858,7 @@ p.demo_store {
   .widget_mc4wp_form_widget .mc4wp-form #account_password,
   .widget_mc4wp_form_widget .mc4wp-form #account_password-2,
   .widget_mc4wp_form_widget .mc4wp-form .select2-search__field,
-  .widget_mc4wp_form_widget .mc4wp-form .product-search-field {
+  .widget_mc4wp_form_widget .mc4wp-form .product-search-field, .widget_mc4wp_form_widget .mc4wp-form .widget select, .widget .widget_mc4wp_form_widget .mc4wp-form select {
     border-color: #e5e5e5; }
     .subscribe-form .form-control:focus, .subscribe-form .single-post article label input[type="password"]:focus, .single-post article label .subscribe-form input[type="password"]:focus, .subscribe-form .product-tools table.variations .form-select select:focus, .product-tools table.variations .form-select .subscribe-form select:focus, .subscribe-form .woocommerce-cart #calc_shipping_state:focus, .woocommerce-cart .subscribe-form #calc_shipping_state:focus, .subscribe-form .woocommerce-checkout #calc_shipping_state:focus, .woocommerce-checkout .subscribe-form #calc_shipping_state:focus, .subscribe-form #billing_first_name:focus,
     .subscribe-form #shipping_first_name:focus,
@@ -8865,7 +8885,7 @@ p.demo_store {
     .subscribe-form #account_password:focus,
     .subscribe-form #account_password-2:focus,
     .subscribe-form .select2-search__field:focus,
-    .subscribe-form .product-search-field:focus, .widget_mc4wp_form_widget .mc4wp-form .form-control:focus, .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"]:focus, .single-post article label .widget_mc4wp_form_widget .mc4wp-form input[type="password"]:focus, .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select:focus, .product-tools table.variations .form-select .widget_mc4wp_form_widget .mc4wp-form select:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state:focus, .woocommerce-cart .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state:focus, .woocommerce-checkout .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form #billing_first_name:focus,
+    .subscribe-form .product-search-field:focus, .subscribe-form .widget select:focus, .widget .subscribe-form select:focus, .widget_mc4wp_form_widget .mc4wp-form .form-control:focus, .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"]:focus, .single-post article label .widget_mc4wp_form_widget .mc4wp-form input[type="password"]:focus, .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select:focus, .product-tools table.variations .form-select .widget_mc4wp_form_widget .mc4wp-form select:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state:focus, .woocommerce-cart .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state:focus, .woocommerce-checkout .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state:focus, .widget_mc4wp_form_widget .mc4wp-form #billing_first_name:focus,
     .widget_mc4wp_form_widget .mc4wp-form #shipping_first_name:focus,
     .widget_mc4wp_form_widget .mc4wp-form #billing_last_name:focus,
     .widget_mc4wp_form_widget .mc4wp-form #shipping_last_name:focus,
@@ -8890,7 +8910,7 @@ p.demo_store {
     .widget_mc4wp_form_widget .mc4wp-form #account_password:focus,
     .widget_mc4wp_form_widget .mc4wp-form #account_password-2:focus,
     .widget_mc4wp_form_widget .mc4wp-form .select2-search__field:focus,
-    .widget_mc4wp_form_widget .mc4wp-form .product-search-field:focus {
+    .widget_mc4wp_form_widget .mc4wp-form .product-search-field:focus, .widget_mc4wp_form_widget .mc4wp-form .widget select:focus, .widget .widget_mc4wp_form_widget .mc4wp-form select:focus {
       border-color: #77cde3 !important; }
   .subscribe-form button[type='submit'], .widget_mc4wp_form_widget .mc4wp-form button[type='submit'] {
     display: block;
@@ -9698,7 +9718,7 @@ p.demo_store {
   .footer .subscribe-form #account_password,
   .footer .subscribe-form #account_password-2,
   .footer .subscribe-form .select2-search__field,
-  .footer .subscribe-form .product-search-field, .footer .widget_mc4wp_form_widget .mc4wp-form .form-control, .footer .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"], .single-post article label .footer .widget_mc4wp_form_widget .mc4wp-form input[type="password"], .footer .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .footer .widget_mc4wp_form_widget .mc4wp-form select, .footer .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .footer .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .footer .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .footer .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .footer .widget_mc4wp_form_widget .mc4wp-form #billing_first_name,
+  .footer .subscribe-form .product-search-field, .footer .subscribe-form .widget select, .widget .footer .subscribe-form select, .footer .widget_mc4wp_form_widget .mc4wp-form .form-control, .footer .widget_mc4wp_form_widget .mc4wp-form .single-post article label input[type="password"], .single-post article label .footer .widget_mc4wp_form_widget .mc4wp-form input[type="password"], .footer .widget_mc4wp_form_widget .mc4wp-form .product-tools table.variations .form-select select, .product-tools table.variations .form-select .footer .widget_mc4wp_form_widget .mc4wp-form select, .footer .widget_mc4wp_form_widget .mc4wp-form .woocommerce-cart #calc_shipping_state, .woocommerce-cart .footer .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .footer .widget_mc4wp_form_widget .mc4wp-form .woocommerce-checkout #calc_shipping_state, .woocommerce-checkout .footer .widget_mc4wp_form_widget .mc4wp-form #calc_shipping_state, .footer .widget_mc4wp_form_widget .mc4wp-form #billing_first_name,
   .footer .widget_mc4wp_form_widget .mc4wp-form #shipping_first_name,
   .footer .widget_mc4wp_form_widget .mc4wp-form #billing_last_name,
   .footer .widget_mc4wp_form_widget .mc4wp-form #shipping_last_name,
@@ -9723,7 +9743,7 @@ p.demo_store {
   .footer .widget_mc4wp_form_widget .mc4wp-form #account_password,
   .footer .widget_mc4wp_form_widget .mc4wp-form #account_password-2,
   .footer .widget_mc4wp_form_widget .mc4wp-form .select2-search__field,
-  .footer .widget_mc4wp_form_widget .mc4wp-form .product-search-field {
+  .footer .widget_mc4wp_form_widget .mc4wp-form .product-search-field, .footer .widget_mc4wp_form_widget .mc4wp-form .widget select, .widget .footer .widget_mc4wp_form_widget .mc4wp-form select {
     border-color: #ffffff; }
   .footer .product_list_widget > li {
     text-align: left; }
