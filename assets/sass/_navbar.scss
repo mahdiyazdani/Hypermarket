@@ -38,10 +38,12 @@
 	}
 	img {
 		width: 100%;
-		max-width: $image-logo-width;
+		max-width: ($image-logo-width + 58);
+		@include margin(6px null null 0.7px);
 	}
 	&.visible-desktop { max-width: 310px; }
 	&.visible-mobile { display: none; }
+	& >.site-logo { @include padding(0); @include margin(0); }
 	@media #{$tablet-port} {
 		z-index: 20;
 		margin-right: 15px;
