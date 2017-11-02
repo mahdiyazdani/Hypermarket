@@ -30,6 +30,22 @@ Hypermarket theme makes it easier for you to market your product online and reac
 
 [Visit live/online demo](https://demo.mypreview.one/hypermarket)
 
-[View full documentation](https://mahdiyazdani.github.io/Hypermarket)
+**Translators & Non-English Speakers**
 
-Something missing? Join our [support forums](https://support.mypreview.one) and let us help you.
+Translators are welcome to contribute to the theme. Please use the [WordPress translation website](https://translate.wordpress.org/projects/wp-themes/hypermarket "WordPress translation website").
+
+**Get Involved**
+
+Want to contribute? Here's the [GitHub development repository](https://github.com/mahdiyazdani/Hypermarket "GitHub development repository").
+
+**Documentation**
+
+Get started [here](https://mahdiyazdani.github.io/Hypermarket) with a collection of tutorials that cover the basics.
+
+**Free Support**
+
+All support is handled via a dedicated support forum, available at [Community Forums](https://support.mypreview.one "Community Forums"). Please head out there to open a new topic, in case you have any questions.
+
+**Support this theme**
+
+Don't forget to rate this theme [5 shining stars](https://wordpress.org/support/theme/hypermarket/reviews/ "5 shining stars") if you like it, thanks!
