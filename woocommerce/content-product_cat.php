@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div <?php wc_product_cat_class( $GLOBALS['product_grid_classes'], $category ); ?> data-mh="mh-categories">
+<div <?php wc_product_cat_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes']), $category); ?> data-mh="mh-categories">
 	<?php
 	/**
 	 * woocommerce_before_subcategory hook.
