@@ -44,7 +44,7 @@ Get started [here](https://mahdiyazdani.github.io/Hypermarket) with a collection
 
 **Free Support**
 
-If you have any question(s) about using Hypermarket Plus, please do not hesitate to check out our [support forums](https://support.mypreview.one) and start a new discussion for further assistance or clarification.
+If you have any question(s) about using theme, please do not hesitate to check out our [support forums](https://support.mypreview.one/t/hypermarket) and start a new discussion for further assistance or clarification.
 
 **Support this theme**
 
