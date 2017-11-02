@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.3.7
+ * @since       1.4.0
  */
 
 jQuery(document).ready(function($) {
@@ -272,6 +272,17 @@ jQuery(document).ready(function($) {
     // Tooltips
     //------------------------------------------------------------------------------
     hypermarketTooltipInitialization();
+
+
+    // Adding wrapper to drop-down select fields on widgets
+    //------------------------------------------------------------------------------
+    if ($('.widget select').length > 0) {
+        if ($('.widget select').parent('div').hasClass('form-select') === false) {
+            $('.widget select').each(function(){
+                $(this).wrap('<div class="form-element form-select space-bottom-none" />');
+            });
+        }
+    }
 
 
     // Setting background of sections
