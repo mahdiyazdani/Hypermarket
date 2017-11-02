@@ -876,11 +876,12 @@ input#shipping_state,
 .product-search-field {
   @extend .form-control;
 }
-#billing_country_field, #billing_state_field, #shipping_country_field, #shipping_state_field {
+#billing_country_field, #billing_state_field, #shipping_country_field, #shipping_state_field, #calc_shipping_country_field, #calc_shipping_state_field, .woocommerce-widget-layered-nav {
   .select2-container {
     .select2-selection {
       height: auto;
       outline: none !important;
+      text-align: left;
       font-size: $font-size-small;
       color: $gray-dark;
       border: $widget-divider;
@@ -927,6 +928,7 @@ input#shipping_state,
 }
 .select2-results__option {
   @include padding(0 16px);
+  outline: none !important;
 }
 .select2-container {
   .select2-choice {
