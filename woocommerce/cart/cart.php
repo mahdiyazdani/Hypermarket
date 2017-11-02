@@ -62,6 +62,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 										endif;
 									?>
 								</h3>
+								<?php
+								// Meta data
+								echo WC()->cart->get_item_data( $cart_item );
+								// Backorder notification
+								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+									echo '<p class="backorder_notification"><small>' . esc_html__( 'Available on backorder', 'hypermarket' ) . '</small></p>';
+								}
+								?>
 								<h4 class="item-price">
 									<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); ?>
 								</h4>
