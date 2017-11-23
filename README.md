@@ -1,4 +1,4 @@
-# Hypermarket   [![Compatible with WPML](https://img.shields.io/badge/Compatible%20with-WPML-308fb0.svg)](https://wpml.org/theme/hypermarket/) [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-hypermarket.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.4.0-77cde3.svg)](https://wp.me/p8930x-8q)
+# Hypermarket   [![Compatible with WPML](https://img.shields.io/badge/Compatible%20with-WPML-308fb0.svg)](https://wpml.org/theme/hypermarket/) [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-hypermarket.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.4.1-77cde3.svg)](https://wp.me/p8930x-8q)
 
 <p align="center">
 <a href="https://www.mypreview.one/hypermarket-plus.html" target="_blank"><img width="728" height="90" src="https://i.gyazo.com/48108f1a52fd6bf4e7b110533f18dea0.png" alt="Buy Hypermarket Plus" /></a>
