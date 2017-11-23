@@ -1,3 +1,10 @@
+= 1.4.1 =
+* Compatibility with WordPress 4.9.
+* Updated main stylesheet.
+* Updated RTL stylesheet.
+* Added new filter to disable smooth scroll library.
+* Fixed styling issues with Stripe gateway.
+
 = 1.4.0 =
 * Updated main stylesheet.
 * Updated WooCommerce drop-down field styles.
