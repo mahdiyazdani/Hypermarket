@@ -190,7 +190,7 @@ if (!function_exists('hypermarket_credits')):
         echo '<p class="copyright space-top"><span>' . apply_filters('hypermarket_copyright_text', $content = '&copy; ' . get_bloginfo('name') . ' ' . date_i18n(__('Y','hypermarket'))) . '</span>';
         if( apply_filters( 'hypermarket_credit_link', true ) ):
             // You `HAVE` to keep this credit link. We really do appreciate it ;)
-            printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url(HypermarketThemeURI ) . '" rel="author" target="_blank">' . esc_attr(HypermarketThemeName) . '</a>');
+            printf(esc_attr__(' | Get %1$s for free.', 'hypermarket') , '<a href="' . esc_url(HYPERMARKET_THEME_URI ) . '" rel="author" target="_blank">' . esc_attr(HYPERMARKET_THEME_NAME) . '</a>');
         endif;
         echo '</p>';
     }

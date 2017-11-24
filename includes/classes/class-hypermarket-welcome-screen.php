@@ -493,13 +493,13 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 											<h2 class="hndle"><span><?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?></span></h2>
 											<div class="inside">
 												<p>
-													<a href="<?php echo esc_url(HypermarketThemeAuthorURI . '/hypermarket-plus.html'); ?>" target="_blank">
+													<a href="<?php echo esc_url(HYPERMARKET_THEME_AUTHOR_URI . '/hypermarket-plus.html'); ?>" target="_blank">
 														<img class="hypermarket-plus-featured-image" src="<?php echo $this->admin_assets_url . 'img/hypermarket-plus.png'; ?>" alt="<?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?>" />
 													</a>
 												</p>
 												<p><?php esc_attr_e('Being on the cutting edge of WordPress development is something we wanted to do from the start. Because of that, we made sure that we avoided the use of clunky additional admin panels and instead, opted to utilize a powerful, options panel using Customizer API. With this setup, you can preview all of the changes you make to your site live without any need to switch windows or refresh the browser in addition to searching for exactly what you need. When you are happy with your changes, hit "Save Changes" button and your updates will go live.', 'hypermarket'); ?></p>
 												<p align="center">
-													<a href="<?php echo esc_url(HypermarketThemeAuthorURI . '/hypermarket-plus.html'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Buy Now', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
+													<a href="<?php echo esc_url(HYPERMARKET_THEME_AUTHOR_URI . '/hypermarket-plus.html'); ?>" class="button-primary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Buy Now', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
 													<a href="<?php echo esc_url('https://demo.mypreview.one/hypermarket'); ?>" class="button-secondary" target="_blank"><strong>&nbsp;&nbsp;<?php esc_attr_e('Live Demo', 'hypermarket'); ?>&nbsp;&nbsp;</strong></a>
 												</p>
 											</div><!-- .inside -->
@@ -598,10 +598,10 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		public function enqueue()
 
 		{
-			wp_enqueue_style('hypermarket-welcome-screen-styles', $this->admin_assets_url . 'css/hypermarket-welcome-screen.css', array() , HypermarketThemeVersion);
+			wp_enqueue_style('hypermarket-welcome-screen-styles', $this->admin_assets_url . 'css/hypermarket-welcome-screen.css', array() , HYPERMARKET_THEME_VERSION);
 			wp_enqueue_script('hypermarket-welcome-screen-scripts', $this->admin_assets_url . 'js/hypermarket-welcome-screen.js', array(
 				'jquery'
-			) , HypermarketThemeVersion, true);
+			) , HYPERMARKET_THEME_VERSION, true);
 		}
 		/**
 		 * Check if WooCommerce activated/installed or not?

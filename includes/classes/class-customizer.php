@@ -127,7 +127,7 @@ if (!class_exists('Hypermarket_Customizer')):
                     array(
                         'title' =>   __('Hypermarket Plus', 'hypermarket') ,
                         'go_plus_text'  =>   __('Upgrade Now!', 'hypermarket') ,
-                        'go_plus_url'   =>  esc_url(HypermarketThemeURI)
+                        'go_plus_url'   =>  esc_url(HYPERMARKET_THEME_URI)
                     )
                 )
             );
@@ -140,10 +140,10 @@ if (!class_exists('Hypermarket_Customizer')):
         public function enqueue()
         
         {
-            wp_enqueue_style('hypermarket-customizer-styles', $this->admin_assets_url . 'css/hypermarket-customizer.css', array() , HypermarketThemeVersion);
+            wp_enqueue_style('hypermarket-customizer-styles', $this->admin_assets_url . 'css/hypermarket-customizer.css', array() , HYPERMARKET_THEME_VERSION);
             wp_enqueue_script('hypermarket-customizer-scripts', $this->admin_assets_url . 'js/hypermarket-customizer.js', array(
                 'jquery'
-            ) , HypermarketThemeVersion, true);
+            ) , HYPERMARKET_THEME_VERSION, true);
         }
     }
 endif;

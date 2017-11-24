@@ -24,7 +24,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         public function __construct()
 
         {
-            parent::__construct('hypermarket-social-icons-widget', __('Social Icons', 'hypermarket') . ' (' . HypermarketThemeName . ')', array(
+            parent::__construct('hypermarket-social-icons-widget', __('Social Icons', 'hypermarket') . ' (' . HYPERMARKET_THEME_NAME . ')', array(
                 'customize_selective_refresh' => true,
                 'classname' => 'hypermarket-social-icons-widget',
                 'description' => __('A simple widget that displays social network icons.', 'hypermarket')

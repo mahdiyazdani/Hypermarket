@@ -181,12 +181,12 @@ if (!class_exists('Hypermarket')):
 			wp_enqueue_style('hypermarket-font', add_query_arg(apply_filters('hypermarket_default_font_family', array(
 				'family' => urlencode('Work Sans:300,400,500,600'),
 				'subset' => urlencode('latin,latin-ext')
-			)) , 'https://fonts.googleapis.com/css') , array() , HypermarketThemeVersion);
-			wp_enqueue_style('hypermarket-styles', $this->public_assets_url . 'css/hypermarket.css', array() , HypermarketThemeVersion);
+			)) , 'https://fonts.googleapis.com/css') , array() , HYPERMARKET_THEME_VERSION);
+			wp_enqueue_style('hypermarket-styles', $this->public_assets_url . 'css/hypermarket.css', array() , HYPERMARKET_THEME_VERSION);
 			wp_enqueue_script('jquery');
 			wp_register_script('hypermarket-scripts', $this->public_assets_url . 'js/hypermarket.js', array(
 				'jquery'
-			) , HypermarketThemeVersion, true);
+			) , HYPERMARKET_THEME_VERSION, true);
 			wp_localize_script('hypermarket-scripts', 'hypermarket_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'smoothscroll' => apply_filters('hypermarket_smooth_scroll', true) ,

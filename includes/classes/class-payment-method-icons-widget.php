@@ -24,7 +24,7 @@ if (!class_exists('Hypermarket_Payment_Method_Icons_Widget')):
         public function __construct()
 
         {
-            parent::__construct('hypermarket-payment-methods-icons-widget', __('Payment Method Icons', 'hypermarket') . ' (' . HypermarketThemeName . ')', array(
+            parent::__construct('hypermarket-payment-methods-icons-widget', __('Payment Method Icons', 'hypermarket') . ' (' . HYPERMARKET_THEME_NAME . ')', array(
                 'customize_selective_refresh' => true,
                 'classname' => 'hypermarket-payment-methods-icons-widget',
                 'description' => __('A simple widget that displays payment method icons.', 'hypermarket')
