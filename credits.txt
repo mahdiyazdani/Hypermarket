@@ -43,6 +43,10 @@ Twenty Sixteen — Free WordPress Theme
 The GPL version 2 or (at your option) any later version
 http://www.gnu.org/licenses/gpl-2.0.html
 
+Storefront — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/woocommerce/storefront
+
 UnderStrap - Combines Automattics Underscores Starter Theme and Bootstrap 4
 The GPL version 2 or (at your option) any later version
 https://github.com/holger1411/understrap#license
