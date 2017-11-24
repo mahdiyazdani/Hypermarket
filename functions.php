@@ -18,19 +18,18 @@
  * @see 		https://codex.wordpress.org/Plugin_API
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 		1.0.9.0
+ * @since 		1.4.2
  */
 // Assign the "Hypermarket" info to constants.
 $hypermarket_theme = wp_get_theme('hypermarket');
-define('HypermarketThemeName', $hypermarket_theme->get('Name'));
-define('HypermarketThemeURI', $hypermarket_theme->get('ThemeURI'));
-define('HypermarketThemeAuthor', $hypermarket_theme->get('Author'));
-define('HypermarketThemeAuthorURI', $hypermarket_theme->get('AuthorURI'));
-define('HypermarketThemeVersion', $hypermarket_theme->get('Version'));
+define('HYPERMARKET_THEME_NAME', $hypermarket_theme->get('Name'));
+define('HYPERMARKET_THEME_URI', $hypermarket_theme->get('ThemeURI'));
+define('HYPERMARKET_THEME_AUTHOR', $hypermarket_theme->get('Author'));
+define('HYPERMARKET_THEME_AUTHOR_URI', $hypermarket_theme->get('AuthorURI'));
+define('HYPERMARKET_THEME_VERSION', $hypermarket_theme->get('Version'));
 // Hypermarket only works in WordPress 4.7 or later.
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')):
-	require get_template_directory() . '/includes/back-compat.php';
-
+	require 'includes/back-compat.php';
 endif;
 /**
  * Theme setup and custom theme supports.
@@ -43,36 +42,36 @@ endif;
  */
 $hypermarket = (object)array(
 	// Theme setup and custom theme supports.
-	'setup' => require get_template_directory() . '/includes/classes/class-hypermarket.php',
+	'setup' => require 'includes/classes/class-hypermarket.php',
 	// Customizer Additions.
-	'customizer' => require get_template_directory() . '/includes/classes/class-customizer.php',
+	'customizer' => require 'includes/classes/class-customizer.php',
 	// Bootstrap NavWalker.
-	'navwalker' => require get_template_directory() . '/includes/classes/class-bootstrap-navwalker.php',
+	'navwalker' => require 'includes/classes/class-bootstrap-navwalker.php',
 	// Payment method icons widget.
-	'payment-method-icons' => require get_template_directory() . '/includes/classes/class-payment-method-icons-widget.php',
+	'payment-method-icons' => require 'includes/classes/class-payment-method-icons-widget.php',
 	// Social icons widget.
-	'payment-method-icons' => require get_template_directory() . '/includes/classes/class-social-icons-widget.php',
+	'payment-method-icons' => require 'includes/classes/class-social-icons-widget.php',
 );
 /**
  * Custom functions that act independently of the theme templates.
  *
  * @since 1.0.0
  */
-require get_template_directory() . '/includes/extras.php';
+require 'includes/extras.php';
 
 /**
  * Template hooks.
  *
  * @since 1.0.0
  */
-require get_template_directory() . '/includes/template-hooks.php';
+require 'includes/template-hooks.php';
 
 /**
  * Template functions.
  *
  * @since 1.0.0
  */
-require get_template_directory() . '/includes/template-functions.php';
+require 'includes/template-functions.php';
 
 /**
  * Load WooCommerce functions.
@@ -84,20 +83,21 @@ if (hypermarket_is_woocommerce_activated()):
 	$orderby_options = '';
 	// 3 Columns (Default)
 	$product_grid_classes = 'col-md-4 col-sm-6';
-	$hypermarket->woocommerce = require get_template_directory() . '/includes/classes/class-woocommerce.php';
+	$hypermarket->woocommerce = require 'includes/classes/class-woocommerce.php';
 	// Custom functions that act independently of the theme templates.
-	require get_template_directory() . '/includes/woocommerce-extras.php';
+	require 'includes/woocommerce-extras.php';
 	// WooCommerce template Hooks.
-	require get_template_directory() . '/includes/woocommerce-template-hooks.php';
+	require 'includes/woocommerce-template-hooks.php';
 	// WooCommerce template functions.
-	require get_template_directory() . '/includes/woocommerce-template-functions.php';
+	require 'includes/woocommerce-template-functions.php';
 
 endif;
+
 /**
  * Hypermarket welcome screen.
  *
  * @since 1.0.5.1
  */
 if (current_user_can('manage_options')):
-	require get_template_directory() . '/includes/classes/class-hypermarket-welcome-screen.php';
+	require 'includes/classes/class-hypermarket-welcome-screen.php';
 endif;
