@@ -230,7 +230,8 @@ input[type="checkbox"], input[type="radio"] {
   display: inline-block;
   outline: none;
   z-index: 1000;
-  @include square(20px);
+  width: 20px !important;
+  height: 20px !important;
   @include margin(null 0.5rem null null);
   @include position(relative, null null null null);
   &:hover {
@@ -260,8 +261,8 @@ input[type="radio"] {
 
 // Count Input (Quantity)
 .count-input {
-  width: 100px;
-  @include margin(10px 0);
+  width: 100px !important;
+  margin: 10px 0;
   @include position(relative, null null null null);
   input {
     border: 2px solid $hr-border;
@@ -272,7 +273,8 @@ input[type="radio"] {
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    @include size(100%, $btn-sm-height);
+    width: 100% !important;
+    height: $btn-sm-height;
     &::-webkit-inner-spin-button, 
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -288,7 +290,8 @@ input[type="radio"] {
     text-align: center;
     line-height: $line-height-base;
     text-decoration: none;
-    @include square($btn-sm-height);
+    width: $btn-sm-height !important;
+    height: $btn-sm-height;
     @include position(absolute, 0 0 null null);
     &.minus {
       border-right: none;
