@@ -1,3 +1,7 @@
+= 1.4.2 =
+* Updated theme constants.
+* Updated WooCommerce checkout field class names.
+
 = 1.4.1 =
 * Compatibility with WordPress 4.9.
 * Updated main stylesheet.
