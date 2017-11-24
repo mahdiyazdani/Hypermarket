@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.3.8
+ * @since 	    1.4.2
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.6.3
+		 * @since 1.4.2
 		 */
 		public function __construct()
 
@@ -70,14 +70,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			add_filter('woocommerce_product_review_comment_form_args', array(
 				$this,
 				'review_comment_form_args'
-			) , 10, 1);
-			add_filter('woocommerce_checkout_fields', array(
-				$this,
-				'billing_checkout_order_fields'
-			) , 10, 1);
-			add_filter('woocommerce_checkout_fields', array(
-				$this,
-				'shipping_checkout_order_fields'
 			) , 10, 1);
 			add_filter('woocommerce_checkout_fields', array(
 				$this,
@@ -268,60 +260,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			$comment_form['class_submit'] = 'btn btn-block btn-primary space-top-none space-bottom-none';
 			$comment_form['label_submit'] = __('Leave Review', 'hypermarket');
 			return $comment_form;
-		}
-		/**
-		 * Reorder billing fields in WooCommerce Checkout template.
-		 * $fields is passed via the filter!
-		 *
-		 * @since 1.0.0
-		 */
-		public function billing_checkout_order_fields($fields)
-
-		{
-			$order = array(
-				'billing_first_name',
-				'billing_last_name',
-				'billing_email',
-				'billing_phone',
-				'billing_address_1',
-				'billing_address_2',
-				'billing_company',
-				'billing_country',
-				'billing_state',
-				'billing_city',
-				'billing_postcode'
-			);
-			foreach($order as $field):
-				$ordered_fields[$field] = $fields['billing'][$field];
-			endforeach;
-			$fields['billing'] = $ordered_fields;
-			return $fields;
-		}
-		/**
-		 * Reorder shipping fields in WooCommerce Checkout template.
-		 * $fields is passed via the filter!
-		 *
-		 * @since 1.0.0
-		 */
-		public function shipping_checkout_order_fields($fields)
-
-		{
-			$order = array(
-				'shipping_first_name',
-				'shipping_last_name',
-				'shipping_address_1',
-				'shipping_address_2',
-				'shipping_company',
-				'shipping_country',
-				'shipping_state',
-				'shipping_city',
-				'shipping_postcode'
-			);
-			foreach($order as $field):
-				$ordered_fields[$field] = $fields['shipping'][$field];
-			endforeach;
-			$fields['shipping'] = $ordered_fields;
-			return $fields;
 		}
 		/**
 		 * Customize shipping and billing fields.
