@@ -390,7 +390,7 @@
 // Product Tools
 .product-tools {
   @include margin(floor($line-height-computed / 4) null floor($line-height-computed / 2) null);
-  .variations, .count-input, .single_add_to_cart_button {
+  .variations, .count-input, .single_add_to_cart_button, .apple-pay-button-wrapper {
     display: inline-block;
     @include margin(12px 12px 12px 0);
   }
@@ -420,6 +420,7 @@
     }
   }
 }
+
 .text-center {
   .product-tools > *,
   &.product-tools > * {
@@ -634,7 +635,36 @@ h1.page-title {
     @extend .text-center;
     @extend .space-bottom;
   }
+  .product-tools {
+    .variations tbody {
+      & tr > td { padding-top: 0; }
+      & tr:first-of-type > td { padding-top: 15px; }
+      & tr:only-child > td { padding-top: 15px; }
+    }
+  }
   .bs3-grid-builder-container { padding: 0; max-width: 100%; }
+  .apple-pay-button-wrapper {
+    height: 36px !important;
+    display: inline-block !important;
+    margin: 12px !important;
+    & .apple-pay-button {
+        height: 36px !important;
+        float: none !important;
+        max-width: inherit !important;
+        margin-right: 0 !important;
+    }
+    & + button[name="add-to-cart"] {
+      margin: 0 !important;
+    }
+  }
+  table.shop_attributes {
+    @include margin(null null 0 null);
+    & tbody > tr:last-of-type > td { border-bottom: none; }
+    & tbody > tr:last-of-type > th {
+      @include padding(null null null 0);
+      border-bottom: none;
+    }
+  }
 }
 // Coupon Code
 .cart-coupon {
@@ -733,6 +763,25 @@ h1.page-title {
         display: inline-block;
         @include padding(3px null null null);
       }
+    }
+  }
+  .item.cart_item .variation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    @include margin(null null 0 null);
+    & dt {
+      flex-grow: 0;
+      align-items: flex-start;
+      @include margin(null null 0 null);
+    }
+    & dd { 
+      flex-grow: 1;
+      flex-basis: 90%;
+      align-items: flex-start;
+      clear: right; 
+      @include padding(null null null 5px);
+      & p { @include margin(0); }
     }
   }
 }
@@ -848,6 +897,36 @@ a.woocommerce-remove-coupon {
     display: inline-block;
   }
 }
+#wc-stripe-cc-form {
+  border: none;
+  @include padding(0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & > .form-row:first-of-type {
+    flex-grow: 1;
+    flex-basis: 100%;
+    & input { width: 100% !important; margin: 0 !important; }
+  }
+  & > .form-row.form-row-first {
+    flex-grow: 1;
+    flex-basis: 48%;
+    align-self: flex-start;
+    margin-right: 4px;
+    & input { width: 100% !important; margin: 0 !important; }
+  }
+  & > .form-row.form-row-last {
+    flex-grow: 1;
+    flex-basis: 48%;
+    align-self: flex-end;
+    margin-left: 4px;
+    & input { width: 100% !important; margin: 0 !important; }
+  }
+  label:not([for="wc-stripe-new-payment-method"]) {
+    @extend .sr-only;
+  }
+  & > .woocommerce-error { @include padding(0); }
+}
 #billing_first_name,
 #shipping_first_name,
 #billing_last_name,
@@ -873,7 +952,10 @@ input#shipping_state,
 #account_password,
 #account_password-2,
 .select2-search__field,
-.product-search-field {
+.product-search-field,
+#stripe-card-number,
+#stripe-card-expiry,
+#stripe-card-cvc {
   @extend .form-control;
 }
 #billing_country_field, #billing_state_field, #shipping_country_field, #shipping_state_field, #calc_shipping_country_field, #calc_shipping_state_field, .woocommerce-widget-layered-nav {
@@ -985,10 +1067,13 @@ input#shipping_state,
     }
   }
   .input-checkbox { top: 0; }
-  .payment_box {
+  .payment_box, #stripe-payment-data {
     > p {
       font-style: italic;
       font-size: $font-size-small - 3;
+      > label {
+        font-style: normal;
+      }
     }
   }
   img {
