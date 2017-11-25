@@ -1,4 +1,4 @@
-# 1.4.2/ 2017-11-26
+# 1.4.2/ 2017-11-25
   * Updated theme constants.
   * Updated WooCommerce checkout field class names.
 
