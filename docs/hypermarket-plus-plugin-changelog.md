@@ -1,3 +1,15 @@
+# 1.9.5/ 2017-11-26
+
+  * Updated language file.
+  * Added smooth scroll option to plugin's settings page.
+  * Added Google Analytics integration to plugin's settings page.
+  
+# 1.9.4/ 2017-11-25
+
+  * Compatibility with WordPress 4.9.
+  * Added new slide layout to Hero Slider component.
+  * Fixed miscalculation of strtotime method.
+
 # 1.9.3/ 2017-10-15
 
   * Minor back-end changes and improvements.
