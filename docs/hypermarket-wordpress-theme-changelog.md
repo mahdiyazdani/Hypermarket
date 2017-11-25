@@ -1,3 +1,7 @@
+# 1.4.2/ 2017-11-26
+  * Updated theme constants.
+  * Updated WooCommerce checkout field class names.
+
 # 1.4.1/ 2017-11-17
   * Compatibility with WordPress 4.9.
   * Updated main stylesheet.
