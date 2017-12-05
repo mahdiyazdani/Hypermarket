@@ -1,3 +1,7 @@
+# 1.4.4/ 2017-12-06
+  * Updated language file.
+  * Updated main stylesheet.
+
 # 1.4.3/ 2017-11-26
   * Updated main stylesheet.
 
