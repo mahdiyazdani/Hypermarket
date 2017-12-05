@@ -49,6 +49,7 @@ See the [Installation](install-hypermarket-wordpress-theme) for more details.
 * Ajaxify blog posts
 * Well documented
 * RTL language support
+* Custom related products
 * Free updates every month
 
 ## Live Demo
