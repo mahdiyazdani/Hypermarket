@@ -1,4 +1,3 @@
-
 # Third-Party Plugins & Resources
 
 ?> While making Hypermarket Plus plugin, we used third-party plugins and resources, and want to thank their creators.
