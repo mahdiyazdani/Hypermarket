@@ -68,7 +68,7 @@ A full shortcode could look like:
 [hypermarket-plus-team col="4" order="DESC" orderby="none" limit="4"]
 ```
 
-![Generate a team members shortcode](img/generate-team-members-shortcode.gif)
+![Generate a team members shortcode](img/generate-teammembers-shortcode.gif)
 
 Alternatively, locate an additional button in TinyMCE’s toolbar – place the cursor where the team members tooltip will appear, then click the **Team button**.
 
