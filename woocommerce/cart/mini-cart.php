@@ -104,8 +104,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- .cart-subtotal -->
 	<div class="<?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? 'text-right' : 'text-center'; ?>">
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm'; ?> btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
-		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm'; ?> btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm space-left-none space-right-none'; ?> btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
+		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm space-left-none space-right-none'; ?> btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
 	</div><!-- .text-center -->
 <?php endif; ?>
 
