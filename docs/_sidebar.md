@@ -37,6 +37,7 @@
   - [Product Countdown](product-countdown.md)
   - [Product Color Filters](product-color-filters.md)
   - [Product Image Flipper](product-image-flipper.md)
+  - [Custom Related Products](custom-related-products.md)
   - [Testimonial & Quotation](testimonial-quotation.md)
 - Miscellaneous
   - [Minimum Requirements](minimum-requirements.md)
