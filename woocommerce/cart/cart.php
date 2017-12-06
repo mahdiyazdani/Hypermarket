@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 <!-- Cart -->
-<form class="col-sm-8 padding-bottom-2x woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', false) ? 'col-md-8' : 'col-lg-8'; ?> padding-bottom-2x woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<div class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
 		<p class="text-sm">
 			<span class="text-gray">
@@ -131,7 +131,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</div><!-- .col-sm-8 -->
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
-<div class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', true) ? 'col-md-3 col-md-offset-1' : 'col-md-4'; ?> col-sm-4 padding-bottom-2x">
+<div class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', false) ? 'col-lg-3 col-lg-offset-1 col-md-4 col-md-offset-0' : 'col-lg-4'; ?> padding-bottom-2x">
 	<div class="cart-collaterals">
 		<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	</div>
