@@ -1,3 +1,6 @@
+= 1.4.3 =
+* Updated main stylesheet.
+
 = 1.4.2 =
 * Updated theme constants.
 * Updated WooCommerce checkout field class names.
