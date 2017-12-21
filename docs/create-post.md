@@ -1,6 +1,6 @@
 # Create post
 
-Posts are entries that display in reverse order on your home page. Posts usually have comments fields beneath them and are included in your site's RSS feed.
+Posts are entries that display in reverse order on your blog page. Posts usually have comments fields beneath them and are included in your site's RSS feed.
 
 ![Create a post](img/create-post.png)
 
