@@ -1,3 +1,7 @@
+= 1.4.4 =
+* Updated language file.
+* Updated main stylesheet.
+
 = 1.4.3 =
 * Updated main stylesheet.
 
