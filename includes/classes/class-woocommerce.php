@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.4.2
+ * @since 	    1.4.4
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -19,7 +19,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.4.2
+		 * @since 1.4.3
 		 */
 		public function __construct()
 
@@ -265,7 +265,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * Customize shipping and billing fields.
 		 * $fields is passed via the filter!
 		 *
-		 * @since 1.3.8
+		 * @since 1.4.4
 		 */
 		public function override_checkout_fields($fields)
 
@@ -310,7 +310,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_address_1']['placeholder'] = _x('Address 1*', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_address_1']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Address 2
 			$fields['billing']['billing_address_2']['label_class'] = array(
@@ -318,7 +318,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_address_2']['placeholder'] = _x('Address 2', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_address_2']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Company
 			$fields['billing']['billing_company']['label_class'] = array(
@@ -334,7 +334,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_country']['placeholder'] = _x('Country*', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_country']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field update_totals_on_change'
 			);
 			// State
 			$fields['billing']['billing_state']['label_class'] = array(
@@ -342,7 +342,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_state']['placeholder'] = _x('State*', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_state']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Zip code
 			$fields['billing']['billing_postcode']['label_class'] = array(
@@ -350,7 +350,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_postcode']['placeholder'] = _x('ZIP code*', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_postcode']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// City
 			$fields['billing']['billing_city']['label_class'] = array(
@@ -358,7 +358,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['billing']['billing_city']['placeholder'] = _x('City*', 'placeholder', 'hypermarket');
 			$fields['billing']['billing_city']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// First name
 			$fields['shipping']['shipping_first_name']['label_class'] = array(
@@ -382,7 +382,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_address_1']['placeholder'] = _x('Address 1*', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_address_1']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Address 2
 			$fields['shipping']['shipping_address_2']['label_class'] = array(
@@ -390,7 +390,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_address_2']['placeholder'] = _x('Address 2', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_address_2']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Company
 			$fields['shipping']['shipping_company']['label_class'] = array(
@@ -406,7 +406,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_country']['placeholder'] = _x('Country*', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_country']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field update_totals_on_change'
 			);
 			// State
 			$fields['shipping']['shipping_state']['label_class'] = array(
@@ -414,7 +414,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_state']['placeholder'] = _x('State*', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_state']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Zip code
 			$fields['shipping']['shipping_postcode']['label_class'] = array(
@@ -422,7 +422,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_postcode']['placeholder'] = _x('ZIP code*', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_postcode']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// City
 			$fields['shipping']['shipping_city']['label_class'] = array(
@@ -430,7 +430,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 			);
 			$fields['shipping']['shipping_city']['placeholder'] = _x('City*', 'placeholder', 'hypermarket');
 			$fields['shipping']['shipping_city']['class'] = array(
-				'col-sm-6 form-element'
+				'col-sm-6 form-element address-field'
 			);
 			// Order
 			$fields['order']['order_comments']['label_class'] = array(
@@ -478,7 +478,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * $fields is passed via the filter!
 		 * billing_email & billing_phone hooked into "woocommerce_billing_fields"
 		 * 
-		 * @since 1.0.4
+		 * @since 1.4.4
 		 */
 		public function override_default_address_fields($fields)
 
