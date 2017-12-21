@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.2.1
+ * @since       1.4.4
  */
 if (!defined('ABSPATH')):
     exit;
@@ -33,13 +33,13 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         /**
          * Outputs the content of the widget.
          *
-         * @since 1.0.5
+         * @since 1.4.4
          */
         public function widget($args, $instance)
 
         {
             // Extracting the arguments + getting the values
-            $cache = wp_cache_get('hypermarket_payment_methods_icons_widget', 'widget');
+            $cache = wp_cache_get('hypermarket_social_icons_widget', 'widget');
             if (!is_array($cache)):
                 $cache = array();
             endif;
@@ -87,7 +87,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
             $output.= $args['after_widget'];
             echo $output;
             $cache[$args['widget_id']] = $output;
-            wp_cache_set('hypermarket_payment_methods_icons_widget', $cache, 'widget');
+            wp_cache_set('hypermarket_social_icons_widget', $cache, 'widget');
         }
         /**
          * Generates the administration form for the widget.
@@ -175,7 +175,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
         /**
          * Processes the widget's options to be saved.
          *
-         * @since 1.0.5.1
+         * @since 1.4.4
          */
         public function update($new_instance, $old_instance)
         
@@ -200,7 +200,7 @@ if (!class_exists('Hypermarket_Social_Icons_Widget')):
             $instance['icon_url_8'] = esc_url_raw($new_instance['icon_url_8']);
             $instance['icon_9'] = sanitize_text_field($new_instance['icon_9']);
             $instance['icon_url_9'] = esc_url_raw($new_instance['icon_url_9']);
-            wp_cache_delete('hypermarket_payment_methods_icons_widget', 'widget');
+            wp_cache_delete('hypermarket_social_icons_widget', 'widget');
             return $instance;
         }
     }
