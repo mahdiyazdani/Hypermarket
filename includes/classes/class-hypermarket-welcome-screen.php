@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.3.8
+ * @since 	    1.4.4
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -66,7 +66,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 		/**
 		 * Welcome screen markup.
 		 *
-		 * @since 1.3.5
+		 * @since 1.4.4
 		 */
 		public function hypermarket_welcome_screen()
 
@@ -302,7 +302,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 															<td class="content">
 																<strong><?php esc_attr_e('Google Maps', 'hypermarket'); ?></strong>
 																<br/>
-																<?php esc_attr_e('Embed Google Maps with custom markers and info title in your WordPress website within a few seconds.', 'hypermarket'); ?>
+																<?php esc_attr_e('Embed Google Maps with custom markers and info title on your WordPress website within a few seconds.', 'hypermarket'); ?>
 															</td>
 															<td class="icon"><span class="dashicons dashicons-format-chat"></span></td>
 															<td class="content">
@@ -351,6 +351,20 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 																<strong><?php esc_attr_e('Custom related products', 'hypermarket'); ?></strong>
 																<br/>
 																<?php esc_attr_e('Choose which products should show in the related products instead of pulling them in by category or tag.', 'hypermarket'); ?>
+															</td>
+														</tr>
+														<tr>
+															<td class="icon"><span class="dashicons dashicons-admin-settings"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Smooth scrolling', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('This option allows you to make scrolling effect smooth with the mouse wheel and keyboard buttons.', 'hypermarket'); ?>
+															</td>
+															<td class="icon"><span class="dashicons dashicons-chart-area"></span></td>
+															<td class="content">
+																<strong><?php esc_attr_e('Google Analytics integration', 'hypermarket'); ?></strong>
+																<br/>
+																<?php esc_attr_e('Just copy and paste your Google Analytics code to make your site ready to track your site’s usage, with lots of helpful additional data.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
