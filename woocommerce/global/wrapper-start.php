@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ if(! is_singular('product')):
 	if( get_post_field('page_template', get_option( 'woocommerce_shop_page_id' )) === 'page-templates/template-fluid.php'):
 		$fluid = '-fluid';
 	endif;
-?>
+	?>
 	<!-- Shop Catalog -->
 	<section class="container<?php echo esc_attr($fluid); ?> padding-top-3x">
 	<?php if ( is_active_sidebar( 'sidebar' ) && ! is_singular() && apply_filters('hypermarket_toggle_wc_sidebar_filter_list', true) ) : ?>

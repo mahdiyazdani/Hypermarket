@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.6.0
+ * @version 3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -65,7 +65,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 	<p class="space-bottom-none">
 		<?php wp_nonce_field( 'save_account_details' ); ?>
-		<input type="submit" class="woocommerce-Button button btn btn-primary space-top-none" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'hypermarket' ); ?>" />
+		<button type="submit" class="woocommerce-Button button btn btn-primary waves-effect waves-light space-top-none" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'hypermarket' ); ?>"><?php esc_html_e( 'Save changes', 'hypermarket' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p><!-- .space-bottom-none -->
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>

@@ -15,7 +15,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.0.0
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,18 +30,15 @@ if ( ! woocommerce_products_will_display() )
 <div class="column">
 	<p class="text-sm space-bottom-none woocommerce-result-count">
 		<?php
-		$paged    = max( 1, $wp_query->get( 'paged' ) );
-		$per_page = $wp_query->get( 'posts_per_page' );
-		$total    = $wp_query->found_posts;
-		$first    = ( $per_page * $paged ) - $per_page + 1;
-		$last     = min( $total, $wp_query->get( 'posts_per_page' ) * $paged );
-
-		echo '<span class="text-gray">' . esc_html__('Showing', 'hypermarket') . '</span>';
-		if ( intval($total) === 1 ):
-			esc_html_e( ' the single item', 'hypermarket' );
-		else :
-			printf( esc_html__( ' %1$s&ndash;%2$d items', 'hypermarket' ), $first, $last );
-		endif;
+		if ( $total <= $per_page || -1 === $per_page ) {
+			/* translators: %d: total results */
+			printf( _n( 'Showing the single result', 'Showing all %d results', $total, 'hypermarket' ), $total );
+		} else {
+			$first = ( $per_page * $current ) - $per_page + 1;
+			$last  = min( $total, $per_page * $current );
+			/* translators: 1: first result 2: last result */
+			printf( _nx( 'Showing the single item', 'Showing %1$d&ndash;%2$d items', $total, 'with first and last result', 'hypermarket' ), $first, $last );
+		}
 		?>
 	</p><!-- .text-sm -->
 </div><!-- .column -->

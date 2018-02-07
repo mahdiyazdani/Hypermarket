@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.2.0
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,6 +31,6 @@ $orderby_options = $catalog_orderby_options;
 				<?php endforeach; ?>
 			</select>
 		</div><!-- .form-select -->
-		<?php wc_query_string_form_fields( null, array( 'orderby', 'submit' ) ); ?>
+		<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
 	</form>
 </div><!-- .column -->

@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -46,7 +46,7 @@ if ( is_user_logged_in() ) {
 			</label>
 		</div><!-- .rememberme -->
 		<div class="form-submit">
-			<input type="submit" class="button btn btn-primary btn-block" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>" />
+			<button type="submit" class="button btn btn-primary waves-effect waves-light btn-block" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>"><?php esc_html_e( 'Login', 'hypermarket' ); ?></button>
 		</div><!-- .form-submit -->
 		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
 	</div><!-- .form-footer -->

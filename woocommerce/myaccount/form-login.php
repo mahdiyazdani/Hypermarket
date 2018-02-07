@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.2.0
+ * @version 	3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div><!-- .rememberme -->
 				<div class="form-submit">
 					<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-					<input type="submit" class="woocommerce-Button button btn btn-primary btn-block space-top-none" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>" />
+					<button type="submit" class="woocommerce-Button button btn btn-primary btn-block waves-effect waves-light space-top-none" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>"><?php esc_html_e( 'Login', 'hypermarket' ); ?></button>
 				</div><!-- .form-submit -->
 			</div><!-- .form-footer -->
 			<div class="woocommerce-LostPassword lost_password">
@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="rememberme"></div>
 				<div class="form-submit">
 					<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-					<input type="submit" class="woocommerce-Button button btn btn-primary btn-block space-top-none" name="register" value="<?php esc_attr_e( 'Register', 'hypermarket' ); ?>" />
+					<button type="submit" class="woocommerce-Button button btn btn-primary btn-block waves-effect waves-light space-top-none" name="register" value="<?php esc_attr_e( 'Register', 'hypermarket' ); ?>"><?php esc_html_e( 'Register', 'hypermarket' ); ?></button>
 				</div><!-- .form-submit -->
 			</div><!-- .form-footer -->
 			<?php do_action( 'woocommerce_register_form_end' ); ?>

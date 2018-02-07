@@ -10,10 +10,10 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.1.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -63,8 +63,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 									?>
 								</h3>
 								<?php
-								// Meta data
-								echo WC()->cart->get_item_data( $cart_item );
+								// Meta data.
+								echo wc_get_formatted_cart_item_data( $cart_item );
 								// Backorder notification
 								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 									echo '<p class="backorder_notification"><small>' . esc_html__( 'Available on backorder', 'hypermarket' ) . '</small></p>';
@@ -78,10 +78,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 										$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
 									else:
 										$product_quantity = woocommerce_quantity_input( array(
-											'input_name'  => "cart[{$cart_item_key}][qty]",
-											'input_value' => $cart_item['quantity'],
-											'max_value'   => $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(),
-											'min_value'   => '0',
+											'input_name'    => "cart[{$cart_item_key}][qty]",
+											'input_value'   => $cart_item['quantity'],
+											'max_value'     => $_product->get_max_purchase_quantity(),
+											'min_value'     => '0',
+											'product_name'  => $_product->get_name(),
 										), $_product, false );
 									endif;
 									echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
@@ -91,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 										'<a href="%s" class="item-remove remove pull-right" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
-										esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+											esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 											__( 'Remove this item', 'hypermarket' ),
 											esc_attr( $product_id ),
 											esc_attr( $_product->get_sku() )
@@ -99,7 +100,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								?>
 							</div>
 						</div><!-- .item -->
-			<?php
+					<?php
 					endif;
             	endforeach;
         	?>
@@ -122,7 +123,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				</div><!-- .coupon-btn -->
 			</div><!-- .cart-coupon -->
 		<?php endif; ?>
-		<input type="submit" class="button sr-only" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'hypermarket' ); ?>" />
+		<button type="submit" class="button waves-effect waves-light sr-only" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'hypermarket' ); ?>"><?php esc_html_e( 'Update Cart', 'hypermarket' ); ?></button>
 		<?php 
 			do_action( 'woocommerce_cart_actions' );
 			wp_nonce_field( 'woocommerce-cart' ); 

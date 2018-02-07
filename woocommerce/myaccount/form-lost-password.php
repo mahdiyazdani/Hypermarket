@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.0
+ * @version 3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 	<p class="woocommerce-FormRow col-sm-12 form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<input type="submit" class="woocommerce-Button button btn btn-primary space-top-none" value="<?php esc_attr_e( 'Reset Password', 'hypermarket' ); ?>" />
+		<button type="submit" class="woocommerce-Button button btn btn-primary waves-effect waves-light space-top-none" value="<?php esc_attr_e('Reset Password', 'hypermarket'); ?>"><?php esc_html_e('Reset password', 'hypermarket'); ?></button>
 	</p><!-- .col-sm-12 -->
 	<?php wp_nonce_field( 'lost_password' ); ?>
 </form><!-- .lost_reset_password -->

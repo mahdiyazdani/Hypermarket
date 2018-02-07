@@ -15,7 +15,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.2.0
+ * @version 	3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
 							</a>
 						<?php endif; ?>
-						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
+						<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
 						<div class="item-details">
 						<h3 class="item-title"><a href="<?php echo esc_url( $product_permalink ); ?>" target="_self"><?php echo esc_html($product_name); ?></a></h3>
 						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<h4 class="item-price">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</h4>', $cart_item, $cart_item_key ); ?>
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 							'<a href="%s" class="close-btn remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"><i class="material-icons close"></i></a>',
-							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 							__( 'Remove this item', 'hypermarket' ),
 							esc_attr( $product_id ),
 							esc_attr( $cart_item_key ),

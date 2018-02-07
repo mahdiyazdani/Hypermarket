@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.2
+ * @version 3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -35,7 +35,7 @@ if ( ! wc_coupons_enabled() ) {
 			</div>
 		</div><!-- .coupon-input -->
 		<div class="col-md-4 col-sm-5 coupon-btn">
-			<input type="submit" class="button btn btn-default btn-ghost btn-block space-top-none space-bottom" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'hypermarket' ); ?>" />
+			<button type="submit" class="button btn btn-default btn-ghost btn-block space-top-none space-bottom" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'hypermarket' ); ?>"><?php esc_html_e( 'Apply Coupon', 'hypermarket' ); ?></button>
 		</div><!-- .coupon-btn -->
 	</form><!-- .checkout_coupon -->
 	<hr>

@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.9
+ * @version 3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -44,7 +44,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 		<div class="clearfix"></div>
 		<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 		<p class="space-bottom-none">
-			<input type="submit" class="button btn btn-primary space-top-none" name="save_address" value="<?php esc_attr_e( 'Save Address', 'hypermarket' ); ?>" />
+			<button type="submit" class="button btn btn-primary waves-effect waves-light space-top-none" name="save_address" value="<?php esc_attr_e( 'Save Address', 'hypermarket' ); ?>"><?php esc_html_e( 'Save address', 'hypermarket' ); ?></button>
 			<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
 			<input type="hidden" name="action" value="edit_address" />
 		</p><!-- .space-bottom-none -->

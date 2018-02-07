@@ -5,7 +5,7 @@
  * @package 		Hooked into "woocommerce_before_single_product_summary"
  * @author  		Mahdi Yazdani
  * @package 		Hypermarket
- * @since 		    1.4.1
+ * @since 		    1.4.5
  */
 global $post, $product, $woocommerce;
 
@@ -15,7 +15,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 $single_image_size = 'shop_single';
 $thumbnail_image_size = 'shop_thumbnail';
 // Assuming setting fields are already enabled
-if (has_filter('init', 'hypermarket_child_enable_image_size_settings')):
+if (has_filter('init', 'hypermarket_child_enable_image_size_settings') && defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ):
 	// Single
 	$single_image_size_width = (int) get_option('shop_single_image_size')['width'];
 	$single_image_size_height = (int) get_option('shop_single_image_size')['height'];
