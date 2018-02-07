@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.3.5
+ * @since 	    1.4.5
  */
 // ======================================================================
 // Hooked into "wp"
@@ -48,14 +48,14 @@ endif;
  * Displayed a link to the cart including the number of items present.
  *
  * @package Hooked into "hypermarket_items_present_in_cart"
- * @since 1.1.0
+ * @since 1.4.5
  */
 if (!function_exists('hypermarket_cart_link')):
 	function hypermarket_cart_link()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 		?>
-			<a class="cart-items <?php echo (apply_filters('hypermarket_toolbar_toggle_cls', false)) ? 'toolbar-toggle' : ''; ?>" href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" target="_self">
+			<a class="cart-items <?php echo (apply_filters('hypermarket_toolbar_toggle_cls', false)) ? 'toolbar-toggle' : ''; ?>" href="<?php echo esc_url(wc_get_cart_url()); ?>" target="_self">
 	            <i>
 	            	<span class="material-icons shopping_basket"></span>
 	        		<?php
@@ -324,34 +324,14 @@ endif;
  * Main shop wrapper start tag.
  *
  * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.0.4
- */
-if (!function_exists('hypermarket_shop_product_subcategories')):
-	function hypermarket_shop_product_subcategories()
-	{
-		if (hypermarket_is_woocommerce_activated()):
-			$args = apply_filters('hypermarket_shop_product_subcategories_args', array(
-				'before' => '<div class="hypermarket-category-wrapper row padding-top padding-bottom-3x">',
-				'after' => '</div><!-- .hypermarket-category-wrapper -->',
-				'force_display' => true
-			));
-			woocommerce_product_subcategories($args);
-			woocommerce_reset_loop();
-		endif;
-	}
-endif;
-/**
- * Main shop wrapper start tag.
- *
- * @package Hooked into "woocommerce_before_shop_loop"
- * @since 1.1.1
+ * @since 1.4.5
  */
 if (!function_exists('hypermarket_shop_loop_wrapper_start')):
 	function hypermarket_shop_loop_wrapper_start()
 	{
 		if (hypermarket_is_woocommerce_activated()):
 			?>
-			<div class="row hypermarket-woocommerce-loop">
+			<div class="row products hypermarket-woocommerce-loop columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
 			<?php
 		endif;
 	}
