@@ -8,6 +8,8 @@
 	width: 100%;
 	min-height: $navbar-min-height;
 	background-color: $navbar-bg;
+	display: flex;
+	align-items: center;
 	@include padding(null null null 30px);
 	@include position(relative, 0 null null 0);
 	&.navbar-sticky {
@@ -17,6 +19,7 @@
 		position: -o-sticky;
 	}
 }
+
 
 // Site logo
 .site-logo {
@@ -29,7 +32,7 @@
 	text-decoration: none;
 	@include position(relative);
 	@include margin(null 20px null null);
-	@include padding(25px 0);
+	@include padding(0);
 	span { font-weight: normal; }
 	&:hover,
 	&:focus, &:active {
@@ -60,7 +63,7 @@
 	max-width: 310px;
 	font-style: italic;
 	font-size: floor(($font-size-base * 0.7));
-	@include padding(0 0 9px 0);
+	@include padding(9px 0 0 0);
 	@media #{$tablet-port} { 
 		&.visible-desktop { display: none; }
 	}
@@ -225,6 +228,14 @@
 			font-weight: 500;
 			text-align: right;
 			float: right;
+		}
+		& + .text-center {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 13px;
+			position: relative;
+			overflow: hidden;
+			& .btn { @include margin(null 0); }
 		}
 	}
 	.cart-buttons {
