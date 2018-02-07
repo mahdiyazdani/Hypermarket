@@ -159,6 +159,10 @@ if (!class_exists('Hypermarket')):
 			)));
 			// Declare WooCommerce support.
 			add_theme_support('woocommerce');
+			add_theme_support('woocommerce', apply_filters('hypermarket_woocommerce_args', array(
+				'single_image_width'    => 954,
+				'thumbnail_image_width' => 500
+			)));
 			// Declare support for selective refreshing of widgets.
 			add_theme_support('customize-selective-refresh-widgets');
 			/**
