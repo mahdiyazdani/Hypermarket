@@ -183,7 +183,7 @@
   font-size: .875em;
   line-height: 1;
   width: 5.3em;
-  height: auto;
+  height: 1.718em;
   color: $brand-warning;
   font-family: 'Material Icons';
   @include clearfix;
@@ -208,6 +208,7 @@
     }
   }
 }
+
 
 // Shop Bar
 .shop-bar {
@@ -665,6 +666,7 @@ h1.page-title {
       border-bottom: none;
     }
   }
+  .fw-section .star-rating { height: auto; }
 }
 // Coupon Code
 .cart-coupon {
@@ -754,13 +756,20 @@ h1.page-title {
     display: inline-block;
     list-style: none;
     @include padding(0);
-    li { text-align: left; }
+    li { 
+      text-align: left;
+      display: grid;
+      grid-gap: 2px;
+      grid-template-columns: 30px 1fr; 
+    }
     input[type="radio"] {
-      float: left;
-      display: inline-block;
-      @include margin(null 7px null null);
+      float: none;
+      display: inherit;
+      @include margin(0);
       + label {
-        display: inline-block;
+        float: none;
+        display: block;
+        @include margin(0);
         @include padding(3px null null null);
       }
     }
@@ -986,6 +995,9 @@ input#shipping_state,
         }
     }
   }
+}
+.shipping-calculator-form #calc_shipping_country_field:before {
+  content: none;
 }
 .select2-container--open .select2-dropdown--below {
   border: $widget-divider;
