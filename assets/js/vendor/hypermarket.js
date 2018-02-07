@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.4.0
+ * @since       1.4.5
  */
 
 jQuery(document).ready(function($) {
@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
                 $('#update-cart-btn').removeAttr('disabled');
             });
             $('#update-cart-btn').live('click', function() {
-                $('div.woocommerce > form input[name="update_cart"]').trigger('click');
+                $('div.woocommerce > form button[name="update_cart"]').trigger('click');
             });
         }
     }
@@ -263,6 +263,12 @@ jQuery(document).ready(function($) {
             $('.product-gallery-thumblist li:first-child a').trigger('click');
         }
     });
+
+    // Wrap an HTML structure around all (sub) category items.
+    //------------------------------------------------------------------------------
+    if ($('div[data-mh=mh-categories]').length > 0) {
+        $('div[data-mh=mh-categories]').wrapAll('<div class="hypermarket-category-wrapper row padding-top padding-bottom-3x"></div>');
+    }
 
     // Maintain scorll position
     //------------------------------------------------------------------------------
