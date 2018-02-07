@@ -364,7 +364,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 															<td class="content">
 																<strong><?php esc_attr_e('Google Analytics integration', 'hypermarket'); ?></strong>
 																<br/>
-																<?php esc_attr_e('Just copy and paste your Google Analytics code to make your site ready to track your site’s usage, with lots of helpful additional data.', 'hypermarket'); ?>
+																<?php esc_attr_e('Just copy and paste your Google Analytics code to make your site ready to track your sites usage, with lots of helpful additional data.', 'hypermarket'); ?>
 															</td>
 														</tr>
 													</tbody>
