@@ -108,6 +108,7 @@ select option {
   }
   &.form-select:before {
     content: "\e5c5";
+    z-index: 10;
     font-size: $input-icon-size + 2;
     margin-top: -($input-icon-size / 2) - 1;
     color: $text-color;
