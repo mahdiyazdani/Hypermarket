@@ -1,3 +1,15 @@
+# 1.4.5.1/ 2018-02-09
+  * Removed extra padding from homepage categories.
+
+# 1.4.5/ 2018-02-08
+  * Updated language file.
+  * Updated mini-cart widget style.
+  * Updated products widget style.
+  * Updated layered nav drop-down widget style.
+  * Fixed the member function error caused by ```get_cart_url```.
+  * Compatibility with WordPress 4.9.4
+  * Compatibility with WooCommerce 3.3.1
+
 # 1.4.4/ 2017-12-06
   * Updated language file.
   * Updated main stylesheet.

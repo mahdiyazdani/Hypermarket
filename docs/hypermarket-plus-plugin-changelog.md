@@ -1,3 +1,8 @@
+# 1.9.6/ 2018-02-09
+  * Updated language file.
+  * Compatibility with WordPress 4.9.4
+  * Compatibility with WooCommerce 3.3.1
+  
 # 1.9.5/ 2017-11-26
 
   * Updated language file.
