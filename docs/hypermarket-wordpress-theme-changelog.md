@@ -1,3 +1,6 @@
+# 1.4.5.1/ 2018-02-09
+  * Removed extra padding from homepage categories.
+
 # 1.4.5/ 2018-02-08
   * Updated language file.
   * Updated mini-cart widget style.
