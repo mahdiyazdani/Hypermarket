@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Hypermarket
- * @since       1.4.5
+ * @since       1.4.5.1
  */
 
 jQuery(document).ready(function($) {
@@ -266,7 +266,7 @@ jQuery(document).ready(function($) {
 
     // Wrap an HTML structure around all (sub) category items.
     //------------------------------------------------------------------------------
-    if ($('div[data-mh=mh-categories]').length > 0) {
+    if (false === $('body').hasClass('home') && $('div[data-mh=mh-categories]').length > 0) {
         $('div[data-mh=mh-categories]').wrapAll('<div class="hypermarket-category-wrapper row padding-top padding-bottom-3x"></div>');
     }
 
