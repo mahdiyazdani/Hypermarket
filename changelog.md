@@ -5,7 +5,7 @@
 * Updated layered nav drop-down widget style.
 * Fixed the member function error caused by get_cart_url.
 * Compatibility with WordPress 4.9.4
-* Compatibility with WordPress 3.3.1
+* Compatibility with WooCommerce 3.3.1
 
 = 1.4.4 =
 * Updated language file.
