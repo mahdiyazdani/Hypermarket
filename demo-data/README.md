@@ -6,4 +6,4 @@ Install [Widget Importer & Exporter](https://wordpress.org/plugins/widget-import
 
 <hr/>
 
-Install [Customizer Export/Import](https://wordpress.org/plugins/customizer-export-import/) plugin, go to **Customize** > **Export/Import**, click the choose file button then select the ```.dat``` file and click on import button. The plugin will now load customizer data from the imported file.
+Install [Customizer Export/Import](https://wordpress.org/plugins/customizer-export-import/) plugin, go to **Customize** > **Export/Import**, click the choose file button then select the ```customizer.dat``` file and click on import button. The plugin will now load customizer data from the imported file.
