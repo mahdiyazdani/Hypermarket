@@ -1,3 +1,10 @@
+# 1.5.0/ 2018-05-24
+  * Updated language file.
+  * Updated main stylesheet.
+  * Compatibility with WordPress 4.9.6
+  * Compatibility with WooCommerce 3.4.0
+  * Compatibility with GDPR (General Data Protection Regulation)
+  
 # 1.4.5.1/ 2018-02-09
   * Removed extra padding from homepage categories.
 
