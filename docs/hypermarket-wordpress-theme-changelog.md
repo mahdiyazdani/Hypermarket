@@ -1,3 +1,7 @@
+# 1.5.1/ 2018-05-31
+  * Fixed payment form styling issue with Stripe 4.1.5
+  * Compatibility with WooCommerce 3.4.1
+
 # 1.5.0/ 2018-05-24
   * Updated language file.
   * Updated main stylesheet.
