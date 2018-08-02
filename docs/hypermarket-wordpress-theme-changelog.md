@@ -1,3 +1,10 @@
+# 1.5.3/ 2018-08-02
+  * Fixed visibility issues with WooCommerce checkout field options.
+
+# 1.5.2/ 2018-07-27
+  * Fixed payment form styling issue with Stripe 4.1.8
+  * Compatibility with WooCommerce 3.4.4
+
 # 1.5.1/ 2018-05-31
   * Fixed payment form styling issue with Stripe 4.1.5
   * Compatibility with WooCommerce 3.4.1
