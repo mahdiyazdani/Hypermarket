@@ -1,8 +1,8 @@
-//
-// Blog Styles - Hypermarket Theme
-// --------------------------------------------------
+/**/
+/* Blog Styles - Hypermarket Theme*/
+/* --------------------------------------------------*/
 
-// Post Meta
+/* Post Meta*/
 .blog-post-meta {
   display: table;
   width: 100%;
@@ -53,7 +53,7 @@
   }
 }
 
-// Post title
+/* Post title*/
 .blog-post-title,
 .blog-post-title > a {
   color: $text-color;
@@ -66,13 +66,13 @@
   }
 }
 
-// Sticky post
+/* Sticky post*/
 small.sticky-badge {
   color: $gray;
   font-size: floor(($font-size-base * 0.75)) - 1;
 }
 
-// Single post
+/* Single post*/
 .single-post {
   article {
     label {
@@ -95,11 +95,11 @@ small.sticky-badge {
   }
 }
 
-// Author posts
+/* Author posts*/
 .author-posts {
   list-style-type: square;
 }
-// Comments
+/* Comments*/
 .comment-respond .tile form h3 {
   @include margin(null null $line-height-computed null);
 }
@@ -194,5 +194,8 @@ small.sticky-badge {
   ol.comment-list {
     @include padding(0);
     @include margin(0);
+  }
+  .comment-form-cookies-consent label[for="wp-comment-cookies-consent"] {
+    display: inline-block;
   }
 }
