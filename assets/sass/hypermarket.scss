@@ -4,28 +4,28 @@
  * @author      	Mahdi Yazdani
  * @package     	Hypermarket
  * @dependencies 	Bourbon, Bootstrap, Material Design Icons, Hypermarket Icons 
- * @since       	1.4.4
+ * @since       	1.5.0
  */
 
-// Bourbon SASS Mixins Library
-@import "bourbon/bourbon"; // http://bourbon.io/
+/* Bourbon SASS Mixins Library*/
+@import "bourbon/bourbon"; /* http://bourbon.io/*/
 
-// Core required libraries
+/* Core required libraries*/
 @import "core";
 
-// Core variables and mixins
+/* Core variables and mixins*/
 @import "bs-variables";
 @import "variables";
 @import "mixins";
 
-// Core CSS
+/* Core CSS*/
 @import "scaffolding";
 @import "typography";
 @import "forms";
 @import "tables";
 @import "buttons";
 
-// Components
+/* Components*/
 @import "social-buttons";
 @import "navbar";
 @import "blog";
