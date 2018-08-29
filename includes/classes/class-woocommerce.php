@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Hypermarket
- * @since 	    1.4.5
+ * @since 	    1.5.3
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -169,7 +169,7 @@ if (!class_exists('Hypermarket_WooCommerce')):
 		 * The template for displaying review comment form.
 		 *
 		 * @link http://hookr.io/filters/woocommerce_product_review_comment_form_args/
-		 * @since 1.0.0
+		 * @since 1.5.3
 		 */
 		public function review_comment_form_args($comment_form)
 
@@ -231,7 +231,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'sr-only'
 			);
 			$fields['billing']['billing_email']['placeholder'] = _x('Email*', 'placeholder', 'hypermarket');
-			$fields['billing']['billing_email']['required'] = true;
 			$fields['billing']['billing_email']['class'] = array(
 				'col-sm-6 form-element'
 			);
@@ -240,7 +239,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'sr-only'
 			);
 			$fields['billing']['billing_phone']['placeholder'] = _x('Phone*', 'placeholder', 'hypermarket');
-			$fields['billing']['billing_phone']['required'] = true;
 			$fields['billing']['billing_phone']['class'] = array(
 				'col-sm-6 form-element'
 			);
@@ -411,6 +409,30 @@ if (!class_exists('Hypermarket_WooCommerce')):
 					'col-sm-6 form-element'
 				);
 			endif;
+
+			if ( 'hidden' === get_option( 'woocommerce_checkout_company_field', 'optional' ) ) {
+				unset( $fields['billing']['billing_company'] );
+				unset( $fields['shipping']['shipping_company'] );
+			}
+
+			if ( 'hidden' === get_option( 'woocommerce_checkout_address_2_field', 'optional' ) ) {
+				unset( $fields['billing']['billing_address_2'] );
+				unset( $fields['shipping']['shipping_address_2'] );
+				$fields['billing']['billing_city']['class'] = array(
+					'col-sm-12 form-element address-field'
+				);
+				$fields['shipping']['shipping_city']['class'] = array(
+					'col-sm-12 form-element address-field'
+				);
+			}
+
+			if ( 'hidden' === get_option( 'woocommerce_checkout_phone_field', 'required' ) ) {
+				unset( $fields['billing']['billing_phone'] );
+				$fields['billing']['billing_email']['class'] = array(
+					'col-sm-12 form-element'
+				);
+			}
+
 			return $fields;
 		}
 		/**
@@ -511,7 +533,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'sr-only'
 			);
 			$fields['billing_email']['placeholder'] = _x('Email*', 'placeholder', 'hypermarket');
-			$fields['billing_email']['required'] = true;
 			$fields['billing_email']['class'] = array(
 				'col-sm-6 form-element'
 			);
@@ -520,7 +541,6 @@ if (!class_exists('Hypermarket_WooCommerce')):
 				'sr-only'
 			);
 			$fields['billing_phone']['placeholder'] = _x('Phone*', 'placeholder', 'hypermarket');
-			$fields['billing_email']['required'] = true;
 			$fields['billing_phone']['class'] = array(
 				'col-sm-6 form-element'
 			);
