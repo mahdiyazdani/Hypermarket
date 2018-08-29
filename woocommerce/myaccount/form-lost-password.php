@@ -10,15 +10,13 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.3.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="col-xs-12 space-bottom">
@@ -29,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<p class="col-sm-12 reset-password-notice"><?php echo apply_filters( 'woocommerce_lost_password_message', __( 'Enter your username or email address. You will receive a link to create a new password via email.', 'hypermarket' ) ); ?></p>
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row col-sm-6 form-element form-row-first">
 		<label for="user_login" class="sr-only"><?php esc_html_e( 'Username or email', 'hypermarket' ); ?></label>
-		<input class="woocommerce-Input woocommerce-Input--text form-control input-text" type="text" name="user_login" id="user_login" placeholder="<?php esc_attr_e( 'Username or email*', 'hypermarket' ); ?>" />
+		<input class="woocommerce-Input woocommerce-Input--text form-control input-text" type="text" name="user_login" id="user_login" autocomplete="username" placeholder="<?php esc_attr_e( 'Username or email*', 'hypermarket' ); ?>" />
 	</p><!-- .col-sm-6 -->
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row col-sm-6 form-element form-row-first"></p>
 	<div class="clearfix"></div>
@@ -38,5 +36,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input type="hidden" name="wc_reset_password" value="true" />
 		<button type="submit" class="woocommerce-Button button btn btn-primary waves-effect waves-light space-top-none" value="<?php esc_attr_e('Reset Password', 'hypermarket'); ?>"><?php esc_html_e('Reset password', 'hypermarket'); ?></button>
 	</p><!-- .col-sm-12 -->
-	<?php wp_nonce_field( 'lost_password' ); ?>
+	<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>
 </form><!-- .lost_reset_password -->

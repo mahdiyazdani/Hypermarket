@@ -10,15 +10,13 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.3.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 
@@ -30,16 +28,21 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<legend><?php esc_html_e( 'Account Details', 'hypermarket' ); ?></legend>
 		<div class="clearfix padding-bottom"></div>
 		<p class="woocommerce-form-row woocommerce-form-row--first col-sm-6 form-element form-row form-row-first">
-			<label for="account_first_name" class="sr-only"><?php esc_html_e( 'First name', 'hypermarket' ); ?> <span class="required">*</span></label>
+			<label for="account_first_name" class="sr-only"><?php esc_html_e( 'First name', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_first_name" id="account_first_name" placeholder="<?php esc_attr_e( 'First name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->first_name ); ?>" />
 		</p><!-- .col-sm-6 -->
 		<p class="woocommerce-form-row woocommerce-form-row--last col-sm-6 form-element form-row form-row-last">
-			<label for="account_last_name" class="sr-only"><?php esc_html_e( 'Last name', 'hypermarket' ); ?> <span class="required">*</span></label>
+			<label for="account_last_name" class="sr-only"><?php esc_html_e( 'Last name', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_last_name" id="account_last_name" placeholder="<?php esc_attr_e( 'Last name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->last_name ); ?>" />
 		</p><!-- .col-sm-6 -->
 		<div class="clearfix"></div>
-		<p class="woocommerce-form-row woocommerce-form-row--wide col-sm-12 form-element form-row form-row-wide">
-			<label for="account_email" class="sr-only"><?php esc_html_e( 'Email address', 'hypermarket' ); ?> <span class="required">*</span></label>
+		<p class="woocommerce-form-row woocommerce-form-row--first col-sm-6 form-element form-row form-row-first">
+			<label for="account_display_name" class="sr-only"><?php esc_html_e( 'Display name', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
+			<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="account_display_name" id="account_display_name" placeholder="<?php esc_attr_e( 'Display name*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->display_name ); ?>" />
+			<small><em>This will be how your name will be displayed in the account section and in reviews</em></small>
+		</p><!-- .col-sm-6 -->
+		<p class="woocommerce-form-row woocommerce-form-row--last col-sm-6 form-element form-row form-row-last">
+			<label for="account_email" class="sr-only"><?php esc_html_e( 'Email address', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 			<input type="email" class="woocommerce-Input woocommerce-Input--email form-control input-text" name="account_email" id="account_email" placeholder="<?php esc_attr_e( 'Email address*', 'hypermarket' ); ?>" value="<?php echo esc_attr( $user->user_email ); ?>" />
 		</p><!-- .col-sm-12 -->
 	</fieldset>
@@ -64,7 +67,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="clearfix"></div>
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 	<p class="space-bottom-none">
-		<?php wp_nonce_field( 'save_account_details' ); ?>
+		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
 		<button type="submit" class="woocommerce-Button button btn btn-primary waves-effect waves-light space-top-none" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'hypermarket' ); ?>"><?php esc_html_e( 'Save changes', 'hypermarket' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p><!-- .space-bottom-none -->

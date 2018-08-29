@@ -13,12 +13,10 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 ?>
 
@@ -36,11 +34,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<form method="post" class="login-form login">
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
-				<label for="username" class="sr-only"><?php esc_html_e( 'Username or email address', 'hypermarket' ); ?> <span class="required">*</span></label>
+				<label for="username" class="sr-only"><?php esc_html_e( 'Username or email address', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="username" id="username" placeholder="<?php esc_attr_e( 'Username or email address*', 'hypermarket' ); ?>" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p><!-- .form-element -->
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
-				<label for="password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?> <span class="required">*</span></label>
+				<label for="password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 				<input class="woocommerce-Input woocommerce-Input--text form-control input-text" type="password" name="password" id="password" placeholder="<?php esc_attr_e( 'Password*', 'hypermarket' ); ?>" />
 			</p><!-- .form-element -->
 			<div class="clearfix"></div>
@@ -81,17 +79,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
-					<label for="reg_username" class="sr-only"><?php esc_html_e( 'Username', 'hypermarket' ); ?> <span class="required">*</span></label>
+					<label for="reg_username" class="sr-only"><?php esc_html_e( 'Username', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="username" id="reg_username" placeholder="<?php esc_attr_e( 'Username*', 'hypermarket' ); ?>" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 				</p><!-- .form-element -->
 			<?php endif; ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
-				<label for="reg_email" class="sr-only"><?php esc_html_e( 'Email address', 'hypermarket' ); ?> <span class="required">*</span></label>
+				<label for="reg_email" class="sr-only"><?php esc_html_e( 'Email address', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="email" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="email" id="reg_email" placeholder="<?php esc_attr_e( 'Email address*', 'hypermarket' ); ?>" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
 			</p><!-- .form-element -->
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-element form-row form-row-wide">
-					<label for="reg_password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?> <span class="required">*</span></label>
+					<label for="reg_password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="password" id="reg_password" placeholder="<?php esc_attr_e( 'Password*', 'hypermarket' ); ?>" />
 				</p><!-- .form-element -->
 			<?php endif; ?>

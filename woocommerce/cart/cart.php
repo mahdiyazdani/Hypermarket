@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -47,31 +47,31 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<?php
 		              		$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 							if ( ! $product_permalink ):
-								echo $thumbnail;
+								echo wp_kses_post( $thumbnail );
 							else:
-								printf( '<a href="%s" class="item-thumb product-thumbnail">%s</a>', esc_url( $product_permalink ), $thumbnail );
+								printf( '<a href="%s" class="item-thumb product-thumbnail">%s</a>', esc_url( $product_permalink ), wp_kses_post( $thumbnail ) );
 							endif;
 	              		?>
 		              		<div class="item-details">
 								<h3 class="item-title">
 									<?php
 										if ( ! $product_permalink ):
-											echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
 										else:
-											echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
 										endif;
 									?>
 								</h3>
 								<?php
 								// Meta data.
-								echo wc_get_formatted_cart_item_data( $cart_item );
+								echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
 								// Backorder notification
 								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-									echo '<p class="backorder_notification"><small>' . esc_html__( 'Available on backorder', 'hypermarket' ) . '</small></p>';
+									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'hypermarket' ) . '</p>' ) );
 								}
 								?>
 								<h4 class="item-price">
-									<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); ?>
+									<?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok. ?>
 								</h4>
 								<?php
 									if ( $_product->is_sold_individually() ):
@@ -126,7 +126,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<button type="submit" class="button waves-effect waves-light sr-only" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'hypermarket' ); ?>"><?php esc_html_e( 'Update Cart', 'hypermarket' ); ?></button>
 		<?php 
 			do_action( 'woocommerce_cart_actions' );
-			wp_nonce_field( 'woocommerce-cart' ); 
+			wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' );
 			do_action( 'woocommerce_after_cart_contents' );
 		?>
 	</div><!-- .col-sm-8 -->

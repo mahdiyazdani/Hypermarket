@@ -10,24 +10,22 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.3.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.4.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
-if ( ! wc_coupons_enabled() ) {
+if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 	return;
 }
 ?>
 <!-- Coupon -->
 <div class="col-sm-12 cart-coupon">
 	<p class="text-gray text-sm"><?php esc_html_e('Have discount coupon?', 'hypermarket'); ?></p>
-	<form class="checkout_coupon" method="post">
+	<form class="checkout_coupon woocommerce-form-coupon" method="post">
 		<div class="col-md-8 col-sm-7 coupon-input">
 			<div class="form-element">
 				<label class="screen-reader-text" for="coupon_code"><?php esc_html_e( 'Coupon:', 'hypermarket' ); ?></label>

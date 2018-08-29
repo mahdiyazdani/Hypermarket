@@ -13,12 +13,10 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.2.0
+ * @version     3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->needs_shipping() ) {
 	return;
@@ -95,7 +93,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
 		<p><button type="submit" name="calc_shipping" value="1" class="btn btn-default btn-block waves-effect waves-light button"><?php esc_html_e( 'Update Totals', 'hypermarket' ); ?></button></p>
 
-		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
+		<?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
 	</section>
 </form>
 

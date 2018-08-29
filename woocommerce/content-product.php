@@ -10,15 +10,13 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.0.0
+ * @see     	https://docs.woocommerce.com/document/template-structure/
+ * @author  	WooThemes
+ * @package 	WooCommerce/Templates
+ * @version 	3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 global $product;
 
@@ -27,18 +25,18 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php post_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes'])); ?> data-mh="mh-products">
+<div <?php wc_product_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes'])); ?> data-mh="mh-products">
 	<div class="shop-item">
 		<?php
 		/**
-		 * woocommerce_before_shop_loop_item hook.
+		 * Hook: woocommerce_before_shop_loop_item hook.
 		 *
 		 * @hooked woocommerce_template_loop_product_link_open - 10
 		 */
 		do_action( 'woocommerce_before_shop_loop_item' );
 
 		/**
-		 * woocommerce_before_shop_loop_item_title hook.
+		 * Hook: woocommerce_before_shop_loop_item_title hook.
 		 *
 		 * @hooked woocommerce_show_product_loop_sale_flash - 10
 		 * @hooked woocommerce_template_loop_product_thumbnail - 10
@@ -46,14 +44,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		do_action( 'woocommerce_before_shop_loop_item_title' );
 
 		/**
-		 * woocommerce_shop_loop_item_title hook.
+		 * Hook: woocommerce_shop_loop_item_title hook.
 		 *
 		 * @hooked woocommerce_template_loop_product_title - 10
 		 */
 		do_action( 'woocommerce_shop_loop_item_title' );
 
 		/**
-		 * woocommerce_after_shop_loop_item_title hook.
+		 * Hook: woocommerce_after_shop_loop_item_title hook.
 		 *
 		 * @hooked woocommerce_template_loop_rating - 5
 		 * @hooked woocommerce_template_loop_price - 10
@@ -61,7 +59,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		do_action( 'woocommerce_after_shop_loop_item_title' );
 
 		/**
-		 * woocommerce_after_shop_loop_item hook.
+		 * Hook: woocommerce_after_shop_loop_item hook.
 		 *
 		 * @hooked woocommerce_template_loop_product_link_close - 5
 		 * @hooked woocommerce_template_loop_add_to_cart - 10
