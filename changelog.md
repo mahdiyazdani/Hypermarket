@@ -1,3 +1,21 @@
+= 1.5.3 =
+* Fixed visibility issues with WooCommerce checkout field options.
+
+= 1.5.2 =
+* Fixed payment form styling issue with Stripe 4.1.8
+* Compatibility with WooCommerce 3.4.4
+
+= 1.5.1 =
+* Fixed payment form styling issue with Stripe 4.1.5
+* Compatibility with WooCommerce 3.4.1
+
+= 1.5.0 =
+* Updated language file.
+* Updated main stylesheet.
+* Compatibility with WordPress 4.9.6
+* Compatibility with WooCommerce 3.4.0
+* Compatibility with GDPR (General Data Protection Regulation)
+
 = 1.4.5.1 =
 * Removed extra padding from homepage categories.
 
