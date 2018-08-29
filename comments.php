@@ -93,14 +93,17 @@ endif;
 	<?php
 	endif;
 		$commenter = wp_get_current_commenter();
+		$consent   = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 		$args = apply_filters('hypermarket_comment_form_args', array(
 			'fields' => apply_filters('hypermarket_comment_form_default_fields', array(
 				// Name Field
-				'author' => '<div class="col-sm-4"><div class="form-element"><label for="author" class="screen-reader-text">' . esc_html('Name', 'hypermarket') . '</label><input id="author" name="author" type="text" class="form-control" required="required" value="' . esc_attr($commenter['comment_author']) . '" placeholder="' . esc_attr('Name*', 'hypermarket') . '" /></div></div>',
+				'author' => '<div class="col-sm-4"><div class="form-element"><label for="author" class="screen-reader-text">' . esc_html__('Name', 'hypermarket') . '</label><input id="author" name="author" type="text" class="form-control" required="required" value="' . esc_attr($commenter['comment_author']) . '" placeholder="' . esc_attr__('Name*', 'hypermarket') . '" /></div></div>',
 				// Email Field
-				'email' => '<div class="col-sm-4"><div class="form-element"><label for="email" class="screen-reader-text">' . esc_html('Email', 'hypermarket') . '</label><input id="email" name="email" type="email" class="form-control" required="required" value="' . esc_attr($commenter['comment_author_email']) . '" placeholder="' . esc_attr('Email*', 'hypermarket') . '" /></div></div>',
+				'email' => '<div class="col-sm-4"><div class="form-element"><label for="email" class="screen-reader-text">' . esc_html__('Email', 'hypermarket') . '</label><input id="email" name="email" type="email" class="form-control" required="required" value="' . esc_attr($commenter['comment_author_email']) . '" placeholder="' . esc_attr__('Email*', 'hypermarket') . '" /></div></div>',
 				// Website Field
-				'url' => '<div class="col-sm-4"><div class="form-element"><label for="url" class="screen-reader-text">' . esc_html('Website', 'hypermarket') . '</label><input id="url" name="url" type="url" class="form-control" value="' . esc_attr($commenter['comment_author_url']) . '" placeholder="' . esc_attr('Website', 'hypermarket') . '" /></div></div>',
+				'url' => '<div class="col-sm-4"><div class="form-element"><label for="url" class="screen-reader-text">' . esc_html__('Website', 'hypermarket') . '</label><input id="url" name="url" type="url" class="form-control" value="' . esc_attr($commenter['comment_author_url']) . '" placeholder="' . esc_attr__('Website', 'hypermarket') . '" /></div></div>',
+				'cookies' => '<div class="col-sm-12"><div class="form-element comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
+					 '<label for="wp-comment-cookies-consent">' . esc_html__('Save my name, email, and website in this browser for the next time I comment.', 'hypermarket') . '</label></div></div>'
 			)) ,
 			// Comment Field
 			'comment_field' => '<div class="col-sm-12"><div class="form-element"><label for="comment" class="screen-reader-text">' . esc_html('Comment', 'hypermarket') . '</label><textarea id="comment" name="comment" class="form-control" rows="8" required="required" placeholder="' . __('Comment*', 'hypermarket') . '"></textarea></div></div>',
