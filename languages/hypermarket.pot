@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Hypermarket\n"
-"POT-Creation-Date: 2018-02-08 01:43+0400\n"
-"PO-Revision-Date: 2018-02-08 01:43+0400\n"
+"POT-Creation-Date: 2018-08-10 20:56+0400\n"
+"PO-Revision-Date: 2018-05-24 14:26+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -72,16 +72,41 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: comments.php:100 includes/classes/class-woocommerce.php:184
+msgid "Name"
+msgstr ""
+
+#: comments.php:100 includes/classes/class-woocommerce.php:184
+msgid "Name*"
+msgstr ""
+
+#: comments.php:102 includes/classes/class-woocommerce.php:186
+msgid "Email"
+msgstr ""
+
+#: comments.php:102 includes/classes/class-woocommerce.php:186
+msgid "Email*"
+msgstr ""
+
+#: comments.php:104
+msgid "Website"
+msgstr ""
+
 #: comments.php:106
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: comments.php:109
 msgid "Comment*"
 msgstr ""
 
-#: comments.php:107
+#: comments.php:110
 #, php-format
 msgid "Be the first to comment &ldquo;%s&rdquo;"
 msgstr ""
 
-#: comments.php:115
+#: comments.php:118
 msgid "Leave Comment"
 msgstr ""
 
@@ -1253,22 +1278,6 @@ msgstr ""
 msgid "Be the first to review &ldquo;%s&rdquo;"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:184
-msgid "Name"
-msgstr ""
-
-#: includes/classes/class-woocommerce.php:184
-msgid "Name*"
-msgstr ""
-
-#: includes/classes/class-woocommerce.php:186
-msgid "Email"
-msgstr ""
-
-#: includes/classes/class-woocommerce.php:186
-msgid "Email*"
-msgstr ""
-
 #: includes/classes/class-woocommerce.php:189
 msgid "Your Rating"
 msgstr ""
@@ -1310,96 +1319,96 @@ msgid "Leave Review"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:217
-#: includes/classes/class-woocommerce.php:307
-#: includes/classes/class-woocommerce.php:430
+#: includes/classes/class-woocommerce.php:305
+#: includes/classes/class-woocommerce.php:452
 msgctxt "placeholder"
 msgid "First name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:225
-#: includes/classes/class-woocommerce.php:315
-#: includes/classes/class-woocommerce.php:438
+#: includes/classes/class-woocommerce.php:313
+#: includes/classes/class-woocommerce.php:460
 msgctxt "placeholder"
 msgid "Last name*"
 msgstr ""
 
 #: includes/classes/class-woocommerce.php:233
-#: includes/classes/class-woocommerce.php:513
+#: includes/classes/class-woocommerce.php:535
 msgctxt "placeholder"
 msgid "Email*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:242
-#: includes/classes/class-woocommerce.php:522
+#: includes/classes/class-woocommerce.php:241
+#: includes/classes/class-woocommerce.php:543
 msgctxt "placeholder"
 msgid "Phone*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:251
-#: includes/classes/class-woocommerce.php:323
-#: includes/classes/class-woocommerce.php:446
+#: includes/classes/class-woocommerce.php:249
+#: includes/classes/class-woocommerce.php:321
+#: includes/classes/class-woocommerce.php:468
 msgctxt "placeholder"
 msgid "Address 1*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:259
-#: includes/classes/class-woocommerce.php:331
-#: includes/classes/class-woocommerce.php:454
+#: includes/classes/class-woocommerce.php:257
+#: includes/classes/class-woocommerce.php:329
+#: includes/classes/class-woocommerce.php:476
 msgctxt "placeholder"
 msgid "Address 2"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:267
-#: includes/classes/class-woocommerce.php:339
-#: includes/classes/class-woocommerce.php:462
+#: includes/classes/class-woocommerce.php:265
+#: includes/classes/class-woocommerce.php:337
+#: includes/classes/class-woocommerce.php:484
 msgctxt "placeholder"
 msgid "Company"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:275
-#: includes/classes/class-woocommerce.php:347
-#: includes/classes/class-woocommerce.php:470
+#: includes/classes/class-woocommerce.php:273
+#: includes/classes/class-woocommerce.php:345
+#: includes/classes/class-woocommerce.php:492
 msgctxt "placeholder"
 msgid "Country*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:283
-#: includes/classes/class-woocommerce.php:355
-#: includes/classes/class-woocommerce.php:478
+#: includes/classes/class-woocommerce.php:281
+#: includes/classes/class-woocommerce.php:353
+#: includes/classes/class-woocommerce.php:500
 msgctxt "placeholder"
 msgid "State*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:291
-#: includes/classes/class-woocommerce.php:363
-#: includes/classes/class-woocommerce.php:486
+#: includes/classes/class-woocommerce.php:289
+#: includes/classes/class-woocommerce.php:361
+#: includes/classes/class-woocommerce.php:508
 msgctxt "placeholder"
 msgid "ZIP code*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:299
-#: includes/classes/class-woocommerce.php:371
-#: includes/classes/class-woocommerce.php:494
+#: includes/classes/class-woocommerce.php:297
+#: includes/classes/class-woocommerce.php:369
+#: includes/classes/class-woocommerce.php:516
 msgctxt "placeholder"
 msgid "City*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:386
+#: includes/classes/class-woocommerce.php:384
 msgctxt "placeholder"
 msgid "Username*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:400
+#: includes/classes/class-woocommerce.php:398
 msgctxt "placeholder"
 msgid "Password*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:409
+#: includes/classes/class-woocommerce.php:407
 msgctxt "placeholder"
 msgid "Confirm password*"
 msgstr ""
 
-#: includes/classes/class-woocommerce.php:552 woocommerce/cart/mini-cart.php:77
+#: includes/classes/class-woocommerce.php:572 woocommerce/cart/mini-cart.php:77
 msgid "Most likely, you just have not put anything into your basket."
 msgstr ""
 
@@ -1554,19 +1563,19 @@ msgstr ""
 msgid "Remove this item"
 msgstr ""
 
-#: woocommerce/cart/cart.php:113 woocommerce/checkout/form-coupon.php:29
+#: woocommerce/cart/cart.php:113 woocommerce/checkout/form-coupon.php:27
 msgid "Have discount coupon?"
 msgstr ""
 
-#: woocommerce/cart/cart.php:116 woocommerce/checkout/form-coupon.php:33
+#: woocommerce/cart/cart.php:116 woocommerce/checkout/form-coupon.php:31
 msgid "Coupon:"
 msgstr ""
 
-#: woocommerce/cart/cart.php:117 woocommerce/checkout/form-coupon.php:34
+#: woocommerce/cart/cart.php:117 woocommerce/checkout/form-coupon.php:32
 msgid "Enter coupon code"
 msgstr ""
 
-#: woocommerce/cart/cart.php:121 woocommerce/checkout/form-coupon.php:38
+#: woocommerce/cart/cart.php:121 woocommerce/checkout/form-coupon.php:36
 msgid "Apply Coupon"
 msgstr ""
 
@@ -1592,33 +1601,33 @@ msgstr ""
 msgid "Checkout"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:33
+#: woocommerce/cart/shipping-calculator.php:31
 msgid "Calculate"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:38
+#: woocommerce/cart/shipping-calculator.php:36
 msgid "Select a country&hellip;"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:54
-#: woocommerce/cart/shipping-calculator.php:60
-#: woocommerce/cart/shipping-calculator.php:75
+#: woocommerce/cart/shipping-calculator.php:52
+#: woocommerce/cart/shipping-calculator.php:58
+#: woocommerce/cart/shipping-calculator.php:73
 msgid "State / county"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:61
+#: woocommerce/cart/shipping-calculator.php:59
 msgid "Select a state&hellip;"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:84
+#: woocommerce/cart/shipping-calculator.php:82
 msgid "City"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:91
+#: woocommerce/cart/shipping-calculator.php:89
 msgid "Postcode / ZIP"
 msgstr ""
 
-#: woocommerce/cart/shipping-calculator.php:96
+#: woocommerce/cart/shipping-calculator.php:94
 msgid "Update Totals"
 msgstr ""
 
@@ -1630,15 +1639,15 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: woocommerce/checkout/form-login.php:27
+#: woocommerce/checkout/form-login.php:25
 msgid "Returning customer?"
 msgstr ""
 
-#: woocommerce/checkout/form-login.php:28
+#: woocommerce/checkout/form-login.php:26
 msgid "Click here to login"
 msgstr ""
 
-#: woocommerce/checkout/form-login.php:33
+#: woocommerce/checkout/form-login.php:31
 msgid ""
 "If you have shopped with us before, please enter your details in the boxes "
 "below. If you are a new customer, please proceed to the Billing &amp; "
@@ -1646,37 +1655,38 @@ msgid ""
 msgstr ""
 
 #: woocommerce/global/form-login.php:32 woocommerce/global/form-login.php:33
-#: woocommerce/myaccount/form-lost-password.php:31
+#: woocommerce/myaccount/form-lost-password.php:29
 msgid "Username or email"
 msgstr ""
 
 #: woocommerce/global/form-login.php:36 woocommerce/global/form-login.php:37
-#: woocommerce/myaccount/form-login.php:43
-#: woocommerce/myaccount/form-login.php:94
+#: woocommerce/myaccount/form-login.php:41
+#: woocommerce/myaccount/form-login.php:92
 msgid "Password"
 msgstr ""
 
-#: woocommerce/global/form-login.php:45 woocommerce/myaccount/form-login.php:51
+#: woocommerce/global/form-login.php:45 woocommerce/myaccount/form-login.php:49
 msgid "Remember me"
 msgstr ""
 
-#: woocommerce/global/form-login.php:49 woocommerce/myaccount/form-login.php:32
-#: woocommerce/myaccount/form-login.php:56
+#: woocommerce/global/form-login.php:49 woocommerce/myaccount/form-login.php:30
+#: woocommerce/myaccount/form-login.php:54
 msgid "Login"
 msgstr ""
 
-#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:61
+#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:59
 msgid "Lost your password?"
 msgstr ""
 
-#: woocommerce/global/quantity-input.php:31
-msgctxt "Product quantity input tooltip"
-msgid "Qty"
-msgstr ""
-
-#: woocommerce/global/quantity-input.php:31
+#. translators: %s: Quantity.
+#: woocommerce/global/quantity-input.php:29
 #, php-format
 msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:33
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
 msgstr ""
 
 #. translators: %d: total results
@@ -1696,148 +1706,156 @@ msgid_plural "Showing %1$d&ndash;%2$d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce/myaccount/form-edit-account.php:30
+#: woocommerce/myaccount/form-edit-account.php:28
 msgid "Account Details"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:33
+#: woocommerce/myaccount/form-edit-account.php:31
 msgid "First name"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:34
+#: woocommerce/myaccount/form-edit-account.php:32
 msgid "First name*"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:37
+#: woocommerce/myaccount/form-edit-account.php:35
 msgid "Last name"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:38
+#: woocommerce/myaccount/form-edit-account.php:36
 msgid "Last name*"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:42
-#: woocommerce/myaccount/form-login.php:89
+#: woocommerce/myaccount/form-edit-account.php:40
+msgid "Display name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:41
+msgid "Display name*"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+#: woocommerce/myaccount/form-login.php:87
 msgid "Email address"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:43
-#: woocommerce/myaccount/form-login.php:90
+#: woocommerce/myaccount/form-edit-account.php:46
+#: woocommerce/myaccount/form-login.php:88
 msgid "Email address*"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:48
+#: woocommerce/myaccount/form-edit-account.php:51
 msgid "Password Change"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:51
-#: woocommerce/myaccount/form-edit-account.php:52
+#: woocommerce/myaccount/form-edit-account.php:54
+#: woocommerce/myaccount/form-edit-account.php:55
 msgid "Current Password (leave blank to leave unchanged)"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:56
-#: woocommerce/myaccount/form-edit-account.php:57
+#: woocommerce/myaccount/form-edit-account.php:59
+#: woocommerce/myaccount/form-edit-account.php:60
 msgid "New Password (leave blank to leave unchanged)"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:60
-#: woocommerce/myaccount/form-edit-account.php:61
+#: woocommerce/myaccount/form-edit-account.php:63
+#: woocommerce/myaccount/form-edit-account.php:64
 msgid "Confirm New Password"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:68
+#: woocommerce/myaccount/form-edit-account.php:71
 msgid "Save changes"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/form-edit-address.php:21
 msgid "Billing Address"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/form-edit-address.php:21
 msgid "Shipping Address"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-address.php:47
+#: woocommerce/myaccount/form-edit-address.php:45
 msgid "Save Address"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-address.php:47
+#: woocommerce/myaccount/form-edit-address.php:45
 msgid "Save address"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:34
+#: woocommerce/myaccount/form-login.php:32
 msgid "You are not logged in."
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:39
+#: woocommerce/myaccount/form-login.php:37
 msgid "Username or email address"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:40
+#: woocommerce/myaccount/form-login.php:38
 msgid "Username or email address*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:44
-#: woocommerce/myaccount/form-login.php:95
+#: woocommerce/myaccount/form-login.php:42
+#: woocommerce/myaccount/form-login.php:93
 msgid "Password*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:69
+#: woocommerce/myaccount/form-login.php:67
 msgid "Don't have an account?"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:69
+#: woocommerce/myaccount/form-login.php:67
 msgid "Signup here"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:76
-#: woocommerce/myaccount/form-login.php:105
+#: woocommerce/myaccount/form-login.php:74
+#: woocommerce/myaccount/form-login.php:103
 msgid "Register"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:78
+#: woocommerce/myaccount/form-login.php:76
 msgid "Sign up, it's free."
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:84
+#: woocommerce/myaccount/form-login.php:82
 msgid "Username"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:85
+#: woocommerce/myaccount/form-login.php:83
 msgid "Username*"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:113
+#: woocommerce/myaccount/form-login.php:111
 msgid "Already have an account?"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:113
+#: woocommerce/myaccount/form-login.php:111
 msgid "Login here"
 msgstr ""
 
-#: woocommerce/myaccount/form-lost-password.php:29
+#: woocommerce/myaccount/form-lost-password.php:27
 msgid ""
 "Enter your username or email address. You will receive a link to create a "
 "new password via email."
 msgstr ""
 
-#: woocommerce/myaccount/form-lost-password.php:32
+#: woocommerce/myaccount/form-lost-password.php:30
 msgid "Username or email*"
 msgstr ""
 
-#: woocommerce/myaccount/form-lost-password.php:39
+#: woocommerce/myaccount/form-lost-password.php:37
 msgid "Reset Password"
 msgstr ""
 
-#: woocommerce/myaccount/form-lost-password.php:39
+#: woocommerce/myaccount/form-lost-password.php:37
 msgid "Reset password"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:32
+#: woocommerce/single-product/add-to-cart/variable.php:31
 msgid "This product is currently out of stock and unavailable."
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:44
+#: woocommerce/single-product/add-to-cart/variable.php:43
 msgid "Clear"
 msgstr ""
 
