@@ -508,7 +508,7 @@ if (!class_exists('Hypermarket_Welcome_Screen')):
 											<div class="inside">
 												<p>
 													<a href="<?php echo esc_url(HYPERMARKET_THEME_AUTHOR_URI . '/hypermarket-plus.html'); ?>" target="_blank">
-														<img class="hypermarket-plus-featured-image" src="<?php echo $this->admin_assets_url . 'img/hypermarket-plus.png'; ?>" alt="<?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?>" />
+														<img class="hypermarket-plus-featured-image" src="<?php echo $this->admin_assets_url . 'img/hypermarket-plus.jpg'; ?>" alt="<?php esc_attr_e('Hypermarket Plus!', 'hypermarket'); ?>" />
 													</a>
 												</p>
 												<p><?php esc_attr_e('Being on the cutting edge of WordPress development is something we wanted to do from the start. Because of that, we made sure that we avoided the use of clunky additional admin panels and instead, opted to utilize a powerful, options panel using Customizer API. With this setup, you can preview all of the changes you make to your site live without any need to switch windows or refresh the browser in addition to searching for exactly what you need. When you are happy with your changes, hit "Save Changes" button and your updates will go live.', 'hypermarket'); ?></p>
