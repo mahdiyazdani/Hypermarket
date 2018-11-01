@@ -1,3 +1,12 @@
+# 1.9.6.2/ 2018-11-01
+* Compatibility with WPML plugin
+* Compatibility with WordPress 4.9.8
+* Compatibility with WooCommerce 3.5.1
+
+# 1.9.6.1/ 2018-07-09
+* Fix for PHP 7 array count() issue.
+* Compatibility with WordPress 4.9.7
+
 # 1.9.6/ 2018-02-09
   * Updated language file.
   * Compatibility with WordPress 4.9.4
