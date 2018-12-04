@@ -1,3 +1,13 @@
+= 1.5.6 =
+* Compatibility with WooCommerce 3.5.2
+
+= 1.5.5 =
+* Compatibility with WooCommerce 3.5.0
+
+= 1.5.4 =
+* Updated language file.
+* Fixed a typo.
+
 = 1.5.3 =
 * Fixed visibility issues with WooCommerce checkout field options.
 
