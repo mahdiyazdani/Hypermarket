@@ -13,10 +13,12 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.4.0
+ * @version 	3.5.2
  */
 
 defined( 'ABSPATH' ) || exit;
+
+do_action( 'woocommerce_before_lost_password_form' );
 ?>
 
 <div class="col-xs-12 space-bottom">
@@ -38,3 +40,5 @@ defined( 'ABSPATH' ) || exit;
 	</p><!-- .col-sm-12 -->
 	<?php wp_nonce_field( 'lost_password', 'woocommerce-lost-password-nonce' ); ?>
 </form><!-- .lost_reset_password -->
+<?php
+do_action( 'woocommerce_after_lost_password_form' );

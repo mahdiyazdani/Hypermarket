@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.4.0
+ * @version 	3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -47,9 +47,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<?php
 		              		$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 							if ( ! $product_permalink ):
-								echo wp_kses_post( $thumbnail );
+								echo $thumbnail; // PHPCS: XSS ok.
 							else:
-								printf( '<a href="%s" class="item-thumb product-thumbnail">%s</a>', esc_url( $product_permalink ), wp_kses_post( $thumbnail ) );
+								printf( '<a href="%s" class="item-thumb product-thumbnail">%s</a>', esc_url( $product_permalink ), $thumbnail );
 							endif;
 	              		?>
 		              		<div class="item-details">

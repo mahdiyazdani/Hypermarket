@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.4.0
+ * @version 	3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -75,7 +75,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php else: ?>
 		<h3 class="toolbar-title signup-form-toolbar-title space-bottom"><?php esc_html_e('Sign up, it\'s free.', 'hypermarket'); ?></h3>
 		<?php endif; ?>
-		<form method="post" class="login-form register">
+		<form method="post" class="login-form register" <?php do_action( 'woocommerce_register_form_tag' ); ?>>
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
