@@ -1,9 +1,19 @@
+# 1.5.7.1/ 2019-02-28
+* Fixed missing text-domain.
+
+# 1.5.7/ 2019-02-28
+* Compatibility with WordPress 5.0
+* Compatibility with WooCommerce 3.5.5
+
+# 1.5.6/ 2018-12-04
+  * Compatibility with WooCommerce 3.5.2
+
 # 1.5.5/ 2018-10-29
-* Compatibility with WooCommerce 3.5.0
+  * Compatibility with WooCommerce 3.5.0
 
 # 1.5.4/ 2018-08-10
-* Updated language file.
-* Fixed a typo.
+  * Updated language file.
+  * Fixed a typo.
 
 # 1.5.3/ 2018-08-02
   * Fixed visibility issues with WooCommerce checkout field options.
