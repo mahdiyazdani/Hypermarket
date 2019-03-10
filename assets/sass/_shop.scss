@@ -1013,6 +1013,7 @@ input#shipping_state,
       background-color: $input-bg;
       @include padding(0 16px);
       .select2-selection__rendered {
+        min-height: 43px;
         line-height: $line-height-base + 1.6;
         @include padding(0);
       }
