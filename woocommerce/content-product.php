@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.4.0
+ * @version 	3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -25,7 +25,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes'])); ?> data-mh="mh-products">
+<div <?php wc_product_class(apply_filters('hypermarket_woocommerce_loop_columns_class', $GLOBALS['product_grid_classes']), $product); ?> data-mh="mh-products">
 	<div class="shop-item">
 		<?php
 		/**

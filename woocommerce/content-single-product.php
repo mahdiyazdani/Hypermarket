@@ -13,10 +13,12 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.4.0
+ * @version     3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
+
+global $product;
 
 /**
  * Hook: woocommerce_before_single_product hook.
@@ -31,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
  }
 ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('container padding-top'); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('container padding-top', $product); ?>>
 
 	<?php
 		/**

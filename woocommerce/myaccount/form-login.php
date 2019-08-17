@@ -13,7 +13,7 @@
  * @see     	https://docs.woocommerce.com/document/template-structure/
  * @author  	WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.5.0
+ * @version 	3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -31,11 +31,11 @@ defined( 'ABSPATH' ) || exit;
 		<?php else: ?>
 		<h3 class="toolbar-title login-form-toolbar-title space-bottom"><?php esc_html_e('You are not logged in.', 'hypermarket'); ?></h3>
 		<?php endif; ?>
-		<form method="post" class="login-form login">
+		<form method="post" class="login-form login woocommerce-form woocommerce-form-login">
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
 				<label for="username" class="sr-only"><?php esc_html_e( 'Username or email address', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="username" id="username" placeholder="<?php esc_attr_e( 'Username or email address*', 'hypermarket' ); ?>" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="username" id="username" placeholder="<?php esc_attr_e( 'Username or email address*', 'hypermarket' ); ?>" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( wp_unslash( $_POST['username'] ) ); ?>" />
 			</p><!-- .form-element -->
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-element form-row-wide">
 				<label for="password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
 				</div><!-- .rememberme -->
 				<div class="form-submit">
 					<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-					<button type="submit" class="woocommerce-Button button btn btn-primary btn-block waves-effect waves-light space-top-none" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>"><?php esc_html_e( 'Login', 'hypermarket' ); ?></button>
+					<button type="submit" class="woocommerce-Button button btn btn-primary btn-block waves-effect waves-light space-top-none woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Login', 'hypermarket' ); ?>"><?php esc_html_e( 'Login', 'hypermarket' ); ?></button>
 				</div><!-- .form-submit -->
 			</div><!-- .form-footer -->
 			<div class="woocommerce-LostPassword lost_password">
@@ -92,10 +92,11 @@ defined( 'ABSPATH' ) || exit;
 					<label for="reg_password" class="sr-only"><?php esc_html_e( 'Password', 'hypermarket' ); ?>&nbsp;<span class="required">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text form-control input-text" name="password" id="reg_password" placeholder="<?php esc_attr_e( 'Password*', 'hypermarket' ); ?>" />
 				</p><!-- .form-element -->
+			<?php else : ?>
+				<p><?php esc_html_e( 'A password will be sent to your email address.', 'hypermarket' ); ?></p>
 			<?php endif; ?>
 			<div class="clearfix"></div>
 			<?php do_action( 'woocommerce_register_form' ); ?>
-			<?php do_action( 'register_form' ); ?>
 			<div class="form-footer form-element form-row">
 				<div class="rememberme"></div>
 				<div class="form-submit">

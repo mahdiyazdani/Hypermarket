@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.3.0
+ * @version     3.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,9 +39,9 @@ if ( is_user_logged_in() ) {
 	<div class="clearfix"></div>
 	<?php do_action( 'woocommerce_login_form' ); ?>
 	<div class="form-footer col-sm-12 form-element form-row">
-		<?php wp_nonce_field( 'woocommerce-login' ); ?>
+		<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 		<div class="rememberme">
-			<label for="rememberme" class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+			<label for="rememberme" class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme inline">
 				<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php esc_html_e( 'Remember me', 'hypermarket' ); ?>
 			</label>
 		</div><!-- .rememberme -->
