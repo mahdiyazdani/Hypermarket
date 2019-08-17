@@ -1,3 +1,7 @@
+# 1.9.7/ 2019-08-16
+* Compatibility with WordPress 5.2.2
+* Compatibility with WooCommerce 3.7.0
+
 # 1.9.6.2/ 2018-11-01
 * Compatibility with WPML plugin
 * Compatibility with WordPress 4.9.8
