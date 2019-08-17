@@ -1,3 +1,10 @@
+# 1.5.9/ 2019-08-16
+* Compatibility with WordPress 5.2.2
+* Compatibility with WooCommerce 3.7.0
+
+# 1.5.8/ 2019-04-30
+* Compatibility with WooCommerce 3.6.2
+
 # 1.5.7.1/ 2019-02-28
 * Fixed missing text-domain.
 
