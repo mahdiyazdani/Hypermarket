@@ -10,10 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     	https://docs.woocommerce.com/document/template-structure/
- * @author  	WooThemes
- * @package 	WooCommerce/Templates
- * @version 	3.5.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce/Templates
+ * @version 3.7.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -93,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 										'<a href="%s" class="item-remove remove pull-right" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="material-icons remove_shopping_cart"></i></a>',
 											esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-											__( 'Remove this item', 'hypermarket' ),
+											esc_html__( 'Remove this item', 'hypermarket' ),
 											esc_attr( $product_id ),
 											esc_attr( $_product->get_sku() )
 									), $cart_item_key );
@@ -133,6 +132,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 <div class="<?php echo apply_filters('hypermarket_cart_checkout_order_details_offset', false) ? 'col-lg-3 col-lg-offset-1 col-md-4 col-md-offset-0' : 'col-lg-4'; ?> padding-bottom-2x">
+	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 	<div class="cart-collaterals">
 		<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	</div>

@@ -12,10 +12,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     	https://docs.woocommerce.com/document/template-structure/
- * @author  	WooThemes
- * @package 	WooCommerce/Templates
- * @version 	3.5.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce/Templates
+ * @version 3.7.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -58,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 							'<a href="%s" class="close-btn remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"><i class="material-icons close"></i></a>',
 							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-							__( 'Remove this item', 'hypermarket' ),
+							esc_html__( 'Remove this item', 'hypermarket' ),
 							esc_attr( $product_id ),
 							esc_attr( $cart_item_key ),
 							esc_attr( $_product->get_sku() )
@@ -92,7 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h3> 
 			<?php endif; ?>
 		</div><!-- .column -->
-		<div class="column">
+		<div class="column woocommerce-mini-cart__total total">
 			<?php if (! apply_filters('hypermarket_tilted_toolbar_minicart_style', false)): ?>
 			<?php echo WC()->cart->get_cart_subtotal(); ?>
 			<?php else: ?>
@@ -106,6 +105,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm space-left-none space-right-none'; ?> btn-default btn-ghost waves-effect waves-light button wc-forward"><?php esc_html_e( 'View Cart', 'hypermarket' ); ?></a>
 		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn <?php echo (apply_filters('hypermarket_tilted_toolbar_minicart_style', false)) ? '' : 'btn-sm space-left-none space-right-none'; ?> btn-primary waves-effect waves-light button checkout wc-forward"><?php esc_html_e( 'Checkout', 'hypermarket' ); ?></a>
+
+		<?php do_action( 'woocommerce_widget_shopping_cart_after_buttons' ); ?>
 	</div><!-- .text-center -->
 <?php endif; ?>
 
