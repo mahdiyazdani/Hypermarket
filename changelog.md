@@ -1,3 +1,10 @@
+= 1.5.9 =
+* Compatibility with WordPress 5.2.2
+* Compatibility with WooCommerce 3.7.0
+
+= 1.5.8 =
+* Compatibility with WooCommerce 3.6.2
+
 = 1.5.7.1 =
 * Fixed missing text-domain.
 
