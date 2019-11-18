@@ -1,3 +1,7 @@
+# 1.6.0/ 2019-11-18
+* Compatibility with WordPress 5.3
+* Compatibility with WooCommerce 3.8.0
+
 # 1.5.9/ 2019-08-16
 * Compatibility with WordPress 5.2.2
 * Compatibility with WooCommerce 3.7.0
