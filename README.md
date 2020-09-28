@@ -50,7 +50,7 @@ If you have any question(s) about using theme, please do not hesitate to check o
 
 Don't forget to rate this theme [5 shining stars](https://wordpress.org/support/theme/hypermarket/reviews/ "5 shining stars") if you like it, thanks!
 
-## Version 2.0
+## Version 2.0 🚧
 
 We believe we can improve on what is already a great theme. Today we’re excited to announce that [Hypermarket version 2.0](https://github.com/mypreview/hypermarket) is on the horizon.
 
